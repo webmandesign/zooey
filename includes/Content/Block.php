@@ -177,7 +177,6 @@ class Block implements Component_Interface {
 				 */
 				case 'core/column':
 				case 'core/cover':
-				case 'core/post-excerpt':
 				case 'core/post-comments-form':
 					$settings['supports']['__experimentalBorder']['color']  =
 					$settings['supports']['__experimentalBorder']['style']  =
@@ -213,6 +212,14 @@ class Block implements Component_Interface {
 						$settings['supports']['color']['background'] =
 						$settings['supports']['color']['text']       =
 						$settings['supports']['color']['gradients']  = true;
+						break;
+
+					case 'core/post-excerpt':
+						$settings['supports']['layout']['allowEditing']         = false;
+						$settings['supports']['__experimentalBorder']['color']  =
+						$settings['supports']['__experimentalBorder']['style']  =
+						$settings['supports']['__experimentalBorder']['width']  =
+						$settings['supports']['__experimentalBorder']['radius'] = true;
 						break;
 
 					case 'core/post-featured-image':
@@ -440,6 +447,7 @@ class Block implements Component_Interface {
 
 			$blocks = array(
 				'core/categories',
+				'core/post-excerpt',
 				'core/tag-cloud',
 			);
 

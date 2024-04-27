@@ -93,7 +93,6 @@
 
 					case 'core/cover': //*
 					case 'core/heading':
-					case 'core/post-excerpt': //*
 					case 'core/post-comments-form': //*
 						settings = lodash.merge( settings, {
 							supports: {
@@ -219,6 +218,22 @@
 										'top',
 										'bottom',
 									],
+								},
+							},
+						} );
+						break;
+
+					case 'core/post-excerpt': //*
+						settings = lodash.merge( settings, {
+							supports: {
+								spacing: {
+									blockGap: true,
+								},
+								__experimentalBorder: {
+									color: true,
+									style: true,
+									width: true,
+									radius: true,
 								},
 							},
 						} );

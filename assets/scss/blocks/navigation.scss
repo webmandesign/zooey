@@ -67,6 +67,10 @@
 
 	.wp-block-navigation__responsive-container {
 
+		.wp-block-navigation-item__description {
+			font-size: $ratio_maj + em;
+		}
+
 		&:not(.is-menu-open.is-menu-open) {
 			border-color: inherit;
 		}
@@ -107,7 +111,7 @@
 	.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open.is-menu-open {
 		--theme--css--submenu-item-padding: #{ $ratio_maj + rem };
 		--theme--css--submenu-gap: 0;
-		--theme--css--menu-gap: #{ $ratio_min + rem };
+		--theme--css--menu-gap: #{ $ratio_maj + rem };
 
 		width: 100vw; // This is required.
 		height: 100vh; // This is required.
@@ -148,6 +152,7 @@
 
 			// Top level menu items.
 			> .wp-block-navigation-item > .wp-block-navigation-item__content {
+				padding-block: 0;
 				font-size: var(--theme--css--font-size-h3);
 			}
 
@@ -222,3 +227,16 @@
 			padding-block-start: var(--wp--custom--spacing--menu-mobile--top--l);
 		}
 	}
+
+	// Blurred background.
+
+		.wp-block-navigation__responsive-container[class] {
+			background: none !important;
+			backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
+		}
+
+		.wp-block-navigation__responsive-overlay {
+			position: absolute;
+			inset: 0;
+			opacity: .95;
+		}

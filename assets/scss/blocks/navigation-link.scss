@@ -63,14 +63,14 @@
 
 	.wp-block-navigation-item__description {
 		display: block;
-		margin-block-start: .15em;
+		margin-block-start: 0;
+		font-family: var(--wp--preset--font-family--global);
 		font-size: .8em;
-		font-weight: 400;
-		font-style: italic;
+		font-weight: 300;
 		line-height: 1.2;
 		text-transform: none;
 		letter-spacing: normal;
-		opacity: .75;
+		opacity: .8;
 	}
 
 	// Current (active) menu item.

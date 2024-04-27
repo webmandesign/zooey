@@ -108,7 +108,8 @@ class Component implements Component_Interface {
 
 				case 'core/navigation':
 
-					$html = new WP_HTML_Tag_Processor( $block_content );
+					$has_overlay_menu = false;
+					$html             = new WP_HTML_Tag_Processor( $block_content );
 
 					$html->next_tag();
 
@@ -117,7 +118,10 @@ class Component implements Component_Interface {
 						! isset( $block['attrs']['overlayMenu'] )
 						|| 'never' !== $block['attrs']['overlayMenu']
 					) {
+
 						$html->add_class( 'has-overlay-menu' );
+
+						$has_overlay_menu = true;
 					}
 
 					// Set ID for the navigation wrapper.
@@ -130,6 +134,25 @@ class Component implements Component_Interface {
 					$html->remove_attribute( 'tabindex' );
 
 					$block_content = $html->get_updated_html();
+
+					// Blurred mobile menu background.
+					if (
+						$has_overlay_menu
+						&& function_exists( 'block_core_navigation_build_css_colors' )
+					) {
+
+						$colors  = block_core_navigation_build_css_colors( $block['attrs'] );
+						$overlay = '<div'
+							. ' class="wp-block-navigation__responsive-overlay ' . esc_attr( implode( ' ', $colors['overlay_css_classes'] ) ) . '"'
+							. ' style="' . esc_attr( $colors['overlay_inline_styles'] ) . '"'
+							. '></div>';
+
+						$block_content = str_replace(
+							'<div class="wp-block-navigation__responsive-close" >', // This is correct - check the code above.
+							$overlay . '<div class="wp-block-navigation__responsive-close" >',
+							$block_content
+						);
+					}
 					break;
 
 				case 'core/navigation-submenu':
