@@ -1,0 +1,16 @@
+// core/archives
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-archives {
+
+	&.is-style-inline {
+
+		&,
+		ul {
+			padding: 0;
+			list-style: none;
+		}
+	}
+}

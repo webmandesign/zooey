@@ -1,0 +1,19 @@
+// core/post-navigation-link
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-post-navigation-link {
+
+	&:empty {
+		display: none;
+	}
+}
+
+.post-navigation-link__label {
+	font-family: var(--wp--preset--font-family--global);
+	font-size: var(--wp--preset--font-size--xs);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}

@@ -1,0 +1,56 @@
+// core/tag-cloud
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-tag-cloud {
+
+	&.is-style-outline {
+
+		.tag-cloud-link {
+			padding: ( $ratio_maj + em ) 1em;
+			// @see  global/form/_button.scss
+			// @see  blocks/button.scss
+			text-decoration-line: none;
+			border: 2px solid;
+			border-radius: var(--wp--custom--border-radius--button);
+			box-shadow: var(--wp--preset--shadow--s);
+			transition: box-shadow .1s linear;
+
+			&:hover,
+			&:focus {
+				text-decoration-line: underline;
+				text-decoration-style: dashed;
+				box-shadow: var(--wp--preset--shadow--m);
+			}
+
+			&:active {
+				text-decoration-line: underline;
+				text-decoration-style: dotted;
+				box-shadow: none;
+			}
+		}
+	}
+
+	&.is-style-buttons-inline {
+
+		.tag-cloud-link {
+			position: relative;
+			margin: 0;
+		}
+	}
+
+	&[style*="--wp--style--block-gap:"] {
+		--wp--style--block-gap: .25 1em;
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--style--block-gap);
+	}
+}
+
+.tag-link-count {
+	@extend %badge_posts_count;
+}
+
+@import '../_extend/_index';

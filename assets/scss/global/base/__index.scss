@@ -1,0 +1,20 @@
+/* FILE: global/base/__index.scss */
+
+// These basic styles are still required
+// for non-block plugins HTML, for example.
+// WordPress does not provide these for us.
+
+@import 'spacing';
+
+@import 'base';
+@import 'code';
+@import 'details';
+@import 'headings';
+@import 'hr';
+@import 'links';
+@import 'lists';
+@import 'mark';
+@import 'media';
+@import 'others';
+@import 'quote';
+@import 'table';

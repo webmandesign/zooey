@@ -1,0 +1,15 @@
+/* FILE: _extend/_background.scss */
+
+%shaded_background {
+	z-index: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: currentColor;
+		border-radius: inherit;
+		opacity: var(--wp--custom--opacity--pseudo-bg);
+		z-index: -1;
+	}
+}

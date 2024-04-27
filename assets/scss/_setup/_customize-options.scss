@@ -1,0 +1,66 @@
+$color_base         : #f7fff7;
+$color_base_alt     : #e7efe7;
+$color_contrast     : #474f47;
+$color_contrast_alt : #171f17;
+$color_primary      : #5f1a37;
+$color_secondary    : #ff6b6b;
+
+// Take $option[`css_var`]['name'] from theme options.
+// @see  WebManDesign\Zooey\Customize\Options::set()
+$theme_mods: (
+
+	// Colors.
+	//
+	// The theme prefix here is intentional.
+	// @see  WebManDesign\Zooey\Setup\Component::after_setup_theme()
+	//
+	// Color contrast check:
+	// @link  https://toolness.github.io/accessible-color-matrix/?n=base&n=contrast&n=contrast%20alt&n=primary&n=secondary&v=f7fff7&v=474f47&v=171f17&v=5f1a37&v=ff6b6b
+	//
+	'--theme--mod--color_base'         : $color_base, // = background_color
+	'--theme--mod--color_base_alt'     : $color_base_alt,
+	'--theme--mod--color_contrast'     : $color_contrast,
+	'--theme--mod--color_contrast_alt' : $color_contrast_alt,
+
+	'--theme--mod--color_primary'       : $color_primary,
+	'--theme--mod--color_primary_mixed' : mix( $color_primary, $color_base, 12.50% ), // = 1:7 mix with base color, #e4e2df
+
+	'--theme--mod--color_secondary'       : $color_secondary,
+	'--theme--mod--color_secondary_mixed' : mix( $color_secondary, $color_base, 38.20% ), // = 1:1.618 mix with base color, #fac6c2
+
+	'--theme--mod--color_black' : #000000,
+	'--theme--mod--color_white' : #ffffff,
+
+	// Gradients.
+	'--theme--mod--gradient_stop_hard' : 50%,
+	'--theme--mod--gradient_stop_soft' : 10%,
+
+	// Layout.
+	'--theme--mod--layout_width_content' : 640px,
+	'--theme--mod--layout_width_wide'    : 1440px,
+
+	// Typography.
+	// @link  https://www.modularscale.com/?1&em&1.2
+	'--theme--mod--typography_font_size'                : 20, // px
+	'--theme--mod--typography_modular_scale'            : 1.2,
+	'--theme--mod--typography_desktop_multiply'         : 1.75,
+	'--theme--mod--typography_font_family_global'       : ( 'Ubuntu', sans-serif ),
+	'--theme--mod--typography_font_family_supplemental' : ( 'Unica One', sans-serif ),
+	'--theme--mod--typography_font_family_alternative'  : ( 'Ubuntu', sans-serif ),
+);
+
+// Not customizable.
+$automatic: (
+
+	'--wp--preset--color--primary-semitransparent' : rgba(
+		map_get( $theme_mods, '--theme--mod--color_primary' ),
+		var(--wp--custom--opacity--semitransparent)
+	),
+
+	'--wp--preset--color--secondary-semitransparent' : rgba(
+		map_get( $theme_mods, '--theme--mod--color_secondary' ),
+		var(--wp--custom--opacity--semitransparent)
+	),
+);
+
+$theme_options: map-merge( $theme_mods, $automatic );

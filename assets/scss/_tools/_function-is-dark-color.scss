@@ -1,0 +1,19 @@
+//
+// Checks if hex color is dark.
+//
+// @since  1.0.0
+//
+// @param  string $hex
+// @param  int    $threshold
+//
+@function _is_dark_color( $hex, $threshold: 127 ) {
+
+	// @see  WebManDesign\Zooey\Customize\Colors::is_dark()
+	$darkness: math.div( ( red( $hex ) * 299 + green( $hex ) * 587 + blue( $hex ) * 114 ), 1000 );
+
+	@if 127 >= $darkness {
+		@return true;
+	} @else {
+		@return false;
+	}
+}

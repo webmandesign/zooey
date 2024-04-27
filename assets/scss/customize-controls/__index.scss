@@ -1,0 +1,15 @@
+/* FILE: customize-controls/_index.scss */
+
+@import 'extend';
+@import 'base';
+@import 'notice';
+
+.control-section-theme-options {
+	@import 'control';
+	@import 'control-checkbox';
+	@import 'control-hidden';
+	@import 'control-html';
+	@import 'control-range';
+}
+
+@import 'others';

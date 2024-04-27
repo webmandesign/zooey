@@ -1,0 +1,13 @@
+/* FILE: global/base/_others.scss */
+
+small {
+	font-size: var(--wp--preset--font-size--s);
+}
+
+abbr[title] {
+	cursor: help;
+}
+
+address {
+	font-style: normal;
+}

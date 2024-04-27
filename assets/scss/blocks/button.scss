@@ -1,0 +1,19 @@
+// core/button
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	--theme--css--button--color--border: currentColor;
+
+	// From default button padding.
+	// @see  global/form/_button.scss
+	padding: 1.125em 1.5em;
+	outline-color: inherit;
+
+	&:not(.has-text-color),
+	.editor-styles-wrapper.editor-styles-wrapper &[class] {
+		color: inherit;
+	}
+}

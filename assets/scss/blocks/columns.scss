@@ -1,0 +1,13 @@
+// core/columns
+// core/column
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-column {
+
+	&s.alignfull:not(.has-background) {
+		padding-left:  var(--wp--style--root--padding-left);
+		padding-right: var(--wp--style--root--padding-right);
+	}
+}

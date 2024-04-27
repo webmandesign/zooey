@@ -1,0 +1,21 @@
+// core/file
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-file {
+	padding: ( $ratio_maj + em ) ( $ratio + em );
+	border-width: 2px;
+	border-style: solid;
+
+	&.alignfull {
+		border-radius: 0;
+	}
+}
+
+.wp-block-file:not([data-block]),
+.wp-block-file__content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

@@ -1,0 +1,25 @@
+/* FILE: _variables/__index.scss */
+
+//
+// Best practice is to use `:root` selector for all CSS variable declaration.
+// However, when using CSS variables declared via `theme.json`, we need to
+// use `body` selector due to WordPress global styles CSS...
+//
+
+/*! Vars: Base: */
+:root {
+
+	// Unit is required in `calc()`.
+	// A non-zero value is required for minification process not to strip the unit.
+	--zero: 0.001px;
+
+	// Overridden with JavaScript:
+	--theme--js--scrollbar_width: var(--zero);
+}
+
+@import 'theme-options';
+@import 'typography';
+@import 'box-model';
+@import 'others';
+
+/*! /Vars. */

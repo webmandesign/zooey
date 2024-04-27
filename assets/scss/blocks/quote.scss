@@ -1,0 +1,25 @@
+// core/quote
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-quote {
+
+	// Backwards compatibility:
+	&.is-style-large:where(:not(.is-style-plain)) {
+		margin-block-end: 0;
+		padding: 0;
+
+		p {
+			font-size: 1em;
+			font-style: inherit;
+			line-height: inherit;
+		}
+
+		cite,
+		footer {
+			font-size: var(--wp--preset--font-size--s);
+			text-align: inherit;
+		}
+	}
+}

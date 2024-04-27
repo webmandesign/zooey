@@ -1,0 +1,92 @@
+/* FILE: blocks/_list.scss */
+// core/list
+
+// This has to be enqueued as a global block
+// style as WordPress does not apply `wp-block-list`
+// class on front-end, and in editor we can not
+// add such global list styles as they may affect
+// other UI elements.
+
+// This has to be theme-specific style only.
+// We can not add it to ABS plugin due to
+// different theme spacing issues.
+
+@include wrap() {
+
+	ul,
+	ol {
+
+		&.has-background[class] {
+			padding-inline-start: 3em;
+		}
+
+		&.alignleft,
+		&.aligncenter,
+		&.alignright {
+			clear: both;
+			padding-inline: 0;
+			list-style: none;
+
+			&.has-background {
+				// Don't use `--theme--css--has-background--padding-*` as
+				// it gets overridden sometimes and we don't want that here.
+				padding-left: var(--wp--custom--spacing--has-background--left);
+				padding-right: var(--wp--custom--spacing--has-background--right);
+			}
+		}
+
+		&.alignleft.alignleft,
+		&.alignright.alignright {
+			float: none;
+			margin: 0 auto;
+			margin-block-start: var(--wp--style--block-gap);
+
+			&:first-child {
+				margin-block-start: 0;
+			}
+		}
+
+		&.alignleft {
+			text-align: left;
+		}
+		&.aligncenter {
+			text-align: center;
+		}
+		&.alignright {
+			text-align: right;
+		}
+
+		&.is-style-no-bullets {
+			padding-inline-start: 0;
+			list-style: none;
+
+			&.has-background {
+				// Don't use `--theme--css--has-background--padding-*` as
+				// it gets overridden sometimes and we don't want that here.
+				padding-inline-start: var(--wp--custom--spacing--has-background--left);
+			}
+		}
+	}
+}
+
+body .is-layout-constrained >,
+.editor-styles-wrapper .is-root-container > {
+
+	ul,
+	ol {
+
+		&.alignleft,
+		&.alignright {
+			max-width: var(--wp--style--global--content-size);
+		}
+	}
+}
+
+ul.is-style-checkmark.is-style-checkmark {
+	list-style-type: '\2713';
+	padding-inline-start: 1em;
+
+	li {
+		padding-inline-start: 1ch;
+	}
+}

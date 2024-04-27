@@ -1,0 +1,11 @@
+/* FILE: editor/__index.scss */
+
+// WordPress will do the wrapping with
+// `.editor-styles-wrapper` automatically.
+
+@import 'accessibility';
+@import 'post-title';
+
+@import 'classic';
+
+@import 'blocks';

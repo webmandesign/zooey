@@ -1,0 +1,29 @@
+// core/code
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-code {
+	position: relative;
+	font-size: var(--wp--preset--font-size--s);
+	white-space: pre;
+
+	&.alignfull {
+		border-radius: 0;
+	}
+
+	&:not(.has-background) {
+		@extend %shaded_background;
+	}
+
+	&,
+	&.has-background.has-background.has-background {
+		padding: $ratio + em;
+	}
+
+	code {
+		white-space: inherit;
+	}
+}
+
+@import '../_extend/_index';

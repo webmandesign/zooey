@@ -1,0 +1,92 @@
+/* FILE: global/wp/_alignment.scss */
+
+// Default (classic) WordPress alignment styles.
+
+	.alignleft,
+	.alignright {
+		max-width: calc( 50% - 1em );
+		margin-block-end: 1em;
+	}
+
+	.alignleft {
+		float: left;
+		margin-left: 0;
+		margin-right: 2em;
+	}
+
+	.alignright {
+		float: right;
+		margin-left: 2em;
+		margin-right: 0;
+	}
+
+	.aligncenter {
+		margin-inline: auto;
+
+		&:not([class*="wp-block"]) {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	// Layout fix.
+	.has-global-padding :where(.has-global-padding.alignfull) {
+		padding-right: var(--wp--style--root--padding-right);
+		padding-left: var(--wp--style--root--padding-left);
+	}
+
+
+// Block related alignment styles.
+
+	body {
+		--theme--css--align-inline-width: min( calc( 100vw - 200px ), var(--wp--style--global--content-size) );
+		--theme--css--align-inline-offset-margin-base: calc( ( var(--theme--css--align-100vw) - var(--theme--css--align-inline-width) ) / 2 );
+	}
+
+	@include media( 482 ) { // WP breakpoint.
+
+		@if false == $is_editor {
+
+			body {
+
+				.is-layout-flow >,
+				.is-layout-constrained > {
+
+					.alignleft,
+					.alignright {
+						max-width: calc( 50% - 1em );
+						margin-block-end: 1em;
+
+						&:first-child + * {
+							margin-block-start: 0;
+						}
+					}
+				}
+
+				.is-layout-constrained > {
+
+					.alignleft,
+					.alignright {
+						max-width: calc( var(--wp--style--global--content-size) / 2 - 1em );
+					}
+
+					.alignleft {
+						margin-left: calc( var(--theme--css--align-inline-offset-margin-base) - var(--wp--style--root--padding-left) );
+						margin-right: 2em;
+					}
+
+					.alignright {
+						margin-left: 2em;
+						margin-right: calc( var(--theme--css--align-inline-offset-margin-base) - var(--wp--style--root--padding-right) );
+					}
+				}
+			}
+		}
+	}
+
+// Flexbox vertical justification fix.
+
+	.is-content-justification-stretch {
+		// Not sure why this is not working in WordPress.
+		justify-content: space-between;
+	}

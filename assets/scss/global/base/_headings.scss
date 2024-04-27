@@ -1,0 +1,27 @@
+/* FILE: global/base/_headings.scss */
+
+// Not sure why it is not possible to set
+// top margin on headings via `theme.json`.
+// We need to do it here.
+h1, h2, h3, h4, h5, h6 {
+	margin: 0; // Browser reset.
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	text-wrap: pretty;
+
+	.has-text-color &,
+	.has-background:not(.has-text-color) & {
+		color: inherit;
+	}
+}
+
+h2, h3, h4, h5, h6 {
+
+	&:not(:first-child) {
+		margin-block-start: var(--wp--custom--spacing--heading);
+	}
+
+	.is-layout-flex:not(.is-vertical) > & {
+		margin-block-start: 0;
+	}
+}

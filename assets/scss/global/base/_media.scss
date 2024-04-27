@@ -1,0 +1,34 @@
+/* FILE: global/base/_media.scss */
+
+audio,
+embed,
+iframe,
+img,
+object,
+video {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+img {
+	height: auto;
+	font-style: italic; // For alt text.
+}
+
+figure {
+	margin-inline: 0; // The block margin is treated in global/base/_spacing.scss
+	// Don't set `line-height` here as Table block wraps tables in figure too.
+}
+
+figcaption {
+	font-size: var(--wp--preset--font-size--s);
+	line-height: 1 + $ratio_min;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	display: block !important;
+
+	body[class] figure & {
+		margin-block-start: 1em;
+		margin-block-end: 0;
+	}
+}

@@ -1,0 +1,8 @@
+// core/group
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.is-layout-flex > * {
+	max-width: 100%;
+}

@@ -1,0 +1,22 @@
+/* FILE: custom/_forms.scss */
+
+// Border radius.
+
+	$button_suffix: '';
+	@if true == $is_editor {
+		$button_suffix: ':where(:not(.components-button):not([class*="wc-"]))';
+	}
+	button#{ $button_suffix },
+	input,
+	select,
+	textarea {
+		border-radius: var(--wp--custom--border-radius--form-field);
+	}
+
+	.select2.select2-container .select2 {
+
+		&-choice,
+		&-selection {
+			border-radius: var(--wp--custom--border-radius--form-field);
+		}
+	}

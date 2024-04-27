@@ -1,0 +1,15 @@
+// core/template-part
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-template-part {
+
+	&[style*="min-height:"] {
+		display: flex;
+
+		> * {
+			flex: 1;
+		}
+	}
+}

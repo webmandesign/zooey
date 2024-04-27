@@ -1,0 +1,135 @@
+/* FILE: global/form/_base.scss */
+
+form {
+	--wp--style--block-gap: 1em;
+
+	max-width: 100%;
+}
+
+fieldset {
+	padding: 2em 1em;
+	margin-inline: 0;
+	border-width: 1px;
+}
+
+legend {
+	font-size: var(--wp--preset--font-size--s);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: var(--wp--custom--letter-spacing);
+
+	+ * {
+		margin-block-start: 0;
+	}
+}
+
+$button_suffix: '';
+@if true == $is_editor {
+	$button_suffix: ':where(:not(.components-button):not([class*="wc-"]))';
+}
+button#{ $button_suffix },
+input,
+select,
+textarea {
+	max-width: 100%;
+	padding: var(--wp--custom--spacing--input-vertical) 1em;
+	font-size: 1em;
+	font-family: inherit;
+	line-height: inherit;
+	text-transform: inherit;
+	letter-spacing: inherit;
+	background: transparent;
+	color: inherit;
+	border-width: 2px;
+	border-style: solid;
+	vertical-align: baseline;
+
+	&.disabled {
+		@extend %field_disabled;
+	}
+
+	&.fullwidth {
+		width: 100%;
+	}
+}
+
+	input,
+	select,
+	textarea {
+
+		// For button focus see `assets/scss/custom/_button.scss`.
+		&:focus {
+			border-color: currentColor;
+		}
+	}
+
+textarea,
+select[multiple],
+select[size] {
+	height: auto;
+	line-height: inherit;
+}
+
+textarea {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	vertical-align: top;
+	overflow-y: auto;
+	resize: vertical;
+}
+
+label {
+	display: inline-block;
+
+	&[for] {
+		cursor: pointer;
+	}
+
+	+ [type="checkbox"],
+	[type="checkbox"] + & {
+		margin-inline-start: .5em;
+	}
+}
+
+[type="checkbox"],
+[type="radio"] {
+	position: relative;
+	width: 1em;
+	height: 1em;
+	inset-block-end: -.2em;
+	vertical-align: baseline;
+}
+
+option {
+	background: #fff !important;
+	color: #444 !important;
+
+	@media (prefers-color-scheme: dark) {
+		background: #111 !important;
+		color: #ddd !important;
+	}
+}
+
+@if false == $is_editor {
+	// These styles create issues in block editor,
+	// such as semi-transparent linked images.
+
+	:disabled,
+	[disabled],
+	[aria-disabled="true"] {
+		@extend %field_disabled;
+	}
+}
+
+%field_disabled {
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: .5;
+}
+
+::placeholder {
+	font-weight: 400;
+	line-height: normal;
+	opacity: .75;
+	color: inherit;
+}

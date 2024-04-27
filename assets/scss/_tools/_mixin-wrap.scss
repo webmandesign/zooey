@@ -1,0 +1,19 @@
+//
+// Wrap content front-end or editor styles.
+//
+// @since  1.0.0
+//
+// @param  string $prefix
+// @param  string $suffix
+// @param  string $selector
+//
+@mixin wrap( $suffix: '', $prefix: '', $selector: '.editor-styles-wrapper' ) {
+
+	@if true == $is_editor {
+		#{ $prefix + $selector + $suffix } {
+			@content
+		}
+	} @else {
+		@content
+	}
+}

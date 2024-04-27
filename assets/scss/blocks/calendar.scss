@@ -1,0 +1,43 @@
+// core/calendar
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-calendar {
+
+	th,
+	td {
+		padding: ( $ratio_maj + em ) ( $ratio_min + em );
+	}
+
+	th {
+		@extend %shaded_background;
+		position: relative;
+		font-weight: 700;
+		background: none;
+	}
+
+	table {
+		color: inherit;
+
+		th,
+		td {
+			border-color: inherit;
+		}
+	}
+
+	caption {
+		padding: ( $ratio_maj + em ) ( $ratio_min + em );
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 700;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: var(--wp--custom--letter-spacing);
+	}
+}
+
+.wp-calendar-nav {
+	margin-block-start: .25em;
+}
+
+@import '../_extend/_index';

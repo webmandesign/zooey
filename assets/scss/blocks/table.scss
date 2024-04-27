@@ -1,0 +1,37 @@
+// core/table
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-table {
+
+	th,
+	td {
+		border-color: inherit;
+	}
+
+	&.is-style-stripes {
+		border-width: 0;
+		border-color: inherit;
+
+		tbody tr:not(:last-child) {
+
+			th,
+			td {
+				border-block-end: 1px solid;
+				border-block-end-color: inherit;
+			}
+		}
+
+		&.is-style-stripes tbody tr {
+
+			&:nth-child( odd ){
+				background: rgba( #000, .03 );
+			}
+
+			&:nth-child( even ){
+				background: rgba( #fff, .06 );
+			}
+		}
+	}
+}

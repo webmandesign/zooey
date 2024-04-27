@@ -1,0 +1,181 @@
+/* FILE: global/modifiers/_box-model.scss */
+
+// Width.
+
+	.is-fullwidth,
+	.fullwidth {
+
+		&:not(.alignfull),
+		img,
+		input,
+		select,
+		textarea,
+		button {
+			width: 100%;
+		}
+
+		@if true == $is_editor {
+
+			// For pattern preview.
+			.components-resizable-box__container {
+				width: 100% !important;
+				overflow: hidden;
+			}
+		}
+	}
+
+// Padding (required for classic/hybrid mode).
+
+	$important_modifiers: _important( 'modifier_padding' );
+
+	.has-no-padding,
+	.p0,
+	.p-0 {
+		padding: 0 $important_modifiers;
+	}
+
+	.has-no-padding-top,
+	.pt0,
+	.pt-0 {
+		padding-top: 0 $important_modifiers;
+	}
+
+	.has-no-padding-right,
+	.pr0,
+	.pr-0 {
+		padding-right: 0 $important_modifiers;
+	}
+
+	.has-no-padding-bottom,
+	.pb0,
+	.pb-0 {
+		padding-bottom: 0 $important_modifiers;
+	}
+
+	.has-no-padding-left,
+	.pl0,
+	.pl-0 {
+		padding-left: 0 $important_modifiers;
+	}
+
+	.has-no-padding-horizontal,
+	.plr0,
+	.plr-0 {
+		padding-inline: 0 $important_modifiers;
+	}
+
+	.has-no-padding-vertical,
+	.ptb0,
+	.ptb-0 {
+		padding-block: 0 $important_modifiers;
+	}
+
+	// Useful for site footer if fixed mobile navigation toggle used.
+	.has-mobile-padding-bottom {
+
+		@include media( ( 600, 'max-width' ) ) { // WP breakpoint.
+			padding-bottom: 8em $important_modifiers;
+		}
+	}
+
+	$important_modifiers: null; // Required reset.
+
+// Margin (required for classic/hybrid mode).
+
+	$important_modifiers: _important( 'modifier_margin' );
+
+	.has-no-margin,
+	.m0,
+	.m-0 {
+		margin: 0 $important_modifiers;
+	}
+
+	.has-no-margin-top,
+	.mt0,
+	.mt-0 {
+		margin-top: 0 $important_modifiers;
+	}
+
+	.has-no-margin-right,
+	.mr0,
+	.mr-0 {
+		margin-right: 0 $important_modifiers;
+	}
+
+	.has-auto-margin-right,
+	.mrauto,
+	.mr-auto {
+		margin-right: auto $important_modifiers;
+	}
+
+	.has-no-margin-bottom,
+	.mb0,
+	.mb-0 {
+		margin-bottom: 0 $important_modifiers;
+	}
+
+	.has-no-margin-left,
+	.ml0,
+	.ml-0 {
+		margin-left: 0 $important_modifiers;
+	}
+
+	.has-auto-margin-left,
+	.mlauto,
+	.ml-auto {
+		margin-left: auto $important_modifiers;
+	}
+
+	.has-no-margin-horizontal,
+	.mlr0,
+	.mlr-0 {
+		margin-inline: 0 $important_modifiers;
+	}
+
+	.has-no-margin-vertical,
+	.mtb0,
+	.mtb-0 {
+		margin-block: 0 $important_modifiers;
+	}
+
+	$important_modifiers: null; // Required reset.
+
+// Overflow.
+
+	$important_modifiers: _important( 'modifier_overflow' );
+
+	.has-visible-overflow {
+		overflow: visible $important_modifiers;
+	}
+
+	.has-hidden-overflow {
+		overflow: hidden $important_modifiers;
+	}
+
+	$important_modifiers: null; // Required reset.
+
+// Z index.
+
+	$important_modifiers: _important( 'modifier_zindex' );
+
+	.has-high-zindex,
+	.has-high-z-index {
+		z-index: 10 $important_modifiers;
+	}
+
+	.has-low-zindex,
+	.has-low-z-index {
+		z-index: 0 $important_modifiers;
+	}
+
+	$important_modifiers: null; // Required reset.
+
+// Display.
+
+	$important_modifiers: _important( 'modifier_display' );
+
+	.is-hidden {
+		display: none $important_modifiers;
+	}
+
+	$important_modifiers: null; // Required reset.

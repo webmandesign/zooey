@@ -1,0 +1,381 @@
+// core/navigation-submenu
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+//
+// IMPORTANT:
+//
+// Actually, styling Navigation blocks separately is a bit tricky,
+// as WordPress puts all the related blocks styles into a single
+// `wp-includes/blocks/navigation/style.css` file (as of 20230517).
+//
+// And the partial Navigation Submenu and Navigation Item blocks
+// are being loaded before, so we need to use higher CSS specificity
+// in this file to override WordPress styles (that are loaded later).
+//
+// Alternatively, we could create a single Navigation block stylesheet,
+// but that wouldn't be very optimization friendly. While this split
+// approach works, use it.
+//
+// ---
+//
+// The CSS selector specificity in this file is tragic, but needed
+// to override WordPress native navigation block styles.
+//
+
+//
+// Submenu toggle button.
+//
+
+	// Resetting theme button global styles.
+	.wp-block-navigation-item.has-child.open-on-click .wp-block-navigation-submenu__toggle {
+		padding: 0;
+		padding-inline-end: calc( 10px + #{ $ratio_min + em } ) !important;
+		font-size: 1em;
+		border-width: 0;
+		border-radius: 0;
+	}
+
+	.wp-block-navigation .wp-block-navigation__container .has-child.has-child {
+
+		.wp-block-navigation__submenu-icon {
+			display: inline-block;
+			position: relative;
+			width: 10px;
+			height: 10px;
+			margin-inline-start: $ratio_min + em;
+			margin-inline-end: 0;
+			border-radius: 0;
+			opacity: .33;
+
+			&:focus {
+				opacity: 1;
+			}
+
+			svg {
+				width: 80%;
+				visibility: hidden;
+			}
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 2px;
+				left: 50%;
+				top: 50%;
+				background: currentColor;
+				transform: translateX(-50%) translateY(-50%);
+			}
+
+			&::after {
+				transform: translateX(-50%) translateY(-50%) rotate(90deg);
+				transition: transform .2s;
+			}
+		}
+
+		&.open-on-click {
+
+			.wp-block-navigation__submenu-icon {
+				margin-inline-start: -10px;
+				opacity: 1;
+			}
+		}
+
+		&.open-on-hover-click {
+
+			.wp-block-navigation__submenu-icon {
+				width: var(--theme--css--submenu-toggle-size);
+				min-width: var(--theme--css--submenu-toggle-size);
+				height: var(--theme--css--submenu-toggle-size);
+
+				// Touch enabled devices.
+				@media (hover: none) {
+					border: 1px solid;
+					border-color: inherit;
+					border-radius: var(--wp--custom--border-radius--button);
+					opacity: 1;
+				}
+			}
+		}
+
+		// Open on hover:
+		.no-js &:focus-within > [aria-expanded]::after,
+		[aria-expanded="true"]::after,
+		// Open on click:
+		[aria-expanded="true"] + .wp-block-navigation__submenu-icon::after {
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+		// Open on hover for modal (responsive container):
+		.is-responsive .wp-block-navigation__responsive-container:not(.has-modal-open) .open-on-hover-click:hover > [aria-expanded]::after {
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+	.has-modal-open.has-modal-open.has-modal-open .open-on-hover-click {
+
+		.wp-block-navigation__submenu-icon {
+			width: var(--theme--css--submenu-toggle-size);
+			height: var(--theme--css--submenu-toggle-size);
+			border: 1px solid;
+			border-color: inherit;
+			border-radius: var(--wp--custom--border-radius--button);
+			opacity: 1;
+		}
+	}
+
+//
+// Submenu.
+//
+
+	// Setup.
+
+		$selector: '.wp-block-navigation__submenu-container';
+
+		:root {
+			--theme--css--submenu-transform: none;
+			--theme--css--submenu-inset-inline-start: 0;
+			--theme--css--submenu-padding: #{ $ratio + rem };
+			--theme--css--submenu-item-padding: #{ $ratio_min + rem };
+			--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( 1rem );
+			--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
+			--theme--css--animation-showSubSubMenu--from--transform: translateX( 1rem );
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				--theme--css--submenu-transform: translateX( -50% );
+				--theme--css--submenu-inset-inline-start: 50%;
+			}
+
+			@include media( map_get( $breakpoint, 'xl' ) ) {
+				--theme--css--submenu-padding: #{ $ratio * $ratio + rem };
+			}
+		}
+
+		.wp-block-navigation.is-vertical {
+			--theme--css--animation-showSubMenu--from--transform: translateX( 1rem );
+			--theme--css--animation-showSubMenu--to--transform: none;
+		}
+
+		.rtl {
+			--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( 1rem );
+			--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
+			--theme--css--animation-showSubSubMenu--from--transform: translateX( -1rem );
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				--theme--css--submenu-transform: translateX( 50% );
+			}
+
+			.wp-block-navigation.is-vertical {
+				--theme--css--animation-showSubMenu--from--transform: translateX( -1rem );
+			}
+		}
+
+		.no-centered-submenu {
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				--theme--css--submenu-transform: none;
+				--theme--css--submenu-inset-inline-start: calc( -1 * var(--theme--css--submenu-padding) );
+				--theme--css--animation-showSubMenu--from--transform: translateY( 1rem );
+				--theme--css--animation-showSubMenu--to--transform: none;
+			}
+		}
+
+		@keyframes showSubMenu {
+			from {
+				opacity: 0;
+				transform: var(--theme--css--animation-showSubMenu--from--transform);
+			}
+			to {
+				opacity: 1;
+				transform: var(--theme--css--animation-showSubMenu--to--transform);
+			}
+		}
+		@keyframes showSubSubMenu {
+			from {
+				opacity: 0;
+				transform: var(--theme--css--animation-showSubSubMenu--from--transform);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		:root {
+			--theme--css--submenu-open-animation: showSubMenu .3s;
+		}
+
+		.wp-block-navigation.is-vertical,
+		#{$selector} #{$selector} {
+			--theme--css--submenu-open-animation: showSubSubMenu .3s;
+		}
+
+	.wp-block-navigation .has-child {
+
+		// Resetting WP styles:
+		&.has-child.has-child.has-child #{$selector} {
+			visibility: visible;
+			width: auto;
+			height: auto;
+			min-width: clamp( 16em, 15vw, 320px );
+			overflow: visible;
+			opacity: 1;
+		}
+
+		// For mobile menu top level items.
+		> .wp-block-navigation-item__content {
+			flex-grow: 1;
+		}
+
+		#{$selector} {
+			text-transform: none;
+			letter-spacing: normal;
+			border-radius: var(--wp--custom--border-radius--sub-menu);
+
+			&[class] {
+				gap: 0;
+				display: none;
+				inset-inline: auto; // We have to reset this to override WP default styles.
+				inset-inline-start: var(--theme--css--submenu-inset-inline-start);
+				transform: var(--theme--css--submenu-transform);
+				padding: calc( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) var(--theme--css--submenu-padding);
+				box-shadow: var(--wp--custom--shadow--sub-menu);
+
+				// Sub-submenu.
+				#{$selector} {
+					font-size: 1em;
+					inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
+					inset-inline-start: 100%;
+					transform: none;
+				}
+
+				.wp-block-navigation-item__content {
+					padding: var(--theme--css--submenu-item-padding) 0;
+				}
+			}
+
+			// Removing something that covers sub-sub-menu toggle button.
+			#{$selector}[class]::before {
+				display: none;
+			}
+		}
+
+		&.is-editing > #{$selector}, // For Site Editor.
+		&:not(.open-on-click):hover > #{$selector},
+		[aria-expanded="true"] ~ #{$selector},
+		.no-js &:focus-within > #{$selector} {
+			display: flex;
+			animation: var(--theme--css--submenu-open-animation);
+		}
+	}
+
+	// For Site Editor.
+	.wp-block-navigation {
+
+		.has-child.has-child-selected,
+		.has-child.is-selected {
+
+			> .wp-block-navigation__submenu-container {
+				min-width: clamp( 16em, 15vw, 320px ) !important;
+			}
+		}
+	}
+
+	.wp-block-navigation.is-vertical .has-child #{$selector} {
+		inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
+		inset-inline: auto; // We have to reset this to override WP default styles.
+		inset-inline-start: 100%;
+		transform: none;
+	}
+
+	[class].wp-block-navigation:not(.has-background) #{$selector} {
+		// This can not be edited by `theme.json`.
+		border-width: 0;
+		border-color: var(--theme--css--current-border-color);
+	}
+
+	.wp-block-navigation-submenu > .wp-block-navigation-item:not(:last-child) {
+		border-bottom-width: 1px;
+		border-bottom-style: dotted;
+	}
+
+//
+// Megamenu.
+//
+
+	.wp-block-navigation:not(.has-overlay-menu) .is-style-megamenu,
+	.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) .is-style-megamenu {
+		@include media( 1025 ) { // 1024px breakpoint.
+
+			// Columns container.
+			> #{$selector} {
+				flex-direction: row;
+				gap: var(--wp--style--block-gap);
+				align-items: flex-start;
+
+				// Column.
+				> .wp-block-navigation-item {
+					flex: 0 1 14em;
+					display: block;
+					padding: 0;
+					border-width: 0;
+					vertical-align: top;
+
+					.editor-styles-wrapper & {
+						min-width: 14em;
+					}
+
+					// Label.
+					> .wp-block-navigation-item__content {
+						border: 0 !important;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: var(--wp--custom--letter-spacing);
+
+						&::before {
+							display: none;
+						}
+					}
+
+					> .wp-block-navigation__submenu-icon {
+						display: none;
+					}
+
+					// Content (sub-sub-menu).
+					> #{$selector} {
+						--theme--css--submenu-open-animation: none;
+
+						display: block;
+						position: static;
+						min-width: clamp( 12em, 14vw, 240px ) !important;
+						inset: 0;
+						padding: 0;
+						margin: ( $ratio_maj + em ) 0 0;
+						background: none;
+						border-width: 0;
+						box-shadow: none;
+
+						#{$selector} {
+							--theme--css--submenu-open-animation: showSubSubMenu .3s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+//
+// Editor.
+//
+
+	.editor-styles-wrapper {
+
+		.wp-block-navigation-item {
+
+			&.wp-block-navigation-submenu {
+				font-size: 1em;
+			}
+		}
+	}

@@ -1,0 +1,50 @@
+/* FILE: _variables/_typography.scss */
+
+/*! Vars: Typography: */
+:root {
+
+	// Global typography setup.
+
+		// @link  https://websemantics.uk/tools/fluid-responsive-property-calculator/
+		// Where:
+		//   Viewport width offset [px] = breakpoint_mobile_px / 100
+		//   Linear factor [unitless]   = 100 * ( font-size_desktop - font-size_mobile ) / ( breakpoint_desktop - breakpoint_mobile )
+		// Note: The calc base value (1rem) MUST be stated in REM to maintain accessibility.
+		--theme--css--vw-s: #{ map_get( $breakpoint, 's' ) };
+		--theme--css--vw-l: #{ map_get( $breakpoint, 'xxl' ) };
+		--theme--css--typography--fluid--vw-offset: calc( var(--theme--css--vw-s) * 1px / 100 );
+		--theme--css--typography--fluid--linear-factor: calc( 100 * ( var(--theme--mod--typography_font_size) - 16 ) / ( var(--theme--css--vw-l) - var(--theme--css--vw-s) ) );
+		--theme--css--font-size-base: clamp(
+			16px,
+			1rem + ( ( 1vw - var(--theme--css--typography--fluid--vw-offset) ) * var(--theme--css--typography--fluid--linear-factor) ),
+			var(--theme--mod--typography_font_size) * 1px
+		);
+
+	// Modular scale typography setup.
+
+		// Unfortunately, it is not possible to apply fluid calculation
+		// of "desktop multiply" value as we can only divide with unitless
+		// number in CSS `calc()`.
+		// We need to provide responsive steps instead. Number of setps
+		// can be anything really. For smoother scaling use more steps.
+		$n: 8;
+		@for $i from 1 through $n {
+			@media (min-width: #{ math.ceil( map_get( $breakpoint, 's' ) + ( $i - 1 ) * math.div( ( map_get( $breakpoint, 'xxl' ) - map_get( $breakpoint, 's' ) ), ( $n - 1 ) ) ) * 1px } ) {
+				--theme--css--desktop-multiply: calc( ( var(--theme--mod--typography_desktop_multiply) - 1 ) * #{ math.div( $i, $n ) } + 1 );
+			}
+		}
+		--theme--css--desktop-multiply-em: calc( var(--theme--css--desktop-multiply, 1 ) * 1em );
+
+		--theme--css--modular-scale--pow_-1: calc( 1 / var(--theme--mod--typography_modular_scale) );
+		--theme--css--modular-scale: var(--theme--mod--typography_modular_scale);
+		--theme--css--modular-scale--pow_2:  calc( var(--theme--mod--typography_modular_scale) * var(--theme--mod--typography_modular_scale) );
+		--theme--css--modular-scale--pow_3:  calc( var(--theme--css--modular-scale--pow_2) * var(--theme--mod--typography_modular_scale) );
+		--theme--css--modular-scale--pow_4:  calc( var(--theme--css--modular-scale--pow_3) * var(--theme--mod--typography_modular_scale) );
+
+		--theme--css--font-size-h6: calc( var(--theme--css--desktop-multiply-em) * var(--theme--css--modular-scale--pow_-1) );
+		--theme--css--font-size-h5: var(--theme--css--desktop-multiply-em);
+		--theme--css--font-size-h4: calc( var(--theme--css--desktop-multiply-em) * var(--theme--mod--typography_modular_scale) );
+		--theme--css--font-size-h3: calc( var(--theme--css--desktop-multiply-em) * var(--theme--css--modular-scale--pow_2) );
+		--theme--css--font-size-h2: calc( var(--theme--css--desktop-multiply-em) * var(--theme--css--modular-scale--pow_3) );
+		--theme--css--font-size-h1: calc( var(--theme--css--desktop-multiply-em) * var(--theme--css--modular-scale--pow_4) );
+}

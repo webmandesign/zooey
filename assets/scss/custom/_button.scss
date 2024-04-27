@@ -1,0 +1,67 @@
+/* FILE: custom/_button.scss */
+
+#{ $selectors_button } {
+	display: inline-block; // Not to overflow empty paragraph container, for example.
+	font-family: var(--wp--custom--font-family--button);
+	font-size: var(--wp--custom--font-size--button);
+	font-weight: 600;
+	line-height: 1.25;
+	text-transform: uppercase;
+	text-decoration-line: none;
+	text-underline-offset: var(--wp--custom--underline--offset--default);
+	text-decoration-thickness: var(--wp--custom--underline--thickness);
+	text-align: center;
+	letter-spacing: var(--wp--custom--letter-spacing);
+	background-color: var(--theme--css--button--color--background);
+	border: 2px solid;
+	border-radius: var(--wp--custom--border-radius--button);
+	box-shadow: var(--wp--preset--shadow--s);
+	cursor: pointer;
+	transition:
+		background .1s linear,
+		color .1s linear,
+		border .1s linear,
+		box-shadow .1s linear;
+
+	&,
+	&.has-background {
+		padding: 1.125em 1.5em;
+		border-color: var(--theme--css--button--color--border);
+	}
+
+	&,
+	.has-background &,
+	.has-text-color & {
+
+		&:not(.has-text-color) {
+			// Making sure the button don't inherit parent text color.
+			color: var(--theme--css--button--color--text);
+		}
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		box-shadow: var(--wp--preset--shadow--m);
+	}
+
+	&:focus {
+		outline-color: var(--theme--css--button--color--background);
+
+		.has-focus-alt &,
+		&.has-focus-alt {
+			outline-color: inherit;
+		}
+	}
+
+	&:active {
+		text-decoration-line: underline;
+		text-decoration-style: dotted;
+		box-shadow: none;
+	}
+
+	:not(.is-style-outline) > &:not(.has-background):not(.has-text-color) {
+		--theme--css--current-border-color: var(--theme--css--button--color--border);
+	}
+}

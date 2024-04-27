@@ -1,0 +1,33 @@
+/* FILE: editor/_classic.scss */
+
+//
+// Classic editor styles
+//
+
+html:not(.editor-styles-wrapper) {
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	border-width: 0 !important;
+	border-color: var(--wp--preset--color--contrast--border);
+}
+
+.mce-content-body {
+
+	// Has to rise the specificity to override WP RTL styles.
+	&[class] {
+		width: 100%;
+		min-height: 40px;
+		max-width: var(--wp--style--global--content-size);
+		padding: 20px !important;
+		margin: 0 auto;
+		font-family: var(--wp--preset--font-family--global);
+		font-size: var(--theme--css--font-size-base);
+		line-height: $ratio;
+		background: none;
+		color: inherit;
+	}
+
+	h2, h3, h4, h5, h6 {
+		font-family: var(--wp--preset--font-family--supplemental);
+	}
+}

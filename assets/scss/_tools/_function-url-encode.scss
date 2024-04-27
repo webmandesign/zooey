@@ -1,0 +1,44 @@
+//
+// Encode symbols for URL.
+//
+// @since  1.0.0
+//
+// @param  string $url
+//
+@function _url_encode( $url, $space: true ) {
+
+	$encodes: (
+		"%": "%25",
+		"<": "%3C",
+		">": "%3E",
+		"!": "%21",
+		"*": "%2A",
+		"'": "%27",
+		'"': "%22",
+		"(": "%28",
+		")": "%29",
+		";": "%3B",
+		":": "%3A",
+		"@": "%40",
+		"&": "%26",
+		"=": "%3D",
+		"+": "%2B",
+		"$": "%24",
+		",": "%2C",
+		"/": "%2F",
+		"?": "%3F",
+		"#": "%23",
+		"[": "%5B",
+		"]": "%5D",
+	);
+
+	@if $space {
+		$encodes: map-merge( $encodes, ( " " : "%20" ) );
+	}
+
+	@each $search, $replace in $encodes {
+		$url: _str_replace( $search, $replace, $url );
+	}
+
+	@return $url;
+}

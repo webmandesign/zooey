@@ -1,0 +1,62 @@
+// core/latest-posts
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-latest-posts {
+
+	&__list {
+
+		&:not(.is-grid) {
+
+			li {
+				padding-block: $ratio_maj + em;
+				border-block-start: 1px solid;
+				border-color: inherit;
+
+				&:first-child {
+					padding-block-start: 0;
+					border-block-start-width: 0;
+				}
+
+				&:last-child {
+					padding-block-end: 0;
+				}
+			}
+		}
+	}
+
+	&__post {
+
+		> a:not([class]), // For editor.
+		&-title {
+			display: block;
+			font-family: var(--wp--preset--font-family--supplemental);
+			font-weight: 500;
+			line-height: 1 + $ratio_min;
+			color: var(--wp--preset--color--contrast-alt);
+
+			&:not(:hover):not(:focus) {
+				text-decoration: none;
+			}
+		}
+
+		&-author,
+		&-date {
+			display: inline-block;
+			font-size: var(--wp--preset--font-size--xs);
+			text-transform: uppercase;
+			letter-spacing: var(--wp--custom--letter-spacing);
+		}
+
+		&-author + &-date::before {
+			content: '\2002—\2002'; // &ensp;
+			speak: none;
+		}
+
+		&-excerpt {
+			margin: .5rem 0 0;
+			font-size: var(--wp--preset--font-size--xs);
+		}
+	}
+}

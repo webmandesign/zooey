@@ -1,0 +1,36 @@
+/* FILE: global/accessibility/_screen-reader.scss */
+
+// Text meant only for screen readers.
+body[class] .screen-reader-text,
+.is-style-screen-reader-text {
+	@extend %screen_reader--hide;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+
+	&:focus {
+		@extend %screen_reader--show;
+		display: block;
+		margin: 1em;
+		padding: 1.25em 1.5em;
+		font-size: 14px;
+		font-weight: 700;
+		text-decoration: none;
+		background: var( --wp--preset--color--primary, #36b );
+		color: var( --wp--preset--color--primary--bg-text, #fff );
+		outline-color: var( --wp--preset--color--primary, #36b );
+		box-shadow: var(--wp--preset--shadow--s);
+		z-index: 100000; // Above WP toolbar.
+	}
+}
+
+body .is-layout-constrained > {
+
+	.screen-reader-text,
+	.is-style-screen-reader-text {
+
+		+ * {
+			margin-block-start: 0;
+		}
+	}
+}

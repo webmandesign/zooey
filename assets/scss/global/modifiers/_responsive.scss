@@ -1,0 +1,22 @@
+/* FILE: global/modifiers/_responsive.scss */
+
+$important_modifiers: _important( 'modifier_responsive' );
+
+@each $label, $px in $breakpoint {
+
+	.screen-min-width-#{$label},
+	.is-style-breakpoint-#{$label}-hide {
+		@include media( ( $px, 'max-width' ) ) {
+			display: none $important_modifiers;
+		}
+	}
+
+	.screen-max-width-#{$label},
+	.is-style-breakpoint-#{$label}-only {
+		@include media( ( $px, 'min-width' ) ) {
+			display: none $important_modifiers;
+		}
+	}
+}
+
+$important_modifiers: null; // Required reset.

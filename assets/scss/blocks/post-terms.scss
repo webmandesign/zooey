@@ -1,0 +1,14 @@
+// core/post-terms
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-post-terms {
+
+	&__prefix {
+		font-size: .875em;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: var(--wp--custom--letter-spacing);
+	}
+}

@@ -1,0 +1,27 @@
+// core/categories
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-categories {
+	min-width: 6em;
+
+	&.is-style-inline,
+	&.is-style-buttons-inline {
+		padding: 0;
+		list-style: none;
+	}
+
+	&.is-style-buttons-inline {
+
+		.cat-item {
+			position: relative;
+		}
+	}
+}
+
+.cat-item-count {
+	@extend %badge_posts_count;
+}
+
+@import '../_extend/_index';

@@ -1,0 +1,64 @@
+$selectors_margin_vertical: (
+	'p',
+	'ol', 'ul', 'dl',
+	'hr',
+	'form',
+	'blockquote',
+	'table',
+	'figure',
+	'iframe',
+	'address',
+	'details',
+	'pre',
+	'.wp-block-gallery:not(.has-nested-images)',
+);
+
+	@if false == $is_editor {
+		$selectors_margin_vertical: append( $selectors_margin_vertical, (
+			'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+			'fieldset',
+		) );
+	}
+
+$selectors_button: (
+	// `form` selector is required to prevent styling MEJS buttons, for example.
+	'form button:not([class*="wp-block-"])',
+	'form [type="button"]:not([class*="wp-block-"])',
+	'form [type="reset"]:not([class*="wp-block-"])',
+	'form [type="submit"]:not([class*="wp-block-"])',
+	'.button',
+	'.wp-element-button',
+	'.wp-block-button__link',
+	'.wp-block-file__button',
+	// '.wp-block-search .wp-block-search__button',
+	'[class].page-numbers:not(.current):not(.dots)',
+	'[class].post-page-numbers:not(.current):not(.dots)',
+	'[class].wp-block-query-pagination-previous',
+	'[class].wp-block-query-pagination-next',
+	'[class].wp-block-comments-pagination-previous',
+	'[class].wp-block-comments-pagination-next',
+	'.wp-block-post-comments-form input[type=submit]',
+);
+
+$selectors_button_colors: (
+	'.wp-element-button', // This takes care about Button block and also Search block button.
+);
+
+	@if true == $is_editor {
+		$selectors_button: (
+			'[class].button',
+			'.wp-element-button',
+			'[class].wp-block-button__link',
+			'[class].wp-block-search__button',
+			'[class].page-numbers:not(.current):not(.dots)',
+			'[class].post-page-numbers:not(.current):not(.dots)',
+			'[class].wp-block-query-pagination-previous',
+			'[class].wp-block-query-pagination-next',
+			'[class].wp-block-comments-pagination-previous',
+			'[class].wp-block-comments-pagination-next',
+		);
+	}
+
+	// Buttons from block styles.
+	$selectors_button: append( $selectors_button, '.is-style-buttons-inline a' );
+	$selectors_button: append( $selectors_button, '.is-style-read-more-button .wp-block-post-excerpt__more-link' );

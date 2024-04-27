@@ -1,0 +1,28 @@
+/* FILE: custom/_header.scss */
+
+.is-style-site-header {
+	position: relative;
+	width: 100%;
+	z-index: 999;
+	transition: box-shadow .3s;
+
+	&.is-position-sticky {
+		position: sticky;
+	}
+
+	&:not(.ignore-theme-options) {
+
+		.page-template-custom-overlaid-header & {
+			position: absolute;
+			inset-inline-start: 0;
+
+			.has-child .wp-block-navigation__submenu-icon {
+				opacity: 1;
+			}
+		}
+
+			.page-template-custom-overlaid-header:not([style*="hidden"]) & {
+				inset-block-start: var(--wp-admin--admin-bar--height, 0);
+			}
+	}
+}

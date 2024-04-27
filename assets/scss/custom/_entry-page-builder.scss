@@ -1,0 +1,23 @@
+/* FILE: custom/_entry-page-builder.scss */
+
+.wp-block-post-content {
+
+	.has-content-layout-no-padding & {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.has-content-layout-full-width & {
+		--wp--style--global--content-size: 100%;
+	}
+}
+
+// Fixing page builder issues.
+
+	.is-style-site-header {
+
+		.fl-builder-edit &,
+		.elementor-editor-active & {
+			pointer-events: none;
+		}
+	}

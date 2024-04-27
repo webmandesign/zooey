@@ -1,0 +1,48 @@
+/* FILE: global/base/_quote.scss */
+
+blockquote {
+	max-width: 100%; // Yes, this is required especially for editor when quote is within a stack.
+	margin-inline: 0;
+	font-family: var(--wp--preset--font-family--alternative);
+	font-size: var(--wp--preset--font-size--l);
+	font-weight: 400;
+	line-height: var(--wp--custom--line-height--quote);
+
+	.has-background:not(.has-text-color) & {
+		color: inherit;
+	}
+
+	> cite {
+		display: block;
+		margin-block-start: $ratio_maj + em;
+	}
+
+	blockquote {
+		font-size: 1em;
+	}
+
+	p {
+		max-width: none;
+		margin-block-start: $ratio_maj + em;
+
+		&:first-of-type::before {
+			content: '“';
+			display: inline-block;
+			margin-inline-end: .1em;
+			font-family: var(--wp--custom--font-family--quote-decoration);
+			font-size: $ratio * 2em;
+			font-weight: 700;
+			font-style: normal;
+			line-height: .05;
+			vertical-align: bottom;
+			pointer-events: none;
+		}
+	}
+}
+
+cite {
+
+	&::before {
+		content: '\2014\2002'; // &mdash; + &ensp;
+	}
+}

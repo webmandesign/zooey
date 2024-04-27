@@ -1,0 +1,57 @@
+/* FILE: customize-controls/_control.scss */
+
+.no-overflow {
+	overflow: hidden;
+}
+
+.customize-control h3.has-no-border,
+// This has to be here due to global wrapper.
+.customize-section-description-container + .customize-control h3:first-of-type {
+	margin-block-start: 0;
+	border: 0;
+}
+
+.customize-control {
+	@extend %customizer_headings;
+
+	&:first-child {
+
+		h3 {
+
+			&:first-of-type {
+				margin-block-start: 0;
+				border: 0;
+			}
+		}
+	}
+
+	hr {
+		margin: 1em 0;
+		background: transparent;
+		border: 0;
+		border-block-start: 2px dashed #bbb;
+	}
+
+	pre {
+		max-height: 8em;
+		padding: .618em;
+		white-space: pre-wrap;
+		background: #eee;
+		border: 1px dashed #ddd;
+		overflow: auto;
+	}
+
+	select,
+	textarea {
+		width: 100%;
+	}
+
+	select[multiple] {
+		height: 8em;
+	}
+
+	textarea {
+		min-height: 12em;
+		resize: vertical;
+	}
+}

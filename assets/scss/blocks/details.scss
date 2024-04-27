@@ -1,0 +1,9 @@
+// core/details
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-details {
+	// Make sure `<select>` options are visible within open `<details>`.
+	overflow: visible;
+}

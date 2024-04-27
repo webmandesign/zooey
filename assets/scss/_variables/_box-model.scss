@@ -1,0 +1,36 @@
+/* FILE: _variables/_box-model.scss */
+
+/*! Vars: Box model: */
+:root {
+
+	--theme--css--align-100vw: calc( 100vw - var(--theme--js--scrollbar_width) );
+}
+
+body {
+
+	--theme--css--content-padding: calc( var(--wp--custom--toggle--content-space, 1) * var(--wp--preset--spacing--content) );
+	--theme--css--content-padding-negative: calc( -1 * var(--wp--custom--toggle--content-space, 1) * var(--wp--preset--spacing--content) );
+
+	--theme--css--submenu-toggle-size: 10px;
+	@media (hover: none) { // Touch enabled devices.
+		--theme--css--submenu-toggle-size: 24px;
+	}
+
+	--theme--block--post-template--gap: 2em;
+
+	--theme--css--posts-count-badge-size: 2em;
+
+	--theme--css--has-background--padding-top:    var(--wp--custom--spacing--has-background--top);
+	--theme--css--has-background--padding-bottom: var(--wp--custom--spacing--has-background--bottom);
+	--theme--css--has-background--padding-left:   var(--wp--custom--spacing--has-background--left);
+	--theme--css--has-background--padding-right:  var(--wp--custom--spacing--has-background--right);
+}
+
+.wp-block-navigation .has-modal-open {
+	--theme--css--submenu-toggle-size: 32px;
+}
+
+.is-style-buttons-inline {
+	--theme--css--posts-count-badge-size: 2.5em;
+	--wp--style--block-gap: #{ $ratio_maj + rem };
+}

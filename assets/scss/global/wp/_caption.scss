@@ -1,0 +1,19 @@
+/* FILE: global/wp/_caption.scss */
+
+.wp-caption {
+	max-width: 100%;
+	text-align: center;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin-inline: auto;
+	}
+
+	.wp-caption-text {
+		margin: ( $ratio_maj + em ) 0 0;
+	}
+}
+
+.wp-element-caption {
+	margin-block-start: $ratio_maj + em;
+}

@@ -1,0 +1,24 @@
+// core/social-links
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-social-links {
+
+	&.has-small-icon-size {
+		font-size: var(--wp--preset--font-size--s);
+	}
+
+	&,
+	&.has-normal-icon-size {
+		font-size: var(--wp--preset--font-size--m);
+	}
+
+	&.has-large-icon-size {
+		font-size: var(--wp--preset--font-size--xl);
+	}
+
+	&.has-huge-icon-size {
+		font-size: var(--wp--preset--font-size--xxxl);
+	}
+}

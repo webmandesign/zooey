@@ -1,0 +1,14 @@
+//
+// These styles should be generic for every theme.
+// For theme specific styles check the `custom` folder.
+//
+
+/* FILE: global/__index.scss */
+
+@import 'wp/_index';
+@import 'base/_index';
+@import 'accessibility/_index';
+@import 'classes/_index';
+@import 'form/_index';
+
+@import 'modifiers/_index';

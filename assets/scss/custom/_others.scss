@@ -1,0 +1,96 @@
+/* FILE: custom/_others.scss */
+
+// Text meant only for screen readers.
+
+	body[class] .screen-reader-text,
+	.is-style-screen-reader-text {
+
+		&:focus {
+			border-radius: var(--wp--custom--border-radius--button);
+		}
+	}
+
+// Details, toggle.
+
+	details {
+		border-radius: var(--wp--custom--border-radius--details);
+	}
+
+	summary {
+		border-radius: inherit;
+
+		&::after {
+			border-radius: var(--wp--custom--border-radius--details);
+		}
+	}
+
+// Highlight, mark.
+
+	mark {
+		border-radius: .33em;
+	}
+
+// Quote.
+
+	blockquote {
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+
+			&:not(.has-background) {
+				position: relative;
+				padding-inline-start: calc( var(--wp--custom--font-size--quote-decoration) / 2 );
+
+				p:first-of-type::before {
+					display: none;
+				}
+
+				&::before {
+					content: '“';
+					speak: none;
+					position: absolute;
+					inset-inline-start: 0;
+					inset-block-start: 0;
+					height: 100%;
+					font-family: var(--wp--custom--font-family--quote-decoration);
+					font-size: var(--wp--custom--font-size--quote-decoration);
+					font-weight: 700;
+					line-height: 1;
+					background-image: linear-gradient( to bottom, currentColor, currentColor );
+					background-position: 50% math.div( 1em, 1 + $ratio_min );
+					background-repeat: no-repeat;
+					background-size: 2px 100%;
+					transform: translateX(-50%);
+
+					.rtl & {
+						transform: translateX(50%);
+					}
+				}
+
+				> cite {
+					margin-block-start: 1em;
+				}
+			}
+		}
+	}
+
+// Responsive alignment.
+
+	.has-justify-content-right,
+	.has-justify-content-flex-end {
+		@include media( ( 782, 'max-width' ) ) { // WP breakpoint.
+			justify-content: flex-start !important;
+		}
+	}
+
+// Custom background.
+
+	.custom-background.custom-background {
+		background-color: var(--wp--preset--color--base);
+	}
+
+// Archives.
+
+	.term-description {
+		max-width: 540px;
+		font-size: var(--wp--preset--font-size--l);
+	}

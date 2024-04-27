@@ -1,0 +1,25 @@
+/* FILE: custom/_intro.scss */
+
+// Paged page label in main title.
+
+	h1 .page-number {
+		display: block;
+		font-size: max( 1rem, #{ $ratio_maj + em } );
+		font-weight: 400;
+		letter-spacing: 0;
+	}
+
+// Paged page summary.
+
+	.paged .is-style-page-summary {
+		display: none;
+	}
+
+// Featured image.
+
+	@if false == $is_editor {
+
+		body:not(.has-post-thumbnail) .is-featured-image-container {
+			display: none;
+		}
+	}

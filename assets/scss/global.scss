@@ -1,0 +1,25 @@
+/*! FILE: global.scss */
+@use 'sass:math';
+
+//
+// Global theme styles.
+//
+// Providing global styles for non-block, standard HTML content
+// to keep backwards compatibility and to make the theme compatible
+// with non-block plugins and flexible for any usecase.
+//
+// @package    Zooey
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since  1.0.0
+//
+
+@import '_tools/_index';
+@import '_setup/_index';
+
+@import '_variables/_index';
+
+@import 'global/_index';
+@import 'custom/_index';
+
+@import '_extend/_index';

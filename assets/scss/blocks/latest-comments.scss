@@ -1,0 +1,45 @@
+// core/latest-comments
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-latest-comments {
+	padding: 0;
+
+	&__comment {
+		padding-block: $ratio_maj + em;
+		margin: 0;
+		border-block-start: 1px solid;
+		border-color: inherit;
+
+		&:first-child {
+			padding-block-start: 0;
+			border-block-start-width: 0;
+		}
+
+		&:last-child {
+			padding-block-end: 0;
+		}
+
+		&-link {
+			font-family: var(--wp--preset--font-family--supplemental);
+			font-weight: 500;
+			line-height: 1 + $ratio_min;
+		}
+
+		&-date {
+			font-size: var(--wp--preset--font-size--xs);
+			text-transform: uppercase;
+			letter-spacing: var(--wp--custom--letter-spacing);
+		}
+
+		&-excerpt {
+			margin: .5rem 0 0;
+
+			p {
+				margin: 0;
+				font-size: var(--wp--preset--font-size--xs);
+			}
+		}
+	}
+}

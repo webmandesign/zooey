@@ -1,0 +1,8 @@
+/* FILE: global/form/__index.scss */
+
+// Form styles are still required
+// for non-block plugins HTML, for example.
+// WordPress does not provide these for us.
+
+@import 'base';
+@import 'password';

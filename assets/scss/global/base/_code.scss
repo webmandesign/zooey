@@ -1,0 +1,29 @@
+/* FILE: global/base/_code.scss */
+
+pre,
+code,
+kbd,
+samp,
+var {
+	font-family: var(--wp--preset--font-family--monospace);
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: 0;
+}
+
+pre {
+	word-wrap: normal;
+	white-space: pre-wrap;
+	line-height: 1.5;
+	overflow: auto;
+	tab-size: 2;
+
+	code {
+		word-wrap: inherit;
+		white-space: inherit;
+		line-height: inherit;
+	}
+}

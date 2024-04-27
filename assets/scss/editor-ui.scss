@@ -1,0 +1,151 @@
+/*! FILE: editor-ui.scss */
+@use 'sass:math';
+
+//
+// Block editor UI improvements.
+//
+// @package    Zooey
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since  1.0.0
+//
+
+@import '_tools/_index';
+@import '_setup/_index';
+
+// Navigation editing screen.
+.is-root-container.is-navigation-block {
+	padding: 3rem;
+
+	> .wp-block-navigation {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.wp-block-navigation__container {
+		justify-content: center;
+	}
+}
+
+// Pattern preview wide align fix.
+.is-root-container:not(.wp-block-post-content) > .alignwide {
+	max-width: var(--wp--style--global--wide-size);
+	margin-inline: auto;
+}
+
+// Content root additional block inserter.
+.wp-block-post-content.is-root-container {
+
+	&::after {
+		content: '＋';
+		display: block;
+		width: 1em;
+		height: 1em;
+		margin: 1rem auto;
+		font-size: 1.5rem;
+		line-height: 1em;
+		text-align: center;
+		border-radius: .1em;
+		box-shadow: 0 0 0 2px;
+		opacity: .2;
+		speak: none;
+	}
+}
+
+// Template part edit frame height fix.
+.edit-site-visual-editor.is-focus-mode .components-resizable-box__container {
+	min-height: 100%;
+}
+
+// Image URL replace fix.
+.block-editor-media-flow__url-input .block-editor-link-control {
+
+	.block-editor-link-control__search-item-title[href^="data:"] {
+		max-width: 140px;
+
+		+ .block-editor-link-control__search-item-info {
+			display: none;
+			// This below is just in case...
+			white-space: normal;
+			max-height: 2em;
+			overflow: hidden;
+		}
+	}
+}
+
+// Spacing options.
+.tools-panel-item-spacing {
+	--wp--custom--opacity--pseudo-bg: .025;
+
+	@extend %shaded_background;
+	position: relative;
+	padding: 1em;
+	border: 1px solid rgba( #000, .1 );
+	border-radius: .25em;
+
+	.components-input-control__container {
+
+		.components-input-control__input[class] {
+			padding-inline: .5em;
+		}
+
+		.components-unit-control__select[class] {
+			margin-inline-end: .25em;
+		}
+	}
+}
+
+// Block styles selector.
+.block-editor-block-styles__variants .components-button {
+	height: auto;
+	padding-block: 8px;
+	font-size: 12px;
+}
+
+// Trying to mitigate for overlaid header styles.
+// It seems it is not really possible to add custom CSS class
+// on `.editor-styles-wrapper` (preferably dynamically with AJAX)
+// to identify whether we are editing a template or template part
+// for "Overlaid header". So we need to presume some block styles
+// to apply a background for some color contrast.
+// This is a tricky, hacky solution, though, that does not work
+// in every possible scenario.
+.is-root-container >,
+.is-root-container > .wp-block-template-part > {
+	$square_size    : 1px;
+	$square_color_1 : var(--wp--preset--color--contrast-alt);
+	$square_color_2 : transparent;
+
+	.has-base-color,
+	.has-white-color {
+
+		&:not(.has-background),
+		&.has-backdrop-blur-light-gradient-background {
+			background-image:
+				linear-gradient(  45deg, #{ $square_color_1 } 25%, #{ $square_color_2 } 25% ),
+				linear-gradient( 135deg, #{ $square_color_1 } 25%, #{ $square_color_2 } 25% ),
+				linear-gradient(  45deg, #{ $square_color_2 } 75%, #{ $square_color_1 } 75% ),
+				linear-gradient( 135deg, #{ $square_color_2 } 75%, #{ $square_color_1 } 75% );
+			background-size: #{ 2 * $square_size } #{ 2 * $square_size };
+			background-position:
+				0 0,
+				#{ $square_size } 0,
+				#{ $square_size } #{ -1 * $square_size },
+				0 #{ -1 * $square_size };
+			// background: repeating-linear-gradient(
+			// 	to bottom,
+			// 	#{ $square_color_1 },
+			// 	#{ $square_color_1 } #{ $square_size },
+			// 	#{ $square_color_2 } #{ $square_size },
+			// 	#{ $square_color_2 } #{ 2 * $square_size }
+			// );
+
+			&:hover,
+			&.is-selected {
+				background: rgba( #000, .5 );
+			}
+		}
+	}
+}
+
+@import '_extend/_index';

@@ -1,0 +1,137 @@
+// core/navigation-link
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+//
+// IMPORTANT:
+//
+// Actually, styling Navigation blocks separately is a bit tricky,
+// as WordPress puts all the related blocks styles into a single
+// `wp-includes/blocks/navigation/style.css` file (as of 20230517).
+//
+// And the partial Navigation Submenu and Navigation Item blocks
+// are being loaded before, so we need to use higher CSS specificity
+// in this file to override WordPress styles (that are loaded later).
+//
+// Alternatively, we could create a single Navigation block stylesheet,
+// but that wouldn't be very optimization friendly. While this split
+// approach works, use it.
+//
+// ---
+//
+// The CSS selector specificity in this file is tragic, but needed
+// to override WordPress native navigation block styles.
+//
+
+.wp-block-navigation {
+
+	.is-style-site-header & {
+
+		// Top level menu <li> items.
+		&:not(.is-vertical) .wp-block-navigation__container > .wp-block-navigation-item {
+			padding-block: $ratio_maj + em;
+
+			> .wp-block-navigation-item__content {
+				padding-block: $ratio_min + em;
+			}
+		}
+	}
+
+	&,
+	.editor-styles-wrapper[class] & {
+
+		// Top level menu <li> items.
+		&.is-vertical .wp-block-navigation__container > .wp-block-navigation-item {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	.wp-block-navigation-item[class] {
+		background: none;
+	}
+
+	&-item__content {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	&-item__label {
+		white-space: nowrap;
+	}
+
+	.wp-block-navigation-item__description {
+		display: block;
+		margin-block-start: .15em;
+		font-size: .8em;
+		font-weight: 400;
+		font-style: italic;
+		line-height: 1.2;
+		text-transform: none;
+		letter-spacing: normal;
+		opacity: .75;
+	}
+
+	// Current (active) menu item.
+	// The `.wp-block-navigation-item__label` is not available for submenus
+	// as of WP6.4 due to submenus not supporting menu item description.
+	.current-menu-item > .wp-block-navigation-item__content .wp-block-navigation-item__label,
+	.current-menu-item.has-child > .wp-block-navigation-item__content,
+	.current-menu-ancestor.wp-block-navigation-item__content {
+		display: block !important;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: $ratio_min + em;
+			height: $ratio_min + em;
+			margin-inline-end: .2em;
+			background: var(--theme--css--current-menu-item--decoration--color);
+			border-radius: $ratio_min + em;
+		}
+	}
+
+	// Block styles.
+
+		.is-style-disable-link > a {
+			pointer-events: none;
+			cursor: text;
+		}
+
+		.is-style-image {
+			min-width: clamp( 16em, 20vw, 300px );
+
+			img {
+				display: block;
+				width: 100% !important;
+				border-radius: var(--wp--custom--border-radius--image);
+				box-shadow: var(--wp--custom--shadow--sub-menu);
+			}
+
+			.wp-block-navigation-item__label {
+				display: flex;
+				flex-direction: column;
+				gap: $ratio_maj + em;
+				align-items: center;
+			}
+
+			.wp-block-navigation-item__description {
+				text-align: center;
+			}
+		}
+}
+
+//
+// Editor.
+//
+
+	.editor-styles-wrapper {
+
+		.wp-block-navigation-item {
+
+			&__content {
+				text-decoration: none;
+			}
+		}
+	}

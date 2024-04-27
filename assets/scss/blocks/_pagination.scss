@@ -1,0 +1,77 @@
+/* FILE: blocks/_pagination.scss */
+// core/query-pagination
+// core/query-pagination-next
+// core/query-pagination-numbers
+// core/query-pagination-previous
+// core/comments-pagination
+// core/comments-pagination-next
+// core/comments-pagination-numbers
+// core/comments-pagination-previous
+
+.pagination, // WC compatibility.
+.wp-block-query-pagination,
+.wp-block-comments-pagination {
+
+	.page-numbers {
+		padding: 1em ( $ratio_min + 1em ) !important;
+
+		&.current,
+		&.dots {
+			min-width: 0;
+			padding-inline: $ratio_maj + em !important;
+		}
+	}
+
+	&-numbers {
+		margin: 0 !important;
+
+		&[data-page] {
+			@include media( ( 600, 'max-width' ) ) {
+
+				&::before {
+					content: attr(data-page);
+				}
+
+				.page-numbers.page-numbers.page-numbers {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&-previous,
+	&-next {
+		margin: 0 !important;
+
+		// Targeting front-end only.
+		&.has-arrow {
+			position: relative;
+			width: $ratio_maj + 3em;
+			text-align: inherit; // This should be $left.
+			text-indent: -9999em;
+			overflow: hidden;
+
+			[class*="is-arrow"] {
+				position: absolute;
+				width: 100%;
+				inset-inline-start: 0;
+				margin: 0;
+				text-align: center;
+				text-indent: 0;
+			}
+		}
+	}
+
+	.prev,
+	&-previous,
+	.next,
+	&-next {
+
+		svg {
+			width: 1.2em;
+			height: 1.2em;
+			margin-block-start: -.1em;
+			vertical-align: middle;
+		}
+	}
+}

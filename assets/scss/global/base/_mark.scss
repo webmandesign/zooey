@@ -1,0 +1,43 @@
+/* FILE: global/base/_mark.scss */
+
+$important_modifiers: _important( 'modifier_mark' );
+
+mark {
+	padding: var(--wp--custom--mark--padding);
+
+	//
+	// IMPORTANT:
+	// Do not use `&[style="background-color:rgba(0, 0, 0, 0)"]` here as WordPress inserts
+	// `.editor-styles-wrapper` after each `, ` in block editor styles, effectively breaking
+	// the CSS code by producing:
+	// `.editor-styles-wrapper mark[style="background-color:rgba(0, .editor-styles-wrapper 0, .editor-styles-wrapper 0, .editor-styles-wrapper 0)"]`.
+	//
+	// As of WP6.5 it is OK to use just `&[style="background-color:rgba(0"]`.
+	//
+	// NOTE:
+	// WordPress produces `mark[style="background-color:rgba(0, 0, 0, 0)"]` when the background
+	// is left empty but `<mark>` text color is set.
+	//
+	&[style^="background-color:rgba(0"],
+	&:not([style*="background"]):not([class*="-background"]) {
+		background-color: transparent $important_modifiers;
+		background-image: linear-gradient(
+			to top,
+			var(--wp--custom--mark--color) calc( 1000vh * ( -1 + var(--wp--custom--mark--opacity) ) ),
+			transparent calc( 1000vh * var(--wp--custom--mark--opacity) )
+		) $important_modifiers;
+		background-repeat: repeat-x $important_modifiers;
+		background-position: 0 95% $important_modifiers;
+		background-size: 100% 25% $important_modifiers;
+		color: inherit;
+	}
+
+	&[style*="background-color:#"],
+	&[style*="background-color:var("],
+	&[class*="-background"] {
+		padding: var(--wp--custom--mark--padding-bg);
+		box-decoration-break: clone;
+	}
+}
+
+$important_modifiers: null; // Required reset.

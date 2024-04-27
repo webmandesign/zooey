@@ -1,0 +1,20 @@
+/*! FILE: blocks-editor.scss */
+@use 'sass:math';
+
+//
+// Theme block styles for editor.
+//
+// @package    Zooey
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since  1.0.0
+//
+
+$is_editor: true;
+
+@import '_tools/_index';
+@import '_setup/_index';
+
+@import 'blocks/_index';
+
+@import '_extend/_index';

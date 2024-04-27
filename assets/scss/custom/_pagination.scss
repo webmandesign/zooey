@@ -1,0 +1,27 @@
+/* FILE: custom/_pagination.scss */
+
+// Parted post/page navigation.
+
+	.post-nav-links {
+		clear: both;
+	}
+
+	.post-page-numbers {
+
+		&.current {
+			padding-inline: 1em;
+		}
+	}
+
+// `.pagination` class styling for plugins.
+
+	.pagination {
+		display: flex;
+		gap: $ratio_min + em;
+		justify-content: center;
+		align-items: center;
+
+		body .is-layout-flow > & {
+			margin-block-start: var(--wp--preset--spacing--xl);
+		}
+	}

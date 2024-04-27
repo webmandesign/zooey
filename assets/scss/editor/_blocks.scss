@@ -1,0 +1,21 @@
+/* FILE: editor/_blocks.scss */
+
+// UI
+.components-button {
+	border-width: 0;
+}
+
+// Pattern preview vh fix.
+@each $vh in ( 38, 40, 50, 60, 62, 70, 80, 90, 100 ) {
+
+	body.block-editor-iframe__body {
+
+		[style*=" height: #{ $vh }vh"] {
+			height: calc( #{ math.div( $vh, 100 ) } * 100vw * 9 / 16 ) !important;
+		}
+
+		[style*="min-height: #{ $vh }vh"] {
+			min-height: calc( #{ math.div( $vh, 100 ) } * 100vw * 9 / 16 ) !important;
+		}
+	}
+}

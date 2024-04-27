@@ -1,0 +1,184 @@
+/* FILE: global/wp/_colors.scss */
+
+// Has background.
+
+	.has-background {
+
+		&[class] {
+			padding-top:    var(--theme--css--has-background--padding-top);
+			padding-bottom: var(--theme--css--has-background--padding-bottom);
+			padding-left:   var(--theme--css--has-background--padding-left);
+			padding-right:  var(--theme--css--has-background--padding-right);
+
+			> .alignfull {
+				width: auto !important;
+				margin-left:  calc( -1 * var(--theme--css--has-background--padding-left) );
+				margin-right: calc( -1 * var(--theme--css--has-background--padding-right) );
+			}
+
+			@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+				--theme--css--has-background--padding-left:  var(--wp--style--root--padding-left);
+				--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
+			}
+		}
+
+		// Apply actual global padding when needed…
+		&.has-global-padding {
+
+			&,
+			&.alignfull {
+
+				// &, // Commenting this out is related to "Important" notice below.
+				header > &,
+				footer > &,
+				main > &,
+				main > .wp-block-post-content > &,
+				main > .wp-block-template-part > & {
+					--theme--css--has-background--padding-left:  var(--wp--style--root--padding-left);
+					--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
+
+					// Reset back:
+					.has-background {
+						--theme--css--has-background--padding-left:   var(--wp--custom--spacing--has-background--left);
+						--theme--css--has-background--padding-right:  var(--wp--custom--spacing--has-background--right);
+					}
+				}
+			}
+
+			// IMPORTANT:
+			// Unlike WordPress core themes (such as Twenty Twenty-Four)
+			// we are applying automatic padding on blocks set with
+			// background. So, unlike those themes, we need prevent
+			// horizontal scroll (for example when nesting 2 fully
+			// aligned blocks with background in the root container
+			// of page/post content).
+			&[style*="padding-left:0"] > .alignfull {
+				margin-left: 0;
+			}
+			&[style*="padding-right:0"] > .alignfull {
+				margin-right: 0;
+			}
+		}
+	}
+
+// Text and border color.
+
+	// Default WordPress palette.
+	$colors_wp_palette: (
+		'black'                 : #000000,
+		'cyan-bluish-gray'      : #abb8c3,
+		'white'                 : #ffffff,
+		'pale-pink'             : #f78da7,
+		'vivid-red'             : #cf2e2e,
+		'luminous-vivid-orange' : #ff6900,
+		'luminous-vivid-amber'  : #fcb900,
+		'light-green-cyan'      : #7bdcb5,
+		'vivid-green-cyan'      : #00d084,
+		'pale-cyan-blue'        : #8ed1fc,
+		'vivid-cyan-blue'       : #0693e3,
+		'vivid-purple'          : #9b51e0
+	);
+	@each $slug, $color in $colors_wp_palette {
+
+		body {
+
+			@if _is_dark_color( $color ) {
+				--wp--preset--color--#{ $slug }--bg-text: var(--wp--preset--color--white);
+				--wp--preset--color--#{ $slug }--bg-border: var(--wp--preset--color--white--border);
+			} @else {
+				--wp--preset--color--#{ $slug }--bg-text: var(--wp--preset--color--black);
+				--wp--preset--color--#{ $slug }--bg-border: var(--wp--preset--color--black--border);
+			}
+
+			// Have to convert to RGB first as SASS `rgba()` does not process variables.
+			$rgb: red( $color ), green( $color ), blue( $color );
+			--wp--preset--color--#{ $slug }--border: rgba( #{ $rgb }, var(--wp--custom--opacity--border) );
+		}
+
+		.has-#{ $slug }-background-color {
+
+			&:not(.has-text-color) {
+				color: var(--wp--preset--color--#{ $slug }--bg-text);
+				border-color: var(--wp--preset--color--#{ $slug }--bg-border);
+				--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--bg-border);
+			}
+
+			&:not(.has-link-color) a {
+				color: inherit;
+			}
+
+			&#{ $selectors_button_colors } {
+				--theme--css--button--color--background: var(--wp--preset--color--#{ $slug });
+				--theme--css--button--color--text: var(--wp--preset--color--#{ $slug }--bg-text);
+				@if $button_has_border_color {
+					--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--bg-border);
+				}
+			}
+		}
+
+		.has-#{ $slug }-color {
+			border-color: var(--wp--preset--color--#{ $slug }--border);
+			--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--border);
+
+			@if $button_has_border_color {
+				&#{ $selectors_button_colors } {
+					--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--border);
+				}
+			}
+		}
+	}
+
+	// Theme colors.
+	@each $option, $color in $theme_options {
+
+		@if (
+			1 == str-index( $option, '--theme--mod--color_' )
+			and not str-index( $option, 'gradient_' )
+			and 1 == str-index( $color + '', '#' )
+		) {
+
+			$wp_slug: _str_replace( '--theme--mod--color_', '', $option );
+			$wp_slug: _str_replace( '_', '-', $wp_slug );
+
+			.has-#{ $wp_slug }-background-color {
+
+				&:not(.has-text-color) {
+					color: var(--wp--preset--color--#{ $wp_slug }--bg-text);
+					border-color: var(--wp--preset--color--#{ $wp_slug }--bg-border);
+					--theme--css--current-border-color: var(--wp--preset--color--#{ $wp_slug }--bg-border);
+				}
+
+				&:not(.has-link-color) a {
+					color: inherit;
+				}
+
+				&#{ $selectors_button_colors } {
+					--theme--css--button--color--background: var(--wp--preset--color--#{ $wp_slug });
+					--theme--css--button--color--text: var(--wp--preset--color--#{ $wp_slug }--bg-text);
+					@if $button_has_border_color {
+						--theme--css--button--color--border: var(--wp--preset--color--#{ $wp_slug }--bg-border);
+					}
+				}
+			}
+
+			.has-#{ $wp_slug }-color {
+				border-color: var(--wp--preset--color--#{ $wp_slug }--border);
+				--theme--css--current-border-color: var(--wp--preset--color--#{ $wp_slug }--border);
+
+				@if $button_has_border_color {
+					&#{ $selectors_button_colors } {
+						--theme--css--button--color--border: var(--wp--preset--color--#{ $wp_slug }--border);
+					}
+				}
+			}
+		}
+	}
+
+	// Has text color.
+	:where(.has-text-color) {
+
+		a,
+		h1, h2, h3, h4, h5, h6 {
+			color: inherit;
+		}
+	}

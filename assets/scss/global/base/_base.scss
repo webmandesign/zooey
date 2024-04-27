@@ -1,0 +1,29 @@
+/* FILE: global/base/_base.scss */
+
+html {
+	box-sizing: border-box;
+	font-size: var(--theme--css--font-size-base);
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+* {
+	border-color: inherit;
+
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+
+	@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+		line-height: 1.4;
+	}
+
+	@include media( ( map_get( $breakpoint, 'l' ), 'max-width' ) ) {
+		line-height: 1.5;
+	}
+}

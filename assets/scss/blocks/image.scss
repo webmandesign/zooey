@@ -1,0 +1,34 @@
+// core/image
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-image {
+	// Fixing image vertical alignment when inside
+	// a row, so it aligns with a text. As an example
+	// check the "widget" title in footer.
+	line-height: 1;
+}
+
+.is-style-use-header-image {
+
+	&,
+	&-flip-v {
+
+		img,
+		svg {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			vertical-align: top;
+		}
+	}
+
+	&-flip-v {
+
+		img,
+		svg {
+			transform: scaleY(-1);
+		}
+	}
+}

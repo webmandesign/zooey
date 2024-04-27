@@ -1,0 +1,48 @@
+/* FILE: _extend/_layout.scss */
+
+// Clearing.
+
+	%clearfix {
+
+		&::after {
+			content: '';
+			clear: both;
+			display: table;
+			table-layout: fixed;
+		}
+	}
+
+// Content padding and first/last full-aligned child.
+
+	%content_padding_top {
+		padding-block-start: var(--theme--css--content-padding);
+
+		> .is-style-page-header:first-child,
+		> .alignfull:first-child {
+			margin-block-start: var(--theme--css--content-padding-negative);
+		}
+
+		> .is-style-page-header:first-child {
+			margin-block-end: var(--theme--css--content-padding);
+
+			+ .alignfull {
+				margin-block-start: var(--theme--css--content-padding-negative);
+			}
+		}
+	}
+
+	%content_padding_bottom {
+		padding-block-end: var(--theme--css--content-padding);
+
+		> .alignfull:last-child {
+			margin-block-end: var(--theme--css--content-padding-negative);
+		}
+	}
+
+	%content_margin_top {
+		margin-block-start: var(--theme--css--content-padding);
+	}
+
+	%content_margin_bottom {
+		margin-block-end: var(--theme--css--content-padding);
+	}

@@ -1,0 +1,15 @@
+/* FILE: custom/_entry.scss */
+
+@each $post_type in ( page, post ) {
+
+	.is-hidden-on-#{ $post_type } {
+
+		&,
+		&s {
+
+			.is-singular.#{ $post_type } & {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+/*! FILE: customize-preview.scss */
+
+//
+// Theme customizer preview style fixes.
+//
+// @package    Zooey
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since  1.0.0
+//
+
+.customize-partial-edit-shortcut {
+
+	button {
+		box-shadow: none !important;
+		opacity: 1 !important;
+
+		body & {
+			padding: 0;
+			border: 2px solid #fff;
+			border-radius: 100px;
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+
+	[data-customize-partial-type="nav_menu_instance"] & {
+		top: 50%;
+		transform: translateY( -15px );
+	}
+}
+
+body.customize-partial-edit-shortcuts-hidden .customize-partial-edit-shortcut button {
+	opacity: 0 !important;
+}
+
+.is-style-site-header,
+.is-style-page-header,
+.is-style-featured-posts {
+	position: relative;
+
+	> .customize-partial-edit-shortcut {
+		inset-inline-start: 50%;
+		margin: 2em 4em;
+		z-index: 100;
+
+		+ * {
+			margin-block-start: 0;
+		}
+	}
+}

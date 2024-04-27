@@ -1,0 +1,1145 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+
+	"docBlock" : {
+		"@since"   : "1.0.0",
+		"@version" : "1.0.0"
+	},
+
+	"settings" : {
+		"useRootPaddingAwareAlignments" : true,
+		"appearanceTools" : true,
+		"layout" : {
+			"contentSize" : "var(--theme--mod--layout_width_content)",
+			"wideSize"    : "var(--theme--mod--layout_width_wide)"
+		},
+		"color" : {
+			"link" : true,
+			"palette" : [
+				{
+					"name"  : "Base",
+					"slug"  : "base",
+					"color" : "var(--theme--mod--color_base)"
+				},
+				{
+					"name"  : "Base alternative",
+					"slug"  : "base-alt",
+					"color" : "var(--theme--mod--color_base_alt)"
+				},
+				{
+					"name"  : "Contrast",
+					"slug"  : "contrast",
+					"color" : "var(--theme--mod--color_contrast)"
+				},
+				{
+					"name"  : "Contrast alternative",
+					"slug"  : "contrast-alt",
+					"color" : "var(--theme--mod--color_contrast_alt)"
+				},
+				{
+					"name"  : "Primary",
+					"slug"  : "primary",
+					"color" : "var(--theme--mod--color_primary)"
+				},
+				{
+					"name"  : "Primary mixed",
+					"slug"  : "primary-mixed",
+					"color" : "var(--theme--mod--color_primary_mixed)"
+				},
+				{
+					"name"  : "Secondary",
+					"slug"  : "secondary",
+					"color" : "var(--theme--mod--color_secondary)"
+				},
+				{
+					"name"  : "Secondary mixed",
+					"slug"  : "secondary-mixed",
+					"color" : "var(--theme--mod--color_secondary_mixed)"
+				},
+				{
+					"name"  : "Black",
+					"slug"  : "black",
+					"color" : "var(--theme--mod--color_black)"
+				},
+				{
+					"name"  : "White",
+					"slug"  : "white",
+					"color" : "var(--theme--mod--color_white)"
+				}
+			],
+			"gradients" : [
+				{
+					"name"     : "Primary cut to transparent, horizontally",
+					"slug"     : "primary-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to primary, horizontally",
+					"slug"     : "transparent-cut-primary-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Primary mixed cut to transparent, horizontally",
+					"slug"     : "primary-mixed-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to primary mixed, horizontally",
+					"slug"     : "transparent-cut-primary-mixed-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Primary cut to transparent, vertically",
+					"slug"     : "primary-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to primary, vertically",
+					"slug"     : "transparent-cut-primary-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Primary mixed cut to transparent, vertically",
+					"slug"     : "primary-mixed-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to primary mixed, vertically",
+					"slug"     : "transparent-cut-primary-mixed-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Secondary cut to transparent, horizontally",
+					"slug"     : "secondary-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to secondary, horizontally",
+					"slug"     : "transparent-cut-secondary-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Secondary mixed cut to transparent, horizontally",
+					"slug"     : "secondary-mixed-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to secondary mixed, horizontally",
+					"slug"     : "transparent-cut-secondary-mixed-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Secondary cut to transparent, vertically",
+					"slug"     : "secondary-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to secondary, vertically",
+					"slug"     : "transparent-cut-secondary-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Secondary mixed cut to transparent, vertically",
+					"slug"     : "secondary-mixed-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to secondary mixed, vertically",
+					"slug"     : "transparent-cut-secondary-mixed-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Base cut to transparent, vertically",
+					"slug"     : "base-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to base, vertically",
+					"slug"     : "transparent-cut-base-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Base cut to transparent, vertically",
+					"slug"     : "base-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to base, vertically",
+					"slug"     : "transparent-cut-base-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Base alternative cut to transparent, vertically",
+					"slug"     : "base-alt-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to base alternative, vertically",
+					"slug"     : "transparent-cut-base-alt-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Base alternative cut to transparent, vertically",
+					"slug"     : "base-alt-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to base alternative, vertically",
+					"slug"     : "transparent-cut-base-alt-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Contrast cut to transparent, vertically",
+					"slug"     : "contrast-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to contrast, vertically",
+					"slug"     : "transparent-cut-contrast-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Contrast cut to transparent, vertically",
+					"slug"     : "contrast-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to contrast, vertically",
+					"slug"     : "transparent-cut-contrast-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Contrast alternative cut to transparent, vertically",
+					"slug"     : "contrast-alt-cut-transparent-h",
+					"gradient" : "linear-gradient( to right, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to contrast alternative, vertically",
+					"slug"     : "transparent-cut-contrast-alt-h",
+					"gradient" : "linear-gradient( to left, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Contrast alternative cut to transparent, vertically",
+					"slug"     : "contrast-alt-cut-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+				{
+					"name"     : "Transparent cut to contrast alternative, vertically",
+					"slug"     : "transparent-cut-contrast-alt-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
+				},
+
+				{
+					"name"     : "Base to transparent, vertically",
+					"slug"     : "base-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to base, vertically",
+					"slug"     : "transparent-to-base-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "Base alternative to transparent, vertically",
+					"slug"     : "base-alt-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to base alternative, vertically",
+					"slug"     : "transparent-to-base-alt-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "Contrast to transparent, vertically",
+					"slug"     : "contrast-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to contrast, vertically",
+					"slug"     : "transparent-to-contrast-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "Contrast alternative to transparent, vertically",
+					"slug"     : "contrast-alt-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to contrast alternative, vertically",
+					"slug"     : "transparent-to-contrast-alt-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "Primary to transparent, vertically",
+					"slug"     : "primary-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to primary, vertically",
+					"slug"     : "transparent-to-primary-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Primary mixed to transparent, vertically",
+					"slug"     : "primary-mixed-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to primary mixed, vertically",
+					"slug"     : "transparent-to-primary-mixed-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "Secondary to transparent, vertically",
+					"slug"     : "secondary-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to secondary, vertically",
+					"slug"     : "transparent-to-secondary-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Secondary mixed to transparent, vertically",
+					"slug"     : "secondary-mixed-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+				{
+					"name"     : "Transparent to secondary mixed, vertically",
+					"slug"     : "transparent-to-secondary-mixed-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+				},
+
+				{
+					"name"     : "For backdrop blur, dark",
+					"slug"     : "backdrop-blur-dark",
+					"gradient" : "linear-gradient( rgba(17,17,17,var(--wp--custom--opacity--semitransparent)), rgba(17,17,17,var(--wp--custom--opacity--semitransparent)) )"
+				},
+				{
+					"name"     : "For backdrop blur, light",
+					"slug"     : "backdrop-blur-light",
+					"gradient" : "linear-gradient( rgba(238,238,238,var(--wp--custom--opacity--semitransparent)), rgba(238,238,238,var(--wp--custom--opacity--semitransparent)) )"
+				},
+				{
+					"name"     : "For backdrop blur, primary",
+					"slug"     : "backdrop-blur-primary",
+					"gradient" : "linear-gradient( var(--wp--preset--color--primary-semitransparent), var(--wp--preset--color--primary-semitransparent) )"
+				}
+			],
+			"duotone" : [
+				{
+					"name"   : "Black",
+					"slug"   : "black",
+					"colors" : [
+						"#000000",
+						"#ffffff"
+					]
+				},
+				{
+					"name"   : "White",
+					"slug"   : "white",
+					"colors" : [
+						"#ffffff",
+						"#000000"
+					]
+				},
+				{
+					"name"   : "Gray",
+					"slug"   : "gray",
+					"colors" : [
+						"#2a2a2a",
+						"#eeeeee"
+					]
+				},
+
+				{
+					"name"   : "Primary",
+					"slug"   : "primary",
+					"colors" : [
+						"#000010",
+						"#eeeeee"
+					]
+				},
+				{
+					"slug"   : "secondary",
+					"name"   : "Secondary",
+					"colors" : [
+						"#000020",
+						"#eeeeee"
+					]
+				},
+
+				{
+					"name"   : "Red",
+					"slug"   : "red",
+					"colors" : [
+						"#fd1a2c",
+						"#ffe3e5"
+					]
+				},
+				{
+					"name"   : "Brown",
+					"slug"   : "brown",
+					"colors" : [
+						"#771c08",
+						"#fad5cf"
+					]
+				},
+				{
+					"name"   : "Yellow",
+					"slug"   : "yellow",
+					"colors" : [
+						"#b78c00",
+						"#fffcf4"
+					]
+				},
+				{
+					"name"   : "Green",
+					"slug"   : "green",
+					"colors" : [
+						"#196a50",
+						"#eafaf5"
+					]
+				},
+				{
+					"name"   : "Blue",
+					"slug"   : "blue",
+					"colors" : [
+						"#5544ff",
+						"#e4e1ff"
+					]
+				},
+				{
+					"name"   : "Purple",
+					"slug"   : "purple",
+					"colors" : [
+						"#8923cc",
+						"#f9e1fa"
+					]
+				},
+				{
+					"name"   : "Punchy",
+					"slug"   : "punchy",
+					"colors" : [
+						"#00007e",
+						"#6aff7e"
+					]
+				}
+			]
+		},
+		"shadow" : {
+			"defaultPresets" : true,
+			"presets" : [
+				{
+					"name"   : "Small",
+					"slug"   : "s",
+					"shadow" : "0 .15em .5em rgba(0,0,0,.1)"
+				},
+				{
+					"name"   : "Medium",
+					"slug"   : "m",
+					"shadow" : "0 .25em 1em rgba(0,0,0,.15)"
+				},
+				{
+					"name"   : "Large",
+					"slug"   : "l",
+					"shadow" : "0 .5em 2em rgba(0,0,0,.2)"
+				}
+			]
+		},
+		"border" : {
+			"width"  : true,
+			"style"  : true,
+			"color"  : true,
+			"radius" : true
+		},
+		"spacing" : {
+			"blockGap" : true,
+			"padding"  : true,
+			"margin"   : true,
+			"spacingSizes" : [
+				{
+					"name" : "X Small",
+					"slug" : "xs",
+					"size" : ".5rem"
+				},
+				{
+					"name" : "Small",
+					"slug" : "s",
+					"size" : "clamp( .5rem, .5rem + 100vw / ( 1280 / ( .5 * 16 ) ), 2 * .5rem )"
+				},
+				{
+					"name" : "Medium",
+					"slug" : "m",
+					"size" : "clamp( 1rem, 1rem + 100vw / ( 1280 / ( 1 * 16 ) ), 2 * 1rem )"
+				},
+				{
+					"name" : "Large",
+					"slug" : "l",
+					"size" : "clamp( 1.5rem, 1.5rem + 100vw / ( 1280 / ( 1.5 * 16 ) ), 2 * 1.5rem )"
+				},
+				{
+					"name" : "X Large",
+					"slug" : "xl",
+					"size" : "clamp( 2rem, 2rem + 100vw / ( 1280 / ( 2 * 16 ) ), 2 * 2rem )"
+				},
+				{
+					"name" : "2X Large",
+					"slug" : "xxl",
+					"size" : "clamp( 2.5rem, 2.5rem + 100vw / ( 1280 / ( 2.5 * 16 ) ), 2 * 2.5rem )"
+				},
+				{
+					"name" : "Content padding",
+					"slug" : "content",
+					"size" : "clamp( 50px, 50px + ( ( 100 - 50 ) * ( 100vw - var(--theme--css--vw-s) * 1px ) / ( var(--theme--css--vw-l) - var(--theme--css--vw-s) ) ), 100px )"
+				}
+			],
+			"units" : [
+				"%",
+				"em",
+				"rem",
+				"px",
+				"vh",
+				"vw",
+				"vmin",
+				"vmax"
+			]
+		},
+		"typography" : {
+			"lineHeight" : true,
+			"writingMode" : true,
+			"fontFamilies" : [
+				{
+					"name"       : "Main",
+					"slug"       : "global",
+					"fontFamily" : "var(--theme--mod--typography_font_family_global)"
+				},
+				{
+					"name"       : "Heading",
+					"slug"       : "supplemental",
+					"fontFamily" : "var(--theme--mod--typography_font_family_supplemental)"
+				},
+				{
+					"name"       : "Alternative",
+					"slug"       : "alternative",
+					"fontFamily" : "var(--theme--mod--typography_font_family_alternative)"
+				},
+				{
+					"name"       : "Monospace",
+					"slug"       : "monospace",
+					"fontFamily" : "ui-monospace, monospace"
+				}
+			],
+			"fontSizes" : [
+				{
+					"name" : "X Small",
+					"slug" : "xs",
+					"size" : ".8125em"
+				},
+				{
+					"name" : "Small",
+					"slug" : "s",
+					"size" : ".875em"
+				},
+				{
+					"name" : "Medium",
+					"slug" : "m",
+					"size" : "1em"
+				},
+				{
+					"name" : "Large",
+					"slug" : "l",
+					"size" : "calc( 1em * var(--theme--css--modular-scale) )"
+				},
+				{
+					"name" : "X Large",
+					"slug" : "xl",
+					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_2) )"
+				},
+				{
+					"name" : "2X Large",
+					"slug" : "xxl",
+					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_3) )"
+				},
+				{
+					"name" : "3X Large",
+					"slug" : "xxxl",
+					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_4) )"
+				},
+
+				{
+					"name" : "Big",
+					"slug" : "big",
+					"size" : "clamp( 2rem, 5.1vw, 4rem )"
+				},
+				{
+					"name" : "Giant",
+					"slug" : "giant",
+					"size" : "clamp( 2.5rem, 6.4vw, 5rem )"
+				},
+				{
+					"name" : "Mega",
+					"slug" : "mega",
+					"size" : "clamp( 3rem, 7.7vw, 6rem )"
+				},
+
+				{
+					"name" : "Heading 1",
+					"slug" : "h-1",
+					"size" : "var(--theme--css--font-size-h1)"
+				},
+				{
+					"name" : "Heading 2",
+					"slug" : "h-2",
+					"size" : "var(--theme--css--font-size-h2)"
+				},
+				{
+					"name" : "Heading 3",
+					"slug" : "h-3",
+					"size" : "var(--theme--css--font-size-h3)"
+				},
+				{
+					"name" : "Heading 4",
+					"slug" : "h-4",
+					"size" : "var(--theme--css--font-size-h4)"
+				}
+			]
+		},
+		"custom" : {
+			"border-radius" : {
+				"s"          : ".38rem",
+				"m"          : "1rem",
+				"l"          : "1.62rem",
+				"button"     : "var(--wp--custom--border-radius--s)",
+				"details"    : "var(--wp--custom--border-radius--s)",
+				"form-field" : "var(--wp--custom--border-radius--s)",
+				"image"      : "var(--wp--custom--border-radius--s)",
+				"sub-menu"   : "var(--wp--custom--border-radius--s)"
+			},
+			"details" : {
+				"border" : {
+					"style" : "solid",
+					"width" : "2px",
+					"color" : "currentColor"
+				},
+				"color"   : {
+					"background" : "transparent",
+					"text"       : "currentColor"
+				},
+				"gap"     : "var(--wp--preset--spacing--s)",
+				"padding" : {
+					"top"    : "var(--wp--preset--spacing--s)",
+					"bottom" : "var(--wp--preset--spacing--s)",
+					"left"   : "var(--wp--preset--spacing--m)",
+					"right"  : "var(--wp--preset--spacing--m)"
+				}
+			},
+			"filter" : {
+				"blur" : {
+					"backdrop"     : ".618rem",
+					"backdrop-alt" : ".382rem",
+					"image"        : "1.618rem",
+					"video"        : "1rem"
+				}
+			},
+			"font-family" : {
+				"button"           : "var(--wp--preset--font-family--global)",
+				"quote-decoration" : "Georgia, serif"
+			},
+			"font-size" : {
+				"button"           : "var(--wp--preset--font-size--s)",
+				"quote-decoration" : "3em"
+			},
+			"hr" : {
+				"width"  : "100%",
+				"height" : "1px",
+				"shape" : {
+					"width"  : "48px",
+					"height" : "48px"
+				}
+			},
+			"mark" : {
+				"color"      : "currentColor",
+				"opacity"    : ".2",
+				"padding"    : "0 .1em",
+				"padding-bg" : ".1em .25em"
+			},
+			"letter-spacing" : "0",
+			"line-height" : {
+				"quote" : "1.382"
+			},
+			"opacity" : {
+				"border"          : ".33",
+				"pseudo-bg"       : ".05",
+				"semitransparent" : ".5"
+			},
+			"outline" : {
+				"color"  : "currentColor",
+				"offset" : "3px",
+				"style"  : "dashed",
+				"width"  : "2px"
+			},
+			"pull" : {
+				"s" : "calc( -.5 * var(--wp--preset--spacing--content) )",
+				"m" : "calc( -.75 * var(--wp--preset--spacing--content) )",
+				"l" : "calc( -1 * var(--wp--preset--spacing--content) )"
+			},
+			"shadow" : {
+				"button" : {
+					"color" : "var(--theme--css--current-border-color)",
+					"size"  : ".125em"
+				},
+				"sub-menu" : "var(--wp--preset--shadow--m)"
+			},
+			"spacing" : {
+				"gap"            : {
+					"media-text" : {
+						"m" : "clamp( 1rem, 1rem + 100vw / ( 1600 / ( 1 * 16 ) ), 2 * 1rem )",
+						"l" : "clamp( 1rem, 1rem + 100vw / ( 1600 / ( 2 * 16 ) ), 3 * 1rem )"
+					}
+				},
+				"has-background" : {
+					"top"    : "var(--wp--preset--spacing--m)",
+					"bottom" : "var(--wp--preset--spacing--m)",
+					"left"   : "var(--wp--preset--spacing--m)",
+					"right"  : "var(--wp--preset--spacing--m)"
+				},
+				"heading"        : "var(--wp--preset--spacing--xl)",
+				"input-vertical" : ".5em",
+				"menu-mobile"    : {
+					"top"    : {
+						"m" : "25vh",
+						"l" : "40vh"
+					},
+					"bottom" : {
+						"m" : "25vh",
+						"l" : "40vh"
+					}
+				}
+			},
+			"toggle" : {
+				"content-space" : "1"
+			},
+			"underline" : {
+				"thickness" : "1px",
+				"offset" : {
+					"default" : ".25em",
+					"heading" : ".15em"
+				}
+			}
+		}
+	},
+
+	"styles" : {
+		"color" : {
+			"background" : "var(--wp--preset--color--base)",
+			"text"       : "var(--wp--preset--color--contrast)"
+		},
+		"border" : {
+			"color" : "var(--wp--preset--color--contrast--border)"
+		},
+		"spacing" : {
+			"blockGap" : "1.62rem",
+			"padding"  : {
+				"top"    : "0",
+				"bottom" : "0",
+				"left"   : "4vw",
+				"right"  : "4vw"
+			}
+		},
+		"typography" : {
+			"fontFamily"    : "var(--wp--preset--font-family--global)",
+			"lineHeight"    : "1.618",
+			"letterSpacing" : "-.02em"
+		},
+		"elements" : {
+
+			"link" : {
+				"color" : {
+					"text" : "var(--wp--preset--color--primary)"
+				},
+				"typography" : {
+					"textDecoration" : "underline"
+				},
+				":hover" : {
+					"typography" : {
+						"textDecoration" : "underline dashed"
+					}
+				},
+				":focus" : {
+					"typography" : {
+						"textDecoration" : "none"
+					}
+				},
+				":active" : {
+					"typography" : {
+						"textDecoration" : "none"
+					}
+				}
+			},
+
+			"heading" : {
+				"color" : {
+					"text" : "var(--wp--preset--color--contrast-alt)"
+				},
+				"typography" : {
+					"fontFamily"    : "var(--wp--preset--font-family--supplemental)",
+					"fontWeight"    : "700",
+					"textTransform" : "lowercase"
+				}
+			},
+			"h1" : {
+				"typography" : {
+					"fontSize"   : "var(--theme--css--font-size-h1)",
+					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_4) / var(--theme--css--desktop-multiply,1) )"
+				}
+			},
+			"h2" : {
+				"typography" : {
+					"fontSize"   : "var(--theme--css--font-size-h2)",
+					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_3) / var(--theme--css--desktop-multiply,1) )"
+				}
+			},
+			"h3" : {
+				"typography" : {
+					"fontSize"   : "var(--theme--css--font-size-h3)",
+					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_2) / var(--theme--css--desktop-multiply,1) )"
+				}
+			},
+			"h4" : {
+				"typography" : {
+					"fontSize"   : "var(--theme--css--font-size-h4)",
+					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale) / var(--theme--css--desktop-multiply,1) )"
+				}
+			},
+			"h5" : {
+				"typography" : {
+					"fontSize"      : "var(--theme--css--font-size-h5)",
+					"fontWeight"    : "400",
+					"lineHeight"    : "1.382",
+					"textTransform" : "uppercase",
+					"letterSpacing" : "var(--wp--custom--letter-spacing)"
+				}
+			},
+			"h6" : {
+				"typography" : {
+					"fontSize"      : "var(--theme--css--font-size-h6)",
+					"fontWeight"    : "400",
+					"lineHeight"    : "1.382",
+					"textTransform" : "uppercase",
+					"letterSpacing" : "var(--wp--custom--letter-spacing)"
+				}
+			},
+
+			"cite" : {
+				"typography" : {
+					"fontFamily" : "var(--wp--preset--font-family--global)",
+					"fontSize"   : "var(--wp--preset--font-size--xs)",
+					"fontStyle"  : "normal"
+				}
+			}
+		},
+		"blocks" : {
+
+			"core/avatar" : {
+				"border" : {
+					"radius" : "1em"
+				}
+			},
+
+			"core/code" : {
+				"border" : {
+					"radius" : "var(--wp--custom--border-radius--s)"
+				}
+			},
+
+			"core/cover" : {
+				"spacing" : {
+					"padding" : "var(--wp--preset--spacing--l)"
+				}
+			},
+
+			"core/details" : {
+				"spacing" : {
+					"blockGap" : "var(--wp--custom--details--gap)"
+				}
+			},
+
+			"core/file" : {
+				"border" : {
+					"radius" : "var(--wp--custom--border-radius--s)"
+				}
+			},
+
+			"core/image" : {
+				"border" : {
+					"radius" : "var(--wp--custom--border-radius--s)"
+				},
+				"variations" : {
+					"rounded" : {
+						"border" : {
+							"radius" : "20rem"
+						}
+					}
+				}
+			},
+
+			"core/navigation-submenu" : {
+				"typography" : {
+					"fontSize" : "1em"
+				}
+			},
+
+			"core/post-featured-image" : {
+				"border" : {
+					"radius" : "var(--wp--custom--border-radius--s)"
+				}
+			},
+
+			"core/post-navigation-link" : {
+				"typography" : {
+					"fontFamily" : "var(--wp--preset--font-family--supplemental)",
+					"fontWeight" : "500",
+					"lineHeight" : "1.2"
+				}
+			},
+
+			"core/pullquote" : {
+				"typography" : {
+					"fontSize" : "var(--wp--preset--font-size--l)"
+				},
+				"spacing" : {
+					"padding"  : {
+						"top"    : "1.618rem",
+						"bottom" : "0",
+						"left"   : "0",
+						"right"  : "0"
+					}
+				},
+				"border" : {
+					"style" : "solid",
+					"width" : ".382rem 0 0 0",
+					"color" : "currentColor"
+				}
+			},
+
+			"core/search" : {
+				"border" : {
+					"color" : "currentColor"
+				}
+			},
+
+			"core/site-tagline" : {
+				"typography" : {
+					"lineHeight" : "1.2"
+				}
+			},
+
+			"core/site-title" : {
+				"typography" : {
+					"fontFamily" : "var(--wp--preset--font-family--alternative)",
+					"fontSize"   : "var(--wp--preset--font-size--xl)",
+					"fontWeight" : "500",
+					"lineHeight" : "1.2"
+				},
+				"elements" : {
+					"link" : {
+						"typography" : {
+							"textDecoration" : "none"
+						}
+					},
+					":hover" : {
+						"typography" : {
+							"textDecoration" : "none"
+						}
+					},
+					":focus" : {
+						"typography" : {
+							"textDecoration" : "none"
+						}
+					},
+					":active" : {
+						"typography" : {
+							"textDecoration" : "none"
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"templateParts" : [
+		{
+			"title" : "Comments",
+			"name"  : "comments",
+			"area"  : "zooey/comments"
+		},
+		{
+			"title" : "Content: Error 404 page",
+			"name"  : "content-404",
+			"area"  : "zooey/content"
+		},
+		{
+			"title" : "Content: With sidebar",
+			"name"  : "content-with-sidebar",
+			"area"  : "zooey/content"
+		},
+		{
+			"title" : "Post meta: After post content",
+			"name"  : "entry-meta-bottom",
+			"area"  : "zooey/meta"
+		},
+		{
+			"title" : "Next/previous post navigation",
+			"name"  : "entry-navigation",
+			"area"  : "zooey/menu"
+		},
+		{
+			"title" : "Posts list item",
+			"name"  : "entry-query",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Posts list item: Featured",
+			"name"  : "entry-query-featured",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Footer",
+			"name"  : "footer",
+			"area"  : "footer"
+		},
+		{
+			"title" : "Header",
+			"name"  : "header",
+			"area"  : "header"
+		},
+		{
+			"title" : "Header: Overlaid header template",
+			"name"  : "header-overlaid",
+			"area"  : "header"
+		},
+		{
+			"title" : "Intro (Page header)",
+			"name"  : "intro",
+			"area"  : "header"
+		},
+		{
+			"title" : "Intro: Post",
+			"name"  : "intro-post",
+			"area"  : "header"
+		},
+		{
+			"title" : "Intro: Blog page",
+			"name"  : "intro-blog",
+			"area"  : "header"
+		},
+		{
+			"title" : "Intro: Archive Page",
+			"name"  : "intro-archive",
+			"area"  : "header"
+		},
+		{
+			"title" : "Intro: Search results page",
+			"name"  : "intro-search",
+			"area"  : "header"
+		},
+		{
+			"title" : "Posts list",
+			"name"  : "query",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Posts list: Featured posts",
+			"name"  : "query-featured",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Posts list: Search results",
+			"name"  : "query-search",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Posts list: With sidebar",
+			"name"  : "query-with-sidebar",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Sidebar",
+			"name"  : "sidebar",
+			"area"  : "zooey/sidebar"
+		},
+		{
+			"title" : "Taxonomy: Category selector",
+			"name"  : "taxonomy-category-select",
+			"area"  : "zooey/query"
+		},
+		{
+			"title" : "Media: Custom header image",
+			"name"  : "custom-header-top",
+			"area"  : "uncategorized"
+		},
+		{
+			"title" : "Media: Custom header image (flipped vertically)",
+			"name"  : "custom-header-bottom",
+			"area"  : "uncategorized"
+		},
+
+		{
+			"title" : "Template content: Archive",
+			"name"  : "template-archive",
+			"area"  : "zooey/template"
+		},
+		{
+			"title" : "Template content: Blog",
+			"name"  : "template-home",
+			"area"  : "zooey/template"
+		},
+		{
+			"title" : "Template content: Index",
+			"name"  : "template-index",
+			"area"  : "zooey/template"
+		},
+		{
+			"title" : "Template content: Search results",
+			"name"  : "template-search",
+			"area"  : "zooey/template"
+		}
+	],
+
+	"customTemplates" : [
+		{
+			"title"     : "Content only",
+			"name"      : "custom-content-only",
+			"postTypes" : [ "public-post-types" ]
+		},
+		{
+			"title"     : "No intro",
+			"name"      : "custom-no-intro",
+			"postTypes" : [ "public-post-types" ]
+		},
+		{
+			"title"     : "Overlaid header",
+			"name"      : "custom-overlaid-header",
+			"postTypes" : [ "public-post-types" ]
+		},
+		{
+			"title"     : "With sidebar",
+			"name"      : "custom-with-sidebar",
+			"postTypes" : [ "page", "post" ]
+		}
+	]
+}

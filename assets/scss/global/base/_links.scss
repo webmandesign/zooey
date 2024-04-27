@@ -1,0 +1,40 @@
+/* FILE: global/base/_links.scss */
+
+a {
+	text-underline-offset: var(--wp--custom--underline--offset--default);
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration-thickness: var(--wp--custom--underline--thickness);
+	}
+
+	&:hover,
+	&:active {
+		outline: none;
+	}
+
+	[style*="text-decoration"] &:not(:hover):not(:focus):not(:active) {
+		text-decoration: inherit;
+	}
+}
+
+[href^="tel"] {
+	white-space: nowrap;
+
+	@include media( map_get( $breakpoint, 'm' ) ) {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	a {
+		text-underline-offset: var(--wp--custom--underline--offset--heading);
+		color: inherit;
+	}
+}

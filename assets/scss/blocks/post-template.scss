@@ -1,0 +1,42 @@
+// core/post-template
+@use 'sass:math';
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-post-template {
+
+	&.is-flex-container {
+		// Custom gap control.
+		gap: var(--theme--block--post-template--gap);
+
+		@include media( 600 ) {
+			@for $i from 2 through 6 {
+				&.is-flex-container.columns-#{ $i } > li {
+					width: calc( ( 100% / #{ $i } ) - var(--theme--block--post-template--gap) + ( var(--theme--block--post-template--gap) / #{ $i } ) );
+				}
+			}
+		}
+	}
+}
+
+.wp-block-post {
+
+	&.sticky {
+		$size: .75rem;
+
+		.wp-block-post-title {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: inline-block;
+				width: $size;
+				height: $size;
+				margin-block: math.div( $size, -3 );
+				background: var(--wp--preset--color--primary);
+				border-radius: $size;
+			}
+		}
+	}
+}

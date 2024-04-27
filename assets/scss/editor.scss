@@ -1,0 +1,26 @@
+/*! FILE: editor.scss */
+@use 'sass:math';
+
+//
+// Editor styles.
+//
+// @package    Zooey
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since  1.0.0
+//
+
+$is_editor: true;
+
+@import '_tools/_index';
+@import '_setup/_index';
+
+@import '_variables/_index';
+
+$important_contexts: append( $important_contexts, 'modifier_mark' );
+
+@import 'global/_index';
+@import 'custom/_index';
+@import 'editor/_index';
+
+@import '_extend/_index';

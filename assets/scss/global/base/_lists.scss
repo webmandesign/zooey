@@ -1,0 +1,19 @@
+/* FILE: global/base/_lists.scss */
+
+ul,
+ol {
+	padding-inline-start: $ratio + em;
+}
+
+ul {
+	list-style: disc;
+}
+
+li {
+
+	ul,
+	ol {
+		padding-inline-start: 1em;
+		margin-block-start: 0;
+	}
+}

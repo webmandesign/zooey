@@ -1,0 +1,18 @@
+/* FILE: global/accessibility/_base.scss */
+
+body:focus {
+	outline: none;
+}
+
+.wp-site-blocks :focus,
+.skip-link:focus {
+	outline-width: var(--wp--custom--outline--width);
+	outline-style: var(--wp--custom--outline--style);
+	outline-offset: var(--wp--custom--outline--offset);
+	outline-color: var(--wp--custom--outline--color);
+}
+
+[name="top"] {
+	position: absolute;
+	inset-block-start: -99em;
+}

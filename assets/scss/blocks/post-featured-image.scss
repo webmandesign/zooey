@@ -1,0 +1,14 @@
+// core/post-featured-image
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-post-featured-image {
+
+	.is-style-page-header & {
+
+		[style*="object-fit:contain"] {
+			object-position: 50% 0;
+		}
+	}
+}

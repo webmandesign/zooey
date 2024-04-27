@@ -1,0 +1,11 @@
+// core/avatar
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-avatar {
+
+	img {
+		vertical-align: top;
+	}
+}
