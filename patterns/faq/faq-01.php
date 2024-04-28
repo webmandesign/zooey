@@ -35,7 +35,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center"><?php Block_Pattern::the_text( '160' ); ?></p>
+	<p class="has-text-align-center"><?php Block_Pattern::the_text( '140' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"top":"var:preset|spacing|xl"}}}} -->

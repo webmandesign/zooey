@@ -44,10 +44,6 @@ class Page_Template implements Component_Interface {
 		'custom-no-intro' => array(
 			'no-primary-title',
 		),
-
-		'custom-overlaid-header' => array(
-			'no-primary-title',
-		),
 	);
 
 	/**
@@ -86,8 +82,6 @@ class Page_Template implements Component_Interface {
 				add_filter( 'theme_templates', __CLASS__ . '::toggle_template_with_sidebar' );
 
 				add_filter( 'body_class', __CLASS__ . '::body_class' );
-
-				add_filter( 'zooey/content/block_template_part/the_content/slug', __CLASS__ . '::template_part_slug', 10, 2 );
 
 				add_filter( 'zooey/entry/content_wrapper/classes', __CLASS__ . '::content_wrapper_classes' );
 
@@ -381,38 +375,6 @@ class Page_Template implements Component_Interface {
 			return array_unique( $classes );
 
 	} // /body_class
-
-	/**
-	 * Block template part slug pre-render modification if page template used.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param  array|string $slug     Template part slug to render.
-	 * @param  string       $context  Optional context.
-	 *
-	 * @return  array|string
-	 */
-	public static function template_part_slug( $slug, string $context ) {
-
-		// Processing
-
-			if (
-					'header' === $slug
-					&& 'header' === $context
-					&& is_page_template()
-			) {
-
-				if ( stripos( implode( ' ', Body_Class::get_body_class() ), 'custom-overlaid-header' ) ) {
-					$slug = 'header-overlaid';
-				}
-			}
-
-
-		// Output
-
-			return $slug;
-
-	} // /template_part_slug
 
 	/**
 	 * Content wrapper classes.

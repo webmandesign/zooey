@@ -15,99 +15,60 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Boxes with title on the side', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Question with answer and an image on the side', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
-		esc_html_x( 'columns', 'keyword', 'zooey' ),
 		esc_html_x( 'FAQ', 'keyword', 'zooey' ),
 		esc_html_x( 'question', 'keyword', 'zooey' ),
 		esc_html_x( 'answer', 'keyword', 'zooey' ),
 	),
 ) );
 
+// Block pattern content:
+
+$image   = Block_Pattern::get_image_url( '3to4-1' );
+$image_s = Block_Pattern::get_image_url( 's' );
+
 ?>
 
-<!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide">
+<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
-	<!-- wp:column {"width":"38.2%"} -->
-	<div class="wp-block-column" style="flex-basis:38.2%">
+	<!-- wp:media-text {"align":"wide","mediaId":<?php echo absint( ZOOEY_DUMMY_ID ); ?>,"mediaType":"image","verticalAlignment":"center","imageFill":true,"style":{"border":{"radius":"0.38rem"}},"backgroundColor":"primary"} -->
+	<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-center is-image-fill has-primary-background-color has-background" style="border-radius:0.38rem">
+		<figure class="wp-block-media-text__media" style="background-image:url(<?php echo esc_url_raw( $image ); ?>);background-position:50% 50%"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" class="wp-image-<?php echo absint( ZOOEY_DUMMY_ID ); ?> size-full" /></figure>
+		<div class="wp-block-media-text__content">
 
-		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"400px"}} -->
-		<div class="wp-block-group">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}},"dimensions":{"minHeight":"62vh"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"center"}} -->
+			<div class="wp-block-group" style="min-height:62vh;padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l)">
 
-			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
+				<!-- wp:group {"layout":{"type":"constrained","contentSize":"560px"}} -->
+				<div class="wp-block-group">
 
-			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '130' ); ?></p>
-			<!-- /wp:paragraph -->
+					<!-- wp:heading -->
+					<h2 class="wp-block-heading"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'title/l' ); ?>?</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"dropCap":true,"fontSize":"l"} -->
+					<p class="has-drop-cap has-l-font-size"><?php Block_Pattern::the_text( '130' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p><?php Block_Pattern::the_text( '120' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:image {"sizeSlug":"thumbnail","style":{"color":{"duotone":"var:preset|duotone|white"}}} -->
+					<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_s ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<!-- /wp:image -->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:group -->
 
 		</div>
-		<!-- /wp:group -->
-
 	</div>
-	<!-- /wp:column -->
-
-	<!-- wp:column {"width":"61.8%"} -->
-	<div class="wp-block-column" style="flex-basis:61.8%">
-
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary-mixed"} -->
-		<div class="wp-block-group has-secondary-mixed-background-color has-background" style="border-radius:0.38rem">
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"l"} -->
-			<h3 class="wp-block-heading has-l-font-size" style="font-style:normal;font-weight:500"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:separator -->
-			<hr class="wp-block-separator has-alpha-channel-opacity"/>
-			<!-- /wp:separator -->
-
-			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '200' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:group -->
-
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary-mixed"} -->
-		<div class="wp-block-group has-secondary-mixed-background-color has-background" style="border-radius:0.38rem">
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"l"} -->
-			<h3 class="wp-block-heading has-l-font-size" style="font-style:normal;font-weight:500"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:separator -->
-			<hr class="wp-block-separator has-alpha-channel-opacity"/>
-			<!-- /wp:separator -->
-
-			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '200' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:group -->
-
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary-mixed"} -->
-		<div class="wp-block-group has-secondary-mixed-background-color has-background" style="border-radius:0.38rem">
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"l"} -->
-			<h3 class="wp-block-heading has-l-font-size" style="font-style:normal;font-weight:500"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:separator -->
-			<hr class="wp-block-separator has-alpha-channel-opacity"/>
-			<!-- /wp:separator -->
-
-			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '200' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:group -->
-
-	</div>
-	<!-- /wp:column -->
+	<!-- /wp:media-text -->
 
 </div>
-<!-- /wp:columns -->
+<!-- /wp:group -->

@@ -21,7 +21,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 ?>
 
 <!-- wp:paragraph {"dropCap":true,"fontSize":"l"} -->
-<p class="has-drop-cap has-l-font-size"><?php Block_Pattern::the_text( '300' ); ?></p>
+<p class="has-drop-cap has-l-font-size"><?php Block_Pattern::the_text( '280' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

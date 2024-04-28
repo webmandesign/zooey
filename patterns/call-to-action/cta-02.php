@@ -27,8 +27,8 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 
 ?>
 
-<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:0;padding-bottom:0;min-height:200px">
+<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull is-light" style="margin-top:0;padding-top:0;padding-bottom:0;min-height:200px">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover"/>
 	<div class="wp-block-cover__inner-container">
@@ -43,15 +43,15 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 			<!-- wp:column -->
 			<div class="wp-block-column">
 
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content","left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}},"textColor":"white","gradient":"backdrop-blur-dark","className":"is-style-backdrop-blur"} -->
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content","left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}},"textColor":"white","gradient":"backdrop-blur-dark","className":"is-style-backdrop-blur","layout":{"type":"constrained","contentSize":"560px"}} -->
 				<div class="wp-block-group is-style-backdrop-blur has-white-color has-backdrop-blur-dark-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:heading {"fontSize":"h-3"} -->
-					<h2 class="wp-block-heading has-h-3-font-size"><?php Block_Pattern::the_text( 'title/m' ); ?></h2>
+					<h2 class="wp-block-heading has-h-3-font-size"><?php Block_Pattern::the_text( 'title/l' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"fontSize":"l"} -->
-					<p class="has-l-font-size"><?php Block_Pattern::the_text( '170' ); ?></p>
+					<p class="has-l-font-size"><?php Block_Pattern::the_text( '140' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:buttons -->

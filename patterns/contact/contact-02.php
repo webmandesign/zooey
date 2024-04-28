@@ -27,6 +27,6 @@ $image = Block_Pattern::get_image_url( 'map' );
 
 ?>
 
-<!-- wp:image {"align":"wide","sizeSlug":"full","linkDestination":"custom","style":{"spacing":{"margin":{"top":"0"}},"border":{"radius":"0.38rem"},"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-fullwidth"} -->
-<figure class="wp-block-image alignwide size-full has-custom-border is-fullwidth" style="margin-top:0"><a href="https://www.openstreetmap.org/"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0.38rem"/></a></figure>
+<!-- wp:image {"sizeSlug":"large","linkDestination":"custom","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-fullwidth"} -->
+<figure class="wp-block-image alignwide size-large is-fullwidth" style="margin-top:0"><a href="https://www.openstreetmap.org/"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></a></figure>
 <!-- /wp:image -->

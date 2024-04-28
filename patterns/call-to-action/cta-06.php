@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Call to action with testimonial on the side', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Simple center aligned call to action with big title', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'buttons', 'keyword', 'zooey' ),
 	),
@@ -23,47 +23,26 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"},"margin":{"top":"0"}}},"backgroundColor":"secondary-mixed","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-secondary-mixed-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"},"margin":{"top":"0"}}},"layout":{"type":"constrained","contentSize":"640px"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
 
-	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}}} -->
-	<div class="wp-block-columns alignwide">
+	<!-- wp:heading {"textAlign":"center"} -->
+	<h2 class="wp-block-heading has-text-align-center"><?php Block_Pattern::the_text( 'title/l' ); ?>?</h2>
+	<!-- /wp:heading -->
 
-		<!-- wp:column {"width":"61.8%"} -->
-		<div class="wp-block-column" style="flex-basis:61.8%">
+	<!-- wp:paragraph {"align":"center"} -->
+	<p class="has-text-align-center"><?php Block_Pattern::the_text( '60' ); ?></p>
+	<!-- /wp:paragraph -->
 
-			<!-- wp:quote {"style":{"typography":{"lineHeight":"1.2"}},"fontSize":"xxxl"} -->
-			<blockquote class="wp-block-quote has-xxxl-font-size" style="line-height:1.2">
-				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '150' ); ?></p>
-				<!-- /wp:paragraph -->
-				<cite><strong><?php Block_Pattern::the_text( 'people/name' ); ?></strong>,&nbsp;<em><?php Block_Pattern::the_text( 'people/job' ); ?></em></cite>
-			</blockquote>
-			<!-- /wp:quote -->
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
+	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"38.2%"} -->
-		<div class="wp-block-column" style="flex-basis:38.2%">
-
-			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '150' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:buttons {"layout":{"type":"flex"}} -->
-			<div class="wp-block-buttons">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
-				<!-- /wp:button -->
-			</div>
-			<!-- /wp:buttons -->
-
-		</div>
-		<!-- /wp:column -->
+		<!-- wp:button {"fontSize":"m"} -->
+		<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+		<!-- /wp:button -->
 
 	</div>
-	<!-- /wp:columns -->
+	<!-- /wp:buttons -->
 
 </div>
 <!-- /wp:group -->

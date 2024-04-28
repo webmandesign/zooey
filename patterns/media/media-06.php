@@ -24,8 +24,8 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 
 ?>
 
-<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","hasParallax":true,"dimRatio":0,"minHeight":80,"minHeightUnit":"vh","align":"full","style":{"spacing":{"margin":{"top":"0"}}}} -->
-<div class="wp-block-cover alignfull has-parallax" style="margin-top:0;min-height:80vh">
+<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","hasParallax":true,"dimRatio":0,"minHeight":70,"minHeightUnit":"vh","align":"full","style":{"spacing":{"margin":{"top":"0"}}}} -->
+<div class="wp-block-cover alignfull has-parallax" style="margin-top:0;min-height:70vh">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 	<div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url_raw( $image ); ?>)"></div>
 	<div class="wp-block-cover__inner-container">

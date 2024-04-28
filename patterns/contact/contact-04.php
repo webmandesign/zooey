@@ -15,135 +15,73 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Contact info with giant description and multiple addresses', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Quote with contact info on the side and an image below', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
-		esc_html_x( 'columns', 'keyword', 'zooey' ),
-		esc_html_x( 'social', 'keyword', 'zooey' ),
+		esc_html_x( 'email', 'keyword', 'zooey' ),
+		esc_html_x( 'address', 'keyword', 'zooey' ),
 	),
 ) );
 
+// Block pattern content:
+
+$image = Block_Pattern::get_image_url( '21to9' );
+
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"1000px","justifyContent":"left"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
 	<div class="wp-block-group alignwide">
 
-		<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"300","textTransform":"uppercase"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","fontSize":"giant","fontFamily":"supplemental"} -->
-		<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-giant-font-size" style="font-style:normal;font-weight:300;line-height:1;text-transform:uppercase"><?php Block_Pattern::the_text( 1, '.' ); ?></p>
-		<!-- /wp:paragraph -->
+		<!-- wp:group {"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:quote {"fontSize":"xxl"} -->
+			<blockquote class="wp-block-quote has-xxl-font-size">
+				<!-- wp:paragraph -->
+				<p><?php Block_Pattern::the_text( '140' ); ?></p>
+				<!-- /wp:paragraph -->
+			</blockquote>
+			<!-- /wp:quote -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
+			<h2 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php esc_html_e( 'Contact', 'zooey' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph -->
+			<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:paragraph -->
+			<p><a href="mailto:<?php echo esc_attr( Block_Pattern::get_text( 'contact/email' ) ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:group -->
 
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}},"className":"is-style-mobile-reverse"} -->
-	<div class="wp-block-columns alignwide is-style-mobile-reverse">
+	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","isDark":false,"align":"wide","style":{"border":{"radius":"0.38rem"}}} -->
+	<div class="wp-block-cover alignwide is-light" style="border-radius:0.38rem;min-height:50vh">
+		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
+		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
+		<div class="wp-block-cover__inner-container">
 
-		<!-- wp:column {"width":"38%","style":{"spacing":{"blockGap":"var:preset|spacing|s","padding":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l","left":"var:preset|spacing|l","right":"var:preset|spacing|l"}},"border":{"radius":"0.38rem"},"typography":{"fontStyle":"normal","fontWeight":"700","lineHeight":"1.3"}},"backgroundColor":"secondary-mixed","fontSize":"xxl","fontFamily":"supplemental"} -->
-		<div class="wp-block-column has-secondary-mixed-background-color has-background has-supplemental-font-family has-xxl-font-size" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l);font-style:normal;font-weight:700;line-height:1.3;flex-basis:38%">
-
-			<!-- wp:paragraph -->
-			<p><a href="#0">Facebook</a></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p><a href="#0">Instagram</a></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p><a href="#0">YouTube</a></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p><a href="#0">Twitter</a></p>
-			<!-- /wp:paragraph -->
+			<!-- wp:spacer {"height":"320px"} -->
+			<div style="height:320px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
 
 		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|l","top":"var:preset|spacing|l"}}}} -->
-		<div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l)">
-
-			<!-- wp:columns -->
-			<div class="wp-block-columns">
-
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|xl"}}} -->
-				<div class="wp-block-column">
-
-					<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-					<div class="wp-block-group">
-
-						<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-						<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-						<!-- /wp:heading -->
-
-						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
-						<!-- /wp:paragraph -->
-
-					</div>
-					<!-- /wp:group -->
-
-					<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-					<div class="wp-block-group">
-
-						<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-						<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-						<!-- /wp:heading -->
-
-						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
-						<!-- /wp:paragraph -->
-
-					</div>
-					<!-- /wp:group -->
-
-				</div>
-				<!-- /wp:column -->
-
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|xl"}}} -->
-				<div class="wp-block-column">
-
-					<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-					<div class="wp-block-group">
-
-						<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-						<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-						<!-- /wp:heading -->
-
-						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
-						<!-- /wp:paragraph -->
-
-					</div>
-					<!-- /wp:group -->
-
-					<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-					<div class="wp-block-group">
-
-						<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-						<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-						<!-- /wp:heading -->
-
-						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
-						<!-- /wp:paragraph -->
-
-					</div>
-					<!-- /wp:group -->
-
-				</div>
-				<!-- /wp:column -->
-
-			</div>
-			<!-- /wp:columns -->
-
-		</div>
-		<!-- /wp:column -->
-
 	</div>
-	<!-- /wp:columns -->
+	<!-- /wp:cover -->
 
 </div>
 <!-- /wp:group -->

@@ -121,6 +121,12 @@ class Media implements Component_Interface {
 						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
 						'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
 					),
+
+					'svg-fingers-lines' => array(
+						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.png' ),
+						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.png' ),
+						'description'   => esc_html_x( 'Line Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
+					),
 				) );
 
 	} // /after_setup_theme

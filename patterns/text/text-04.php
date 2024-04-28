@@ -21,13 +21,17 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 ) );
 
+// Block pattern content:
+
+$image = Block_Pattern::get_image_url( '1to1-3' );
+
 ?>
 
-<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"760px"}} -->
+<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"800px"}} -->
 <div class="wp-block-group alignwide">
 
 	<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","fontSize":"big","fontFamily":"supplemental"} -->
-	<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-big-font-size" style="font-style:normal;font-weight:700;line-height:1.1">Lorem ipsum dolor sit <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-color">amet</mark> viverra.</p>
+	<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-big-font-size" style="font-style:normal;font-weight:700;line-height:1.1">Lorem <mark class="has-inline-color has-primary-color">ipsum dolor</mark> sit amet <img style="width:64px" src="<?php echo esc_url_raw( $image ); ?>" alt=""> primis ultricies ex <img style="width:64px" src="<?php echo esc_url_raw( $image ); ?>" alt=""> netus magna</p>
 	<!-- /wp:paragraph -->
 
 </div>

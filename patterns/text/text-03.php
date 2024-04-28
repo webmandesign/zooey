@@ -31,7 +31,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-column">
 
 		<!-- wp:paragraph -->
-		<p><?php Block_Pattern::the_text( '200' ); ?></p>
+		<p><?php Block_Pattern::the_text( '180' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>
@@ -41,7 +41,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-column">
 
 		<!-- wp:paragraph -->
-		<p><?php Block_Pattern::the_text( '200' ); ?></p>
+		<p><?php Block_Pattern::the_text( '180' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

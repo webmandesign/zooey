@@ -27,8 +27,8 @@ $image = Block_Pattern::get_image_url( '21to9' );
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}}},"backgroundColor":"secondary-mixed","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-secondary-mixed-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
+<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-base-alt-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:columns {"align":"wide"} -->
 	<div class="wp-block-columns alignwide">
@@ -36,8 +36,8 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<!-- wp:column {"width":"38.2%"} -->
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
-			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"xl"} -->
-			<h2 class="wp-block-heading has-xl-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"xl"} -->
+			<h2 class="wp-block-heading has-xl-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -47,7 +47,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-column" style="flex-basis:61.8%">
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.3"}},"fontSize":"xxxl"} -->
-			<p class="has-xxxl-font-size" style="line-height:1.3"><?php Block_Pattern::the_text( '170' ); ?></p>
+			<p class="has-xxxl-font-size" style="line-height:1.3"><?php Block_Pattern::the_text( '85' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -56,8 +56,8 @@ $image = Block_Pattern::get_image_url( '21to9' );
 	</div>
 	<!-- /wp:columns -->
 
-	<!-- wp:image {"align":"wide","sizeSlug":"large","linkDestination":"none","className":"is-style-rounded"} -->
-	<figure class="wp-block-image alignwide size-large is-style-rounded"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+	<!-- wp:image {"align":"wide","sizeSlug":"large"} -->
+	<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:columns {"align":"wide"} -->
@@ -67,7 +67,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '120' ); ?></p>
+			<p><?php Block_Pattern::the_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

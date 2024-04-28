@@ -15,50 +15,56 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Call to action with wide offset image below', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Simple center aligned call to action with big text on a parallax image', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'buttons', 'keyword', 'zooey' ),
+		esc_html_x( 'cover', 'keyword', 'zooey' ),
 	),
 ) );
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '21to9' );
+$image_p = Block_Pattern::get_image_url( 'p-i' );
+$image   = Block_Pattern::get_image_url( '3to2-2' );
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0"},"margin":{"top":"0"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-primary-background-color has-background" style="padding-top:var(--wp--preset--spacing--content);padding-bottom:0;margin-top:0">
+<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","hasParallax":true,"dimRatio":60,"overlayColor":"primary","isUserOverlayColor":true,"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0"}}}} -->
+<div class="wp-block-cover alignfull has-parallax" style="margin-top:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-60 has-background-dim"></span>
+	<div class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url_raw( $image ); ?>)"></div>
+	<div class="wp-block-cover__inner-container">
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-	<div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--xl)">
+		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}},"dimensions":{"minHeight":"62vh"}},"gradient":"primary-cut-transparent-h","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"center","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group has-primary-cut-transparent-h-gradient-background has-background" style="min-height:62vh;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
 
-		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-		<div class="wp-block-group">
+			<!-- wp:group {"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group">
 
-			<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}}} -->
-			<h2 class="wp-block-heading" style="font-style:normal;font-weight:400"><?php Block_Pattern::the_text( '60' ); ?></h2>
-			<!-- /wp:heading -->
+				<!-- wp:heading {"textAlign":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m","fontFamily":"global"} -->
+				<h2 class="wp-block-heading has-text-align-center has-global-font-family has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.2"}},"fontSize":"h-3","fontFamily":"supplemental"} -->
+				<p class="has-text-align-center has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Block_Pattern::the_text( 2, '.' ); ?></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
+				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
+
+					<!-- wp:button {"backgroundColor":"white"} -->
+					<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<!-- /wp:button -->
+
+				</div>
+				<!-- /wp:buttons -->
+
+			</div>
+			<!-- /wp:group -->
 
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:buttons -->
-		<div class="wp-block-buttons">
-
-			<!-- wp:button {"backgroundColor":"base","fontSize":"m"} -->
-			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-base-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
-			<!-- /wp:button -->
-
-		</div>
-		<!-- /wp:buttons -->
-
 	</div>
-	<!-- /wp:group -->
-
-	<!-- wp:image {"align":"wide","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":{"topRight":"1rem"}}},"className":"is-style-padding-right"} -->
-	<figure class="wp-block-image alignwide size-full has-custom-border is-style-padding-right"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-top-right-radius:1rem"/></figure>
-	<!-- /wp:image -->
-
 </div>
-<!-- /wp:group -->
+<!-- /wp:cover -->

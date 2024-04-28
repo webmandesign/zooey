@@ -25,6 +25,6 @@ $image = Block_Pattern::get_image_url( '21to9' );
 
 ?>
 
-<!-- wp:image {"align":"wide","sizeSlug":"full","style":{"border":{"radius":{"topRight":"1rem","bottomRight":"1rem"}}},"className":"is-style-padding-right"} -->
-<figure class="wp-block-image alignwide size-full has-custom-border is-style-padding-right"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-top-right-radius:1rem;border-bottom-right-radius:1rem" /></figure>
+<!-- wp:image {"sizeSlug":"full","align":"wide","className":"is-style-padding-right"} -->
+<figure class="wp-block-image alignwide size-full is-style-padding-right"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 <!-- /wp:image -->

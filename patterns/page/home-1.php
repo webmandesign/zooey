@@ -28,24 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-11"} /-->
-
-<!-- wp:pattern {"slug":"zooey/services/services-11"} /-->
-
-<!-- wp:template-part {"align":"wide","slug":"custom-header-top","style":{"spacing":{"margin":{"top":"0"}}}} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|m"} --><div style="height:var(--wp--preset--spacing--m)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/text/text-04"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/faq/faq-06"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/call-to-action/cta-16"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/call-to-action/cta-09"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

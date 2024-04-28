@@ -21,5 +21,5 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 ?>
 
 <!-- wp:paragraph {"align":"wide","style":{"typography":{"fontStyle":"normal","fontWeight":"900"},"spacing":{"margin":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}},"textColor":"contrast-alt","fontSize":"giant","fontFamily":"supplemental"} -->
-<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-giant-font-size" style="margin-top:var(--wp--preset--spacing--content);margin-bottom:var(--wp--preset--spacing--content);font-style:normal;font-weight:900"><?php Block_Pattern::the_text( '55' ); ?></p>
+<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-giant-font-size" style="margin-top:var(--wp--preset--spacing--content);margin-bottom:var(--wp--preset--spacing--content);font-style:normal;font-weight:900"><?php Block_Pattern::the_text( '60' ); ?></p>
 <!-- /wp:paragraph -->

@@ -37,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-group">
 
 			<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"h-3"} -->
-			<h2 class="wp-block-heading has-h-3-font-size" style="font-style:normal;font-weight:400"><?php Block_Pattern::the_text( '70' ); ?></h2>
+			<h2 class="wp-block-heading has-h-3-font-size" style="font-style:normal;font-weight:400"><?php Block_Pattern::the_text( '55' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -54,10 +54,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:separator {"align":"wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity"/>
-	<!-- /wp:separator -->
-
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}}} -->
 	<div class="wp-block-columns alignwide">
 
@@ -65,11 +61,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '140' ); ?></p>
+			<p class="has-l-font-size"><?php Block_Pattern::the_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '240' ); ?></p>
+			<p><?php Block_Pattern::the_text( '220' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

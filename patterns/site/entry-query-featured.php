@@ -40,7 +40,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span>
 		<div class="wp-block-cover__inner-container">
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"var:preset|spacing|m"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"540px"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"var:preset|spacing|m"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"560px"}} -->
 			<div class="wp-block-group" style="padding-top:0;padding-right:var(--wp--preset--spacing--m);padding-bottom:0;padding-left:0">
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}},"border":{"radius":{"topRight":"1rem"}}},"backgroundColor":"secondary-mixed"} -->

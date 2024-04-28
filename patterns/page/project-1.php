@@ -28,10 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-01"} /-->
-
-<!-- wp:pattern {"slug":"zooey/media/media-11"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/portfolio/portfolio-01"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

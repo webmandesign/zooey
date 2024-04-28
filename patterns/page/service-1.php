@@ -28,16 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/text/text-02"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/services/services-07"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
-<h2 class="wp-block-heading is-style-screen-reader-text"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-<!-- /wp:heading -->
-
-<!-- wp:pattern {"slug":"zooey/media/media-11"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

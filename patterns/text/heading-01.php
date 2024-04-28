@@ -23,8 +23,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"m"} -->
-	<h2 class="wp-block-heading has-m-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+	<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
+	<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:separator {"style":{"layout":{"selfStretch":"fill","flexSize":"null"}}} -->

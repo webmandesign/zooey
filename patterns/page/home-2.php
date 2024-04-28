@@ -28,26 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-04"} /-->
-
-<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull">
-
-	<!-- wp:pattern {"slug":"zooey/services/services-02"} /-->
-
-</div>
-<!-- /wp:group -->
-
-<!-- wp:pattern {"slug":"zooey/text/text-01"} /-->
-
-<!-- wp:pattern {"slug":"zooey/gallery/gallery-11"} /-->
-
-<!-- wp:pattern {"slug":"zooey/gallery/gallery-13"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/team/team-02"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/call-to-action/cta-05"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

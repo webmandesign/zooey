@@ -37,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-column">
 
 		<!-- wp:paragraph {"fontSize":"l"} -->
-		<p class="has-l-font-size"><?php Block_Pattern::the_text( '200' ); ?></p>
+		<p class="has-l-font-size"><?php Block_Pattern::the_text( '190' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

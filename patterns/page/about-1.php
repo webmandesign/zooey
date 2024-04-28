@@ -28,22 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-03"} /-->
-
-<!-- wp:pattern {"slug":"zooey/services/services-05"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/numbers/numbers-07"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/testimonials/testimonials-05"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/team/team-02"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/call-to-action/cta-05"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

@@ -15,29 +15,75 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Wide featured image followed with post date, title and intro text', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Page title, description, button, and a quote overlaying background image with zoom in animation', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'page header', 'keyword', 'zooey' ),
 		esc_html_x( 'title', 'keyword', 'zooey' ),
 		esc_html_x( 'heading', 'keyword', 'zooey' ),
 		esc_html_x( 'h1', 'keyword', 'zooey' ),
+		esc_html_x( 'testimonials', 'keyword', 'zooey' ),
+		esc_html_x( 'buttons', 'keyword', 'zooey' ),
 	),
 ) );
 
+// Block pattern content:
+
+$image = Block_Pattern::get_image_url( '3to2-2' );
+
 ?>
 
-<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull">
+<!-- wp:cover {"useFeaturedImage":true,"dimRatio":60,"overlayColor":"black","isUserOverlayColor":true,"minHeight":80,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"10em","bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:10em;padding-bottom:var(--wp--preset--spacing--content);min-height:80vh">
+	<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
+	<div class="wp-block-cover__inner-container">
 
-	<!-- wp:post-featured-image {"height":"20em","sizeSlug":"large","align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l"}},"border":{"radius":"0.38rem"}}} /-->
+		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->
+		<div class="wp-block-columns alignwide">
 
-	<!-- wp:post-date {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"xs"} /-->
+			<!-- wp:column {"width":"61.8%","style":{"spacing":{"padding":{"top":"12vh"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"600px"}} -->
+			<div class="wp-block-column" style="padding-top:12vh;flex-basis:61.8%">
 
-	<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"var:preset|spacing|s"}}}} /-->
+				<!-- wp:post-title {"level":1} /-->
 
-	<!-- wp:paragraph {"dropCap":true,"fontSize":"l"} -->
-	<p class="has-drop-cap has-l-font-size"><?php Block_Pattern::the_text( '210' ); ?></p>
-	<!-- /wp:paragraph -->
+				<!-- wp:group {"layout":{"type":"constrained","contentSize":"440px","justifyContent":"left"}} -->
+				<div class="wp-block-group">
 
+					<!-- wp:paragraph {"fontSize":"l"} -->
+					<p class="has-l-font-size"><?php Block_Pattern::the_text( '120' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons">
+						<!-- wp:button {"backgroundColor":"white"} -->
+						<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+						<!-- /wp:button -->
+					</div>
+					<!-- /wp:buttons -->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"width":"38.2%"} -->
+			<div class="wp-block-column" style="flex-basis:38.2%">
+
+				<!-- wp:quote -->
+				<blockquote class="wp-block-quote">
+					<!-- wp:paragraph -->
+					<p><?php Block_Pattern::the_text( '170' ); ?></p>
+					<!-- /wp:paragraph -->
+					<cite><?php Block_Pattern::the_text( 'people/name' ); ?>, <?php Block_Pattern::the_text( 'people/job' ); ?></cite>
+				</blockquote>
+				<!-- /wp:quote -->
+
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
 </div>
-<!-- /wp:group -->
+<!-- /wp:cover -->

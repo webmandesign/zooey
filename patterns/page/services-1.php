@@ -28,24 +28,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-06"} /-->
-
-<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull">
-
-	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
-	<h2 class="wp-block-heading is-style-screen-reader-text"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
-	<!-- /wp:heading -->
-
-	<!-- wp:pattern {"slug":"zooey/services/services-02"} /-->
-
-</div>
-<!-- /wp:group -->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/text/text-04"} /-->
-
-<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
-
-<!-- wp:pattern {"slug":"zooey/services/services-03"} /-->
+<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->

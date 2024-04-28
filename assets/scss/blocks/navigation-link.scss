@@ -30,7 +30,6 @@
 
 		// Top level menu <li> items.
 		&:not(.is-vertical) .wp-block-navigation__container > .wp-block-navigation-item {
-			padding-block: $ratio_maj + em;
 
 			> .wp-block-navigation-item__content {
 				padding-block: $ratio_min + em;

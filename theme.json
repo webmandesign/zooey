@@ -1031,11 +1031,6 @@
 			"area"  : "header"
 		},
 		{
-			"title" : "Header: Overlaid header template",
-			"name"  : "header-overlaid",
-			"area"  : "header"
-		},
-		{
 			"title" : "Intro (Page header)",
 			"name"  : "intro",
 			"area"  : "header"
@@ -1132,11 +1127,6 @@
 		{
 			"title"     : "No intro",
 			"name"      : "custom-no-intro",
-			"postTypes" : [ "public-post-types" ]
-		},
-		{
-			"title"     : "Overlaid header",
-			"name"      : "custom-overlaid-header",
 			"postTypes" : [ "public-post-types" ]
 		},
 		{

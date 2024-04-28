@@ -32,7 +32,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"bottom","justifyContent":"space-between"}} -->
 	<div class="wp-block-group alignwide">
 
-		<!-- wp:group {"layout":{"type":"constrained","contentSize":"540px"}} -->
+		<!-- wp:group {"layout":{"type":"constrained","contentSize":"560px"}} -->
 		<div class="wp-block-group">
 
 			<!-- wp:heading -->
@@ -40,7 +40,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '120' ); ?></p>
+			<p><?php Block_Pattern::the_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -59,11 +59,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	<!-- wp:categories {"showPostCounts":true,"align":"wide","className":"is-style-inline","style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|l"}}},"fontSize":"xs"} /-->
 
-	<!-- wp:query {"queryId":0,"query":{"perPage":3,"postType":"post","sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
+	<!-- wp:query {"query":{"perPage":3,"postType":"post","sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
 	<div class="wp-block-query alignwide">
 		<!-- wp:post-template -->
 
-			<!-- wp:pattern {"slug":"zooey/site/entry-query"} /-->
+			<!-- wp:pattern {"slug":"zooey/posts/posts-00"} /-->
 
 		<!-- /wp:post-template -->
 	</div>

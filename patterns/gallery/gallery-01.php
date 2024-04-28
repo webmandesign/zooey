@@ -31,8 +31,8 @@ $image_3 = Block_Pattern::get_image_url( 'l-3' );
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"},"margin":{"top":"0"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--xl)">
+<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 	<h2 class="wp-block-heading is-style-screen-reader-text"><?php Block_Pattern::the_text( 'xs' ); ?></h2>
@@ -41,27 +41,27 @@ $image_3 = Block_Pattern::get_image_url( 'l-3' );
 	<!-- wp:gallery {"columns":6,"imageCrop":false,"linkTo":"none","align":"wide"} -->
 	<figure class="wp-block-gallery alignwide has-nested-images columns-6">
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|secondary"}}} -->
+		<!-- wp:image {"sizeSlug":"thumbnail"} -->
 		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 

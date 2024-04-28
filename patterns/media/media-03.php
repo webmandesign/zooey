@@ -38,8 +38,8 @@ $image_s = Block_Pattern::get_image_url( 's' );
 		<!-- wp:column {"verticalAlignment":"top"} -->
 		<div class="wp-block-column is-vertically-aligned-top">
 
-			<!-- wp:image {"sizeSlug":"medium","className":"is-style-rounded"} -->
-			<figure class="wp-block-image size-medium is-style-rounded"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<!-- wp:image {"sizeSlug":"medium"} -->
+			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -53,15 +53,15 @@ $image_s = Block_Pattern::get_image_url( 's' );
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '130' ); ?></p>
+			<p class="has-l-font-size"><?php Block_Pattern::the_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
 			<p><?php Block_Pattern::the_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:image {"sizeSlug":"medium","style":{"spacing":{"margin":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}}},"className":"is-style-rounded"} -->
-			<figure class="wp-block-image size-medium is-style-rounded" style="margin-top:var(--wp--preset--spacing--l);margin-bottom:var(--wp--preset--spacing--l)"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<!-- wp:image {"sizeSlug":"medium"} -->
+			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph -->

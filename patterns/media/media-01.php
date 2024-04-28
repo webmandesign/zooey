@@ -36,8 +36,8 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<!-- wp:column {"width":"33.33%"} -->
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
-			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="font-style:normal;font-weight:600"><?php Block_Pattern::the_text( '190' ); ?></p>
+			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"l"} -->
+			<p class="has-l-font-size" style="font-style:normal;font-weight:700"><?php Block_Pattern::the_text( '160' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -46,8 +46,8 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-			<figure class="wp-block-image size-large is-style-rounded"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<!-- wp:image {"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -63,7 +63,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '160' ); ?></p>
+			<p><?php Block_Pattern::the_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -73,7 +73,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '160' ); ?></p>
+			<p><?php Block_Pattern::the_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

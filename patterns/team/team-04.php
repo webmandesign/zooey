@@ -15,15 +15,13 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Person name badge with photo and job position', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( '"About me" page content', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'card', 'keyword', 'zooey' ),
 		esc_html_x( 'team', 'keyword', 'zooey' ),
-		esc_html_x( 'author', 'keyword', 'zooey' ),
 		esc_html_x( 'staff', 'keyword', 'zooey' ),
 		esc_html_x( 'person', 'keyword', 'zooey' ),
 	),
-	'viewportWidth' => 480,
 ) );
 
 // Block pattern content:
@@ -32,26 +30,72 @@ $image = Block_Pattern::get_image_url( '1to1-3' );
 
 ?>
 
-<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|content","top":"var:preset|spacing|l"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content)">
 
-	<!-- wp:image {"width":"80px","sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->
-	<figure class="wp-block-image size-thumbnail is-resized is-style-rounded"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="width:80px"/></figure>
-	<!-- /wp:image -->
+	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}}} -->
+	<div class="wp-block-columns">
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
+		<!-- wp:column -->
+		<div class="wp-block-column">
 
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"l","fontFamily":"supplemental"} -->
-		<p class="has-supplemental-font-family has-l-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php Block_Pattern::the_text( 'people/name' ); ?></p>
-		<!-- /wp:paragraph -->
+			<!-- wp:group {"style":{"border":{"radius":"0.38rem","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-border-color has-primary-border-color" style="border-width:2px;border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'people/job' ); ?></p>
-		<!-- /wp:paragraph -->
+				<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium"} -->
+				<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="aspect-ratio:1;object-fit:cover" /></figure>
+				<!-- /wp:image -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:post-title {"level":1} /-->
+
+			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xs"}},"typography":{"textTransform":"uppercase"}}} -->
+			<p style="margin-top:var(--wp--preset--spacing--xs);text-transform:uppercase"><strong><?php Block_Pattern::the_text( 'people/job' ); ?></strong></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:paragraph -->
+			<p><?php Block_Pattern::the_text( '200' ); ?></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"top":"var:preset|spacing|xl"}}}} -->
+			<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--xl)">
+
+				<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
+				<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph -->
+				<p><?php Block_Pattern::the_text( 'contact/address_inline' ); ?></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph -->
+				<p><a href="mailto:<?php Block_Pattern::the_text( 'contact/email' ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:social-links {"iconColor":"primary","size":"has-large-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only"} -->
+				<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
+					<!-- wp:social-link {"url":"#0","service":"instagram"} /-->
+					<!-- wp:social-link {"url":"#0","service":"youtube"} /-->
+					<!-- wp:social-link {"url":"#0","service":"facebook"} /-->
+				</ul>
+				<!-- /wp:social-links -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
 
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

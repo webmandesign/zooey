@@ -31,7 +31,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:paragraph {"align":"wide","style":{"typography":{"lineHeight":"1.3","fontStyle":"normal","fontWeight":"700"}},"fontSize":"h-3","fontFamily":"supplemental","textColor":"contrast-alt"} -->
-		<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.3"><?php Block_Pattern::the_text( '90' ); ?></p>
+		<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.3"><?php Block_Pattern::the_text( '85' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>
@@ -47,11 +47,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 		<div class="wp-block-column">
 
-			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-			<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php esc_html_e( 'Social networks', 'zooey' ); ?></h2>
+			<!-- wp:heading {"fontSize":"l"} -->
+			<h2 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Social networks', 'zooey' ); ?></h2>
 			<!-- /wp:heading -->
 
-			<!-- wp:social-links {"iconColor":"primary","iconColorValue":"#5f1a37","size":"has-large-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only"} -->
+			<!-- wp:social-links {"iconColor":"primary","iconColorValue":"#e51c06","size":"has-large-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only"} -->
 			<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
 				<!-- wp:social-link {"url":"#0","service":"instagram"} /-->
 				<!-- wp:social-link {"url":"#0","service":"youtube"} /-->
@@ -64,8 +64,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 		<div class="wp-block-column">
 
-			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-			<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php esc_html_e( 'Get in touch', 'zooey' ); ?></h2>
+			<!-- wp:heading {"fontSize":"l"} -->
+			<h2 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Get in touch', 'zooey' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
@@ -78,8 +78,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 		<div class="wp-block-column">
 
-			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"s"} -->
-			<h2 class="wp-block-heading has-s-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase"><?php esc_html_e( 'Visit us', 'zooey' ); ?></h2>
+			<!-- wp:heading {"fontSize":"l"} -->
+			<h2 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Visit us', 'zooey' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->

@@ -137,8 +137,7 @@ class Starter implements Component_Interface {
 
 		// Variables
 
-			$template_no_intro        = 'custom-no-intro';
-			$template_overlaid_header = 'custom-overlaid-header';
+			$template_no_intro = 'custom-no-intro';
 
 
 		// Output

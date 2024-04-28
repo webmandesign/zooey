@@ -15,40 +15,114 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Progress bar', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'History section with years', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
+		esc_html_x( 'columns', 'keyword', 'zooey' ),
+		esc_html_x( 'year', 'keyword', 'zooey' ),
+		esc_html_x( 'timeline', 'keyword', 'zooey' ),
 		esc_html_x( 'numbers', 'keyword', 'zooey' ),
-		esc_html_x( 'services', 'keyword', 'zooey' ),
-		esc_html_x( 'features', 'keyword', 'zooey' ),
-		esc_html_x( 'percentage', 'keyword', 'zooey' ),
-		esc_html_x( 'stats', 'keyword', 'zooey' ),
+		esc_html_x( 'steps', 'keyword', 'zooey' ),
 	),
 ) );
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0.38em","left":"0.38em"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
-	<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"s"} -->
-	<p class="has-s-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/m' ); ?></p>
-	<!-- /wp:paragraph -->
+	<!-- wp:heading {"align":"wide"} -->
+	<h2 class="wp-block-heading alignwide"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+	<!-- /wp:heading -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":"100px"}},"backgroundColor":"primary-mixed","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group has-primary-mixed-background-color has-background" style="border-radius:100px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
+	<!-- /wp:separator -->
 
-		<!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"65%"},"spacing":{"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}},"border":{"radius":"100px"}},"backgroundColor":"primary","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
-		<div class="wp-block-group has-primary-background-color has-background" style="border-radius:100px;padding-top:0;padding-right:var(--wp--preset--spacing--s);padding-bottom:0;padding-left:var(--wp--preset--spacing--s)">
+	<!-- wp:columns {"align":"wide"} -->
+	<div class="wp-block-columns alignwide">
 
-			<!-- wp:paragraph {"fontSize":"s"} -->
-			<p class="has-s-font-size">65%</p>
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
+			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1">1987</h3>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:paragraph -->
+			<p><?php Block_Pattern::the_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
-		<!-- /wp:group -->
+		<!-- /wp:column -->
 
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"align":"wide"} -->
+	<div class="wp-block-columns alignwide">
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
+			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1">1991</h3>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:paragraph -->
+			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"align":"wide"} -->
+	<div class="wp-block-columns alignwide">
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
+			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1"><?php echo esc_html( date( 'Y' ) ); ?></h3>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+
+			<!-- wp:paragraph -->
+			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

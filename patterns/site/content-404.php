@@ -39,7 +39,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<h1 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Oops! That page can not be found.', 'zooey' ); ?></h1>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"layout":{"type":"constrained","contentSize":"540px","justifyContent":"center"}} -->
+	<!-- wp:group {"layout":{"type":"constrained","contentSize":"560px","justifyContent":"center"}} -->
 	<div class="wp-block-group">
 
 		<!-- wp:paragraph {"align":"center"} -->
