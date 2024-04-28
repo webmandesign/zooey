@@ -32,24 +32,18 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:template-part {"align":"wide","slug":"custom-header-top"} /-->
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"560px","wideSize":"100%"}} -->
+	<div class="wp-block-group alignwide">
 
-	<!-- wp:spacer {"height":"var:preset|spacing|content"} -->
-	<div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:group -->
-	<div class="wp-block-group">
-
-		<!-- wp:heading {"textAlign":"center","level":1} -->
-		<h1 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Search results', 'zooey' ); ?></h1>
+		<!-- wp:heading {"level":1,"align":"wide"} -->
+		<h1 class="wp-block-heading alignwide"><?php esc_html_e( 'Search results', 'zooey' ); ?></h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"1rem"}}},"className":"has-search-results-count"} -->
-		<p class="has-text-align-center has-search-results-count" style="margin-top:1rem"><?php
+		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"1rem"}}},"className":"has-search-results-count"} -->
+		<p class="has-search-results-count" style="margin-top:1rem"><?php
 
 		/* translators: Do not translate `{posts_count}`. It will display posts count, a number. */
 		esc_html_e( 'Number of matches found: {posts_count}', 'zooey' );
@@ -57,7 +51,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:search {"placeholder":"Search the site","showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
+		<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
 
 	</div>
 	<!-- /wp:group -->

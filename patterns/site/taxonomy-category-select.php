@@ -29,20 +29,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 	<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'Browse by topic:', 'zooey' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"align":"wide"} -->
-	<div class="wp-block-group alignwide">
-
-		<!-- wp:categories {"showPostCounts":true,"showOnlyTopLevel":true,"className":"is-style-buttons-inline","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} /-->
-
-	</div>
-	<!-- /wp:group -->
+	<!-- wp:categories {"showPostCounts":true,"showOnlyTopLevel":true,"className":"is-style-buttons-inline","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} /-->
 
 </div>
 <!-- /wp:group -->

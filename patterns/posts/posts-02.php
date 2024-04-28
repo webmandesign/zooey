@@ -27,7 +27,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:heading -->
-		<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+		<h2 class="wp-block-heading"><?php esc_html_e( 'Recent posts', 'zooey' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:buttons -->

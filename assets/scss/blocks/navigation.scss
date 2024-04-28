@@ -230,13 +230,18 @@
 
 	// Blurred background.
 
-		.wp-block-navigation__responsive-container[class] {
-			background: none !important;
-			backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
+		.wp-block-navigation__responsive-overlay {
+			display: none;
 		}
 
-		.wp-block-navigation__responsive-overlay {
-			position: absolute;
-			inset: 0;
-			opacity: .95;
+		.wp-block-navigation__responsive-container.is-menu-open {
+			background: none !important;
+			backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
+
+			.wp-block-navigation__responsive-overlay {
+				display: block;
+				position: absolute;
+				inset: 0;
+				opacity: .95;
+			}
 		}

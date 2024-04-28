@@ -33,7 +33,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 	<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 	<div class="wp-block-cover__inner-container">
 
-		<!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"lineHeight":"1.3","fontStyle":"normal","fontWeight":"700"}},"fontSize":"h-1","fontFamily":"supplemental"} -->
+		<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.3","fontStyle":"normal","fontWeight":"700"}},"fontSize":"h-1","fontFamily":"supplemental"} -->
 		<p class="has-text-align-center has-supplemental-font-family has-h-1-font-size" style="font-style:normal;font-weight:700;line-height:1.3"><?php Block_Pattern::the_text( 'title/l' ); ?></p>
 		<!-- /wp:paragraph -->
 

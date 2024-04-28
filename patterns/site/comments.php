@@ -37,15 +37,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<h2 class="wp-block-heading"><?php echo esc_html_x( 'Comments', 'Title of comments section', 'zooey' ); ?></h2>
 			<!-- /wp:heading -->
 
-			<!-- wp:comments-title {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"textColor":"contrast","fontSize":"m"} /-->
+			<!-- wp:comments-title {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"textColor":"contrast","fontSize":"m","fontFamily":"global"} /-->
 
 		</div>
 		<!-- /wp:group -->
 
 		<!-- wp:comment-template -->
 
-			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"bottom":"var:preset|spacing|s"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary"} -->
-			<div class="wp-block-columns has-secondary-background-color has-background" style="border-radius:0.38rem;margin-bottom:var(--wp--preset--spacing--s)">
+			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"bottom":"var:preset|spacing|s"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
+			<div class="wp-block-columns has-base-alt-background-color has-background" style="border-radius:0.38rem;margin-bottom:var(--wp--preset--spacing--s)">
 
 				<!-- wp:column {"width":"40px"} -->
 				<div class="wp-block-column" style="flex-basis:40px">

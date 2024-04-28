@@ -31,21 +31,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:template-part {"align":"wide","slug":"custom-header-top"} /-->
-
-	<!-- wp:spacer {"height":"var:preset|spacing|content"} -->
-	<div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"540px","wideSize":"1000px","justifyContent":"center"}} -->
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"560px","wideSize":"100%"}} -->
 	<div class="wp-block-group alignwide">
 
-		<!-- wp:query-title {"align":"wide","type":"archive","textAlign":"center"} /-->
+		<!-- wp:query-title {"type":"archive","align":"wide"} /-->
 
-		<!-- wp:term-description {"textAlign":"center","fontSize":"l","className":"is-style-page-summary"} /-->
+		<!-- wp:term-description {"className":"is-style-page-summary","fontSize":"l"} /-->
 
 	</div>
 	<!-- /wp:group -->

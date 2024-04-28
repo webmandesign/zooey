@@ -36,29 +36,29 @@ Block_Pattern::add_pattern_args( __FILE__, array(
  * @link  https://fullsiteediting.com/block-support/arialabel/
  */
 
-$image = Block_Pattern::get_image_url( '1to1-1', 'sidebar-about-me' );
+$image = Block_Pattern::get_image_url( '1to1-3', 'sidebar-about-me' );
 
 ?>
 
 <!-- wp:group {"tagName":"aside","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained","contentSize":"480px"}} -->
 <aside aria-label="<?php esc_attr_e( 'Sidebar, a secondary content', 'zooey' ); ?>" class="wp-block-group">
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","layout":{"type":"constrained","contentSize":"320px"}} -->
-	<section class="wp-block-group has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"constrained","contentSize":""}} -->
+	<section class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:0">
 
 		<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 		<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'About me', 'zooey' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"thumbnail","linkDestination":"custom","style":{"border":{"radius":{"bottomLeft":"200px","bottomRight":"200px"}},"spacing":{"margin":{"top":"0"}}}} -->
-		<figure class="wp-block-image size-thumbnail has-custom-border" style="margin-top:0"><img src="<?php echo esc_url_raw( $image ); ?>" alt="" style="border-bottom-left-radius:200px;border-bottom-right-radius:200px;aspect-ratio:1;object-fit:cover" /></figure>
+		<!-- wp:image {"width":"240px","aspectRatio":"1","scale":"cover","sizeSlug":"thumbnail","linkDestination":"custom","align":"center","style":{"border":{"radius":{"bottomLeft":"20rem","bottomRight":"20rem"}},"spacing":{"margin":{"top":"0"}}}} -->
+		<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border" style="margin-top:0"><img src="<?php echo esc_url_raw( $image ); ?>" alt="" style="border-bottom-left-radius:20rem;border-bottom-right-radius:20rem;aspect-ratio:1;object-fit:cover;width:240px" /></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}},"typography":{"lineHeight":"2"}}} -->
 		<div class="wp-block-group" style="line-height:2">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"500","lineHeight":"1.3"}},"fontSize":"xl","fontFamily":"supplemental"} -->
-			<p class="has-text-align-center has-supplemental-font-family has-xl-font-size" style="font-style:normal;font-weight:500;line-height:1.3;text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'people/name' ); ?></a></p>
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700","lineHeight":"1.3"}},"fontSize":"xl","fontFamily":"supplemental"} -->
+			<p class="has-text-align-center has-supplemental-font-family has-xl-font-size" style="font-style:normal;font-weight:700;line-height:1.3;text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'people/name' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"xs"} -->
@@ -72,11 +72,11 @@ $image = Block_Pattern::get_image_url( '1to1-1', 'sidebar-about-me' );
 	<!-- /wp:group -->
 
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary-mixed"} -->
-	<section class="wp-block-group has-secondary-mixed-background-color has-background" style="border-radius:0.38rem">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
+	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
-		<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"xl"} -->
-		<h2 class="wp-block-heading has-xl-font-size" style="font-style:normal;font-weight:500"><?php echo esc_html_x( 'Tags', 'Widget title.', 'zooey' ); ?></h2>
+		<!-- wp:heading {"fontSize":"xl"} -->
+		<h2 class="wp-block-heading has-xl-font-size"><?php echo esc_html_x( 'Tags', 'Widget title.', 'zooey' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:group {"fontSize":"s"} -->
@@ -91,11 +91,11 @@ $image = Block_Pattern::get_image_url( '1to1-1', 'sidebar-about-me' );
 	<!-- /wp:group -->
 
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary-mixed"} -->
-	<section class="wp-block-group has-secondary-mixed-background-color has-background" style="border-radius:0.38rem">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
+	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
-		<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"xl"} -->
-		<h2 class="wp-block-heading has-xl-font-size" style="font-style:normal;font-weight:500"><?php echo esc_html_x( 'Recent Comments', 'Widget title.', 'zooey' ); ?></h2>
+		<!-- wp:heading {"fontSize":"xl"} -->
+		<h2 class="wp-block-heading has-xl-font-size"><?php echo esc_html_x( 'Recent Comments', 'Widget title.', 'zooey' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:group {"fontSize":"s"} -->

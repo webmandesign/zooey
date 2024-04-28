@@ -39,10 +39,10 @@ $blog_page_id = get_option( 'page_for_posts' );
 
 ?>
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"550px","wideSize":"890px"}} -->
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"560px","wideSize":"100%"}} -->
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:heading {"align":"wide","level":1} -->
@@ -69,7 +69,7 @@ $blog_page_id = get_option( 'page_for_posts' );
 		<!-- /wp:group -->
 		<?php endif; ?>
 
-		<!-- wp:search {"showLabel":false,"placeholder":"Search the site","buttonUseIcon":true,"className":"is-style-button-outline"} /-->
+		<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
 
 	</div>
 	<!-- /wp:group -->

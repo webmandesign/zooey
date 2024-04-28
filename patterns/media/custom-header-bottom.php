@@ -24,6 +24,6 @@ $image = get_header_image();
 
 ?>
 
-<!-- wp:image {"sizeSlug":"full","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"border":{"radius":"0.32rem"}},"className":"is-style-use-header-image-flip-v"} -->
-<figure class="wp-block-image alignwide size-full has-custom-border is-style-use-header-image-flip-v" style="margin-top:0"><img src="<?php echo esc_url_raw( $image ); ?>" alt="" style="border-radius:0.32rem"/></figure>
+<!-- wp:image {"sizeSlug":"full","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"border":{"radius":"0.38rem"}},"className":"is-style-use-header-image-flip-v"} -->
+<figure class="wp-block-image alignwide size-full has-custom-border is-style-use-header-image-flip-v" style="margin-top:0"><img src="<?php echo esc_url_raw( $image ); ?>" alt="" style="border-radius:0.38rem"/></figure>
 <!-- /wp:image -->

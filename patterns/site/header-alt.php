@@ -36,8 +36,10 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"0.62em","bottom":"0.62em"}},"border":{"bottom":{"width":"1px"}},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","className":"has-global-padding","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-global-padding has-contrast-alt-color has-text-color has-link-color" style="border-bottom-width:1px;margin-top:0;padding-top:0.62em;padding-bottom:0.62em">
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"0","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","className":"has-global-padding","layout":{"type":"constrained","contentSize":"1600px"}} -->
+<div class="wp-block-group has-global-padding has-contrast-alt-color has-text-color has-link-color" style="margin-top:0;padding-top:0;padding-bottom:var(--wp--preset--spacing--content)">
+
+	<!-- wp:template-part {"slug":"custom-header-top","align":"wide"} /-->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|m"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 	<div class="wp-block-group alignwide">
@@ -45,40 +47,24 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group">
 
-			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<!-- wp:group -->
 			<div class="wp-block-group">
 
-				<!-- wp:site-logo {"width":60} /-->
+				<!-- wp:site-logo {"width":480,"shouldSyncIcon":false} /-->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group">
-
-					<!-- wp:site-title {"level":0,"style":{"typography":{"textTransform":"lowercase"}}} /-->
-
-					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"900"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"xl","fontFamily":"alternative"} -->
-					<p class="has-primary-color has-text-color has-link-color has-alternative-font-family has-xl-font-size" style="font-style:normal;font-weight:900;line-height:1.2">.</p>
-					<!-- /wp:paragraph -->
-
-				</div>
-				<!-- /wp:group -->
+				<!-- wp:site-title {"level":0,"isLink":false,"className":"is-style-screen-reader-text"} /-->
 
 				<!-- wp:site-tagline {"className":"is-style-screen-reader-text"} /-->
 
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:navigation {"icon":"menu","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","className":"is-style-fixed-mobile-toggle","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.25rem"},"typography":{"fontStyle":"normal","fontWeight":"600"}},"anchor":"site-navigation","className":"no-centered-submenu"} /-->
+			<!-- wp:navigation {"icon":"menu","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","className":"is-style-fixed-mobile-toggle","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.2rem"},"typography":{"fontStyle":"normal","fontWeight":"500"}},"anchor":"site-navigation"} /-->
 
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
-		<div class="wp-block-group">
-
-			<!-- wp:search {"showLabel":false,"buttonPosition":"button-inside","buttonUseIcon":true,"style":{"border":{"radius":"100px"}},"fontSize":"xs"} /-->
-
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
 
 	</div>
 	<!-- /wp:group -->

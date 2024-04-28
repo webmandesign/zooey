@@ -33,7 +33,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:query {"layout":{"type":"constrained"}} -->
+<!-- wp:query {"layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-query">
 
 	<?php do_action( 'tha_content_while_before' ); ?>
@@ -52,14 +52,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	<!-- wp:query-no-results {"align":"wide"} -->
 
-		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
+		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"center"}} -->
 		<div class="wp-block-group">
 
 			<!-- wp:paragraph -->
 			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'zooey' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:search {"placeholder":"Search the site","showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
+			<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
 
 		</div>
 		<!-- /wp:group -->

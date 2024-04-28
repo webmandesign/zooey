@@ -39,13 +39,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"wrap"},"fontSize":"xs"} -->
 	<div class="wp-block-group has-xs-font-size">
 
-		<!-- wp:post-terms {"term":"post_tag","prefix":"<?php esc_attr_e( 'Tags: ', 'zooey' ); ?>","style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}}} /-->
+		<!-- wp:post-terms {"term":"post_tag","prefix":"<?php esc_attr_e( 'Tags: ', 'zooey' ); ?>","style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}}} /-->
 
 		<!-- wp:paragraph -->
 		<p>—</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:post-terms {"term":"category","prefix":"<?php esc_attr_e( 'Category: ', 'zooey' ); ?>","style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}}} /-->
+		<!-- wp:post-terms {"term":"category","prefix":"<?php esc_attr_e( 'Category: ', 'zooey' ); ?>","style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}}} /-->
 
 	</div>
 	<!-- /wp:group -->
