@@ -35,8 +35,8 @@ $image_3 = Block_Pattern::get_image_url( '3to2-1' );
 	<!-- wp:column {"width":"44%"} -->
 	<div class="wp-block-column" style="flex-basis:44%">
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|l","left":"var:preset|spacing|l","top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}},"dimensions":{"minHeight":"100vh"},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"primary","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"center"}} -->
-		<div class="wp-block-group has-primary-background-color has-background" style="min-height:100vh;padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|l","left":"var:preset|spacing|l","top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}},"dimensions":{"minHeight":"100vh"},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"secondary","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"center"}} -->
+		<div class="wp-block-group has-secondary-background-color has-background" style="min-height:100vh;padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
 
 			<!-- wp:group {"layout":{"type":"constrained","contentSize":"560px"}} -->
 			<div class="wp-block-group">
