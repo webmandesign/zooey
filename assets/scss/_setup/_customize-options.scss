@@ -5,6 +5,9 @@ $color_contrast_alt : #171f17;
 $color_primary      : #5f1a37;
 $color_secondary    : #ff6b6b;
 
+$color_primary_mixed   : mix( $color_primary, $color_base, 12.50% ); // = 1:7 mix with base color, #e4e2df
+$color_secondary_mixed : mix( $color_secondary, $color_base, 38.20% ); // = 1:1.618 mix with base color, #fac6c2
+
 // Take $option[`css_var`]['name'] from theme options.
 // @see  WebManDesign\Zooey\Customize\Options::set()
 $theme_mods: (
@@ -23,10 +26,10 @@ $theme_mods: (
 	'--theme--mod--color_contrast_alt' : $color_contrast_alt,
 
 	'--theme--mod--color_primary'       : $color_primary,
-	'--theme--mod--color_primary_mixed' : mix( $color_primary, $color_base, 12.50% ), // = 1:7 mix with base color, #e4e2df
+	'--theme--mod--color_primary_mixed' : $color_primary_mixed,
 
 	'--theme--mod--color_secondary'       : $color_secondary,
-	'--theme--mod--color_secondary_mixed' : mix( $color_secondary, $color_base, 38.20% ), // = 1:1.618 mix with base color, #fac6c2
+	'--theme--mod--color_secondary_mixed' : $color_secondary_mixed,
 
 	'--theme--mod--color_black' : #000000,
 	'--theme--mod--color_white' : #ffffff,

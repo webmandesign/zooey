@@ -39,8 +39,8 @@ $blog_page_id = get_option( 'page_for_posts' );
 
 ?>
 
-<!-- wp:group {"layout":{"type":"constrained","contentSize":"960px"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left","contentSize":"560px","wideSize":"100%"}} -->
 	<div class="wp-block-group alignwide">
@@ -68,8 +68,6 @@ $blog_page_id = get_option( 'page_for_posts' );
 		</div>
 		<!-- /wp:group -->
 		<?php endif; ?>
-
-		<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"className":"is-style-button-outline"} /-->
 
 	</div>
 	<!-- /wp:group -->

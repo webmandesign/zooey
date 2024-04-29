@@ -33,8 +33,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:query {"layout":{"type":"constrained","contentSize":"1280px"}} -->
-<div class="wp-block-query">
+<!-- wp:query {"layout":{"type":"constrained","contentSize":"1280px"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}}} -->
+<div class="wp-block-query" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<?php do_action( 'tha_content_while_before' ); ?>
 	<!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|m"}},"layout":{"type":"grid","columnCount":2}} -->

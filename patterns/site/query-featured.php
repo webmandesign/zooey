@@ -48,8 +48,8 @@ if (
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:query {"query":{"perPage":"1","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"post_tag":[<?php echo absint( $tag_id ); ?>]},"parents":[]},"align":"wide"} -->
 	<div class="wp-block-query alignwide">

@@ -6,6 +6,7 @@
 .wp-block-button .wp-block-button__link.is-style-outline,
 .wp-block-button.is-style-outline > .wp-block-button__link {
 	--theme--css--button--color--border: currentColor;
+	--theme--css--button--color--outline: currentColor;
 
 	// From default button padding.
 	// @see  global/form/_button.scss

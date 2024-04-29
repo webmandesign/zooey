@@ -131,9 +131,9 @@ class Options implements Component_Interface {
 				$wp_customize->selective_refresh->add_partial( 'search_per_page', array(
 					'selector' => '.search-generic .wp-block-query',
 				) );
-				$wp_customize->selective_refresh->add_partial( 'search_per_page_alt', array(
-					'selector' => '.search-results:not(.search-generic) .wp-block-query',
-				) );
+				// $wp_customize->selective_refresh->add_partial( 'search_per_page_alt', array(
+				// 	'selector' => '.search-results:not(.search-generic) .wp-block-query',
+				// ) );
 
 				// Archive page posts count.
 				$wp_customize->selective_refresh->add_partial( 'archive_per_page', array(
@@ -1170,28 +1170,28 @@ class Options implements Component_Interface {
 							'type'              => 'range',
 							'id'                => 'search_per_page',
 							'label'             => esc_html__( 'Search results', 'zooey' ),
-							'default'           => 15, // 3 columns layout.
+							'default'           => 10,
 							'min'               => 1,
 							'max'               => 99,
 							'step'              => 1,
 							'sanitize_callback' => 'absint',
 							'preview_url'       => home_url( '?s=' ), // Do not use `get_search_link()` here.
 						),
-						400 . 'posts' . 920 => array(
-							'type'              => 'range',
-							'id'                => 'search_per_page_alt',
-							'label'             => esc_html__( 'Post type specific search results', 'zooey' ),
-							'default'           => 9, // 3 columns layout.
-							'min'               => 1,
-							'max'               => 99,
-							'step'              => 1,
-							'sanitize_callback' => 'absint',
-							'preview_url'       => add_query_arg(
-								'post_type',
-								'post',
-								home_url( '?s=' ) // Do not use `get_search_link()` here.
-							),
-						),
+						// 400 . 'posts' . 920 => array(
+						// 	'type'              => 'range',
+						// 	'id'                => 'search_per_page_alt',
+						// 	'label'             => esc_html__( 'Post type specific search results', 'zooey' ),
+						// 	'default'           => 9, // 3 columns layout.
+						// 	'min'               => 1,
+						// 	'max'               => 99,
+						// 	'step'              => 1,
+						// 	'sanitize_callback' => 'absint',
+						// 	'preview_url'       => add_query_arg(
+						// 		'post_type',
+						// 		'post',
+						// 		home_url( '?s=' ) // Do not use `get_search_link()` here.
+						// 	),
+						// ),
 
 						400 . 'posts' . 930 => array(
 							'type'              => 'range',

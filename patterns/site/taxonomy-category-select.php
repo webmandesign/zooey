@@ -29,8 +29,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"},"blockGap":{"top":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 	<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'Browse by topic:', 'zooey' ); ?></h2>

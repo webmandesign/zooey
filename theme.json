@@ -682,9 +682,10 @@
 				"quote" : "1.382"
 			},
 			"opacity" : {
-				"border"          : ".33",
-				"pseudo-bg"       : ".05",
-				"semitransparent" : ".5"
+				"border"             : ".33",
+				"pseudo-bg"          : ".05",
+				"semitransparent"    : ".5",
+				"navigation-overlay" : ".9"
 			},
 			"outline" : {
 				"color"  : "currentColor",

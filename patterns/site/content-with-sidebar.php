@@ -24,8 +24,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|content"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
-<div class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--content)">
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->
 	<div class="wp-block-columns alignwide">
@@ -50,8 +50,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}}} -->
-		<div class="wp-block-column" style="margin-bottom:var(--wp--preset--spacing--content);flex-basis:33.33%">
+		<!-- wp:column {"width":"33.33%"} -->
+		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:template-part {"slug":"sidebar","style":{"position":{"type":"sticky","top":"0px"}}} /-->
 

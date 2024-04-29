@@ -18,6 +18,7 @@ body {
 	--theme--css--current-border-color: var(--wp--preset--color--contrast--border); // Border color from global text color.
 
 	--theme--css--button--color--border: transparent;
+	--theme--css--button--color--outline: var(--theme--css--button--color--background);
 
 	--theme--css--current-menu-item--decoration--color: currentColor;
 

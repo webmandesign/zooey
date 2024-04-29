@@ -142,10 +142,13 @@ class Component implements Component_Interface {
 					) {
 
 						$colors  = block_core_navigation_build_css_colors( $block['attrs'] );
-						$overlay = '<div'
-							. ' class="wp-block-navigation__responsive-overlay ' . esc_attr( implode( ' ', $colors['overlay_css_classes'] ) ) . '"'
-							. ' style="' . esc_attr( $colors['overlay_inline_styles'] ) . '"'
-							. '></div>';
+						$overlay =
+							'<div class="wp-block-navigation__responsive-overlay">'
+								. '<div'
+									. ' class="' . esc_attr( implode( ' ', $colors['overlay_css_classes'] ) ) . '"'
+									. ' style="' . esc_attr( $colors['overlay_inline_styles'] ) . '"'
+								. '></div>'
+							. '</div>';
 
 						$block_content = str_replace(
 							'<div class="wp-block-navigation__responsive-close" >', // This is correct - check the code above.

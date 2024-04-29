@@ -85,8 +85,10 @@
 				background: var(--theme--css--button--color--background);
 				color: var(--theme--css--button--color--text);
 				border: 2px solid var(--theme--css--button--color--border);
+				border-radius: var(--wp--custom--border-radius--button);
 				box-shadow: var(--wp--preset--shadow--s);
 				transition:
+					transform .1s linear,
 					background .1s linear,
 					color .1s linear,
 					border .1s linear,
@@ -95,10 +97,12 @@
 				&:hover,
 				&:focus {
 					box-shadow: var(--wp--preset--shadow--m);
+					transform: scale(1.05);
 				}
 
 				&:focus {
-					outline-color: inherit;
+					--wp--custom--outline--color: var(--theme--css--button--color--outline);
+					outline-color: var(--theme--css--button--color--outline);
 				}
 
 				&:active {
@@ -189,42 +193,49 @@
 
 	.wp-block-navigation.is-style-fixed-mobile-toggle:not(.block-editor-block-list__block) {
 
-		.wp-block-navigation__responsive-container {
+		@include media( ( map_get( $breakpoint, 'l' ), 'max-width' ) ) {
 
-			&.is-menu-open {
-				animation: none; // Required to make `position: fixed;` on children (such as close button) work.
+			.is-layout-flex &:first-child + :last-child {
+				width: 100%;
 			}
 
-			&-open,
-			&-close {
-				position: fixed;
-				left: 50%;
-				right: auto;
-				top: auto;
-				bottom: 1em;
-				padding: 1em;
-				font-size: 1rem;
-				background: var(--theme--css--button--color--background);
-				color: var(--theme--css--button--color--text);
-				border-color: currentColor;
-				z-index: 10;
-				transform: translateX(-50%);
+			.wp-block-navigation__responsive-container {
 
-				.rtl & {
-					left: auto;
-					right: 50%;
-					transform: translateX(50%);
+				&.is-menu-open {
+					animation: none; // Required to make `position: fixed;` on children (such as close button) work.
 				}
 
-				&:focus {
-					outline-color: var(--theme--css--button--color--background);
+				&-open,
+				&-close {
+					position: fixed;
+					left: 50%;
+					right: auto;
+					top: auto;
+					bottom: 1em;
+					padding: 1em;
+					font-size: 1rem;
+					background: var(--theme--css--button--color--background);
+					color: var(--theme--css--button--color--text);
+					border-color: currentColor;
+					z-index: 10;
+					transform: translateX(-50%);
+
+					.rtl & {
+						left: auto;
+						right: 50%;
+						transform: translateX(50%);
+					}
+
+					&:focus {
+						outline-color: var(--theme--css--button--color--outline);
+					}
 				}
 			}
-		}
 
-		// Menu list wrapper <div>.
-		.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-			padding-block-start: var(--wp--custom--spacing--menu-mobile--top--l);
+			// Menu list wrapper <div>.
+			.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+				padding-block-start: var(--wp--custom--spacing--menu-mobile--top--l);
+			}
 		}
 	}
 
@@ -235,13 +246,28 @@
 		}
 
 		.wp-block-navigation__responsive-container.is-menu-open {
+			animation: none !important; // Required to make `position: fixed;` on children (such as close button) work.
 			background: none !important;
-			backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
 
+			// Backdrop filter (and fixed position) does not work on elements with:
+			// - opacity set
+			// - animation set
+			// - transform set.
+			//
+			// We need to use wrapper element for backdrop blur
+			// and set the background colors and opacity on inner element.
 			.wp-block-navigation__responsive-overlay {
-				display: block;
-				position: absolute;
-				inset: 0;
-				opacity: .95;
+				backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
+
+				&,
+				div {
+					display: block;
+					position: fixed;
+					inset: 0;
+				}
+
+				div {
+					opacity: var(--wp--custom--opacity--navigation-overlay);
+				}
 			}
 		}

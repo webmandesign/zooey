@@ -103,23 +103,24 @@ class Media implements Component_Interface {
 				 * @param  array $custom_header
 				 */
 				add_theme_support( 'custom-header', apply_filters( 'zooey/add_theme_support/custom_header', array(
-					'default-image' => get_theme_file_uri( 'assets/images/header/svg-fingers.png?v=' . ZOOEY_THEME_VERSION ),
+					'default-image' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
 					'header-text'   => false,
 				) ) );
 
 				// Default custom headers packed with the theme.
 				register_default_headers( array(
 
+					// This is default image already, so we don't need to register it.
+					// 'svg-fingers' => array(
+					// 	'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+					// 	'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+					// 	'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
+					// ),
+
 					'svg-blobs' => array(
 						'url'           => get_theme_file_uri( 'assets/images/header/svg-blobs.png' ),
 						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-blobs.png' ),
 						'description'   => esc_html_x( 'Blobs (dynamic color SVG)', 'Header image description.', 'zooey' ),
-					),
-
-					'svg-fingers' => array(
-						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
-						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
-						'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
 					),
 
 					'svg-fingers-lines' => array(
