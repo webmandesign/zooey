@@ -103,14 +103,6 @@ class Block_Style implements Component_Interface {
 					),
 				),
 
-				'blur-overlay' => array(
-					'label'  => _x( 'Blurred overlay', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
-						'core/post-featured-image',
-					),
-				),
-
 				'buttons-inline' => array(
 					'label'  => _x( 'Inline buttons', 'Block style label.', 'zooey' ),
 					'blocks' => array(
@@ -369,13 +361,6 @@ class Block_Style implements Component_Interface {
 						'core/post-title',
 						'core/site-title',
 						'core/site-tagline',
-					),
-				),
-
-				'shape' => array(
-					'label'  => _x( 'Shape', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/separator',
 					),
 				),
 

@@ -380,7 +380,7 @@ class Component implements Component_Interface {
 				&& in_array( $parsed_block['attrs']['slug'], array( 'query', 'query-with-sidebar' ) )
 			) {
 
-				if ( is_null( self::$has_custom_blog_template ) ) {
+				if ( null === self::$has_custom_blog_template ) {
 
 					$query = new WP_Query( array(
 						'post_type'      => 'wp_template',

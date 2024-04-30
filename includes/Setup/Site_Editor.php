@@ -86,7 +86,7 @@ class Site_Editor implements Component_Interface {
 
 		// Processing
 
-			if ( is_null( self::$is_enabled ) ) {
+			if ( null === self::$is_enabled ) {
 				self::$is_enabled = (bool) get_theme_mod( self::$theme_mod_id, true );
 			}
 

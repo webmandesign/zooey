@@ -633,7 +633,7 @@ class Media implements Component_Interface {
 
 				unset( $block['attrs']['id'] );
 
-				if ( is_null( self::$header_image_url ) ) {
+				if ( null === self::$header_image_url ) {
 					self::$header_image_url = explode( '?', (string) get_header_image() )[0];
 				}
 

@@ -122,6 +122,8 @@ class Component implements Component_Interface {
 						$html->add_class( 'has-overlay-menu' );
 
 						$has_overlay_menu = true;
+					} else {
+						$html->add_class( 'no-overlay-menu' );
 					}
 
 					// Set ID for the navigation wrapper.

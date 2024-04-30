@@ -493,7 +493,7 @@ class Page_Template implements Component_Interface {
 
 			// Processing
 
-				if ( is_null( $has_sidebar ) ) {
+				if ( null === $has_sidebar ) {
 
 					$post_types = array( 'wp_template_part', 'wp_template' );
 					$slugs      = array(

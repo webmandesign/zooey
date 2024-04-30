@@ -305,60 +305,63 @@
 // Megamenu.
 //
 
-	.wp-block-navigation:not(.has-overlay-menu) .is-style-megamenu,
-	.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) .is-style-megamenu {
-		@include media( 1025 ) { // 1024px breakpoint.
+	.is-style-megamenu {
 
-			// Columns container.
-			> #{$selector} {
-				flex-direction: row;
-				gap: var(--wp--style--block-gap);
-				align-items: flex-start;
+		.wp-block-navigation.no-overlay-menu &,
+		.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) & {
+			@include media( 1025 ) { // 1024px breakpoint.
 
-				// Column.
-				> .wp-block-navigation-item {
-					flex: 0 1 14em;
-					display: block;
-					padding: 0;
-					border-width: 0;
-					vertical-align: top;
+				// Columns container.
+				> #{$selector} {
+					flex-direction: row;
+					gap: var(--wp--style--block-gap);
+					align-items: flex-start;
 
-					.editor-styles-wrapper & {
-						min-width: 14em;
-					}
+					// Column.
+					> .wp-block-navigation-item {
+						flex: 0 1 14em;
+						display: block;
+						padding: 0;
+						border-width: 0;
+						vertical-align: top;
 
-					// Label.
-					> .wp-block-navigation-item__content {
-						border: 0 !important;
-						font-weight: 700;
-						text-transform: uppercase;
-						letter-spacing: var(--wp--custom--letter-spacing);
+						.editor-styles-wrapper & {
+							min-width: 14em;
+						}
 
-						&::before {
+						// Label.
+						> .wp-block-navigation-item__content {
+							border: 0 !important;
+							font-weight: 700;
+							text-transform: uppercase;
+							letter-spacing: var(--wp--custom--letter-spacing);
+
+							&::before {
+								display: none;
+							}
+						}
+
+						> .wp-block-navigation__submenu-icon {
 							display: none;
 						}
-					}
 
-					> .wp-block-navigation__submenu-icon {
-						display: none;
-					}
+						// Content (sub-sub-menu).
+						> #{$selector} {
+							--theme--css--submenu-open-animation: none;
 
-					// Content (sub-sub-menu).
-					> #{$selector} {
-						--theme--css--submenu-open-animation: none;
+							display: block;
+							position: static;
+							min-width: clamp( 12em, 14vw, 240px ) !important;
+							inset: 0;
+							padding: 0;
+							margin: ( $ratio_maj + em ) 0 0;
+							background: none;
+							border-width: 0;
+							box-shadow: none;
 
-						display: block;
-						position: static;
-						min-width: clamp( 12em, 14vw, 240px ) !important;
-						inset: 0;
-						padding: 0;
-						margin: ( $ratio_maj + em ) 0 0;
-						background: none;
-						border-width: 0;
-						box-shadow: none;
-
-						#{$selector} {
-							--theme--css--submenu-open-animation: showSubSubMenu .3s;
+							#{$selector} {
+								--theme--css--submenu-open-animation: showSubSubMenu .3s;
+							}
 						}
 					}
 				}

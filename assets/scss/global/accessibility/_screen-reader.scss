@@ -24,13 +24,20 @@ body[class] .screen-reader-text,
 	}
 }
 
-body .is-layout-constrained > {
+body {
 
-	.screen-reader-text,
-	.is-style-screen-reader-text {
+	.is-layout-constrained,
+	.is-layout-flow {
 
-		+ * {
-			margin-block-start: 0;
+		> {
+
+			.screen-reader-text,
+			.is-style-screen-reader-text {
+
+				+ * {
+					margin-block-start: 0;
+				}
+			}
 		}
 	}
 }

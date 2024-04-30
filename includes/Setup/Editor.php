@@ -167,7 +167,7 @@ class Editor implements Component_Interface {
 			 * This is a workaround for Site Editor issue.
 			 * @link  https://github.com/WordPress/gutenberg/issues/56920
 			 */
-			if ( is_null( self::$json_user ) ) {
+			if ( null === self::$json_user ) {
 				self::$json_user = WP_Theme_JSON_Resolver::get_user_data_from_wp_global_styles( get_stylesheet() );
 				self::$json_user = ( isset( self::$json_user['post_content'] ) ) ? ( json_decode( self::$json_user['post_content'], true ) ) : ( array() );
 			}
@@ -330,7 +330,7 @@ class Editor implements Component_Interface {
 			}
 
 			// This is described in `self::theme_json()`.
-			if ( is_null( self::$json_user ) ) {
+			if ( null === self::$json_user ) {
 				self::$json_user = WP_Theme_JSON_Resolver::get_user_data_from_wp_global_styles( get_stylesheet() );
 				self::$json_user = ( isset( self::$json_user['post_content'] ) ) ? ( json_decode( self::$json_user['post_content'], true ) ) : ( array() );
 			}
@@ -397,7 +397,7 @@ class Editor implements Component_Interface {
 
 		// Processing
 
-			if ( is_null( self::$font_families ) ) {
+			if ( null === self::$font_families ) {
 
 				$fonts_theme = WP_Theme_JSON_Resolver::get_theme_data()->get_data();
 				$fonts_theme = $fonts_theme['settings']['typography']['fontFamilies'] ?? array();

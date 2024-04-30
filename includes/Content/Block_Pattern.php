@@ -54,6 +54,7 @@ class Block_Pattern implements Component_Interface {
 
 		'columns' => array(
 			'columns-01',
+			'columns-02',
 		),
 
 		'contact' => array(
@@ -109,6 +110,7 @@ class Block_Pattern implements Component_Interface {
 			'numbers-02',
 			'numbers-03',
 			'numbers-04',
+			'numbers-05',
 		),
 
 		'page' => array(

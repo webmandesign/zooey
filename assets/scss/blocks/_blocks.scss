@@ -167,35 +167,6 @@
 			}
 		}
 
-	// Blur overlay.
-
-		.is-style-blur-overlay {
-			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				inset: 0;
-				pointer-events: none;
-				border-radius: inherit;
-				backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop-alt) );
-				mask-image: linear-gradient( to top, #000, transparent 50% );
-				transition: opacity .3s;
-
-				@if true == $is_editor {
-
-					// In pattern preview only.
-					.is-root-container:not(.wp-block-post-content) & {
-						backdrop-filter: none;
-					}
-				}
-			}
-
-			&:hover::before {
-				opacity: 0;
-			}
-		}
-
 	// Custom Header image editor styles.
 
 		@if true == $is_editor {

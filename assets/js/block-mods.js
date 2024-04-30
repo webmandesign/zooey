@@ -137,6 +137,11 @@
 								},
 							},
 						} );
+
+						// Adding duotone support for SVG in Image block.
+						if ( undefined !== settings.selectors.filter.duotone ) {
+							settings.selectors.filter.duotone += ', .wp-block-image svg'; //*
+						}
 						break;
 
 					case 'core/list':

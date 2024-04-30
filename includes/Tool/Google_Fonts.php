@@ -286,7 +286,7 @@ class Google_Fonts implements Component_Interface {
 
 		// Processing
 
-			if ( is_null( self::$url ) ) {
+			if ( null === self::$url ) {
 
 				/**
 				 * Filters the Google Fonts URL.

@@ -36,8 +36,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	<!-- wp:template-part {"slug":"custom-header-bottom","align":"wide"} /-->
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|xl"},"margin":{"top":"var:preset|spacing|content"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
-	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--content)">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
 		<!-- wp:site-logo {"width":560} /-->
 
@@ -53,85 +53,97 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"stretch"}} -->
-	<div class="wp-block-group alignwide">
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|l"}}},"className":"is-style-mobile-reverse"} -->
+	<div class="wp-block-columns alignwide is-style-mobile-reverse" style="margin-top:var(--wp--preset--spacing--l)">
 
-		<!-- wp:group {"style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between"}} -->
-		<div class="wp-block-group" style="min-height:100%">
+		<!-- wp:column {"width":"61.8%","layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->
+		<div class="wp-block-column" style="flex-basis:61.8%">
 
-			<!-- wp:group {"layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->
-			<div class="wp-block-group">
+			<!-- wp:group {"style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
+			<div class="wp-block-group" style="min-height:100%">
 
-				<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
-				<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'About Us', 'zooey' ); ?></h2>
-				<!-- /wp:heading -->
+				<!-- wp:group -->
+				<div class="wp-block-group">
 
-				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '110' ); ?></p>
-				<!-- /wp:paragraph -->
+					<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
+					<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'About Us', 'zooey' ); ?></h2>
+					<!-- /wp:heading -->
 
-			</div>
-			<!-- /wp:group -->
+					<!-- wp:paragraph -->
+					<p><?php Block_Pattern::the_text( '110' ); ?></p>
+					<!-- /wp:paragraph -->
 
-			<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}},"typography":{"textTransform":"uppercase"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"},"fontSize":"xs"} -->
-			<div class="wp-block-group alignwide has-primary-background-color has-background has-xs-font-size" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s);text-transform:uppercase">
+				</div>
+				<!-- /wp:group -->
 
-				<!-- wp:paragraph -->
-				<p><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' — ' ); ?></p>
-				<!-- /wp:paragraph -->
+				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}},"typography":{"textTransform":"uppercase"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"xs"} -->
+				<div class="wp-block-group has-primary-background-color has-background has-xs-font-size" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s);text-transform:uppercase">
 
-				<!-- wp:paragraph -->
-				<p><a href="#top"><?php esc_html_e( 'To the top &uarr;', 'zooey' ); ?></a></p>
-				<!-- /wp:paragraph -->
+					<!-- wp:paragraph -->
+					<p><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' — ' ); ?></p>
+					<!-- /wp:paragraph -->
 
-			</div>
-			<!-- /wp:group -->
+					<!-- wp:paragraph -->
+					<p><a href="#top"><?php esc_html_e( 'To the top &uarr;', 'zooey' ); ?></a></p>
+					<!-- /wp:paragraph -->
 
-		</div>
-		<!-- /wp:group -->
-
-		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right","verticalAlignment":"top"}} -->
-		<div class="wp-block-group">
-
-			<!-- wp:group {"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group">
-
-				<!-- wp:heading {"fontSize":"h-4"} -->
-				<h2 class="wp-block-heading has-h-4-font-size">Theme Info</h2>
-				<!-- /wp:heading -->
-
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
-					<!-- wp:navigation-link {"label":"Get the theme","url":"#purchaselink","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"Support Forum","url":"https://support.webmandesign.eu/forums/forum/zooey/","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"User manual","url":"https://webmandesign.github.io/docs/zooey/","fontSize":"s"} /-->
-				<!-- /wp:navigation -->
-
-			</div>
-			<!-- /wp:group -->
-
-			<!-- wp:group {"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group">
-
-				<!-- wp:heading {"fontSize":"h-4"} -->
-				<h2 class="wp-block-heading has-h-4-font-size"><?php esc_html_e( 'Services', 'zooey' ); ?></h2>
-				<!-- /wp:heading -->
-
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-					<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Last service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-				<!-- /wp:navigation -->
+				</div>
+				<!-- /wp:group -->
 
 			</div>
 			<!-- /wp:group -->
 
 		</div>
-		<!-- /wp:group -->
+		<!-- /wp:column -->
+
+		<!-- wp:column {"width":"38.2%","layout":{"type":"constrained","justifyContent":"right","contentSize":"440px"}} -->
+		<div class="wp-block-column" style="flex-basis:38.2%">
+
+			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
+			<div class="wp-block-group">
+
+				<!-- wp:group {"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+
+					<!-- wp:heading {"fontSize":"h-4"} -->
+					<h2 class="wp-block-heading has-h-4-font-size">Theme Info</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
+						<!-- wp:navigation-link {"label":"Get the theme","url":"#purchaselink","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"Support Forum","url":"https://support.webmandesign.eu/forums/forum/zooey/","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"User manual","url":"https://webmandesign.github.io/docs/zooey/","fontSize":"s"} /-->
+					<!-- /wp:navigation -->
+
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:group {"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+
+					<!-- wp:heading {"fontSize":"h-4"} -->
+					<h2 class="wp-block-heading has-h-4-font-size"><?php esc_html_e( 'Services', 'zooey' ); ?></h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
+						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Last service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+					<!-- /wp:navigation -->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
 
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

@@ -42,7 +42,6 @@ class Block implements Component_Interface {
 
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__conditional', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
-				add_filter( 'render_block', __CLASS__ . '::render__border_radius_image', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block', __CLASS__ . '::render__empty', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block', __CLASS__ . '::render__gap', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -212,6 +211,11 @@ class Block implements Component_Interface {
 						$settings['supports']['color']['background'] =
 						$settings['supports']['color']['text']       =
 						$settings['supports']['color']['gradients']  = true;
+
+						// Adding duotone support for SVG in Image block.
+						if ( isset( $settings['selectors']['filter']['duotone'] ) ) {
+							$settings['selectors']['filter']['duotone'] .= ', .wp-block-image svg';
+						}
 						break;
 
 					case 'core/post-excerpt':
@@ -296,81 +300,6 @@ class Block implements Component_Interface {
 			return $pre_render;
 
 	} // /pre_render__conditional
-
-	/**
-	 * Block output modification: Set border radius styles on block wrapper.
-	 *
-	 * This is needed when `is-style-blur-overlay` style is set for the block.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param  string $block_content  The rendered content. Default null.
-	 * @param  array  $block          The block being rendered.
-	 *
-	 * @return  string
-	 */
-	public static function render__border_radius_image( string $block_content, array $block ): string {
-
-		// Variables
-
-			/**
-			 * Filters list of blocks that should be checked for empty content.
-			 *
-			 * @since  1.0.0
-			 *
-			 * @param  array $blocks
-			 */
-			$blocks = (array) apply_filters( 'zooey/content/block/render__border_radius_image', array(
-				'core/image',
-				'core/post-featured-image',
-			) );
-
-
-		// Processing
-
-			if (
-				in_array( $block['blockName'], $blocks )
-				&& ! empty( $block['attrs']['className'] )
-				&& strpos( $block['attrs']['className'], '-blur-overlay' )
-				&& ! empty( $block['attrs']['style']['border']['radius'] )
-			) {
-
-				$html = new WP_HTML_Tag_Processor( $block_content );
-
-				$html->next_tag();
-				$html->set_bookmark( 'wrapper' );
-				$html->next_tag( 'img' );
-
-				$style = array_filter(
-					array_map( function( $css ) {
-
-						if ( ! stripos( $css, 'radius' ) ) {
-							$css = '';
-						}
-
-						return $css;
-
-					}, explode( ';', (string) $html->get_attribute( 'style' ) ) )
-				);
-
-				if ( ! empty( $style ) ) {
-
-					$html->seek( 'wrapper' );
-
-					$style[] = (string) $html->get_attribute( 'style' );
-
-					$html->set_attribute( 'style', implode( ';', $style ) );
-
-					$block_content = $html->get_updated_html();
-				}
-			}
-
-
-		// Output
-
-			return $block_content;
-
-	} // /render__border_radius_image
 
 	/**
 	 * Block output modification: Set empty block content class.

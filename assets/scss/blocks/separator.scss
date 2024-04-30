@@ -60,34 +60,3 @@
 			) !important;
 	}
 }
-
-@supports ( mask-image: url('') ) {
-	hr.is-style-shape {
-		width: 100%; // This is required for vertical Group.
-		height: var(--wp--custom--hr--shape--height);
-		background: currentColor;
-		border-width: 0;
-		mask-image: var(--theme--block--separator--is-style-shape--mask);
-		mask-repeat: no-repeat;
-		mask-size: var(--wp--custom--hr--shape--width) 100%;
-
-		.is-layout-flex:not(.is-vertical) > & {
-			flex-grow: 0;
-			width: var(--wp--custom--hr--shape--width);
-		}
-
-		&,
-		&.alignleft {
-			mask-position: left;
-		}
-
-		.rtl &,
-		&.alignright {
-			mask-position: right;
-		}
-
-		&.aligncenter {
-			mask-position: center;
-		}
-	}
-}
