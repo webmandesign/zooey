@@ -52,7 +52,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	<!-- wp:social-links {"iconColor":"primary","size":"has-huge-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 	<ul class="wp-block-social-links has-huge-icon-size has-icon-color is-style-logos-only">
-		<!-- wp:social-link {"url":"#purchaselink","service":"chain"} /-->
+		<!-- wp:social-link {"url":"#getzooey","service":"chain"} /-->
 		<!-- wp:social-link {"url":"https://www.webmandesign.eu/","service":"chain"} /-->
 		<!-- wp:social-link {"url":"https://www.facebook.com/webmandesigneu","service":"facebook"} /-->
 		<!-- wp:social-link {"url":"https://twitter.com/webmandesigneu","service":"x"} /-->

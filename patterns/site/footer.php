@@ -43,7 +43,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 		<!-- wp:social-links {"iconColor":"primary","size":"has-huge-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only","layout":{"type":"flex"}} -->
 		<ul class="wp-block-social-links has-huge-icon-size has-icon-color is-style-logos-only">
-			<!-- wp:social-link {"url":"#purchaselink","service":"chain"} /-->
+			<!-- wp:social-link {"url":"#getzooey","service":"chain"} /-->
 			<!-- wp:social-link {"url":"https://www.webmandesign.eu/","service":"chain"} /-->
 			<!-- wp:social-link {"url":"https://www.facebook.com/webmandesigneu","service":"facebook"} /-->
 			<!-- wp:social-link {"url":"https://twitter.com/webmandesigneu","service":"x"} /-->
@@ -110,7 +110,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- /wp:heading -->
 
 					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
-						<!-- wp:navigation-link {"label":"Get the theme","url":"#purchaselink","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"Get the theme","url":"#getzooey","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"Support Forum","url":"https://support.webmandesign.eu/forums/forum/zooey/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"User manual","url":"https://webmandesign.github.io/docs/zooey/","fontSize":"s"} /-->

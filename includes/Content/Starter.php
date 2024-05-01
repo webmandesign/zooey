@@ -100,7 +100,11 @@ class Starter implements Component_Interface {
 			self::$content['attachments'] = array(
 
 				'image-featured' => array(
-					'file' => 'assets/images/starter/3to2-1.jpg',
+					'file' => 'assets/images/starter/3to2-2.webp',
+				),
+
+				'image-logo' => array(
+					'file' => 'assets/images/starter/logo.png',
 				),
 			);
 
@@ -122,6 +126,7 @@ class Starter implements Component_Interface {
 				'page_on_front'  => '{{home}}',
 				'page_for_posts' => '{{blog}}',
 				'posts_per_page' => 6,
+				'custom_logo'    => '{{image-logo}}',
 			);
 
 	} // /options
@@ -147,7 +152,7 @@ class Starter implements Component_Interface {
 				'home' => array(
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'Home', 'Theme starter content: Homepage title', 'zooey' ),
-					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/home-1"} /-->',
+					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/home-3"} /-->',
 					'template'     => $template_no_intro,
 					'thumbnail'    => '{{image-featured}}',
 				),
@@ -155,7 +160,8 @@ class Starter implements Component_Interface {
 				'about' => array(
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'About', 'Theme starter content: About page title', 'zooey' ),
-					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/about-2"} /-->',
+					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/about-1"} /-->',
+					'template'     => $template_no_intro,
 					'thumbnail'    => '{{image-featured}}',
 				),
 
@@ -170,13 +176,15 @@ class Starter implements Component_Interface {
 				'blog' => array(
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'Blog', 'Theme starter content: Blog page title', 'zooey' ),
-					'post_excerpt' => Block_Pattern::get_text( 'm' ) . ' ' . Block_Pattern::get_text( 'l' ),
+					'post_excerpt' => Block_Pattern::get_text( 'm', '.' ) . ' ' . Block_Pattern::get_text( 'l', '.' ),
 				),
 
 				'contact' => array(
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'Contact', 'Theme starter content: Contact page title', 'zooey' ),
 					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/contact-1"} /-->',
+					'template'     => $template_no_intro,
+					'thumbnail'    => '{{image-featured}}',
 				),
 			);
 
