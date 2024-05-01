@@ -16,10 +16,9 @@ defined( 'ABSPATH' ) || exit;
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
 	'title'    => sprintf(
-		/* translators: %1$s: context, %2$s: additional notes. */
-		_x( 'Single service page: %1$s%2$s', 'Block pattern title.', 'zooey' ),
-		_x( '1. With icons and 2 images with description', 'Page content context.', 'zooey' ),
-		_x( ' (use default template)', 'Page content additional notes.', 'zooey' )
+		/* translators: %s: additional notes. */
+		_x( 'Service page %s', 'Block pattern title.', 'zooey' ),
+		_x( '(use default template)', 'Page content additional notes.', 'zooey' )
 	),
 	'keywords' => array(
 		esc_html_x( 'page content', 'keyword', 'zooey' ),
@@ -28,8 +27,12 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
+<!-- wp:pattern {"slug":"zooey/columns/columns-02"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
+<!-- wp:pattern {"slug":"zooey/services/services-04"} /-->
+
+<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
+
+<!-- wp:pattern {"slug":"zooey/testimonials/testimonials-03"} /-->

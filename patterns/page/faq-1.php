@@ -16,10 +16,9 @@ defined( 'ABSPATH' ) || exit;
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
 	'title'    => sprintf(
-		/* translators: %1$s: context, %2$s: additional notes. */
-		_x( 'Questions & answers page: %1$s%2$s', 'Block pattern title.', 'zooey' ),
-		_x( '1. Numbered list and toggles', 'Page content context.', 'zooey' ),
-		_x( ' (use default template)', 'Page content additional notes.', 'zooey' )
+		/* translators: %s: additional notes. */
+		_x( 'Questions & answers page %s', 'Block pattern title.', 'zooey' ),
+		_x( '(use default template)', 'Page content additional notes.', 'zooey' )
 	),
 	'keywords' => array(
 		esc_html_x( 'page content', 'keyword', 'zooey' ),
@@ -29,8 +28,18 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
+<!-- wp:pattern {"slug":"zooey/faq/faq-04"} /-->
+
+<!-- wp:pattern {"slug":"zooey/media/custom-header-top"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"zooey/test/test-01"} /-->
+<!-- wp:pattern {"slug":"zooey/faq/faq-02"} /-->
+
+<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
+
+<!-- wp:pattern {"slug":"zooey/faq/faq-03"} /-->
+
+<!-- wp:spacer {"height":"var:preset|spacing|content"} --><div style="height:var(--wp--preset--spacing--content)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
+
+<!-- wp:pattern {"slug":"zooey/call-to-action/cta-08"} /-->
