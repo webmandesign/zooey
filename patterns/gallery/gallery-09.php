@@ -30,8 +30,8 @@ $image_4 = Block_Pattern::get_image_url( '3to2-1' );
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
-<div class="wp-block-group alignfull">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"0","left":"0"},"margin":{"top":"0"}}}} -->
+<div class="wp-block-group alignfull" style="margin-top:0">
 
 	<!-- wp:columns {"isStackedOnMobile":false,"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"right":"0","left":"0"}}}} -->
 	<div class="wp-block-columns is-not-stacked-on-mobile" style="padding-right:0;padding-left:0">

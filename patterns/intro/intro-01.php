@@ -32,9 +32,9 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 
 ?>
 
-<!-- wp:cover {"useFeaturedImage":true,"dimRatio":60,"overlayColor":"black","isUserOverlayColor":true,"minHeight":80,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|content","top":"16em"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white","className":"is-style-zoom-in","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"useFeaturedImage":true,"dimRatio":70,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":80,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|content","top":"16em"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white","className":"is-style-zoom-in","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull has-custom-content-position is-position-bottom-center is-style-zoom-in has-white-color has-text-color has-link-color" style="padding-top:16em;padding-bottom:var(--wp--preset--spacing--content);min-height:80vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-70 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"","justifyContent":"left"}} -->

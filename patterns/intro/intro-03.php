@@ -26,9 +26,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":50,"minHeight":70,"minHeightUnit":"vh","gradient":"contrast-alt-to-transparent-v","contentPosition":"bottom center","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"16em","bottom":"0","right":"0","left":"0"},"margin":{"bottom":"var:preset|spacing|content"}}}} -->
-<div class="wp-block-cover alignfull is-light has-parallax has-custom-content-position is-position-bottom-center" style="margin-bottom:var(--wp--preset--spacing--content);padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:70vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim has-background-gradient has-contrast-alt-to-transparent-v-gradient-background"></span>
+<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":0,"isUserOverlayColor":true,"minHeight":70,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"top":"16em","bottom":"0","right":"0","left":"0"}}}} -->
+<div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-center" style="padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:70vh">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"border":{"radius":"0.38rem"}},"gradient":"base-cut-transparent-h","layout":{"type":"constrained"}} -->

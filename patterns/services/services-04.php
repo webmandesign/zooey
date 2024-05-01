@@ -59,8 +59,8 @@ $image_3 = Block_Pattern::get_image_url( '1to1-3' );
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|l"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","className":"has-hidden-overflow"} -->
-		<div class="wp-block-column has-hidden-overflow has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","className":"has-hidden-overflow"} -->
+		<div class="wp-block-column has-hidden-overflow has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
 			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
@@ -83,8 +83,8 @@ $image_3 = Block_Pattern::get_image_url( '1to1-3' );
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","className":"has-hidden-overflow"} -->
-		<div class="wp-block-column has-hidden-overflow has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","className":"has-hidden-overflow"} -->
+		<div class="wp-block-column has-hidden-overflow has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
 			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
@@ -107,8 +107,8 @@ $image_3 = Block_Pattern::get_image_url( '1to1-3' );
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","className":"has-hidden-overflow"} -->
-		<div class="wp-block-column has-hidden-overflow has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","className":"has-hidden-overflow"} -->
+		<div class="wp-block-column has-hidden-overflow has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
 			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>

@@ -34,8 +34,8 @@ $image = Block_Pattern::get_image_url( '1to1-3' );
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 <div class="wp-block-group">
 
-	<!-- wp:image {"sizeSlug":"thumbnail","style":{"border":{"radius":{"bottomLeft":"20rem","bottomRight":"20rem"}}}} -->
-	<figure class="wp-block-image size-thumbnail has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-bottom-left-radius:20rem;border-bottom-right-radius:20rem"/></figure>
+	<!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":{"bottomLeft":"20rem","bottomRight":"20rem"}}}} -->
+	<figure class="wp-block-image size-thumbnail has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-bottom-left-radius:20rem;border-bottom-right-radius:20rem;aspect-ratio:3/4;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

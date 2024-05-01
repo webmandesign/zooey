@@ -33,8 +33,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<h2 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","fontSize":"h-2"} -->
-		<p class="has-contrast-alt-color has-text-color has-link-color has-h-2-font-size" style="line-height:1.2"><?php Block_Pattern::the_text( '65' ); ?></p>
+		<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","fontSize":"h-2"} -->
+		<p class="has-contrast-alt-color has-text-color has-link-color has-h-2-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Block_Pattern::the_text( '65' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons -->

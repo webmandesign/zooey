@@ -45,17 +45,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xl"},"blockGap":{"top":"0","left":"0"}}},"className":"is-featured-image-container"} -->
-	<div class="wp-block-group is-featured-image-container" style="margin-top:var(--wp--preset--spacing--xl)">
-
-		<!-- wp:template-part {"slug":"custom-header-bottom"} /-->
-
-		<!-- wp:post-featured-image {"align":"wide"} /-->
-
-		<!-- wp:template-part {"slug":"custom-header-top"} /-->
-
-	</div>
-	<!-- /wp:group -->
+	<!-- wp:post-featured-image {"align":"wide"} /-->
 
 </div>
 <!-- /wp:group -->

@@ -1,3 +1,4 @@
+@use 'sass:math';
 // core/separator
 
 @import '../_tools/_index';
@@ -27,36 +28,39 @@
 		}
 	}
 
-	&.is-style-dotted,
-	&.is-style-dashed {
-		border-width: 0;
-		height: 1px;
-		background-size: 10px !important;
-		background-image:
-			linear-gradient(
-				90deg,
-				var(--theme--css--current-border-color) 5px,
-				transparent 6px,
-				transparent 10px
-			) !important;
+	$size_dash : 20;
+	$size_dot  : 8;
 
-		&[class] {
-			background-color: transparent !important; // Important is due to WordPress forcing the user selected colors with `!important`.
+		&.is-style-dotted,
+		&.is-style-dashed {
+			border-width: 0;
+			height: 2px;
+			background-size: $size_dash + px !important;
+			background-image:
+				linear-gradient(
+					90deg,
+					var(--theme--css--current-border-color) #{ math.div( $size_dash, 2 ) + px },
+					transparent #{ math.div( $size_dash, 2 ) + 1px },
+					transparent #{ $size_dash + px }
+				) !important;
+
+			&[class] {
+				background-color: transparent !important; // Important is due to WordPress forcing the user selected colors with `!important`.
+			}
+
+			&.has-text-color {
+				--theme--css--current-border-color: currentColor;
+			}
 		}
 
-		&.has-text-color {
-			--theme--css--current-border-color: currentColor;
+		&.is-style-dotted {
+			background-size: 8px !important;
+			background-image:
+				linear-gradient(
+					90deg,
+					var(--theme--css--current-border-color) 2px,
+					transparent 3px,
+					transparent #{ $size_dot + px }
+				) !important;
 		}
-	}
-
-	&.is-style-dotted {
-		background-size: 8px !important;
-		background-image:
-			linear-gradient(
-				90deg,
-				var(--theme--css--current-border-color) 2px,
-				transparent 3px,
-				transparent 8px
-			) !important;
-	}
 }

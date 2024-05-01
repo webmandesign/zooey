@@ -43,8 +43,8 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 			<!-- wp:column -->
 			<div class="wp-block-column">
 
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content","left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}},"textColor":"white","gradient":"backdrop-blur-dark","className":"is-style-backdrop-blur","layout":{"type":"constrained","contentSize":"560px"}} -->
-				<div class="wp-block-group is-style-backdrop-blur has-white-color has-backdrop-blur-dark-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content","left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}},"textColor":"white","gradient":"backdrop-blur-primary","className":"is-style-backdrop-blur","layout":{"type":"constrained","contentSize":"560px"}} -->
+				<div class="wp-block-group is-style-backdrop-blur has-white-color has-backdrop-blur-primary-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:heading {"fontSize":"h-3"} -->
 					<h2 class="wp-block-heading has-h-3-font-size"><?php Block_Pattern::the_text( 'title/l' ); ?></h2>

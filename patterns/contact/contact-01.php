@@ -37,8 +37,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:separator {"align":"wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity" />
+	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed"/>
 	<!-- /wp:separator -->
 
 	<!-- wp:columns {"align":"wide"} -->

@@ -663,14 +663,6 @@
 				"button"           : "var(--wp--preset--font-size--s)",
 				"quote-decoration" : "3em"
 			},
-			"hr" : {
-				"width"  : "100%",
-				"height" : "1px",
-				"shape" : {
-					"width"  : "48px",
-					"height" : "48px"
-				}
-			},
 			"mark" : {
 				"color"      : "currentColor",
 				"opacity"    : ".2",

@@ -55,6 +55,8 @@ class Block_Pattern implements Component_Interface {
 		'columns' => array(
 			'columns-01',
 			'columns-02',
+			'columns-03',
+			'columns-04',
 		),
 
 		'contact' => array(
@@ -132,17 +134,19 @@ class Block_Pattern implements Component_Interface {
 		),
 
 		'portfolio' => array(
-			'portfolio-00',
 			'portfolio-01',
 			'portfolio-02',
 			'portfolio-03',
+
+			'portfolio-00',
 		),
 
 		'posts' => array(
-			'posts-00',
 			'posts-01',
 			'posts-02',
 			'posts-03',
+
+			'posts-00',
 		),
 
 		'pricing' => array(
@@ -186,11 +190,12 @@ class Block_Pattern implements Component_Interface {
 		),
 
 		'team' => array(
-			'team-00',
 			'team-01',
 			'team-02',
 			'team-03',
 			'team-04',
+
+			'team-00',
 		),
 
 		'template' => array(
@@ -222,8 +227,6 @@ class Block_Pattern implements Component_Interface {
 			'text-02',
 			'text-03',
 			'text-04',
-			'text-05',
-			'text-06',
 		),
 	);
 

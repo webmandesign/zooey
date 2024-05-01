@@ -31,9 +31,9 @@ $image = Block_Pattern::get_image_url( '3to2-1' );
 
 ?>
 
-<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":70,"minHeight":100,"minHeightUnit":"vh","align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|l","padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained","contentSize":"560px"},"className":"is-style-image-blur"} -->
+<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":80,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|l","padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}},"className":"is-style-image-blur","layout":{"type":"constrained","contentSize":"560px"}} -->
 <div class="wp-block-cover alignfull is-style-image-blur" style="padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:100vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-80 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="<?php Block_Pattern::the_text( 'alt' ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 	<div class="wp-block-cover__inner-container">
 

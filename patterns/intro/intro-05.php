@@ -32,9 +32,9 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 
 ?>
 
-<!-- wp:cover {"useFeaturedImage":true,"dimRatio":60,"overlayColor":"black","isUserOverlayColor":true,"minHeight":80,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"10em","bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:cover {"useFeaturedImage":true,"dimRatio":70,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":80,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"10em","bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="padding-top:10em;padding-bottom:var(--wp--preset--spacing--content);min-height:80vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-70 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->

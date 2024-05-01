@@ -15,37 +15,17 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title' => _x( 'Offset 2 columns of text', 'Block pattern title.', 'zooey' ),
+	'title' => _x( 'Centered bold text', 'Block pattern title.', 'zooey' ),
 ) );
 
 ?>
 
-<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|xl"}}}} -->
-<div class="wp-block-columns alignwide">
+<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"1000px"}} -->
+<div class="wp-block-group alignwide">
 
-	<!-- wp:column -->
-	<div class="wp-block-column"></div>
-	<!-- /wp:column -->
-
-	<!-- wp:column -->
-	<div class="wp-block-column">
-
-		<!-- wp:paragraph -->
-		<p><?php Block_Pattern::the_text( '180' ); ?></p>
-		<!-- /wp:paragraph -->
-
-	</div>
-	<!-- /wp:column -->
-
-	<!-- wp:column -->
-	<div class="wp-block-column">
-
-		<!-- wp:paragraph -->
-		<p><?php Block_Pattern::the_text( '180' ); ?></p>
-		<!-- /wp:paragraph -->
-
-	</div>
-	<!-- /wp:column -->
+	<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"700"}},"fontSize":"xxxl"} -->
+	<p class="has-text-align-center has-xxxl-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Block_Pattern::the_text( '140' ); ?></p>
+	<!-- /wp:paragraph -->
 
 </div>
-<!-- /wp:columns -->
+<!-- /wp:group -->

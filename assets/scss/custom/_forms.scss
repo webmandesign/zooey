@@ -12,11 +12,3 @@
 	textarea {
 		border-radius: var(--wp--custom--border-radius--form-field);
 	}
-
-	.select2.select2-container .select2 {
-
-		&-choice,
-		&-selection {
-			border-radius: var(--wp--custom--border-radius--form-field);
-		}
-	}

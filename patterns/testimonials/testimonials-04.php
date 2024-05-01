@@ -37,14 +37,14 @@ $image_2 = Block_Pattern::get_image_url( '3to4-2' );
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_1 ); ?>","dimRatio":80,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
-			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:50vh">
-				<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-80 has-background-dim"></span>
+			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_1 ); ?>","dimRatio":90,"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
+			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
+				<span aria-hidden="true" class="wp-block-cover__background has-secondary-background-color has-background-dim-90 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url_raw( $image_1 ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
 
-					<!-- wp:quote {"textColor":"white","fontSize":"xl"} -->
-					<blockquote class="wp-block-quote has-white-color has-text-color has-xl-font-size">
+					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
+					<blockquote class="wp-block-quote has-black-color has-text-color has-xl-font-size">
 						<!-- wp:paragraph -->
 						<p><?php Block_Pattern::the_text( '190' ); ?></p>
 						<!-- /wp:paragraph -->
@@ -62,14 +62,14 @@ $image_2 = Block_Pattern::get_image_url( '3to4-2' );
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_2 ); ?>","dimRatio":80,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
-			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:50vh">
-				<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-80 has-background-dim"></span>
+			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_2 ); ?>","dimRatio":90,"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
+			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
+				<span aria-hidden="true" class="wp-block-cover__background has-secondary-background-color has-background-dim-90 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url_raw( $image_2 ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
 
-					<!-- wp:quote {"textColor":"white","fontSize":"xl"} -->
-					<blockquote class="wp-block-quote has-white-color has-text-color has-xl-font-size">
+					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
+					<blockquote class="wp-block-quote has-black-color has-text-color has-xl-font-size">
 						<!-- wp:paragraph -->
 						<p><?php Block_Pattern::the_text( '190' ); ?></p>
 						<!-- /wp:paragraph -->

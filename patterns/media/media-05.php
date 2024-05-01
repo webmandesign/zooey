@@ -25,6 +25,6 @@ $image = Block_Pattern::get_image_url( '21to9' );
 
 ?>
 
-<!-- wp:image {"sizeSlug":"full","align":"wide","className":"is-style-padding-right"} -->
+<!-- wp:image {"sizeSlug":"full","align":"wide","style":{"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-style-padding-right"} -->
 <figure class="wp-block-image alignwide size-full is-style-padding-right"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 <!-- /wp:image -->

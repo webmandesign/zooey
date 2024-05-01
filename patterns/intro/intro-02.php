@@ -33,9 +33,9 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 
 ?>
 
-<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":60,"overlayColor":"black","isUserOverlayColor":true,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"bottom":"0","top":"16em"},"margin":{"bottom":"var:preset|spacing|content"}}},"className":"has-visible-overflow","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":70,"overlayColor":"primary","isUserOverlayColor":true,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"bottom":"0","top":"16em"},"margin":{"bottom":"var:preset|spacing|content"}}},"className":"has-visible-overflow","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-center has-visible-overflow" style="margin-bottom:var(--wp--preset--spacing--content);padding-top:16em;padding-bottom:0">
-	<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-70 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"","justifyContent":"left"}} -->
