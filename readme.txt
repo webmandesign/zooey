@@ -43,9 +43,18 @@ This theme bundles the following third-party resources:
 	- `vendor/webfont-loader/*.*`, Webfonts Loader © WordPress Themes Team, MIT, https://github.com/WPTT/webfont-loader, https://github.com/webmandesign/webfont-loader/tree/fix/prevent-infinite-loop
 
 * Assets:
-	- `assets/images/starter/#*.webp` © https://stocksnap.io/photo/moody-fern-Y0LJISUUSR, CC0
+	- `assets/images/starter/#*.webp` © https://www.rijksmuseum.nl, CC0
+		- `1to1-1.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-15.540
+		- `1to1-2.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-21.108
+		- `1to1-3.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-4630
+		- `3to4-1.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-15.333
+		- `3to4-2.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-15.333
+		- `3to4-3.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-27.458
+		- `3to2-1.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-BI-4211
+		- `3to2-2.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-H-1319
+		- `3to2-3.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-27.458
+		- `21to9.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-21.110
 	- `assets/images/starter/*.webp` © WebMan Design, Oliver Juhas, GPL-3.0-or-later
 
 * Screenshot images:
-	- © Teona Swift, https://www.pexels.com/@teona-swift/, Pexels license https://www.pexels.com/license/
-	- © Phosphor Icons, https://phosphoricons.com/, MIT license
+	- © https://www.rijksmuseum.nl, CC0

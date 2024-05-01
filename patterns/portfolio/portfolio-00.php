@@ -25,7 +25,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '1to1-3' );
+$image = Block_Pattern::get_image_url( '1to1-1' );
 
 ?>
 
