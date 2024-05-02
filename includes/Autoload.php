@@ -129,7 +129,6 @@ else :
 			'/Tool/KSES.php',
 			'/Tool/Page_Builder.php',
 			'/Tool/Theme_Hook_Alliance.php',
-			'/Tool/Update_Notification.php',
 			'/Tool/Wrapper.php',
 
 			'/Welcome/Component.php',

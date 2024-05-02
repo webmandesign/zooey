@@ -34,7 +34,6 @@ class Component implements Component_Interface {
 			Page_Builder::init();
 			Theme_Hook_Alliance::init();
 			Wrapper::init();
-			Update_Notification::init();
 
 	} // /init
 

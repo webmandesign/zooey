@@ -25,7 +25,6 @@ $features = array(
 	'background',
 	'custom-header',
 	'blog',
-	'mobile-header',
 	'privacy',
 	'featured-posts',
 	'hybrid',

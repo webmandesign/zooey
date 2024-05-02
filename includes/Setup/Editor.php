@@ -25,22 +25,27 @@ defined( 'ABSPATH' ) || exit;
 class Editor implements Component_Interface {
 
 	/**
-	 * Color theme options used for gradients.
+	 * Color theme options which CSS variables are used for setting up gradients in `theme.json`.
+	 *
+	 * Replace these color CSS variables with actual color values
+	 * for block editor gradient control.
+	 *
+	 * IMPORTANT:
+	 * No need to add theme palette colors anymore since WordPress 6.5
+	 * supports CSS variables in gradient control.
+	 * Only really special (non-palette, automatically calculated)
+	 * colors are required now. (See `self::init()` below.)
 	 *
 	 * @see  WebManDesign\Zooey\Customize\Options::set()
+	 * @see  theme.json/settings.color.gradients
 	 *
 	 * @since   1.0.0
 	 * @access  public
 	 * @var     array
 	 */
 	public static $color_options_special = array(
-		'color_base',
-		'color_primary',
-		'color_primary_semitransparent',
-		'color_primary_mixed',
-		'color_secondary',
 		'color_secondary_semitransparent',
-		'color_secondary_mixed',
+		'color_primary_semitransparent',
 	);
 
 	/**
@@ -71,6 +76,26 @@ class Editor implements Component_Interface {
 	public static function init() {
 
 		// Processing
+
+			/**
+			 * WordPress older than 6.5 gradient control does not work
+			 * with CSS variables, so we need to add all theme palette
+			 * colors which CSS variables we used to set our gradients
+			 * in `theme.json`.
+			 */
+			if ( version_compare( $GLOBALS['wp_version'], '6.5', '<' ) ) {
+				array_push( self::$color_options_special,
+					// Order is important here!
+					'color_base_alt',
+					'color_base',
+					'color_contrast_alt',
+					'color_contrast',
+					'color_primary_mixed',
+					'color_primary',
+					'color_secondary_mixed',
+					'color_secondary'
+				);
+			}
 
 			// Filters
 

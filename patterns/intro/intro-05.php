@@ -40,7 +40,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->
 		<div class="wp-block-columns alignwide">
 
-			<!-- wp:column {"width":"61.8%","style":{"spacing":{"padding":{"top":"12vh"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"600px"}} -->
+			<!-- wp:column {"width":"61.8%","style":{"spacing":{"padding":{"top":"12vh"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"640px"}} -->
 			<div class="wp-block-column" style="padding-top:12vh;flex-basis:61.8%">
 
 				<!-- wp:post-title {"level":1} /-->

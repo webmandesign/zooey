@@ -81,9 +81,9 @@ class Component implements Component_Interface {
 				'header'   => false,
 				'features' => __( 'Features', 'zooey' ),
 				'guide'    => __( 'Quickstart', 'zooey' ),
-				'update'   => __( 'Updates', 'zooey' ),
 				'a11y'     => __( 'Accessibility', 'zooey' ),
 				'demo'     => __( 'Demo content', 'zooey' ),
+				'promo'    => __( 'Upgrade', 'zooey' ),
 				'footer'   => false,
 			) );
 
@@ -249,8 +249,13 @@ class Component implements Component_Interface {
 					/* translators: %1$s: heart icon, %2$s: star icons. */
 					esc_html__( 'If you %1$s love this theme don\'t forget to rate it %2$s.', 'zooey' ),
 					'<span class="dashicons dashicons-heart" style="color: red; vertical-align: -.181em;"></span>',
-					'<a href="https://themeforest.net/downloads" style="display: inline-block; color: goldenrod; vertical-align: middle;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span></a>'
+					'<a href="https://wordpress.org/support/theme/zooey/reviews/#new-post" style="display: inline-block; color: goldenrod; vertical-align: middle;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span></a>'
 				)
+				. ' '
+				. '<br>'
+				. '<a href="https://www.webmandesign.eu/contact/#donation">'
+				. esc_html__( 'And/or please consider a donation.', 'zooey' )
+				. '</a>'
 				. ' '
 				. esc_html__( 'Thank you!', 'zooey' );
 
