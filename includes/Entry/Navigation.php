@@ -71,7 +71,7 @@ class Navigation implements Component_Interface {
 				'entry-navigation',
 				array(
 					'tag'   => 'div',
-					'class' => 'entry-navigation-container has-content-margin-bottom',
+					'class' => 'entry-navigation-container',
 				)
 			);
 

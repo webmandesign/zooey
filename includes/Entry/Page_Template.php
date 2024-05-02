@@ -341,7 +341,7 @@ class Page_Template implements Component_Interface {
 
 		// Requirements check
 
-			if ( ! in_array( 'page-template', $classes ) ) {
+			if ( ! in_array( get_post_type() . '-template', $classes ) ) {
 				return $classes;
 			}
 
@@ -389,10 +389,12 @@ class Page_Template implements Component_Interface {
 
 		// Processing
 
-			if ( stripos( implode( ' ', Body_Class::get_body_class() ), 'no-primary-title' ) ) {
+			if ( stripos( implode( ' ', Body_Class::get_body_class() ), 'is-content-only' ) ) {
 
 				unset(
 					$classes['has-content-margin-top'],
+					$classes['has-content-margin-bottom'],
+					$classes['has-content-padding-top'],
 					$classes['has-content-padding-bottom']
 				);
 
@@ -461,7 +463,7 @@ class Page_Template implements Component_Interface {
 					remove_action( 'tha_entry_after', __NAMESPACE__ . '\Component::comments' );
 					remove_action( 'tha_entry_after', __NAMESPACE__ . '\Navigation::display' );
 
-					remove_filter( 'the_content', __NAMESPACE__ . '\Component::content_wrapper' );
+					remove_filter( 'the_content', __NAMESPACE__ . '\Component::content_wrapper', 20 );
 				}
 
 		} // /setup_layout_with_sidebar

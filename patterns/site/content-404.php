@@ -37,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-group">
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?php esc_html_e( 'It looks like nothing was found at this location. Try a search or check the links below.', 'zooey' ); ?></p>
+		<p class="has-text-align-center"><?php esc_html_e( 'It looks like nothing was found at this location. Try a search.', 'zooey' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

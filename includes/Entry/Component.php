@@ -63,6 +63,7 @@ class Component implements Component_Interface {
 
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__comments', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__entry_header', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
+				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__is_hidden_on', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 	} // /init
 
@@ -91,8 +92,7 @@ class Component implements Component_Interface {
 				'wp-block-post-content',
 				'has-global-padding',
 				'is-layout-constrained',
-				'has-content-margin-top',
-				'has-content-padding-bottom',
+				'has-content-margin-bottom',
 			);
 
 			/**
@@ -189,7 +189,7 @@ class Component implements Component_Interface {
 					'entry-meta-bottom',
 					array(
 						'tag'   => 'div',
-						'class' => 'has-no-margin-top has-content-margin-bottom entry-meta-bottom-container',
+						'class' => 'entry-meta-bottom-container',
 					)
 				);
 			}
@@ -322,5 +322,39 @@ class Component implements Component_Interface {
 			return $pre_render;
 
 	} // /pre_render__entry_header
+
+	/**
+	 * Block output modification: Do not render if `is-hidden-on-#` class is set.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @param  string|null $pre_render  The rendered content. Default null.
+	 * @param  array       $block       The block being rendered.
+	 *
+	 * @return  string|null
+	 */
+	public static function pre_render__is_hidden_on( $pre_render, array $block ) {
+
+		// Processing
+
+			if (
+				isset( $block['attrs']['className'] )
+				&& false !== stripos( $block['attrs']['className'], 'is-hidden-on-' )
+			) {
+
+				$post_type = explode( 'is-hidden-on-', $block['attrs']['className'] );
+				$post_type = explode( ' ', $post_type[1] );
+
+				if ( $post_type[0] === get_post_type() ) {
+					$pre_render = '';
+				}
+			}
+
+
+		// Output
+
+			return $pre_render;
+
+	} // /pre_render__is_hidden_on
 
 }

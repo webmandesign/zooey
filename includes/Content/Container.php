@@ -81,6 +81,9 @@ class Container implements Component_Interface {
 					$classes[] = 'is-layout-flow';
 				}
 
+				// Copy array values to keys so it is easier to unset values in the filter below.
+				$classes = array_combine( $classes, $classes );
+
 				if ( $is_singular ) {
 					// Post class is required for classic themes (and so for hybrid themes too).
 					$classes['post_class'] = implode( ' ', get_post_class() );

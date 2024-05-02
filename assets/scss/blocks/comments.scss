@@ -7,13 +7,6 @@
 
 .wp-block-comment {
 
-	&s {
-
-		body[class*="custom-with-sidebar"] .entry-content + & {
-			margin-block-start: var(--theme--css--content-padding);
-		}
-	}
-
 	&-content {
 
 		* + * {

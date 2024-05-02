@@ -24,7 +24,7 @@ if (
 		'comments',
 		array(
 			'tag'   => 'section',
-			'class' => 'entry-comments has-no-margin-top',
+			'class' => 'entry-comments',
 		)
 	);
 
