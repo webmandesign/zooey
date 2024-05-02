@@ -59,8 +59,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|m"},"margin":{"top":"0"}}}} -->
 	<div class="wp-block-group alignwide" id="section-1" style="margin-top:0;padding-top:var(--wp--preset--spacing--m)">
 
-		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"gradient":"base-alt-to-transparent-v","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-alt-to-transparent-v-gradient-background has-background" style="border-radius:0.38rem">
 
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"0"}}}} -->
 			<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--l)"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
@@ -109,8 +109,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|m"},"margin":{"top":"0"}}}} -->
 	<div class="wp-block-group alignwide" id="section-2" style="margin-top:0;padding-top:var(--wp--preset--spacing--m)">
 
-		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"gradient":"base-alt-to-transparent-v","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-alt-to-transparent-v-gradient-background has-background" style="border-radius:0.38rem">
 
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"0"}}}} -->
 			<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--l)"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
@@ -159,8 +159,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|m"},"margin":{"top":"0"}}}} -->
 	<div class="wp-block-group alignwide" id="section-3" style="margin-top:0;padding-top:var(--wp--preset--spacing--m)">
 
-		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"gradient":"base-alt-to-transparent-v","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-alt-to-transparent-v-gradient-background has-background" style="border-radius:0.38rem">
 
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"0"}}}} -->
 			<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--l)"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>

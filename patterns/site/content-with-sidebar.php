@@ -27,7 +27,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
-	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|xl"}}}} -->
 	<div class="wp-block-columns alignwide">
 
 		<!-- wp:column {"width":"66.66%","style":{"spacing":{"blockGap":"var:preset|spacing|l"}}} -->

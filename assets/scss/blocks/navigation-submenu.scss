@@ -307,6 +307,7 @@
 
 	.is-style-megamenu {
 
+		.wp-block-navigation.has-child-selected &, // Always enable megamenu styles in editor.
 		.wp-block-navigation.no-overlay-menu &,
 		.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) & {
 			@include media( 1025 ) { // 1024px breakpoint.

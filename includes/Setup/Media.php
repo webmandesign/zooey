@@ -199,7 +199,7 @@ class Media implements Component_Interface {
 
 		// Variables
 
-			$layout_width_content = absint( get_theme_mod( 'layout_width_content', 720 ) );
+			$layout_width_content = absint( get_theme_mod( 'layout_width_content', 640 ) );
 
 
 		// Processing

@@ -39,7 +39,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"margin":{"top":"var:preset|spacing|content"}},"typography":{"textTransform":"uppercase"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"s"} -->
 	<div class="wp-block-group alignwide has-s-font-size" style="margin-top:var(--wp--preset--spacing--content);text-transform:uppercase">
 
-		<!-- wp:site-logo {"width":560,"style":{"layout":{"selfStretch":"fill","flexSize":null}},"className":"is-logo-footer"} /-->
+		<!-- wp:site-logo {"width":320,"style":{"layout":{"selfStretch":"fill","flexSize":null}},"className":"is-logo-footer"} /-->
 
 		<!-- wp:paragraph -->
 		<p><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' — ' ); ?></p>
