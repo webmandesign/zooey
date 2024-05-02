@@ -22,6 +22,7 @@ sudo wp i18n make-pot . languages/zooey.pot --allow-root
 3. For JavaScript localization to work, we need to generate translation JSON file(s) using:
 wp i18n make-json languages
 wp i18n make-json languages --no-purge
+sudo wp i18n make-json languages --no-purge --allow-root
 
 4. Rename generated `locale-md5.json` files to `zooey-locale-md5.json`.
 
