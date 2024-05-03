@@ -189,7 +189,7 @@ class Editor implements Component_Interface {
 			Factory::style_enqueue( array(
 				/**
 				 * There is some issue with this stylesheet
-				 * registration. It seems WP see the stylesheet
+				 * registration. It seems WP sees the stylesheet
 				 * as registered already, but can not enqueue it.
 				 * So, we just need to enqueue it without registration.
 				 */

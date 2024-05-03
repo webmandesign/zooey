@@ -107,11 +107,9 @@ class Pagination implements Component_Interface {
 	/**
 	 * Block output modification: Pagination block.
 	 *
-	 * Adding descriptive ARIA labels and helpful current page info
-	 * data attributes.
+	 * Adding descriptive ARIA labels and helpful current page info data attributes.
 	 *
-	 * We need to modify output HTML as there is no filter for
-	 * `paginate_links()` args.
+	 * We need to modify output HTML as there is no filter for `paginate_links()` args.
 	 * @link  https://developer.wordpress.org/reference/functions/paginate_links/
 	 *
 	 * @since  1.0.0

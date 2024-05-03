@@ -13,7 +13,6 @@ namespace WebManDesign\Zooey\Header;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Content;
 use WebManDesign\Zooey\Customize\Colors;
-use WebManDesign\Zooey\Customize\Mod;
 use WP_Post;
 
 // Exit if accessed directly.
@@ -90,16 +89,7 @@ class Body_Class implements Component_Interface {
 
 			// Is primary title displayed?
 			if ( Content\Component::show_primary_title( $classes ) ) {
-
 				$classes[] = 'has-primary-title';
-
-				// Page intro related classes.
-				if (
-					is_singular()
-					&& has_post_thumbnail()
-				) {
-					$classes[] = 'has-intro-image';
-				}
 			} else {
 				$classes[] = 'no-primary-title';
 			}

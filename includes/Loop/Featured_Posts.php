@@ -34,9 +34,9 @@ class Featured_Posts implements Component_Interface {
 	 *
 	 * @since   1.0.0
 	 * @access  private
-	 * @var     array
+	 * @var     null|WP_Query
 	 */
-	private static $posts = array();
+	private static $posts = null;
 
 	/**
 	 * Initialization.
@@ -70,7 +70,7 @@ class Featured_Posts implements Component_Interface {
 	 *
 	 * @since  1.0.0
 	 *
-	 * @return  array|WP_Query
+	 * @return  null|WP_Query
 	 */
 	public static function get_posts() {
 
@@ -82,7 +82,7 @@ class Featured_Posts implements Component_Interface {
 		// Processing
 
 			if (
-				empty( self::$posts )
+				null === self::$posts
 				&& ! empty( $tag )
 			) {
 
@@ -265,7 +265,7 @@ class Featured_Posts implements Component_Interface {
 			if (
 				isset( $block['attrs']['className'] )
 				&& false !== stripos( $block['attrs']['className'], 'featured-posts' )
-				&& ( ! self::get_posts()->have_posts() || is_paged() )
+				&& ( empty( self::get_posts() ) || is_paged() || ! self::get_posts()->have_posts() )
 			) {
 				$pre_render = '';
 			}

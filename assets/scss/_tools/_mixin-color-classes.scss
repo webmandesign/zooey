@@ -1,0 +1,41 @@
+//
+// Colors styles helper.
+//
+// @since  1.0.0
+//
+// @param  string $slug
+//
+@mixin color_classes( $slug: '' ) {
+
+	.has-#{ $slug }-background-color {
+
+		&:not(.has-text-color) {
+			color: var(--wp--preset--color--#{ $slug }--bg-text);
+			border-color: var(--wp--preset--color--#{ $slug }--bg-border);
+			--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--bg-border);
+		}
+
+		&:not(.has-link-color) a {
+			color: inherit;
+		}
+
+		&#{ $selectors_button_colors } {
+			--theme--css--button--color--background: var(--wp--preset--color--#{ $slug });
+			--theme--css--button--color--text: var(--wp--preset--color--#{ $slug }--bg-text);
+			@if $button_has_border_color {
+				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--bg-border);
+			}
+		}
+	}
+
+	.has-#{ $slug }-color {
+		border-color: var(--wp--preset--color--#{ $slug }--border);
+		--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--border);
+
+		@if $button_has_border_color {
+			&#{ $selectors_button_colors } {
+				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--border);
+			}
+		}
+	}
+}

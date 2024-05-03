@@ -70,6 +70,8 @@ class Component implements Component_Interface {
 	/**
 	 * Entry content wrapper container.
 	 *
+	 * This is identical to block mode's `wp:post-content` (core/post-content) block setup.
+	 *
 	 * @since  1.0.0
 	 *
 	 * @param  string $content

@@ -11,6 +11,7 @@
 namespace WebManDesign\Zooey\Setup;
 
 use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Options;
 use WP_HTML_Tag_Processor;
 
 // Exit if accessed directly.
@@ -64,6 +65,7 @@ class Media implements Component_Interface {
 
 				add_filter( 'get_custom_logo_image_attributes', __CLASS__ . '::custom_logo_image_attributes', 10, 2 );
 
+				add_filter( 'render_block_core/cover', __CLASS__ . '::render__cover_blur', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/cover', __CLASS__ . '::render__cover_image_size', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/image', __CLASS__ . '::render__image_header', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -199,7 +201,7 @@ class Media implements Component_Interface {
 
 		// Variables
 
-			$layout_width_content = absint( get_theme_mod( 'layout_width_content', 640 ) );
+			$layout_width_content = absint( get_theme_mod( 'layout_width_content', Options::$theme_mods['layout_width_content'] ) );
 
 
 		// Processing
@@ -413,6 +415,53 @@ class Media implements Component_Interface {
 			return $custom_logo_attr;
 
 	} // /custom_logo_image_attributes
+
+	/**
+	 * Block output modification: Cover block `image-blur` style helper.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @param  string $block_content  The rendered content. Default null.
+	 * @param  array  $block          The block being rendered.
+	 *
+	 * @return  string
+	 */
+	public static function render__cover_blur( string $block_content, array $block ): string {
+
+		// Processing
+
+			if (
+				isset( $block['attrs']['className'] )
+				&& false !== strpos( $block['attrs']['className'], 'is-style-image-blur' )
+			) {
+
+				$type = $block['attrs']['backgroundType'] ?? 'image';
+
+				$regex = array(
+					'image' => '/<img\b[^>]+wp-block-cover__image-background[\s|"][^>]*>/U',
+					'video' => '/<video\b[^>]+wp-block-cover__video-background[\s|"][^>]*><\/video>/U',
+				);
+
+				if ( ! isset( $regex[ $type ] ) ) {
+					$type = 'image';
+				}
+
+				if ( 1 === preg_match( $regex[ $type ], $block_content, $matches, PREG_OFFSET_CAPTURE ) ) {
+
+					$block_content = str_replace(
+						$matches[0][0],
+						'<span class="is-blur-wrapper">' . $matches[0][0] . '</span>',
+						$block_content
+					);
+				}
+			}
+
+
+		// Output
+
+			return $block_content;
+
+	} // /render__cover_blur
 
 	/**
 	 * Block output modification: Fixing Cover block image size when displaying featured image.

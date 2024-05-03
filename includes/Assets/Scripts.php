@@ -32,7 +32,6 @@ class Scripts implements Component_Interface {
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue_inline', 0 );
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue_inline_no_js_class', ZOOEY_ENQUEUE_PRIORITY );
-				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue_inline_scroll', ZOOEY_ENQUEUE_PRIORITY + 9 );
 
 				add_action( 'comment_form_before', __CLASS__ . '::enqueue_comment_reply' );
 
@@ -118,29 +117,5 @@ class Scripts implements Component_Interface {
 			);
 
 	} // /enqueue_inline_no_js_class
-
-	/**
-	 * Has user scrolled the page?
-	 *
-	 * Minified script is copied from `assets/js/scroll.min.js`
-	 * and enqueued inline in the footer to prevent external file load.
-	 *
-	 * For unminified script:
-	 * @see  assets/js/scroll.js
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return  void
-	 */
-	public static function enqueue_inline_scroll() {
-
-		// Processing
-
-			wp_add_inline_script(
-				'zooey-scripts-footer',
-				'"use strict";!function(){var s=window.scrollY,o=!1;function d(){var o=window.scrollY;o<s?document.body.classList.add("has-scrolled-up"):document.body.classList.remove("has-scrolled-up"),o>1?document.body.classList.add("has-scrolled"):(document.body.classList.remove("has-scrolled"),document.body.classList.remove("has-scrolled-up")),s=o}d(),window.addEventListener("scroll",(function(s){o||(window.requestAnimationFrame((function(){d(),o=!1})),o=!0)}))}();'
-			);
-
-	} // /enqueue_inline_scroll
 
 }

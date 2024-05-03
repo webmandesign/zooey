@@ -103,7 +103,7 @@ class Starter implements Component_Interface {
 					'file' => 'assets/images/starter/3to2-2.webp',
 				),
 
-				'image-logo' => array(
+				'logo' => array(
 					'file' => 'assets/images/starter/logo.png',
 				),
 			);
@@ -126,7 +126,7 @@ class Starter implements Component_Interface {
 				'page_on_front'  => '{{home}}',
 				'page_for_posts' => '{{blog}}',
 				'posts_per_page' => 6,
-				'custom_logo'    => '{{image-logo}}',
+				'custom_logo'    => '{{logo}}',
 			);
 
 	} // /options

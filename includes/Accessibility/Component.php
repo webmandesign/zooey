@@ -11,7 +11,6 @@
 namespace WebManDesign\Zooey\Accessibility;
 
 use WebManDesign\Zooey\Component_Interface;
-use WebManDesign\Zooey\Setup\Site_Editor;
 use WP_HTML_Tag_Processor;
 
 // Exit if accessed directly.

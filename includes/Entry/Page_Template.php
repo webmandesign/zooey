@@ -153,7 +153,7 @@ class Page_Template implements Component_Interface {
 	 * Default custom page template content.
 	 *
 	 * Content for custom page template created in block theme
-	 * from page edit screen
+	 * from page edit screen.
 	 *
 	 * @since  1.0.0
 	 *
@@ -389,7 +389,7 @@ class Page_Template implements Component_Interface {
 
 		// Processing
 
-			if ( stripos( implode( ' ', Body_Class::get_body_class() ), 'is-content-only' ) ) {
+			if ( self::is_content_only() ) {
 
 				unset(
 					$classes['has-content-margin-top'],

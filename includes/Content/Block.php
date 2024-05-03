@@ -46,7 +46,6 @@ class Block implements Component_Interface {
 				add_filter( 'render_block', __CLASS__ . '::render__gap', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 				add_filter( 'render_block_core/button', __CLASS__ . '::render__button_background', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
-				add_filter( 'render_block_core/cover', __CLASS__ . '::render__cover_blur', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/search', __CLASS__ . '::render__search_expand', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/social-links', __CLASS__ . '::render__social_links', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -450,53 +449,6 @@ class Block implements Component_Interface {
 	} // /render__button_background
 
 	/**
-	 * Block output modification: Cover block `image-blur` style helper.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param  string $block_content  The rendered content. Default null.
-	 * @param  array  $block          The block being rendered.
-	 *
-	 * @return  string
-	 */
-	public static function render__cover_blur( string $block_content, array $block ): string {
-
-		// Processing
-
-			if (
-				isset( $block['attrs']['className'] )
-				&& false !== strpos( $block['attrs']['className'], 'is-style-image-blur' )
-			) {
-
-				$type = $block['attrs']['backgroundType'] ?? 'image';
-
-				$regex = array(
-					'image' => '/<img\b[^>]+wp-block-cover__image-background[\s|"][^>]*>/U',
-					'video' => '/<video\b[^>]+wp-block-cover__video-background[\s|"][^>]*><\/video>/U',
-				);
-
-				if ( ! isset( $regex[ $type ] ) ) {
-					$type = 'image';
-				}
-
-				if ( 1 === preg_match( $regex[ $type ], $block_content, $matches, PREG_OFFSET_CAPTURE ) ) {
-
-					$block_content = str_replace(
-						$matches[0][0],
-						'<span class="is-blur-wrapper">' . $matches[0][0] . '</span>',
-						$block_content
-					);
-				}
-			}
-
-
-		// Output
-
-			return $block_content;
-
-	} // /render__cover_blur
-
-	/**
 	 * Block output modification: Search form expand colors.
 	 *
 	 * Applies background and text color styles for search
@@ -537,7 +489,7 @@ class Block implements Component_Interface {
 	/**
 	 * Block output modification: Social Links improvements.
 	 *
-	 * Add helpful layout justification CSS class.
+	 * Adding helpful layout justification CSS class.
 	 * Allows using anchor links (starting with `#`).
 	 *
 	 * @since  1.0.0

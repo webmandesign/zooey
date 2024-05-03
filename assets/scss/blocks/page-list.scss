@@ -52,6 +52,8 @@
 			margin-inline-end: .2em;
 			background: var(--theme--css--current-menu-item--decoration--color);
 			border-radius: $ratio_min + em;
+			border-start-start-radius: 0;
+			border-end-start-radius: 0;
 		}
 	}
 }

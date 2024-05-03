@@ -62,11 +62,14 @@ class Component implements Component_Interface {
 
 				case 'core/navigation-link':
 
-					// Helper HTML wrapper for current menu item decoration.
-					//
-					// No need to target `core/navigation-submenu` block here
-					// as it does not support menu item description anyway
-					// and we can target it directly with CSS (see `assets/scss/blocks/navigation-link.scss`).
+					/**
+					 * Helper HTML wrapper for current menu item decoration.
+					 *
+					 * No need to target `core/navigation-submenu` block here
+					 * as it does not support menu item description anyway
+					 * and we can target it directly with CSS.
+					 * @see assets/scss/blocks/navigation-link.scss
+					*/
 					if (
 						! empty( $block['attrs']['label'] )
 						&& false === stripos( $block_content, 'wp-block-navigation-item__label' )

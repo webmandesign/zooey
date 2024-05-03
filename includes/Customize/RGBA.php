@@ -83,6 +83,11 @@ class RGBA implements Component_Interface {
 
 			return array(
 
+				/**
+				 * For `color_base` setup
+				 * @see  WebManDesign\Zooey\Customize\Styles::get_css_variables()
+				 */
+
 				'color_base_alt' =>  array(
 					array(
 						'css_var_name' => $var_prefix . 'base-alt' . $var_suffix,
@@ -115,6 +120,13 @@ class RGBA implements Component_Interface {
 					),
 				),
 
+					'color_primary_mixed' =>  array(
+						array(
+							'css_var_name' => $var_prefix . 'primary_mixed' . $var_suffix,
+							'alpha'        => $alpha,
+						),
+					),
+
 				'color_secondary' => array(
 					array(
 						'css_var_name' => $var_prefix . 'secondary' . $var_suffix,
@@ -126,12 +138,19 @@ class RGBA implements Component_Interface {
 					),
 				),
 
+					'color_secondary_mixed' =>  array(
+						array(
+							'css_var_name' => $var_prefix . 'secondary_mixed' . $var_suffix,
+							'alpha'        => $alpha,
+						),
+					),
+
 				// @see  customize-preview.js
 				// 'background_color' => array(
-				// 	array(
-				// 		'css_var_name' => $var_prefix . 'base' . $var_suffix,
-				// 		'alpha'        => $alpha,
-				// 	),
+				//   array(
+				//     'css_var_name' => $var_prefix . 'base' . $var_suffix,
+				//     'alpha'        => $alpha,
+				//   ),
 				// ),
 			);
 

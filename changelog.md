@@ -1,6 +1,6 @@
 # Zooey Changelog
 
-## 1.0.0, 20240415
+## 1.0.0, 20240504
 
 - Initial release.
 

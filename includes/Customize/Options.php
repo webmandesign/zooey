@@ -22,6 +22,52 @@ defined( 'ABSPATH' ) || exit;
 class Options implements Component_Interface {
 
 	/**
+	 * Theme mods values for easier setup.
+	 *
+	 * @see  assets/scss/_setup/_customize-options.scss
+	 *
+	 * @since   1.0.0
+	 * @access  public
+	 * @var     array
+	 */
+	public static $theme_mods = array(
+
+		// Colors.
+
+			'color_base'         => '#f7fff7', // = background_color
+			'color_base_alt'     => '#e7efe7',
+			'color_contrast'     => '#474f47',
+			'color_contrast_alt' => '#171f17',
+			'color_primary'      => '#5f1a37',
+			'color_secondary'    => '#ff6b6b',
+
+			'color_primary_mixed'   => '#e4e2df',
+			'color_secondary_mixed' => '#fac6c2',
+
+			'color_black' => '#000000',
+			'color_white' => '#ffffff',
+
+		// Gradients. (Just numeric values.)
+
+			'gradient_stop_hard' => 50,
+			'gradient_stop_soft' => 10,
+
+		// Layout. (Just numeric values.)
+
+			'layout_width_content' => 640,
+			'layout_width_wide'    => 1440,
+
+		// Typography.
+
+			'typography_font_size'                => 20,
+			'typography_modular_scale'            => 1.2,
+			'typography_desktop_multiply'         => 1.75,
+			'typography_font_family_global'       => "'Ubuntu', sans-serif",
+			'typography_font_family_supplemental' => "'Unica One', sans-serif",
+			'typography_font_family_alternative'  => "'Ubuntu', sans-serif",
+	);
+
+	/**
 	 * User font families.
 	 *
 	 * IMPORTANT:
@@ -131,9 +177,6 @@ class Options implements Component_Interface {
 				$wp_customize->selective_refresh->add_partial( 'search_per_page', array(
 					'selector' => '.search-generic .wp-block-query',
 				) );
-				// $wp_customize->selective_refresh->add_partial( 'search_per_page_alt', array(
-				// 	'selector' => '.search-results:not(.search-generic) .wp-block-query',
-				// ) );
 
 				// Archive page posts count.
 				$wp_customize->selective_refresh->add_partial( 'archive_per_page', array(
@@ -169,47 +212,6 @@ class Options implements Component_Interface {
 	public static function set( array $options = array() ): array {
 
 		// Variables
-
-			/**
-			 * Theme mods values for easier setup.
-			 * @see  assets/scss/_setup/_customize-options.scss
-			 */
-			$theme_mods = array(
-
-				// Colors.
-
-					'color_base'         => '#f7fff7', // = background_color
-					'color_base_alt'     => '#e7efe7',
-					'color_contrast'     => '#474f47',
-					'color_contrast_alt' => '#171f17',
-					'color_primary'      => '#5f1a37',
-					'color_secondary'    => '#ff6b6b',
-
-					'color_primary_mixed'   => '#e4e2df',
-					'color_secondary_mixed' => '#fac6c2',
-
-					'color_black' => '#000000',
-					'color_white' => '#ffffff',
-
-				// Gradients. (Just numeric values.)
-
-					'gradient_stop_hard' => 50,
-					'gradient_stop_soft' => 10,
-
-				// Layout. (Just numeric values.)
-
-					'layout_width_content' => 640,
-					'layout_width_wide'    => 1440,
-
-				// Typography.
-
-					'typography_font_size'                => 20,
-					'typography_modular_scale'            => 1.2,
-					'typography_desktop_multiply'         => 1.75,
-					'typography_font_family_global'       => "'Ubuntu', sans-serif",
-					'typography_font_family_supplemental' => "'Unica One', sans-serif",
-					'typography_font_family_alternative'  => "'Ubuntu', sans-serif",
-			);
 
 			// Default panel.
 			$in_panel = esc_html_x( 'Theme Options', 'Customizer panel title.', 'zooey' );
@@ -335,7 +337,7 @@ class Options implements Component_Interface {
 							'type'    => 'color',
 							'id'      => 'color_base_alt',
 							'label'   => esc_html__( 'Base alternative color', 'zooey' ),
-							'default' => $theme_mods['color_base_alt'],
+							'default' => self::$theme_mods['color_base_alt'],
 							'css_var' => array(
 								'name'  => '--wp--preset--color--base-alt',
 								'value' => 'maybe_hash_hex_color',
@@ -357,7 +359,7 @@ class Options implements Component_Interface {
 								esc_html__( 'By default applied on text.', 'zooey' )
 								. ' '
 								. esc_html__( 'Set this for an appropriate contrast against "Base" color.', 'zooey' ),
-							'default'     => $theme_mods['color_contrast'],
+							'default'     => self::$theme_mods['color_contrast'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--contrast',
 								'value' => 'maybe_hash_hex_color',
@@ -379,7 +381,7 @@ class Options implements Component_Interface {
 								esc_html__( 'By default applied on headings.', 'zooey' )
 								. ' '
 								. esc_html__( 'Set this for an appropriate contrast against "Base" color.', 'zooey' ),
-							'default'     => $theme_mods['color_contrast_alt'],
+							'default'     => self::$theme_mods['color_contrast_alt'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--contrast-alt',
 								'value' => 'maybe_hash_hex_color',
@@ -401,7 +403,7 @@ class Options implements Component_Interface {
 								esc_html__( 'By default applied as link color.', 'zooey' )
 								. ' '
 								. esc_html__( 'Set this for an appropriate contrast against "Base" color.', 'zooey' ),
-							'default'     => $theme_mods['color_primary'],
+							'default'     => self::$theme_mods['color_primary'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--primary',
 								'value' => 'maybe_hash_hex_color',
@@ -420,7 +422,7 @@ class Options implements Component_Interface {
 							'id'          => 'color_primary_mixed',
 							'label'       => esc_html__( 'Primary mixed color', 'zooey' ),
 							'description' => esc_html__( 'By default it is set as a blend of "Base" and "Primary" color.', 'zooey' ),
-							'default'     => $theme_mods['color_primary_mixed'],
+							'default'     => self::$theme_mods['color_primary_mixed'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--primary-mixed',
 								'value' => 'maybe_hash_hex_color',
@@ -439,7 +441,7 @@ class Options implements Component_Interface {
 							'id'          => 'color_secondary',
 							'label'       => esc_html__( 'Secondary color', 'zooey' ),
 							'description' => esc_html__( 'By default applied as button color.', 'zooey' ),
-							'default'     => $theme_mods['color_secondary'],
+							'default'     => self::$theme_mods['color_secondary'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--secondary',
 								'value' => 'maybe_hash_hex_color',
@@ -458,7 +460,7 @@ class Options implements Component_Interface {
 							'id'          => 'color_secondary_mixed',
 							'label'       => esc_html__( 'Secondary mixed color', 'zooey' ),
 							'description' => esc_html__( 'By default it is set as a blend of "Base" and "Secondary" color.', 'zooey' ),
-							'default'     => $theme_mods['color_secondary_mixed'],
+							'default'     => self::$theme_mods['color_secondary_mixed'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--secondary-mixed',
 								'value' => 'maybe_hash_hex_color',
@@ -569,10 +571,10 @@ class Options implements Component_Interface {
 								'id'                => 'gradient_stop_hard',
 								'label'             => esc_html__( 'Hard gradient stop', 'zooey' ),
 								'description'       =>
-									esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['gradient_stop_hard']
+									esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['gradient_stop_hard']
 									. '<br>'
 									. esc_html__( 'Sets the stop position for automatically generated hard cut gradient presets.', 'zooey' ),
-								'default'           => $theme_mods['gradient_stop_hard'],
+								'default'           => self::$theme_mods['gradient_stop_hard'],
 								'min'               => 1,
 								'max'               => 99,
 								'step'              => 1,
@@ -598,10 +600,10 @@ class Options implements Component_Interface {
 								'id'                => 'gradient_stop_soft',
 								'label'             => esc_html__( 'Soft gradient stop', 'zooey' ),
 								'description'       =>
-									esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['gradient_stop_soft']
+									esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['gradient_stop_soft']
 									. '<br>'
 									. esc_html__( 'Sets the stop position for automatically generated soft gradual gradient presets.', 'zooey' ),
-								'default'           => $theme_mods['gradient_stop_soft'],
+								'default'           => self::$theme_mods['gradient_stop_soft'],
 								'min'               => 1,
 								'max'               => 99,
 								'step'              => 1,
@@ -660,7 +662,7 @@ class Options implements Component_Interface {
 							'type'        => 'color',
 							'id'          => 'color_black',
 							'label'       => esc_html__( 'Black color', 'zooey' ),
-							'default'     => $theme_mods['color_black'],
+							'default'     => self::$theme_mods['color_black'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--black',
 								'value' => 'maybe_hash_hex_color',
@@ -678,7 +680,7 @@ class Options implements Component_Interface {
 							'type'        => 'color',
 							'id'          => 'color_white',
 							'label'       => esc_html__( 'White color', 'zooey' ),
-							'default'     => $theme_mods['color_white'],
+							'default'     => self::$theme_mods['color_white'],
 							'css_var'     => array(
 								'name'  => '--wp--preset--color--white',
 								'value' => 'maybe_hash_hex_color',
@@ -745,14 +747,14 @@ class Options implements Component_Interface {
 							'id'                => 'layout_width_content',
 							'label'             => esc_html__( 'Content width', 'zooey' ),
 							'description'       =>
-								esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['layout_width_content']
+								esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['layout_width_content']
 								. '<br>'
 								. esc_html__( 'This is a default width for your blocks.', 'zooey' )
 								. ' '
 								. esc_html__( 'Set this cautiously for the best readability, depending on your typography setup.', 'zooey' )
 								. ' '
 								. esc_html__( 'The optimal text line length is considered to be between 50 and 75 characters, including spaces.', 'zooey' ),
-							'default'           => $theme_mods['layout_width_content'],
+							'default'           => self::$theme_mods['layout_width_content'],
 							'min'               => 400,
 							'max'               => 1000,
 							'step'              => 1,
@@ -779,10 +781,10 @@ class Options implements Component_Interface {
 							'id'                => 'layout_width_wide',
 							'label'             => esc_html__( 'Wide width', 'zooey' ),
 							'description'       =>
-								esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['layout_width_wide']
+								esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['layout_width_wide']
 								. '<br>'
 								. esc_html__( 'This width is applied on wide-aligned blocks.', 'zooey' ),
-							'default'           => $theme_mods['layout_width_wide'],
+							'default'           => self::$theme_mods['layout_width_wide'],
 							'min'               => 800,
 							'max'               => 1920,
 							'step'              => 1,
@@ -874,8 +876,8 @@ class Options implements Component_Interface {
 								. ' '
 								. esc_html__( 'This size is applied on large screens only.', 'zooey' )
 								. '<br>'
-								. esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['typography_font_size'],
-							'default'           => $theme_mods['typography_font_size'],
+								. esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['typography_font_size'],
+							'default'           => self::$theme_mods['typography_font_size'],
 							'min'               => 16,
 							'max'               => 28,
 							'step'              => 1,
@@ -914,10 +916,10 @@ class Options implements Component_Interface {
 							'description'       =>
 								esc_html__( 'This ratio is used for calculating heading sizes.', 'zooey' )
 								. ' '
-								. '<a href="https://www.modularscale.com/?1&em&' . $theme_mods['typography_modular_scale'] . '" title="' . esc_attr__( 'Open link in new window', 'zooey' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open Modular Scale calculator in a new window ↗', 'zooey' ) . '</a>'
+								. '<a href="https://www.modularscale.com/?1&em&' . self::$theme_mods['typography_modular_scale'] . '" title="' . esc_attr__( 'Open link in new window', 'zooey' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open Modular Scale calculator in a new window ↗', 'zooey' ) . '</a>'
 								. '<br>'
-								. esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['typography_modular_scale'],
-							'default'           => $theme_mods['typography_modular_scale'],
+								. esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['typography_modular_scale'],
+							'default'           => self::$theme_mods['typography_modular_scale'],
 							'min'               => 1,
 							'max'               => 2,
 							'step'              => .01,
@@ -944,8 +946,8 @@ class Options implements Component_Interface {
 							'description'       =>
 								esc_html__( 'Additional ratio for scaling heading sizes on large screens.', 'zooey' )
 								. '<br>'
-								. esc_html__( 'Default value:', 'zooey' ) . ' ' . $theme_mods['typography_desktop_multiply'],
-							'default'           => $theme_mods['typography_desktop_multiply'],
+								. esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['typography_desktop_multiply'],
+							'default'           => self::$theme_mods['typography_desktop_multiply'],
 							'min'               => 1,
 							'max'               => 3,
 							'step'              => .01,
@@ -1008,9 +1010,9 @@ class Options implements Component_Interface {
 							'description'       => esc_html__( 'By default applied as main, global website font.', 'zooey' )
 								. ' '
 								. esc_html__( 'Default value:', 'zooey' )
-								. ' <code>' . $theme_mods['typography_font_family_global'] . '</code>',
-							'default'           => $theme_mods['typography_font_family_global'],
-							'datalist'          => array_merge( [ $theme_mods['typography_font_family_global'] ], $font_families ),
+								. ' <code>' . self::$theme_mods['typography_font_family_global'] . '</code>',
+							'default'           => self::$theme_mods['typography_font_family_global'],
+							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_global'] ], $font_families ),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_global',
@@ -1027,9 +1029,9 @@ class Options implements Component_Interface {
 							'description'       => esc_html__( 'By default applied on headings.', 'zooey' )
 								. ' '
 								. esc_html__( 'Default value:', 'zooey' )
-								. ' <code>' . $theme_mods['typography_font_family_supplemental'] . '</code>',
-							'default'           => $theme_mods['typography_font_family_supplemental'],
-							'datalist'          => array_merge( [ $theme_mods['typography_font_family_supplemental'] ], $font_families ),
+								. ' <code>' . self::$theme_mods['typography_font_family_supplemental'] . '</code>',
+							'default'           => self::$theme_mods['typography_font_family_supplemental'],
+							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_supplemental'] ], $font_families ),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_supplemental',
@@ -1046,9 +1048,9 @@ class Options implements Component_Interface {
 							'description'       => esc_html__( 'By default applied on site title (logo).', 'zooey' )
 								. ' '
 								. esc_html__( 'Default value:', 'zooey' )
-								. ' <code>' . $theme_mods['typography_font_family_alternative'] . '</code>',
-							'default'           => $theme_mods['typography_font_family_alternative'],
-							'datalist'          => array_merge( [ $theme_mods['typography_font_family_alternative'] ], $font_families ),
+								. ' <code>' . self::$theme_mods['typography_font_family_alternative'] . '</code>',
+							'default'           => self::$theme_mods['typography_font_family_alternative'],
+							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_alternative'] ], $font_families ),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_alternative',
@@ -1177,23 +1179,8 @@ class Options implements Component_Interface {
 							'sanitize_callback' => 'absint',
 							'preview_url'       => home_url( '?s=' ), // Do not use `get_search_link()` here.
 						),
-						// 400 . 'posts' . 920 => array(
-						// 	'type'              => 'range',
-						// 	'id'                => 'search_per_page_alt',
-						// 	'label'             => esc_html__( 'Post type specific search results', 'zooey' ),
-						// 	'default'           => 9, // 3 columns layout.
-						// 	'min'               => 1,
-						// 	'max'               => 99,
-						// 	'step'              => 1,
-						// 	'sanitize_callback' => 'absint',
-						// 	'preview_url'       => add_query_arg(
-						// 		'post_type',
-						// 		'post',
-						// 		home_url( '?s=' ) // Do not use `get_search_link()` here.
-						// 	),
-						// ),
 
-						400 . 'posts' . 930 => array(
+						400 . 'posts' . 920 => array(
 							'type'              => 'range',
 							'id'                => 'archive_per_page',
 							'label'             => esc_html__( 'Archive page', 'zooey' ),

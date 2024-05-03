@@ -19,8 +19,7 @@
 	&.is-style-dots {
 
 		&::before {
-			// content: '●●●';
-			content: '✳︎✳︎✳︎';
+			content: '●●●';
 			padding-inline-start: 1em;
 			font-family: sans-serif;
 			font-size: 1em;

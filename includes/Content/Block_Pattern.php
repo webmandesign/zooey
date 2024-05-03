@@ -398,7 +398,7 @@ class Block_Pattern implements Component_Interface {
 				foreach ( $patterns as $id ) {
 
 					// Helpers (for `self::the_text()`):
-						// Set which pattern is being processed .
+						// Set which pattern is being processed.
 						self::$processing_pattern = $id;
 						// Reset iteration number.
 						self::$i = 0;
@@ -414,7 +414,6 @@ class Block_Pattern implements Component_Interface {
 					$content = trim( ob_get_clean() );
 
 					// Why bother if we have no pattern setup arguments, or pattern content?
-					// This also checks if pattern setup arguments are even set.
 					if (
 						empty( self::$pattern_args[ $id ] )
 						|| empty( $content )
@@ -483,11 +482,8 @@ class Block_Pattern implements Component_Interface {
 						)
 					);
 
-					// Why bother if we have no content or title?
-					if (
-						empty( $args['content'] )
-						|| empty( $args['title'] )
-					) {
+					// Why bother if we have no title?
+					if ( empty( $args['title'] ) ) {
 						continue;
 					}
 
@@ -524,7 +520,7 @@ class Block_Pattern implements Component_Interface {
 						if ( $category ) {
 							$args['categories'] = array( $category );
 						} else {
-							$args['categories'] = array( self::$fallback_cat ); // Fallback category.
+							$args['categories'] = array( self::$fallback_cat );
 						}
 					}
 					$args['categories'] = array_map( function( $category ) {

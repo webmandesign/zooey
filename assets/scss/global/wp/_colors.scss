@@ -64,21 +64,7 @@
 // Text and border color.
 
 	// Default WordPress palette.
-	$colors_wp_palette: (
-		'black'                 : #000000,
-		'cyan-bluish-gray'      : #abb8c3,
-		'white'                 : #ffffff,
-		'pale-pink'             : #f78da7,
-		'vivid-red'             : #cf2e2e,
-		'luminous-vivid-orange' : #ff6900,
-		'luminous-vivid-amber'  : #fcb900,
-		'light-green-cyan'      : #7bdcb5,
-		'vivid-green-cyan'      : #00d084,
-		'pale-cyan-blue'        : #8ed1fc,
-		'vivid-cyan-blue'       : #0693e3,
-		'vivid-purple'          : #9b51e0
-	);
-	@each $slug, $color in $colors_wp_palette {
+	@each $slug, $color in $wp_palette_colors {
 
 		body {
 
@@ -95,37 +81,7 @@
 			--wp--preset--color--#{ $slug }--border: rgba( #{ $rgb }, var(--wp--custom--opacity--border) );
 		}
 
-		.has-#{ $slug }-background-color {
-
-			&:not(.has-text-color) {
-				color: var(--wp--preset--color--#{ $slug }--bg-text);
-				border-color: var(--wp--preset--color--#{ $slug }--bg-border);
-				--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--bg-border);
-			}
-
-			&:not(.has-link-color) a {
-				color: inherit;
-			}
-
-			&#{ $selectors_button_colors } {
-				--theme--css--button--color--background: var(--wp--preset--color--#{ $slug });
-				--theme--css--button--color--text: var(--wp--preset--color--#{ $slug }--bg-text);
-				@if $button_has_border_color {
-					--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--bg-border);
-				}
-			}
-		}
-
-		.has-#{ $slug }-color {
-			border-color: var(--wp--preset--color--#{ $slug }--border);
-			--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--border);
-
-			@if $button_has_border_color {
-				&#{ $selectors_button_colors } {
-					--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--border);
-				}
-			}
-		}
+		@include color_classes( $slug );
 	}
 
 	// Theme colors.
@@ -140,37 +96,7 @@
 			$wp_slug: _str_replace( '--theme--mod--color_', '', $option );
 			$wp_slug: _str_replace( '_', '-', $wp_slug );
 
-			.has-#{ $wp_slug }-background-color {
-
-				&:not(.has-text-color) {
-					color: var(--wp--preset--color--#{ $wp_slug }--bg-text);
-					border-color: var(--wp--preset--color--#{ $wp_slug }--bg-border);
-					--theme--css--current-border-color: var(--wp--preset--color--#{ $wp_slug }--bg-border);
-				}
-
-				&:not(.has-link-color) a {
-					color: inherit;
-				}
-
-				&#{ $selectors_button_colors } {
-					--theme--css--button--color--background: var(--wp--preset--color--#{ $wp_slug });
-					--theme--css--button--color--text: var(--wp--preset--color--#{ $wp_slug }--bg-text);
-					@if $button_has_border_color {
-						--theme--css--button--color--border: var(--wp--preset--color--#{ $wp_slug }--bg-border);
-					}
-				}
-			}
-
-			.has-#{ $wp_slug }-color {
-				border-color: var(--wp--preset--color--#{ $wp_slug }--border);
-				--theme--css--current-border-color: var(--wp--preset--color--#{ $wp_slug }--border);
-
-				@if $button_has_border_color {
-					&#{ $selectors_button_colors } {
-						--theme--css--button--color--border: var(--wp--preset--color--#{ $wp_slug }--border);
-					}
-				}
-			}
+			@include color_classes( $wp_slug );
 		}
 	}
 

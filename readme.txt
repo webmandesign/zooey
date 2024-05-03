@@ -10,7 +10,7 @@ License URI:       https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
 == Description ==
 
-Zooey is accessibility ready WordPress website builder for creating beautiful, performant, unique, customizable, inclusive websites easily and in no time. Flexible enough to fit all your needs.
+Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor!
 
 
 == Frequently Asked Questions ==
@@ -43,7 +43,7 @@ This theme bundles the following third-party resources:
 	- `vendor/webfont-loader/*.*`, Webfonts Loader © WordPress Themes Team, MIT, https://github.com/WPTT/webfont-loader, https://github.com/webmandesign/webfont-loader/tree/fix/prevent-infinite-loop
 
 * Assets:
-	- `assets/images/starter/#*.webp` © https://www.rijksmuseum.nl, CC0
+	- `assets/images/starter/#*.webp` © https://www.rijksmuseum.nl, Public Domain (CC0)
 		- `1to1-1.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-15.540
 		- `1to1-2.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-21.108
 		- `1to1-3.webp` © https://www.rijksmuseum.nl/en/collection/RP-P-OB-4630
@@ -57,4 +57,4 @@ This theme bundles the following third-party resources:
 	- `assets/images/starter/*.webp` © WebMan Design, Oliver Juhas, GPL-3.0-or-later
 
 * Screenshot images:
-	- © https://www.rijksmuseum.nl, CC0
+	- © https://www.rijksmuseum.nl, Public Domain (CC0)

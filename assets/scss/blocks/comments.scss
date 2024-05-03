@@ -125,7 +125,7 @@
 	}
 }
 
-.page-template-custom-with-sidebar {
+body[class*="template-custom-with-sidebar"] {
 
 	.wp-block-comments:last-child,
 	.wp-block-template-part:last-child > .wp-block-comments:last-child {

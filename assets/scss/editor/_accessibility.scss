@@ -31,11 +31,11 @@
 			rgba( #fff, .1 ) 10px
 		) !important;
 		opacity: .5;
+		white-space: nowrap !important;
 
 		.is-layout-flex:not(.is-vertical) & {
 			max-width: 3rem !important;
 			text-overflow: ellipsis;
-			white-space: nowrap !important;
 			overflow: hidden;
 		}
 	}
