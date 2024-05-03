@@ -33,6 +33,10 @@
 		opacity: .5;
 		white-space: nowrap !important;
 
+		* {
+			white-space: inherit !important;
+		}
+
 		.is-layout-flex:not(.is-vertical) & {
 			max-width: 3rem !important;
 			text-overflow: ellipsis;
