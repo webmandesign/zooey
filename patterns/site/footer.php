@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -112,8 +113,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
 						<!-- wp:navigation-link {"label":"Get the theme","url":"https://wordpress.org/themes/zooey/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
-						<!-- wp:navigation-link {"label":"Support Forum","url":"https://support.webmandesign.eu/forums/forum/zooey/","fontSize":"s"} /-->
-						<!-- wp:navigation-link {"label":"User manual","url":"https://webmandesign.github.io/docs/zooey/","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"Support Forum","url":"#themesupport","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"User manual","url":"#themedocs","fontSize":"s"} /-->
 					<!-- /wp:navigation -->
 
 				</div>

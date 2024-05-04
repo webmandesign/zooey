@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -70,10 +71,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group {"layout":{"type":"constrained"},"fontFamily":"supplemental"} -->
 			<div class="wp-block-group has-supplemental-font-family">
 
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"}}} -->
+				<?php if ( defined( 'WMD_THEME_DEMO' ) ) : ?>
+				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"}},"anchor":"secondary-navigation"} /-->
+				<?php else : ?>
+				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"}},"anchor":"secondary-navigation"} -->
 					<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'Blog', 'zooey' ); ?>","url":"<?php echo esc_url( home_url( esc_attr_x( '/blog/', '"Blog" page URL relative to home page.', 'zooey' ) ) ); ?>"} /-->
 					<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'Contact', 'zooey' ); ?>","url":"<?php echo esc_url( home_url( esc_attr_x( '/contact/', '"Contact" page URL relative to home page.', 'zooey' ) ) ); ?>"} /-->
 				<!-- /wp:navigation -->
+				<?php endif; ?>
 
 			</div>
 			<!-- /wp:group -->

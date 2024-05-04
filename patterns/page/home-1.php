@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -28,7 +29,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:pattern {"slug":"zooey/intro/intro-05"} /-->
+<!-- wp:pattern {"slug":"zooey/intro/intro-06"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|xl"} --><div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer -->
 

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -92,7 +93,8 @@ class Editor implements Component_Interface {
 	/**
 	 * Add block editor UI stylesheet.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.1
 	 *
 	 * @return  void
 	 */
@@ -110,7 +112,8 @@ class Editor implements Component_Interface {
 				/**
 				 * Filters additional block editor UI CSS code.
 				 *
-				 * @since  1.0.0
+				 * @since    1.0.0
+				 * @version  1.0.1
 				 *
 				 * @param  array $css
 				 */
@@ -132,10 +135,19 @@ class Editor implements Component_Interface {
 
 					/**
 					 * Removing all Styles → Colors.
-					 * These options are really not needed in this theme.
 					 * @link  https://github.com/WordPress/gutenberg/issues/53947
+					 *
+					 * IMPORTANT:
+					 * Well, do not hide this! There is just one useful control for
+					 * this theme in the section and it is "Link" color setup control
+					 * (and maybe even each individual heading color controls).
+					 * Unfortunately, WordPress does not provide means to hide other
+					 * global styles color controls as of now (WP6.5), so we need to
+					 * keep them all in hope users won't tweak the "Button", "Text",
+					 * "Background" and "Heading" control. Expecting rise of support
+					 * questions related to this colors section.
 					 */
-					'site-editor/styles-colors-elements' => '.edit-site-global-styles-screen-colors .color-block-support-panel{display:none}',
+					// 'site-editor/styles-colors-elements' => '.edit-site-global-styles-screen-colors .color-block-support-panel{display:none}',
 
 					/**
 					 * Removing "Button" from Styles → Typography.

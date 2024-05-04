@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.0.0\n"
+"Project-Id-Version: Zooey 1.0.1\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-03T14:53:00+00:00\n"
+"POT-Creation-Date: 2024-05-04T22:28:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: zooey\n"
@@ -49,227 +49,227 @@ msgctxt "Aria label for Cover block background image with empty alternative text
 msgid "Background image"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:500
+#: includes/Content/Block_Pattern.php:503
 msgctxt "keyword"
 msgid "site"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:577
+#: includes/Content/Block_Pattern.php:580
 msgctxt "Block pattern category label."
 msgid "Questions & Answers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:578
+#: includes/Content/Block_Pattern.php:581
 msgctxt "Block pattern category label."
 msgid "Intro (Page Title)"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:579
+#: includes/Content/Block_Pattern.php:582
 msgctxt "Block pattern category label."
 msgid "Numbers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:580
+#: includes/Content/Block_Pattern.php:583
 msgctxt "Block pattern category label."
 msgid "Pages"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:581
+#: includes/Content/Block_Pattern.php:584
 msgctxt "Block pattern category label."
 msgid "Pricing"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:582
+#: includes/Content/Block_Pattern.php:585
 msgctxt "Block pattern category label."
 msgid "Templates"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:602
+#: includes/Content/Block_Pattern.php:605
 msgctxt "Block pattern category label."
 msgid "Site builder"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:610
+#: includes/Content/Block_Pattern.php:613
 msgctxt "Block pattern category label."
 msgid "Zooey theme"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:727
+#: includes/Content/Block_Pattern.php:730
 msgctxt "Demo text."
 msgid "Some text"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:728
+#: includes/Content/Block_Pattern.php:731
 msgctxt "Demo text."
 msgid "Just a short sentence"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:729
+#: includes/Content/Block_Pattern.php:732
 msgctxt "Demo text."
 msgid "Write your own copy text here"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:730
+#: includes/Content/Block_Pattern.php:733
 msgctxt "Demo text."
 msgid "This is just a demo text you should overwrite"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:733
+#: includes/Content/Block_Pattern.php:736
 msgctxt "Demo text."
 msgid "Title"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:734
+#: includes/Content/Block_Pattern.php:737
 msgctxt "Demo text."
 msgid "This is title"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:735
+#: includes/Content/Block_Pattern.php:738
 msgctxt "Demo text."
 msgid "Write some title text here"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:736
+#: includes/Content/Block_Pattern.php:739
 msgctxt "Demo text."
 msgid "This is title text and it may be a bit long"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:737
+#: includes/Content/Block_Pattern.php:740
 msgctxt "Demo text."
 msgid "The ideal length of the title text in here should be maybe a bit longer"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:741
+#: includes/Content/Block_Pattern.php:744
 msgctxt "Demo text."
 msgid "123 Street Name<br>Cityname 56789<br>COUNTRY"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:742
+#: includes/Content/Block_Pattern.php:745
 msgctxt "Demo text."
 msgid "123 Street Name, Cityname 56789, COUNTRY"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:743
+#: includes/Content/Block_Pattern.php:746
 msgctxt "Demo text."
 msgid "example@example.com"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:744
+#: includes/Content/Block_Pattern.php:747
 msgctxt "Demo text."
 msgid "+1 (123) 456-7890"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:748
+#: includes/Content/Block_Pattern.php:751
 msgctxt "Demo text."
 msgid "10:30 am on Monday, July 1, 2021"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:749
+#: includes/Content/Block_Pattern.php:752
 msgctxt "Demo text. Week days."
 msgid "Mon - Fri"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:750
+#: includes/Content/Block_Pattern.php:753
 msgctxt "Demo text. Weekend days."
 msgid "Sat - Sun"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:751
+#: includes/Content/Block_Pattern.php:754
 msgctxt "Demo text."
 msgid "Monday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:752
+#: includes/Content/Block_Pattern.php:755
 msgctxt "Demo text."
 msgid "Tuesday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:753
+#: includes/Content/Block_Pattern.php:756
 msgctxt "Demo text."
 msgid "Wednesday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:754
+#: includes/Content/Block_Pattern.php:757
 msgctxt "Demo text."
 msgid "Thursday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:755
+#: includes/Content/Block_Pattern.php:758
 msgctxt "Demo text."
 msgid "Friday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:756
+#: includes/Content/Block_Pattern.php:759
 msgctxt "Demo text."
 msgid "Saturday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:757
+#: includes/Content/Block_Pattern.php:760
 msgctxt "Demo text."
 msgid "Sunday"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:762
+#: includes/Content/Block_Pattern.php:765
 msgctxt "Demo text. Name of a person."
 msgid "Vincent van Gogh"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:763
+#: includes/Content/Block_Pattern.php:766
 msgctxt "Demo text. Name of a person."
 msgid "Edward Hopper"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:764
+#: includes/Content/Block_Pattern.php:767
 msgctxt "Demo text. Name of a person."
 msgid "Pablo Picasso"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:765
+#: includes/Content/Block_Pattern.php:768
 msgctxt "Demo text. Name of a person."
 msgid "Mary Cassatt"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:766
+#: includes/Content/Block_Pattern.php:769
 msgctxt "Demo text. Name of a person."
 msgid "Frida Kahlo"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:767
+#: includes/Content/Block_Pattern.php:770
 msgctxt "Demo text. Name of a person."
 msgid "Berthe Morisot"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:769
+#: includes/Content/Block_Pattern.php:772
 msgctxt "Demo text. Occupation, job title."
 msgid "founder"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:773
+#: includes/Content/Block_Pattern.php:776
 msgctxt "Demo text. Image alt text."
 msgid "Image alternative description text"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:774
+#: includes/Content/Block_Pattern.php:777
 msgctxt "Demo text. Button label."
 msgid "Click here &rarr;"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:775
+#: includes/Content/Block_Pattern.php:778
 msgctxt "Demo text. Button label."
 msgid "Read more &rarr;"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:776
+#: includes/Content/Block_Pattern.php:779
 msgctxt "Demo text. Price."
 msgid "$19"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:780
+#: includes/Content/Block_Pattern.php:783
 msgctxt "Demo text. Form block plugin URL."
 msgid "https://wordpress.org/plugins/search/form+block/"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:781
+#: includes/Content/Block_Pattern.php:784
 msgctxt "Demo text."
 msgid "Use a form block here ↗"
 msgstr ""
@@ -1104,7 +1104,7 @@ msgid "Posts"
 msgstr ""
 
 #: includes/Customize/Options.php:1111
-#: patterns/site/header.php:74
+#: patterns/site/header.php:78
 msgid "Blog"
 msgstr ""
 
@@ -1820,9 +1820,10 @@ msgstr ""
 #: patterns/call-to-action/cta-08.php:20
 #: patterns/call-to-action/cta-09.php:20
 #: patterns/call-to-action/cta-10.php:20
-#: patterns/intro/intro-01.php:21
+#: patterns/intro/intro-01.php:22
 #: patterns/intro/intro-02.php:21
-#: patterns/intro/intro-05.php:25
+#: patterns/intro/intro-05.php:26
+#: patterns/intro/intro-06.php:25
 #: patterns/numbers/numbers-03.php:23
 #: patterns/posts/posts-01.php:23
 #: patterns/pricing/pricing-01.php:21
@@ -2045,7 +2046,7 @@ msgid "Quote with contact info on the side and an image below"
 msgstr ""
 
 #: patterns/contact/contact-04.php:55
-#: patterns/site/header.php:75
+#: patterns/site/header.php:79
 msgid "Contact"
 msgstr ""
 
@@ -2193,12 +2194,12 @@ msgctxt "keyword"
 msgid "images"
 msgstr ""
 
-#: patterns/intro/intro-01.php:18
+#: patterns/intro/intro-01.php:19
 msgctxt "Block pattern title."
-msgid "Page title with background image, features list, and buttons"
+msgid "Page title with background image with zoom in animation, features list, and buttons"
 msgstr ""
 
-#: patterns/intro/intro-01.php:20
+#: patterns/intro/intro-01.php:21
 #: patterns/intro/intro-02.php:20
 #: patterns/numbers/numbers-03.php:25
 #: patterns/posts/posts-01.php:22
@@ -2208,11 +2209,12 @@ msgctxt "keyword"
 msgid "call to action"
 msgstr ""
 
-#: patterns/intro/intro-01.php:22
+#: patterns/intro/intro-01.php:23
 #: patterns/intro/intro-02.php:23
 #: patterns/intro/intro-03.php:20
 #: patterns/intro/intro-04.php:20
-#: patterns/intro/intro-05.php:20
+#: patterns/intro/intro-05.php:21
+#: patterns/intro/intro-06.php:20
 #: patterns/site/intro-archive.php:24
 #: patterns/site/intro-blog.php:27
 #: patterns/site/intro-post.php:24
@@ -2222,11 +2224,12 @@ msgctxt "keyword"
 msgid "page header"
 msgstr ""
 
-#: patterns/intro/intro-01.php:23
+#: patterns/intro/intro-01.php:24
 #: patterns/intro/intro-02.php:24
 #: patterns/intro/intro-03.php:21
 #: patterns/intro/intro-04.php:21
-#: patterns/intro/intro-05.php:21
+#: patterns/intro/intro-05.php:22
+#: patterns/intro/intro-06.php:21
 #: patterns/site/intro-archive.php:25
 #: patterns/site/intro-blog.php:28
 #: patterns/site/intro-post.php:25
@@ -2239,11 +2242,12 @@ msgctxt "keyword"
 msgid "title"
 msgstr ""
 
-#: patterns/intro/intro-01.php:24
+#: patterns/intro/intro-01.php:25
 #: patterns/intro/intro-02.php:25
 #: patterns/intro/intro-03.php:22
 #: patterns/intro/intro-04.php:22
-#: patterns/intro/intro-05.php:22
+#: patterns/intro/intro-05.php:23
+#: patterns/intro/intro-06.php:22
 #: patterns/site/intro-archive.php:26
 #: patterns/site/intro-blog.php:29
 #: patterns/site/intro-post.php:26
@@ -2253,11 +2257,12 @@ msgctxt "keyword"
 msgid "heading"
 msgstr ""
 
-#: patterns/intro/intro-01.php:25
+#: patterns/intro/intro-01.php:26
 #: patterns/intro/intro-02.php:26
 #: patterns/intro/intro-03.php:23
 #: patterns/intro/intro-04.php:23
-#: patterns/intro/intro-05.php:23
+#: patterns/intro/intro-05.php:24
+#: patterns/intro/intro-06.php:23
 #: patterns/site/intro-blog.php:30
 #: patterns/site/intro-post.php:27
 #: patterns/site/intro-search.php:27
@@ -2287,18 +2292,24 @@ msgctxt "Block pattern title."
 msgid "Wide featured image followed with post date, title and intro text"
 msgstr ""
 
-#: patterns/intro/intro-05.php:18
+#: patterns/intro/intro-05.php:19
 msgctxt "Block pattern title."
-msgid "Page title, description, button, and a quote overlaying background image with zoom in animation"
+msgid "Page title, description, button, and a quote overlaying background image"
 msgstr ""
 
-#: patterns/intro/intro-05.php:24
+#: patterns/intro/intro-05.php:25
+#: patterns/intro/intro-06.php:24
 #: patterns/testimonials/testimonials-01.php:20
 #: patterns/testimonials/testimonials-02.php:20
 #: patterns/testimonials/testimonials-03.php:20
 #: patterns/testimonials/testimonials-04.php:20
 msgctxt "keyword"
 msgid "testimonials"
+msgstr ""
+
+#: patterns/intro/intro-06.php:18
+msgctxt "Block pattern title."
+msgid "Page title, description, button, and a quote"
 msgstr ""
 
 #: patterns/media/custom-header-bottom.php:18
@@ -2442,7 +2453,7 @@ msgstr ""
 #: patterns/page/about-1.php:21
 #: patterns/page/contact-1.php:21
 #: patterns/page/gallery-1.php:21
-#: patterns/page/home-1.php:22
+#: patterns/page/home-1.php:23
 #: patterns/page/home-2.php:22
 #: patterns/page/home-3.php:22
 #: patterns/page/portfolio-1.php:21
@@ -2457,7 +2468,7 @@ msgstr ""
 #: patterns/page/contact-1.php:24
 #: patterns/page/faq-1.php:24
 #: patterns/page/gallery-1.php:24
-#: patterns/page/home-1.php:25
+#: patterns/page/home-1.php:26
 #: patterns/page/home-2.php:25
 #: patterns/page/home-3.php:25
 #: patterns/page/portfolio-1.php:24
@@ -2502,14 +2513,14 @@ msgid "Gallery page %s"
 msgstr ""
 
 #. translators: %1$s: context, %2$s: additional notes.
-#: patterns/page/home-1.php:20
+#: patterns/page/home-1.php:21
 #: patterns/page/home-2.php:20
 #: patterns/page/home-3.php:20
 msgctxt "Block pattern title."
 msgid "Home page: %1$s %2$s"
 msgstr ""
 
-#: patterns/page/home-1.php:21
+#: patterns/page/home-1.php:22
 msgctxt "Page content context."
 msgid "With sticky gallery"
 msgstr ""
@@ -2674,7 +2685,7 @@ msgstr ""
 
 #: patterns/posts/posts-01.php:52
 #: patterns/posts/posts-02.php:36
-#: patterns/site/header.php:74
+#: patterns/site/header.php:78
 msgctxt "\"Blog\" page URL relative to home page."
 msgid "/blog/"
 msgstr ""
@@ -2780,9 +2791,9 @@ msgstr ""
 #: patterns/site/entry-query.php:28
 #: patterns/site/footer-centered.php:28
 #: patterns/site/footer-minimal.php:28
-#: patterns/site/footer.php:28
+#: patterns/site/footer.php:29
 #: patterns/site/header-alt.php:30
-#: patterns/site/header.php:30
+#: patterns/site/header.php:31
 #: patterns/site/intro-archive.php:27
 #: patterns/site/intro-blog.php:31
 #: patterns/site/intro-post.php:28
@@ -2792,7 +2803,7 @@ msgstr ""
 #: patterns/site/query-search.php:28
 #: patterns/site/query-with-sidebar.php:28
 #: patterns/site/query.php:28
-#: patterns/site/sidebar.php:25
+#: patterns/site/sidebar.php:26
 #: patterns/site/taxonomy-category-select.php:25
 msgctxt "keyword"
 msgid "site builder"
@@ -2915,7 +2926,7 @@ msgstr ""
 #. translators: %s: context.
 #: patterns/site/footer-centered.php:20
 #: patterns/site/footer-minimal.php:20
-#: patterns/site/footer.php:20
+#: patterns/site/footer.php:21
 msgctxt "Block pattern title."
 msgid "Site footer: %s"
 msgstr ""
@@ -2927,14 +2938,14 @@ msgstr ""
 
 #: patterns/site/footer-centered.php:24
 #: patterns/site/footer-minimal.php:24
-#: patterns/site/footer.php:24
+#: patterns/site/footer.php:25
 msgctxt "keyword"
 msgid "links"
 msgstr ""
 
 #: patterns/site/footer-centered.php:25
 #: patterns/site/footer-minimal.php:25
-#: patterns/site/footer.php:25
+#: patterns/site/footer.php:26
 #: patterns/site/header-alt.php:28
 msgctxt "keyword"
 msgid "social links"
@@ -2942,27 +2953,27 @@ msgstr ""
 
 #: patterns/site/footer-centered.php:26
 #: patterns/site/footer-minimal.php:26
-#: patterns/site/footer.php:26
+#: patterns/site/footer.php:27
 msgctxt "keyword"
 msgid "info"
 msgstr ""
 
 #: patterns/site/footer-centered.php:27
 #: patterns/site/footer-minimal.php:27
-#: patterns/site/footer.php:27
+#: patterns/site/footer.php:28
 msgctxt "keyword"
 msgid "copyright"
 msgstr ""
 
 #: patterns/site/footer-centered.php:50
 #: patterns/site/footer-minimal.php:45
-#: patterns/site/footer.php:83
+#: patterns/site/footer.php:84
 msgid "Copyright &copy; "
 msgstr ""
 
 #: patterns/site/footer-centered.php:50
 #: patterns/site/footer-minimal.php:49
-#: patterns/site/footer.php:87
+#: patterns/site/footer.php:88
 msgid "To the top &uarr;"
 msgstr ""
 
@@ -2971,38 +2982,38 @@ msgctxt "Site footer context."
 msgid "Minimal"
 msgstr ""
 
-#: patterns/site/footer.php:21
+#: patterns/site/footer.php:22
 msgctxt "Site footer context."
 msgid "Default"
 msgstr ""
 
-#: patterns/site/footer.php:69
+#: patterns/site/footer.php:70
 msgid "About Us"
 msgstr ""
 
-#: patterns/site/footer.php:126
+#: patterns/site/footer.php:127
 msgid "Services"
 msgstr ""
 
-#: patterns/site/footer.php:130
+#: patterns/site/footer.php:131
 msgid "First service"
 msgstr ""
 
-#: patterns/site/footer.php:131
+#: patterns/site/footer.php:132
 msgid "Next service"
 msgstr ""
 
-#: patterns/site/footer.php:132
+#: patterns/site/footer.php:133
 msgid "Another service"
 msgstr ""
 
-#: patterns/site/footer.php:133
+#: patterns/site/footer.php:134
 msgid "Last service"
 msgstr ""
 
 #. translators: %s: context.
 #: patterns/site/header-alt.php:20
-#: patterns/site/header.php:20
+#: patterns/site/header.php:21
 msgctxt "Block pattern title."
 msgid "Site header: %s"
 msgstr ""
@@ -3013,46 +3024,46 @@ msgid "Navigation next to logo"
 msgstr ""
 
 #: patterns/site/header-alt.php:24
-#: patterns/site/header.php:24
+#: patterns/site/header.php:25
 msgctxt "keyword"
 msgid "logo"
 msgstr ""
 
 #: patterns/site/header-alt.php:25
-#: patterns/site/header.php:25
+#: patterns/site/header.php:26
 msgctxt "keyword"
 msgid "navigation"
 msgstr ""
 
 #: patterns/site/header-alt.php:26
-#: patterns/site/header.php:26
+#: patterns/site/header.php:27
 msgctxt "keyword"
 msgid "site title"
 msgstr ""
 
 #: patterns/site/header-alt.php:27
-#: patterns/site/header.php:27
+#: patterns/site/header.php:28
 msgctxt "keyword"
 msgid "tagline"
 msgstr ""
 
 #: patterns/site/header-alt.php:29
-#: patterns/site/header.php:29
+#: patterns/site/header.php:30
 msgctxt "keyword"
 msgid "cart"
 msgstr ""
 
-#: patterns/site/header.php:21
+#: patterns/site/header.php:22
 msgctxt "Site header context."
 msgid "Default"
 msgstr ""
 
-#: patterns/site/header.php:28
+#: patterns/site/header.php:29
 msgctxt "keyword"
 msgid "user account"
 msgstr ""
 
-#: patterns/site/header.php:75
+#: patterns/site/header.php:79
 msgctxt "\"Contact\" page URL relative to home page."
 msgid "/contact/"
 msgstr ""
@@ -3179,30 +3190,30 @@ msgctxt "Query loop context."
 msgid "Default"
 msgstr ""
 
-#: patterns/site/sidebar.php:22
+#: patterns/site/sidebar.php:23
 msgctxt "Block pattern title."
 msgid "Sidebar"
 msgstr ""
 
-#: patterns/site/sidebar.php:24
+#: patterns/site/sidebar.php:25
 msgctxt "keyword"
 msgid "widget"
 msgstr ""
 
-#: patterns/site/sidebar.php:44
+#: patterns/site/sidebar.php:45
 msgid "Sidebar, a secondary content"
 msgstr ""
 
-#: patterns/site/sidebar.php:50
+#: patterns/site/sidebar.php:51
 msgid "About me"
 msgstr ""
 
-#: patterns/site/sidebar.php:79
+#: patterns/site/sidebar.php:80
 msgctxt "Widget title."
 msgid "Tags"
 msgstr ""
 
-#: patterns/site/sidebar.php:98
+#: patterns/site/sidebar.php:99
 msgctxt "Widget title."
 msgid "Recent Comments"
 msgstr ""

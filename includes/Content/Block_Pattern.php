@@ -16,7 +16,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -34,6 +35,7 @@ class Block_Pattern implements Component_Interface {
 	 * Array of pattern file slugs (IDs) organized in folders (categories).
 	 *
 	 * @since    1.0.0
+	 * @version  1.0.1
 	 * @access   private
 	 * @var      array
 	 */
@@ -92,6 +94,7 @@ class Block_Pattern implements Component_Interface {
 			'intro-03',
 			'intro-04',
 			'intro-05',
+			'intro-06',
 		),
 
 		'media' => array(

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -15,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Page title, description, button, and a quote overlaying background image with zoom in animation', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Page title, description, button, and a quote overlaying background image', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'page header', 'keyword', 'zooey' ),
 		esc_html_x( 'title', 'keyword', 'zooey' ),
@@ -40,7 +41,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|xl"}}}} -->
 		<div class="wp-block-columns alignwide">
 
-			<!-- wp:column {"width":"61.8%","style":{"spacing":{"padding":{"top":"12vh"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"640px"}} -->
+			<!-- wp:column {"width":"61.8%","style":{"spacing":{"padding":{"top":"12vh"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"720px"}} -->
 			<div class="wp-block-column" style="padding-top:12vh;flex-basis:61.8%">
 
 				<!-- wp:post-title {"level":1} /-->

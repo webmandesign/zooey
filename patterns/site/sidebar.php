@@ -9,7 +9,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -43,8 +44,8 @@ $image = Block_Pattern::get_image_url( '1to1-3', 'sidebar-about-me' );
 <!-- wp:group {"tagName":"aside","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained","contentSize":"480px"}} -->
 <aside aria-label="<?php esc_attr_e( 'Sidebar, a secondary content', 'zooey' ); ?>" class="wp-block-group">
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"constrained","contentSize":""}} -->
-	<section class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:0">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","layout":{"type":"constrained","contentSize":""}} -->
+	<section class="wp-block-group has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0">
 
 		<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 		<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'About me', 'zooey' ); ?></h2>

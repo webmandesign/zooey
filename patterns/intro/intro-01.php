@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -15,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Page title with background image, features list, and buttons', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Page title with background image with zoom in animation, features list, and buttons', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'call to action', 'keyword', 'zooey' ),
 		esc_html_x( 'buttons', 'keyword', 'zooey' ),
