@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -54,7 +55,8 @@ class Block implements Component_Interface {
 	/**
 	 * Enqueues block editor assets for block modifications.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.2
 	 *
 	 * @return  void
 	 */
@@ -74,13 +76,13 @@ class Block implements Component_Interface {
 			Assets\Factory::script_enqueue( array(
 				'handle' => 'zooey-block-mods',
 				'src'    => get_theme_file_uri( 'assets/js/block-mods.min.js' ),
-				'deps'   => array( 'wp-blocks', 'wp-hooks', 'wp-dom', 'lodash' ),
+				'deps'   => array( 'wp-blocks', 'wp-hooks', 'wp-dom-ready', 'lodash' ),
 			) );
 
 			Assets\Factory::script_enqueue( array(
 				'handle'   => 'zooey-block-variations',
 				'src'      => get_theme_file_uri( 'assets/js/block-variations.min.js' ),
-				'deps'     => array( 'wp-blocks', 'wp-i18n' ),
+				'deps'     => array( 'wp-blocks', 'wp-i18n', 'wp-dom-ready' ),
 				'localize' => array(
 					'zooeyVariations' => array(
 						'getTemplateDirectoryURI' => trailingslashit( get_template_directory_uri() ),

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -22,7 +22,8 @@ class Editor implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.2
 	 *
 	 * @return  void
 	 */
@@ -45,7 +46,6 @@ class Editor implements Component_Interface {
 				add_action( 'init', __CLASS__ . '::editor_stylesheet' );
 
 				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::editor_ui_stylesheet_block' );
-				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::editor_mods' );
 
 				add_action( 'enqueue_block_assets', __CLASS__ . '::editor_stylesheet_block' );
 				add_action( 'enqueue_block_assets', __CLASS__ . '::editor_inline_styles_block' );
@@ -343,45 +343,5 @@ class Editor implements Component_Interface {
 			add_editor_style( $stylesheets );
 
 	} // /add_editor_style
-
-	/**
-	 * Enqueues site editor modifications.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return  void
-	 */
-	public static function editor_mods() {
-
-		// Variables
-
-			$current_screen = get_current_screen();
-
-
-		// Requirements check
-
-			if (
-				empty( $current_screen->base )
-				|| 'site-editor' !== $current_screen->base
-			) {
-				return;
-			}
-
-
-		// Processing
-
-			Factory::script_enqueue( array(
-				'handle'   => 'zooey-site-editor-mods',
-				'src'      => get_theme_file_uri( 'assets/js/site-editor.min.js' ),
-				'deps'     => array( 'wp-i18n', 'wp-dom' ),
-				'localize' => array(
-					'zooeySiteEditor' => array(
-						'customizerTypographyURI' => esc_url( admin_url( 'customize.php?autofocus[control]=typography_font_size' ) ),
-						'customizerGradientsURI'  => esc_url( admin_url( 'customize.php?autofocus[control]=gradient_stop_hard' ) ),
-					),
-				),
-			) );
-
-	} // /editor_mods
 
 }

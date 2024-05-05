@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -50,7 +51,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group -->
 			<div class="wp-block-group">
 
-				<!-- wp:site-logo {"width":480,"shouldSyncIcon":false} /-->
+				<!-- wp:site-logo {"width":240,"shouldSyncIcon":false} /-->
 
 				<!-- wp:site-title {"level":0,"isLink":false,"className":"is-style-screen-reader-text"} /-->
 

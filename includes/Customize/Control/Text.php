@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Customize\Control;
@@ -29,7 +30,8 @@ class Text extends WP_Customize_Control {
 	/**
 	 * Renders the control wrapper and calls $this->render_content() for the internals.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.2
 	 *
 	 * @return  void
 	 */
@@ -51,7 +53,14 @@ class Text extends WP_Customize_Control {
 				echo '<datalist id="datalist-' . esc_attr( $this->id ) . '">';
 
 				foreach ( $this->choices as $value ) {
-					echo '<option value="' . esc_attr( $value ) . '">';
+					if (
+						isset( $value['value'] )
+						&& isset( $value['label'] )
+					) {
+						echo '<option value="' . esc_attr( $value['value'] ) . '">' . esc_html( $value['label'] ) . '</option>';
+					} else {
+						echo '<option value="' . esc_attr( $value ) . '">';
+					}
 				}
 
 				echo '</datalist>';

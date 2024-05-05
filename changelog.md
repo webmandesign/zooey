@@ -1,5 +1,36 @@
 # Zooey Changelog
 
+## 1.0.2, 20240505
+
+### Added
+- `show-if-no-logo` class functionality for Site Title block
+
+### Updated
+- Changing main font from Ubuntu to Ubuntu Sans
+- Serving fonts locally from the theme
+- Reorganizing code
+- Fixing/improving JavaScript files dependencies
+- Improving theme options
+- Improving block patterns
+- Localization
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/site-title.scss
+	includes/Assets/Editor.php
+	includes/Content/Block.php
+	includes/Customize/Options.php
+	includes/Customize/Control/Text.php
+	includes/Setup/Site_Editor.php
+	languages/zooey.pot
+	patterns/site/header-alt.php
+	patterns/site/header.php
+
+
 ## 1.0.1, 20240504
 
 ### Added

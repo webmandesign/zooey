@@ -4,7 +4,7 @@
 
 	"docBlock" : {
 		"@since"   : "1.0.0",
-		"@version" : "1.0.0"
+		"@version" : "1.0.2"
 	},
 
 	"settings" : {
@@ -541,6 +541,38 @@
 					"name"       : "Monospace",
 					"slug"       : "monospace",
 					"fontFamily" : "ui-monospace, monospace"
+				},
+				{
+					"name"       : "Ubuntu Sans",
+					"slug"       : "ubuntu-sans",
+					"fontFamily" : "'Ubuntu Sans', sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Ubuntu Sans",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300 400 700",
+							"src"         : [
+								"file:./assets/fonts/ubuntu-sans/ubuntu-sans-variable.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Unica One",
+					"slug"       : "unica-one",
+					"fontFamily" : "'Unica One', sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Unica One",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "400",
+							"src"         : [
+								"file:./assets/fonts/unica-one/unica-one-regular.woff2"
+							]
+						}
+					]
 				}
 			],
 			"fontSizes" : [

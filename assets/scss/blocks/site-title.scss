@@ -1,4 +1,5 @@
 // core/site-title
+// @version  1.0.2
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -6,3 +7,17 @@
 .wp-block-site-title {
 	white-space: nowrap;
 }
+
+// `show-if-no-logo` class styles.
+//
+// Even if screen reader styles are used on the block, when setting
+// additional `show-if-no-logo` block class and no logo image is set
+// for the website, the block is displayed (not visually hidden).
+body:not(.wp-custom-logo) .show-if-no-logo.is-style-screen-reader-text {
+	@extend %screen_reader--show;
+	display: block;
+	position: static !important;
+	margin: auto;
+}
+
+@import '../_extend/_index';

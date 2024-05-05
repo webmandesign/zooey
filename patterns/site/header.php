@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -48,7 +48,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 			<!-- wp:site-logo {"width":560,"shouldSyncIcon":false} /-->
 
-			<!-- wp:site-title {"level":0,"isLink":false,"className":"is-style-screen-reader-text"} /-->
+			<!-- wp:site-title {"level":0,"isLink":false,"style":{"typography":{"lineHeight":"1"}},"className":"is-style-screen-reader-text show-if-no-logo","fontSize":"mega"} /-->
 
 		</div>
 		<!-- /wp:group -->

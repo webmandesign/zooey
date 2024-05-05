@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -26,9 +27,10 @@ class Options implements Component_Interface {
 	 *
 	 * @see  assets/scss/_setup/_customize-options.scss
 	 *
-	 * @since   1.0.0
-	 * @access  public
-	 * @var     array
+	 * @since    1.0.0
+	 * @version  1.0.2
+	 * @access   public
+	 * @var      array
 	 */
 	public static $theme_mods = array(
 
@@ -62,9 +64,9 @@ class Options implements Component_Interface {
 			'typography_font_size'                => 20,
 			'typography_modular_scale'            => 1.2,
 			'typography_desktop_multiply'         => 1.75,
-			'typography_font_family_global'       => "'Ubuntu', sans-serif",
+			'typography_font_family_global'       => "'Ubuntu Sans', sans-serif",
 			'typography_font_family_supplemental' => "'Unica One', sans-serif",
-			'typography_font_family_alternative'  => "'Ubuntu', sans-serif",
+			'typography_font_family_alternative'  => "'Ubuntu Sans', sans-serif",
 	);
 
 	/**
@@ -203,7 +205,8 @@ class Options implements Component_Interface {
 	/**
 	 * Sets theme options array.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.2
 	 *
 	 * @param  array $options
 	 *
@@ -248,11 +251,7 @@ class Options implements Component_Interface {
 						esc_html__( 'Find out more ↗', 'zooey' )
 					)
 					. '<br>'
-					. sprintf(
-						'<a href="%1$s" class="button">%2$s</a>',
-						esc_url( admin_url( 'site-editor.php' ) ),
-						esc_html__( 'Use Site Editor', 'zooey' )
-					)
+					. Site_Editor::get_link( array( 'class' => 'button' ) )
 					. '</p>',
 				'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_enabled',
 			);
@@ -325,11 +324,7 @@ class Options implements Component_Interface {
 								. ' '
 								. esc_html__( '"Base" color is used as the site background color.', 'zooey' )
 								. '<br>'
-								. sprintf(
-									'<a href="%1$s">%2$s</a>',
-									esc_url( admin_url( 'site-editor.php' ) ),
-									esc_html__( 'Use Site Editor now &rarr;', 'zooey' )
-								)
+								. Site_Editor::get_link()
 								. '</p>',
 						),
 
@@ -544,17 +539,10 @@ class Options implements Component_Interface {
 								. '<br>'
 								. esc_html__( 'Colors and layout of theme sections (such as site header or footer) can be customized by editing template parts in Site Editor.', 'zooey' )
 								. '<br>'
-								. sprintf(
-									'<a href="%1$s">%2$s</a>',
-									esc_url( add_query_arg(
-										array(
-											'postType' => 'wp_template_part',
-											'path'     => '/wp_template_part/all',
-										),
-										admin_url( 'site-editor.php' ) )
-									),
-									esc_html__( 'Use Site Editor now &rarr;', 'zooey' )
-								)
+								. Site_Editor::get_link( array( 'url_args' => array(
+									'postType' => 'wp_template_part',
+									'path'     => '/wp_template_part/all',
+								) ) )
 								. '</p>',
 						),
 
@@ -1012,7 +1000,15 @@ class Options implements Component_Interface {
 								. esc_html__( 'Default value:', 'zooey' )
 								. ' <code>' . self::$theme_mods['typography_font_family_global'] . '</code>',
 							'default'           => self::$theme_mods['typography_font_family_global'],
-							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_global'] ], $font_families ),
+							'datalist'          => array_merge(
+								array(
+									array(
+										'value' => self::$theme_mods['typography_font_family_global'],
+										'label' => _x( 'Default value', 'zooey' ),
+									),
+								),
+								$font_families
+							),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_global',
@@ -1031,7 +1027,15 @@ class Options implements Component_Interface {
 								. esc_html__( 'Default value:', 'zooey' )
 								. ' <code>' . self::$theme_mods['typography_font_family_supplemental'] . '</code>',
 							'default'           => self::$theme_mods['typography_font_family_supplemental'],
-							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_supplemental'] ], $font_families ),
+							'datalist'          => array_merge(
+								array(
+									array(
+										'value' => self::$theme_mods['typography_font_family_supplemental'],
+										'label' => _x( 'Default value', 'zooey' ),
+									),
+								),
+								$font_families
+							),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_supplemental',
@@ -1050,7 +1054,15 @@ class Options implements Component_Interface {
 								. esc_html__( 'Default value:', 'zooey' )
 								. ' <code>' . self::$theme_mods['typography_font_family_alternative'] . '</code>',
 							'default'           => self::$theme_mods['typography_font_family_alternative'],
-							'datalist'          => array_merge( [ self::$theme_mods['typography_font_family_alternative'] ], $font_families ),
+							'datalist'          => array_merge(
+								array(
+									array(
+										'value' => self::$theme_mods['typography_font_family_alternative'],
+										'label' => _x( 'Default value', 'zooey' ),
+									),
+								),
+								$font_families
+							),
 							'sanitize_callback' => __NAMESPACE__ . '\Sanitize::fonts',
 							'css_var'           => array(
 								'name'  => '--theme--mod--typography_font_family_alternative',
@@ -1085,11 +1097,7 @@ class Options implements Component_Interface {
 							. '<br>'
 							. esc_html__( 'In case you need to modify typography more precisely, you can do so in Site Editor → Styles section.', 'zooey' )
 							. '<br>'
-							. sprintf(
-								'<a href="%1$s">%2$s</a>',
-								esc_url( admin_url( 'site-editor.php' ) ),
-								esc_html__( 'Use Site Editor now &rarr;', 'zooey' )
-							)
+							. Site_Editor::get_link()
 							. '</p>',
 					),
 
@@ -1142,17 +1150,10 @@ class Options implements Component_Interface {
 								'<p class="notice notice-info">'
 								. esc_html__( 'You can further customize blog page layout in Site Editor.', 'zooey' )
 								. ' '
-								. sprintf(
-									'<a href="%1$s">%2$s</a>',
-									esc_url( add_query_arg(
-										array(
-											'postType' => 'wp_template',
-											'postId'   => 'zooey//home',
-										),
-										admin_url( 'site-editor.php' ) )
-									),
-									esc_html__( 'Use Site Editor now &rarr;', 'zooey' )
-								)
+								. Site_Editor::get_link( array( 'url_args' => array(
+									'postType' => 'wp_template',
+									'postId'   => 'zooey//home',
+								) ) )
 								. '</p>',
 							'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_enabled',
 						),

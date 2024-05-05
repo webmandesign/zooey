@@ -5,12 +5,14 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.2
  */
 
 namespace WebManDesign\Zooey\Setup;
 
 use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Assets\Factory;
 use WP_Query;
 
 // Exit if accessed directly.
@@ -48,7 +50,8 @@ class Site_Editor implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.2
 	 *
 	 * @return  void
 	 */
@@ -66,6 +69,8 @@ class Site_Editor implements Component_Interface {
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme', 2 );
 
 				add_action( 'admin_menu', __CLASS__ . '::admin_menu' );
+
+				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::editor_mods' );
 
 			// Filters
 
@@ -276,5 +281,94 @@ class Site_Editor implements Component_Interface {
 			}
 
 	} // /admin_menu
+
+	/**
+	 * Enqueues site editor modifications.
+	 *
+	 * @since    1.0.0
+	 * @version  1.0.2
+	 *
+	 * @return  void
+	 */
+	public static function editor_mods() {
+
+		// Variables
+
+			$current_screen = get_current_screen();
+
+
+		// Requirements check
+
+			if (
+				empty( $current_screen->base )
+				|| 'site-editor' !== $current_screen->base
+			) {
+				return;
+			}
+
+
+		// Processing
+
+			Factory::script_enqueue( array(
+				'handle'   => 'zooey-site-editor-mods',
+				'src'      => get_theme_file_uri( 'assets/js/site-editor.min.js' ),
+				'deps'     => array( 'wp-i18n', 'wp-dom-ready' ),
+				'localize' => array(
+					'zooeySiteEditor' => array(
+						'customizerTypographyURI' => esc_url( admin_url( 'customize.php?autofocus[control]=typography_font_size' ) ),
+						'customizerGradientsURI'  => esc_url( admin_url( 'customize.php?autofocus[control]=gradient_stop_hard' ) ),
+					),
+				),
+			) );
+
+	} // /editor_mods
+
+	/**
+	 * Site editor link.
+	 *
+	 * Mainly for customizer options.
+	 *
+	 * @since  1.0.2
+	 *
+	 * @param  array $args
+	 *
+	 * @return  string
+	 */
+	public static function get_link( array $args = array() ): string {
+
+		// Variables
+
+			$args = wp_parse_args( $args, array(
+				'class'    => '',
+				'label'    => __( 'Use Site Editor &rarr;', 'zooey' ),
+				'url'      => admin_url( 'site-editor.php' ),
+				'url_args' => array(),
+			) );
+
+
+		// Processing
+
+			if ( ! empty( $args['class'] ) ) {
+				$args['class'] = ' class="' . esc_attr( $args['class'] ) . '"';
+			}
+
+			if ( ! empty( $args['url_args'] ) ) {
+				$args['url'] = add_query_arg(
+					(array) $args['url_args'],
+					$args['url']
+				);
+			}
+
+
+		// Output
+
+			return sprintf(
+				'<a href="%1$s"%3$s>%2$s</a>',
+				esc_url( $args['url'] ),
+				esc_html( $args['label'] ),
+				$args['class']
+			);
+
+	} // /get_link
 
 }
