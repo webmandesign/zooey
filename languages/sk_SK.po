@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zooey\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2024-05-05T16:41:56+00:00\n"
-"PO-Revision-Date: 2024-05-05 18:44+0200\n"
+"POT-Creation-Date: 2024-05-05T17:49:08+00:00\n"
+"PO-Revision-Date: 2024-05-05 19:49+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
@@ -1142,6 +1142,11 @@ msgstr "Hlavné písmo"
 #: includes/Customize/Options.php:998
 msgid "By default applied as main, global website font."
 msgstr "Pôvodne sa aplikuje ako hlavné, globálne písmo webstránky."
+
+#: includes/Customize/Options.php:1007 includes/Customize/Options.php:1034
+#: includes/Customize/Options.php:1061
+msgid "Default value"
+msgstr "Predvolená hodnota"
 
 #: includes/Customize/Options.php:1024
 msgid "Heading font"

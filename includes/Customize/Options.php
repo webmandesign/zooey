@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.0.3
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -206,7 +206,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.2
+	 * @version  1.0.3
 	 *
 	 * @param  array $options
 	 *
@@ -1004,7 +1004,7 @@ class Options implements Component_Interface {
 								array(
 									array(
 										'value' => self::$theme_mods['typography_font_family_global'],
-										'label' => _x( 'Default value', 'zooey' ),
+										'label' => __( 'Default value', 'zooey' ),
 									),
 								),
 								$font_families
@@ -1031,7 +1031,7 @@ class Options implements Component_Interface {
 								array(
 									array(
 										'value' => self::$theme_mods['typography_font_family_supplemental'],
-										'label' => _x( 'Default value', 'zooey' ),
+										'label' => __( 'Default value', 'zooey' ),
 									),
 								),
 								$font_families
@@ -1058,7 +1058,7 @@ class Options implements Component_Interface {
 								array(
 									array(
 										'value' => self::$theme_mods['typography_font_family_alternative'],
-										'label' => _x( 'Default value', 'zooey' ),
+										'label' => __( 'Default value', 'zooey' ),
 									),
 								),
 								$font_families

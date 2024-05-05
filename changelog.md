@@ -1,5 +1,18 @@
 # Zooey Changelog
 
+## 1.0.3, 20240505
+
+### Fixed
+- Localization issue introduced in version 1.0.2
+
+### File updates
+	changelog.md
+	style.css
+	includes/Customize/Options.php
+	languages/sk_SK.*
+	languages/zooey.pot
+
+
 ## 1.0.2, 20240505
 
 ### Added
