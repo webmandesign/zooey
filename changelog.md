@@ -1,5 +1,19 @@
 # Zooey Changelog
 
+## 1.0.4, 20240507
+
+### Updated
+- Improving patterns
+- Sticky post CSS styles
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/blocks/post-template.scss
+	patterns/site/taxonomy-category-select.php
+	patterns/testimonials/testimonials-01.php
+
+
 ## 1.0.3, 20240505
 
 ### Fixed

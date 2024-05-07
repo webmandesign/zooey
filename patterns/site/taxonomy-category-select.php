@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.4
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -36,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'Browse by topic:', 'zooey' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:categories {"showPostCounts":true,"showOnlyTopLevel":true,"className":"is-style-buttons-inline","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} /-->
+	<!-- wp:categories {"showPostCounts":true,"showOnlyTopLevel":true,"className":"is-style-buttons-inline","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"align":"center"} /-->
 
 </div>
 <!-- /wp:group -->
