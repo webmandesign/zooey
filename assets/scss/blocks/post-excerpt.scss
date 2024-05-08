@@ -1,16 +1,14 @@
 // core/post-excerpt
+// @version  1.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-@for $i from 2 through 4 {
+.is-style-truncate-2 {
 
-	.is-style-truncate-#{$i} {
-
-		.wp-block-post-excerpt__excerpt {
-			@extend %excerpt_truncate;
-			-webkit-line-clamp: $i;
-		}
+	.wp-block-post-excerpt__excerpt {
+		@extend %excerpt_truncate;
+		-webkit-line-clamp: $i;
 	}
 }
 

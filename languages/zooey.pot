@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.0.3\n"
+"Project-Id-Version: Zooey 1.0.5\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-05T17:49:08+00:00\n"
+"POT-Creation-Date: 2024-05-08T11:24:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: zooey\n"
@@ -274,204 +274,182 @@ msgctxt "Demo text."
 msgid "Use a form block here ↗"
 msgstr ""
 
-#: includes/Content/Block_Style.php:98
+#: includes/Content/Block_Style.php:100
 msgctxt "Block style label."
 msgid "Backdrop blur"
 msgstr ""
 
-#: includes/Content/Block_Style.php:107
+#: includes/Content/Block_Style.php:109
 msgctxt "Block style label."
 msgid "Inline buttons"
 msgstr ""
 
-#: includes/Content/Block_Style.php:115
+#: includes/Content/Block_Style.php:117
 msgctxt "Block style label."
 msgid "Outline button"
 msgstr ""
 
-#: includes/Content/Block_Style.php:122
+#: includes/Content/Block_Style.php:124
 msgctxt "Block style label."
 msgid "Checkmark"
 msgstr ""
 
-#: includes/Content/Block_Style.php:129
+#: includes/Content/Block_Style.php:131
 msgctxt "Block style label."
 msgid "Dashed"
 msgstr ""
 
-#: includes/Content/Block_Style.php:136
+#: includes/Content/Block_Style.php:138
 msgctxt "Block style label."
 msgid "Disable link"
 msgstr ""
 
-#: includes/Content/Block_Style.php:144
+#: includes/Content/Block_Style.php:146
 msgctxt "Block style label."
 msgid "Dotted"
 msgstr ""
 
-#: includes/Content/Block_Style.php:151
+#: includes/Content/Block_Style.php:153
 msgctxt "Block style label."
 msgid "Featured posts"
 msgstr ""
 
-#: includes/Content/Block_Style.php:158
-msgctxt "Block style label."
-msgid "Fit image"
-msgstr ""
-
-#: includes/Content/Block_Style.php:165
+#: includes/Content/Block_Style.php:160
 msgctxt "Block style label."
 msgid "Fixed mobile toggle button"
 msgstr ""
 
-#: includes/Content/Block_Style.php:172
-msgctxt "Block style label."
-msgid "Framed"
-msgstr ""
-
-#: includes/Content/Block_Style.php:181
+#: includes/Content/Block_Style.php:167
 msgctxt "Block style label."
 msgid "Content on hover"
 msgstr ""
 
-#: includes/Content/Block_Style.php:188
+#: includes/Content/Block_Style.php:174
 msgctxt "Block style label."
 msgid "Is image"
 msgstr ""
 
-#: includes/Content/Block_Style.php:195
+#: includes/Content/Block_Style.php:181
 msgctxt "Block style label."
 msgid "Blurred image"
 msgstr ""
 
-#: includes/Content/Block_Style.php:202
+#: includes/Content/Block_Style.php:188
 msgctxt "Block style label."
 msgid "Inline"
 msgstr ""
 
-#: includes/Content/Block_Style.php:210
+#: includes/Content/Block_Style.php:196
 msgctxt "Block style label."
 msgid "Megamenu"
 msgstr ""
 
-#: includes/Content/Block_Style.php:217
+#: includes/Content/Block_Style.php:203
 #: includes/Customize/Options.php:819
 msgctxt "Block style label."
 msgid "Hide on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:231
+#: includes/Content/Block_Style.php:217
 #: includes/Customize/Options.php:820
 msgctxt "Block style label."
 msgid "Only on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:246
+#: includes/Content/Block_Style.php:232
 msgctxt "Block style label."
 msgid "Reverse on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:253
+#: includes/Content/Block_Style.php:239
 msgctxt "Block style label."
 msgid "No bullets"
 msgstr ""
 
-#: includes/Content/Block_Style.php:260
+#: includes/Content/Block_Style.php:246
 msgctxt "Block style label."
 msgid "No line break"
 msgstr ""
 
-#: includes/Content/Block_Style.php:270
+#: includes/Content/Block_Style.php:256
 msgctxt "Block style label."
 msgid "Padding left"
 msgstr ""
 
-#: includes/Content/Block_Style.php:276
+#: includes/Content/Block_Style.php:262
 msgctxt "Block style label."
 msgid "Padding right"
 msgstr ""
 
-#: includes/Content/Block_Style.php:283
+#: includes/Content/Block_Style.php:269
 msgctxt "Block style label."
 msgid "Page intro"
 msgstr ""
 
-#: includes/Content/Block_Style.php:290
+#: includes/Content/Block_Style.php:276
 msgctxt "Block style label."
 msgid "Page intro summary"
 msgstr ""
 
-#: includes/Content/Block_Style.php:297
+#: includes/Content/Block_Style.php:283
 msgctxt "Block style label."
 msgid "Post navigation container"
 msgstr ""
 
-#: includes/Content/Block_Style.php:304
-msgctxt "Block style label."
-msgid "Pull down (small)"
-msgstr ""
-
-#: includes/Content/Block_Style.php:314
+#: includes/Content/Block_Style.php:290
 msgctxt "Block style label."
 msgid "Pull down (large)"
 msgstr ""
 
-#: includes/Content/Block_Style.php:324
-msgctxt "Block style label."
-msgid "Pull up (small)"
-msgstr ""
-
-#: includes/Content/Block_Style.php:334
+#: includes/Content/Block_Style.php:300
 msgctxt "Block style label."
 msgid "Pull up (large)"
 msgstr ""
 
-#: includes/Content/Block_Style.php:345
+#: includes/Content/Block_Style.php:311
 msgctxt "Block style label."
 msgid "Read more outline"
 msgstr ""
 
-#: includes/Content/Block_Style.php:351
+#: includes/Content/Block_Style.php:317
 msgctxt "Block style label."
 msgid "Read more button"
 msgstr ""
 
-#: includes/Content/Block_Style.php:358
+#: includes/Content/Block_Style.php:324
 msgctxt "Block style label."
 msgid "Accessibly hidden"
 msgstr ""
 
-#: includes/Content/Block_Style.php:368
+#: includes/Content/Block_Style.php:334
 msgctxt "Block style label."
 msgid "Site header"
 msgstr ""
 
-#: includes/Content/Block_Style.php:375
+#: includes/Content/Block_Style.php:341
 msgctxt "Block style label."
 msgid "Site footer"
 msgstr ""
 
 #. translators: %d: number of text lines.
-#: includes/Content/Block_Style.php:384
-#: includes/Content/Block_Style.php:394
-#: includes/Content/Block_Style.php:404
+#: includes/Content/Block_Style.php:350
 msgctxt "Block style label."
 msgid "Truncate to %d line"
 msgid_plural "Truncate to %d lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Content/Block_Style.php:413
+#: includes/Content/Block_Style.php:359
 msgctxt "Block style label."
 msgid "Use header image"
 msgstr ""
 
-#: includes/Content/Block_Style.php:419
+#: includes/Content/Block_Style.php:365
 msgctxt "Block style label."
 msgid "Use header image (flipped)"
 msgstr ""
 
-#: includes/Content/Block_Style.php:426
+#: includes/Content/Block_Style.php:372
 msgctxt "Block style label."
 msgid "Zoom in"
 msgstr ""
@@ -2298,7 +2276,7 @@ msgstr ""
 
 #: patterns/intro/intro-05.php:25
 #: patterns/intro/intro-06.php:24
-#: patterns/testimonials/testimonials-01.php:20
+#: patterns/testimonials/testimonials-01.php:21
 #: patterns/testimonials/testimonials-02.php:20
 #: patterns/testimonials/testimonials-03.php:20
 #: patterns/testimonials/testimonials-04.php:20
@@ -2803,7 +2781,7 @@ msgstr ""
 #: patterns/site/query-with-sidebar.php:28
 #: patterns/site/query.php:28
 #: patterns/site/sidebar.php:26
-#: patterns/site/taxonomy-category-select.php:25
+#: patterns/site/taxonomy-category-select.php:26
 msgctxt "keyword"
 msgid "site builder"
 msgstr ""
@@ -2843,13 +2821,13 @@ msgid "After post content"
 msgstr ""
 
 #: patterns/site/entry-meta-bottom.php:24
-#: patterns/site/taxonomy-category-select.php:20
+#: patterns/site/taxonomy-category-select.php:21
 msgctxt "keyword"
 msgid "taxonomy"
 msgstr ""
 
 #: patterns/site/entry-meta-bottom.php:25
-#: patterns/site/taxonomy-category-select.php:21
+#: patterns/site/taxonomy-category-select.php:22
 msgctxt "keyword"
 msgid "category"
 msgstr ""
@@ -3088,7 +3066,7 @@ msgid "Blog page"
 msgstr ""
 
 #: patterns/site/intro-blog.php:24
-#: patterns/site/taxonomy-category-select.php:24
+#: patterns/site/taxonomy-category-select.php:25
 msgctxt "keyword"
 msgid "blog"
 msgstr ""
@@ -3217,22 +3195,22 @@ msgctxt "Widget title."
 msgid "Recent Comments"
 msgstr ""
 
-#: patterns/site/taxonomy-category-select.php:18
+#: patterns/site/taxonomy-category-select.php:19
 msgctxt "Block pattern title."
 msgid "Category selector"
 msgstr ""
 
-#: patterns/site/taxonomy-category-select.php:22
+#: patterns/site/taxonomy-category-select.php:23
 msgctxt "keyword"
 msgid "selector"
 msgstr ""
 
-#: patterns/site/taxonomy-category-select.php:23
+#: patterns/site/taxonomy-category-select.php:24
 msgctxt "keyword"
 msgid "dropdown"
 msgstr ""
 
-#: patterns/site/taxonomy-category-select.php:36
+#: patterns/site/taxonomy-category-select.php:37
 msgid "Browse by topic:"
 msgstr ""
 
@@ -3338,7 +3316,7 @@ msgctxt "Block pattern title."
 msgid "Single template"
 msgstr ""
 
-#: patterns/testimonials/testimonials-01.php:18
+#: patterns/testimonials/testimonials-01.php:19
 msgctxt "Block pattern title."
 msgid "Quote with an image with padding on the side"
 msgstr ""

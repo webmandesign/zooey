@@ -199,63 +199,6 @@
 			}
 		}
 
-	// Frame.
-
-		.is-style-frame {
-
-			img,
-			video,
-			.wp-block-embed__wrapper {
-				border-radius: var(--wp--custom--border-radius--image);
-				box-shadow: var(--wp--preset--shadow--l);
-				overflow: hidden;
-
-				.is-cropped > & {
-					overflow: initial;
-				}
-			}
-
-			figcaption {
-				font-size: var(--wp--preset--font-size--s);
-				text-align: center;
-				text-transform: uppercase;
-				letter-spacing: var(--wp--custom--letter-spacing);
-
-				// Removing Gallery block caption styles.
-				$important: !important;
-				position: static $important;
-				max-height: none $important;
-				left: auto $important;
-				bottom: auto $important;
-				padding: 0 $important;
-				margin: 0 $important;
-				margin-block-start: 1em $important;
-				font-size: var(--wp--preset--font-size--s) $important;
-				background: none $important;
-				color: inherit $important;
-			}
-		}
-
-		@include wrap() {
-
-			figure.is-style-frame[class],
-			.is-style-frame[class] > figure {
-				@extend %shaded_background;
-				position: relative;
-				padding: var(--wp--preset--spacing--l) min( var(--wp--style--root--padding-left), var(--wp--preset--spacing--l) );
-				border-radius: var(--wp--custom--border-radius--image);
-
-				.rtl & {
-					padding: var(--wp--preset--spacing--l) min( var(--wp--style--root--padding-right), var(--wp--preset--spacing--l) );
-				}
-			}
-		}
-
-		figure.is-style-frame.alignfull,
-		.is-style-frame.alignfull > figure {
-			border-radius: 0;
-		}
-
 	// Inline, inline buttons.
 
 		.is-style-inline,
@@ -357,29 +300,13 @@
 			z-index: 5;
 		}
 
-		.is-style-pull-up,
-		.is-style-pull-up-s,
-		.is-style-pull-up-m,
 		.is-style-pull-up-l {
 			margin-top: var(--theme--css--pull) !important;
 		}
-		.is-style-pull-down,
-		.is-style-pull-down-s,
-		.is-style-pull-down-m,
 		.is-style-pull-down-l {
 			margin-bottom: var(--theme--css--pull) !important;
 		}
 
-		.is-style-pull-up-s,
-		.is-style-pull-down-s {
-			--theme--css--pull: var(--wp--custom--pull--s);
-		}
-		.is-style-pull-up,
-		.is-style-pull-up-m,
-		.is-style-pull-down,
-		.is-style-pull-down-m {
-			--theme--css--pull: var(--wp--custom--pull--m);
-		}
 		.is-style-pull-up-l,
 		.is-style-pull-down-l {
 			--theme--css--pull: var(--wp--custom--pull--l);

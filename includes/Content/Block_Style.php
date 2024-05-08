@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -84,7 +85,8 @@ class Block_Style implements Component_Interface {
 	 * and `core/query-pagination-numbers` blocks as pagination appearance is global, used for potential
 	 * non-block pagination provided by various plugins (such as WooCommerce).
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.5
 	 *
 	 * @return  array
 	 */
@@ -154,26 +156,10 @@ class Block_Style implements Component_Interface {
 					),
 				),
 
-				'fit-image' => array(
-					'label'  => _x( 'Fit image', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/cover',
-					),
-				),
-
 				'fixed-mobile-toggle' => array(
 					'label'  => _x( 'Fixed mobile toggle button', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/navigation',
-					),
-				),
-
-				'frame' => array(
-					'label'  => _x( 'Framed', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
-						'core/video',
-						'core/embed',
 					),
 				),
 
@@ -300,28 +286,8 @@ class Block_Style implements Component_Interface {
 					),
 				),
 
-				'pull-down-s' => array(
-					'label'  => _x( 'Pull down (small)', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/post-featured-image',
-					),
-				),
 				'pull-down-l' => array(
 					'label'  => _x( 'Pull down (large)', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/post-featured-image',
-					),
-				),
-				'pull-up-s' => array(
-					'label'  => _x( 'Pull up (small)', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/columns',
 						'core/cover',
@@ -383,26 +349,6 @@ class Block_Style implements Component_Interface {
 						/* translators: %d: number of text lines. */
 						_nx( 'Truncate to %d line', 'Truncate to %d lines', 2, 'Block style label.', 'zooey' ),
 						number_format_i18n( 2 )
-					),
-					'blocks' => array(
-						'core/post-excerpt',
-					),
-				),
-				'truncate-3' => array(
-					'label'  => sprintf(
-						/* translators: %d: number of text lines. */
-						_nx( 'Truncate to %d line', 'Truncate to %d lines', 3, 'Block style label.', 'zooey' ),
-						number_format_i18n( 3 )
-					),
-					'blocks' => array(
-						'core/post-excerpt',
-					),
-				),
-				'truncate-4' => array(
-					'label'  => sprintf(
-						/* translators: %d: number of text lines. */
-						_nx( 'Truncate to %d line', 'Truncate to %d lines', 4, 'Block style label.', 'zooey' ),
-						number_format_i18n( 4 )
 					),
 					'blocks' => array(
 						'core/post-excerpt',

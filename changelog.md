@@ -1,5 +1,22 @@
 # Zooey Changelog
 
+## 1.0.5, 20240508
+
+### Updated
+- Removing obsolete block styles
+- Localization
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/blocks.scss
+	assets/scss/blocks/cover.scss
+	assets/scss/blocks/post-excerpt.scss
+	includes/Content/Block_Style.php
+	languages/sk_SK.*
+	languages/zooey.pot
+
+
 ## 1.0.4, 20240507
 
 ### Updated
