@@ -10,7 +10,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.0.6
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -41,7 +41,7 @@ class Editor implements Component_Interface {
 	 * @see  theme.json/settings.color.gradients
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.1
+	 * @version  1.0.6
 	 * @access   public
 	 * @var      array
 	 */
@@ -56,6 +56,9 @@ class Editor implements Component_Interface {
 		'color_secondary',
 		'color_secondary_mixed',
 		'color_secondary_semitransparent',
+
+		'color_black',
+		'color_white',
 	);
 
 	/**

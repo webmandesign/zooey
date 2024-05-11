@@ -1,5 +1,26 @@
 # Zooey Changelog
 
+## 1.0.6, 20240511
+
+### Added
+- Black and white gradients
+
+### Updated
+- Localization
+
+### Fixed
+- Block styles names
+- Gradient control compatibility
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	includes/Content/Block_Style.php
+	includes/Setup/Editor.php
+	languages/zooey.pot
+
+
 ## 1.0.5, 20240508
 
 ### Updated

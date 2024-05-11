@@ -4,7 +4,7 @@
 
 	"docBlock" : {
 		"@since"   : "1.0.0",
-		"@version" : "1.0.2"
+		"@version" : "1.0.6"
 	},
 
 	"settings" : {
@@ -240,87 +240,87 @@
 				{
 					"name"     : "Base to transparent, vertically",
 					"slug"     : "base-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to base, vertically",
 					"slug"     : "transparent-to-base-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
 					"name"     : "Base alternative to transparent, vertically",
 					"slug"     : "base-alt-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to base alternative, vertically",
 					"slug"     : "transparent-to-base-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
 					"name"     : "Contrast to transparent, vertically",
 					"slug"     : "contrast-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to contrast, vertically",
 					"slug"     : "transparent-to-contrast-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
 					"name"     : "Contrast alternative to transparent, vertically",
 					"slug"     : "contrast-alt-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to contrast alternative, vertically",
 					"slug"     : "transparent-to-contrast-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
 					"name"     : "Primary to transparent, vertically",
 					"slug"     : "primary-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to primary, vertically",
 					"slug"     : "transparent-to-primary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Primary mixed to transparent, vertically",
 					"slug"     : "primary-mixed-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to primary mixed, vertically",
 					"slug"     : "transparent-to-primary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
 					"name"     : "Secondary to transparent, vertically",
 					"slug"     : "secondary-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to secondary, vertically",
 					"slug"     : "transparent-to-secondary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Secondary mixed to transparent, vertically",
 					"slug"     : "secondary-mixed-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 				{
 					"name"     : "Transparent to secondary mixed, vertically",
 					"slug"     : "transparent-to-secondary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent )"
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				},
 
 				{
@@ -337,6 +337,28 @@
 					"name"     : "For backdrop blur, primary",
 					"slug"     : "backdrop-blur-primary",
 					"gradient" : "linear-gradient( var(--wp--preset--color--primary-semitransparent), var(--wp--preset--color--primary-semitransparent) )"
+				},
+
+				{
+					"name"     : "Black to transparent, vertically",
+					"slug"     : "black-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--black) var(--theme--css--gradient-stop--soft), transparent 100% )"
+				},
+				{
+					"name"     : "Transparent to black, vertically",
+					"slug"     : "transparent-to-black-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--black) var(--theme--css--gradient-stop--soft), transparent 100% )"
+				},
+
+				{
+					"name"     : "White to transparent, vertically",
+					"slug"     : "white-to-transparent-v",
+					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--white) var(--theme--css--gradient-stop--soft), transparent 100% )"
+				},
+				{
+					"name"     : "Transparent to white, vertically",
+					"slug"     : "transparent-to-white-v",
+					"gradient" : "linear-gradient( to top, var(--wp--preset--color--white) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				}
 			],
 			"duotone" : [

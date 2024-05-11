@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.5
+ * @version  1.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -86,7 +86,7 @@ class Block_Style implements Component_Interface {
 	 * non-block pagination provided by various plugins (such as WooCommerce).
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.5
+	 * @version  1.0.6
 	 *
 	 * @return  array
 	 */
@@ -287,7 +287,7 @@ class Block_Style implements Component_Interface {
 				),
 
 				'pull-down-l' => array(
-					'label'  => _x( 'Pull down (large)', 'Block style label.', 'zooey' ),
+					'label'  => _x( 'Pull down', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/columns',
 						'core/cover',
@@ -297,7 +297,7 @@ class Block_Style implements Component_Interface {
 					),
 				),
 				'pull-up-l' => array(
-					'label'  => _x( 'Pull up (large)', 'Block style label.', 'zooey' ),
+					'label'  => _x( 'Pull up', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/columns',
 						'core/cover',
