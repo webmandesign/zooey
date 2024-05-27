@@ -1,4 +1,5 @@
 // core/button
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -9,9 +10,10 @@
 	--theme--css--button--color--text: currentColor;
 	--theme--css--button--color--border: currentColor;
 	--theme--css--button--color--outline: currentColor;
+	--theme--css--button--border: 2px solid;
 
 	// From default button padding.
-	// @see  global/form/_button.scss
+	// @see  custom/_button.scss
 	padding: 1.125em 1.5em;
 	outline-color: inherit;
 

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.3
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -16,6 +16,7 @@ use WebManDesign\Zooey\Tool\Google_Fonts;
 use WebManDesign\Zooey\Setup\Editor;
 use WebManDesign\Zooey\Setup\Site_Editor;
 use WP_Customize_Manager;
+use WP_Theme_JSON_Resolver;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -82,9 +83,28 @@ class Options implements Component_Interface {
 	public static $user_font_families = array();
 
 	/**
+	 * Theme and core JSON data soft cache.
+	 *
+	 * @since   1.0.7
+	 * @access  public
+	 * @var     array
+	 */
+	public static $json_data = array(
+
+		'core' => array(
+			'palette' => array(),
+		),
+
+		'theme' => array(
+			'palette' => array(),
+		),
+	);
+
+	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @return  void
 	 */
@@ -101,6 +121,8 @@ class Options implements Component_Interface {
 
 
 		// Processing
+
+			self::get_json_data();
 
 			// Actions
 
@@ -206,7 +228,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.3
+	 * @version  1.0.7
 	 *
 	 * @param  array $options
 	 *
@@ -235,6 +257,23 @@ class Options implements Component_Interface {
 
 			// Google Fonts note.
 			$google_fonts_note = esc_html__( 'NOTE: The theme loads Google Fonts from your website, not from 3rd party servers. This improves privacy and compliance with GDPR.', 'zooey' );
+
+			// Color options.
+
+				$choices_palette = array_merge(
+					array(
+						'optgroup:palette-theme'  => esc_html__( 'Theme palette', 'zooey' ),
+					),
+					self::$json_data['theme']['palette'],
+					array(
+						'/optgroup:palette-theme' => '',
+						'optgroup:palette-wp'     => esc_html__( 'WordPress default palette', 'zooey' ),
+					),
+					self::$json_data['core']['palette'],
+					array(
+						'/optgroup:palette-wp' => '',
+					)
+				);
 
 			// HTML control args displaying Site Editor info.
 			$site_editor_info = array(
@@ -476,33 +515,7 @@ class Options implements Component_Interface {
 							'label'       => esc_html__( 'Button color', 'zooey' ),
 							'description' => esc_html__( 'Choose which predefined color applies on buttons.', 'zooey' ),
 							'default'     => 'primary',
-							'choices'     => array(
-
-								'optgroup:theme'  => esc_html__( 'Theme palette', 'zooey' ),
-									'base'            => esc_html_x( 'Base', 'color name', 'zooey' ),
-									'contrast'        => esc_html_x( 'Contrast', 'color name', 'zooey' ),
-									'contrast-alt'    => esc_html_x( 'Contrast alternative', 'color name', 'zooey' ),
-									'primary'         => esc_html_x( 'Primary', 'color name', 'zooey' ),
-									'primary-mixed'   => esc_html_x( 'Primary mixed', 'color name', 'zooey' ),
-									'secondary'       => esc_html_x( 'Secondary', 'color name', 'zooey' ),
-									'secondary-mixed' => esc_html_x( 'Secondary mixed', 'color name', 'zooey' ),
-								'/optgroup:theme' => '',
-
-								'optgroup:wp'  => esc_html__( 'WordPress default palette', 'zooey' ),
-									'black'                 => esc_html_x( 'Black', 'color name', 'zooey' ),
-									'cyan-bluish-gray'      => esc_html_x( 'Cyan bluish gray', 'color name', 'zooey' ),
-									'white'                 => esc_html_x( 'White', 'color name', 'zooey' ),
-									'pale-pink'             => esc_html_x( 'Pale pink', 'color name', 'zooey' ),
-									'vivid-red'             => esc_html_x( 'Vivid red', 'color name', 'zooey' ),
-									'luminous-vivid-orange' => esc_html_x( 'Luminous vivid orange', 'color name', 'zooey' ),
-									'luminous-vivid-amber'  => esc_html_x( 'Luminous vivid amber', 'color name', 'zooey' ),
-									'light-green-cyan'      => esc_html_x( 'Light green cyan', 'color name', 'zooey' ),
-									'vivid-green-cyan'      => esc_html_x( 'Vivid green cyan', 'color name', 'zooey' ),
-									'pale-cyan-blue'        => esc_html_x( 'Pale cyan blue', 'color name', 'zooey' ),
-									'vivid-cyan-blue'       => esc_html_x( 'Vivid cyan blue', 'color name', 'zooey' ),
-									'vivid-purple'          => esc_html_x( 'Vivid purple', 'color name', 'zooey' ),
-								'/optgroup:wp' => '',
-							),
+							'choices'     => $choices_palette,
 							'preview_js'  => array(
 								'css' => array(
 									$css_selector_root => array(
@@ -1248,5 +1261,32 @@ class Options implements Component_Interface {
 			return (array) $options;
 
 	} // /set
+
+	/**
+	 * Get JSON data.
+	 *
+	 * @since  1.0.7
+	 *
+	 * @return  void
+	 */
+	public static function get_json_data() {
+
+		// Processing
+
+			// Core JSON data.
+			$json_data = WP_Theme_JSON_Resolver::get_core_data()->get_raw_data();
+			self::$json_data['core']['palette'] = array_combine(
+				array_column( $json_data['settings']['color']['palette']['default'], 'slug' ),
+				array_column( $json_data['settings']['color']['palette']['default'], 'name' )
+			);
+
+			// Theme JSON data.
+			$json_data = WP_Theme_JSON_Resolver::get_theme_data()->get_data();
+			self::$json_data['theme']['palette'] = array_combine(
+				array_column( $json_data['settings']['color']['palette'], 'slug' ),
+				array_column( $json_data['settings']['color']['palette'], 'name' )
+			);
+
+	} // /get_json_data
 
 }

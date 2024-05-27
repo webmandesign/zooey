@@ -1,7 +1,16 @@
 // core/group
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
+
+.wp-block-group {
+	// In block editor, the default value is empty,
+	// but visual pointer is clearly at `50% 50%` value.
+	// However, CSS default is `0% 0%`, so we need to
+	// reset the default value here.
+	background-position: 50% 50%;
+}
 
 .is-layout-flex > * {
 	max-width: 100%;

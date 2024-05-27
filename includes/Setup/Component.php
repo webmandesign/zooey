@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -48,7 +49,8 @@ class Component implements Component_Interface {
 	/**
 	 * Theme setup.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @return  void
 	 */
@@ -63,7 +65,7 @@ class Component implements Component_Interface {
 				 */
 				'background' => array(
 					// This becomes `color_base`, CSS variable `--wp--preset--color--base`:
-					'default-color' => 'f7fff7',
+					'default-color' => sanitize_hex_color_no_hash( Customize\Options::$theme_mods['color_base'] ),
 				),
 
 				/**

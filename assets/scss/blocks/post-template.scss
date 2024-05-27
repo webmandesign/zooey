@@ -1,5 +1,5 @@
 // core/post-template
-// @version  1.0.4
+// @version  1.0.7
 @use 'sass:math';
 
 @import '../_tools/_index';
@@ -24,6 +24,7 @@
 .wp-block-post {
 
 	&.sticky {
+		@extend %featured_item;
 		$size: .75rem;
 
 		.wp-block-post-title {
@@ -36,10 +37,12 @@
 				height: $size;
 				margin-inline-end: .2em;
 				background: var(--theme--css--current-menu-item--decoration--color);
-				border-radius: $size + em;
+				border-radius: $size;
 				border-start-start-radius: 0;
 				border-end-start-radius: 0;
 			}
 		}
 	}
 }
+
+@import '../_extend/_index';

@@ -3,10 +3,10 @@
 blockquote {
 	max-width: 100%; // Yes, this is required especially for editor when quote is within a stack.
 	margin-inline: 0;
-	font-family: var(--wp--preset--font-family--alternative);
-	font-size: var(--wp--preset--font-size--l);
+	font-family: var(--wp--custom--quote--font-family);
+	font-size: var(--wp--custom--quote--font-size);
 	font-weight: 400;
-	line-height: var(--wp--custom--line-height--quote);
+	line-height: var(--wp--custom--quote--line-height);
 
 	.has-background:not(.has-text-color) & {
 		color: inherit;
@@ -14,7 +14,6 @@ blockquote {
 
 	> cite {
 		display: block;
-		margin-block-start: $ratio_maj + em;
 	}
 
 	blockquote {
@@ -29,7 +28,7 @@ blockquote {
 			content: '“';
 			display: inline-block;
 			margin-inline-end: .1em;
-			font-family: var(--wp--custom--font-family--quote-decoration);
+			font-family: var(--wp--custom--quote--decoration--font-family);
 			font-size: $ratio * 2em;
 			font-weight: 700;
 			font-style: normal;
@@ -43,6 +42,6 @@ blockquote {
 cite {
 
 	&::before {
-		content: '\2014\2002'; // &mdash; + &ensp;
+		content: var(--wp--custom--quote--cite-before);
 	}
 }

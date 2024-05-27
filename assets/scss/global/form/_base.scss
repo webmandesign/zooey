@@ -16,7 +16,7 @@ legend {
 	font-size: var(--wp--preset--font-size--s);
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: var(--wp--custom--letter-spacing);
+	letter-spacing: var(--wp--custom--letter-spacing--heading);
 
 	+ * {
 		margin-block-start: 0;
@@ -80,6 +80,7 @@ textarea {
 
 label {
 	display: inline-block;
+	letter-spacing: var(--wp--custom--letter-spacing--label);
 
 	&[for] {
 		cursor: pointer;
@@ -98,6 +99,10 @@ label {
 	height: 1em;
 	inset-block-end: -.2em;
 	vertical-align: baseline;
+
+	+ label {
+		letter-spacing: initial;
+	}
 }
 
 option {

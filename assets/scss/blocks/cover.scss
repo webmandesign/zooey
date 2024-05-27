@@ -1,5 +1,5 @@
 // core/cover
-// @version  1.0.5
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -59,7 +59,7 @@
 .is-style-image-blur {
 	position: relative; // Just in case.
 
-	.is-blur-wrapper {
+	> .is-blur-wrapper {
 		overflow: hidden;
 		position: absolute;
 		inset: 0;
@@ -68,15 +68,15 @@
 	> img,
 	> .wp-block-cover__image-background,
 	> .wp-block-cover__video-background,
-	.is-blur-wrapper img,
-	.is-blur-wrapper video {
+	> .is-blur-wrapper img,
+	> .is-blur-wrapper video {
 		filter: blur( var(--wp--custom--filter--blur--image) );
 		transform: scale( 1.25 );
 		clip-path: inset( 10% );
 	}
 
 	> .wp-block-cover__video-background,
-	.is-blur-wrapper video {
+	> .is-blur-wrapper video {
 		filter: blur( var( --wp--custom--filter--blur--video, var(--wp--custom--filter--blur--image) ) );
 	}
 }

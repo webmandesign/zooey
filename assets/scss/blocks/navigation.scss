@@ -1,6 +1,7 @@
 // core/navigation
 // core/navigation-link
 // core/navigation-submenu
+// @version  1.0.7
 
 //
 // The CSS selector specificity in this file is tragic, but needed
@@ -11,6 +12,15 @@
 @import '../_setup/_index';
 
 .wp-block-navigation {
+
+	// Make sure the navigation (and submenus) are stacked over any search form in site header.
+	.is-style-site-header & {
+
+		&:hover,
+		&:focus-within {
+			z-index: 5;
+		}
+	}
 
 	// Color styles.
 	&,
@@ -85,7 +95,7 @@
 				background: var(--theme--css--button--color--background);
 				color: var(--theme--css--button--color--text);
 				border: 2px solid var(--theme--css--button--color--border);
-				border-radius: var(--wp--custom--border-radius--button);
+				border-radius: var(--wp--custom--button--border-radius);
 				box-shadow: var(--wp--preset--shadow--s);
 				transition:
 					transform .1s linear,

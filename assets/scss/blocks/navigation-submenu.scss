@@ -1,4 +1,5 @@
 // core/navigation-submenu
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -95,7 +96,7 @@
 				@media (hover: none) {
 					border: 1px solid;
 					border-color: inherit;
-					border-radius: var(--wp--custom--border-radius--button);
+					border-radius: var(--wp--custom--button--border-radius);
 					opacity: 1;
 				}
 			}
@@ -122,7 +123,7 @@
 			height: var(--theme--css--submenu-toggle-size);
 			border: 1px solid;
 			border-color: inherit;
-			border-radius: var(--wp--custom--border-radius--button);
+			border-radius: var(--wp--custom--button--border-radius);
 			opacity: 1;
 		}
 	}
@@ -140,6 +141,7 @@
 			--theme--css--submenu-inset-inline-start: 0;
 			--theme--css--submenu-padding: #{ $ratio + rem };
 			--theme--css--submenu-item-padding: #{ $ratio_min + rem };
+			--theme--css--submenu-offset: #{ $ratio_maj + rem };
 			--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( 1rem );
 			--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
 			--theme--css--animation-showSubSubMenu--from--transform: translateX( 1rem );
@@ -271,6 +273,32 @@
 		}
 	}
 
+	// Top level menu items: submenu offset.
+	// Works only with horizontal navigation.
+	.no-overlay-menu:not(.is-vertical),
+	.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) {
+
+		.wp-block-navigation__container > .has-child {
+
+			> #{$selector} {
+				margin-block-start: var(--theme--css--submenu-offset);
+			}
+
+			&.is-editing, // For Site Editor.
+			&:not(.open-on-click):hover,
+			.no-js &:focus-within {
+
+				&::before {
+					content: '';
+					position: absolute;
+					inset-inline: 0;
+					inset-block-start: 100%;
+					height: var(--theme--css--submenu-offset);
+				}
+			}
+		}
+	}
+
 	// For Site Editor.
 	.wp-block-navigation {
 
@@ -335,7 +363,7 @@
 							border: 0 !important;
 							font-weight: 700;
 							text-transform: uppercase;
-							letter-spacing: var(--wp--custom--letter-spacing);
+							letter-spacing: var(--wp--custom--letter-spacing--heading);
 
 							&::before {
 								display: none;
@@ -356,7 +384,7 @@
 							inset: 0;
 							padding: 0;
 							margin: ( $ratio_maj + em ) 0 0;
-							background: none;
+							background: none !important;
 							border-width: 0;
 							box-shadow: none;
 

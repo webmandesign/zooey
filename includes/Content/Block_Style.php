@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.6
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -86,7 +86,7 @@ class Block_Style implements Component_Interface {
 	 * non-block pagination provided by various plugins (such as WooCommerce).
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.6
+	 * @version  1.0.7
 	 *
 	 * @return  array
 	 */
@@ -108,8 +108,8 @@ class Block_Style implements Component_Interface {
 				'buttons-inline' => array(
 					'label'  => _x( 'Inline buttons', 'Block style label.', 'zooey' ),
 					'blocks' => array(
-						'core/tag-cloud',
 						'core/categories',
+						'core/tag-cloud',
 					),
 				),
 
@@ -152,7 +152,7 @@ class Block_Style implements Component_Interface {
 				'featured-posts' => array(
 					'label'  => _x( 'Featured posts', 'Block style label.', 'zooey' ),
 					'blocks' => array(
-						'core/query',
+						'core/template-part',
 					),
 				),
 
@@ -245,6 +245,7 @@ class Block_Style implements Component_Interface {
 				'no-text-wrap' => array(
 					'label'  => _x( 'No line break', 'Block style label.', 'zooey' ),
 					'blocks' => array(
+						'core/button',
 						'core/heading',
 						'core/list',
 						'core/list-item',
@@ -276,13 +277,6 @@ class Block_Style implements Component_Interface {
 					'label'  => _x( 'Page intro summary', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/post-excerpt',
-					),
-				),
-
-				'post-navigation' => array(
-					'label'  => _x( 'Post navigation container', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/group',
 					),
 				),
 
@@ -323,10 +317,11 @@ class Block_Style implements Component_Interface {
 				'screen-reader-text' => array(
 					'label'  => _x( 'Accessibly hidden', 'Block style label.', 'zooey' ),
 					'blocks' => array(
+						'core/group',
 						'core/heading',
 						'core/post-title',
-						'core/site-title',
 						'core/site-tagline',
+						'core/site-title',
 					),
 				),
 

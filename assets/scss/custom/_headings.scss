@@ -1,0 +1,15 @@
+/* FILE: custom/_headings.scss */
+
+@for $i from 1 through 4 {
+	.has-h-#{ $i }-font-size {
+		@extend %heading_color;
+	}
+}
+
+%heading_color {
+	color: var(--wp--preset--color--contrast-alt);
+
+	.has-background & {
+		color: inherit;
+	}
+}

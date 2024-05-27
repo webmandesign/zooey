@@ -12,7 +12,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 ( () => {
@@ -93,7 +94,9 @@
 
 					case 'core/cover': //*
 					case 'core/heading':
+					case 'core/post-author': //*
 					case 'core/post-comments-form': //*
+					case 'core/site-tagline': //*
 						settings = lodash.merge( settings, {
 							supports: {
 								__experimentalBorder: {
@@ -214,6 +217,7 @@
 					case 'core/post-content': //*
 						settings = lodash.merge( settings, {
 							supports: {
+								anchor: true,
 								spacing: {
 									margin: [
 										'top',
@@ -223,6 +227,12 @@
 										'top',
 										'bottom',
 									],
+								},
+							},
+							attributes: {
+								anchor: {
+									type: 'string',
+									default: '',
 								},
 							},
 						} );
@@ -310,7 +320,7 @@
 						} );
 						break;
 
-					case 'core/search':
+					case 'core/search': //*
 						settings = lodash.merge( settings, {
 							supports: {
 								spacing: {

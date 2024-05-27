@@ -42,7 +42,7 @@
 // core/query
 @if false == $is_editor {
 
-	.wp-block-group:not(.is-layout-flex),
+	.wp-block-group:not(.is-layout-flex):not(.is-layout-grid),
 	.wp-block-post-content {
 		@extend %clearfix;
 	}
@@ -165,6 +165,15 @@
 				//
 				backdrop-filter: blur( var(--wp--custom--filter--blur--backdrop) );
 			}
+		}
+
+	// Outline button.
+
+		.is-style-button-outline {
+			--theme--css--button--color--background: transparent;
+			--theme--css--button--color--text: currentColor;
+			--theme--css--button--color--border: currentColor;
+			--theme--css--button--color--outline: currentColor;
 		}
 
 	// Custom Header image editor styles.

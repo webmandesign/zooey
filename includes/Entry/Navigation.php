@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Entry;
@@ -22,7 +23,8 @@ class Navigation implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @return  void
 	 */
@@ -37,6 +39,8 @@ class Navigation implements Component_Interface {
 			// Filters
 
 				add_filter( 'the_content', __CLASS__ . '::parted', 15 );
+
+				add_filter( 'render_block_core/post-navigation-link', 'WebManDesign\Zooey\Tool\Arrow::replace' );
 
 	} // /init
 

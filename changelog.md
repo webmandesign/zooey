@@ -1,5 +1,69 @@
 # Zooey Changelog
 
+## 1.0.7, 20240527
+
+### Added
+- Gradients and duotones from primary and secondary colors
+
+### Updated
+- Improving and fixing CSS styles
+- Improving code organization
+- Block modifications
+- Custom settings in `theme.json`
+- Improving theme options code
+- Replacing text arrows with SVG
+- Block styles
+- Welcome page
+- Localization
+- Removing `accessibility-ready` tag to speed up theme review process
+
+### Fixed
+- Navigation block HTML modifications
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	assets/js/block-mods.js
+	assets/scss/blocks.scss
+	assets/scss/global.scss
+	assets/scss/welcome.scss
+	assets/scss/_extend/_others.scss
+	assets/scss/blocks/button.scss
+	assets/scss/blocks/calendar.scss
+	assets/scss/blocks/code.scss
+	assets/scss/blocks/comments.scss
+	assets/scss/blocks/cover.scss
+	assets/scss/blocks/file.scss
+	assets/scss/blocks/group.scss
+	assets/scss/blocks/latest-comments.scss
+	assets/scss/blocks/latest-posts.scss
+	assets/scss/blocks/navigation-link.scss
+	assets/scss/blocks/navigation-submenu.scss
+	assets/scss/blocks/navigation.scss
+	assets/scss/blocks/page-list.scss
+	assets/scss/blocks/post-author.scss
+	assets/scss/blocks/post-excerpt.scss
+	assets/scss/blocks/post-navigation-link.scss
+	assets/scss/blocks/post-template.scss
+	assets/scss/blocks/post-terms.scss
+	assets/scss/blocks/rss.scss
+	assets/scss/blocks/search.scss
+	assets/scss/blocks/tag-cloud.scss
+	includes/Autoload.php
+	includes/Content/Block.php
+	includes/Content/Block_Style.php
+	includes/Customize/Options.php
+	includes/Entry/Navigation.php
+	includes/Loop/Pagination.php
+	includes/Menu/Component.php
+	includes/Setup/Component.php
+	includes/Setup/Media.php
+	includes/Tool/Arrow.php
+	languages/*.*
+	parts/admin/welcome-demo.php
+
+
 ## 1.0.6, 20240511
 
 ### Added

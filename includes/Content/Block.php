@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -136,7 +136,8 @@ class Block implements Component_Interface {
 	 * No need to enable specific options,
 	 * simply enabling whole groups of options.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @param  array $settings  Array of determined settings for registering a block type.
 	 * @param  array $metadata  Metadata provided for registering a block type.
@@ -162,6 +163,7 @@ class Block implements Component_Interface {
 				 */
 				case 'core/comments-pagination':
 				case 'core/query-pagination':
+				case 'core/search':
 					$settings['supports']['spacing']['margin'] = true;
 					break;
 
@@ -177,7 +179,9 @@ class Block implements Component_Interface {
 				 */
 				case 'core/column':
 				case 'core/cover':
+				case 'core/post-author':
 				case 'core/post-comments-form':
+				case 'core/site-tagline':
 					$settings['supports']['__experimentalBorder']['color']  =
 					$settings['supports']['__experimentalBorder']['style']  =
 					$settings['supports']['__experimentalBorder']['width']  =
@@ -491,7 +495,7 @@ class Block implements Component_Interface {
 	/**
 	 * Block output modification: Social Links improvements.
 	 *
-	 * Adding helpful layout justification CSS class.
+	 * Adds helpful layout justification CSS class.
 	 * Allows using anchor links (starting with `#`).
 	 *
 	 * @since  1.0.0

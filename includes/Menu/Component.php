@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Menu;
@@ -40,7 +41,8 @@ class Component implements Component_Interface {
 	 *
 	 * Adding HTML ID attributes.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -114,7 +116,7 @@ class Component implements Component_Interface {
 					$has_overlay_menu = false;
 					$html             = new WP_HTML_Tag_Processor( $block_content );
 
-					$html->next_tag();
+					$html->next_tag( 'nav' ); // Required to specify the tag here. Otherwise it applies on `<li>` tags too...
 
 					// Set class based on responsive overlay menu status (enabled by default).
 					if (

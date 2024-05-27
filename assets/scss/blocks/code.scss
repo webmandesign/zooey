@@ -1,4 +1,5 @@
 // core/code
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -7,10 +8,6 @@
 	position: relative;
 	font-size: var(--wp--preset--font-size--s);
 	white-space: pre;
-
-	&.alignfull {
-		border-radius: 0;
-	}
 
 	&:not(.has-background) {
 		@extend %shaded_background;

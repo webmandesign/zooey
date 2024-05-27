@@ -6,21 +6,21 @@
 	.is-style-screen-reader-text {
 
 		&:focus {
-			border-radius: var(--wp--custom--border-radius--button);
+			border-radius: var(--wp--custom--button--border-radius);
 		}
 	}
 
 // Details, toggle.
 
 	details {
-		border-radius: var(--wp--custom--border-radius--details);
+		border-radius: var(--wp--custom--details--border--radius);
 	}
 
 	summary {
 		border-radius: inherit;
 
 		&::after {
-			border-radius: var(--wp--custom--border-radius--details);
+			border-radius: var(--wp--custom--details--border--radius);
 		}
 	}
 
@@ -38,7 +38,7 @@
 
 			&:not(.has-background) {
 				position: relative;
-				padding-inline-start: calc( var(--wp--custom--font-size--quote-decoration) / 2 );
+				padding-inline-start: calc( var(--wp--custom--quote--decoration--font-size) / 2 );
 
 				p:first-of-type::before {
 					display: none;
@@ -51,8 +51,8 @@
 					inset-inline-start: 0;
 					inset-block-start: 0;
 					height: 100%;
-					font-family: var(--wp--custom--font-family--quote-decoration);
-					font-size: var(--wp--custom--font-size--quote-decoration);
+					font-family: var(--wp--custom--quote--decoration--font-family);
+					font-size: var(--wp--custom--quote--decoration--font-size);
 					font-weight: 700;
 					line-height: 1;
 					background-image: linear-gradient( to bottom, currentColor, currentColor );
@@ -64,10 +64,6 @@
 					.rtl & {
 						transform: translateX(50%);
 					}
-				}
-
-				> cite {
-					margin-block-start: 1em;
 				}
 			}
 		}

@@ -1,4 +1,5 @@
 // core/post-terms
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -9,6 +10,6 @@
 		font-size: var(--wp--preset--font-size--s);
 		font-weight: 400;
 		text-transform: uppercase;
-		letter-spacing: var(--wp--custom--letter-spacing);
+		letter-spacing: var(--wp--custom--letter-spacing--label);
 	}
 }

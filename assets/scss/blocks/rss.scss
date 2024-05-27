@@ -1,4 +1,5 @@
 // core/rss
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -41,7 +42,7 @@
 			display: inline-block;
 			font-size: var(--wp--preset--font-size--xs);
 			text-transform: uppercase;
-			letter-spacing: var(--wp--custom--letter-spacing);
+			letter-spacing: var(--wp--custom--letter-spacing--meta);
 		}
 
 		&-publish-date + &-author::before {

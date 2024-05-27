@@ -1,4 +1,5 @@
 // core/search
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -10,6 +11,12 @@
 		border-width: 2px;
 		border-color: inherit;
 		border-radius: var(--wp--custom--border-radius--form-field);
+	}
+
+	.wp-block-search__button.wp-block-search__button.wp-block-search__button {
+		// Modified global button padding.
+		// @see  custom/_button.scss
+		padding: var(--wp--custom--spacing--input-vertical) 1em;
 	}
 
 	&__button-inside {
@@ -41,13 +48,7 @@
 		}
 	}
 
-	.wp-block-search__button.wp-block-search__button.wp-block-search__button {
-		// Modified global button padding.
-		// @see  global/form/_button.scss
-		padding: var(--wp--custom--spacing--input-vertical) 1em;
-	}
-
-	.wp-block-search__button.has-border-color {
+	&:not(.has-background):not(.is-style-button-outline) .wp-block-search__button {
 		border-color: var(--theme--css--button--color--border) !important;
 	}
 
@@ -58,13 +59,13 @@
 
 .wp-block-search__button-only {
 	position: relative;
-	z-index: 5;
+	z-index: 1;
 
 	.wp-block-search__input {
 		position: absolute;
 		height: calc( #{ $ratio + em } + 2 * var(--wp--custom--spacing--input-vertical) ); // `$ratio` is line height.
 		min-height: 100%;
-		inset-inline-end: 100%;
+		inset-inline-end: calc( 100% + #{ $ratio_min + em } );
 		top: 50%;
 		transform: translateY( -50% );
 
@@ -78,6 +79,7 @@
 		}
 
 	.wp-block-search__button {
+		transform: none !important;
 
 		&:focus {
 			outline-color: currentColor;
@@ -109,11 +111,4 @@
 			overflow: visible; // Make outline visible.
 		}
 	}
-}
-
-.is-style-button-outline .wp-element-button {
-	--theme--css--button--color--background: transparent;
-	--theme--css--button--color--text: currentColor;
-	--theme--css--button--color--border: currentColor;
-	--theme--css--button--color--outline: currentColor;
 }

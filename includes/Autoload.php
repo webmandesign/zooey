@@ -9,7 +9,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 // Exit if accessed directly.
@@ -44,9 +45,10 @@ else :
 		 *
 		 * TIP: Get the list by searching for "namespace " in `zooey/includes/*.php` files.
 		 *
-		 * @since   1.0.0
-		 * @access  private
-		 * @var     array
+		 * @since    1.0.0
+		 * @version  1.0.7
+		 * @access   private
+		 * @var      array
 		 */
 		private static $allowed_files = array(
 
@@ -124,6 +126,7 @@ else :
 			'/Setup/Site_Editor.php',
 			'/Setup/Upgrade.php',
 
+			'/Tool/Arrow.php',
 			'/Tool/Component.php',
 			'/Tool/Google_Fonts.php',
 			'/Tool/KSES.php',

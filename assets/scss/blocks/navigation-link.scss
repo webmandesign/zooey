@@ -1,4 +1,5 @@
 // core/navigation-link
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -25,17 +26,6 @@
 //
 
 .wp-block-navigation {
-
-	.is-style-site-header & {
-
-		// Top level menu <li> items.
-		&:not(.is-vertical) .wp-block-navigation__container > .wp-block-navigation-item {
-
-			> .wp-block-navigation-item__content {
-				padding-block: $ratio_min + em;
-			}
-		}
-	}
 
 	&,
 	.editor-styles-wrapper[class] & {
@@ -78,19 +68,8 @@
 	.current-menu-item > .wp-block-navigation-item__content .wp-block-navigation-item__label,
 	.current-menu-item.has-child > .wp-block-navigation-item__content,
 	.current-menu-ancestor.wp-block-navigation-item__content {
+		@extend %current_menu_item;
 		display: block !important;
-
-		&::before {
-			content: '';
-			display: inline-block;
-			width: $ratio_min + em;
-			height: $ratio_min + em;
-			margin-inline-end: .2em;
-			background: var(--theme--css--current-menu-item--decoration--color);
-			border-radius: $ratio_min + em;
-			border-start-start-radius: 0;
-			border-end-start-radius: 0;
-		}
 	}
 
 	// Block styles.
@@ -136,3 +115,5 @@
 			}
 		}
 	}
+
+@import '../_extend/_index';

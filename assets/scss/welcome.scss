@@ -7,7 +7,8 @@
 // @package    Zooey
 // @copyright  WebMan Design, Oliver Juhas
 //
-// @since  1.0.0
+// @since    1.0.0
+// @version  1.0.7
 //
 
 @import '_tools/_index';
@@ -179,6 +180,20 @@ html {
 		h2, h3,
 		a {
 			color: inherit;
+		}
+	}
+
+	%bg_shaded {
+		z-index: 1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: currentColor;
+			border-radius: inherit;
+			opacity: .07;
+			z-index: -1;
 		}
 	}
 
@@ -409,6 +424,15 @@ html {
 				margin-block-end: var(--welcome_gap);
 			}
 		}
+
+			&--starter-content {
+				@extend %bg_shaded;
+				position: relative;
+				padding: var(--welcome_padding_medium);
+				margin-block-start: 1em;
+				border: 2px solid rgba( #fff, .3 );
+				border-radius: var(--welcome_border_radius);
+			}
 
 		&--update,
 		&--promo {

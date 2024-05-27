@@ -1,4 +1,5 @@
 // core/post-navigation-link
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -8,6 +9,13 @@
 	&:empty {
 		display: none;
 	}
+
+	svg {
+		width: 1.2em;
+		height: 1.2em;
+		margin-block-start: -.1em;
+		vertical-align: middle;
+	}
 }
 
 .post-navigation-link__label {
@@ -15,5 +23,5 @@
 	font-size: var(--wp--preset--font-size--xs);
 	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0;
+	letter-spacing: var(--wp--custom--letter-spacing--label);
 }

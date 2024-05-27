@@ -1,5 +1,5 @@
 // core/post-excerpt
-// @version  1.0.5
+// @version  1.0.7
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -7,15 +7,11 @@
 .is-style-truncate-2 {
 
 	.wp-block-post-excerpt__excerpt {
-		@extend %excerpt_truncate;
-		-webkit-line-clamp: $i;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
 	}
-}
-
-%excerpt_truncate {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
 }
 
 .wp-block-post-excerpt__more-link {
@@ -24,31 +20,11 @@
 	text-transform: uppercase;
 	text-decoration-thickness: var(--wp--custom--underline--thickness);
 	line-height: 1.25;
-	letter-spacing: var(--wp--custom--letter-spacing);
+	letter-spacing: var(--wp--custom--button--letter-spacing);
 
 	.is-style-read-more-outline & {
-		// From default button padding and `core/button` block styles.
-		// @see  global/form/_button.scss
-		// @see  blocks/button.scss
-		padding: 1.125em 1.5em;
-		font-size: var(--wp--custom--font-size--button);
-		text-decoration-line: none;
-		border: 2px solid;
-		border-radius: var(--wp--custom--border-radius--button);
-		box-shadow: var(--wp--preset--shadow--s);
-		transition: box-shadow .1s linear;
-
-		&:hover,
-		&:focus {
-			text-decoration-line: underline;
-			text-decoration-style: dashed;
-			box-shadow: var(--wp--preset--shadow--m);
-		}
-
-		&:active {
-			text-decoration-line: underline;
-			text-decoration-style: dotted;
-			box-shadow: none;
-		}
+		@extend %button_outline;
 	}
 }
+
+@import '../_extend/_index';

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.7
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -419,7 +420,8 @@ class Media implements Component_Interface {
 	/**
 	 * Block output modification: Cover block `image-blur` style helper.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.7
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -446,14 +448,12 @@ class Media implements Component_Interface {
 					$type = 'image';
 				}
 
-				if ( 1 === preg_match( $regex[ $type ], $block_content, $matches, PREG_OFFSET_CAPTURE ) ) {
-
-					$block_content = str_replace(
-						$matches[0][0],
-						'<span class="is-blur-wrapper">' . $matches[0][0] . '</span>',
-						$block_content
-					);
-				}
+				$block_content = preg_replace(
+					$regex[ $type ],
+					'<span class="is-blur-wrapper">$0</span>',
+					$block_content,
+					1
+				);
 			}
 
 

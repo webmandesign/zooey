@@ -2,8 +2,8 @@
 
 #{ $selectors_button } {
 	display: inline-block; // Not to overflow empty paragraph container, for example.
-	font-family: var(--wp--custom--font-family--button);
-	font-size: var(--wp--custom--font-size--button);
+	font-family: var(--wp--custom--button--font-family);
+	font-size: var(--wp--custom--button--font-size);
 	font-weight: 700;
 	line-height: 1.25;
 	text-transform: uppercase;
@@ -11,23 +11,29 @@
 	text-underline-offset: var(--wp--custom--underline--offset--default);
 	text-decoration-thickness: var(--wp--custom--underline--thickness);
 	text-align: center;
-	letter-spacing: var(--wp--custom--letter-spacing);
-	background-color: var(--theme--css--button--color--background);
-	border: 2px solid;
-	border-radius: var(--wp--custom--border-radius--button);
+	letter-spacing: var(--wp--custom--button--letter-spacing);
+	background: var(--theme--css--button--color--background);
+	background-position: 50% 50%; // For gradient background.
+	background-size: 100%; // For gradient background.
+	border: var(--theme--css--button--border);
+	border-radius: var(--wp--custom--button--border-radius);
 	box-shadow: var(--wp--preset--shadow--s);
 	cursor: pointer;
 	transition:
 		transform .1s linear,
-		background .1s linear,
+		background-color .1s linear,
+		background-image .1s linear,
+		background-size .4s linear,
 		color .1s linear,
 		border .1s linear,
 		box-shadow .1s linear;
 
 	&,
 	&.has-background {
+		--theme--css--current-border-color: var(--theme--css--button--color--border);
+
 		padding: 1.125em 1.5em;
-		border-color: var(--theme--css--button--color--border);
+		border-color: var(--theme--css--current-border-color);
 	}
 
 	&,
@@ -44,6 +50,7 @@
 	&:focus {
 		text-decoration-line: underline;
 		text-decoration-style: dashed;
+		background-size: 150% 100%; // For gradient background.
 		box-shadow: var(--wp--preset--shadow--m);
 		transform: scale(1.05);
 	}
@@ -65,5 +72,10 @@
 
 	:not(.is-style-outline) > &:not(.has-background):not(.has-text-color) {
 		--theme--css--current-border-color: var(--theme--css--button--color--border);
+	}
+
+	// If custom background is set, make border transparent.
+	&.has-background {
+		--theme--css--button--color--border: transparent;
 	}
 }

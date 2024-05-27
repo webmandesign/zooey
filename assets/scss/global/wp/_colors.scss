@@ -25,33 +25,29 @@
 		// Apply actual global padding when needed…
 		&.has-global-padding {
 
-			&,
-			&.alignfull {
+			// &, // Commenting this out is related to "Important" notice below.
+			header > &,
+			footer > &,
+			main > &,
+			main > .wp-block-post-content > &.alignfull,
+			main > .wp-block-template-part > & {
+				--theme--css--has-background--padding-left:  var(--wp--style--root--padding-left);
+				--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
 
-				// &, // Commenting this out is related to "Important" notice below.
-				header > &,
-				footer > &,
-				main > &,
-				main > .wp-block-post-content > &,
-				main > .wp-block-template-part > & {
-					--theme--css--has-background--padding-left:  var(--wp--style--root--padding-left);
-					--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
-
-					// Reset back:
-					.has-background {
-						--theme--css--has-background--padding-left:   var(--wp--custom--spacing--has-background--left);
-						--theme--css--has-background--padding-right:  var(--wp--custom--spacing--has-background--right);
-					}
+				// Reset back:
+				.has-background {
+					--theme--css--has-background--padding-left:   var(--wp--custom--spacing--has-background--left);
+					--theme--css--has-background--padding-right:  var(--wp--custom--spacing--has-background--right);
 				}
 			}
 
 			// IMPORTANT:
 			// Unlike WordPress core themes (such as Twenty Twenty-Four)
 			// we are applying automatic padding on blocks set with
-			// background. So, unlike those themes, we need prevent
+			// background. So, unlike those themes, we need to prevent
 			// horizontal scroll (for example when nesting 2 fully
 			// aligned blocks with background in the root container
-			// of page/post content).
+			// of the page/post content).
 			&[style*="padding-left:0"] > .alignfull {
 				margin-left: 0;
 			}

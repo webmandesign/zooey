@@ -22,7 +22,7 @@
 		&#{ $selectors_button_colors } {
 			--theme--css--button--color--background: var(--wp--preset--color--#{ $slug });
 			--theme--css--button--color--text: var(--wp--preset--color--#{ $slug }--bg-text);
-			@if $button_has_border_color {
+			@if $enable_button_color_overrides {
 				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--bg-border);
 			}
 		}
@@ -32,7 +32,7 @@
 		border-color: var(--wp--preset--color--#{ $slug }--border);
 		--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--border);
 
-		@if $button_has_border_color {
+		@if $enable_button_color_overrides {
 			&#{ $selectors_button_colors } {
 				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--border);
 			}
