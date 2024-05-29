@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Header;
@@ -13,6 +14,7 @@ namespace WebManDesign\Zooey\Header;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Content;
 use WebManDesign\Zooey\Customize\Colors;
+use WebManDesign\Zooey\Customize\CSS_Variables;
 use WP_Post;
 
 // Exit if accessed directly.
@@ -51,7 +53,8 @@ class Body_Class implements Component_Interface {
 	/**
 	 * HTML body classes.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @param  array $classes
 	 *
@@ -63,6 +66,9 @@ class Body_Class implements Component_Interface {
 
 			// JS fallback.
 			$classes[] = 'no-js';
+
+			// Optional class for CSS variables root.
+			$classes[] = CSS_Variables::get_root( 'body_class' ); // Reference: CSS selector root.
 
 			// Singular entry?
 			if ( is_singular() ) {
@@ -108,7 +114,7 @@ class Body_Class implements Component_Interface {
 
 		// Output
 
-			return array_unique( $classes );
+			return array_unique( array_filter( $classes ) );
 
 	} // /body_class
 

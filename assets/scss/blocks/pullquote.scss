@@ -3,19 +3,27 @@
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-.wp-block-pullquote.wp-block-pullquote {
-	text-align: inherit;
+.wp-block-pullquote {
+	// Border color has to be here, not in `theme.json`
+	// due to WP global styles producing block CSS selector
+	// with `:where()` (0 specificity), so our global border
+	// color inheritance styles override that selector.
+	border-color: currentColor;
 
-	blockquote {
-		font-size: 1em;
-	}
+	&.wp-block-pullquote {
+		text-align: inherit;
 
-	&.alignwide,
-	&.alignfull {
-		padding-inline: max( var(--wp--style--root--padding-left), 1em );
+		blockquote {
+			font-size: 1em;
+		}
 
-		.rtl & {
-			padding-inline: max( var(--wp--style--root--padding-right), 1em );
+		&.alignwide,
+		&.alignfull {
+			padding-inline: max( var(--wp--style--root--padding-left), 1em );
+
+			.rtl & {
+				padding-inline: max( var(--wp--style--root--padding-right), 1em );
+			}
 		}
 	}
 }

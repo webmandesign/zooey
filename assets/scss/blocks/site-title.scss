@@ -1,5 +1,5 @@
 // core/site-title
-// @version  1.0.2
+// @version  1.1.0
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -17,7 +17,7 @@ body:not(.wp-custom-logo) .show-if-no-logo.is-style-screen-reader-text {
 	@extend %screen_reader--show;
 	display: block;
 	position: static !important;
-	margin: auto;
+	margin: 0;
 }
 
 @import '../_extend/_index';

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -134,7 +135,8 @@ class Starter implements Component_Interface {
 	/**
 	 * Pages.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  void
 	 */
@@ -152,7 +154,7 @@ class Starter implements Component_Interface {
 				'home' => array(
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'Home', 'Theme starter content: Homepage title', 'zooey' ),
-					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/home-3"} /-->',
+					'post_content' => '<!-- wp:pattern {"slug":"zooey/page/home-1"} /-->',
 					'template'     => $template_no_intro,
 					'thumbnail'    => '{{image-featured}}',
 				),

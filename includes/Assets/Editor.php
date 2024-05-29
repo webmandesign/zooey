@@ -6,12 +6,13 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Assets;
 
 use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\CSS_Variables;
 use WebManDesign\Zooey\Customize\Styles;
 
 // Exit if accessed directly.
@@ -215,7 +216,8 @@ class Editor implements Component_Interface {
 	/**
 	 * Add block editor inline styles.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  void
 	 */
@@ -246,7 +248,7 @@ class Editor implements Component_Interface {
 				'zooey-blocks-editor', // This works for both page editor and site editor.
 				$custom_background
 				. str_replace(
-					array( ':root', 'body' ),
+					array_unique( array( ':root', CSS_Variables::get_root() ) ), // Reference: CSS selector root.
 					':root .editor-styles-wrapper',
 					Styles::get_css_variables()
 				)

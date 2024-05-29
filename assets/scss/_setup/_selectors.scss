@@ -1,3 +1,16 @@
+// @see  CSS_Variables::get_root()
+// Need to use both selectors here as we can not check for WP version.
+$root: (
+	':root',
+	'html :where(.css-var-root)', // Override WP global styles and allow user overrides. https://jsfiddle.net/3s6Lrqwo/
+) !default;
+
+	@if true == $is_editor {
+		// In editor we need to use `body` or `:root`
+		// so WordPress can replace it with `.editor-styles-wrapper`.
+		$root: body;
+	}
+
 $selectors_margin_vertical: (
 	'p',
 	'ol', 'ul', 'dl',

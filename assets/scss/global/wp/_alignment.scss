@@ -38,7 +38,7 @@
 
 // Block related alignment styles.
 
-	body {
+	#{$root} {
 		--theme--css--align-inline-width: min( calc( 100vw - 200px ), var(--wp--style--global--content-size) );
 		--theme--css--align-inline-offset-margin-base: calc( ( var(--theme--css--align-100vw) - var(--theme--css--align-inline-width) ) / 2 );
 	}

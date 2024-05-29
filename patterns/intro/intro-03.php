@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,8 +32,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"border":{"radius":"0.38rem"}},"gradient":"base-cut-transparent-h","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-cut-transparent-h-gradient-background has-background" style="border-radius:0.38rem;padding-top:0;padding-bottom:0">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"gradient":"base-cut-transparent-h","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-cut-transparent-h-gradient-background has-background" style="padding-top:0;padding-bottom:0">
 
 			<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group alignwide">

@@ -62,7 +62,7 @@
 	// Default WordPress palette.
 	@each $slug, $color in $wp_palette_colors {
 
-		body {
+		#{$root} {
 
 			@if _is_dark_color( $color ) {
 				--wp--preset--color--#{ $slug }--bg-text: var(--wp--preset--color--white);

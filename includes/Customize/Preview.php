@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -38,7 +39,8 @@ class Preview implements Component_Interface {
 	/**
 	 * Customizer preview assets enqueue.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  void
 	 */
@@ -57,9 +59,14 @@ class Preview implements Component_Interface {
 			}, 9999 );
 
 			Assets\Factory::script_enqueue( array(
-				'handle' => 'zooey-customize-preview',
-				'src'    => get_theme_file_uri( 'assets/js/customize-preview.min.js' ),
-				'deps'   => array( 'jquery', 'customize-preview' ),
+				'handle'   => 'zooey-customize-preview',
+				'src'      => get_theme_file_uri( 'assets/js/customize-preview.min.js' ),
+				'deps'     => array( 'jquery', 'customize-preview' ),
+				'localize' => array(
+					'zooeyCustomizePreview' => array(
+						'cssVarRoot' => CSS_Variables::get_root(), // Reference: CSS selector root.
+					),
+				),
 			) );
 
 	} // /assets

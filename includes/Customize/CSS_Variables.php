@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -15,6 +16,8 @@ namespace WebManDesign\Zooey\Customize;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Assets;
 use WebManDesign\Zooey\Setup\Site_Editor;
+use WP_Theme_JSON;
+use WP_Theme_JSON_Gutenberg;
 use WP_Theme_JSON_Resolver;
 
 // Exit if accessed directly.
@@ -217,7 +220,8 @@ class CSS_Variables implements Component_Interface {
 	/**
 	 * Get CSS variables from Site Editor user global styles as an array.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  array
 	 */
@@ -232,51 +236,68 @@ class CSS_Variables implements Component_Interface {
 
 		// Variables
 
-			$data     = WP_Theme_JSON_Resolver::get_user_data()->get_data();
-			$css_vars = array();
+			// Using `get_raw_data()` as we also need `black` and `white` color values from default WP palette.
+			$data_user = WP_Theme_JSON_Resolver::get_user_data()->get_raw_data();
+			$css_vars  = array();
+			$data      = array(
+				'theme'   => array(),
+				'default' => array(),
+			);
 
 
 		// Processing
 
-			if ( ! empty( $data['settings']['color']['palette'] ) ) {
+			foreach ( $data as $scope => $value ) {
+				if ( ! empty( $data_user['settings']['color']['palette'][ $scope ] ) ) {
+					$data[ $scope ] = (array) $data_user['settings']['color']['palette'][ $scope ];
+				}
+			}
+
+			$data = array_filter( $data );
+
+			if ( ! empty( $data ) ) {
 
 				// Adding a helper "marker" CSS var for our information.
 				$css_vars['comment:user_global_styles--start'] = 'Global Styles:';
 
-				foreach ( $data['settings']['color']['palette'] as $palette ) {
+				foreach ( $data as $scope => $palette ) {
+					foreach ( $palette as $args ) {
 
-					// Do not process custom user colors, only theme predefined ones.
-					if ( 0 === stripos( $palette['slug'], 'custom-' ) ) {
-						continue;
-					}
-
-					$css_var = '--wp--preset--color--' . $palette['slug'];
-					$color   = maybe_hash_hex_color( $palette['color'] );
-
-					if ( ! empty( $color ) ) {
-
-						// Text color and border color from text.
-						if ( Colors::is_dark( $color ) ) {
-							$css_vars[ $css_var . '--bg-text' ]   = 'var(--wp--preset--color--white)';
-							$css_vars[ $css_var . '--bg-border' ] = 'var(--wp--preset--color--white--border)';
-						} else {
-							$css_vars[ $css_var . '--bg-text' ]   = 'var(--wp--preset--color--black)';
-							$css_vars[ $css_var . '--bg-border' ] = 'var(--wp--preset--color--black--border)';
+						// Do not process custom user colors, only theme predefined ones.
+						if ( 0 === stripos( $args['slug'], 'custom-' ) ) {
+							continue;
 						}
 
-						/**
-						 * Filters CSS variables output from global styles partially after each variable processing.
-						 *
-						 * Allows filtering the whole `$css_vars` array for each option individually.
-						 * This way we can add an option related additional CSS variables.
-						 *
-						 * @since  1.0.0
-						 *
-						 * @param  string $css_vars  Array of CSS variable name and value pairs.
-						 * @param  array  $palette   Global styles palette setup array.
-						 * @param  string $color     Single CSS variable value.
-						 */
-						$css_vars = apply_filters( 'zooey/customize/css_variables/get_array_from_global_styles/partial', $css_vars, $palette, $color );
+						$css_var = '--wp--preset--color--' . $args['slug'];
+						$color   = maybe_hash_hex_color( $args['color'] );
+
+						if ( ! empty( $color ) ) {
+
+							// Text color and border color from text.
+							if ( Colors::is_dark( $color ) ) {
+								$css_vars[ $css_var . '--bg-text' ]   = 'var(--wp--preset--color--white)';
+								$css_vars[ $css_var . '--bg-border' ] = 'var(--wp--preset--color--white--border)';
+							} else {
+								$css_vars[ $css_var . '--bg-text' ]   = 'var(--wp--preset--color--black)';
+								$css_vars[ $css_var . '--bg-border' ] = 'var(--wp--preset--color--black--border)';
+							}
+
+							/**
+							 * Filters CSS variables output from global styles partially after each variable processing.
+							 *
+							 * Allows filtering the whole `$css_vars` array for each option individually.
+							 * This way we can add an option related additional CSS variables.
+							 *
+							 * @since    1.0.0
+							 * @version  1.1.0
+							 *
+							 * @param  string $css_vars  Array of CSS variable name and value pairs.
+							 * @param  array  $args      Global styles palette color setup array.
+							 * @param  string $color     Single CSS variable value.
+							 * @param  string $scope     User global styles scope being processed.
+							 */
+							$css_vars = apply_filters( 'zooey/customize/css_variables/get_array_from_global_styles/partial', $css_vars, $args, $color, $scope );
+						}
 					}
 				}
 
@@ -407,5 +428,55 @@ class CSS_Variables implements Component_Interface {
 			delete_transient( self::$transient_cache_key );
 
 	} // /transient_cache_flush
+
+	/**
+	 * Returns CSS variables root selector based on WP global styles.
+	 *
+	 * This is required due to backwards compatibility.
+	 * WordPress versions older than 6.6 used `body` as root selector
+	 * to set up CSS variables in WordPress global styles CSS code.
+	 * All the theme options CSS variables had to be defined accordingly.
+	 *
+	 * @Todo:
+	 * This may be removed in later WordPress version (WP6.8) so we can
+	 * use just `:root` selector everywhere.
+	 *
+	 * @since  1.1.0
+	 *
+	 * @param  string $return  Either 'selector' for CSS code, or 'body_class' for PHP body class setup.
+	 *
+	 * @return  string
+	 */
+	public static function get_root( string $return = 'selector' ): string {
+
+		// Variables
+
+			if ( defined( 'WP_Theme_JSON_Gutenberg::ROOT_CSS_PROPERTIES_SELECTOR' ) ) {
+				$wp = WP_Theme_JSON_Gutenberg::ROOT_CSS_PROPERTIES_SELECTOR;
+			} elseif ( defined( 'WP_Theme_JSON::ROOT_CSS_PROPERTIES_SELECTOR' ) ) {
+				$wp = WP_Theme_JSON::ROOT_CSS_PROPERTIES_SELECTOR;
+			} else {
+				$wp = false;
+			}
+
+			if ( ':root' === $wp ) {
+				$output = array(
+					'selector'   => ':root',
+					'body_class' => '',
+				);
+			} else {
+				$output = array(
+					// Override WP global styles and allow user overrides. https://jsfiddle.net/3s6Lrqwo/
+					'selector'   => 'html :where(.css-var-root)',
+					'body_class' => 'css-var-root',
+				);
+			}
+
+
+		// Output
+
+			return $output[ $return ]; // Reference: CSS selector root.
+
+	} // /get_root
 
 }

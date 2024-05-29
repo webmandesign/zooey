@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -63,7 +64,8 @@ class Styles implements Component_Interface {
 	/**
 	 * Get processed CSS variables string.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  string
 	 */
@@ -97,7 +99,7 @@ class Styles implements Component_Interface {
 
 				$output .=
 					PHP_EOL
-					. ':root { ' // $css_selector_root
+					. ':root { ' // Reference: CSS selector root.
 					. PHP_EOL
 					. trim( $css_vars )
 					. PHP_EOL
@@ -105,7 +107,7 @@ class Styles implements Component_Interface {
 					. PHP_EOL;
 			}
 
-			// `body` selector specific to override WordPress global styles.
+			// For overriding WordPress global styles.
 			// Site background:
 			$css_vars  = '/* Custom Background: */' . PHP_EOL;
 			$css_vars .= '--theme--mod--color_base:' . $background_color . ';';
@@ -125,7 +127,7 @@ class Styles implements Component_Interface {
 
 				$output .=
 					PHP_EOL
-					. 'body { ' // $css_selector_root
+					. CSS_Variables::get_root() . ' { ' // Reference: CSS selector root.
 					. PHP_EOL
 					. trim( $css_vars )
 					. PHP_EOL

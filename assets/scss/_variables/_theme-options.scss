@@ -16,12 +16,12 @@
 	}
 }
 
-body {
+#{$root} {
 
 	// `$value + ''` is converting values to string to prevent any issues.
 	@each $option, $value in $theme_options {
 
-		// WP preset (`theme.json`) CSS variables need to be defined on `body`.
+		// WP preset (`theme.json`) CSS variables need to be defined on root based on WP Global Styles.
 		@if (
 			str-index( $option + '', '--wp--' )
 			or str-index( $value + '', '--wp--' )

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -228,7 +228,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.7
+	 * @version  1.1.0
 	 *
 	 * @param  array $options
 	 *
@@ -241,8 +241,8 @@ class Options implements Component_Interface {
 			// Default panel.
 			$in_panel = esc_html_x( 'Theme Options', 'Customizer panel title.', 'zooey' );
 
-			// To override WP global styles it is better to use `body` tag.
-			$css_selector_root = 'body';
+			// Overriding WP global styles.
+			$css_selector_root = CSS_Variables::get_root(); // Reference: CSS selector root.
 
 			// Predefined font families.
 			$font_families = array_filter( array_merge(
@@ -259,21 +259,20 @@ class Options implements Component_Interface {
 			$google_fonts_note = esc_html__( 'NOTE: The theme loads Google Fonts from your website, not from 3rd party servers. This improves privacy and compliance with GDPR.', 'zooey' );
 
 			// Color options.
-
-				$choices_palette = array_merge(
-					array(
-						'optgroup:palette-theme'  => esc_html__( 'Theme palette', 'zooey' ),
-					),
-					self::$json_data['theme']['palette'],
-					array(
-						'/optgroup:palette-theme' => '',
-						'optgroup:palette-wp'     => esc_html__( 'WordPress default palette', 'zooey' ),
-					),
-					self::$json_data['core']['palette'],
-					array(
-						'/optgroup:palette-wp' => '',
-					)
-				);
+			$choices_palette = array_merge(
+				array(
+					'optgroup:palette-theme'  => esc_html__( 'Theme palette', 'zooey' ),
+				),
+				self::$json_data['theme']['palette'],
+				array(
+					'/optgroup:palette-theme' => '',
+					'optgroup:palette-wp'     => esc_html__( 'WordPress default palette', 'zooey' ),
+				),
+				self::$json_data['core']['palette'],
+				array(
+					'/optgroup:palette-wp' => '',
+				)
+			);
 
 			// HTML control args displaying Site Editor info.
 			$site_editor_info = array(
@@ -890,7 +889,7 @@ class Options implements Component_Interface {
 							),
 							'preview_js'        => array(
 								'css' => array(
-									':root' => array( // Do not use `body` here. ($css_selector_root)
+									':root' => array(
 										array(
 											'property' => '--theme--mod--typography_font_size',
 										),
@@ -932,7 +931,7 @@ class Options implements Component_Interface {
 							),
 							'preview_js'        => array(
 								'css' => array(
-									':root' => array( // Do not use `body` here. ($css_selector_root)
+									':root' => array(
 										array(
 											'property' => '--theme--mod--typography_modular_scale',
 										),
@@ -960,7 +959,7 @@ class Options implements Component_Interface {
 							),
 							'preview_js'        => array(
 								'css' => array(
-									':root' => array( // Do not use `body` here. ($css_selector_root)
+									':root' => array(
 										array(
 											'property' => '--theme--mod--typography_desktop_multiply',
 										),

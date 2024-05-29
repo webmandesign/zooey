@@ -6,7 +6,7 @@
 	--theme--css--button--border: 2px solid;
 }
 
-body {
+#{$root} {
 
 	// Some elements may need to use the border color for something else,
 	// so we are setting local scope border color variable.

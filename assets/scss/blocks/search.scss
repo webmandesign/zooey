@@ -5,6 +5,11 @@
 @import '../_setup/_index';
 
 .wp-block-search {
+	// Border color has to be here, not in `theme.json`
+	// due to WP global styles producing block CSS selector
+	// with `:where()` (0 specificity), so our global border
+	// color inheritance styles override that selector.
+	border-color: currentColor;
 
 	.wp-block-search__input {
 		padding: var(--wp--custom--spacing--input-vertical) 1em;

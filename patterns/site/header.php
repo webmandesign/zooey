@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -35,8 +35,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","className":"has-global-padding","layout":{"type":"constrained","contentSize":"1600px"}} -->
-<div class="wp-block-group has-global-padding has-contrast-alt-color has-text-color has-link-color" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--content)">
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}}},"className":"has-global-padding","layout":{"type":"constrained","contentSize":"1600px"}} -->
+<div class="wp-block-group has-global-padding" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:template-part {"slug":"custom-header-top","align":"wide"} /-->
 
@@ -48,12 +48,12 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 			<!-- wp:site-logo {"width":560,"shouldSyncIcon":false} /-->
 
-			<!-- wp:site-title {"level":0,"isLink":false,"style":{"typography":{"lineHeight":"1"}},"className":"is-style-screen-reader-text show-if-no-logo","fontSize":"mega"} /-->
+			<!-- wp:site-title {"level":0,"style":{"typography":{"lineHeight":"1"}},"className":"is-style-screen-reader-text show-if-no-logo","fontSize":"mega"} /-->
 
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"layout":{"selfStretch":"fit","flexSize":null},"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
+		<!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"480px"},"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
 		<div class="wp-block-group">
 
 			<!-- wp:site-tagline {"style":{"typography":{"fontStyle":"normal","fontWeight":"300"}},"fontSize":"l"} /-->
@@ -68,7 +68,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"layout":{"type":"constrained"},"fontFamily":"supplemental"} -->
+			<!-- wp:group {"fontFamily":"supplemental"} -->
 			<div class="wp-block-group has-supplemental-font-family">
 
 				<?php if ( defined( 'WMD_THEME_DEMO' ) ) : ?>

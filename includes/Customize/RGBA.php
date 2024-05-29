@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -20,7 +21,8 @@ class RGBA implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  void
 	 */
@@ -35,7 +37,7 @@ class RGBA implements Component_Interface {
 				add_filter( 'zooey/customize/rgba/get_alphas', __CLASS__ . '::alphas' );
 
 				add_filter( 'zooey/customize/css_variables/get_array/partial',                    __CLASS__ . '::css_variable', 10, 3 );
-				add_filter( 'zooey/customize/css_variables/get_array_from_global_styles/partial', __CLASS__ . '::css_variable', 10, 3 );
+				add_filter( 'zooey/customize/css_variables/get_array_from_global_styles/partial', __CLASS__ . '::css_variable', 10, 4 );
 
 	} // /init
 
@@ -64,7 +66,8 @@ class RGBA implements Component_Interface {
 	/**
 	 * Sets alpha values (%) for CSS rgba() colors.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @param  array $alphas
 	 *
@@ -72,86 +75,53 @@ class RGBA implements Component_Interface {
 	 */
 	public static function alphas( array $alphas ): array {
 
-		// Variables
-
-			$var_prefix = '--wp--preset--color--';
-			$var_suffix = '--border';
-			$alpha      = 'var(--wp--custom--opacity--border)';
-
-
 		// Output
 
 			return array(
 
 				/**
-				 * For `color_base` setup
+				 * Base color border setup is required for
+				 * @see  WebManDesign\Zooey\Customize\CSS_Variables::get_array_from_global_styles()
+				 *
+				 * For additional `color_base` setup
 				 * @see  WebManDesign\Zooey\Customize\Styles::get_css_variables()
+				 *
+				 * @see  customize-preview.js
+				 * 'background_color' => array( self::get_alfa_args_border( 'base' ) ),
 				 */
-
-				'color_base_alt' =>  array(
-					array(
-						'css_var_name' => $var_prefix . 'base-alt' . $var_suffix,
-						'alpha'        => $alpha,
-					),
+				'color_base' => array(
+					self::get_alfa_args_border( 'base' ),
 				),
 
-				'color_contrast' =>  array(
-					array(
-						'css_var_name' => $var_prefix . 'contrast' . $var_suffix,
-						'alpha'        => $alpha,
-					),
+				'color_base_alt' => array(
+					self::get_alfa_args_border( 'base-alt' ),
 				),
 
-				'color_contrast_alt' =>  array(
-					array(
-						'css_var_name' => $var_prefix . 'contrast-alt' . $var_suffix,
-						'alpha'        => $alpha,
-					),
+				'color_contrast' => array(
+					self::get_alfa_args_border( 'contrast' ),
+				),
+
+				'color_contrast_alt' => array(
+					self::get_alfa_args_border( 'contrast-alt' ),
 				),
 
 				'color_primary' => array(
-					array(
-						'css_var_name' => $var_prefix . 'primary' . $var_suffix,
-						'alpha'        => $alpha,
-					),
-					array(
-						'css_var_name' => $var_prefix . 'primary-semitransparent',
-						'alpha'        => 'var(--wp--custom--opacity--semitransparent)',
-					),
+					self::get_alfa_args_border( 'primary' ),
+					self::get_alfa_args_semitransparent( 'primary' ),
 				),
 
-					'color_primary_mixed' =>  array(
-						array(
-							'css_var_name' => $var_prefix . 'primary_mixed' . $var_suffix,
-							'alpha'        => $alpha,
-						),
+					'color_primary_mixed' => array(
+						self::get_alfa_args_border( 'primary-mixed' ),
 					),
 
 				'color_secondary' => array(
-					array(
-						'css_var_name' => $var_prefix . 'secondary' . $var_suffix,
-						'alpha'        => $alpha,
-					),
-					array(
-						'css_var_name' => $var_prefix . 'secondary-semitransparent',
-						'alpha'        => 'var(--wp--custom--opacity--semitransparent)',
-					),
+					self::get_alfa_args_border( 'secondary' ),
+					self::get_alfa_args_semitransparent( 'secondary' ),
 				),
 
-					'color_secondary_mixed' =>  array(
-						array(
-							'css_var_name' => $var_prefix . 'secondary_mixed' . $var_suffix,
-							'alpha'        => $alpha,
-						),
+					'color_secondary_mixed' => array(
+						self::get_alfa_args_border( 'secondary-mixed' ),
 					),
-
-				// @see  customize-preview.js
-				// 'background_color' => array(
-				//   array(
-				//     'css_var_name' => $var_prefix . 'base' . $var_suffix,
-				//     'alpha'        => $alpha,
-				//   ),
-				// ),
 			);
 
 	} // /alphas
@@ -159,7 +129,8 @@ class RGBA implements Component_Interface {
 	/**
 	 * Customize preview RGBA colors.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @param  array $options
 	 *
@@ -171,8 +142,8 @@ class RGBA implements Component_Interface {
 
 			$alphas = self::get_alphas();
 
-			// To override WP global styles it is better to use `body` tag.
-			$css_selector_root = 'body';
+			// Overriding WP global styles.
+			$css_selector_root = CSS_Variables::get_root(); // Reference: CSS selector root.
 
 
 		// Processing
@@ -207,15 +178,17 @@ class RGBA implements Component_Interface {
 	/**
 	 * Adding RGBA CSS variables.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @param  array  $css_vars
 	 * @param  array  $option
 	 * @param  string $value
+	 * @param  string $scope
 	 *
 	 * @return  array
 	 */
-	public static function css_variable( array $css_vars = array(), array $option = array(), string $value = '' ): array {
+	public static function css_variable( array $css_vars = array(), array $option = array(), string $value = '', string $scope = 'theme' ): array {
 
 		// Variables
 
@@ -224,15 +197,28 @@ class RGBA implements Component_Interface {
 
 		// Processing
 
-			if ( stripos( current_filter(), '_from_global_styles' ) ) {
+			if (
+				! isset( $option['id'] )
+				&& isset( $option['slug'] )
+			) {
+
 				$option['id'] = 'color_' . str_replace( '-', '_', $option['slug'] );
 			}
 
-			if ( isset( $option['id'], $alphas[ $option['id'] ] ) ) {
+			if ( isset( $alphas[ $option['id'] ] ) ) {
 
 				foreach ( $alphas[ $option['id'] ] as $args ) {
 					$css_vars[ $args['css_var_name'] ] = esc_attr( Colors::hex_to_rgba( (string) $value, $args['alpha'] ) );
 				}
+			}
+
+			// Default WordPress color palette has been modified,
+			// so we need to provide border CSS variable for the colors.
+			if ( 'default' === $scope ) {
+
+				$args = self::get_alfa_args_border( $option['slug'] );
+
+				$css_vars[ $args['css_var_name'] ] = esc_attr( Colors::hex_to_rgba( (string) $value, $args['alpha'] ) );
 			}
 
 
@@ -241,5 +227,45 @@ class RGBA implements Component_Interface {
 			return (array) $css_vars;
 
 	} // /css_variable
+
+	/**
+	 * Get border CSS variable setup args.
+	 *
+	 * @since  1.1.0
+	 *
+	 * @param  string $slug  Color slug used in border CSS variable name.
+	 *
+	 * @return  array
+	 */
+	public static function get_alfa_args_border( string $slug ): array {
+
+		// Output
+
+			return array(
+				'css_var_name' => '--wp--preset--color--' . $slug . '--border',
+				'alpha'        => 'var(--wp--custom--opacity--border)',
+			);
+
+	} // /get_alfa_args_border
+
+	/**
+	 * Get semitransparent CSS variable setup args.
+	 *
+	 * @since  1.1.0
+	 *
+	 * @param  string $slug  Color slug used in semitransparent CSS variable name.
+	 *
+	 * @return  array
+	 */
+	public static function get_alfa_args_semitransparent( string $slug ): array {
+
+		// Output
+
+			return array(
+				'css_var_name' => '--wp--preset--color--' . $slug . '-semitransparent',
+				'alpha'        => 'var(--wp--custom--opacity--semitransparent)',
+			);
+
+	} // /get_alfa_args_semitransparent
 
 }

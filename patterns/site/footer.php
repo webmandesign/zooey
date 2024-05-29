@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.1.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -40,7 +40,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
-		<!-- wp:site-logo {"width":320} /-->
+		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:site-logo {"width":320} /-->
+
+			<!-- wp:site-title {"level":0,"style":{"typography":{"lineHeight":"1"}},"className":"is-style-screen-reader-text show-if-no-logo"} /-->
+
+		</div>
+		<!-- /wp:group -->
 
 		<!-- wp:social-links {"iconColor":"primary","size":"has-huge-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only","layout":{"type":"flex"}} -->
 		<ul class="wp-block-social-links has-huge-icon-size has-icon-color is-style-logos-only">

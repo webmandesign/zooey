@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.0
  */
 
 /**
@@ -24,7 +25,7 @@
 			.bind( function( to ) {
 				$( '#zooey-inline-css' )
 					.append(
-						'body{'
+						zooeyCustomizePreview.cssVarRoot + '{'
 						+ '--theme--mod--color_base:' + to + ';'
 						+ '--wp--preset--color--base--border:rgba(' + zooey.Customize.hexToRgb( to ) + ',var(--wp--custom--opacity--border));'
 						+ '}'

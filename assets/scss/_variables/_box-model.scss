@@ -6,7 +6,7 @@
 	--theme--css--align-100vw: calc( 100vw - var(--theme--js--scrollbar_width) );
 }
 
-body {
+#{$root} {
 
 	--theme--css--content-padding: calc( var(--wp--custom--toggle--content-space, 1) * var(--wp--preset--spacing--content) );
 	--theme--css--content-padding-negative: calc( -1 * var(--wp--custom--toggle--content-space, 1) * var(--wp--preset--spacing--content) );
