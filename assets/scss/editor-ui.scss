@@ -57,10 +57,6 @@
 
 // Spacing options.
 .tools-panel-item-spacing {
-	--wp--custom--opacity--pseudo-bg: .025;
-
-	@extend %shaded_background;
-	position: relative;
 	padding: 1em;
 	border: 1px solid rgba( #000, .1 );
 	border-radius: .25em;

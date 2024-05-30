@@ -1,5 +1,56 @@
 # Zooey Changelog
 
+## 1.1.0, 20240530
+
+### Updated
+- `theme.json` to version 3
+- CSS styles
+- Editor UI CSS styles
+- Improving auto-calculated CSS variables setup
+- Theme description text (the first sentence is used at WPORG theme preview as tagline)
+- Localization
+
+### Fixed
+- Making the theme compatible with current Gutenberg 18.4.1 plugin (for WPORG theme preview):
+	- Improving CSS variables root selector setup
+	- Fixing issues with WordPress CSS specificity (due to using `:where()`)
+	- Applying z-index on negative margin blocks
+	- Fixing CSS styles
+	- Removing "Dark" (any, all) global styles as they caused color issues on WPORG theme preview website (theme CSS variables were calculated as if the "Dark" global style was active, even though the default style was in use)
+	- Logging Gutenberg issue tickets where needed
+- Adding missing auto-calculated CSS variables
+- Starter content home template
+- Displaying site title in footer when no logo image set
+- Patterns
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	assets/js/customize-preview.js
+	assets/scss/blocks-editor.scss
+	assets/scss/blocks.scss
+	assets/scss/editor-ui.scss
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/pullquote.scss
+	assets/scss/blocks/search.scss
+	assets/scss/blocks/site-title.scss
+	includes/Assets/Editor.php
+	includes/Content/Starter.php
+	includes/Customize/CSS_Variables.php
+	includes/Customize/Options.php
+	includes/Customize/Preview.php
+	includes/Customize/RGBA.php
+	includes/Customize/Styles.php
+	includes/Header/Body_Class.php
+	languages/sk_SK.*
+	languages/zooey.pot
+	patterns/intro/intro-03.php
+	patterns/site/footer.php
+	patterns/site/header.php
+
+
 ## 1.0.7, 20240527
 
 ### Added

@@ -304,7 +304,12 @@
 
 	// Pull up/down.
 
-		[class*="is-style-pull-"] {
+		[class*="is-style-pull-"],
+		// Apply also on WP6.6+ negative margin blocks.
+		[style*="margin-top:-"], [style*="margin-top: -"],
+		[style*="margin-right:-"], [style*="margin-right: -"],
+		[style*="margin-bottom:-"], [style*="margin-bottom: -"],
+		[style*="margin-left:-"], [style*="margin-left: -"] {
 			position: relative;
 			z-index: 5;
 		}

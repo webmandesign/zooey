@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.0.7\n"
+"Project-Id-Version: Zooey 1.1.0\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-27T13:15:11+00:00\n"
+"POT-Creation-Date: 2024-05-30T12:57:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: zooey\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor!"
+msgid "Welcome to Zooey universal block theme! Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://themedemos.webmandesign.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)"
 msgstr ""
 
 #. Author of the theme
@@ -345,13 +345,13 @@ msgid "Megamenu"
 msgstr ""
 
 #: includes/Content/Block_Style.php:203
-#: includes/Customize/Options.php:832
+#: includes/Customize/Options.php:831
 msgctxt "Block style label."
 msgid "Hide on small screens"
 msgstr ""
 
 #: includes/Content/Block_Style.php:217
-#: includes/Customize/Options.php:833
+#: includes/Customize/Options.php:832
 msgctxt "Block style label."
 msgid "Only on small screens"
 msgstr ""
@@ -524,27 +524,27 @@ msgstr ""
 msgid "(page %d)"
 msgstr ""
 
-#: includes/Content/Starter.php:154
+#: includes/Content/Starter.php:156
 msgctxt "Theme starter content: Homepage title"
 msgid "Home"
 msgstr ""
 
-#: includes/Content/Starter.php:162
+#: includes/Content/Starter.php:164
 msgctxt "Theme starter content: About page title"
 msgid "About"
 msgstr ""
 
-#: includes/Content/Starter.php:170
+#: includes/Content/Starter.php:172
 msgctxt "Theme starter content: Services page title"
 msgid "Services"
 msgstr ""
 
-#: includes/Content/Starter.php:178
+#: includes/Content/Starter.php:180
 msgctxt "Theme starter content: Blog page title"
 msgid "Blog"
 msgstr ""
 
-#: includes/Content/Starter.php:184
+#: includes/Content/Starter.php:186
 msgctxt "Theme starter content: Contact page title"
 msgid "Contact"
 msgstr ""
@@ -566,7 +566,7 @@ msgid "By default applied as website background."
 msgstr ""
 
 #: includes/Customize/Options.php:242
-#: includes/Customize/Options.php:1216
+#: includes/Customize/Options.php:1215
 #: includes/Loop/Featured_Posts.php:145
 #: includes/Tool/Page_Builder.php:79
 msgctxt "Customizer panel title."
@@ -577,483 +577,483 @@ msgstr ""
 msgid "NOTE: The theme loads Google Fonts from your website, not from 3rd party servers. This improves privacy and compliance with GDPR."
 msgstr ""
 
-#: includes/Customize/Options.php:265
+#: includes/Customize/Options.php:264
 msgid "Theme palette"
 msgstr ""
 
-#: includes/Customize/Options.php:270
+#: includes/Customize/Options.php:269
 msgid "WordPress default palette"
 msgstr ""
 
-#: includes/Customize/Options.php:283
+#: includes/Customize/Options.php:282
 msgid "Looking for additional options?"
 msgstr ""
 
-#: includes/Customize/Options.php:285
+#: includes/Customize/Options.php:284
 msgid "Site editor is enabled and allows you to set up colors and layout to your needs."
 msgstr ""
 
-#: includes/Customize/Options.php:289
+#: includes/Customize/Options.php:288
 msgid "https://webmandesign.github.io/docs/zooey/#site-editor"
 msgstr ""
 
-#: includes/Customize/Options.php:290
+#: includes/Customize/Options.php:289
 msgid "Find out more ↗"
 msgstr ""
 
-#: includes/Customize/Options.php:311
+#: includes/Customize/Options.php:310
 msgid "Theme Credits"
 msgstr ""
 
 #. translators: 1: linked theme name, 2: theme author name.
-#: includes/Customize/Options.php:315
+#: includes/Customize/Options.php:314
 msgid "%1$s is a WordPress theme developed by %2$s."
 msgstr ""
 
-#: includes/Customize/Options.php:328
+#: includes/Customize/Options.php:327
 msgctxt "Customizer section title."
 msgid "Colors & Background"
 msgstr ""
 
-#: includes/Customize/Options.php:338
+#: includes/Customize/Options.php:337
 msgid "Theme color palette"
 msgstr ""
 
-#: includes/Customize/Options.php:344
+#: includes/Customize/Options.php:343
 msgid "Site background"
 msgstr ""
 
-#: includes/Customize/Options.php:359
+#: includes/Customize/Options.php:358
 msgid "Site background color"
 msgstr ""
 
-#: includes/Customize/Options.php:362
+#: includes/Customize/Options.php:361
 msgid "Tweak theme colors in Site Editor → Styles section."
 msgstr ""
 
-#: includes/Customize/Options.php:364
+#: includes/Customize/Options.php:363
 msgid "\"Base\" color is used as the site background color."
 msgstr ""
 
-#: includes/Customize/Options.php:373
+#: includes/Customize/Options.php:372
 msgid "Base alternative color"
 msgstr ""
 
-#: includes/Customize/Options.php:391
+#: includes/Customize/Options.php:390
 msgid "Contrast color"
 msgstr ""
 
-#: includes/Customize/Options.php:393
+#: includes/Customize/Options.php:392
 msgid "By default applied on text."
 msgstr ""
 
-#: includes/Customize/Options.php:395
-#: includes/Customize/Options.php:417
-#: includes/Customize/Options.php:439
+#: includes/Customize/Options.php:394
+#: includes/Customize/Options.php:416
+#: includes/Customize/Options.php:438
 msgid "Set this for an appropriate contrast against \"Base\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:413
+#: includes/Customize/Options.php:412
 msgid "Contrast alternative color"
 msgstr ""
 
-#: includes/Customize/Options.php:415
-#: includes/Customize/Options.php:1038
+#: includes/Customize/Options.php:414
+#: includes/Customize/Options.php:1037
 msgid "By default applied on headings."
 msgstr ""
 
-#: includes/Customize/Options.php:435
+#: includes/Customize/Options.php:434
 msgid "Primary color"
 msgstr ""
 
-#: includes/Customize/Options.php:437
+#: includes/Customize/Options.php:436
 msgid "By default applied as link color."
 msgstr ""
 
-#: includes/Customize/Options.php:457
+#: includes/Customize/Options.php:456
 msgid "Primary mixed color"
 msgstr ""
 
-#: includes/Customize/Options.php:458
+#: includes/Customize/Options.php:457
 msgid "By default it is set as a blend of \"Base\" and \"Primary\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:476
+#: includes/Customize/Options.php:475
 msgid "Secondary color"
 msgstr ""
 
-#: includes/Customize/Options.php:477
+#: includes/Customize/Options.php:476
 msgid "By default applied as button color."
 msgstr ""
 
-#: includes/Customize/Options.php:495
+#: includes/Customize/Options.php:494
 msgid "Secondary mixed color"
 msgstr ""
 
-#: includes/Customize/Options.php:496
+#: includes/Customize/Options.php:495
 msgid "By default it is set as a blend of \"Base\" and \"Secondary\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:515
+#: includes/Customize/Options.php:514
 msgid "Button color"
 msgstr ""
 
-#: includes/Customize/Options.php:516
+#: includes/Customize/Options.php:515
 msgid "Choose which predefined color applies on buttons."
 msgstr ""
 
-#: includes/Customize/Options.php:550
+#: includes/Customize/Options.php:549
 msgid "Styling theme sections"
 msgstr ""
 
-#: includes/Customize/Options.php:553
+#: includes/Customize/Options.php:552
 msgid "Colors and layout of theme sections (such as site header or footer) can be customized by editing template parts in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:567
+#: includes/Customize/Options.php:566
 msgid "Gradients"
 msgstr ""
 
-#: includes/Customize/Options.php:573
+#: includes/Customize/Options.php:572
 msgid "Hard gradient stop"
 msgstr ""
 
-#: includes/Customize/Options.php:575
-#: includes/Customize/Options.php:604
-#: includes/Customize/Options.php:751
-#: includes/Customize/Options.php:785
-#: includes/Customize/Options.php:824
-#: includes/Customize/Options.php:880
-#: includes/Customize/Options.php:922
-#: includes/Customize/Options.php:950
-#: includes/Customize/Options.php:1013
-#: includes/Customize/Options.php:1040
-#: includes/Customize/Options.php:1067
+#: includes/Customize/Options.php:574
+#: includes/Customize/Options.php:603
+#: includes/Customize/Options.php:750
+#: includes/Customize/Options.php:784
+#: includes/Customize/Options.php:823
+#: includes/Customize/Options.php:879
+#: includes/Customize/Options.php:921
+#: includes/Customize/Options.php:949
+#: includes/Customize/Options.php:1012
+#: includes/Customize/Options.php:1039
+#: includes/Customize/Options.php:1066
 msgid "Default value:"
 msgstr ""
 
-#: includes/Customize/Options.php:577
+#: includes/Customize/Options.php:576
 msgid "Sets the stop position for automatically generated hard cut gradient presets."
 msgstr ""
 
-#: includes/Customize/Options.php:602
+#: includes/Customize/Options.php:601
 msgid "Soft gradient stop"
 msgstr ""
 
-#: includes/Customize/Options.php:606
+#: includes/Customize/Options.php:605
 msgid "Sets the stop position for automatically generated soft gradual gradient presets."
 msgstr ""
 
-#: includes/Customize/Options.php:634
+#: includes/Customize/Options.php:633
 msgid "Editor palette"
 msgstr ""
 
-#: includes/Customize/Options.php:640
+#: includes/Customize/Options.php:639
 msgid "WordPress default color palette"
 msgstr ""
 
-#: includes/Customize/Options.php:641
-#: includes/Customize/Options.php:649
-#: includes/Customize/Options.php:657
+#: includes/Customize/Options.php:640
+#: includes/Customize/Options.php:648
+#: includes/Customize/Options.php:656
 msgid "Should this be enabled in block editor?"
 msgstr ""
 
-#: includes/Customize/Options.php:648
+#: includes/Customize/Options.php:647
 msgid "WordPress default gradients"
 msgstr ""
 
-#: includes/Customize/Options.php:656
+#: includes/Customize/Options.php:655
 msgid "WordPress default duotone presets"
 msgstr ""
 
-#: includes/Customize/Options.php:665
+#: includes/Customize/Options.php:664
 msgid "Black color"
 msgstr ""
 
-#: includes/Customize/Options.php:683
+#: includes/Customize/Options.php:682
 msgid "White color"
 msgstr ""
 
-#: includes/Customize/Options.php:710
+#: includes/Customize/Options.php:709
 msgctxt "Customizer section title."
 msgid "Layout"
 msgstr ""
 
-#: includes/Customize/Options.php:719
+#: includes/Customize/Options.php:718
 msgctxt "WordPress full site editing functionality."
 msgid "Site editing"
 msgstr ""
 
-#: includes/Customize/Options.php:725
+#: includes/Customize/Options.php:724
 msgid "Enable template editor"
 msgstr ""
 
-#: includes/Customize/Options.php:727
+#: includes/Customize/Options.php:726
 msgid "Enables WordPress full site editing experience."
 msgstr ""
 
-#: includes/Customize/Options.php:729
+#: includes/Customize/Options.php:728
 msgid "When enabled, you can edit all theme template layouts visually without using code."
 msgstr ""
 
-#: includes/Customize/Options.php:731
+#: includes/Customize/Options.php:730
 msgid "When disabled, only site template parts (such as header, footer, page intro,&hellip;) are customizable via Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:733
+#: includes/Customize/Options.php:732
 msgid "You can still modify the theme using PHP code (known practice from \"classic\" WordPress themes)."
 msgstr ""
 
-#: includes/Customize/Options.php:742
+#: includes/Customize/Options.php:741
 msgid "Content"
 msgstr ""
 
-#: includes/Customize/Options.php:749
+#: includes/Customize/Options.php:748
 msgid "Content width"
 msgstr ""
 
-#: includes/Customize/Options.php:753
+#: includes/Customize/Options.php:752
 msgid "This is a default width for your blocks."
 msgstr ""
 
-#: includes/Customize/Options.php:755
+#: includes/Customize/Options.php:754
 msgid "Set this cautiously for the best readability, depending on your typography setup."
 msgstr ""
 
-#: includes/Customize/Options.php:757
+#: includes/Customize/Options.php:756
 msgid "The optimal text line length is considered to be between 50 and 75 characters, including spaces."
 msgstr ""
 
-#: includes/Customize/Options.php:783
+#: includes/Customize/Options.php:782
 msgid "Wide width"
 msgstr ""
 
-#: includes/Customize/Options.php:787
+#: includes/Customize/Options.php:786
 msgid "This width is applied on wide-aligned blocks."
 msgstr ""
 
-#: includes/Customize/Options.php:816
+#: includes/Customize/Options.php:815
 msgid "Responsiveness"
 msgstr ""
 
-#: includes/Customize/Options.php:822
+#: includes/Customize/Options.php:821
 msgid "Small screen breakpoint"
 msgstr ""
 
-#: includes/Customize/Options.php:826
+#: includes/Customize/Options.php:825
 msgid "Sets the screen width (viewport) value for responsive breakpoint."
 msgstr ""
 
 #. translators: %1$s, %2$s: block style names.
-#: includes/Customize/Options.php:830
+#: includes/Customize/Options.php:829
 msgid "This affects responsive block styles, such as \"%1$s\" or \"%2$s\"."
 msgstr ""
 
-#: includes/Customize/Options.php:854
+#: includes/Customize/Options.php:853
 msgctxt "Customizer section title."
 msgid "Typography"
 msgstr ""
 
-#: includes/Customize/Options.php:862
+#: includes/Customize/Options.php:861
 msgid "These options provide great flexibility such as setting up a custom font family and affect also Global Styles in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:868
+#: includes/Customize/Options.php:867
 msgid "Font size"
 msgstr ""
 
-#: includes/Customize/Options.php:874
+#: includes/Customize/Options.php:873
 msgid "Global font size in px"
 msgstr ""
 
-#: includes/Customize/Options.php:876
+#: includes/Customize/Options.php:875
 msgid "Global text font size used as a base for automatic calculation of additional font sizes."
 msgstr ""
 
-#: includes/Customize/Options.php:878
+#: includes/Customize/Options.php:877
 msgid "This size is applied on large screens only."
 msgstr ""
 
-#: includes/Customize/Options.php:906
+#: includes/Customize/Options.php:905
 msgid "Typography ratio"
 msgstr ""
 
-#: includes/Customize/Options.php:909
+#: includes/Customize/Options.php:908
 msgid "Ratios for automatic harmonious typography font size calculation."
 msgstr ""
 
-#: includes/Customize/Options.php:916
+#: includes/Customize/Options.php:915
 msgid "Modular scale ratio"
 msgstr ""
 
-#: includes/Customize/Options.php:918
+#: includes/Customize/Options.php:917
 msgid "This ratio is used for calculating heading sizes."
 msgstr ""
 
-#: includes/Customize/Options.php:920
+#: includes/Customize/Options.php:919
 msgid "Open link in new window"
 msgstr ""
 
-#: includes/Customize/Options.php:920
+#: includes/Customize/Options.php:919
 msgid "Open Modular Scale calculator in a new window ↗"
 msgstr ""
 
-#: includes/Customize/Options.php:946
+#: includes/Customize/Options.php:945
 msgid "Large screen headings scale"
 msgstr ""
 
-#: includes/Customize/Options.php:948
+#: includes/Customize/Options.php:947
 msgid "Additional ratio for scaling heading sizes on large screens."
 msgstr ""
 
-#: includes/Customize/Options.php:976
+#: includes/Customize/Options.php:975
 msgid "Font families"
 msgstr ""
 
 #. translators: %s: customizer option values.
-#: includes/Customize/Options.php:981
+#: includes/Customize/Options.php:980
 msgid "Values of %s set web safe system font families."
 msgstr ""
 
-#: includes/Customize/Options.php:986
+#: includes/Customize/Options.php:985
 msgid "You can use any Google Fonts with this theme."
 msgstr ""
 
-#: includes/Customize/Options.php:988
+#: includes/Customize/Options.php:987
 msgid "Just input the Google Fonts font family name into the fields below, save the options, and you are done!"
 msgstr ""
 
 #. translators: %s: CSS style `font-family` property with link to more information (international).
-#: includes/Customize/Options.php:1001
+#: includes/Customize/Options.php:1000
 msgid "Use a value valid for CSS %s property in the fields below."
 msgstr ""
 
-#: includes/Customize/Options.php:1010
+#: includes/Customize/Options.php:1009
 msgid "Main font"
 msgstr ""
 
-#: includes/Customize/Options.php:1011
+#: includes/Customize/Options.php:1010
 msgid "By default applied as main, global website font."
 msgstr ""
 
-#: includes/Customize/Options.php:1020
-#: includes/Customize/Options.php:1047
-#: includes/Customize/Options.php:1074
+#: includes/Customize/Options.php:1019
+#: includes/Customize/Options.php:1046
+#: includes/Customize/Options.php:1073
 msgid "Default value"
 msgstr ""
 
-#: includes/Customize/Options.php:1037
+#: includes/Customize/Options.php:1036
 msgid "Heading font"
 msgstr ""
 
-#: includes/Customize/Options.php:1064
+#: includes/Customize/Options.php:1063
 msgid "Alternative font"
 msgstr ""
 
-#: includes/Customize/Options.php:1065
+#: includes/Customize/Options.php:1064
 msgid "By default applied on site title (logo)."
 msgstr ""
 
-#: includes/Customize/Options.php:1092
+#: includes/Customize/Options.php:1091
 msgid "Enable theme Google Fonts loading"
 msgstr ""
 
-#: includes/Customize/Options.php:1093
+#: includes/Customize/Options.php:1092
 msgid "In case you are loading fonts with a plugin or other way, disable this option."
 msgstr ""
 
-#: includes/Customize/Options.php:1108
+#: includes/Customize/Options.php:1107
 msgid "More typography options"
 msgstr ""
 
-#: includes/Customize/Options.php:1111
+#: includes/Customize/Options.php:1110
 msgid "In case you need to modify typography more precisely, you can do so in Site Editor → Styles section."
 msgstr ""
 
-#: includes/Customize/Options.php:1123
+#: includes/Customize/Options.php:1122
 #: includes/Loop/Featured_Posts.php:144
 msgctxt "Customizer section title."
 msgid "Posts"
 msgstr ""
 
-#: includes/Customize/Options.php:1132
+#: includes/Customize/Options.php:1131
 #: patterns/site/header.php:78
 msgid "Blog"
 msgstr ""
 
-#: includes/Customize/Options.php:1138
+#: includes/Customize/Options.php:1137
 msgid "Blog posts layout"
 msgstr ""
 
-#: includes/Customize/Options.php:1141
+#: includes/Customize/Options.php:1140
 msgctxt "Posts list layout."
 msgid "Columns without sidebar"
 msgstr ""
 
-#: includes/Customize/Options.php:1142
+#: includes/Customize/Options.php:1141
 msgctxt "Posts list layout."
 msgid "List with sidebar"
 msgstr ""
 
-#: includes/Customize/Options.php:1151
+#: includes/Customize/Options.php:1150
 msgid "Enable category selector"
 msgstr ""
 
-#: includes/Customize/Options.php:1152
+#: includes/Customize/Options.php:1151
 msgid "Displays a section with category selector on blog page."
 msgstr ""
 
-#: includes/Customize/Options.php:1164
+#: includes/Customize/Options.php:1163
 msgid "You can further customize blog page layout in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:1179
+#: includes/Customize/Options.php:1178
 msgid "Posts count"
 msgstr ""
 
-#: includes/Customize/Options.php:1181
+#: includes/Customize/Options.php:1180
 msgid "Max number of entries displayed in list of posts."
 msgstr ""
 
-#: includes/Customize/Options.php:1188
+#: includes/Customize/Options.php:1187
 #: patterns/site/intro-search.php:42
 msgid "Search results"
 msgstr ""
 
-#: includes/Customize/Options.php:1200
+#: includes/Customize/Options.php:1199
 msgid "Archive page"
 msgstr ""
 
-#: includes/Customize/Options.php:1215
+#: includes/Customize/Options.php:1214
 msgctxt "Customizer section title."
 msgid "Others"
 msgstr ""
 
-#: includes/Customize/Options.php:1222
+#: includes/Customize/Options.php:1221
 msgid "Enable core block patterns"
 msgstr ""
 
-#: includes/Customize/Options.php:1223
+#: includes/Customize/Options.php:1222
 msgid "Allows WordPress core block patterns in block editor."
 msgstr ""
 
-#: includes/Customize/Options.php:1232
+#: includes/Customize/Options.php:1231
 msgid "Link homepage logo"
 msgstr ""
 
-#: includes/Customize/Options.php:1234
+#: includes/Customize/Options.php:1233
 msgid "When disabled, logo image will no longer link to the homepage when visitor is on the homepage."
 msgstr ""
 
-#: includes/Customize/Options.php:1236
+#: includes/Customize/Options.php:1235
 msgid "It also removes the logo image alt text attribute on the homepage."
 msgstr ""
 
-#: includes/Customize/Options.php:1250
+#: includes/Customize/Options.php:1249
 msgid "Header image usage"
 msgstr ""
 
-#: includes/Customize/Options.php:1253
+#: includes/Customize/Options.php:1252
 msgid "These header images will be used in Image blocks with \"Use header image\" block style assigned."
 msgstr ""
 
@@ -2112,7 +2112,7 @@ msgstr ""
 
 #: patterns/intro/intro-01.php:23
 #: patterns/intro/intro-02.php:23
-#: patterns/intro/intro-03.php:20
+#: patterns/intro/intro-03.php:21
 #: patterns/intro/intro-04.php:20
 #: patterns/intro/intro-05.php:21
 #: patterns/intro/intro-06.php:20
@@ -2127,7 +2127,7 @@ msgstr ""
 
 #: patterns/intro/intro-01.php:24
 #: patterns/intro/intro-02.php:24
-#: patterns/intro/intro-03.php:21
+#: patterns/intro/intro-03.php:22
 #: patterns/intro/intro-04.php:21
 #: patterns/intro/intro-05.php:22
 #: patterns/intro/intro-06.php:21
@@ -2145,7 +2145,7 @@ msgstr ""
 
 #: patterns/intro/intro-01.php:25
 #: patterns/intro/intro-02.php:25
-#: patterns/intro/intro-03.php:22
+#: patterns/intro/intro-03.php:23
 #: patterns/intro/intro-04.php:22
 #: patterns/intro/intro-05.php:23
 #: patterns/intro/intro-06.php:22
@@ -2160,7 +2160,7 @@ msgstr ""
 
 #: patterns/intro/intro-01.php:26
 #: patterns/intro/intro-02.php:26
-#: patterns/intro/intro-03.php:23
+#: patterns/intro/intro-03.php:24
 #: patterns/intro/intro-04.php:23
 #: patterns/intro/intro-05.php:24
 #: patterns/intro/intro-06.php:23
@@ -2183,7 +2183,7 @@ msgctxt "keyword"
 msgid "icons"
 msgstr ""
 
-#: patterns/intro/intro-03.php:18
+#: patterns/intro/intro-03.php:19
 msgctxt "Block pattern title."
 msgid "Page title with description cut into a featured image cover"
 msgstr ""
@@ -2868,13 +2868,13 @@ msgstr ""
 
 #: patterns/site/footer-centered.php:50
 #: patterns/site/footer-minimal.php:45
-#: patterns/site/footer.php:84
+#: patterns/site/footer.php:92
 msgid "Copyright &copy; "
 msgstr ""
 
 #: patterns/site/footer-centered.php:50
 #: patterns/site/footer-minimal.php:49
-#: patterns/site/footer.php:88
+#: patterns/site/footer.php:96
 msgid "To the top &uarr;"
 msgstr ""
 
@@ -2888,27 +2888,27 @@ msgctxt "Site footer context."
 msgid "Default"
 msgstr ""
 
-#: patterns/site/footer.php:70
+#: patterns/site/footer.php:78
 msgid "About Us"
 msgstr ""
 
-#: patterns/site/footer.php:127
+#: patterns/site/footer.php:135
 msgid "Services"
 msgstr ""
 
-#: patterns/site/footer.php:131
+#: patterns/site/footer.php:139
 msgid "First service"
 msgstr ""
 
-#: patterns/site/footer.php:132
+#: patterns/site/footer.php:140
 msgid "Next service"
 msgstr ""
 
-#: patterns/site/footer.php:133
+#: patterns/site/footer.php:141
 msgid "Another service"
 msgstr ""
 
-#: patterns/site/footer.php:134
+#: patterns/site/footer.php:142
 msgid "Last service"
 msgstr ""
 
@@ -3573,66 +3573,51 @@ msgstr ""
 msgid "Appearance → Customize → Theme Options → Colors & Background → Gradients"
 msgstr ""
 
-#: styles/dark.json
-msgctxt "Style variation name"
-msgid "Dark"
-msgstr ""
-
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Base"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Base alternative"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Contrast"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Contrast alternative"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Primary mixed"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Secondary mixed"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "Black"
 msgstr ""
 
-#: styles/dark.json
 #: theme.json
 msgctxt "Color name"
 msgid "White"

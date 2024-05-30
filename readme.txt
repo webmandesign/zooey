@@ -10,7 +10,7 @@ License URI:       https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
 == Description ==
 
-Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor!
+Welcome to Zooey universal block theme! Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://themedemos.webmandesign.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)
 
 
 == Frequently Asked Questions ==
