@@ -4,7 +4,7 @@
 
 	"docBlock" : {
 		"@since"   : "1.0.0",
-		"@version" : "1.1.0"
+		"@version" : "1.1.1"
 	},
 
 	"settings" : {
@@ -567,6 +567,35 @@
 				"vw",
 				"vmin",
 				"vmax"
+			]
+		},
+		"dimensions" : {
+			"aspectRatios" : [
+				{
+					"name"  : "Golden - 1.618:1",
+					"slug"  : "golden",
+					"ratio" : "1.618/1"
+				},
+				{
+					"name"  : "Golden Portrait - 1:1.618",
+					"slug"  : "golden-portrait",
+					"ratio" : "1/1.618"
+				},
+				{
+					"name"  : "Silver - 2.414:1",
+					"slug"  : "silver",
+					"ratio" : "2.414/1"
+				},
+				{
+					"name"  : "Ultrawide - 21:9",
+					"slug"  : "21-9",
+					"ratio" : "21/9"
+				},
+				{
+					"name"  : "Super Ultrawide - 32:9",
+					"slug"  : "32-9",
+					"ratio" : "32/9"
+				}
 			]
 		},
 		"typography" : {

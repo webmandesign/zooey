@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.1.0\n"
+"Project-Id-Version: Zooey 1.1.1\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-30T12:57:17+00:00\n"
+"POT-Creation-Date: 2024-05-31T15:54:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: zooey\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Welcome to Zooey universal block theme! Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://themedemos.webmandesign.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)"
+msgid "Welcome to Zooey universal block theme. Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://themedemos.webmandesign.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)"
 msgstr ""
 
 #. Author of the theme
@@ -529,22 +529,22 @@ msgctxt "Theme starter content: Homepage title"
 msgid "Home"
 msgstr ""
 
-#: includes/Content/Starter.php:164
+#: includes/Content/Starter.php:165
 msgctxt "Theme starter content: About page title"
 msgid "About"
 msgstr ""
 
-#: includes/Content/Starter.php:172
+#: includes/Content/Starter.php:174
 msgctxt "Theme starter content: Services page title"
 msgid "Services"
 msgstr ""
 
-#: includes/Content/Starter.php:180
+#: includes/Content/Starter.php:183
 msgctxt "Theme starter content: Blog page title"
 msgid "Blog"
 msgstr ""
 
-#: includes/Content/Starter.php:186
+#: includes/Content/Starter.php:189
 msgctxt "Theme starter content: Contact page title"
 msgid "Contact"
 msgstr ""
@@ -1724,7 +1724,7 @@ msgstr ""
 #: patterns/intro/intro-01.php:22
 #: patterns/intro/intro-02.php:21
 #: patterns/intro/intro-05.php:26
-#: patterns/intro/intro-06.php:25
+#: patterns/intro/intro-06.php:26
 #: patterns/numbers/numbers-03.php:23
 #: patterns/posts/posts-01.php:23
 #: patterns/pricing/pricing-01.php:21
@@ -2115,7 +2115,7 @@ msgstr ""
 #: patterns/intro/intro-03.php:21
 #: patterns/intro/intro-04.php:20
 #: patterns/intro/intro-05.php:21
-#: patterns/intro/intro-06.php:20
+#: patterns/intro/intro-06.php:21
 #: patterns/site/intro-archive.php:24
 #: patterns/site/intro-blog.php:27
 #: patterns/site/intro-post.php:24
@@ -2130,7 +2130,7 @@ msgstr ""
 #: patterns/intro/intro-03.php:22
 #: patterns/intro/intro-04.php:21
 #: patterns/intro/intro-05.php:22
-#: patterns/intro/intro-06.php:21
+#: patterns/intro/intro-06.php:22
 #: patterns/site/intro-archive.php:25
 #: patterns/site/intro-blog.php:28
 #: patterns/site/intro-post.php:25
@@ -2148,7 +2148,7 @@ msgstr ""
 #: patterns/intro/intro-03.php:23
 #: patterns/intro/intro-04.php:22
 #: patterns/intro/intro-05.php:23
-#: patterns/intro/intro-06.php:22
+#: patterns/intro/intro-06.php:23
 #: patterns/site/intro-archive.php:26
 #: patterns/site/intro-blog.php:29
 #: patterns/site/intro-post.php:26
@@ -2163,7 +2163,7 @@ msgstr ""
 #: patterns/intro/intro-03.php:24
 #: patterns/intro/intro-04.php:23
 #: patterns/intro/intro-05.php:24
-#: patterns/intro/intro-06.php:23
+#: patterns/intro/intro-06.php:24
 #: patterns/site/intro-blog.php:30
 #: patterns/site/intro-post.php:27
 #: patterns/site/intro-search.php:27
@@ -2199,7 +2199,7 @@ msgid "Page title, description, button, and a quote overlaying background image"
 msgstr ""
 
 #: patterns/intro/intro-05.php:25
-#: patterns/intro/intro-06.php:24
+#: patterns/intro/intro-06.php:25
 #: patterns/testimonials/testimonials-01.php:21
 #: patterns/testimonials/testimonials-02.php:20
 #: patterns/testimonials/testimonials-03.php:20
@@ -2208,7 +2208,7 @@ msgctxt "keyword"
 msgid "testimonials"
 msgstr ""
 
-#: patterns/intro/intro-06.php:18
+#: patterns/intro/intro-06.php:19
 msgctxt "Block pattern title."
 msgid "Page title, description, button, and a quote"
 msgstr ""
@@ -3971,6 +3971,31 @@ msgstr ""
 #: theme.json
 msgctxt "Space size name"
 msgid "Content padding"
+msgstr ""
+
+#: theme.json
+msgctxt "Aspect ratio name"
+msgid "Golden - 1.618:1"
+msgstr ""
+
+#: theme.json
+msgctxt "Aspect ratio name"
+msgid "Golden Portrait - 1:1.618"
+msgstr ""
+
+#: theme.json
+msgctxt "Aspect ratio name"
+msgid "Silver - 2.414:1"
+msgstr ""
+
+#: theme.json
+msgctxt "Aspect ratio name"
+msgid "Ultrawide - 21:9"
+msgstr ""
+
+#: theme.json
+msgctxt "Aspect ratio name"
+msgid "Super Ultrawide - 32:9"
 msgstr ""
 
 #: theme.json

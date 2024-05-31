@@ -1,5 +1,27 @@
 # Zooey Changelog
 
+## 1.1.1, 20240531
+
+### Added
+- Custom aspect ratios to `theme.json`
+
+### Updated
+- Theme description text
+- Patterns
+- Starter content
+- Localization
+
+### File updates
+	changelog.md
+	style.css
+	readme.txt
+	theme.json
+	includes/Content/Starter.php
+	languages/sk_SK.*
+	languages/zooey.pot
+	patterns/intro/intro-06.php
+
+
 ## 1.1.0, 20240530
 
 ### Updated
@@ -26,6 +48,7 @@
 ### File updates
 	changelog.md
 	style.css
+	readme.txt
 	theme.json
 	assets/js/customize-preview.js
 	assets/scss/blocks-editor.scss

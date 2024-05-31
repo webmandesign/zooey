@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.1
+ * @since    1.0.1
+ * @version  1.1.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -52,8 +53,8 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
-					<!-- wp:button {"backgroundColor":"black"} -->
-					<div class="wp-block-button"><a class="wp-block-button__link has-black-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<!-- wp:button {"backgroundColor":"primary"} -->
+					<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
