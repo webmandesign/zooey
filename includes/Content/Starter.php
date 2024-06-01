@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.1
+ * @version  1.1.2
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -136,7 +136,7 @@ class Starter implements Component_Interface {
 	 * Pages.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.1
+	 * @version  1.1.2
 	 *
 	 * @return  void
 	 */
@@ -153,44 +153,48 @@ class Starter implements Component_Interface {
 
 				'home' => array(
 					'post_type'      => 'page',
-					'post_title'     => esc_html_x( 'Home', 'Theme starter content: Homepage title', 'zooey' ),
+					'post_title'     => esc_html_x( 'Home', 'Page title', 'zooey' ),
+					'post_name'      => esc_html_x( 'home', 'Page slug', 'zooey' ),
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/home-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => 'closed',
+					'comment_status' => false,
 				),
 
 				'about' => array(
 					'post_type'      => 'page',
-					'post_title'     => esc_html_x( 'About', 'Theme starter content: About page title', 'zooey' ),
+					'post_title'     => esc_html_x( 'About us', 'Page title', 'zooey' ),
+					'post_name'      => esc_html_x( 'about-us', 'Page slug', 'zooey' ),
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/about-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => 'closed',
+					'comment_status' => false,
 				),
 
 				'services' => array(
 					'post_type'      => 'page',
-					'post_title'     => esc_html_x( 'Services', 'Theme starter content: Services page title', 'zooey' ),
+					'post_title'     => esc_html_x( 'Services', 'Page title', 'zooey' ),
+					'post_name'      => esc_html_x( 'services', 'Page slug', 'zooey' ),
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/services-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => 'closed',
+					'comment_status' => false,
 				),
 
 				'blog' => array(
 					'post_type'    => 'page',
-					'post_title'   => esc_html_x( 'Blog', 'Theme starter content: Blog page title', 'zooey' ),
+					'post_title'   => esc_html_x( 'Blog', 'Page title', 'zooey' ),
 					'post_excerpt' => Block_Pattern::get_text( 'm', '.' ) . ' ' . Block_Pattern::get_text( 'l', '.' ),
 				),
 
 				'contact' => array(
 					'post_type'      => 'page',
-					'post_title'     => esc_html_x( 'Contact', 'Theme starter content: Contact page title', 'zooey' ),
+					'post_title'     => esc_html_x( 'Contact', 'Page title', 'zooey' ),
+					'post_name'      => esc_html_x( 'contact', 'Page slug', 'zooey' ),
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/contact-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => 'closed',
+					'comment_status' => false,
 				),
 			);
 

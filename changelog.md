@@ -1,5 +1,25 @@
 # Zooey Changelog
 
+## 1.1.2, 20240601
+
+### Updated
+- Improving secondary navigation
+- Enabling horizontal and vertical gap for Navigation block
+- Localization
+
+### Fixed
+- Starter content page comments status (not sure what value should I use there...)
+
+### File updates
+	changelog.md
+	style.css
+	assets/js/block-mods.js
+	includes/Content/Starter.php
+	languages/sk_SK.*
+	languages/zooey.pot
+	patterns/site/header.php
+
+
 ## 1.1.1, 20240531
 
 ### Added

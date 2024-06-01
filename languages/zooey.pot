@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.1.1\n"
+"Project-Id-Version: Zooey 1.1.2\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-31T15:54:48+00:00\n"
+"POT-Creation-Date: 2024-06-01T13:57:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: zooey\n"
@@ -525,28 +525,55 @@ msgid "(page %d)"
 msgstr ""
 
 #: includes/Content/Starter.php:156
-msgctxt "Theme starter content: Homepage title"
+msgctxt "Page title"
 msgid "Home"
 msgstr ""
 
-#: includes/Content/Starter.php:165
-msgctxt "Theme starter content: About page title"
-msgid "About"
+#: includes/Content/Starter.php:157
+msgctxt "Page slug"
+msgid "home"
 msgstr ""
 
-#: includes/Content/Starter.php:174
-msgctxt "Theme starter content: Services page title"
+#: includes/Content/Starter.php:166
+#: patterns/site/header.php:79
+msgctxt "Page title"
+msgid "About us"
+msgstr ""
+
+#: includes/Content/Starter.php:167
+#: patterns/site/header.php:79
+msgctxt "Page slug"
+msgid "about-us"
+msgstr ""
+
+#: includes/Content/Starter.php:176
+#: patterns/site/header.php:80
+msgctxt "Page title"
 msgid "Services"
 msgstr ""
 
-#: includes/Content/Starter.php:183
-msgctxt "Theme starter content: Blog page title"
+#: includes/Content/Starter.php:177
+#: patterns/site/header.php:80
+msgctxt "Page slug"
+msgid "services"
+msgstr ""
+
+#: includes/Content/Starter.php:186
+#: patterns/site/header.php:78
+msgctxt "Page title"
 msgid "Blog"
 msgstr ""
 
-#: includes/Content/Starter.php:189
-msgctxt "Theme starter content: Contact page title"
+#: includes/Content/Starter.php:192
+#: patterns/site/header.php:81
+msgctxt "Page title"
 msgid "Contact"
+msgstr ""
+
+#: includes/Content/Starter.php:193
+#: patterns/site/header.php:81
+msgctxt "Page slug"
+msgid "contact"
 msgstr ""
 
 #: includes/Customize/Control/HTML.php:59
@@ -977,7 +1004,6 @@ msgid "Posts"
 msgstr ""
 
 #: includes/Customize/Options.php:1131
-#: patterns/site/header.php:78
 msgid "Blog"
 msgstr ""
 
@@ -1947,7 +1973,6 @@ msgid "Quote with contact info on the side and an image below"
 msgstr ""
 
 #: patterns/contact/contact-04.php:55
-#: patterns/site/header.php:79
 msgid "Contact"
 msgstr ""
 
@@ -2586,7 +2611,6 @@ msgstr ""
 
 #: patterns/posts/posts-01.php:52
 #: patterns/posts/posts-02.php:36
-#: patterns/site/header.php:78
 msgctxt "\"Blog\" page URL relative to home page."
 msgid "/blog/"
 msgstr ""
@@ -2962,11 +2986,6 @@ msgstr ""
 #: patterns/site/header.php:29
 msgctxt "keyword"
 msgid "user account"
-msgstr ""
-
-#: patterns/site/header.php:79
-msgctxt "\"Contact\" page URL relative to home page."
-msgid "/contact/"
 msgstr ""
 
 #. translators: %s: context.

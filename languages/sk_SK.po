@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zooey\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2024-05-31T15:54:48+00:00\n"
-"PO-Revision-Date: 2024-05-31 17:56+0200\n"
+"POT-Creation-Date: 2024-06-01T13:57:27+00:00\n"
+"PO-Revision-Date: 2024-06-01 15:59+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
@@ -573,29 +573,49 @@ msgid "(page %d)"
 msgstr "(strana %d)"
 
 #: includes/Content/Starter.php:156
-msgctxt "Theme starter content: Homepage title"
+msgctxt "Page title"
 msgid "Home"
 msgstr "Úvod"
 
-#: includes/Content/Starter.php:165
-msgctxt "Theme starter content: About page title"
-msgid "About"
+#: includes/Content/Starter.php:157
+msgctxt "Page slug"
+msgid "home"
+msgstr "uvod"
+
+#: includes/Content/Starter.php:166 patterns/site/header.php:79
+msgctxt "Page title"
+msgid "About us"
 msgstr "O nás"
 
-#: includes/Content/Starter.php:174
-msgctxt "Theme starter content: Services page title"
+#: includes/Content/Starter.php:167 patterns/site/header.php:79
+msgctxt "Page slug"
+msgid "about-us"
+msgstr "o-nas"
+
+#: includes/Content/Starter.php:176 patterns/site/header.php:80
+msgctxt "Page title"
 msgid "Services"
 msgstr "Služby"
 
-#: includes/Content/Starter.php:183
-msgctxt "Theme starter content: Blog page title"
+#: includes/Content/Starter.php:177 patterns/site/header.php:80
+msgctxt "Page slug"
+msgid "services"
+msgstr "sluzby"
+
+#: includes/Content/Starter.php:186 patterns/site/header.php:78
+msgctxt "Page title"
 msgid "Blog"
 msgstr "Blog"
 
-#: includes/Content/Starter.php:189
-msgctxt "Theme starter content: Contact page title"
+#: includes/Content/Starter.php:192 patterns/site/header.php:81
+msgctxt "Page title"
 msgid "Contact"
 msgstr "Kontakt"
+
+#: includes/Content/Starter.php:193 patterns/site/header.php:81
+msgctxt "Page slug"
+msgid "contact"
+msgstr "kontakt"
 
 #: includes/Customize/Control/HTML.php:59
 msgid "Please set the `content` parameter for the HTML control."
@@ -1073,7 +1093,7 @@ msgctxt "Customizer section title."
 msgid "Posts"
 msgstr "Príspevky"
 
-#: includes/Customize/Options.php:1131 patterns/site/header.php:78
+#: includes/Customize/Options.php:1131
 msgid "Blog"
 msgstr "Blog"
 
@@ -2124,7 +2144,7 @@ msgctxt "Block pattern title."
 msgid "Quote with contact info on the side and an image below"
 msgstr "Citácia s kontaktnými informáciami na boku a obrázkom nižšie"
 
-#: patterns/contact/contact-04.php:55 patterns/site/header.php:79
+#: patterns/contact/contact-04.php:55
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -2703,7 +2723,6 @@ msgid "filter"
 msgstr "filter"
 
 #: patterns/posts/posts-01.php:52 patterns/posts/posts-02.php:36
-#: patterns/site/header.php:78
 msgctxt "\"Blog\" page URL relative to home page."
 msgid "/blog/"
 msgstr "/blog/"
@@ -3047,11 +3066,6 @@ msgstr "Pôvodná"
 msgctxt "keyword"
 msgid "user account"
 msgstr "používateľský účet"
-
-#: patterns/site/header.php:79
-msgctxt "\"Contact\" page URL relative to home page."
-msgid "/contact/"
-msgstr "/kontakt/"
 
 #. translators: %s: context.
 #: patterns/site/intro-archive.php:20 patterns/site/intro-blog.php:20

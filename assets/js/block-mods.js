@@ -13,7 +13,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  1.1.2
  */
 
 ( () => {
@@ -180,6 +180,14 @@
 					case 'core/navigation':
 						settings = lodash.merge( settings, {
 							supports: {
+								spacing: {
+									blockGap: {
+										sides: [
+											'horizontal',
+											'vertical',
+										],
+									},
+								},
 								anchor: true,
 							},
 							attributes: {
