@@ -18,8 +18,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	'title'    => _x( 'Simple numbered features', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'columns', 'keyword', 'zooey' ),
-		esc_html_x( 'year', 'keyword', 'zooey' ),
-		esc_html_x( 'timeline', 'keyword', 'zooey' ),
 		esc_html_x( 'numbers', 'keyword', 'zooey' ),
 		esc_html_x( 'steps', 'keyword', 'zooey' ),
 	),

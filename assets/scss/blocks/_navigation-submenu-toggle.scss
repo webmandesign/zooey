@@ -1,0 +1,103 @@
+//
+// Submenu toggle button.
+//
+// @version  1.1.3
+
+// Resetting theme button global styles.
+.wp-block-navigation-item.has-child.open-on-click .wp-block-navigation-submenu__toggle {
+	padding: 0;
+	padding-inline-end: calc( 10px + #{ $ratio_min + em } ) !important;
+	font-size: 1em;
+	border-width: 0;
+	border-radius: 0;
+}
+
+.wp-block-navigation .wp-block-navigation__container .has-child.has-child {
+
+	.wp-block-navigation__submenu-icon {
+		display: inline-block;
+		position: relative;
+		width: 10px;
+		height: 10px;
+		margin-inline-start: $ratio_min + em;
+		margin-inline-end: 0;
+		border-radius: 0;
+		opacity: .33;
+
+		&:focus {
+			opacity: 1;
+		}
+
+		svg {
+			width: 80%;
+			visibility: hidden;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			left: 50%;
+			top: 50%;
+			background: currentColor;
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		&::after {
+			transform: translateX(-50%) translateY(-50%) rotate(90deg);
+			transition: transform .2s;
+		}
+	}
+
+	&.open-on-click {
+
+		.wp-block-navigation__submenu-icon {
+			margin-inline-start: -10px;
+			opacity: 1;
+		}
+	}
+
+	&.open-on-hover-click {
+
+		.wp-block-navigation__submenu-icon {
+			width: var(--theme--css--submenu-toggle-size);
+			min-width: var(--theme--css--submenu-toggle-size);
+			height: var(--theme--css--submenu-toggle-size);
+
+			// Touch enabled devices.
+			@media (hover: none) {
+				border: 1px solid;
+				border-color: inherit;
+				border-radius: var(--wp--custom--button--border-radius);
+				opacity: 1;
+			}
+		}
+	}
+
+	// Open on hover:
+	.no-js &:focus-within > [aria-expanded]::after,
+	[aria-expanded="true"]::after,
+	// Open on click:
+	[aria-expanded="true"] + .wp-block-navigation__submenu-icon::after {
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+	// Open on hover for modal (responsive container):
+	.is-responsive .wp-block-navigation__responsive-container:not(.has-modal-open) .open-on-hover-click:hover > [aria-expanded]::after {
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+.has-modal-open.has-modal-open.has-modal-open .open-on-hover-click {
+
+	.wp-block-navigation__submenu-icon {
+		width: var(--theme--css--submenu-toggle-size);
+		height: var(--theme--css--submenu-toggle-size);
+		border: 1px solid;
+		border-color: inherit;
+		border-radius: var(--wp--custom--button--border-radius);
+		opacity: 1;
+	}
+}

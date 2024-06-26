@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.0
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -265,7 +265,8 @@ class Editor implements Component_Interface {
 	 * Can not use `esc_js()` below as it uses `_wp_specialchars()` which
 	 * converts CSS safe characters into unusable string.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.3
 	 *
 	 * @param array $mce_init TinyMCE styles.
 	 *
@@ -276,7 +277,7 @@ class Editor implements Component_Interface {
 		// Variables
 
 			$css = str_replace(
-				array( 'body {', 'body{' ),
+				array( 'body {', 'body{', CSS_Variables::get_root() ),
 				':root{',
 				(string) wp_get_global_stylesheet( [ 'variables', 'styles' ] )
 				. (string) Styles::get_css_variables()

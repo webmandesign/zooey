@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -103,7 +104,8 @@ class Component implements Component_Interface {
 	 *
 	 * Used to enable/disable main page H1 title.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.3
 	 *
 	 * @param  mixed $body_classes  Optional forced array of body classes when using the method within `body_class` hook.
 	 *
@@ -113,7 +115,7 @@ class Component implements Component_Interface {
 
 		// Variables
 
-			$show         = ! ( ( is_front_page() && is_home() ) || is_404() );
+			$show         = ! is_404();
 			$body_classes = implode( ' ', Body_Class::get_body_class( $body_classes ) );
 
 

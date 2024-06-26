@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -51,19 +52,31 @@ $blog_page_id = get_option( 'page_for_posts' );
 			if ( $blog_page_id ) {
 				echo get_the_title( $blog_page_id );
 			} else {
-				echo esc_html_x( 'Blog', 'Fallback blog page title.', 'zooey' );
+				printf(
+					/* translators: %s: site title. */
+					esc_html__( '%s blog', 'zooey' ),
+					get_bloginfo( 'name', 'display' )
+				);
 			}
 
 		?></h1>
 		<!-- /wp:heading -->
 
-		<?php if ( has_excerpt( $blog_page_id ) ) : ?>
+		<?php if ( $blog_page_id && has_excerpt( $blog_page_id ) ) : ?>
 		<!-- wp:group {"className":"is-style-page-summary","fontSize":"l"} -->
 		<div class="wp-block-group is-style-page-summary has-l-font-size">
 
 			<!-- wp:paragraph -->
 			<p><?php echo get_the_excerpt( $blog_page_id ); ?></p>
 			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:group -->
+		<?php else : ?>
+		<!-- wp:group {"className":"is-style-page-summary","fontSize":"l"} -->
+		<div class="wp-block-group is-style-page-summary has-l-font-size">
+
+			<!-- wp:site-tagline /-->
 
 		</div>
 		<!-- /wp:group -->

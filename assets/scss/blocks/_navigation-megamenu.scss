@@ -1,0 +1,69 @@
+//
+// Megamenu.
+//
+// @version  1.1.3
+
+.is-style-megamenu {
+
+	.wp-block-navigation.has-child-selected &, // Always enable megamenu styles in editor.
+	.wp-block-navigation.no-overlay-menu &,
+	.has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) & {
+		@include media( 1025 ) { // 1024px breakpoint.
+
+			// Columns container.
+			> #{$selector} {
+				flex-direction: row;
+				gap: var(--wp--style--block-gap);
+				align-items: flex-start;
+
+				// Column.
+				> .wp-block-navigation-item {
+					flex: 0 1 14em;
+					display: block;
+					padding: 0;
+					border-width: 0;
+					vertical-align: top;
+
+					.editor-styles-wrapper & {
+						min-width: 14em;
+					}
+
+					// Label.
+					> .wp-block-navigation-item__content {
+						border: 0 !important;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: var(--wp--custom--letter-spacing--heading);
+
+						&::before {
+							display: none;
+						}
+					}
+
+					> .wp-block-navigation__submenu-icon {
+						display: none;
+					}
+
+					// Content (sub-sub-menu).
+					> #{$selector} {
+						--theme--css--submenu-open-animation: none;
+
+						display: block;
+						position: static;
+						min-width: clamp( 12em, 14vw, 240px ) !important;
+						inset: 0;
+						padding: 0;
+						margin: ( $ratio_maj + em ) 0 0;
+						background: none !important;
+						border-width: 0;
+						box-shadow: none;
+
+						#{$selector} {
+							--theme--css--submenu-open-animation: showSubSubMenu .3s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
