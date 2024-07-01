@@ -70,7 +70,7 @@
 		box-shadow: none;
 	}
 
-	:not(.is-style-outline) > &:not(.has-background):not(.has-text-color) {
+	:not(.is-style-outline) > &:not(.has-background, .has-text-color) {
 		--theme--css--current-border-color: var(--theme--css--button--color--border);
 	}
 

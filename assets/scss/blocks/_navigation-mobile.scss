@@ -222,3 +222,29 @@
 			}
 		}
 	}
+
+//
+// Temporary a11y fix to prevent broken focus trap on mobile menu submenus.
+//
+// @todo  Remove this once WordPress fixes Navigation block JS.
+// @link  https://github.com/WordPress/gutenberg/issues/63033
+//
+.navigation-a11y-fix .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open.is-menu-open {
+
+	.wp-block-navigation__submenu-container {
+		--theme--css--submenu-open-animation: none;
+	}
+
+	.wp-block-navigation__container .wp-block-navigation__submenu-container[class] {
+		display: flex;
+	}
+
+	.has-child:not(.open-on-click) .wp-block-navigation-submenu__toggle {
+		display: none;
+	}
+
+	.has-child .has-child > .wp-block-navigation-item__content {
+		border-bottom-width: 1px;
+		border-bottom-style: dotted;
+	}
+}

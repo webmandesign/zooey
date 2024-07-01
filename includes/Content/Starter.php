@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.2
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -136,7 +136,7 @@ class Starter implements Component_Interface {
 	 * Pages.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.2
+	 * @version  1.1.3
 	 *
 	 * @return  void
 	 */
@@ -158,7 +158,7 @@ class Starter implements Component_Interface {
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/home-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => false,
+					'comment_status' => 'closed',
 				),
 
 				'about' => array(
@@ -168,7 +168,7 @@ class Starter implements Component_Interface {
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/about-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => false,
+					'comment_status' => 'closed',
 				),
 
 				'services' => array(
@@ -178,7 +178,7 @@ class Starter implements Component_Interface {
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/services-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => false,
+					'comment_status' => 'closed',
 				),
 
 				'blog' => array(
@@ -194,7 +194,7 @@ class Starter implements Component_Interface {
 					'post_content'   => '<!-- wp:pattern {"slug":"zooey/page/contact-1"} /-->',
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
-					'comment_status' => false,
+					'comment_status' => 'closed',
 				),
 			);
 

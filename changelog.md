@@ -1,5 +1,51 @@
 # Zooey Changelog
 
+## 1.1.3, 20240701
+
+### Updated
+- Preventing accessibility issues in mobile menu (Navigation block)
+- `theme.json` version 3
+- Updating patterns
+- Localization
+
+### Fixed
+- Logo link missing focus outline
+- H1 heading missing on blog homepage
+- Navigation block styles
+- Heading hierarchy in patterns
+
+### File updates
+
+	style.css
+	theme.json
+	assets/js/block-variations.js
+	assets/scss/blocks.scss
+	assets/scss/editor-ui.scss
+	assets/scss/global.scss
+	assets/scss/blocks/_navigation-megamenu.scss
+	assets/scss/blocks/_navigation-mobile.scss
+	assets/scss/blocks/_navigation-submenu-toggle.scss
+	assets/scss/blocks/_navigation-submenu.scss
+	assets/scss/blocks/comments.scss
+	assets/scss/blocks/cover.scss
+	assets/scss/blocks/latest-posts.scss
+	assets/scss/blocks/navigation-submenu.scss
+	assets/scss/blocks/navigation.scss
+	assets/scss/blocks/page-list.scss
+	assets/scss/blocks/rss.scss
+	assets/scss/blocks/search.scss
+	includes/Assets/Editor.php
+	includes/Content/Block_Pattern.php
+	includes/Content/Component.php
+	includes/Content/Starter.php
+	includes/Header/Body_Class.php
+	languages/zooey.pot
+	languages/sk_SK.*
+	patterns/posts/posts-00.php
+	patterns/site/header.php
+	patterns/site/intro-blog.php
+
+
 ## 1.1.2, 20240601
 
 ### Updated

@@ -19,7 +19,7 @@ mark {
 	// is left empty but `<mark>` text color is set.
 	//
 	&[style^="background-color:rgba(0"],
-	&:not([style*="background"]):not([class*="-background"]) {
+	&:not([style*="background"], [class*="-background"]) {
 		background-color: transparent $important_modifiers;
 		background-image: linear-gradient(
 			to top,

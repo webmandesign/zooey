@@ -33,6 +33,11 @@
 	.has-global-padding :where(.has-global-padding.alignfull) {
 		padding-right: var(--wp--style--root--padding-right);
 		padding-left: var(--wp--style--root--padding-left);
+
+		> .alignfull {
+			margin-left:  calc( var(--wp--style--root--padding-left)  * -1 );
+			margin-right: calc( var(--wp--style--root--padding-right) * -1 );
+		}
 	}
 
 

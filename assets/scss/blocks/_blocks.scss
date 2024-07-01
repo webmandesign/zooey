@@ -12,7 +12,7 @@
 			padding-left: var(--wp--style--root--padding-left);
 		}
 
-		.has-global-padding:not(.alignfull):not(.has-background) {
+		.has-global-padding:not(.alignfull, .has-background) {
 			padding-inline: 0;
 		}
 	}
@@ -42,7 +42,7 @@
 // core/query
 @if false == $is_editor {
 
-	.wp-block-group:not(.is-layout-flex):not(.is-layout-grid),
+	.wp-block-group:not(.is-layout-flex, .is-layout-grid),
 	.wp-block-post-content {
 		@extend %clearfix;
 	}

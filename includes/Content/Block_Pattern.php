@@ -17,7 +17,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -320,7 +320,8 @@ class Block_Pattern implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.3
 	 *
 	 * @return  void
 	 */
@@ -344,6 +345,10 @@ class Block_Pattern implements Component_Interface {
 				 * so there is an early return check in `register()` method below.
 				 */
 				add_action( 'wp', __CLASS__ . '::register' );
+
+			// Filters
+
+				add_filter( 'render_block_core/pattern', __CLASS__ . '::render__change_headings', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 	} // /init
 
@@ -769,7 +774,7 @@ class Block_Pattern implements Component_Interface {
 						_x( 'Frida Kahlo', 'Demo text. Name of a person.', 'zooey' ),
 						_x( 'Berthe Morisot', 'Demo text. Name of a person.', 'zooey' ),
 					),
-					'job'  => _x( 'founder', 'Demo text. Occupation, job title.', 'zooey' ),
+					'job'  => _x( 'Founder', 'Demo text. Occupation, job title.', 'zooey' ),
 				),
 
 				// Others:
@@ -914,5 +919,61 @@ class Block_Pattern implements Component_Interface {
 			echo wp_kses( trim( implode( ' ', $output ) ), 'inline' );
 
 	} // /the_text
+
+	/**
+	 * Block output modification: Change heading size in the block content.
+	 *
+	 * @since  1.1.3
+	 *
+	 * @param  string $block_content  The rendered content. Default null.
+	 * @param  array  $block          The block being rendered.
+	 *
+	 * @return  string
+	 */
+	public static function render__change_headings( string $block_content, array $block ): string {
+
+		// Processing
+
+			if ( ! empty( $block['attrs']['changeHeadings'] ) ) {
+
+				if ( 'up' === $block['attrs']['changeHeadings'] ) {
+
+					$block_content = str_replace(
+						array(
+							'<h2', '/h2>',
+							'<h3', '/h3>',
+							'<h4', '/h4>',
+						),
+						array(
+							'<h1', '/h1>',
+							'<h2', '/h2>',
+							'<h3', '/h3>',
+						),
+						$block_content
+					);
+				} else {
+
+					$block_content = str_replace(
+						array(
+							'<h4', '/h4>',
+							'<h3', '/h3>',
+							'<h2', '/h2>',
+						),
+						array(
+							'<h5', '/h5>',
+							'<h4', '/h4>',
+							'<h3', '/h3>',
+						),
+						$block_content
+					);
+				}
+			}
+
+
+		// Output
+
+			return $block_content;
+
+	} // /render__change_headings
 
 }

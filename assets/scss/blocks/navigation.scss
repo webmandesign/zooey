@@ -37,7 +37,7 @@
 
 		&-item.has-background,
 		.has-child .has-child.has-background,
-		.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		.wp-block-navigation__responsive-container:not(.hidden-by-default, .is-menu-open) {
 			padding: 0;
 			background: transparent;
 		}

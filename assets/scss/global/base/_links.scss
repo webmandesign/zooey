@@ -17,7 +17,7 @@ a {
 		outline: none;
 	}
 
-	[style*="text-decoration"] &:not(:hover):not(:focus):not(:active) {
+	[style*="text-decoration"] &:not(:hover, :focus, :active) {
 		text-decoration: inherit;
 	}
 }

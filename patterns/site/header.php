@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.2
+ * @version  1.1.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -72,9 +72,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<div class="wp-block-group has-supplemental-font-family">
 
 				<?php if ( defined( 'WMD_THEME_DEMO' ) ) : ?>
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation"} /-->
+				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt"} /-->
 				<?php else : // Pages below match `Starter::pages()`. ?>
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation"} -->
+				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt"} -->
 					<!-- wp:navigation-link {"label":"<?php echo esc_html_x( 'Blog', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>"} /-->
 					<!-- wp:navigation-link {"label":"<?php echo esc_html_x( 'About us', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_page_by_path( esc_html_x( 'about-us', 'Page slug', 'zooey' ) ) ) ); ?>"} /-->
 					<!-- wp:navigation-link {"label":"<?php echo esc_html_x( 'Services', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_page_by_path( esc_html_x( 'services', 'Page slug', 'zooey' ) ) ) ); ?>"} /-->

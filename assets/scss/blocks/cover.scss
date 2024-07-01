@@ -1,5 +1,5 @@
 // core/cover
-// @version  1.0.7
+// @version  1.1.3
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -111,7 +111,7 @@
 				transform .3s;
 		}
 
-		&:not(:hover):not(:focus-within):not(.is-selected):not(.has-child-selected) {
+		&:not(:hover, :focus-within, .is-selected, .has-child-selected) {
 
 			> .has-background-dim,
 			> .wp-block-cover__inner-container {

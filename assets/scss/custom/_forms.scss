@@ -4,7 +4,7 @@
 
 	$button_suffix: '';
 	@if true == $is_editor {
-		$button_suffix: ':where(:not(.components-button):not([class*="wc-"]))';
+		$button_suffix: ':where(:not(.components-button, [class*="wc-"]))';
 	}
 	button#{ $button_suffix },
 	input,

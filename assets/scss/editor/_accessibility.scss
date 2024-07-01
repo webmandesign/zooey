@@ -22,7 +22,7 @@
 	border-radius: .25em !important;
 	box-shadow: none !important;
 
-	&:not(:hover):not(:focus):not(:focus-within) {
+	&:not(:hover, :focus, :focus-within) {
 		background: repeating-linear-gradient(
 			-45deg,
 			rgba( #000, .1 ),
