@@ -1,11 +1,11 @@
 // core/button
-// @version  1.0.7
+// @version  1.1.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-.wp-block-button .wp-block-button__link.is-style-outline,
-.wp-block-button.is-style-outline > .wp-block-button__link {
+.wp-block-button.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.wp-block-button.is-style-outline > .wp-block-button__link {
 	--theme--css--button--color--background: transparent;
 	--theme--css--button--color--text: currentColor;
 	--theme--css--button--color--border: currentColor;

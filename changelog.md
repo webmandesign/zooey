@@ -1,5 +1,22 @@
 # Zooey Changelog
 
+## 1.1.5, 20240802
+
+### Updated
+- Lowering automatic heading margin CSS specificity to pre-v1.1.0 value
+
+### Fixed
+- Button styles
+- Theme tags in `style.css` file
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/button.scss
+
+
 ## 1.1.4, 20240801
 
 ### Added

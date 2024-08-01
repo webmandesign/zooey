@@ -17,13 +17,17 @@ h1, h2, h3, h4, h5, h6 {
 
 h2, h3, h4, h5, h6 {
 
-	// For WP6.6+ we need to rise the specificity.
-	// And then fix/modify heading top margin in patterns if needed.
-	:root &:not(:first-child) {
-		margin-block-start: var(--wp--custom--spacing--heading);
-	}
-
 	.is-layout-flex:not(.is-vertical) > & {
 		margin-block-start: 0;
+	}
+}
+
+@include wrap() {
+
+	h2, h3, h4, h5, h6 {
+
+		&:not(:first-child) {
+			margin-block-start: var(--wp--custom--spacing--heading);
+		}
 	}
 }

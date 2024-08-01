@@ -16,7 +16,6 @@
 	background-position: 50% 50%; // For gradient background.
 	background-size: 100%; // For gradient background.
 	border: var(--theme--css--button--border);
-	border-radius: var(--wp--custom--button--border-radius);
 	box-shadow: var(--wp--preset--shadow--s);
 	cursor: pointer;
 	transition:
@@ -34,6 +33,7 @@
 
 		padding: 1.125em 1.5em;
 		border-color: var(--theme--css--current-border-color);
+		border-radius: var(--wp--custom--button--border-radius);
 	}
 
 	&,
