@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -228,7 +228,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.0
+	 * @version  1.1.4
 	 *
 	 * @param  array $options
 	 *
@@ -508,7 +508,7 @@ class Options implements Component_Interface {
 							'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_disabled',
 						),
 
-						100 . 'colors' . 300 => array(
+						100 . 'colors' . 610 => array(
 							'type'        => 'select',
 							'id'          => 'color_button',
 							'label'       => esc_html__( 'Button color', 'zooey' ),
@@ -553,7 +553,6 @@ class Options implements Component_Interface {
 								. '<br>'
 								. Site_Editor::get_link( array( 'url_args' => array(
 									'postType' => 'wp_template_part',
-									'path'     => '/wp_template_part/all',
 								) ) )
 								. '</p>',
 						),
@@ -810,12 +809,12 @@ class Options implements Component_Interface {
 					/**
 					 * Responsive layout.
 					 */
-					200 . 'layout' . 200 => array(
+					200 . 'layout' . 500 => array(
 						'type'    => 'html',
 						'content' => '<h3>' . esc_html__( 'Responsiveness', 'zooey' ) . '</h3>',
 					),
 
-						200 . 'layout' . 210 => array(
+						200 . 'layout' . 510 => array(
 							'type'              => 'range',
 							'id'                => 'layout_breakpoint_mobile',
 							'label'             => esc_html__( 'Small screen breakpoint', 'zooey' ),
@@ -1165,6 +1164,7 @@ class Options implements Component_Interface {
 								. Site_Editor::get_link( array( 'url_args' => array(
 									'postType' => 'wp_template',
 									'postId'   => 'zooey//home',
+									'canvas'   => 'edit',
 								) ) )
 								. '</p>',
 							'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_enabled',
@@ -1222,6 +1222,21 @@ class Options implements Component_Interface {
 						'description' => esc_html__( 'Allows WordPress core block patterns in block editor.', 'zooey' ),
 						'default'     => false,
 						'preview_js'  => false, // This is to prevent customizer preview reload.
+					),
+
+					900 . 'others' . 110 => array(
+						'type'        => 'checkbox',
+						'id'          => 'navigation_a11y_fix',
+						'label'       => esc_html__( 'Expand mobile navigation submenus', 'zooey' ),
+						'description' =>
+							sprintf(
+								/* translators: %s: Gutenberg issue link. */
+								esc_html__( 'Until WordPress fixes Navigation block accessibility issue (%s), enabling this option fixes it for you.', 'zooey' ),
+								'<a href="https://github.com/WordPress/gutenberg/issues/63033" target="_blank" rel="noopener noreferrer">#63033</a>'
+							)
+							. ' '
+							. esc_html__( 'Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user.', 'zooey' ),
+						'default'     => true,
 					),
 
 					900 . 'others' . 900 => array(

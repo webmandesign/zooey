@@ -81,10 +81,10 @@ class RGBA implements Component_Interface {
 
 				/**
 				 * Base color border setup is required for
-				 * @see  WebManDesign\Zooey\Customize\CSS_Variables::get_array_from_global_styles()
+				 * @see  CSS_Variables::get_array_from_global_styles()
 				 *
 				 * For additional `color_base` setup
-				 * @see  WebManDesign\Zooey\Customize\Styles::get_css_variables()
+				 * @see  Styles::get_css_variables()
 				 *
 				 * @see  customize-preview.js
 				 * 'background_color' => array( self::get_alfa_args_border( 'base' ) ),

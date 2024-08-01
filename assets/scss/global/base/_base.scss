@@ -8,13 +8,7 @@ html {
 }
 
 * {
-
-	// This has to be prefixed with `body` so WordPress native
-	// `:where(body)` global CSS style (WP6.6+) is not overridden.
-	// This also means we can not set block border color in `theme.json`!
-	body & {
-		border-color: inherit;
-	}
+	border-color: inherit;
 
 	&,
 	&::before,

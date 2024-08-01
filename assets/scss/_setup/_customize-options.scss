@@ -67,3 +67,7 @@ $automatic: (
 );
 
 $theme_options: map-merge( $theme_mods, $automatic );
+
+$customizer_non_theme_panel_controls: (
+	'link_homepage_logo',
+);

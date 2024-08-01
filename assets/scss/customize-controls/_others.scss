@@ -1,6 +1,13 @@
 /* FILE: customize-controls/_others.scss */
 
-#customize-control-link_homepage_logo {
+@each $option in $customizer_non_theme_panel_controls {
+
+	#customize-control-#{$option} {
+		@extend %theme_control_styles;
+	}
+}
+
+%theme_control_styles {
 
 	label {
 		font-weight: 600;

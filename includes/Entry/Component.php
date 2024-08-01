@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Entry;
@@ -13,6 +14,7 @@ namespace WebManDesign\Zooey\Entry;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Setup\Site_Editor;
 use WebManDesign\Zooey\Content;
+use WP_HTML_Tag_Processor;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -22,7 +24,8 @@ class Component implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.4
 	 *
 	 * @return  void
 	 */
@@ -64,6 +67,8 @@ class Component implements Component_Interface {
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__comments', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__entry_header', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__is_hidden_on', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
+
+				add_filter( 'render_block_core/post-content', __CLASS__ . '::render__post_content', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 	} // /init
 
@@ -358,5 +363,41 @@ class Component implements Component_Interface {
 			return $pre_render;
 
 	} // /pre_render__is_hidden_on
+
+	/**
+	 * Block output modification: Setting ID for post content container.
+	 *
+	 * Not sure why, but when enabling `anchor` block support via
+	 * JavaScript (and even via `block_type_metadata_settings` PHP hook)
+	 * the Post Content block does not render `id` attribute.
+	 * We need to fix it here.
+	 *
+	 * @since  1.1.4
+	 *
+	 * @param  string $block_content  The rendered content. Default null.
+	 * @param  array  $block          The block being rendered.
+	 *
+	 * @return  string
+	 */
+	public static function render__post_content( string $block_content, array $block ): string {
+
+		// Processing
+
+			if ( ! empty( $block['attrs']['anchor'] ) ) {
+
+				$html = new WP_HTML_Tag_Processor( $block_content );
+
+				$html->next_tag();
+				$html->set_attribute( 'id', $block['attrs']['anchor'] );
+
+				$block_content = $html->get_updated_html();
+			}
+
+
+		// Output
+
+			return $block_content;
+
+	} // /render__post_content
 
 }

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -39,8 +40,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->
@@ -68,8 +69,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->
@@ -97,8 +98,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->

@@ -168,6 +168,16 @@
 		z-index: 0 $important_modifiers;
 	}
 
+	.has-high-zindex,
+	.has-high-z-index,
+	.has-low-zindex,
+	.has-low-z-index {
+
+		&:not([class*="is-position"]) {
+			position: relative;
+		}
+	}
+
 	$important_modifiers: null; // Required reset.
 
 // Display.

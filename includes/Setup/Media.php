@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -77,7 +77,8 @@ class Media implements Component_Interface {
 	/**
 	 * After setup theme.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.4
 	 *
 	 * @return  void
 	 */
@@ -113,12 +114,11 @@ class Media implements Component_Interface {
 				// Default custom headers packed with the theme.
 				register_default_headers( array(
 
-					// This is default image already, so we don't need to register it.
-					// 'svg-fingers' => array(
-					// 	'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
-					// 	'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
-					// 	'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
-					// ),
+					'svg-fingers' => array(
+						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+						'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
+					),
 
 					'svg-blobs' => array(
 						'url'           => get_theme_file_uri( 'assets/images/header/svg-blobs.png' ),

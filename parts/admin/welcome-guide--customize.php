@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey;
@@ -23,7 +24,6 @@ if ( ! Site_Editor::is_enabled() ) {
 	$url_site_editor = add_query_arg(
 		array(
 			'postType' => 'wp_template_part',
-			'path'     => '/wp_template_part/all',
 		),
 		$url_site_editor
 	);

@@ -79,3 +79,12 @@
 		--theme--css--button--color--border: transparent;
 	}
 }
+
+form [type="reset"]:not([class*="wp-block-"]) {
+	--theme--css--button--color--background: transparent;
+	--theme--css--button--color--text: currentColor;
+	--theme--css--button--color--border: currentColor;
+	--theme--css--button--color--outline: currentColor;
+
+	@extend %button_outline;
+}

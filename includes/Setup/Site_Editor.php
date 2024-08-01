@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -51,7 +51,7 @@ class Site_Editor implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.2
+	 * @version  1.1.4
 	 *
 	 * @return  void
 	 */
@@ -69,8 +69,6 @@ class Site_Editor implements Component_Interface {
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme', 2 );
 
 				add_action( 'admin_menu', __CLASS__ . '::admin_menu' );
-
-				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::editor_mods' );
 
 			// Filters
 
@@ -221,7 +219,8 @@ class Site_Editor implements Component_Interface {
 	/**
 	 * Adds additional admin menu links.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.4
 	 *
 	 * @return  void
 	 */
@@ -247,12 +246,12 @@ class Site_Editor implements Component_Interface {
 
 				'template_parts' => array(
 					'label' => __( 'Template Parts', 'zooey' ),
-					'url'   => admin_url( 'site-editor.php?path=/wp_template_part/all' ),
+					'url'   => admin_url( 'site-editor.php?postType=wp_template_part' ),
 				),
 
 				'templates' => array(
 					'label' => __( 'Templates', 'zooey' ),
-					'url'   => admin_url( 'site-editor.php?path=/wp_template/all' ),
+					'url'   => admin_url( 'site-editor.php?postType=wp_template' ),
 				),
 			);
 
@@ -281,47 +280,6 @@ class Site_Editor implements Component_Interface {
 			}
 
 	} // /admin_menu
-
-	/**
-	 * Enqueues site editor modifications.
-	 *
-	 * @since    1.0.0
-	 * @version  1.0.2
-	 *
-	 * @return  void
-	 */
-	public static function editor_mods() {
-
-		// Variables
-
-			$current_screen = get_current_screen();
-
-
-		// Requirements check
-
-			if (
-				empty( $current_screen->base )
-				|| 'site-editor' !== $current_screen->base
-			) {
-				return;
-			}
-
-
-		// Processing
-
-			Factory::script_enqueue( array(
-				'handle'   => 'zooey-site-editor-mods',
-				'src'      => get_theme_file_uri( 'assets/js/site-editor.min.js' ),
-				'deps'     => array( 'wp-i18n', 'wp-dom-ready' ),
-				'localize' => array(
-					'zooeySiteEditor' => array(
-						'customizerTypographyURI' => esc_url( admin_url( 'customize.php?autofocus[control]=typography_font_size' ) ),
-						'customizerGradientsURI'  => esc_url( admin_url( 'customize.php?autofocus[control]=gradient_stop_hard' ) ),
-					),
-				),
-			) );
-
-	} // /editor_mods
 
 	/**
 	 * Site editor link.

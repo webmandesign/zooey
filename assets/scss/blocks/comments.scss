@@ -56,7 +56,7 @@
 		}
 	}
 
-	input:not([type=submit], [type=checkbox]),
+	input:not([type="submit"], [type="checkbox"]),
 	textarea {
 		padding: var(--wp--custom--spacing--input-vertical) 1em;
 	}

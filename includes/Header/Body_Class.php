@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.3
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Header;
@@ -15,6 +15,7 @@ use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Content;
 use WebManDesign\Zooey\Customize\Colors;
 use WebManDesign\Zooey\Customize\CSS_Variables;
+use WebManDesign\Zooey\Customize\Mod;
 use WP_Post;
 
 // Exit if accessed directly.
@@ -54,7 +55,7 @@ class Body_Class implements Component_Interface {
 	 * HTML body classes.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.3
+	 * @version  1.1.4
 	 *
 	 * @param  array $classes
 	 *
@@ -115,7 +116,9 @@ class Body_Class implements Component_Interface {
 			 * @link  https://github.com/WordPress/gutenberg/issues/63033
 			 * @see   assets/scss/blocks/_navigation-mobile.scss
 			**/
-			$classes[] = 'navigation-a11y-fix';
+			if ( Mod::get( 'navigation_a11y_fix' ) ) {
+				$classes[] = 'navigation-a11y-fix';
+			}
 
 			// Sort classes alphabetically.
 			asort( $classes );

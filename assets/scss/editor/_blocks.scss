@@ -6,7 +6,7 @@
 }
 
 // Pattern preview vh fix.
-@each $vh in ( 38, 40, 50, 60, 62, 70, 80, 90, 100 ) {
+@each $vh in $pattern_vh {
 
 	body.block-editor-iframe__body {
 

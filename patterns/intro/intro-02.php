@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -69,8 +70,8 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
@@ -93,8 +94,8 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
@@ -117,8 +118,8 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->

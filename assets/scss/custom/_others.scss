@@ -10,26 +10,6 @@
 		}
 	}
 
-// Details, toggle.
-
-	details {
-		border-radius: var(--wp--custom--details--border--radius);
-	}
-
-	summary {
-		border-radius: inherit;
-
-		&::after {
-			border-radius: var(--wp--custom--details--border--radius);
-		}
-	}
-
-// Highlight, mark.
-
-	mark {
-		border-radius: .38rem;
-	}
-
 // Quote.
 
 	blockquote {

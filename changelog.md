@@ -1,5 +1,46 @@
 # Zooey Changelog
 
+## 1.1.4, 20240801
+
+### Added
+- Theme option to toggle navigation accessibility fix
+
+### Updated
+- Fixing WordPress 6.6 compatibility
+- Improving accessibility
+- Improving, optimizing, fixing CSS styles
+- Removing obsolete code
+- Editor UI styles
+- Reorganizing code
+- Localization
+
+### Fixed
+- Site Editor links
+- Patterns
+
+### File updates
+	style.css
+	theme.json
+	assets/scss/customize-controls.scss
+	assets/scss/editor-ui.scss
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/_navigation-mobile.scss
+	includes/Customize/Options.php
+	includes/Entry/Component.php
+	includes/Header/Body_Class.php
+	includes/Setup/Media.php
+	includes/Setup/Site_Editor.php
+	languages/*.*
+	parts/admin/welcome-feature--blog.php
+	parts/admin/welcome-feature--site-editor.php
+	parts/admin/welcome-guide--customize.php
+	patterns/intro/intro-02.php
+	patterns/services/services-01.php
+	patterns/services/services-02.php
+	patterns/testimonials/testimonials-03.php
+
+
 ## 1.1.3, 20240701
 
 ### Updated

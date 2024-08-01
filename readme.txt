@@ -1,7 +1,7 @@
 === Zooey ===
 
 Contributors:      webmandesign
-Tested up to:      6.5
+Tested up to:      6.6
 Requires at least: 6.4
 Requires PHP:      7.0
 License:           GPL-3.0-or-later

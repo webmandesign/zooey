@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey;
@@ -16,18 +17,6 @@ use WebManDesign\Zooey\Setup\Site_Editor;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$url_site_editor = admin_url( 'site-editor.php?path=/wp_template/all' );
-
-if ( ! Site_Editor::is_enabled() ) {
-	$url_site_editor = add_query_arg(
-		array(
-			'postType' => 'wp_template_part',
-			'path'     => '/wp_template_part/all',
-		),
-		admin_url( 'site-editor.php' )
-	);
-}
 
 ?>
 
@@ -43,5 +32,5 @@ if ( ! Site_Editor::is_enabled() ) {
 
 	<p><a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=layout_blog' ) ); ?>" class="button button-hero"><?php esc_html_e( 'Set Blog Layout', 'zooey' ); ?></a></p>
 
-	<p><a href="<?php echo esc_url( $url_site_editor ); ?>"><small><em><?php esc_html_e( 'Edit Templates &rarr;', 'zooey' ); ?></em></small></a></p>
+	<p><a href="<?php echo esc_url( admin_url( 'site-editor.php?postType=wp_template_part' ) ); ?>"><small><em><?php esc_html_e( 'Edit Templates &rarr;', 'zooey' ); ?></em></small></a></p>
 </div>

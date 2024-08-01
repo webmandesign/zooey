@@ -88,10 +88,3 @@
 			}
 		}
 	}
-
-// Flexbox vertical justification fix.
-
-	.is-content-justification-stretch {
-		// Not sure why this is not working in WordPress.
-		justify-content: space-between;
-	}

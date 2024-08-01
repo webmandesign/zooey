@@ -4,6 +4,7 @@ $important_modifiers: _important( 'modifier_mark' );
 
 mark {
 	padding: var(--wp--custom--mark--padding);
+	border-radius: var(--wp--custom--mark--border-radius);
 
 	//
 	// IMPORTANT:

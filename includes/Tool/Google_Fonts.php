@@ -245,7 +245,7 @@ class Google_Fonts implements Component_Interface {
 	} // /enqueue
 
 	/**
-	 * Enqueue editor stylesheet editor.
+	 * Enqueue editor stylesheet.
 	 *
 	 * @since  1.0.0
 	 *

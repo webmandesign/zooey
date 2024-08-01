@@ -5,6 +5,7 @@ details {
 	background-color: var(--wp--custom--details--color--background);
 	color: var(--wp--custom--details--color--text);
 	border: var(--wp--custom--details--border--width) var(--wp--custom--details--border--style) var(--wp--custom--details--border--color);
+	border-radius: var(--wp--custom--details--border--radius);
 
 	&:not(.wp-block-details) {
 
@@ -25,6 +26,7 @@ details {
 		font-weight: 700;
 		list-style: none;
 		cursor: pointer;
+		border-radius: inherit;
 
 		&::after {
 			content: '⋮';
@@ -38,6 +40,7 @@ details {
 			font-style: normal;
 			line-height: 1;
 			text-align: center;
+			border-radius: var(--wp--custom--details--border--radius);
 			opacity: .5;
 			speak: none;
 			transform: translateY( -50% );

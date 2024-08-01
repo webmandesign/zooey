@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.4
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -37,8 +38,8 @@ $image_p = Block_Pattern::get_image_url( 'p' );
 			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
+			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -61,8 +62,8 @@ $image_p = Block_Pattern::get_image_url( 'p' );
 			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
+			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -85,8 +86,8 @@ $image_p = Block_Pattern::get_image_url( 'p' );
 			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
+			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -109,8 +110,8 @@ $image_p = Block_Pattern::get_image_url( 'p' );
 			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
+			<h3 class="wp-block-heading has-text-align-center has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->

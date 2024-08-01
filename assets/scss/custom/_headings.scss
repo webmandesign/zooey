@@ -9,7 +9,11 @@
 %heading_color {
 	color: var(--wp--preset--color--contrast-alt);
 
-	.has-background & {
-		color: inherit;
+	.has-background &,
+	.wp-block-cover & {
+
+		:root :where(&) {
+			color: inherit;
+		}
 	}
 }
