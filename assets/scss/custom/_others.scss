@@ -1,5 +1,50 @@
 /* FILE: custom/_others.scss */
 
+// Border radius.
+
+	.has-background {
+
+		&:not(.alignfull) {
+
+			:root :where( & ) {
+				border-radius: var(--wp--custom--border-radius--bg);
+			}
+
+			header > &,
+			footer > & {
+
+				:root :where( & ) {
+					border-radius: inherit;
+				}
+			}
+		}
+	}
+
+	.wp-block-cover.alignwide {
+
+		:root :where( & ) {
+			border-radius: var(--wp--custom--border-radius--bg);
+		}
+
+		> span,
+		> img {
+
+			:root :where( & ) {
+				border-radius: inherit;
+			}
+		}
+	}
+
+	.alignfull {
+
+		&,
+		> img,
+		> figure img,
+		> a > img {
+			border-radius: 0;
+		}
+	}
+
 // Text meant only for screen readers.
 
 	body[class] .screen-reader-text,

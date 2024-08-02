@@ -6,8 +6,11 @@
 - Lowering automatic heading margin CSS specificity to pre-v1.1.0 value
 
 ### Fixed
+- Zero margin on blocks following accessibly hidden blocks
 - Button styles
 - Theme tags in `style.css` file
+- Social Links block SVG size
+- Border radius styles
 
 ### File updates
 	changelog.md
@@ -15,6 +18,7 @@
 	assets/scss/editor.scss
 	assets/scss/global.scss
 	assets/scss/blocks/button.scss
+	assets/scss/blocks/social-links.scss
 
 
 ## 1.1.4, 20240801

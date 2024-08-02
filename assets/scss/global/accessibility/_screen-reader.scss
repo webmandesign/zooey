@@ -34,7 +34,7 @@ body {
 			.screen-reader-text,
 			.is-style-screen-reader-text {
 
-				+ * {
+				:root :where( &:first-child + * ) {
 					margin-block-start: 0;
 				}
 			}
