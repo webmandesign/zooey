@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.3
+ * @version  1.1.6
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -217,7 +217,7 @@ class Editor implements Component_Interface {
 	 * Add block editor inline styles.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.0
+	 * @version  1.1.6
 	 *
 	 * @return  void
 	 */
@@ -249,7 +249,7 @@ class Editor implements Component_Interface {
 				$custom_background
 				. str_replace(
 					array_unique( array( ':root', CSS_Variables::get_root() ) ), // Reference: CSS selector root.
-					':root .editor-styles-wrapper',
+					':root:root, .editor-styles-wrapper:not(.block-editor-iframe__body)', // Works in editor wrapped both within `div` and/or `iframe`.
 					Styles::get_css_variables()
 				)
 			);

@@ -1,5 +1,19 @@
 # Zooey Changelog
 
+## 1.1.6, 20240829
+
+### Fixed
+- Custom font in editor
+- Right justified Navigation block submenu positioning
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/editor.scss
+	assets/scss/blocks/navigation-submenu.scss
+	includes/Assets/Editor.php
+
+
 ## 1.1.5, 20240802
 
 ### Updated

@@ -6,9 +6,9 @@ $root: (
 ) !default;
 
 	@if true == $is_editor {
-		// In editor we need to use `body` or `:root`
+		// In editor we need to use `:root` (or possibly even `body`?)
 		// so WordPress can replace it with `.editor-styles-wrapper`.
-		$root: body;
+		$root: ':root';
 	}
 
 $selectors_margin_vertical: (

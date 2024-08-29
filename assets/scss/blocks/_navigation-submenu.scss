@@ -1,7 +1,6 @@
 //
 // Submenu.
 //
-// @version  1.1.3
 
 // Setup.
 
@@ -10,6 +9,7 @@
 	:root {
 		--theme--css--submenu-transform: none;
 		--theme--css--submenu-inset-inline-start: 0;
+		--theme--css--submenu-inset-inline-end: auto;
 		--theme--css--submenu-padding: #{ $ratio + rem };
 		--theme--css--submenu-item-padding: #{ $ratio_min + rem };
 		--theme--css--submenu-offset: #{ $ratio_maj + rem };
@@ -28,6 +28,7 @@
 	}
 
 	.wp-block-navigation.is-vertical {
+		--theme--css--submenu-offset: 0;
 		--theme--css--animation-showSubMenu--from--transform: translateX( 1rem );
 		--theme--css--animation-showSubMenu--to--transform: none;
 	}
@@ -47,6 +48,7 @@
 	}
 
 	.no-centered-submenu {
+
 		@include media( map_get( $breakpoint, 'l' ) ) {
 			--theme--css--submenu-transform: none;
 			--theme--css--submenu-inset-inline-start: calc( -1 * var(--theme--css--submenu-padding) );
@@ -83,7 +85,54 @@
 	.wp-block-navigation.is-vertical,
 	#{$selector} #{$selector} {
 		--theme--css--submenu-open-animation: showSubSubMenu .3s;
+		--theme--css--submenu-inset-inline-start: 100%;
 	}
+
+	.wp-block-navigation.items-justified-right {
+		--theme--css--submenu-transform: none;
+		--theme--css--submenu-inset-inline-start: auto;
+		--theme--css--submenu-inset-inline-end: 0;
+		--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( 1rem );
+		--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
+		--theme--css--animation-showSubSubMenu--from--transform: translateX( -1rem );
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			--theme--css--submenu-inset-inline-end: 50%;
+			--theme--css--submenu-transform: translateX( 50% );
+		}
+
+		#{$selector} #{$selector} {
+			--theme--css--submenu-inset-inline-start: auto;
+			--theme--css--submenu-inset-inline-end: 100%;
+		}
+
+		.rtl & {
+			--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( -1rem );
+			--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
+			--theme--css--animation-showSubSubMenu--from--transform: translateX( 1rem );
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				--theme--css--submenu-transform: translateX( -50% );
+			}
+		}
+	}
+
+		.no-centered-submenu.items-justified-right {
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				--theme--css--submenu-transform: none;
+				--theme--css--submenu-inset-inline-end: calc( -1 * var(--theme--css--submenu-padding) );
+				--theme--css--animation-showSubMenu--from--transform: translateY( 1rem );
+				--theme--css--animation-showSubMenu--to--transform: none;
+			}
+
+			.rtl & {
+
+				@include media( map_get( $breakpoint, 'l' ) ) {
+					--theme--css--submenu-transform: none;
+				}
+			}
+		}
 
 .wp-block-navigation .has-child {
 
@@ -110,8 +159,8 @@
 		&[class] {
 			gap: 0;
 			display: none;
-			inset-inline: auto; // We have to reset this to override WP default styles.
-			inset-inline-start: var(--theme--css--submenu-inset-inline-start);
+			inset-inline-start: var(--theme--css--submenu-inset-inline-start) !important;
+			inset-inline-end: var(--theme--css--submenu-inset-inline-end) !important;
 			transform: var(--theme--css--submenu-transform);
 			padding: calc( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) var(--theme--css--submenu-padding);
 			box-shadow: var(--wp--custom--shadow--sub-menu);
@@ -120,7 +169,6 @@
 			#{$selector} {
 				font-size: 1em;
 				inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
-				inset-inline-start: 100%;
 				transform: none;
 			}
 
@@ -188,8 +236,6 @@
 
 .wp-block-navigation.is-vertical .has-child #{$selector} {
 	inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
-	inset-inline: auto; // We have to reset this to override WP default styles.
-	inset-inline-start: 100%;
 	transform: none;
 }
 
