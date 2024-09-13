@@ -27,13 +27,21 @@
 
 		&[data-page] {
 			@include media( ( 600, 'max-width' ) ) {
+				gap: $ratio + rem;
 
 				&::before {
 					content: attr(data-page);
 				}
 
-				.page-numbers.page-numbers.page-numbers {
+				.page-numbers.page-numbers:not( .prev, .next ) {
 					display: none;
+				}
+
+				.prev {
+					order: -1;
+				}
+				.next {
+					order: 2;
 				}
 			}
 		}

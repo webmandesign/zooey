@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.7
  */
 
 namespace WebManDesign\Zooey\Tool;
@@ -222,7 +223,8 @@ class Google_Fonts implements Component_Interface {
 	/**
 	 * Enqueue stylesheet.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.7
 	 *
 	 * @return  void
 	 */
@@ -240,6 +242,7 @@ class Google_Fonts implements Component_Interface {
 			Assets\Factory::style_enqueue( array(
 				'handle' => 'zooey-google-fonts',
 				'src'    => self::get_url(),
+				'ver'    => 'v' . ZOOEY_THEME_VERSION . '.' . (string) get_theme_mod( '__customize_timestamp', '0' ),
 			) );
 
 	} // /enqueue
@@ -247,7 +250,8 @@ class Google_Fonts implements Component_Interface {
 	/**
 	 * Enqueue editor stylesheet.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.7
 	 *
 	 * @return  void
 	 */
@@ -264,7 +268,7 @@ class Google_Fonts implements Component_Interface {
 
 			$stylesheet = esc_url_raw( add_query_arg(
 				'ver',
-				'v' . ZOOEY_THEME_VERSION,
+				'v' . ZOOEY_THEME_VERSION . '.' . (string) get_theme_mod( '__customize_timestamp', '0' ),
 				self::get_url()
 			) );
 

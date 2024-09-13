@@ -15,19 +15,20 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h2, h3, h4, h5, h6 {
-
-	.is-layout-flex:not(.is-vertical) > & {
-		margin-block-start: 0;
-	}
-}
-
 @include wrap() {
 
 	h2, h3, h4, h5, h6 {
 
 		&:not(:first-child) {
 			margin-block-start: var(--wp--custom--spacing--heading);
+		}
+	}
+
+	// We need to wrap this for editor, for pattern previews.
+	.is-layout-flex:not(.is-vertical) > {
+
+		h2, h3, h4, h5, h6 {
+			margin-block-start: 0;
 		}
 	}
 }

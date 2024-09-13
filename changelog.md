@@ -1,5 +1,28 @@
 # Zooey Changelog
 
+## 1.1.7, 20240913
+
+### Updated
+- Improving custom fonts stylesheet versioning
+- Improving responsive block styles within Navigation block: displays following navigation overlay state, not the screen size
+
+### Fixed
+- HTML error regarding search form
+- Pagination styles (improving compatibility with plugins)
+- Heading top margin in pattern preview in editor
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/blocks.scss
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/navigation.scss
+	includes/Loop/Component.php
+	includes/Loop/Pagination.php
+	includes/Tool/Google_Fonts.php
+
+
 ## 1.1.6, 20240829
 
 ### Fixed

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.1.7
  */
 
 namespace WebManDesign\Zooey\Loop;
@@ -273,7 +274,8 @@ class Component implements Component_Interface {
 	 *
 	 * Works also with Search block.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.7
 	 *
 	 * @param  string $html   The rendered block or search form content.
 	 * @param  array  $block  The block being rendered.
@@ -292,6 +294,7 @@ class Component implements Component_Interface {
 			if (
 				empty( $post_type )
 				|| 'any' === $post_type
+				|| stripos( $html, ' name="post_type' )
 			) {
 				return $html;
 			}
@@ -311,7 +314,7 @@ class Component implements Component_Interface {
 					array_filter( (array) $post_type )
 				) );
 			} else {
-				$input = '<input type="hidden" name="post_type" value="' . esc_attr( $post_type ) . '"/></form>';
+				$input = '<input type="hidden" name="post_type" value="' . esc_attr( $post_type ) . '"/>';
 			}
 
 

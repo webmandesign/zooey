@@ -17,9 +17,11 @@
 
 	.pagination {
 		display: flex;
+		flex-wrap: wrap;
 		gap: $ratio_min + em;
 		justify-content: center;
 		align-items: center;
+		// @see  `blocks/_pagination.scss` for additional styles.
 
 		body .is-layout-flow > & {
 			margin-block-start: var(--wp--preset--spacing--xl);
