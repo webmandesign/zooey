@@ -1,5 +1,19 @@
 # Zooey Changelog
 
+## 1.1.8, 20241016
+
+### Updated
+- Removing fixed mobile navigation block style applied by default on Navigation block
+- Search block CSS styles to fix the width in no-wrap row
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/blocks/search.scss
+	patterns/site/header.php
+	patterns/site/header-alt.php
+
+
 ## 1.1.7, 20240913
 
 ### Updated
