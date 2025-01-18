@@ -1,5 +1,19 @@
 # Zooey Changelog
 
+## 1.1.9, 20250118
+
+### Updated
+- Beaver Builder upgrade link
+- Numbers 05 pattern spacing
+
+### File updates
+	changelog.md
+	readme.txt
+	style.css
+	includes/Plugin/Beaver_Builder/Component.php
+	patterns/numbers/numbers-05.php
+	
+
 ## 1.1.8, 20241016
 
 ### Updated
