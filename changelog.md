@@ -1,5 +1,15 @@
 # Zooey Changelog
 
+## 1.2.0, 20250123
+
+### Added
+- `accessibility-ready` tag (https://themes.trac.wordpress.org/ticket/173979#comment:31)
+
+### File updates
+	changelog.md
+	style.css
+
+
 ## 1.1.9, 20250118
 
 ### Updated
