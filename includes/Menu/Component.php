@@ -65,6 +65,9 @@ class Component implements Component_Interface {
 				case 'core/navigation-link':
 
 					/**
+					 * @todo  This can be removed with WP6.8+2.
+					 * @link  https://make.wordpress.org/core/2025/03/25/miscellaneous-block-editor-changes-in-wordpress-6-8/#consistent-markup-for-navigation-item-labels
+					 *
 					 * Helper HTML wrapper for current menu item decoration.
 					 *
 					 * No need to target `core/navigation-submenu` block here

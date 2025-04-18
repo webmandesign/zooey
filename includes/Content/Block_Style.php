@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  1.2.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -86,7 +86,7 @@ class Block_Style implements Component_Interface {
 	 * non-block pagination provided by various plugins (such as WooCommerce).
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.7
+	 * @version  1.2.1
 	 *
 	 * @return  array
 	 */
@@ -203,13 +203,19 @@ class Block_Style implements Component_Interface {
 					'label'  => _x( 'Hide on small screens', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/button',
+						'core/buttons',
 						'core/column',
+						'core/columns',
 						'core/cover',
 						'core/group',
+						'core/image',
 						'core/navigation',
 						'core/navigation-submenu',
+						'core/post-featured-image',
 						'core/search',
 						'core/separator',
+						'core/site-tagline',
+						'core/site-title',
 						'core/spacer',
 					),
 				),
@@ -217,13 +223,19 @@ class Block_Style implements Component_Interface {
 					'label'  => _x( 'Only on small screens', 'Block style label.', 'zooey' ),
 					'blocks' => array(
 						'core/button',
+						'core/buttons',
 						'core/column',
+						'core/columns',
 						'core/cover',
 						'core/group',
+						'core/image',
 						'core/navigation',
 						'core/navigation-submenu',
+						'core/post-featured-image',
 						'core/search',
 						'core/separator',
+						'core/site-tagline',
+						'core/site-title',
 						'core/spacer',
 					),
 				),

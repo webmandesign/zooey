@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  1.2.1
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -104,28 +104,18 @@ class Options implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.7
+	 * @version  1.2.1
 	 *
 	 * @return  void
 	 */
 	public static function init() {
 
-		// Variables
-
-			/**
-			 * IMPORTANT!:
-			 * Can not use `Editor::get_user_font_families()` in `self::get/set()`
-			 * as it causes infinite loop in `Editor::duotones()` via `Mod::get()`!
-			 */
-			self::$user_font_families = Editor::get_user_font_families();
-
-
 		// Processing
-
-			self::get_json_data();
 
 			// Actions
 
+				add_action( 'customize_register', __CLASS__ . '::get_user_font_families', 5 );
+				add_action( 'customize_register', __CLASS__ . '::get_json_data', 5 );
 				add_action( 'customize_register', __CLASS__ . '::modify', 100 );
 
 			// Filters
@@ -1302,5 +1292,27 @@ class Options implements Component_Interface {
 			);
 
 	} // /get_json_data
+
+	/**
+	 * Get custom font families set by user.
+	 *
+	 * IMPORTANT:
+	 * To prevent infinite loop (in `Editor::duotones()` via `Mod::get()`)
+	 * we can not use `Editor::get_user_font_families()` in `self::get/set()`.
+	 * The best is to hook this onto `customize_register` just before
+	 * the theme options controls are being rendered. That's where this
+	 * is actually only needed.
+	 *
+	 * @since  1.2.1
+	 *
+	 * @return  void
+	 */
+	public static function get_user_font_families() {
+
+		// Processing
+
+			self::$user_font_families = Editor::get_user_font_families();
+
+	} // /get_user_font_families
 
 }

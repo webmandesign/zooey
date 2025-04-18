@@ -17,7 +17,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.3
+ * @version  1.2.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -321,7 +321,7 @@ class Block_Pattern implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.3
+	 * @version  1.2.1
 	 *
 	 * @return  void
 	 */
@@ -347,6 +347,9 @@ class Block_Pattern implements Component_Interface {
 				add_action( 'wp', __CLASS__ . '::register' );
 
 			// Filters
+
+				// Prevent WordPress automatic pattern file registration. (This prevents PHP notice.)
+				add_filter( 'theme_block_pattern_files', '__return_empty_array' );
 
 				add_filter( 'render_block_core/pattern', __CLASS__ . '::render__change_headings', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -709,7 +712,8 @@ class Block_Pattern implements Component_Interface {
 	/**
 	 * Get starter content texts.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.1
 	 *
 	 * @param  string $scope
 	 *
@@ -753,7 +757,8 @@ class Block_Pattern implements Component_Interface {
 				),
 
 				'date' => array(
-					'event'   => _x( '10:30 am on Monday, July 1, 2021', 'Demo text.', 'zooey' ),
+					'day'     => str_replace( '{Y}', date('Y'), _x( 'July 1, {Y}', 'Demo text. Keep "{Y}" as it gets replaced with current year.', 'zooey' ) ),
+					'event'   => str_replace( '{Y}', date('Y'), _x( 'Monday, July 1, {Y}, 10:30', 'Demo text. Keep "{Y}" as it gets replaced with current year.', 'zooey' ) ),
 					'weekday' => _x( 'Mon - Fri', 'Demo text. Week days.', 'zooey' ),
 					'weekend' => _x( 'Sat - Sun', 'Demo text. Weekend days.', 'zooey' ),
 					'mon'     => _x( 'Monday', 'Demo text.', 'zooey' ),

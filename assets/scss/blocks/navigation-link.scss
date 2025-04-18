@@ -1,5 +1,7 @@
 // core/navigation-link
-// @version  1.0.7
+//
+// @since    1.0.0
+// @version  1.2.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -63,10 +65,10 @@
 	}
 
 	// Current (active) menu item.
-	// The `.wp-block-navigation-item__label` is not available for submenus
-	// as of WP6.4 due to submenus not supporting menu item description.
 	.current-menu-item > .wp-block-navigation-item__content .wp-block-navigation-item__label,
-	.current-menu-item.has-child > .wp-block-navigation-item__content,
+	.current-menu-ancestor > .wp-block-navigation-item__content .wp-block-navigation-item__label,
+	// Pre-WP6.8 (@todo can be removed with WP6.8+2):
+	.current-menu-item.has-child > .wp-block-navigation-item__content:not(:has(.wp-block-navigation-item__label)),
 	.current-menu-ancestor.wp-block-navigation-item__content {
 		@extend %current_menu_item;
 		display: block !important;

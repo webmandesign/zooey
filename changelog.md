@@ -1,5 +1,32 @@
 # Zooey Changelog
 
+## 1.2.1, 20250418
+
+### Fixed
+- Localization warning
+
+### Updated
+- WordPress 6.8 compatibility:
+	- Fixing patterns registration
+	- Fixing Social Link editor styles
+	- Fixing Search block styles
+	- Updating Navigation Link block styles
+- Improving year in demo content texts
+- Block styles
+- Localization
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/editor.scss
+	assets/scss/blocks/navigation-link.scss
+	assets/scss/blocks/search.scss
+	includes/Content/Block_Pattern.php
+	includes/Content/Block_Style.php
+	includes/Customize/Options.php
+	languages/zooey.pot
+
+
 ## 1.2.0, 20250123
 
 ### Added
