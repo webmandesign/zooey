@@ -24,8 +24,8 @@ mark {
 		background-color: transparent $important_modifiers;
 		background-image: linear-gradient(
 			to top,
-			var(--wp--custom--mark--color) calc( 1000vh * ( -1 + var(--wp--custom--mark--opacity) ) ),
-			transparent calc( 1000vh * var(--wp--custom--mark--opacity) )
+			color-mix( in srgb, var(--wp--custom--mark--color) var(--wp--custom--mark--opacity), transparent ),
+			color-mix( in srgb, var(--wp--custom--mark--color) var(--wp--custom--mark--opacity), transparent )
 		) $important_modifiers;
 		background-repeat: repeat-x $important_modifiers;
 		background-position: 0 95% $important_modifiers;

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.2
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -46,7 +47,8 @@ class Upgrade implements Component_Interface {
 	/**
 	 * Do action on theme version change.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.2
 	 *
 	 * @return  void
 	 */
@@ -54,7 +56,7 @@ class Upgrade implements Component_Interface {
 
 		// Variables
 
-			$current_theme_version = get_transient( self::$transient_cache_version );
+			$current_theme_version = get_site_transient( self::$transient_cache_version );
 			$new_theme_version     = wp_get_theme( 'zooey' )->get( 'Version' );
 
 
@@ -75,7 +77,7 @@ class Upgrade implements Component_Interface {
 				 */
 				do_action( 'zooey/upgrade', $new_theme_version, $current_theme_version );
 
-				set_transient( self::$transient_cache_version, $new_theme_version );
+				set_site_transient( self::$transient_cache_version, $new_theme_version );
 			}
 
 	} // /action

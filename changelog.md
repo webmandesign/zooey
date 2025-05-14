@@ -1,5 +1,21 @@
 # Zooey Changelog
 
+## 1.2.2, 20250514
+
+### Updated
+- Caching block patterns
+- Using site transient for theme update code
+- Using `color-mix` to style `<mark>`
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	assets/scss/global.scss
+	includes/Content/Block_Pattern.php
+	includes/Setup/Upgrade.php
+
+
 ## 1.2.1, 20250418
 
 ### Fixed

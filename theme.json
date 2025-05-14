@@ -4,7 +4,7 @@
 
 	"docBlock" : {
 		"@since"   : "1.0.0",
-		"@version" : "1.1.4"
+		"@version" : "1.2.2"
 	},
 
 	"settings" : {
@@ -784,7 +784,7 @@
 			"mark" : {
 				"border-radius" : ".38rem",
 				"color"         : "currentColor",
-				"opacity"       : ".2",
+				"opacity"       : "20%",
 				"padding"       : "0 .1em",
 				"padding-bg"    : ".1em .25em"
 			},

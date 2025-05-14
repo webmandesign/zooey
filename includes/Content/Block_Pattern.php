@@ -17,7 +17,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.1
+ * @version  1.2.2
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -25,6 +25,7 @@ namespace WebManDesign\Zooey\Content;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Customize\Mod;
 use WebManDesign\Zooey\Setup\Site_Editor;
+use WP_Block_Patterns_Registry;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -318,10 +319,19 @@ class Block_Pattern implements Component_Interface {
 	private static $i = 0;
 
 	/**
+	 * Name of cached patterns data transient.
+	 *
+	 * @since   1.2.2
+	 * @access  public
+	 * @var     string
+	 */
+	public static $transient_cache_key = 'gwyneth_cache_patterns';
+
+	/**
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.1
+	 * @version  1.2.2
 	 *
 	 * @return  void
 	 */
@@ -346,6 +356,11 @@ class Block_Pattern implements Component_Interface {
 				 */
 				add_action( 'wp', __CLASS__ . '::register' );
 
+				add_action( 'customize_save_after',            __CLASS__ . '::transient_cache_flush' );
+				add_action( 'save_post_' . 'wp_global_styles', __CLASS__ . '::transient_cache_flush' );
+				add_action( 'switch_theme',                    __CLASS__ . '::transient_cache_flush' );
+				add_action( 'gwyneth/upgrade', __CLASS__ . '::transient_cache_flush' );
+
 			// Filters
 
 				// Prevent WordPress automatic pattern file registration. (This prevents PHP notice.)
@@ -356,57 +371,42 @@ class Block_Pattern implements Component_Interface {
 	} // /init
 
 	/**
-	 * Remove core block patterns.
+	 * Gets block pattern data.
 	 *
-	 * @since  1.0.0
+	 * @since  1.2.2
 	 *
-	 * @return  void
+	 * @return  array Array of patterns data.
 	 */
-	public static function remove_core_patterns() {
-
-		// Requirements check
-
-			if ( Mod::get( 'core_block_patterns' ) ) {
-				return;
-			}
-
-
-		// Processing
-
-			remove_theme_support( 'core-block-patterns' );
-
-	} // /remove_core_patterns
-
-	/**
-	 * Register block patterns.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return  void
-	 */
-	public static function register() {
-
-		// Requirements check
-
-			if (
-				doing_action( 'wp' )
-				&& Site_Editor::is_enabled()
-			) {
-				return;
-			}
-
+	public static function get_patterns() {
 
 		// Variables
 
 			global $content_width;
 
-			$patterns_hierarchy = self::get_pattern_ids();
+			$can_use_cached = ! wp_is_development_mode( 'theme' );
+			$patterns       = get_transient( self::$transient_cache_key );
+
+			// Return cache first.
+			if ( is_array( $patterns ) ) {
+
+				if ( $can_use_cached ) {
+					return $patterns;
+				}
+
+				// If in development mode, clear pattern cache.
+				self::transient_cache_flush();
+
+			} else {
+				$patterns = array_filter( (array) $patterns );
+			}
+
+			$hierarchy = self::get_pattern_ids();
 
 
 		// Processing
 
-			foreach ( $patterns_hierarchy as $category => $patterns ) {
-				foreach ( $patterns as $id ) {
+			foreach ( $hierarchy as $category => $ids ) {
+				foreach ( $ids as $id ) {
 
 					// Helpers (for `self::the_text()`):
 						// Set which pattern is being processed.
@@ -483,6 +483,7 @@ class Block_Pattern implements Component_Interface {
 					$args = wp_parse_args(
 						$args,
 						array(
+							'slug'          => self::$prefix . $id,
 							'title'         => '',
 							'content'       => $content,
 							'categories'    => null,
@@ -553,25 +554,94 @@ class Block_Pattern implements Component_Interface {
 					}
 
 					/**
-					 * Filters array of block pattern registration arguments.
+					 * Filters array of single block pattern registration arguments.
 					 *
 					 * If empty, the pattern is not registered.
 					 *
-					 * @since  1.0.0
+					 * @since    1.0.0
+					 * @version  1.2.2
 					 *
 					 * @param  array  $args      Block pattern registration arguments.
 					 * @param  string $id        Block pattern registration ID.
 					 * @param  string $category  Block pattern category slug.
 					 */
-					$args = (array) apply_filters( 'zooey/content/block_pattern/register/args', $args, $id, $category );
+					$args = (array) apply_filters( 'zooey/content/block_pattern/get_patterns/args', $args, $id, $category );
 
 					if ( ! empty( $args ) ) {
-						register_block_pattern( self::$prefix . $id, $args );
+						$patterns[ $args['slug'] ] = $args;
 					}
 				}
 			}
 
+			if ( $can_use_cached ) {
+				set_transient( self::$transient_cache_key, (array) $patterns );
+			}
+
+
+		// Output
+
+			return (array) $patterns;
+
+	} // /get_patterns
+
+	/**
+	 * Register block patterns.
+	 *
+	 * Inspiration taken from:
+	 * @see  _register_theme_block_patterns()
+	 *
+	 * @since  1.2.2
+	 *
+	 * @return  void
+	 */
+	public static function register() {
+
+		// Requirements check
+
+			if (
+				doing_action( 'wp' )
+				&& Site_Editor::is_enabled()
+			) {
+				return;
+			}
+
+
+		// Variables
+
+			$patterns = self::get_patterns();
+			$registry = WP_Block_Patterns_Registry::get_instance();
+
+
+		// Processing
+
+			foreach ( $patterns as $pattern_data ) {
+
+				if (
+					empty( $pattern_data )
+					|| $registry->is_registered( $pattern_data['slug'] )
+				) {
+					continue;
+				}
+
+				register_block_pattern( $pattern_data['slug'], $pattern_data );
+			}
+
 	} // /register
+
+	/**
+	 * Flush the transient of cached patterns data.
+	 *
+	 * @since  1.2.2
+	 *
+	 * @return  void
+	 */
+	public static function transient_cache_flush() {
+
+		// Processing
+
+			delete_transient( self::$transient_cache_key );
+
+	} // /transient_cache_flush
 
 	/**
 	 * Register custom block pattern categories.
@@ -623,6 +693,28 @@ class Block_Pattern implements Component_Interface {
 			);
 
 	} // /register_categories
+
+	/**
+	 * Remove core block patterns.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return  void
+	 */
+	public static function remove_core_patterns() {
+
+		// Requirements check
+
+			if ( Mod::get( 'core_block_patterns' ) ) {
+				return;
+			}
+
+
+		// Processing
+
+			remove_theme_support( 'core-block-patterns' );
+
+	} // /remove_core_patterns
 
 	/**
 	 * Gets array of block pattern IDs/slugs within categories to load.
