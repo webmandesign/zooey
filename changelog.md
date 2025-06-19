@@ -1,5 +1,16 @@
 # Zooey Changelog
 
+## 1.2.3, 20250619
+
+### Fixed
+- Text domain PHP notice in Customizer
+
+### File updates
+	changelog.md
+	style.css
+	includes/Content/Starter.php
+
+
 ## 1.2.2, 20250514
 
 ### Updated

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.3
+ * @version  1.2.3
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -30,7 +30,8 @@ class Starter implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.3
 	 *
 	 * @return  void
 	 */
@@ -49,13 +50,7 @@ class Starter implements Component_Interface {
 
 		// Processing
 
-			// Loading
-
-				self::attachments();
-				self::options();
-				self::pages();
-
-			// Setup
+			// Actions
 
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme' );
 
@@ -64,13 +59,25 @@ class Starter implements Component_Interface {
 	/**
 	 * After setup theme.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.3
 	 *
 	 * @return  void
 	 */
 	public static function after_setup_theme() {
 
+		// Requirements check
+
+			if ( empty( get_option( 'fresh_site' ) ) ) {
+				return;
+			}
+
+
 		// Processing
+
+			self::attachments();
+			self::options();
+			self::pages();
 
 			/**
 			 * Filters theme starter content setup array.
