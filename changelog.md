@@ -1,5 +1,16 @@
 # Zooey Changelog
 
+## 1.2.4, 20260506
+
+### Added
+- `accessibility.txt` file
+
+### File updates
+	changelog.md
+	style.css
+	accessibility.txt
+
+
 ## 1.2.3, 20250619
 
 ### Fixed
