@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.1
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -218,7 +218,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @version  1.2.5
 	 *
 	 * @param  array $options
 	 *
@@ -1222,7 +1222,16 @@ class Options implements Component_Interface {
 							sprintf(
 								/* translators: %s: Gutenberg issue link. */
 								esc_html__( 'Until WordPress fixes Navigation block accessibility issue (%s), enabling this option fixes it for you.', 'zooey' ),
-								'<a href="https://github.com/WordPress/gutenberg/issues/63033" target="_blank" rel="noopener noreferrer">#63033</a>'
+								'<a
+									href="https://github.com/WordPress/gutenberg/issues/63033"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="'
+									. esc_attr__( 'WordPress GitHub issue #63033', 'zooey' )
+									. ' '
+									. esc_attr__( '(Opens link in a new window.)', 'zooey' )
+									. '"
+									>#63033</a>'
 							)
 							. ' '
 							. esc_html__( 'Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user.', 'zooey' ),

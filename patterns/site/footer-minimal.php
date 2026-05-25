@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -46,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-		<p style="font-style:normal;font-weight:600"><a href="#top"><?php esc_html_e( 'To the top &uarr;', 'zooey' ); ?></a></p>
+		<p style="font-style:normal;font-weight:600"><a href="#top"><?php esc_html_e( 'To the top', 'zooey' ); ?><span aria-hidden="true" class="is-aria-hidden"> ↑</span></a></p>
 		<!-- /wp:paragraph -->
 
 	</div>

@@ -55,13 +55,8 @@
 		transform: scale(1.05);
 	}
 
-	&:focus {
-		outline-color: var(--theme--css--button--color--outline);
-
-		.has-focus-alt &,
-		&.has-focus-alt {
-			outline-color: inherit;
-		}
+	&:focus-visible {
+		@extend %focus_button;
 	}
 
 	&:active {
@@ -84,7 +79,6 @@ form [type="reset"]:not([class*="wp-block-"]) {
 	--theme--css--button--color--background: transparent;
 	--theme--css--button--color--text: currentColor;
 	--theme--css--button--color--border: currentColor;
-	--theme--css--button--color--outline: currentColor;
 
 	@extend %button_outline;
 }

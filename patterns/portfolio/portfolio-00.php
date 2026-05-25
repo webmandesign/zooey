@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -68,7 +69,7 @@ $image = Block_Pattern::get_image_url( '1to1-1' );
 		<!-- /wp:separator -->
 
 		<!-- wp:paragraph {"style":{"typography":{"textDecoration":"none"}},"className":"is-style-no-text-wrap","fontSize":"s"} -->
-		<p class="is-style-no-text-wrap has-s-font-size" style="text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'more' ); ?></a></p>
+		<p class="is-style-no-text-wrap has-s-font-size" style="text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'change' ); ?></a></p>
 		<!-- /wp:paragraph -->
 
 	</div>

@@ -51,9 +51,8 @@
 				transform: scale(1.05);
 			}
 
-			&:focus {
-				--wp--custom--outline--color: var(--theme--css--button--color--outline);
-				outline-color: var(--theme--css--button--color--outline);
+			&:focus-visible {
+				@extend %focus_button;
 			}
 
 			&:active {
@@ -180,10 +179,6 @@
 					left: auto;
 					right: 50%;
 					transform: translateX(50%);
-				}
-
-				&:focus {
-					outline-color: var(--theme--css--button--color--outline);
 				}
 			}
 		}

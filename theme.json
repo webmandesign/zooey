@@ -4,7 +4,7 @@
 
 	"docBlock" : {
 		"@since"   : "1.0.0",
-		"@version" : "1.2.2"
+		"@version" : "1.2.5"
 	},
 
 	"settings" : {
@@ -799,7 +799,7 @@
 				"plugin"  : "var(--wp--custom--letter-spacing--global)"
 			},
 			"opacity" : {
-				"border"             : ".33",
+				"border"             : ".6",
 				"pseudo-bg"          : ".05",
 				"semitransparent"    : ".5",
 				"navigation-overlay" : ".9"
@@ -845,12 +845,12 @@
 				"input-vertical" : ".5em",
 				"menu-mobile"    : {
 					"top"    : {
-						"m" : "max( 2em, 15vh )",
-						"l" : "max( 4em, 50vh )"
+						"m" : "max( 5em, 25vh )",
+						"l" : "max( 5em, 40vh )"
 					},
 					"bottom" : {
-						"m" : "max( 2em, 15vh )",
-						"l" : "max( 4em, 50vh )"
+						"m" : "max( 5em, 25vh )",
+						"l" : "max( 5em, 40vh )"
 					}
 				}
 			},

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -93,7 +93,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->
-					<p><a href="#top"><?php esc_html_e( 'To the top &uarr;', 'zooey' ); ?></a></p>
+					<p><a href="#top"><?php esc_html_e( 'To the top', 'zooey' ); ?><span aria-hidden="true" class="is-aria-hidden"> ↑</span></a></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -118,7 +118,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<h2 class="wp-block-heading has-h-4-font-size">Theme Info</h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
+					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}},"ariaLabel":"<?php echo esc_attr_x( 'Footer, primary', 'Navigational menu label.', 'zooey' ); ?>"} -->
 						<!-- wp:navigation-link {"label":"Get the theme","url":"https://wordpress.org/themes/zooey/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"Support Forum","url":"#themesupport","fontSize":"s"} /-->
@@ -135,7 +135,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<h2 class="wp-block-heading has-h-4-font-size"><?php esc_html_e( 'Services', 'zooey' ); ?></h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}}} -->
+					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}},"ariaLabel":"<?php echo esc_attr_x( 'Footer, secondary', 'Navigational menu label.', 'zooey' ); ?>"} -->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->

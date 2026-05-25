@@ -40,7 +40,7 @@ Accessibility improvements are incorporated into theme updates.
 
 This proactive and ongoing approach helps ensure the theme remains compliant and usable for all site visitors.
 
-Additionally, the theme provides an online [demo website](https://themedemos.webmandesign.eu/zooey/) which can be used to conduct your own [accessibility testing](https://support.webmandesign.eu/accessibility/).
+Additionally, the theme provides an online [demo website](https://wmdemo.eu/zooey/) which can be used to conduct your own [accessibility testing](https://support.webmandesign.eu/accessibility/).
 Although, please keep in mind this is _just_ a demo website with demo content, such as placeholder text (["Lorem ipsum"](https://en.wikipedia.org/wiki/Lorem_ipsum)), blind links pointing nowhere, repeating image alt text. All of these are part of website content and should be [properly set on any live website](https://webmandesign.github.io/docs/zooey/index.html#accessibility).
 
 
@@ -62,7 +62,6 @@ In addition to meeting [accessibility-ready requirements](https://make.wordpress
 
 - Design focused on readability with max line width set to around 70 characters.
 - After [setting up your color palette](https://webmandesign.github.io/docs/zooey/index.html#site-editor-styles-colors), the theme automatically (re)calculates proper contrasting text colors and applies them whenever the specific palette color is used as a block background.
-- Helpful `.has-focus-alt` CSS class you can apply on focusable element, such as **Button** block, when focus outline color contrast is insufficient against the surrounding background.
 - Additional skip links (to main navigation, to footer).
 - _"Accessibly hidden"_ block style helpful when hiding **Heading** block visually, but keeping it accessible for assistive technology.
 - Optional (switchable) [accessible position of mobile menu toggle button](https://webmandesign.github.io/docs/zooey/index.html#mobile-nav).

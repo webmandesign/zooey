@@ -1,5 +1,31 @@
 /* FILE: _extend/_accessibility.scss */
 
+%focus {
+
+	:where( & ) {
+		outline-width:  var( --wp--custom--outline--width,  2px  );
+		outline-style:  var( --wp--custom--outline--style,  auto );
+		outline-offset: var( --wp--custom--outline--offset, 3px  );
+		// `revert` seems to be the only color value that brings back
+		// the browser black and white "double" color of the outline.
+		// Other color values (such as `initial` or `auto`) sets the
+		// color to `currentColor` which causes issues with buttons.
+		//
+		// @link  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/outline-color
+		outline-color:  var( --wp--custom--outline--color, revert );
+	}
+}
+
+%focus_button {
+	// The `outline-style: auto` is required for `revert` color to work!
+	// `outline-color: revert` sets browser's default "double" (black and white) color.
+	// And we rise the outline offset a bit to make the outline breath a little.
+	outline-width: var( --wp--custom--outline--width-button, var( --wp--custom--outline--width, 2px ) );
+	outline-style: var( --wp--custom--outline--style-button, auto );
+	outline-color: var( --wp--custom--outline--color-button, revert );
+	outline-offset: var( --wp--custom--outline--offset-button, 4px );
+}
+
 %screen_reader--hide {
 	@include screen_reader( 'hide' );
 }

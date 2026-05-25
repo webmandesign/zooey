@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,14 +34,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:query {"layout":{"type":"constrained"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}}} -->
+<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"layout":{"type":"constrained"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}}} -->
 <div class="wp-block-query" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<?php do_action( 'tha_content_while_before' ); ?>
-	<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}},"layout":{"type":"default","columnCount":1}} -->
+	<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
 
 		<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|s"}},"border":{"bottom":{"width":"1px"}}}} -->
-		<div class="wp-block-group" style="border-bottom-width:1px;min-height:100%;padding-bottom:var(--wp--preset--spacing--s)">
+		<div class="wp-block-group" style="border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--s)">
 
 			<!-- wp:post-title {"isLink":true,"style":{"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700"}},"fontSize":"h-4"} /-->
 

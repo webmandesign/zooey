@@ -5,10 +5,13 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey;
+
+use WebManDesign\Zooey\Assets\Factory;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -28,44 +31,49 @@ defined( 'ABSPATH' ) || exit;
 
 		$links_script = array();
 
+		$i = 0;
 		foreach ( $links as $html_id => $text ) {
 
-			$uniqid = wp_unique_id( 'sl' );
+			$sl_id = 'sl' . ++$i;
 
-			$links_script[ $uniqid ] = esc_js( $uniqid ) . 'Target = document.getElementById( "' . esc_js( $html_id ) . '" )';
+			$links_script[ $sl_id ] = esc_js( $sl_id ) . 'Target = document.getElementById( "' . esc_js( $html_id ) . '" )';
 
-			echo Accessibility\Component::link_skip_to( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo Accessibility\Component::link_skip_to( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in the method
 				$html_id,
 				$text,
 				'',
 				'<li>%s</li>',
-				'skip-link-' . $uniqid
+				'skip-link-' . $sl_id
 			);
 		}
 
 		?>
 	</ul>
 
-	<script>
-	document.addEventListener( 'DOMContentLoaded', function() {
-		<?php
+	<?php
 
-		echo
-			"\t"
-			. 'var '
-			. implode( ', ', $links_script ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			. ';'
-			. PHP_EOL;
+		$js = '';
 
-		foreach ( $links_script as $uniqid => $target ) :
-			?>
-			if ( ! <?php echo esc_js( $uniqid ); ?>Target || null === <?php echo esc_js( $uniqid ); ?>Target.offsetParent ) {
-				document.getElementById( '<?php echo esc_js( 'skip-link-' . $uniqid ); ?>' ).style.display = 'none';
-			}
-			<?php
-		endforeach;
+		/**
+		 * Removing (parent) list item containing
+		 * a skip link which target is not found.
+		 */
+		foreach ( $links_script as $sl_id => $target ) {
 
-		?>
-	} );
-	</script>
+			$sl_id = esc_js( $sl_id );
+
+			$js .=
+				"if ( ! {$sl_id}Target || ! {$sl_id}Target.checkVisibility() ) {"
+				. "document.getElementById( 'skip-link-{$sl_id}' ).parentElement.remove();"
+				. "}";
+		}
+
+		$js =
+			"document.addEventListener( 'DOMContentLoaded', function() { "
+			. "const " . implode( ', ', $links_script ) . ";" // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above
+			. $js
+			. "} );";
+
+	?>
+	<script><?php echo sanitize_text_field( Factory::strip( $js ) ); ?></script>
 </nav>

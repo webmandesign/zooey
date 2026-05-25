@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -42,7 +43,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="#0"><?php Block_Pattern::the_text( 'more' ); ?></a></p>
+			<p><a href="#0"><?php Block_Pattern::the_text( 'change' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -60,7 +61,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="#0"><?php Block_Pattern::the_text( 'more' ); ?></a></p>
+			<p><a href="#0"><?php Block_Pattern::the_text( 'change' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -78,7 +79,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="#0"><?php Block_Pattern::the_text( 'more' ); ?></a></p>
+			<p><a href="#0"><?php Block_Pattern::the_text( 'change' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>

@@ -35,7 +35,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <!-- wp:group {"tagName":"article","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"dimensions":{"minHeight":"100%"},"border":{"radius":"0.38rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <article class="wp-block-group" style="border-radius:0.38rem;min-height:100%;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
-
 	<!-- wp:cover {"useFeaturedImage":true,"dimRatio":0,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","isDark":false,"style":{"spacing":{"padding":{"top":"16em","right":"0","bottom":"0","left":"0"}},"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":"0.38rem"}},"className":"has-image-size-large"} -->
 	<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center has-image-size-large" style="border-radius:0.38rem;padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:50vh">
 		<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span>

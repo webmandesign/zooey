@@ -1,7 +1,7 @@
 === Zooey ===
 
 Contributors:      webmandesign
-Tested up to:      6.8
+Tested up to:      7.0
 Requires at least: 6.4
 Requires PHP:      7.0
 License:           GPL-3.0-or-later
@@ -10,7 +10,7 @@ License URI:       https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
 == Description ==
 
-Welcome to Zooey universal block theme. Zooey is customizable barrier-free universal WordPress block theme with full site editing functionality, versatile to fit any purpose. The theme comes with 15 beautifully designed pages, 80+ content patterns, multiple header and footer layouts. Zooey provides accessible, user friendly experience for your website visitors. Content editors love how easy, yet flexible it is to work with. Administrators and developers value its customizability and clean code. Furthermore, you can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://themedemos.webmandesign.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)
+Welcome to Zooey! Zooey is barrier-free universal WordPress website builder for creating modern accessible websites easily and in no time. Flexible enough to fit all your needs. You can either use default block theme mode with full site editing experience, or switch to classic theme mode with the bonus of editing all theme sections visually with block editor! (Demo website: https://wmdemo.eu/zooey/ - Documentation: https://webmandesign.github.io/docs/zooey/)
 
 
 == Frequently Asked Questions ==
@@ -19,7 +19,7 @@ Welcome to Zooey universal block theme. Zooey is customizable barrier-free unive
 For more information about the theme please visit https://www.webmandesign.eu/portfolio/zooey-wordpress-theme/
 
 = Where can I preview demo website? =
-Demo website can be found at https://themedemos.webmandesign.eu/zooey/
+Demo website can be found at https://wmdemo.eu/zooey/
 
 = Where can I find theme documentation? =
 Please visit https://webmandesign.github.io/docs/zooey/

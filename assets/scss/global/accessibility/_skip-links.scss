@@ -2,6 +2,10 @@
 
 .menu-skip-links {
 
+	:focus-visible {
+		@extend %focus_button;
+	}
+
 	ul {
 		position: absolute;
 		inset-inline-start: 0;

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -39,7 +40,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	<!-- wp:site-logo {"width":320,"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|content"}}},"className":"is-logo-footer"} /-->
 
-	<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.2rem"},"typography":{"textTransform":"uppercase","fontSize":"1em","fontStyle":"normal","fontWeight":"700"}}} -->
+	<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.2rem"},"typography":{"textTransform":"uppercase","fontSize":"1em","fontStyle":"normal","fontWeight":"700"}},"ariaLabel":"<?php echo esc_attr_x( 'Footer', 'Navigational menu label.', 'zooey' ); ?>"} -->
 		<!-- wp:navigation-link {"label":"Lorem","url":"#0"} /-->
 		<!-- wp:navigation-link {"label":"Ipsum","url":"#0"} /-->
 		<!-- wp:navigation-link {"label":"Dolor sit","url":"#0"} /-->
@@ -47,7 +48,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- /wp:navigation -->
 
 	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center"><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' &ensp;—&ensp; ' ); ?> &ensp;—&ensp; <a href="#top"><?php esc_html_e( 'To the top &uarr;', 'zooey' ); ?></a></p>
+	<p class="has-text-align-center"><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' &ensp;—&ensp; ' ); ?> &ensp;—&ensp; <a href="#top"><?php esc_html_e( 'To the top', 'zooey' ); ?><span aria-hidden="true" class="is-aria-hidden"> ↑</span></a></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:social-links {"iconColor":"primary","size":"has-huge-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->

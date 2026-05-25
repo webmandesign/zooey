@@ -61,3 +61,24 @@
 %a11y_hover_focus {
 	opacity: 1 !important;
 }
+
+// Inline formats in rich text editor.
+// @see  assets/js/rich-text-format.js
+.rich-text {
+
+	span.screen-reader-text[class] {
+		clip: auto;
+		clip-path: none;
+		position: static !important;
+		line-height: inherit;
+		outline: 2px dotted;
+
+		&:not([data-rich-text-format-boundary]) {
+			opacity: .66;
+		}
+	}
+
+	span.is-aria-hidden {
+		outline: 2px dashed;
+	}
+}

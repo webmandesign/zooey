@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  1.2.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +23,8 @@ class Block implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.5
 	 *
 	 * @return  void
 	 */
@@ -46,7 +47,6 @@ class Block implements Component_Interface {
 				add_filter( 'render_block', __CLASS__ . '::render__empty', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block', __CLASS__ . '::render__gap', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
-				add_filter( 'render_block_core/button', __CLASS__ . '::render__button_background', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/search', __CLASS__ . '::render__search_expand', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/social-links', __CLASS__ . '::render__social_links', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -56,7 +56,7 @@ class Block implements Component_Interface {
 	 * Enqueues block editor assets for block modifications.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.2
+	 * @version  1.2.5
 	 *
 	 * @return  void
 	 */
@@ -89,6 +89,12 @@ class Block implements Component_Interface {
 						'getHeaderImage'          => esc_url_raw( $header_image ),
 					),
 				),
+			) );
+
+			Assets\Factory::script_enqueue( array(
+				'handle' => 'zooey-rich-text-format',
+				'src'    => get_theme_file_uri( 'assets/js/rich-text-format.min.js' ),
+				'deps'   => array( 'react', 'wp-block-editor', 'wp-i18n', 'wp-rich-text' ),
 			) );
 
 	} // /enqueue_editor_mods
@@ -420,39 +426,6 @@ class Block implements Component_Interface {
 			return $block_content;
 
 	} // /render__gap
-
-	/**
-	 * Block output modification: Set button background CSS variable.
-	 *
-	 * This is required for `.has-focus-alt` CSS class.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param  string $block_content  The rendered content. Default null.
-	 * @param  array  $block          The block being rendered.
-	 *
-	 * @return  string
-	 */
-	public static function render__button_background( string $block_content, array $block ): string {
-
-		// Processing
-
-			if ( ! empty( $block['attrs']['style']['color']['background'] ) ) {
-
-				$html = new WP_HTML_Tag_Processor( $block_content );
-
-				$html->next_tag( array( 'class_name' => 'has-background' ) );
-				$html->set_attribute( 'style', '--theme--css--button--color--background:' . esc_attr( $block['attrs']['style']['color']['background'] ) . ';' . (string) $html->get_attribute( 'style' ) );
-
-				$block_content = $html->get_updated_html();
-			}
-
-
-		// Output
-
-			return $block_content;
-
-	} // /render__button_background
 
 	/**
 	 * Block output modification: Search form expand colors.

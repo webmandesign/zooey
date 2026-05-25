@@ -1,5 +1,5 @@
 // core/button
-// @version  1.1.5
+// @version  1.2.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -9,13 +9,11 @@
 	--theme--css--button--color--background: transparent;
 	--theme--css--button--color--text: currentColor;
 	--theme--css--button--color--border: currentColor;
-	--theme--css--button--color--outline: currentColor;
 	--theme--css--button--border: 2px solid;
 
 	// From default button padding.
 	// @see  custom/_button.scss
 	padding: 1.125em 1.5em;
-	outline-color: inherit;
 
 	&:not(.has-text-color),
 	.editor-styles-wrapper.editor-styles-wrapper &[class] {

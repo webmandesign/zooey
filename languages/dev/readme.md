@@ -12,6 +12,8 @@ sudo wp i18n make-pot . languages/zooey.pot --allow-root
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 
+4. IMPORTANT: Replace all `assets/js/variations/(.*)` with `assets/js/block-variations.min.js` in generated POT file.
+
 
 ## JavaScript localization
 

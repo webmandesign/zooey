@@ -1,5 +1,45 @@
 # Zooey Changelog
 
+## 1.2.5, 20260525
+
+### Updated
+- Removing `accessibility-ready` tag temporarily (until the theme passes new requirements)
+- Theme description in `style.css`
+- Improving skip links
+- Updating `themedemos.webmandesign.eu` links
+- Localization
+
+### Fixed
+- Accessibility issues reported at https://themes.trac.wordpress.org/ticket/270223#comment:3
+- Search Query template
+
+### File updates
+	changelog.md
+	readme.txt
+	style.css
+	theme.json
+	assets/js/rich-text-format.js
+	assets/scss/blocks.scss
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/blocks/button.scss
+	assets/scss/blocks/site-title.scss
+	includes/Content/Block.php
+	includes/Content/Block_Pattern.php
+	includes/Customize/Options.php
+	languages/*.*
+	parts/accessibility/menu-skip-links.php
+	patterns/numbers/numbers-05.php
+	patterns/portfolio/portfolio-00.php
+	patterns/services/services-06.php
+	patterns/site/footer-centered.php
+	patterns/site/footer-minimal.php
+	patterns/site/footer.php
+	patterns/site/header-alt.php
+	patterns/site/header.php
+	patterns/site/query-search.php
+
+
 ## 1.2.4, 20260506
 
 ### Added
