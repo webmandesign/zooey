@@ -1,4 +1,5 @@
 /*! FILE: welcome.scss */
+@use 'sass:map';
 @use 'sass:math';
 
 //
@@ -8,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.0.7
+// @version  2.0.1
 //
 
 @import '_tools/_index';
@@ -16,7 +17,7 @@
 
 $theme : zooey;
 
-$svg_shape_main    : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fbce2f" d="m0 96 30 5c30 6 90 16 150 6 60-11 120-43 180-27s120 80 180 96 120-16 180-16 120 32 180 59c60 26 120 48 180 37s120-53 180-69 120-6 150 0l30 5V0H0Z"/></svg>';
+$svg_shape_main    : '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fbce2f" d="m0 96 30 5c30 6 90 16 150 6 60-11 120-43 180-27s120 80 180 96 120-16 180-16 120 32 180 59c60 26 120 48 180 37s120-53 180-69 120-6 150 0l30 5V0H0Z"/></svg>';
 $svg_shape_feature : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560"><path fill="#fbce2f" d="M0 300s66 100 144 100c82 0 97-60 156-60s158 220 256 220 91-179 144-214 100 13 100 13V0H0v300Z"/></svg>';
 
 html {
@@ -33,29 +34,29 @@ html {
 
 		// Typography
 		--welcome_font_size: 16px;
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			--welcome_font_size: 17px;
 		}
-		@include media( map_get( $breakpoint, 'xxl' ) ) {
+		@include media( map.get( $breakpoint, 'xxl' ) ) {
 			--welcome_font_size: 18px;
 		}
 
 		// Spacing
 		--welcome_width: 750px;
-		@include media( map_get( $breakpoint, 'xl' ) ) {
+		@include media( map.get( $breakpoint, 'xl' ) ) {
 			--welcome_width: 1000px;
 		}
 		--welcome_width_content: 600px;
 		--welcome_gap: var(--welcome_font_size);
-		--welcome_padding_medium: 1em;
-		--welcome_padding_large: 1.5em;
-		@include media( map_get( $breakpoint, 'm' ) ) {
-			--welcome_padding_medium: 2em;
-			--welcome_padding_large: 3em;
+		--welcome_padding_medium: 1rem;
+		--welcome_padding_large: 1.5rem;
+		@include media( map.get( $breakpoint, 'm' ) ) {
+			--welcome_padding_medium: 2rem;
+			--welcome_padding_large: 3rem;
 		}
-		@include media( map_get( $breakpoint, 'xxl' ) ) {
-			--welcome_padding_medium: 3em;
-			--welcome_padding_large: 4.5em;
+		@include media( map.get( $breakpoint, 'xxl' ) ) {
+			--welcome_padding_medium: 3rem;
+			--welcome_padding_large: 4.5rem;
 		}
 		--welcome_border_radius: 3px;
 		--welcome_decoration_size: 12em;
@@ -66,9 +67,9 @@ html {
 		--welcome_color_bg_dark: #111;
 		--welcome_color_accent: #fbce2f;
 		--welcome_color_accent_text: #111;
-		--welcome_color_text:    #666;
+		--welcome_color_text:    #222;
 		--welcome_color_heading: #111;
-		--welcome_color_text_alt:    #ccc;
+		--welcome_color_text_alt:    #eee;
 		--welcome_color_heading_alt: #fff;
 	}
 
@@ -77,7 +78,7 @@ html {
 		background-image: url('data:image/svg+xml;utf8,#{ _url_encode( $svg_shape_main ) }');
 		background-repeat: no-repeat;
 		background-position: 50% 0;
-		background-size: 100%;
+		background-size: 100% 360px;
 	}
 
 	.welcome__container {
@@ -87,7 +88,7 @@ html {
 		line-height: $ratio;
 		color: var(--welcome_color_text);
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			margin-inline: var(--welcome_padding_medium);
 		}
 
@@ -144,8 +145,9 @@ html {
 			width: 100%;
 			max-width: none;
 			margin: 0;
+			color: inherit; // This is needed to override WP styles.
 			border: 0;
-			border-block-start: 2px solid;
+			border-block-start: 2px solid color-mix( in srgb, currentColor 50%, transparent );
 
 			&:last-child {
 				margin-block-end: 0;
@@ -171,6 +173,10 @@ html {
 		a {
 			color: var(--welcome_color_heading_alt);
 		}
+
+		.welcome__image::before {
+			filter: invert(1);
+		}
 	}
 
 	%bg_accent {
@@ -184,17 +190,7 @@ html {
 	}
 
 	%bg_shaded {
-		z-index: 1;
-
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background-color: currentColor;
-			border-radius: inherit;
-			opacity: .07;
-			z-index: -1;
-		}
+		background: color-mix( in srgb, currentColor 7%, transparent );
 	}
 
 // Elements:
@@ -214,9 +210,25 @@ html {
 			font-size: 1.25em;
 			color: var(--welcome_color_heading);
 
-			@include media( map_get( $breakpoint, 'xxl' ) ) {
+			@include media( map.get( $breakpoint, 'xxl' ) ) {
 				font-size: 1.5em;
 			}
+		}
+
+		&__link {
+
+			&--changelog {
+				font-size: 13px;
+				font-weight: 400;
+				text-decoration-thickness: 1px;
+				text-underline-offset: .2em;
+			}
+		}
+
+		&__buttons {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1em;
 		}
 
 		&__nav {
@@ -231,14 +243,14 @@ html {
 			}
 
 			a::before {
-				content: '↓ ';
+				content: '↓ ' / '';
 			}
 		}
 
 		&__column {
 			border-radius: var(--welcome_border_radius);
 
-			@include media( map_get( $breakpoint, 'l' ) ) {
+			@include media( map.get( $breakpoint, 'l' ) ) {
 				max-width: calc( 50% - var(--welcome_gap) );
 			}
 		}
@@ -265,8 +277,24 @@ html {
 		}
 
 		&__image {
+			position: relative;
+			isolation: isolate;
 			margin: 0 0 ( $ratio + em );
+			min-height: 4em;
 			border-radius: var(--welcome_border_radius);
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-image:
+					url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTIxNiA0NEg0MGExMiAxMiAwIDAgMC0xMiAxMnYxNDRhMTIgMTIgMCAwIDAgMTIgMTJoNjRhNCA0IDAgMCAwIDMuNzktMi43NEwxMjMuMjEgMTYzbDM4LjI4LTE1LjMxYTQgNCAwIDAgMCAyLjIyLTIuMjJMMTc5IDEwNy4yMWw0Ni4yNC0xNS40MkE0IDQgMCAwIDAgMjI4IDg4VjU2YTEyIDEyIDAgMCAwLTEyLTEybS05Ny40OSAxMTIuMjlhNCA0IDAgMCAwLTIuMyAyLjQ1TDEwMS4xMiAyMDRINDBhNCA0IDAgMCAxLTQtNHYtMjkuNjZsNTMuMTctNTMuMTdhNCA0IDAgMCAxIDUuNjYgMGwzNC43MSAzNC43MVpNMjIwIDg1LjEybC00NS4yNiAxNS4wOWE0IDQgMCAwIDAtMi40NSAyLjNsLTE1LjM3IDM4LjQxbC0xOS4zIDcuNzNsLTM3LjEzLTM3LjE0YTEyIDEyIDAgMCAwLTE3IDBMMzYgMTU5VjU2YTQgNCAwIDAgMSA0LTRoMTc2YTQgNCAwIDAgMSA0IDRabTYuMzQgMzMuMzdhNCA0IDAgMCAwLTMuNi0uNTVsLTIzLjgxIDcuOTNhNCA0IDAgMCAwLTIuNDQgMi4zMWwtMTUgMzcuMzZsLTM3LjM2IDE1YTQgNCAwIDAgMC0yLjMxIDIuNDRsLTcuOTMgMjMuODFhNCA0IDAgMCAwIC41NSAzLjZhNCA0IDAgMCAwIDMuMjQgMS42NkgyMTZhMTIgMTIgMCAwIDAgMTItMTJ2LTc4LjMyYTQgNCAwIDAgMC0xLjY2LTMuMjRNMjIwIDIwMGE0IDQgMCAwIDEtNCA0aC03Mi43Mmw1LjU5LTE2Ljc4bDM3LjIzLTE0Ljg5YTQgNCAwIDAgMCAyLjIzLTIuMjNsMTQuODktMzcuMjNsMTYuNzgtNS41OVoiLz48L3N2Zz4='),
+					url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTE0OC4yNCAxMzkuNzZhNiA2IDAgMCAwLTguNDggMEwxMjAgMTU5LjUxTDk2LjQ5IDEzNmwxOS43NS0xOS43NmE2IDYgMCAwIDAtOC40OC04LjQ4TDg4IDEyNy41MWwtMTkuNzYtMTkuNzVhNiA2IDAgMCAwLTguNDggOC40OGw3Ljc1IDcuNzZsLTI0LjcyIDI0LjczYTMwIDMwIDAgMCAwIDAgNDIuNDJsNi43OCA2Ljc5bC0yOS44MSAyOS44MmE2IDYgMCAxIDAgOC40OCA4LjQ4bDI5LjgyLTI5LjgxbDYuNzkgNi43OGEzMCAzMCAwIDAgMCA0Mi40MiAwTDEzMiAxODguNDlsNy43NiA3Ljc1YTYgNiAwIDAgMCA4LjQ4LTguNDhMMTI4LjQ5IDE2OGwxOS43NS0xOS43NmE2IDYgMCAwIDAgMC04LjQ4bS00OS40NSA2NWExOCAxOCAwIDAgMS0yNS40NiAwbC0yMi4wNi0yMi4wOWExOCAxOCAwIDAgMSAwLTI1LjQ2TDc2IDEzMi40OUwxMjMuNTEgMTgwWm0xMzcuNDUtMTg1YTYgNiAwIDAgMC04LjQ4IDBsLTI5LjgyIDI5LjgxbC02Ljc5LTYuNzhhMzAgMzAgMCAwIDAtNDIuNDIgMEwxMjQgNjcuNTFsLTcuNzYtNy43NWE2IDYgMCAwIDAtOC40OCA4LjQ4bDgwIDgwYTYgNiAwIDAgMCA4LjQ4LTguNDhsLTcuNzUtNy43NmwyNC43Mi0yNC43M2EzMCAzMCAwIDAgMCAwLTQyLjQybC02Ljc4LTYuNzlsMjkuODEtMjkuODJhNiA2IDAgMCAwIDAtOC40OG0tMzEuNTEgNzlMMTgwIDEyMy41MUwxMzIuNDkgNzZsMjQuNzItMjQuNzNhMTggMTggMCAwIDEgMjUuNDYgMGwyMi4wNiAyMi4wNmExOCAxOCAwIDAgMSAwIDI1LjQ2WiIvPjwvc3ZnPg==');
+				background-repeat: no-repeat;
+				background-position: 0 0, 4.5em 1em;
+				background-size: 4em 4em, 2em 2em;
+				z-index: -1;
+			}
 
 			p + & {
 				margin-block-start: $ratio + em;
@@ -432,11 +460,67 @@ html {
 				margin-block-start: 1em;
 				border: 2px solid rgba( #fff, .3 );
 				border-radius: var(--welcome_border_radius);
+
+				.button {
+
+					&,
+					&:active,
+					&:hover,
+					&:focus {
+						color: inherit;
+						border-color: currentColor;
+					}
+				}
 			}
 
 		&--update,
 		&--promo {
 			@extend %bg_accent;
+		}
+
+		&--changelog {
+			@extend %bg_shaded;
+			display: block;
+			border: 1px solid color-mix( in srgb, currentColor 20%, transparent );
+
+			summary {
+				padding: 1em var(--welcome_padding_medium);
+				font-family:
+					ui-monospace,
+					'Cascadia Code',
+					'Source Code Pro',
+					Menlo,
+					Consolas,
+					'DejaVu Sans Mono',
+					monospace;
+				cursor: pointer;
+			}
+
+			h2 {
+				padding: .5em var(--welcome_padding_medium);
+				margin-block: 0;
+				font-size: 1.25em;
+			}
+
+			pre {
+				box-sizing: border-box;
+				width: 100%;
+				padding: var(--welcome_padding_medium);
+				margin: 0;
+				font-size: 14px;
+				line-height: 1.4;
+				white-space: pre-wrap;
+				tab-size: 2;
+				background: #3858e9; // --wp-admin-theme-color
+				color: #fff;
+				border-top: 1px solid color-mix( in srgb, currentColor 20%, transparent );
+				box-shadow: inset 0 .5em 2em #0009;
+				overflow-y: auto;
+			}
+
+				.welcome__changelog--old {
+					max-height: max( 50vh, 20em );
+				}
 		}
 	}
 

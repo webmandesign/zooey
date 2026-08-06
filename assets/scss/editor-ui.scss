@@ -1,5 +1,4 @@
 /*! FILE: editor-ui.scss */
-@use 'sass:math';
 
 //
 // Block editor UI improvements.
@@ -8,7 +7,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.1.4
+// @version  2.0.1
 //
 
 @import '_tools/_index';
@@ -16,11 +15,15 @@
 
 // Navigation editing screen.
 .is-root-container > .wp-block-navigation:only-child {
-	max-width: 960px;
+	max-width: 1000px;
 	margin: 3rem auto;
 
 	.wp-block-navigation__container {
 		justify-content: center;
+	}
+
+	.block-editor-iframe__html:has( & ) {
+		align-items: initial;
 	}
 }
 

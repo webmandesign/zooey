@@ -1,0 +1,15 @@
+//
+// CSS used in PHP files to generate automatic color classes.
+//
+// @see  global/wp/_colors.scss
+// @see  includes/Customize/Colors.php
+//
+// @since  2.0.0
+//
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+$placeholder : '_COLOR_SLUG_';
+
+@include color_classes( $placeholder );

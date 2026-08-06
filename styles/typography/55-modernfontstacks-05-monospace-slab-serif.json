@@ -1,0 +1,42 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+	"title"   : "Monospace Slab Serif (ModernFontStacks.com)",
+
+	"docBlock" : {
+		"@since" : "2.0.0",
+		"@link"  : "https://modernfontstacks.com/"
+	},
+
+	"settings" : {
+		"typography" : {
+			"fontFamilies" : [
+				{
+					"name"       : "Main",
+					"slug"       : "global",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-slab-serif)"
+				},
+				{
+					"name"       : "Heading",
+					"slug"       : "supplemental",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-slab-serif)"
+				},
+				{
+					"name"       : "Alternative",
+					"slug"       : "alternative",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-slab-serif)"
+				},
+				{
+					"name"       : "Monospace",
+					"slug"       : "monospace",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-code)"
+				},
+				{
+					"name"       : "Handwritten",
+					"slug"       : "handwritten",
+					"fontFamily" : "var(--wp--custom--font-family--handwritten)"
+				}
+			]
+		}
+	}
+}

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 // Exit if accessed directly.
@@ -30,6 +31,10 @@ defined( 'ABSPATH' ) || exit;
 	// Dummy ID used for images in patterns.
 	if ( ! defined( 'ZOOEY_DUMMY_ID' ) ) {
 		define( 'ZOOEY_DUMMY_ID', 987654321 );
+	}
+
+	if ( ! defined( 'ZOOEY_EDITOR_STYLE_VERSIONING' ) ) {
+		define( 'ZOOEY_EDITOR_STYLE_VERSIONING', true );
 	}
 
 // Load the functionality.

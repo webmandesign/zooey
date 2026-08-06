@@ -1,5 +1,117 @@
 # Zooey Changelog
 
+## 2.0.5, 20260807
+
+As the code was ported from Ileana 2.0.5, we skip Zooey version number 2.0.0 - 2.0.4 to match versioning with those themes.
+
+This major theme update may cause 2 issues on an existing website:
+	1. Icon images duotone not working correctly.
+	   SOLUTION: Change "Primary"/"Secondary" duotone to "Primary, secondary"/"Secondary, primary".
+	2. Broken image URL (when theme demo images used).
+	   SOLUTION: Update the content to use your custom images. Or switch the block editor to code view and change 
+	   `ileana/assets/images/starter/` to `ileana/assets/images/demo/`.
+	3. Optionally update WooCommerce Cart and Checkout page content for new WooCommerce block content versions.
+	   SOLUTION: Use patterns in "Page" category: simply delete the old page content and add new one.
+
+### Added
+- Icon block support
+- Changelog viewer on Welcome page
+- Compatibility with setting up fonts in classic theme mode (WordPress 7.0)
+- Tag Cloud block font size setup (useful for block styles)
+- CSS `accent-color` style
+- "Inset" box shadow preset to block editor
+- "Decorative" border radius preset to block editor
+- Support for "vmax", "svh", "lvh", and "dvh" units in block editor
+- New block patterns and block styles
+- Mobile header patterns
+- New duotones and gradients (to use in block editor)
+- "Disable sticky position on mobile screens" block style for Group block
+- "Navigation overlay" (WordPress 7.0) template part and pattern
+- Related posts functionality
+- New predefined styles and typography presets (for easier theme styling via Site Editor)
+- Theme option to set various blog layouts
+- Theme option to apply blog layout to archive pages
+- Theme option to set "Decorative" border radius size globally
+- Theme option to toggle theme auto-generated gradients
+- Theme option to toggle block patterns (individually or whole pattern categories)
+- Theme option to set single product layout variation (WooCommerce)
+- View Transitions plugin, and Carousel Slider Block plugin compatibility
+- Block editor rich text inline formats for accessibility
+- Making special product list design available for any custom post loop
+
+### Updated
+- WordPress 7.0 compatibility
+- Loading remote Welcome page features images
+- Improving JavaScript
+- Improving code organization
+- Welcome page content and styles
+- Improving blocks
+- Starter (and demo) content
+- Customizer functionality
+- Improving theme options
+- Disabling WordPress color palette by default
+- Allowing additional colors via child theme
+- Improving Navigation block output and styles
+- Improving KSES and security
+- Improving block patterns
+- Improving auto-generated gradients and duotones from theme color palette
+- Removing `condition` block attribute functionality
+- Improving and fixing CSS styles
+- Improving custom background (Customizer) functionality
+- Using `color-mix` for border color and shaded background color
+- Improving accessibility (visible mobile navigation submenus, color contrast calculation, skip links, `content` CSS values, removing `speak` CSS style)
+- Improving compatibility with PHP8
+- Improving and fixing button styles
+- Removing obsolete code and adding helpful code comments
+- Updating SCSS code
+- Improving performance (using cached data wherever possible)
+- Improving `theme.json/settings.custom` section for setting up various theme CSS variables (styles)
+- Using border radius presets in patterns (instead of hard-coded values)
+- Improving sticky position and page scroll offset
+- Theme upgrade functionality
+- WooCommerce: Updating products list design
+- WooCommerce: Using WooCommerce blocks to display shop layouts
+- WooCommerce: Using Product Collection block where appropriate
+- WooCommerce: Optimizing and adding new Product Collection block variations
+- WooCommerce: Improving and fixing styles
+- Improving accessibility (passing updated WordPress accessibility requirements):
+	- adding `accessibility.txt`,
+	- updating button focus outline (and removing `.has-focus-alt` class),
+	- updating `.screen-reader-text` class styles,
+	- styling `:focus-visible` instead of `:focus`,
+	- adding aria label for outbound links,
+	- removing no-wrap styles from Site Title block,
+	- changing "Read more" text in block patterns for "Change this text",
+	- applying `aria-hidden="true"` on decorative arrow in "To the top" link,
+	- adding `aria-label` to all navigational menus.
+- Theme description text in `style.css`
+- Enabling text indent in `theme.json`
+- Improving WooCommerce options
+- Removing obsolete code
+- Using more suitable localization escaping functions
+- Localization
+
+### Fixed
+- Improved compatibility with child themes and local development
+- Using filter hook instead of action hook in Editor component
+- Google Fonts functionality
+- Scrollbar width CSS variable name
+- Block variations Query block attributes
+- Preventing Navigation block font size stacking issue (https://github.com/WordPress/gutenberg/issues/76416)
+- Allowing styling buttons via Site Editor (to some extent)
+- Patterns preview display
+- Block patterns
+- Button styling priority (button block → global styles → theme options)
+- Decorative quotation mark setup (and localization/translation)
+- Mobile navigation overlay automatic text color
+- WooCommerce: Forcing Mini Cart block badge colors with CSS (as there is an issue with these colors in WooCommerce)
+- Removing link from Cover block featured image when on singular page/post
+- Flushing demo values cache on Customizer update
+
+### File updates
+
+
+
 ## 1.2.5, 20260525
 
 ### Updated

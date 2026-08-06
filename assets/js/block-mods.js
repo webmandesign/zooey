@@ -1,20 +1,21 @@
 /**
  * Block modifications.
  *
- * NOTES:
- * //* = Not sure why, but these ALSO have to be enabled via PHP!
- * @see  WebManDesign\Zooey\Content\Block::block_settings()
- *
- * //** = Need to provide inline styles via `render_block` filter.
- * @see   WebManDesign\Zooey\Content\Block::render__gap()
- * @link  https://github.com/WordPress/gutenberg/issues/53155
- *
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.2
+ * @version  2.0.1
  */
+
+import './mods/settings.js';
+import './mods/styles.js';
+import './mods/elements.js';
+
+
+
+
+
 
 ( () => {
 	'use strict';

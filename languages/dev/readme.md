@@ -3,7 +3,7 @@
 1. Open SSH and set location to the theme folder:
 cd /var/www/wp.develop/wp-content/themes/zooey
 
-2. For creating localization POT file use:
+2. For creating localization POT file use one of these commands:
 wp i18n make-pot . languages/zooey.pot
 sudo wp i18n make-pot . languages/zooey.pot --allow-root
 
@@ -12,7 +12,7 @@ sudo wp i18n make-pot . languages/zooey.pot --allow-root
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 
-4. IMPORTANT: Replace all `assets/js/variations/(.*)` with `assets/js/block-variations.min.js` in generated POT file.
+4. IMPORTANT: Replace all `assets/js/(variations|editor)/(.*)` with `assets/js/block-$1.min.js` in generated POT file.
 
 
 ## JavaScript localization

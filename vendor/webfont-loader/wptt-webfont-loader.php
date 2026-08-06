@@ -1,7 +1,5 @@
 <?php
 /**
- * @link  https://github.com/webmandesign/webfont-loader/tree/fix/prevent-infinite-loop
- *
  * Download webfonts locally.
  *
  * @package wptt/font-loader

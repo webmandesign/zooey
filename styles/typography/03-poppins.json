@@ -1,0 +1,67 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+	"title"   : "Poppins",
+
+	"docBlock" : {
+		"@since" : "2.0.0"
+	},
+
+	"settings" : {
+		"typography" : {
+			"fontFamilies" : [
+				{
+					"name"       : "Main",
+					"slug"       : "global",
+					"fontFamily" : "Poppins, sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Poppins",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300",
+							"src"         : [
+								"file:./assets/fonts/poppins/poppins-light.woff2"
+							]
+						},
+						{
+							"fontFamily"  : "Poppins",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "400",
+							"src"         : [
+								"file:./assets/fonts/poppins/poppins-regular.woff2"
+							]
+						},
+						{
+							"fontFamily"  : "Poppins",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "700",
+							"src"         : [
+								"file:./assets/fonts/poppins/poppins-bold.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Heading",
+					"slug"       : "supplemental",
+					"fontFamily" : "var(--wp--preset--font-family--global)"
+				},
+				{
+					"name"       : "Alternative",
+					"slug"       : "alternative",
+					"fontFamily" : "var(--wp--preset--font-family--global)"
+				},
+				{
+					"name"       : "Monospace",
+					"slug"       : "monospace",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-code)"
+				},
+				{
+					"name"       : "Handwritten",
+					"slug"       : "handwritten",
+					"fontFamily" : "var(--wp--custom--font-family--handwritten)"
+				}
+			]
+		}
+	}
+}

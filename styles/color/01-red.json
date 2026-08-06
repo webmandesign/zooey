@@ -1,0 +1,72 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+	"title"   : "Red",
+
+	"docBlock" : {
+		"@since" : "2.0.0"
+	},
+
+	"settings" : {
+		"color" : {
+			"palette" : [
+
+				{
+					"name"  : "Base (Background)",
+					"slug"  : "base",
+					"color" : "#fffae6"
+				},
+
+				{
+					"name"  : "Contrast (Text)",
+					"slug"  : "contrast",
+					"color" : "#3f3a36"
+				},
+				{
+					"name"  : "Contrast alternative (Headings)",
+					"slug"  : "contrast-alt",
+					"color" : "#0f0a06"
+				},
+
+				{
+					"name"  : "Primary",
+					"slug"  : "primary",
+					"color" : "#632222"
+				},
+				{
+					"name"  : "Secondary",
+					"slug"  : "secondary",
+					"color" : "#892f2f"
+				},
+
+				{
+					"name"  : "Primary mixed",
+					"slug"  : "primary-mixed",
+					"color" : "#ecdfce"
+				},
+				{
+					"name"  : "Secondary mixed",
+					"slug"  : "secondary-mixed",
+					"color" : "#d2aca0"
+				},
+
+				{
+					"name"  : "Base alternative (Background)",
+					"slug"  : "base-alt",
+					"color" : "#efead6"
+				},
+
+				{
+					"name"  : "Black",
+					"slug"  : "black",
+					"color" : "#000000"
+				},
+				{
+					"name"  : "White",
+					"slug"  : "white",
+					"color" : "#ffffff"
+				}
+			]
+		}
+	}
+}

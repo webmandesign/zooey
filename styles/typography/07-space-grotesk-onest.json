@@ -1,0 +1,63 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+	"title"   : "Space Grotesk + Onest",
+
+	"docBlock" : {
+		"@since" : "2.0.0"
+	},
+
+	"settings" : {
+		"typography" : {
+			"fontFamilies" : [
+				{
+					"name"       : "Main",
+					"slug"       : "global",
+					"fontFamily" : "'Onest', sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Onest",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300 400 700",
+							"src"         : [
+								"file:./assets/fonts/onest/onest-variable.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Heading",
+					"slug"       : "supplemental",
+					"fontFamily" : "'Space Grotesk', sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Space Grotesk",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300 400 700",
+							"src"         : [
+								"file:./assets/fonts/space-grotesk/space-grotesk-variable.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Alternative",
+					"slug"       : "alternative",
+					"fontFamily" : "var(--wp--preset--font-family--supplemental)"
+				},
+				{
+					"name"       : "Monospace",
+					"slug"       : "monospace",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-code)"
+				},
+				{
+					"name"       : "Handwritten",
+					"slug"       : "handwritten",
+					"fontFamily" : "var(--wp--custom--font-family--handwritten)"
+				}
+			]
+		}
+	}
+}

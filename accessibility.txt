@@ -1,53 +1,92 @@
 === Accessibility Statement ===
 
-This theme was designed and developed with accessibility best practices in mind, following WCAG 2.2 guidelines.
+This theme was designed and developed with accessibility best practices in mind,
+following WCAG 2.2 guidelines.
 
 
 
 == Quick Information ==
-Accessibility audit completed: Yes
-Most recent audit date: 2024-05-03
+Accessibility audit completed:            Yes
+Most recent audit date:                   2026-05-25
 Tested to standard and conformance level: WCAG 2.2 AA (supports)
-Audited by: webmandesign
+Audited by:                               webmandesign
 
 
 
 == Testing Tools and Methodology ==
 
-Accessibility was a core part of the development workflow for this theme from the initial design phase through final release. We followed WCAG 2.2 AA guidelines to ensure the theme is usable by people with a wide range of abilities and assistive technologies.
+Accessibility was a core part of the development workflow for this theme from
+the initial design phase through final release.
+We followed WCAG 2.2 AA guidelines to ensure the theme is usable by people
+with a wide range of abilities and assistive technologies.
 
 During development, we used a combination of automated and manual testing methods:
 
 - **Automated Tools**:
-	- [axe DevTools browser extension](https://www.deque.com/axe/devtools/extension/)
-	- [WAVE browser extension](https://wave.webaim.org/extension/)
-	- [Chrome browser accessibility audit](https://developer.chrome.com/docs/devtools/accessibility/reference#audits)
-	- [HeadingsMap browser extension](https://www.accessibility-developer-guide.com/setup/helper-tools/browser-extensions/headingsmap/)
-	- [WCAG Color contrast checker](https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf) browser extension
-	- [taba11y browser extension](https://chromewebstore.google.com/detail/taba11y-tab-order-accessi/aocppmckdocdjkphmofnklcjhdidgmga)
-	- [Landmarks browser extension](https://matatk.agrip.org.uk/landmarks/)
+
+	- axe DevTools browser extension
+	  https://www.deque.com/axe/devtools/extension/
+
+	- WAVE browser extension
+	  https://wave.webaim.org/extension/
+
+	- Chrome browser accessibility audit
+	  https://developer.chrome.com/docs/devtools/accessibility/reference#audits
+
+	- HeadingsMap browser extension
+	  https://www.accessibility-developer-guide.com/setup/helper-tools/browser-extensions/headingsmap/
+
+	- WCAG Color contrast checker browser extension
+	  https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf
+
+	- taba11y browser extension
+	  https://chromewebstore.google.com/detail/taba11y-tab-order-accessi/aocppmckdocdjkphmofnklcjhdidgmga
+
+	- Landmarks browser extension
+	  https://matatk.agrip.org.uk/landmarks/
 
 - **Manual Testing Techniques**:
-	- [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/?n=base&n=contrast&n=contrast%20alt&n=primary&n=secondary&v=f7fff7&v=474f47&v=171f17&v=5f1a37&v=ff6b6b)
-	- Keyboard-only navigation testing to ensure all interactive elements are focusable and operable
-	- Testing responsive behaviors to ensure accessibility is preserved on mobile and tablet devices
-	- Screen reader testing with [NVDA](https://www.nvaccess.org/download/) (Windows) to verify meaningful announcements, focus order, and labeling
 
-All components, block patterns and templates were tested for accessibility as they were developed. Additionally, we performed a full accessibility audit prior to release. The audit was conducted internally.
+	- Accessible color palette builder
+	  https://toolness.github.io/accessible-color-matrix/
 
-All theme updates go through subsequent (partial) testing to ensure accessibility is preserved. Any [reported issues](https://support.webmandesign.eu/forums/forum/zooey/) from users are logged and reviewed as part of our regular release process.
-Accessibility improvements are incorporated into theme updates.
+	- Keyboard-only navigation testing of all interactive elements
 
-This proactive and ongoing approach helps ensure the theme remains compliant and usable for all site visitors.
+	- Testing responsiveness to ensure accessibility is preserved on all devices
 
-Additionally, the theme provides an online [demo website](https://wmdemo.eu/zooey/) which can be used to conduct your own [accessibility testing](https://support.webmandesign.eu/accessibility/).
-Although, please keep in mind this is _just_ a demo website with demo content, such as placeholder text (["Lorem ipsum"](https://en.wikipedia.org/wiki/Lorem_ipsum)), blind links pointing nowhere, repeating image alt text. All of these are part of website content and should be [properly set on any live website](https://webmandesign.github.io/docs/zooey/index.html#accessibility).
+	- Screen reader testing with NVDA (Windows) to verify meaningful announcements,
+	  focus order, and labeling (https://www.nvaccess.org/download/)
+
+All components, block patterns and templates were tested for accessibility
+as they were developed. Additionally, we performed a full accessibility audit
+prior to release. The audit was conducted internally.
+
+All theme updates go through subsequent (partial) testing to ensure accessibility
+is preserved. Any reported issues from users are logged and reviewed as part
+of our regular release process. Accessibility improvements are incorporated
+into theme updates.
+
+This proactive and ongoing approach helps ensure the theme remains compliant
+and usable for all site visitors.
+
+Additionally, the theme provides an online demo website which can be used
+to conduct your own accessibility testing.
+Although, please keep in mind this is _just a demo_ website with demo content,
+such as placeholder text, blind links pointing nowhere, or repeating image
+alt text. All of these are part of website content and should be properly set
+on any live website.
+
+Theme demo website:        https://wmdemo.eu/zooey/
+Accessibility testing:     https://support.webmandesign.eu/accessibility/
+Accessibility information: https://webmandesign.github.io/docs/zooey/#accessibility
 
 
 
 == Screen Reader Text Class ==
 
-The theme provides CSS classes to hide text visually, but to keep it accessible for assistive technology. This is useful for providing visually hidden headings for various sections, for example.
+The theme provides CSS classes to hide text visually, but to keep it accessible
+for assistive technology. This is useful for providing visually hidden headings
+for various sections, for example.
 
 Provided screen reader text CSS classes:
 
@@ -58,13 +97,26 @@ Provided screen reader text CSS classes:
 
 == Accessibility Features ==
 
-In addition to meeting [accessibility-ready requirements](https://make.wordpress.org/themes/handbook/review/accessibility/), the theme provides:
+In addition to meeting accessibility-ready requirements, the theme provides:
 
 - Design focused on readability with max line width set to around 70 characters.
-- After [setting up your color palette](https://webmandesign.github.io/docs/zooey/index.html#site-editor-styles-colors), the theme automatically (re)calculates proper contrasting text colors and applies them whenever the specific palette color is used as a block background.
+- After setting up your color palette, the theme automatically (re)calculates
+  proper contrasting text colors and applies them whenever the specific palette
+  color is used as a block background.
 - Additional skip links (to main navigation, to footer).
-- _"Accessibly hidden"_ block style helpful when hiding **Heading** block visually, but keeping it accessible for assistive technology.
-- Optional (switchable) [accessible position of mobile menu toggle button](https://webmandesign.github.io/docs/zooey/index.html#mobile-nav).
+- _"Accessibly hidden"_ block style helpful when hiding **Heading** block visually,
+  but keeping it accessible for assistive technology.
+- Extending block editor rich text inline formats with:
+	- _"Accessibly hidden"_ format, which wraps selected text in `<span>` tag
+	  with `.screen-reader-text` CSS class applied,
+	- _"Hidden for assistive technology"_ format, which wraps selected text in
+	  `<span>` tag with `aria-hidden="true"` attribute set and `.is-aria-hidden`
+	  CSS class applied.
+- Optional (switchable) accessible position of mobile menu toggle button.
+
+Resources:
+Accessibility-ready requirements: https://make.wordpress.org/themes/handbook/review/accessibility/
+Theme documentation:              https://webmandesign.github.io/docs/zooey/
 
 
 
@@ -72,11 +124,12 @@ In addition to meeting [accessibility-ready requirements](https://make.wordpress
 
 Accessibility support information:
 
+- https://webmandesign.github.io/docs/zooey/#accessibility
 - https://support.webmandesign.eu/forums/forum/zooey/
-- https://webmandesign.github.io/docs/zooey/index.html#accessibility
 
 
 
 == Where to Report Issues ==
 
-Please report accessibility issues on our [Support Forum](https://support.webmandesign.eu/forums/forum/zooey/).
+Please report accessibility issues on our Support Forum:
+https://support.webmandesign.eu/forums/forum/zooey/

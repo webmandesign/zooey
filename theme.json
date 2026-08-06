@@ -3,8 +3,10 @@
 	"version" : 2,
 
 	"docBlock" : {
+		"//":"When you see this, it is a custom comment.",
+
 		"@since"   : "1.0.0",
-		"@version" : "1.2.5"
+		"@version" : "2.0.4"
 	},
 
 	"settings" : {
@@ -17,55 +19,61 @@
 		"color" : {
 			"link" : true,
 			"palette" : [
+
 				{
-					"name"  : "Base",
+					"name"  : "Base (Background)",
 					"slug"  : "base",
-					"color" : "var(--theme--mod--color_base)"
+					"color" : "var(--theme-mod)"
 				},
+
 				{
-					"name"  : "Base alternative",
-					"slug"  : "base-alt",
-					"color" : "var(--theme--mod--color_base_alt)"
-				},
-				{
-					"name"  : "Contrast",
+					"name"  : "Contrast (Text)",
 					"slug"  : "contrast",
-					"color" : "var(--theme--mod--color_contrast)"
+					"color" : "var(--theme-mod)"
 				},
 				{
-					"name"  : "Contrast alternative",
+					"name"  : "Contrast alternative (Headings)",
 					"slug"  : "contrast-alt",
-					"color" : "var(--theme--mod--color_contrast_alt)"
+					"color" : "var(--theme-mod)"
 				},
+
 				{
 					"name"  : "Primary",
 					"slug"  : "primary",
-					"color" : "var(--theme--mod--color_primary)"
-				},
-				{
-					"name"  : "Primary mixed",
-					"slug"  : "primary-mixed",
-					"color" : "var(--theme--mod--color_primary_mixed)"
+					"color" : "var(--theme-mod)"
 				},
 				{
 					"name"  : "Secondary",
 					"slug"  : "secondary",
-					"color" : "var(--theme--mod--color_secondary)"
+					"color" : "var(--theme-mod)"
+				},
+
+				{
+					"name"  : "Primary mixed",
+					"slug"  : "primary-mixed",
+					"color" : "var(--theme-mod)"
 				},
 				{
 					"name"  : "Secondary mixed",
 					"slug"  : "secondary-mixed",
-					"color" : "var(--theme--mod--color_secondary_mixed)"
+					"color" : "var(--theme-mod)"
 				},
+
+				{
+					"name"  : "Base alternative (Background)",
+					"slug"  : "base-alt",
+					"color" : "var(--theme-mod)"
+				},
+
 				{
 					"name"  : "Black",
 					"slug"  : "black",
-					"color" : "var(--theme--mod--color_black)"
+					"color" : "var(--theme-mod)"
 				},
 				{
 					"name"  : "White",
 					"slug"  : "white",
-					"color" : "var(--theme--mod--color_white)"
+					"color" : "var(--theme-mod)"
 				}
 			],
 			"gradients" : [
@@ -82,260 +90,6 @@
 				},
 
 				{
-					"name"     : "Primary cut to transparent, horizontally",
-					"slug"     : "primary-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to primary, horizontally",
-					"slug"     : "transparent-cut-primary-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Primary mixed cut to transparent, horizontally",
-					"slug"     : "primary-mixed-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to primary mixed, horizontally",
-					"slug"     : "transparent-cut-primary-mixed-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Primary cut to transparent, vertically",
-					"slug"     : "primary-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to primary, vertically",
-					"slug"     : "transparent-cut-primary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Primary mixed cut to transparent, vertically",
-					"slug"     : "primary-mixed-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to primary mixed, vertically",
-					"slug"     : "transparent-cut-primary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Secondary cut to transparent, horizontally",
-					"slug"     : "secondary-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to secondary, horizontally",
-					"slug"     : "transparent-cut-secondary-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Secondary mixed cut to transparent, horizontally",
-					"slug"     : "secondary-mixed-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to secondary mixed, horizontally",
-					"slug"     : "transparent-cut-secondary-mixed-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Secondary cut to transparent, vertically",
-					"slug"     : "secondary-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to secondary, vertically",
-					"slug"     : "transparent-cut-secondary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Secondary mixed cut to transparent, vertically",
-					"slug"     : "secondary-mixed-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to secondary mixed, vertically",
-					"slug"     : "transparent-cut-secondary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Base cut to transparent, horizontally",
-					"slug"     : "base-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to base, horizontally",
-					"slug"     : "transparent-cut-base-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Base cut to transparent, vertically",
-					"slug"     : "base-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to base, vertically",
-					"slug"     : "transparent-cut-base-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Base alternative cut to transparent, horizontally",
-					"slug"     : "base-alt-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to base alternative, horizontally",
-					"slug"     : "transparent-cut-base-alt-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Base alternative cut to transparent, vertically",
-					"slug"     : "base-alt-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to base alternative, vertically",
-					"slug"     : "transparent-cut-base-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Contrast cut to transparent, horizontally",
-					"slug"     : "contrast-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to contrast, horizontally",
-					"slug"     : "transparent-cut-contrast-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Contrast cut to transparent, vertically",
-					"slug"     : "contrast-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to contrast, vertically",
-					"slug"     : "transparent-cut-contrast-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Contrast alternative cut to transparent, horizontally",
-					"slug"     : "contrast-alt-cut-transparent-h",
-					"gradient" : "linear-gradient( to right, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to contrast alternative, horizontally",
-					"slug"     : "transparent-cut-contrast-alt-h",
-					"gradient" : "linear-gradient( to left, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Contrast alternative cut to transparent, vertically",
-					"slug"     : "contrast-alt-cut-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-				{
-					"name"     : "Transparent cut to contrast alternative, vertically",
-					"slug"     : "transparent-cut-contrast-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )"
-				},
-
-				{
-					"name"     : "Base to transparent, vertically",
-					"slug"     : "base-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to base, vertically",
-					"slug"     : "transparent-to-base-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "Base alternative to transparent, vertically",
-					"slug"     : "base-alt-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to base alternative, vertically",
-					"slug"     : "transparent-to-base-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--base-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "Contrast to transparent, vertically",
-					"slug"     : "contrast-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to contrast, vertically",
-					"slug"     : "transparent-to-contrast-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "Contrast alternative to transparent, vertically",
-					"slug"     : "contrast-alt-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to contrast alternative, vertically",
-					"slug"     : "transparent-to-contrast-alt-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--contrast-alt) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "Primary to transparent, vertically",
-					"slug"     : "primary-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to primary, vertically",
-					"slug"     : "transparent-to-primary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Primary mixed to transparent, vertically",
-					"slug"     : "primary-mixed-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to primary mixed, vertically",
-					"slug"     : "transparent-to-primary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--primary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "Secondary to transparent, vertically",
-					"slug"     : "secondary-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to secondary, vertically",
-					"slug"     : "transparent-to-secondary-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Secondary mixed to transparent, vertically",
-					"slug"     : "secondary-mixed-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to secondary mixed, vertically",
-					"slug"     : "transparent-to-secondary-mixed-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--secondary-mixed) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
 					"name"     : "For backdrop blur, dark",
 					"slug"     : "backdrop-blur-dark",
 					"gradient" : "linear-gradient( rgba(17,17,17,var(--wp--custom--opacity--semitransparent)), rgba(17,17,17,var(--wp--custom--opacity--semitransparent)) )"
@@ -344,36 +98,61 @@
 					"name"     : "For backdrop blur, light",
 					"slug"     : "backdrop-blur-light",
 					"gradient" : "linear-gradient( rgba(238,238,238,var(--wp--custom--opacity--semitransparent)), rgba(238,238,238,var(--wp--custom--opacity--semitransparent)) )"
-				},
-				{
-					"name"     : "For backdrop blur, primary",
-					"slug"     : "backdrop-blur-primary",
-					"gradient" : "linear-gradient( var(--wp--preset--color--primary-semitransparent), var(--wp--preset--color--primary-semitransparent) )"
-				},
-
-				{
-					"name"     : "Black to transparent, vertically",
-					"slug"     : "black-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--black) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to black, vertically",
-					"slug"     : "transparent-to-black-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--black) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-
-				{
-					"name"     : "White to transparent, vertically",
-					"slug"     : "white-to-transparent-v",
-					"gradient" : "linear-gradient( to bottom, var(--wp--preset--color--white) var(--theme--css--gradient-stop--soft), transparent 100% )"
-				},
-				{
-					"name"     : "Transparent to white, vertically",
-					"slug"     : "transparent-to-white-v",
-					"gradient" : "linear-gradient( to top, var(--wp--preset--color--white) var(--theme--css--gradient-stop--soft), transparent 100% )"
 				}
 			],
 			"duotone" : [
+
+				{
+					"name"   : "Base",
+					"slug"   : "base",
+					"colors" : [
+						"base",
+						"contrast-alt"
+					]
+				},
+				{
+					"name"   : "Contrast",
+					"slug"   : "contrast-alt",
+					"colors" : [
+						"contrast-alt",
+						"base"
+					]
+				},
+
+				{
+					"name"   : "Primary",
+					"slug"   : "primary",
+					"colors" : [
+						"primary",
+						"?"
+					]
+				},
+				{
+					"name"   : "Secondary",
+					"slug"   : "secondary",
+					"colors" : [
+						"secondary",
+						"?"
+					]
+				},
+
+				{
+					"name"   : "Primary, secondary",
+					"slug"   : "primary-secondary",
+					"colors" : [
+						"primary",
+						"secondary"
+					]
+				},
+				{
+					"name"   : "Secondary, primary",
+					"slug"   : "secondary-primary",
+					"colors" : [
+						"secondary",
+						"primary"
+					]
+				},
+
 				{
 					"name"   : "Black",
 					"slug"   : "black",
@@ -397,97 +176,6 @@
 						"#2a2a2a",
 						"#eeeeee"
 					]
-				},
-
-				{
-					"name"   : "Primary",
-					"slug"   : "primary",
-					"colors" : [
-						"#000010",
-						"#eeeeee"
-					]
-				},
-				{
-					"name"   : "Secondary",
-					"slug"   : "secondary",
-					"colors" : [
-						"#000020",
-						"#eeeeee"
-					]
-				},
-
-				{
-					"name"   : "Primary, secondary",
-					"slug"   : "primary-secondary",
-					"colors" : [
-						"#000010",
-						"#000020"
-					]
-				},
-				{
-					"name"   : "Secondary, primary",
-					"slug"   : "secondary-primary",
-					"colors" : [
-						"#000020",
-						"#000010"
-					]
-				},
-
-				{
-					"name"   : "Red",
-					"slug"   : "red",
-					"colors" : [
-						"#fd1a2c",
-						"#ffe3e5"
-					]
-				},
-				{
-					"name"   : "Brown",
-					"slug"   : "brown",
-					"colors" : [
-						"#771c08",
-						"#fad5cf"
-					]
-				},
-				{
-					"name"   : "Yellow",
-					"slug"   : "yellow",
-					"colors" : [
-						"#b78c00",
-						"#fffcf4"
-					]
-				},
-				{
-					"name"   : "Green",
-					"slug"   : "green",
-					"colors" : [
-						"#196a50",
-						"#eafaf5"
-					]
-				},
-				{
-					"name"   : "Blue",
-					"slug"   : "blue",
-					"colors" : [
-						"#5544ff",
-						"#e4e1ff"
-					]
-				},
-				{
-					"name"   : "Purple",
-					"slug"   : "purple",
-					"colors" : [
-						"#8923cc",
-						"#f9e1fa"
-					]
-				},
-				{
-					"name"   : "Punchy",
-					"slug"   : "punchy",
-					"colors" : [
-						"#00007e",
-						"#6aff7e"
-					]
 				}
 			]
 		},
@@ -508,6 +196,11 @@
 					"name"   : "Large",
 					"slug"   : "l",
 					"shadow" : "0 .5em 2em rgba(0,0,0,.2)"
+				},
+				{
+					"name"   : "Inset",
+					"slug"   : "inset-m",
+					"shadow" : "inset 0 .25em 1em rgba(0,0,0,.2)"
 				}
 			]
 		},
@@ -515,7 +208,29 @@
 			"width"  : true,
 			"style"  : true,
 			"color"  : true,
-			"radius" : true
+			"radius" : true,
+			"radiusSizes" : [
+				{
+					"name" : "Small",
+					"slug" : "s",
+					"size" : "var(--wp--custom--border-radius--s)"
+				},
+				{
+					"name" : "Medium",
+					"slug" : "m",
+					"size" : "var(--wp--custom--border-radius--m)"
+				},
+				{
+					"name" : "Large",
+					"slug" : "l",
+					"size" : "var(--wp--custom--border-radius--l)"
+				},
+				{
+					"name" : "X Large",
+					"slug" : "xl",
+					"size" : "var(--wp--custom--border-radius--xl)"
+				}
+			]
 		},
 		"spacing" : {
 			"blockGap" : true,
@@ -566,7 +281,10 @@
 				"vh",
 				"vw",
 				"vmin",
-				"vmax"
+				"vmax",
+				"svh",
+				"lvh",
+				"dvh"
 			],
 			"defaultSpacingSizes" : false
 		},
@@ -600,8 +318,11 @@
 			]
 		},
 		"typography" : {
-			"lineHeight"   : true,
-			"writingMode"  : true,
+			"defaultFontSizes" : false,
+			"lineHeight"       : true,
+			"textColumns"      : true,
+			"textIndent"       : true,
+			"writingMode"      : true,
 			"fontFamilies" : [
 				{
 					"name"       : "Main",
@@ -621,7 +342,12 @@
 				{
 					"name"       : "Monospace",
 					"slug"       : "monospace",
-					"fontFamily" : "ui-monospace, monospace"
+					"fontFamily" : "var(--wp--custom--font-family--monospace-code)"
+				},
+				{
+					"name"       : "Handwritten",
+					"slug"       : "handwritten",
+					"fontFamily" : "var(--wp--custom--font-family--handwritten)"
 				},
 				{
 					"name"       : "Ubuntu Sans",
@@ -632,7 +358,7 @@
 							"fontFamily"  : "Ubuntu Sans",
 							"fontStretch" : "normal",
 							"fontStyle"   : "normal",
-							"fontWeight"  : "300 400 700",
+							"fontWeight"  : "300 700",
 							"src"         : [
 								"file:./assets/fonts/ubuntu-sans/ubuntu-sans-variable.woff2"
 							]
@@ -675,22 +401,22 @@
 				{
 					"name" : "Large",
 					"slug" : "l",
-					"size" : "calc( 1em * var(--theme--css--modular-scale) )"
+					"size" : "calc( pow( var(--theme--mod--typography_modular_scale), 1 ) * 1em )"
 				},
 				{
 					"name" : "X Large",
 					"slug" : "xl",
-					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_2) )"
+					"size" : "calc( pow( var(--theme--mod--typography_modular_scale), 2 ) * 1em )"
 				},
 				{
 					"name" : "2X Large",
 					"slug" : "xxl",
-					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_3) )"
+					"size" : "calc( pow( var(--theme--mod--typography_modular_scale), 3 ) * 1em )"
 				},
 				{
 					"name" : "3X Large",
 					"slug" : "xxxl",
-					"size" : "calc( 1em * var(--theme--css--modular-scale--pow_4) )"
+					"size" : "calc( pow( var(--theme--mod--typography_modular_scale), 4 ) * 1em )"
 				},
 
 				{
@@ -729,14 +455,22 @@
 					"slug" : "h-4",
 					"size" : "var(--theme--css--font-size-h4)"
 				}
-			],
-			"defaultFontSizes" : false
+			]
 		},
 		"custom" : {
+			"accent-color" : "var(--wp--preset--color--primary)",
+			"border-color" : {
+				"//":"@todo  Test this.",
+				"global" : "color-mix( in srgb, currentColor calc( 100% * var(--wp--custom--opacity--border) ), transparent )",
+
+				"button" : "transparent",
+				"hr"     : "var(--wp--custom--border-color--global)"
+			},
 			"border-radius" : {
-				"s" : ".38rem",
-				"m" : "1rem",
-				"l" : "1.62rem",
+				"s"  : ".382rem",
+				"m"  : "1rem",
+				"l"  : "1.618rem",
+				"xl" : "2rem",
 
 				"global" : "var(--wp--custom--border-radius--s)",
 
@@ -748,22 +482,47 @@
 				"image"      : "var(--wp--custom--border-radius--global)",
 				"sub-menu"   : "var(--wp--custom--border-radius--global)"
 			},
+			"border-width" : {
+				"//":"@todo  Test this.",
+				"global" : "2px",
+
+				"dropcap"        : "1px",
+				"fieldset"       : "1px",
+				"hr"             : "var(--wp--custom--border-width--global)",
+				"item-separator" : "1px",
+				"table"          : "1px"
+			},
 			"button" : {
-				"border-radius"  : "var(--wp--custom--border-radius--button)",
-				"font-family"    : "var(--wp--preset--font-family--global)",
-				"font-size"      : "var(--wp--preset--font-size--s)",
-				"letter-spacing" : "var(--wp--custom--letter-spacing--button)"
+				"border" : {
+					"color"         : "var(--wp--custom--border-color--button)",
+					"radius"        : "var(--wp--custom--border-radius--button)",
+					"style"         : "solid",
+					"width"         : "var(--wp--custom--border-width--global)",
+					"width-outline" : "var(--wp--custom--border-width--global)"
+				},
+				"shadow" : {
+					"default" : "var(--wp--preset--shadow--s)",
+					"hover"   : "var(--wp--preset--shadow--m)",
+					"focus"   : "var(--wp--preset--shadow--m)",
+					"active"  : "none"
+				},
+				"transition" : {
+					"delay"           : "0s",
+					"duration"        : ".1s, .1s, .1s, .4s, .1s, .1s, .1s",
+					"property"        : "transform, background-color, background-image, background-size, color, border, box-shadow",
+					"timing-function" : "linear"
+				}
 			},
 			"details" : {
 				"border" : {
 					"color"  : "currentColor",
 					"radius" : "var(--wp--custom--border-radius--details)",
 					"style"  : "solid",
-					"width"  : "2px"
+					"width"  : "var(--wp--custom--border-width--global)"
 				},
 				"color"   : {
 					"background" : "transparent",
-					"text"       : "currentColor"
+					"text"       : "inherit"
 				},
 				"gap"     : "var(--wp--preset--spacing--s)",
 				"padding" : {
@@ -771,6 +530,19 @@
 					"right"  : "var(--wp--preset--spacing--m)",
 					"bottom" : "var(--wp--preset--spacing--s)",
 					"left"   : "var(--wp--preset--spacing--m)"
+				},
+				"summary" : {
+					"decoration" : {
+						"opacity" : 1
+					},
+					"focus-visible" : {
+						"outline" : {
+							"style" : "none"
+						},
+						"border" : {
+							"bottom" : "var(--wp--custom--border-width--global) solid"
+						}
+					}
 				}
 			},
 			"filter" : {
@@ -781,12 +553,37 @@
 					"video"        : "1rem"
 				}
 			},
-			"mark" : {
-				"border-radius" : ".38rem",
-				"color"         : "currentColor",
-				"opacity"       : "20%",
-				"padding"       : "0 .1em",
-				"padding-bg"    : ".1em .25em"
+			"font-family" : {
+				"geometric-humanist"   : "Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif",
+				"handwritten"          : "'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive",
+				"industrial"           : "Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif",
+				"monospace-code"       : "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+				"monospace-slab-serif" : "'Nimbus Mono PS', 'Courier New', monospace",
+				"slab-serif"           : "Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif",
+				"system-ui"            : "system-ui, sans-serif",
+				"transitional"         : "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif"
+			},
+			"font-size" : {
+				"//":"@todo  Test this.",
+				"navigation" : {
+					"mobile" : {
+						"top-level" : "var(--wp--preset--font-size--h-3)"
+					}
+				}
+			},
+			"hr" : {
+				"//":"@todo  Test this.",
+				"border-width" : "var(--wp--custom--border-width--hr)",
+				"dashed" : {
+					"color" : "var(--wp--custom--border-color--hr)"
+				},
+				"dotted" : {
+					"color" : "var(--wp--custom--border-color--hr)"
+				},
+				"shape" : {
+					"width"  : "48px",
+					"height" : "48px"
+				}
 			},
 			"letter-spacing" : {
 				"global" : "0",
@@ -798,17 +595,32 @@
 				"meta"    : "var(--wp--custom--letter-spacing--global)",
 				"plugin"  : "var(--wp--custom--letter-spacing--global)"
 			},
+			"mark" : {
+				"border-radius" : ".38rem",
+				"color"         : "currentColor",
+				"opacity"       : "20%",
+				"padding"       : "0 .1em",
+				"padding-bg"    : ".1em .25em"
+			},
+			"navigation" : {
+				"//":"@todo  Test this.",
+				"mobile" : {
+					"menu-gap" : "1rem"
+				},
+				"submenu" : {
+					"padding" : {
+						"item" : ".5rem"
+					},
+					"separator" : {
+						"style" : "none"
+					}
+				}
+			},
 			"opacity" : {
 				"border"             : ".6",
 				"pseudo-bg"          : ".05",
 				"semitransparent"    : ".5",
 				"navigation-overlay" : ".9"
-			},
-			"outline" : {
-				"color"  : "currentColor",
-				"offset" : "3px",
-				"style"  : "dashed",
-				"width"  : "2px"
 			},
 			"pull" : {
 				"s" : "calc( -.5 * var(--wp--preset--spacing--content) )",
@@ -816,10 +628,16 @@
 				"l" : "calc( -1 * var(--wp--preset--spacing--content) )"
 			},
 			"quote" : {
-				"cite-before" : "'— '",
+				"//":"@todo  Test this.",
+				"cite-before" : "'— ' / ''",
+				"color" : {
+					"text" : "var(--wp--preset--color--contrast-alt)"
+				},
 				"decoration"  : {
-					"font-family" : "Georgia, serif",
-					"font-size"   : "3em"
+					"content"     : "var(--theme--css--quote-decoration-content) / ''",
+					"font-family" : "var(--wp--custom--font-family--monospace-code)",
+					"font-size"   : "3em",
+					"opacity"     : "1"
 				},
 				"font-family" : "var(--wp--preset--font-family--alternative)",
 				"font-size"   : "var(--wp--preset--font-size--l)",
@@ -854,8 +672,9 @@
 					}
 				}
 			},
-			"toggle" : {
-				"content-space" : "1"
+			"text-wrap" : {
+				"heading"   : "balance",
+				"paragraph" : "pretty"
 			},
 			"underline" : {
 				"thickness" : "1px",
@@ -863,6 +682,9 @@
 					"default" : ".25em",
 					"heading" : ".15em"
 				}
+			},
+			"option-toggle" : {
+				"content-space" : "1"
 			}
 		}
 	},
@@ -873,7 +695,7 @@
 			"text"       : "var(--wp--preset--color--contrast)"
 		},
 		"border" : {
-			"color" : "var(--wp--preset--color--contrast--border)"
+			"color" : "var(--wp--custom--border-color--global)"
 		},
 		"spacing" : {
 			"blockGap" : "1.62rem",
@@ -925,48 +747,48 @@
 					"textTransform" : "lowercase"
 				}
 			},
-			"h1" : {
-				"typography" : {
-					"fontSize"   : "var(--theme--css--font-size-h1)",
-					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_4) / var(--theme--css--desktop-multiply,1) )"
-				}
-			},
-			"h2" : {
-				"typography" : {
-					"fontSize"   : "var(--theme--css--font-size-h2)",
-					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_3) / var(--theme--css--desktop-multiply,1) )"
-				}
-			},
-			"h3" : {
-				"typography" : {
-					"fontSize"   : "var(--theme--css--font-size-h3)",
-					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale--pow_2) / var(--theme--css--desktop-multiply,1) )"
-				}
-			},
-			"h4" : {
-				"typography" : {
-					"fontSize"   : "var(--theme--css--font-size-h4)",
-					"lineHeight" : "calc( 1 + .382 / var(--theme--css--modular-scale) / var(--theme--css--desktop-multiply,1) )"
-				}
-			},
-			"h5" : {
-				"typography" : {
-					"fontSize"      : "var(--theme--css--font-size-h5)",
-					"fontWeight"    : "400",
-					"lineHeight"    : "1.382",
-					"textTransform" : "uppercase",
-					"letterSpacing" : "var(--wp--custom--letter-spacing--heading)"
-				}
-			},
-			"h6" : {
-				"typography" : {
-					"fontSize"      : "var(--theme--css--font-size-h6)",
-					"fontWeight"    : "400",
-					"lineHeight"    : "1.382",
-					"textTransform" : "uppercase",
-					"letterSpacing" : "var(--wp--custom--letter-spacing--heading)"
-				}
-			},
+				"h1" : {
+					"typography" : {
+						"fontSize"   : "var(--theme--css--font-size-h1)",
+						"lineHeight" : "calc( 1 + .382 / pow( var(--theme--mod--typography_modular_scale), 4 ) / var(--theme--css--desktop-multiply, 1) )"
+					}
+				},
+				"h2" : {
+					"typography" : {
+						"fontSize"   : "var(--theme--css--font-size-h2)",
+						"lineHeight" : "calc( 1 + .382 / pow( var(--theme--mod--typography_modular_scale), 3 ) / var(--theme--css--desktop-multiply, 1) )"
+					}
+				},
+				"h3" : {
+					"typography" : {
+						"fontSize"   : "var(--theme--css--font-size-h3)",
+						"lineHeight" : "calc( 1 + .382 / pow( var(--theme--mod--typography_modular_scale), 2 ) / var(--theme--css--desktop-multiply, 1) )"
+					}
+				},
+				"h4" : {
+					"typography" : {
+						"fontSize"   : "var(--theme--css--font-size-h4)",
+						"lineHeight" : "calc( 1 + .382 / pow( var(--theme--mod--typography_modular_scale), 1 ) / var(--theme--css--desktop-multiply, 1) )"
+					}
+				},
+				"h5" : {
+					"typography" : {
+						"fontSize"      : "var(--theme--css--font-size-h5)",
+						"fontWeight"    : "400",
+						"lineHeight"    : "1.382",
+						"textTransform" : "uppercase",
+						"letterSpacing" : "var(--wp--custom--letter-spacing--heading)"
+					}
+				},
+				"h6" : {
+					"typography" : {
+						"fontSize"      : "var(--theme--css--font-size-h6)",
+						"fontWeight"    : "400",
+						"lineHeight"    : "1.382",
+						"textTransform" : "uppercase",
+						"letterSpacing" : "var(--wp--custom--letter-spacing--heading)"
+					}
+				},
 
 			"cite" : {
 				"spacing" : {
@@ -982,9 +804,87 @@
 					"textTransform" : "uppercase",
 					"letterSpacing" : "var(--wp--custom--letter-spacing--label)"
 				}
+			},
+
+			"button" : {
+				"//":"@todo  Adapt this to the theme original styling!",
+				"//":"v2.0.1: Well, after thorough thinking and some experiments with different approaches (such as setting up button styles via Button block settings), it's better to keep the WordPress way: global button styles are separated from Button block styles. It's future proof and avoids confusion - actually, it leaves responsibility for confusion on WordPress, and we are not adding another layer of confusion here. But we also set global button selectors on Button block, so it is possible to style buttons globally there if needed (@see Content/Block_Mods::settings()->core/button) as Button block contains more user interface options for styling. (@see Content/Block_Mods::button_css_selectors())",
+
+				"color" : {
+					"//":"v2.0.1: WordPress' `background-color` style is overridden in CSS with `background:`. (@see assets/scss/custom/_button.scss)",
+
+					"background" : "var(--theme--css--button--color--background)",
+					"text"       : "var(--theme--css--button--color--text)"
+				},
+				"typography" : {
+					"fontFamily"     : "var(--wp--preset--font-family--global)",
+					"fontSize"       : "var(--wp--preset--font-size--s)",
+					"fontWeight"     : "700",
+					"fontStyle"      : "italic",
+					"letterSpacing"  : "var(--wp--custom--letter-spacing--button)",
+					"lineHeight"     : "1.25",
+					"textTransform"  : "lowercase",
+					"textAlign"      : "center",
+					"textDecoration" : "none"
+				},
+				"spacing" : {
+					"padding"  : {
+						"top"    : "1.25em",
+						"right"  : "1.5em",
+						"bottom" : "1.25em",
+						"left"   : "1.5em"
+					}
+				},
+				"border" : {
+					"//":"v2.0.1: The border color value here is correct! Check `assets/scss/_variables/_others.scss` for explanation.",
+
+					"color"  : "var(--theme--css--button--color--border)",
+					"radius" : "var(--wp--custom--button--border--radius)",
+					"style"  : "var(--wp--custom--button--border--style)",
+					"width"  : "var(--wp--custom--button--border--width)"
+				},
+				"shadow" : "var(--wp--custom--button--shadow--default)",
+				":hover" : {
+					"typography" : {
+						"textDecoration" : "underline"
+					},
+					"shadow" : "var(--wp--custom--button--shadow--hover)"
+				},
+				":focus" : {
+					"typography" : {
+						"textDecoration" : "underline"
+					},
+					"shadow" : "var(--wp--custom--button--shadow--focus)"
+				},
+				":active" : {
+					"typography" : {
+						"textDecoration" : "underline"
+					},
+					"shadow" : "var(--wp--custom--button--shadow--active)"
+				}
 			}
 		},
 		"blocks" : {
+			"//":"@todo  Test Accordion block!",
+			"core/accordion-item" : {
+				"spacing" : {
+					"blockGap" : "var(--wp--preset--spacing--s)"
+				}
+			},
+
+			"core/accordion-heading" : {
+				"typography" : {
+					"fontSize"      : "var(--wp--preset--font-size--l)",
+					"lineHeight"    : "1.382",
+					"textTransform" : "inherit"
+				}
+			},
+
+			"core/accordion-panel" : {
+				"spacing" : {
+					"blockGap" : "var(--wp--preset--spacing--s)"
+				}
+			},
 
 			"core/avatar" : {
 				"border" : {
@@ -1024,7 +924,8 @@
 					"rounded" : {
 						"border" : {
 							"radius" : "20rem"
-						}
+						},
+						"css" : "border-radius: 20rem;"
 					}
 				}
 			},
@@ -1155,6 +1056,11 @@
 			"title" : "Header",
 			"name"  : "header",
 			"area"  : "header"
+		},
+		{
+			"title" : "Navigation overlay",
+			"name"  : "navigation-overlay",
+			"area"  : "navigation-overlay"
 		},
 		{
 			"title" : "Intro (Page header)",

@@ -1,0 +1,63 @@
+{
+	"$schema" : "https://schemas.wp.org/trunk/theme.json",
+	"version" : 2,
+	"title"   : "Bitter + Heebo",
+
+	"docBlock" : {
+		"@since" : "2.0.0"
+	},
+
+	"settings" : {
+		"typography" : {
+			"fontFamilies" : [
+				{
+					"name"       : "Main",
+					"slug"       : "global",
+					"fontFamily" : "Heebo, sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Heebo",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300 400 700",
+							"src"         : [
+								"file:./assets/fonts/heebo/heebo-variable.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Heading",
+					"slug"       : "supplemental",
+					"fontFamily" : "Bitter, sans-serif",
+					"fontFace"   : [
+						{
+							"fontFamily"  : "Bitter",
+							"fontStretch" : "normal",
+							"fontStyle"   : "normal",
+							"fontWeight"  : "300 400 700",
+							"src"         : [
+								"file:./assets/fonts/bitter/bitter-variable.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name"       : "Alternative",
+					"slug"       : "alternative",
+					"fontFamily" : "var(--wp--preset--font-family--supplemental)"
+				},
+				{
+					"name"       : "Monospace",
+					"slug"       : "monospace",
+					"fontFamily" : "var(--wp--custom--font-family--monospace-code)"
+				},
+				{
+					"name"       : "Handwritten",
+					"slug"       : "handwritten",
+					"fontFamily" : "var(--wp--custom--font-family--handwritten)"
+				}
+			]
+		}
+	}
+}

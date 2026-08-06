@@ -1,5 +1,5 @@
 /*! FILE: editor.scss */
-@use 'sass:math';
+@use 'sass:list';
 
 //
 // Editor styles.
@@ -8,7 +8,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.2.5
+// @version  2.0.5
 //
 
 $is_editor: true;
@@ -18,7 +18,8 @@ $is_editor: true;
 
 @import '_variables/_index';
 
-$important_contexts: append( $important_contexts, 'modifier_mark' );
+$important_contexts: list.append( $important_contexts, 'modifier_mark' );
+$important_contexts: list.append( $important_contexts, 'text_wrap' );
 
 @import 'global/_index';
 @import 'custom/_index';
