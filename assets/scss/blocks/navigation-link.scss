@@ -1,7 +1,7 @@
 // core/navigation-link
 //
 // @since    1.0.0
-// @version  1.2.1
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -49,15 +49,22 @@
 	}
 
 	&-item__label {
+		line-height: 1.25;
 		white-space: nowrap;
+
+		:where( .open-always ) & {
+			line-height: inherit;
+			white-space: inherit;
+		}
 	}
 
 	.wp-block-navigation-item__description {
 		display: block;
-		margin-block-start: 0;
+		margin-block-start: .25em;
 		font-family: var(--wp--preset--font-family--global);
-		font-size: .8em;
+		font-size: min( .8em, 1rem );
 		font-weight: 400;
+		font-style: italic;
 		line-height: 1.2;
 		text-transform: none;
 		letter-spacing: normal;
@@ -66,10 +73,7 @@
 
 	// Current (active) menu item.
 	.current-menu-item > .wp-block-navigation-item__content .wp-block-navigation-item__label,
-	.current-menu-ancestor > .wp-block-navigation-item__content .wp-block-navigation-item__label,
-	// Pre-WP6.8 (@todo can be removed with WP6.8+2):
-	.current-menu-item.has-child > .wp-block-navigation-item__content:not(:has(.wp-block-navigation-item__label)),
-	.current-menu-ancestor.wp-block-navigation-item__content {
+	.current-menu-ancestor > .wp-block-navigation-item__content .wp-block-navigation-item__label {
 		@extend %current_menu_item;
 		display: block !important;
 	}

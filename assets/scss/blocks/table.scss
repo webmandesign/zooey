@@ -1,4 +1,6 @@
 // core/table
+//
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -18,19 +20,15 @@
 
 			th,
 			td {
-				border-block-end: 1px solid;
+				border-block-end: var(--wp--custom--border-width--item-separator) solid;
 				border-block-end-color: inherit;
 			}
 		}
 
 		&.is-style-stripes tbody tr {
 
-			&:nth-child( odd ){
-				background: rgba( #000, .03 );
-			}
-
-			&:nth-child( even ){
-				background: rgba( #fff, .06 );
+			&:nth-child( odd ) {
+				background: color-mix( in srgb, currentColor 7%, transparent );
 			}
 		}
 	}

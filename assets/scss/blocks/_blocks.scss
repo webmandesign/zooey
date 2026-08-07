@@ -36,18 +36,46 @@
 	}
 }
 
-// Clearfix and empty containers.
+// Clearfix.
+//
+// Having clearfix is actually very useful!
+// It fixes the parent container height when
+// there is pulled-up/down element within!
+//
 // core/group
 // core/post-content
-// core/query
 @if false == $is_editor {
 
 	.wp-block-group:not(.is-layout-flex, .is-layout-grid),
 	.wp-block-post-content {
 		@extend %clearfix;
 	}
+} @else {
 
-	// @see  WebManDesign\Zooey\Content\Block::render__empty()
+	// In editor, there is highlighter rendered in `::after`,
+	// so we need to mitigate as much as possible.
+	//
+	// For reference, these selectors are used in editor:
+	// .is-dark-theme .block-editor-block-list__layout .block-editor-block-list__block.is-highlighted:after,
+	// .is-dark-theme .block-editor-block-list__layout .block-editor-block-list__block.is-highlighted~.is-multi-selected:after,
+	// .is-dark-theme .block-editor-block-list__layout .block-editor-block-list__block:not([contenteditable=true]):focus:after,
+	// .is-dark-theme .block-editor-block-list__layout.is-navigate-mode .block-editor-block-list__block.is-selected:after
+
+	.wp-block-group:not(.is-layout-flex, .is-layout-grid),
+	.wp-block-post-content {
+
+		&:not( .is-highlighted, :focus ) {
+			@extend %clearfix;
+		}
+	}
+}
+
+// Empty containers.
+// core/group
+// core/query
+@if false == $is_editor {
+
+	// @see  Content\Block::render__empty()
 	.wp-block-group,
 	.wp-block-query {
 
@@ -55,7 +83,11 @@
 		&.is-empty {
 
 			&:not(.is-not-hidden) {
-				display: none;
+
+				&,
+				:has( > &:only-child ) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -114,13 +146,6 @@
 
 // Multi-block styles.
 
-	// Layout
-
-		.is-style-page-header {
-			position: relative;
-			z-index: 2;
-		}
-
 	// Backdrop blur.
 
 		//
@@ -146,6 +171,14 @@
 			@if false == $is_editor {
 				position: relative;
 
+				:where( & ) {
+					// Not sure why this is needed, but sometimes when `.is-style-backdrop-blur`
+					// is nested within Cover block(s), the blurred overlay (`::before` pseudo
+					// element below) is stacked incorrectly, below the container, and thus
+					// not rendering the blur effect.
+					z-index: 0;
+				}
+
 				&::before {
 					content: '';
 					position: absolute;
@@ -169,7 +202,7 @@
 
 	// Outline button.
 
-		.is-style-button-outline {
+		:root :where( .is-style-button-outline ) {
 			--theme--css--button--color--background: transparent;
 			--theme--css--button--color--text: currentColor;
 			--theme--css--button--color--border: currentColor;
@@ -211,7 +244,7 @@
 
 		.is-style-inline,
 		.is-style-buttons-inline {
-			--wp--style--block-gap: #{ $ratio_min + em } 1em;
+			--wp--style--block-gap: var( --theme--css--block-gap, #{ $ratio_min + em } 1em );
 
 			&,
 			ul,
@@ -229,6 +262,12 @@
 					justify-content: center;
 				}
 			}
+		}
+
+		.is-style-buttons-inline a {
+			// Modifying default button padding the same was it is in default header/footer.
+			// @see  custom/_button.scss
+			padding-inline: var(--wp--preset--spacing--s);
 		}
 
 	// Padding left/right.
@@ -259,19 +298,24 @@
 				}
 
 				img {
-					display: block;
 					width: 100% $important;
+					border-top-#{$direction_oposite}-radius: 0;
+					border-bottom-#{$direction_oposite}-radius: 0;
+				}
+
+				> a,
+				> img {
+					display: block $important; // For block editor `<a>`.
 					max-width: calc( 50% + var(--wp--style--root--padding-#{$direction}) / 2 + ( var(--wp--style--global--content-size) / 2 ) ) $important;
 					margin-inline: 0;
 					margin-#{$direction}: auto;
-					border-top-#{$direction_oposite}-radius: 0;
-					border-bottom-#{$direction_oposite}-radius: 0;
 				}
 
 				&.alignwide,
 				&.alignfull {
 
-					img {
+					> a,
+					> img {
 						max-width: calc( 50% + var(--wp--style--root--padding-#{$direction}) / 2 + ( var(--wp--style--global--wide-size) / 2 ) ) $important;
 					}
 				}
@@ -287,6 +331,7 @@
 					.components-resizable-box__container {
 						width: 100% !important;
 						max-width: none !important;
+						max-height: none !important;
 					}
 				}
 			}
@@ -302,6 +347,14 @@
 		}
 
 	// Pull up/down.
+
+		//
+		// These classes could be replaced with negative spacing
+		// presets, but it is better to keep these as block styles
+		// so we don't overload the number of spacing options
+		// (as with 8+ options there is a dropdown displayed in editor
+		// instead of "split line" selector).
+		//
 
 		[class*="is-style-pull-"],
 		// Apply also on WP6.6+ negative margin blocks.
@@ -332,6 +385,19 @@
 			{
 				--theme--css--pull: 0px;
 			}
+
+			:where(
+				// Wrapping in `:where()` allows helper z-index classes overrides.
+				.is-root-container > *:has(
+					[class*="is-style-pull-"],
+					// Apply also on WP6.6+ negative margin blocks.
+					[style*="margin-top:-"], [style*="margin-top: -"],
+					[style*="margin-bottom:-"], [style*="margin-bottom: -"]
+					// No need for horizontal negative margin code. (It actually causes issues.)
+				)
+			) {
+				z-index: 5 !important;
+			}
 		}
 
 	// Responsive.
@@ -350,13 +416,13 @@
 
 			&-only {
 				@include media( ( 1025, 'min-width' ) ) { // 1024px breakpoint.
-					// @see  WebManDesign\Zooey\Content\Block_Style::responsive_block_styles()
+					// @see  Content\Block_Style::responsive_block_styles()
 				}
 			}
 
 			&-hide {
 				@include media( ( 1024, 'max-width' ) ) { // 1024px breakpoint.
-					// @see  WebManDesign\Zooey\Content\Block_Style::responsive_block_styles()
+					// @see  Content\Block_Style::responsive_block_styles()
 				}
 			}
 
@@ -364,20 +430,39 @@
 
 				&-only,
 				&-hide {
+					// `!important` is for resetting WP styles,
+					// and subsequent overrides.
 
 					&::before {
 						content: '';
 						position: absolute;
-						width: 24px;
-						height: 24px;
-						inset-inline-end: 4px;
-						inset-block-start: 4px;
+						width: 24px !important;
+						height: 24px !important;
+						inset: auto !important;
+						inset-inline-end: 4px !important;
+						inset-block-start: 4px !important;
 						background-color: #3858e9;
 						background-repeat: no-repeat;
 						background-position: 50% 50%;
 						border: 2px solid #fff;
 						border-radius: 6px;
 						pointer-events: none;
+						z-index: 9999;
+					}
+
+					&:not( .is-selected, .has-child-selected )::before {
+						z-index: 0;
+					}
+
+					&.is-selected,
+					&.has-child-selected {
+
+						&::before {
+							inset: auto !important;
+							inset-inline-start: 100% !important;
+							inset-block-end: 100% !important;
+							z-index: auto;
+						}
 					}
 				}
 

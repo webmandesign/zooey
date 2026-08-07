@@ -1,12 +1,13 @@
 // core/file
-// @version  1.0.7
+//
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
 .wp-block-file {
 	padding: ( $ratio_maj + em ) ( $ratio + em );
-	border-width: 2px;
+	border-width: var(--wp--custom--border-width--global);
 	border-style: solid;
 }
 

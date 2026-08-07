@@ -1,0 +1,45 @@
+// core/accordion
+//
+// @since  2.0.0
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-accordion {
+
+	&-heading {
+
+		&__toggle {
+
+			&,
+			&:hover,
+			&:focus {
+				padding: 0;
+			}
+		}
+	}
+
+	&-panel {
+		$speed: .2s;
+
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition:
+			opacity $speed,
+			height $speed,
+			display $speed;
+		transition-behavior: allow-discrete; // https://www.youtube.com/watch?v=vmDEHAzj2XE
+
+		.is-open & {
+			height: auto;
+			opacity: 1;
+			overflow: visible;
+
+			@starting-style {
+				height: 0;
+				opacity: 0;
+			}
+		}
+	}
+}

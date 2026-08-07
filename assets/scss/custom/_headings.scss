@@ -7,12 +7,16 @@
 }
 
 %heading_color {
-	color: var(--wp--preset--color--contrast-alt);
+
+	html :where( & ) {
+		color: var(--wp--preset--color--contrast-alt);
+	}
 
 	.has-background &,
+	.has-text-color &,
 	.wp-block-cover & {
 
-		:root :where(&) {
+		html :where( & ) {
 			color: inherit;
 		}
 	}

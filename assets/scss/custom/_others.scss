@@ -1,4 +1,19 @@
 /* FILE: custom/_others.scss */
+@use 'sass:map';
+@use 'sass:math';
+
+// Hide element if no featured image.
+
+	.hide-if-no-featured-image,
+	.is-hidden-if-no-featured-image {
+		// These styles have to be very specific to prevent false positives.
+
+		.is-singular:not(.has-post-thumbnail) .is-style-page-header &,
+		.wp-block-post:not(.has-post-thumbnail) &,
+		.is-singular:not(.has-post-thumbnail) .entry-content > .alignfull:first-child & {
+			display: none;
+		}
+	}
 
 // Border radius.
 
@@ -6,14 +21,14 @@
 
 		&:not(.alignfull) {
 
-			:root :where( & ) {
+			:where( & ) {
 				border-radius: var(--wp--custom--border-radius--bg);
 			}
 
 			header > &,
 			footer > & {
 
-				:root :where( & ) {
+				:where( & ) {
 					border-radius: inherit;
 				}
 			}
@@ -22,14 +37,14 @@
 
 	.wp-block-cover.alignwide {
 
-		:root :where( & ) {
+		:where( & ) {
 			border-radius: var(--wp--custom--border-radius--bg);
 		}
 
 		> span,
 		> img {
 
-			:root :where( & ) {
+			:where( & ) {
 				border-radius: inherit;
 			}
 		}
@@ -38,8 +53,8 @@
 	.alignfull {
 
 		&,
+		&.wp-block-gallery img,
 		> img,
-		> figure img,
 		> a > img {
 			border-radius: 0;
 		}
@@ -51,7 +66,7 @@
 	.is-style-screen-reader-text {
 
 		&:focus {
-			border-radius: var(--wp--custom--button--border-radius);
+			border-radius: var(--wp--custom--button--border--radius);
 		}
 	}
 
@@ -59,9 +74,9 @@
 
 	blockquote {
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 
-			&:not(.has-background) {
+			&:not( .has-background, [class*="has-text-align-"] ) {
 				position: relative;
 				padding-inline-start: calc( var(--wp--custom--quote--decoration--font-size) / 2 );
 
@@ -70,7 +85,7 @@
 				}
 
 				&::before {
-					content: '“';
+					content: var(--wp--custom--quote--decoration--content);
 					speak: none;
 					position: absolute;
 					inset-inline-start: 0;
@@ -81,14 +96,19 @@
 					font-weight: 700;
 					line-height: 1;
 					background-image: linear-gradient( to bottom, currentColor, currentColor );
-					background-position: 50% math.div( 1em, 1 + $ratio_min );
+					background-position: 50% 100%;
 					background-repeat: no-repeat;
-					background-size: 2px 100%;
+					background-size: 2px calc( 100% - math.div( 1em, 1 + $ratio_min ) );
+					opacity: var(--wp--custom--quote--decoration--opacity);
 					transform: translateX(-50%);
 
 					.rtl & {
 						transform: translateX(50%);
 					}
+				}
+
+				&::after {
+					content: no-close-quote; // Resetting quotes.
 				}
 			}
 		}
@@ -114,4 +134,9 @@
 	.term-description {
 		max-width: 560px;
 		font-size: var(--wp--preset--font-size--l);
+	}
+
+	// Useful for breadcrumbs trail.
+	.home .is-hidden-on-homepage {
+		display: none;
 	}

@@ -1,13 +1,15 @@
 // core/paragraph
+//
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-.has-drop-cap:not(:focus)::first-letter {
-	padding: .3em .2em;
+.has-drop-cap[class]:not(:focus)::first-letter {
+	padding: calc( .3em - var(--wp--custom--border-width--dropcap) ) .2em;
 	margin-inline-end: .15em;
 	font-size: 2em;
 	font-weight: 400;
 	line-height: .8;
-	border: 1px solid;
+	border: var(--wp--custom--border-width--dropcap) solid;
 }

@@ -1,0 +1,15 @@
+// core/term-description
+//
+// @since  2.0.1
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-term-description {
+
+	// For some reason WordPress removes vertical margin from all `<p>` children.
+	// But we need the margin when this is a page description (such as on WooCommerce archive page).
+	.page-description p:not(:first-child) {
+		margin-block-start: var(--wp--style--block-gap);
+	}
+}

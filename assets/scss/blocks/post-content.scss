@@ -1,0 +1,10 @@
+// core/post-content
+//
+// @since  2.0.5
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.entry-content:empty {
+	display: none;
+}

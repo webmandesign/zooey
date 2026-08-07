@@ -1,0 +1,22 @@
+// core/icon
+//
+// @since  2.0.1
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-icon {
+
+	svg {
+
+		&.has-background {
+			padding: 0;
+		}
+
+		// Future-proof: Better not apply this and leave it to WordPress core styling!
+		// &.has-background,
+		// &[style*="padding"] {
+		// 	box-sizing: content-box;
+		// }
+	}
+}

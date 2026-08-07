@@ -1,7 +1,8 @@
 // core/navigation
 // core/navigation-link
 // core/navigation-submenu
-// @version  1.1.7
+//
+// @version  2.0.1
 
 //
 // The CSS selector specificity in this file is tragic, but needed
@@ -55,6 +56,10 @@
 
 	& & {
 		font-size: 1em; // Yes, this fix is really needed, unfortunately...
+	}
+
+	&.has-block-gap {
+		--wp--style--block-gap: var( --theme--css--block-gap, 1rem );
 	}
 }
 

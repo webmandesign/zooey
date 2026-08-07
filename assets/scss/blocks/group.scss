@@ -1,5 +1,8 @@
 // core/group
-// @version  1.0.7
+//
+// @since    1.0.0
+// @version  2.0.0
+@use 'sass:map';
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -12,6 +15,20 @@
 	background-position: 50% 50%;
 }
 
-.is-layout-flex > * {
-	max-width: 100%;
+.is-layout-flex {
+
+	> * {
+		max-width: 100%;
+	}
+
+	// Helper classes to set children width on mobile devices.
+	@for $i from 2 through 4 {
+
+		&.has-#{$i}-columns-mobile > * {
+
+			@include media( ( map.get( $breakpoint, 'm' ), 'max-width' ) ) {
+				flex-basis: calc( 100% / #{$i} - #{ $i - 1 } / #{$i} * var(--wp--style--block-gap) );
+			}
+		}
+	}
 }

@@ -1,84 +1,81 @@
 /* FILE: custom/_button.scss */
 
 #{ $selectors_button } {
-	display: inline-block; // Not to overflow empty paragraph container, for example.
-	font-family: var(--wp--custom--button--font-family);
-	font-size: var(--wp--custom--button--font-size);
-	font-weight: 700;
-	line-height: 1.25;
-	text-transform: uppercase;
-	text-decoration-line: none;
-	text-underline-offset: var(--wp--custom--underline--offset--default);
-	text-decoration-thickness: var(--wp--custom--underline--thickness);
-	text-align: center;
-	letter-spacing: var(--wp--custom--button--letter-spacing);
-	background: var(--theme--css--button--color--background);
-	background-position: 50% 50%; // For gradient background.
-	background-size: 100%; // For gradient background.
-	border: var(--theme--css--button--border);
-	box-shadow: var(--wp--preset--shadow--s);
-	cursor: pointer;
-	transition:
-		transform .1s linear,
-		background-color .1s linear,
-		background-image .1s linear,
-		background-size .4s linear,
-		color .1s linear,
-		border .1s linear,
-		box-shadow .1s linear;
 
-	&,
-	&.has-background {
-		--theme--css--current-border-color: var(--theme--css--button--color--border);
+	// Button styles are provided in `theme.json`. These are design specific
+	// styles and style overrides that are not possible via `theme.json`.
+	// (The selector specificity is matching WordPress generated CSS.)
+	//
+	// @see  theme.json->styles.elements.button
+	//
+	:root :where( & ) {
+		display: inline-block; // Not to overflow empty paragraph container, for example.
+		text-underline-offset: var(--wp--custom--underline--offset--default);
+		text-decoration-thickness: var(--wp--custom--underline--thickness);
+		cursor: pointer;
+		transition-property:        var( --wp--custom--button--transition--property,        initial );
+		transition-duration:        var( --wp--custom--button--transition--duration,        initial );
+		transition-timing-function: var( --wp--custom--button--transition--timing-function, initial );
+		transition-delay:           var( --wp--custom--button--transition--delay,           initial );
+		// For gradient background:
+		// `!important` is to override possible WP inline `background:` style.
+		background: var(--theme--css--button--color--background); // WordPress produces `background-color` property only.
+		background-position: 50% 50% !important;
+		background-size:
+			// Adding border width to prevent rendering repeated background image in border area.
+			calc( 100% + 2 * var(--wp--custom--button--border--width) )
+			calc( 100% + 2 * var(--wp--custom--button--border--width) )
+			!important;
 
-		padding: 1.125em 1.5em;
-		border-color: var(--theme--css--current-border-color);
-		border-radius: var(--wp--custom--button--border-radius);
-	}
+		&:focus-visible {
+			@extend %focus_button;
+		}
 
-	&,
-	.has-background &,
-	.has-text-color & {
+		&:hover,
+		&:focus-visible {
+			text-decoration-style: dashed;
+			transform: scale( 1.05 );
+			// For gradient background:
+			// `!important` is to override possible WP inline `background:` style.
+			background-size:
+				// Adding border width to prevent rendering repeated background image in border area.
+				calc( 200% + 2 * var(--wp--custom--button--border--width) )
+				calc( 100% + 2 * var(--wp--custom--button--border--width) )
+				!important;
+		}
 
-		&:not(.has-text-color) {
-			// Making sure the button don't inherit parent text color.
-			color: var(--theme--css--button--color--text);
+		&:active {
+			text-decoration-style: dotted;
 		}
 	}
 
-	&:hover,
-	&:focus {
-		text-decoration-line: underline;
-		text-decoration-style: dashed;
-		background-size: 150% 100%; // For gradient background.
-		box-shadow: var(--wp--preset--shadow--m);
-		transform: scale(1.05);
+	// Making sure the custom background button still has actual
+	// button padding and border radius applied. Padding and border
+	// radius (may) differ on `.has-background` elements.
+	//
+	// @see  global/wp/_colors.scss
+	// @see  custom/_others.scss
+	//
+	:root .has-background:where( & ) {
+		padding-top:    var( --theme--css--button--padding--top,    1.25em );
+		padding-right:  var( --theme--css--button--padding--right,  1.5em  );
+		padding-bottom: var( --theme--css--button--padding--bottom, 1.25em );
+		padding-left:   var( --theme--css--button--padding--left,   1.5em  );
+		border-radius: var(--wp--custom--button--border--radius);
 	}
 
-	&:focus-visible {
-		@extend %focus_button;
-	}
-
-	&:active {
-		text-decoration-line: underline;
-		text-decoration-style: dotted;
-		box-shadow: none;
-	}
-
-	:not(.is-style-outline) > &:not(.has-background, .has-text-color) {
-		--theme--css--current-border-color: var(--theme--css--button--color--border);
+	// Making sure the button doesn't inherit colored parent container text color.
+	:root :where( .has-background, .has-text-color ) :where( & ):not( .has-text-color ) {
+		color: var(--theme--css--button--color--text);
 	}
 
 	// If custom background is set, make border transparent.
-	&.has-background {
+	.has-background:where( & ) {
 		--theme--css--button--color--border: transparent;
 	}
 }
 
-form [type="reset"]:not([class*="wp-block-"]) {
-	--theme--css--button--color--background: transparent;
-	--theme--css--button--color--text: currentColor;
-	--theme--css--button--color--border: currentColor;
-
+// Form reset button should be Outline button.
+form [type="reset"]:not( [class*="wp-block-"] ) {
 	@extend %button_outline;
 }

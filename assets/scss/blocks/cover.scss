@@ -1,5 +1,7 @@
 // core/cover
-// @version  1.1.3
+//
+// @since    1.0.0
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -26,8 +28,13 @@
 
 	&__background,
 	&__image-background,
+	&__video-background,
 	.wp-block-cover__image--placeholder-image {
 		border-radius: inherit;
+	}
+
+	.wp-block-cover__embed-background iframe {
+		max-width: none;
 	}
 }
 
@@ -36,7 +43,7 @@
 	// Only within Query:
 	.wp-block-post &.has-post-link {
 
-		.wp-block-cover__inner-container {
+		.wp-block-cover__inner-container:not( :has( .wp-block-spacer:only-child ) ) {
 			position: relative;
 			z-index: 3;
 		}
@@ -44,6 +51,12 @@
 
 	&__post-link {
 		display: none;
+
+		// Preventing accessibility issue.
+		.screen-reader-text {
+			background: #000;
+			color: #fff;
+		}
 
 		// Render only within Query.
 		.wp-block-post & {
@@ -63,6 +76,16 @@
 		overflow: hidden;
 		position: absolute;
 		inset: 0;
+		border-radius: inherit;
+	}
+
+	> img,
+	> .wp-block-cover__image-background,
+	> .wp-block-cover__video-background,
+	> .is-blur-wrapper img,
+	> .is-blur-wrapper video,
+	> .is-blur-wrapper .has-parallax {
+		filter: blur( var(--wp--custom--filter--blur--image) );
 	}
 
 	> img,
@@ -70,8 +93,20 @@
 	> .wp-block-cover__video-background,
 	> .is-blur-wrapper img,
 	> .is-blur-wrapper video {
-		filter: blur( var(--wp--custom--filter--blur--image) );
+		// This can not be applied on parallax background
+		// container as the `background-attachment` stops
+		// working due to `transform` styles.
+		// See below for additional styles.
 		transform: scale( 1.25 );
+		clip-path: inset( 10% );
+	}
+
+	> .is-blur-wrapper .has-parallax {
+		// Mimicking `transform: scale( 1.25 );` with other styles.
+		width: 125%;
+		height: 125%;
+		inset: -12.5%;
+		background-size: 125%;
 		clip-path: inset( 10% );
 	}
 
@@ -79,24 +114,58 @@
 	> .is-blur-wrapper video {
 		filter: blur( var( --wp--custom--filter--blur--video, var(--wp--custom--filter--blur--image) ) );
 	}
+
+	// Editor only:
+	.editor-styles-wrapper &[class*="wp-duotone"] {
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: inherit;
+			z-index: 1;
+			backdrop-filter: blur( var(--wp--custom--filter--blur--image) );
+		}
+
+		.wp-block-cover__inner-container {
+			z-index: 1;
+		}
+	}
 }
 
-.is-style-zoom-in {
-	overflow: hidden;
+.is-style-zoom-in,
+.is-style-zoom-out {
+	overflow: clip;
 
-	.wp-block-cover__image-background,
-	.wp-block-cover__video-background {
-		transition: transform 8s ease-in-out;
+	> .wp-block-cover__image-background,
+	> .wp-block-cover__video-background {
+		transition: transform 6s ease-in-out;
 	}
 
 	&:hover {
 
-		.wp-block-cover__image-background,
-		.wp-block-cover__video-background {
-			transform: scale( 1.2 );
+		> .wp-block-cover__image-background,
+		> .wp-block-cover__video-background {
+			transform: scale( 1.125 );
 		}
 	}
 }
+
+	.is-style-zoom-out {
+
+		> .wp-block-cover__image-background,
+		> .wp-block-cover__video-background {
+			transform: scale( 1.125 );
+		}
+
+		&:hover {
+
+			> .wp-block-cover__image-background,
+			> .wp-block-cover__video-background {
+				transform: scale( 1 );
+			}
+		}
+	}
 
 .is-style-hover-content {
 
@@ -106,6 +175,7 @@
 
 		> .has-background-dim,
 		> .wp-block-cover__inner-container {
+			transform-origin: 50% 100%;
 			transition:
 				opacity .3s,
 				transform .3s;
@@ -116,10 +186,36 @@
 			> .has-background-dim,
 			> .wp-block-cover__inner-container {
 				opacity: 0 !important;
+				transform: translateY(1em);
 			}
 
 			> .has-background-dim {
 				transform: scale(.9);
+			}
+		}
+	}
+}
+
+.is-style-hover-media {
+
+	// Hover enabled devices only.
+	// (Do not hide the media on touch screens, so it is accessible.)
+	@media (hover: hover) {
+		transition: color .1s;
+
+		> .has-background-dim,
+		> .wp-block-cover__image-background,
+		> .wp-block-cover__video-background {
+			transition: opacity .4s;
+		}
+
+		&:not(:hover, :focus-within, .is-selected, .has-child-selected) {
+			color: inherit !important; // Important is to override any set text color.
+
+			> .has-background-dim,
+			> .wp-block-cover__image-background,
+			> .wp-block-cover__video-background {
+				opacity: 0 !important;
 			}
 		}
 	}

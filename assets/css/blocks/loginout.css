@@ -1,0 +1,1 @@
+.wp-block-loginout :where([type=email],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=url]){width:100%}.wp-block-loginout label{display:block}.wp-block-loginout label+:where([type=email],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=url]){-webkit-margin-before:0.382em;margin-block-start:0.382em}

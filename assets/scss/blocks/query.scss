@@ -1,0 +1,10 @@
+// core/query
+//
+// @since  2.0.5
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-group:has( > .is-style-related-posts.is-empty ) {
+	display: none;
+}

@@ -12,9 +12,6 @@
 	// Unit is required in `calc()`.
 	// A non-zero value is required for minification process not to strip the unit.
 	--zero: 0.001px;
-
-	// Overridden with JavaScript:
-	--theme--js--scrollbar_width: var(--zero);
 }
 
 @import 'theme-options';

@@ -1,5 +1,7 @@
 // core/columns
 // core/column
+//
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -10,4 +12,9 @@
 		padding-left:  var(--wp--style--root--padding-left);
 		padding-right: var(--wp--style--root--padding-right);
 	}
+}
+
+// Overriding WP core styles:
+:where(.wp-block-columns:last-child) {
+	margin-bottom: 0;
 }

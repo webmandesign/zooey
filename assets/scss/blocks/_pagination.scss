@@ -13,7 +13,7 @@
 .wp-block-comments-pagination {
 
 	.page-numbers {
-		padding: 1em ( $ratio_min + 1em ) !important;
+		padding: 1em ( $ratio_min + 1em );
 
 		&.current,
 		&.dots {
@@ -49,6 +49,7 @@
 
 	&-previous,
 	&-next {
+		padding-block: 1em;
 		margin: 0 !important;
 
 		// Targeting front-end only.

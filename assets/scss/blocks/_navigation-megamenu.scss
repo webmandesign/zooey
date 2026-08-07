@@ -1,9 +1,11 @@
 //
 // Megamenu.
 //
-// @version  1.1.3
+// @since    1.0.0
+// @version  2.0.1
+//
 
-.is-style-megamenu {
+.is-style-megamenu:where( li:not( .open-always ) ) {
 
 	.wp-block-navigation.has-child-selected &, // Always enable megamenu styles in editor.
 	.wp-block-navigation.no-overlay-menu &,
@@ -13,8 +15,11 @@
 			// Columns container.
 			> #{$selector} {
 				flex-direction: row;
-				gap: var(--wp--style--block-gap);
 				align-items: flex-start;
+
+				&[class] {
+					gap: var(--wp--style--block-gap);
+				}
 
 				// Column.
 				> .wp-block-navigation-item {
@@ -28,13 +33,15 @@
 						min-width: 14em;
 					}
 
-					// Label.
+					// Column label.
 					> .wp-block-navigation-item__content {
 						border: 0 !important;
+						font-size: var(--wp--preset--font-size--s);
 						font-weight: 700;
 						text-transform: uppercase;
 						letter-spacing: var(--wp--custom--letter-spacing--heading);
 
+						// Removing current (active) menu item styles/pointer (%current_menu_item).
 						&::before {
 							display: none;
 						}
@@ -53,10 +60,14 @@
 						min-width: clamp( 12em, 14vw, 240px ) !important;
 						inset: 0;
 						padding: 0;
-						margin: ( $ratio_maj + em ) 0 0;
+						margin: 1em 0 0;
 						background: none !important;
 						border-width: 0;
 						box-shadow: none;
+
+						&::before {
+							display: none;
+						}
 
 						#{$selector} {
 							--theme--css--submenu-open-animation: showSubSubMenu .3s;

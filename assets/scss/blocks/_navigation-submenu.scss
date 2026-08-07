@@ -1,6 +1,10 @@
 //
 // Submenu.
 //
+// @since    1.0.0
+// @version  2.0.4
+//
+@use 'sass:map';
 
 // Setup.
 
@@ -10,20 +14,24 @@
 		--theme--css--submenu-transform: none;
 		--theme--css--submenu-inset-inline-start: 0;
 		--theme--css--submenu-inset-inline-end: auto;
-		--theme--css--submenu-padding: #{ $ratio + rem };
-		--theme--css--submenu-item-padding: #{ $ratio_min + rem };
+		--theme--css--submenu-padding: calc( #{ $ratio_maj } * var( --wp--custom--navigation--submenu--padding--container, #{ $ratio * $ratio + rem } ) );
+		--theme--css--submenu-item-padding: var( --wp--custom--navigation--submenu--padding--item, #{ $ratio_min + rem } );
 		--theme--css--submenu-offset: #{ $ratio_maj + rem };
+		--theme--css--submenu-separator--width: var( --wp--custom--navigation--submenu--separator--width, 0 );
+		--theme--css--submenu-separator--style: var( --wp--custom--navigation--submenu--separator--style, solid );
+		--theme--css--submenu-separator--color: var( --wp--custom--navigation--submenu--separator--color, inherit );
+
 		--theme--css--animation-showSubMenu--from--transform: var(--theme--css--submenu-transform) translateY( 1rem );
 		--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
 		--theme--css--animation-showSubSubMenu--from--transform: translateX( 1rem );
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			--theme--css--submenu-transform: translateX( -50% );
 			--theme--css--submenu-inset-inline-start: 50%;
 		}
 
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			--theme--css--submenu-padding: #{ $ratio * $ratio + rem };
+		@include media( map.get( $breakpoint, 'xl' ) ) {
+			--theme--css--submenu-padding: var( --wp--custom--navigation--submenu--padding--container, #{ $ratio * $ratio + rem } );
 		}
 	}
 
@@ -38,7 +46,7 @@
 		--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
 		--theme--css--animation-showSubSubMenu--from--transform: translateX( -1rem );
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			--theme--css--submenu-transform: translateX( 50% );
 		}
 
@@ -49,7 +57,7 @@
 
 	.no-centered-submenu {
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			--theme--css--submenu-transform: none;
 			--theme--css--submenu-inset-inline-start: calc( -1 * var(--theme--css--submenu-padding) );
 			--theme--css--animation-showSubMenu--from--transform: translateY( 1rem );
@@ -96,7 +104,7 @@
 		--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
 		--theme--css--animation-showSubSubMenu--from--transform: translateX( -1rem );
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			--theme--css--submenu-inset-inline-end: 50%;
 			--theme--css--submenu-transform: translateX( 50% );
 		}
@@ -111,7 +119,7 @@
 			--theme--css--animation-showSubMenu--to--transform: var(--theme--css--submenu-transform);
 			--theme--css--animation-showSubSubMenu--from--transform: translateX( 1rem );
 
-			@include media( map_get( $breakpoint, 'l' ) ) {
+			@include media( map.get( $breakpoint, 'l' ) ) {
 				--theme--css--submenu-transform: translateX( -50% );
 			}
 		}
@@ -119,7 +127,7 @@
 
 		.no-centered-submenu.items-justified-right {
 
-			@include media( map_get( $breakpoint, 'l' ) ) {
+			@include media( map.get( $breakpoint, 'l' ) ) {
 				--theme--css--submenu-transform: none;
 				--theme--css--submenu-inset-inline-end: calc( -1 * var(--theme--css--submenu-padding) );
 				--theme--css--animation-showSubMenu--from--transform: translateY( 1rem );
@@ -128,16 +136,16 @@
 
 			.rtl & {
 
-				@include media( map_get( $breakpoint, 'l' ) ) {
+				@include media( map.get( $breakpoint, 'l' ) ) {
 					--theme--css--submenu-transform: none;
 				}
 			}
 		}
 
-.wp-block-navigation .has-child {
+.wp-block-navigation .has-child:not(.open-always) {
 
 	// Resetting WP styles:
-	&.has-child.has-child.has-child #{$selector} {
+	&.has-child.has-child #{$selector} {
 		visibility: visible;
 		width: auto;
 		height: auto;
@@ -149,6 +157,11 @@
 	// For mobile menu top level items.
 	> .wp-block-navigation-item__content {
 		flex-grow: 1;
+	}
+
+	// Over the hover helper (see below).
+	&:hover > .wp-block-navigation-item__content {
+		z-index: 5;
 	}
 
 	#{$selector} {
@@ -170,16 +183,32 @@
 				font-size: 1em;
 				inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
 				transform: none;
+
+				// Helper to improve moving mouse cursor over to the submenu
+				// by adding more real estate for hover (so the submenu does
+				// not close prematurely when cursor moves out of the parent).
+				&::before {
+					content: '';
+					position: absolute;
+					display: block; // This is required (see "something" above).
+					width: $ratio * 2em;
+					height: min( calc( 3em + var(--theme--css--submenu-padding) ), 100% );
+					inset-inline-end: 100%;
+					inset-block-start: var(--theme--css--submenu-padding);
+					opacity: 0;
+
+					.editor-styles-wrapper & {
+						display: none;
+					}
+				}
 			}
 
 			.wp-block-navigation-item__content {
-				padding: var(--theme--css--submenu-item-padding) 0;
+				// `.125em` compensates for label's `line-height: 1.25` so we make the line
+				// height faux 1.5 (1.25 + 2 * .125).
+				// (Yes, we make this line height 1.5 instead of 1.618. It's design decision.)
+				padding: calc( var(--theme--css--submenu-item-padding) + .125em ) 0;
 			}
-		}
-
-		// Removing something that covers sub-sub-menu toggle button.
-		#{$selector}[class]::before {
-			display: none;
 		}
 	}
 
@@ -194,12 +223,17 @@
 	}
 }
 
+html .wp-block-navigation .has-child.open-always #{$selector} {
+	padding-inline: 0;
+	margin-inline-start: 1em;
+}
+
 // Top level menu items: submenu offset.
 // Works only with horizontal navigation.
 .no-overlay-menu:not(.is-vertical),
 .has-overlay-menu .wp-block-navigation__responsive-container:not(.is-menu-open) {
 
-	.wp-block-navigation__container > .has-child {
+	.wp-block-navigation__container > .has-child:not(.open-always) {
 
 		> #{$selector} {
 			margin-block-start: var(--theme--css--submenu-offset);
@@ -225,8 +259,8 @@
 // For Site Editor.
 .wp-block-navigation {
 
-	.has-child.has-child-selected,
-	.has-child.is-selected {
+	.has-child:not(.open-always).has-child-selected,
+	.has-child:not(.open-always).is-selected {
 
 		> #{$selector} {
 			min-width: clamp( 16em, 15vw, 320px ) !important;
@@ -234,7 +268,7 @@
 	}
 }
 
-.wp-block-navigation.is-vertical .has-child #{$selector} {
+.wp-block-navigation.is-vertical .has-child:not(.open-always) #{$selector} {
 	inset-block-start: calc( -1 * ( var(--theme--css--submenu-padding) - 2 * var(--theme--css--submenu-item-padding) ) );
 	transform: none;
 }
@@ -242,10 +276,17 @@
 [class].wp-block-navigation:not(.has-background) #{$selector} {
 	// This can not be edited by `theme.json`.
 	border-width: 0;
-	border-color: var(--theme--css--current-border-color);
+	border-color: inherit;
 }
 
-#{$selector} > .wp-block-navigation-item:not(:last-child) {
-	border-bottom-width: 1px;
-	border-bottom-style: dotted;
+//
+// Submenu item border separator.
+//
+#{$selector} > .wp-block-navigation-item:not( :last-child ) {
+
+	:root :where( [id|="site-navigation"] & ) {
+		border-bottom-width: var(--theme--css--submenu-separator--width);
+		border-bottom-style: var(--theme--css--submenu-separator--style);
+		border-bottom-color: var( --theme--css--submenu-separator--color, inherit ); // Fallback is required here, otherwise inherited border color does not work for some reason...
+	}
 }

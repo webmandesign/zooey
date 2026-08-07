@@ -1,11 +1,15 @@
-@use 'sass:math';
 // core/separator
+//
+// @since    1.0.0
+// @version  2.0.0
+@use 'sass:math';
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
 .wp-block-separator {
 	border-color: inherit;
+	border-top-width: var(--wp--custom--hr--border-width);
 	border-bottom-width: 0;
 
 	&.has-background {
@@ -19,11 +23,14 @@
 	&.is-style-dots {
 
 		&::before {
-			content: '●●●';
-			padding-inline-start: 1em;
-			font-family: sans-serif;
-			font-size: 1em;
-			letter-spacing: 1em;
+			content: '';
+			display: inline-block;
+			width: 3em;
+			height: .5em;
+			background: radial-gradient( currentColor 25%, transparent 25% );
+			background-size: 1em 1em;
+			background-repeat: repeat-x;
+			background-position: 50% 50%;
 		}
 	}
 
@@ -33,12 +40,12 @@
 		&.is-style-dotted,
 		&.is-style-dashed {
 			border-width: 0;
-			height: 2px;
+			height: var(--wp--custom--hr--border-width);
 			background-size: $size_dash + px !important;
 			background-image:
 				linear-gradient(
 					90deg,
-					var(--theme--css--current-border-color) #{ math.div( $size_dash, 2 ) + px },
+					var(--wp--custom--hr--dashed--color) #{ math.div( $size_dash, 2 ) + px },
 					transparent #{ math.div( $size_dash, 2 ) + 1px },
 					transparent #{ $size_dash + px }
 				) !important;
@@ -48,7 +55,8 @@
 			}
 
 			&.has-text-color {
-				--theme--css--current-border-color: currentColor;
+				--wp--custom--hr--dashed--color: currentColor;
+				--wp--custom--hr--dotted--color: currentColor;
 			}
 		}
 
@@ -57,7 +65,7 @@
 			background-image:
 				linear-gradient(
 					90deg,
-					var(--theme--css--current-border-color) 2px,
+					var(--wp--custom--hr--dotted--color) 2px,
 					transparent 3px,
 					transparent #{ $size_dot + px }
 				) !important;

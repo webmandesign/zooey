@@ -1,4 +1,6 @@
 // core/categories
+//
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -17,6 +19,10 @@
 		.cat-item {
 			position: relative;
 		}
+	}
+
+	:where( .is-layout-flex > & select ) {
+		width: 100%;
 	}
 }
 

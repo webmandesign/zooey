@@ -1,1 +1,1 @@
-.is-style-page-header .wp-block-post-featured-image [style*="object-fit:contain"]{-o-object-position:50% 0;object-position:50% 0}
+.is-style-page-header .wp-block-post-featured-image [style*="object-fit:contain"]{-o-object-position:50% 0;object-position:50% 0}:where([style*="-radius:"]:has(>.wp-block-post-featured-image:only-child)){overflow:hidden}

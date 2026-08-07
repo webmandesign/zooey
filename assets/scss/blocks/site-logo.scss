@@ -1,4 +1,7 @@
 // core/site-logo
+//
+// @since    1.0.0
+// @version  2.0.0
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -9,7 +12,7 @@
 
 		img {
 			width: auto;
-			max-width: 10em;
+			max-width: 20em;
 		}
 
 		.editor-styles-wrapper & > div {
@@ -20,5 +23,11 @@
 
 	&.aligncenter {
 		max-width: fit-content !important; // !important is for editor.
+	}
+
+	// Duotone improvements/helpers.
+	&[class*="wp-duotone"] {
+		--wp--preset--duotone--white: url(#wp-duotone-white) contrast(0) brightness(2);
+		--wp--preset--duotone--black: url(#wp-duotone-black) contrast(0) brightness(0);
 	}
 }

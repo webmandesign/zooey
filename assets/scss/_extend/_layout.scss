@@ -2,13 +2,13 @@
 
 // Clearing.
 
+	// @link  https://css-tricks.com/snippets/css/clear-fix/
 	%clearfix {
 
 		&::after {
 			content: '';
 			clear: both;
 			display: table;
-			table-layout: fixed;
 		}
 	}
 

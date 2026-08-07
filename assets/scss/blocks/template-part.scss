@@ -1,4 +1,7 @@
 // core/template-part
+//
+// @since    1.0.0
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -11,5 +14,14 @@
 		> * {
 			flex: 1;
 		}
+	}
+
+	&:not( .is-position-sticky ):where(
+		:has( > .is-position-sticky:only-child ),
+		.is-style-site-header:has( > .is-position-sticky )
+	) {
+		position: sticky;
+		inset-block-start: var( --theme--css--sticky-position-offset, 0px );
+		z-index: 999;
 	}
 }

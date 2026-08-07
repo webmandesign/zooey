@@ -1,4 +1,6 @@
 // core/post-featured-image
+//
+// @version  2.0.5
 
 @import '../_tools/_index';
 @import '../_setup/_index';
@@ -11,4 +13,8 @@
 			object-position: 50% 0;
 		}
 	}
+}
+
+:where( [style*="-radius:"]:has( > .wp-block-post-featured-image:only-child ) ) {
+	overflow: hidden;
 }

@@ -1,21 +1,27 @@
 /* FILE: _variables/_others.scss */
 
-/*! Vars: Others: */
-:root {
-
-	--theme--css--button--border: 2px solid;
-}
-
 #{$root} {
 
-	// Some elements may need to use the border color for something else,
-	// so we are setting local scope border color variable.
-	--theme--css--current-border-color: var(--wp--preset--color--contrast--border); // Border color from global text color.
-
-	--theme--css--button--color--border: transparent;
-
-	--theme--css--current-menu-item--decoration--color: currentColor;
+	// Having button border color setup here is correct! To allow overriding of this CSS variable,
+	// we need to set `var(--theme--css--button--color--border)` as a value for `theme.json/
+	// styles.elements.button.border.color`.
+	// It's a bit unfortunate, unintuitive, complicated, but it works and it keeps
+	// overridable button CSS variable names consistent.
+	--theme--css--button--color--border: var(--wp--custom--button--border--color);
 
 	--theme--css--gradient-stop--hard: var(--theme--mod--gradient_stop_hard);
 	--theme--css--gradient-stop--soft: var(--theme--mod--gradient_stop_soft);
+
+	--theme--css--current-menu-item--decoration--color: currentColor;
+}
+
+// Sticky position offset.
+:root {
+	--theme--css--header-height: var( --theme--js--header-height, 0px );
+	--theme--css--sticky-position-offset: calc( var( --wp-admin--admin-bar--height, 0px ) + var( --theme--css--header-height, 0px ) );
+
+	:where( .is-position-sticky ) {
+		// The CSS variable declared here is correct. It is used by WordPress.
+		--wp-admin--admin-bar--position-offset: var( --theme--css--sticky-position-offset, 0px );
+	}
 }

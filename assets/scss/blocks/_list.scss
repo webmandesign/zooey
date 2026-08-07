@@ -1,5 +1,7 @@
 /* FILE: blocks/_list.scss */
 // core/list
+//
+// @version  2.0.5
 
 // This has to be enqueued as a global block
 // style as WordPress does not apply `wp-block-list`
@@ -82,6 +84,36 @@ body .is-layout-constrained >,
 	}
 }
 
+ul[class*="is-style-list-"] {
+	padding-inline-start: 1em;
+}
+
+	ul[class*="is-style-list-"] li,
+	ul li[class*="is-style-list-"] {
+		padding-inline-start: 1ch;
+	}
+
+	.is-style-list-checkmark {
+		list-style-type: '✓';
+	}
+
+	.is-style-list-x {
+		list-style-type: '⨉';
+	}
+
+	.is-style-list-ballot {
+		list-style-type: '☐';
+
+		&-check {
+			list-style-type: '🗹';
+		}
+
+		&-x {
+			list-style-type: '☒';
+		}
+	}
+
+// Backwards compatibility:
 ul.is-style-checkmark.is-style-checkmark {
 	list-style-type: '\2713';
 	padding-inline-start: 1em;

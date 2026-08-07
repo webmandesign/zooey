@@ -1,4 +1,5 @@
 /* FILE: _variables/_theme-options.scss */
+@use 'sass:string';
 
 /*! Vars: Theme mods: */
 :root {
@@ -8,8 +9,8 @@
 
 		// Not WP preset (`theme.json`) CSS variables.
 		@if (
-			not str-index( $option + '', '--wp--' )
-			and not str-index( $value + '', '--wp--' )
+			not string.index( $option + '', '--wp--' )
+			and not string.index( $value + '', '--wp--' )
 		) {
 			#{ $option }: #{ $value + '' };
 		}
@@ -23,35 +24,10 @@
 
 		// WP preset (`theme.json`) CSS variables need to be defined on root based on WP Global Styles.
 		@if (
-			str-index( $option + '', '--wp--' )
-			or str-index( $value + '', '--wp--' )
+			string.index( $option + '', '--wp--' )
+			or string.index( $value + '', '--wp--' )
 		) {
 			#{ $option }: #{ $value + '' };
-		}
-
-		// Automatic color variables:
-		@if (
-			str-index( $option, 'color_' )
-			and not str-index( $option, 'gradient_' )
-			and 1 == str-index( $value + '', '#' )
-		) {
-
-			$wp_slug: _str_replace( '--theme--mod--color_', '--wp--preset--color--', $option );
-			$wp_slug: _str_replace( '_', '-', $wp_slug );
-
-			// Text color.
-			@if _is_dark_color( $value ) {
-				#{ $wp_slug }--bg-text: var(--wp--preset--color--white);
-				#{ $wp_slug }--bg-border: var(--wp--preset--color--white--border);
-			} @else {
-				#{ $wp_slug }--bg-text: var(--wp--preset--color--black);
-				#{ $wp_slug }--bg-border: var(--wp--preset--color--black--border);
-			}
-
-			// Border color.
-			// Have to convert to RGB first as SASS `rgba()` does not process variables.
-			$rgb: red( $value ), green( $value ), blue( $value );
-			#{ $wp_slug }--border: rgba( #{ $rgb }, var(--wp--custom--opacity--border) );
 		}
 	}
 }

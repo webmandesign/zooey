@@ -40,7 +40,14 @@ wp.blocks.registerBlockVariation( 'core/template-part', {
 	],
 	attributes: {
 		tagName: 'header',
-		className: 'is-style-page-header'
+		className: 'is-style-page-header',
+		style: {
+			spacing: {
+				margin: {
+					top: '0'
+				}
+			}
+		}
 	}
 } );
 
@@ -57,7 +64,7 @@ wp.blocks.registerBlockVariation( 'core/template-part', {
 	attributes: {
 		tagName: 'footer',
 		area: 'footer',
-		className: 'is-style-site-footer has-mobile-padding-bottom',
+		className: 'is-style-site-footer',
 		style: {
 			spacing: {
 				margin: {

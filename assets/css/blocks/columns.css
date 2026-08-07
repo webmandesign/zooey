@@ -1,1 +1,1 @@
-.wp-block-columns.alignfull:not(.has-background){padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right)}
+.wp-block-columns.alignfull:not(.has-background){padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right)}:where(.wp-block-columns:last-child){margin-bottom:0}

@@ -1,29 +1,47 @@
 // core/post-excerpt
-// @version  1.0.7
+//
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-.is-style-truncate-2 {
+@for $i from 2 through 4 {
 
-	.wp-block-post-excerpt__excerpt {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		overflow: hidden;
+	.is-style-truncate-#{$i} {
+
+		.wp-block-post-excerpt__excerpt {
+			@extend %excerpt_truncate;
+			-webkit-line-clamp: $i;
+		}
 	}
 }
 
-.wp-block-post-excerpt__more-link {
-	font-size: var(--wp--preset--font-size--xs);
-	font-weight: 600;
-	text-transform: uppercase;
-	text-decoration-thickness: var(--wp--custom--underline--thickness);
-	line-height: 1.25;
-	letter-spacing: var(--wp--custom--button--letter-spacing);
+%excerpt_truncate {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
 
-	.is-style-read-more-outline & {
-		@extend %button_outline;
+.wp-block-post-excerpt__more {
+
+	&-text {
+
+		p:empty + & {
+			margin-top: 0;
+		}
+	}
+
+	&-link {
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration-thickness: var(--wp--custom--underline--thickness);
+		line-height: 1.25;
+		letter-spacing: var(--wp--custom--button--letter-spacing);
+
+		.is-style-read-more-outline & {
+			@extend %button_outline;
+		}
 	}
 }
 

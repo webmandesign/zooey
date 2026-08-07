@@ -1,5 +1,4 @@
 /* FILE: _extend/_others.scss */
-// @version  1.0.7
 
 %badge_posts_count {
 	display: inline-block;
@@ -31,37 +30,22 @@
 }
 
 %button_outline {
-	// From default button padding and `core/button` block styles.
-	// @see  custom/_button.scss
-	// @see  blocks/button.scss
-	padding: 1.125em 1.5em;
-	font-family: var(--wp--custom--button--font-family);
-	font-size: var(--wp--custom--button--font-size);
-	text-align: center;
-	text-decoration-line: none;
-	border: 2px solid;
-	border-radius: var(--wp--custom--button--border-radius);
-	box-shadow: var(--wp--preset--shadow--s);
-	transition:
-		transform .1s linear,
-		background .1s linear,
-		color .1s linear,
-		border .1s linear,
-		box-shadow .1s linear;
 
-	&:hover,
-	&:focus {
-		text-decoration-line: underline;
-		text-decoration-style: dashed;
-		box-shadow: var(--wp--preset--shadow--m);
-		transform: scale(1.05);
+	:root :where( & ) {
+		--theme--css--button--color--background: transparent;
+		--theme--css--button--color--text: currentColor;
+		--theme--css--button--color--border: currentColor;
+		--wp--custom--button--border--width: var(--wp--custom--button--border--width-outline);
 	}
 
-	&:active {
-		text-decoration-line: underline;
-		text-decoration-style: dotted;
-		box-shadow: none;
-	}
+	// Need to override CSS produced by WordPress from `theme.json/styles.elements.button`.
+	padding-top:    var( --theme--css--button--padding--top,    1.25em );
+	padding-right:  var( --theme--css--button--padding--right,  1.5em  );
+	padding-bottom: var( --theme--css--button--padding--bottom, 1.25em );
+	padding-left:   var( --theme--css--button--padding--left,   1.5em  );
+	background: var(--theme--css--button--color--background);
+	color: var(--theme--css--button--color--text);
+	border-radius: var(--wp--custom--button--border--radius);
 }
 
 %current_menu_item {
@@ -81,7 +65,7 @@
 
 %featured_item {
 	position: relative;
-	z-index: 1;
+	isolation: isolate;
 
 	&::before {
 		content: '';

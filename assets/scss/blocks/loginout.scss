@@ -1,0 +1,21 @@
+// core/loginout
+//
+// @since  2.0.0
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-loginout {
+
+	:where( #{ $selectors_input_text_inline } ) {
+		width: 100%;
+	}
+
+	label {
+		display: block;
+
+		+ :where( #{ $selectors_input_text_inline } ) {
+			margin-block-start: $ratio_min + em;
+		}
+	}
+}

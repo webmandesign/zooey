@@ -1,53 +1,33 @@
 // core/search
 //
 // @since    1.0.0
-// @version  1.2.1
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
 .wp-block-search {
-	// Border color has to be here, not in `theme.json`
-	// due to WP global styles producing block CSS selector
-	// with `:where()` (0 specificity), so our global border
-	// color inheritance styles override that selector.
-	border-color: currentColor;
 
 	.wp-block-search__input {
 		padding: var(--wp--custom--spacing--input-vertical) 1em;
-		border-width: 2px;
+		border-width: var(--wp--custom--border-width--global);
 		border-color: inherit;
 		border-radius: var(--wp--custom--border-radius--form-field);
 	}
 
 	.wp-block-search__button.wp-block-search__button.wp-block-search__button {
-		// Modified global button padding.
+		// Taking only vertical button padding.
 		// @see  custom/_button.scss
-		padding: var(--wp--custom--spacing--input-vertical) 1em;
-	}
+		padding: var( --theme--css--button--padding--top, 1.125em );
 
-	&__button-inside {
-
-		.wp-block-search__inside-wrapper {
+		&.has-icon {
+			display: flex;
+			justify-content: center;
 			align-items: center;
-			padding: .15em;
-			border-width: 2px;
-
-			:where( & ) {
-				background: none;
-			}
-		}
-
-		.wp-block-search__input {
-			border-color: transparent;
-		}
-
-		&.wp-block-search__icon-button .wp-block-search__button.wp-block-search__button.wp-block-search__button {
-			width: 3em;
-			height: 3em;
+			width: 3.5em;
+			height: 3.5em;
 			padding: 0;
 			font-size: 1em;
-			line-height: 3;
 			border-width: 0;
 			box-shadow: none;
 
@@ -56,6 +36,36 @@
 				height: $ratio + em;
 				vertical-align: middle;
 			}
+		}
+	}
+
+	&__button-inside {
+
+		.wp-block-search__inside-wrapper {
+			align-items: center;
+			padding: .15em;
+			border-width: var(--wp--custom--border-width--global);
+
+			:where( & ) {
+				background: none;
+			}
+
+			// For block editor.
+			&[style*="border-radius:"] .wp-element-button {
+				border-radius: inherit;
+			}
+		}
+
+		.wp-block-search__input {
+			border-color: transparent;
+		}
+
+		&.wp-block-search__icon-button .wp-block-search__button.wp-block-search__button.wp-block-search__button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 3em;
+			height: 3em;
 		}
 	}
 
@@ -84,6 +94,10 @@
 		top: 50%;
 		transform: translateY( -50% );
 
+		&:not(.has-background) {
+			background-color: var(--wp--preset--color--base);
+		}
+
 		&.has-background {
 			padding: var(--wp--custom--spacing--input-vertical) 1em;
 		}
@@ -98,7 +112,13 @@
 		transform: none !important;
 
 		&:focus {
-			outline-color: currentColor;
+			//
+			// This is questionable as it only works when button text matches the form text color.
+			// If button has dark background and white text color, and surrounding background is
+			// white (light) color, the outline is invisible.
+			// So, it's better not to set the outline color here.
+			//
+			// outline-color: currentColor;
 		}
 
 		&[class][aria-expanded="true"] {
@@ -109,18 +129,16 @@
 			width: $ratio + em;
 			height: auto;
 		}
-	}
 
-		&.wp-block-search__icon-button .wp-block-search__button[class] {
-			padding: 0;
-			font-size: 1em;
+		&.has-icon.has-icon.has-icon {
+			width: auto;
+			height: auto;
 			background: none !important;
 			color: inherit !important;
-			border-width: 0;
-			box-shadow: none;
 		}
+	}
 
-	&.wp-block-search__searchfield-hidden {
+	&.wp-block-search__searchfield-hidden[class] {
 
 		&,
 		.wp-block-search__inside-wrapper {

@@ -1,0 +1,15 @@
+/* FILE: custom/_footer.scss */
+
+.is-style-site-footer {
+	position: relative;
+	z-index: 0;
+}
+
+// `has-to-top-link` class should be applied on paragraph or image.
+.has-to-top-link {
+	display: none;
+
+	.is-style-site-footer & {
+		display: block;
+	}
+}

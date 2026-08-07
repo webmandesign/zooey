@@ -1,22 +1,13 @@
 // core/button
-// @version  1.2.5
+//
+// @version  2.0.1
 
 @import '../_tools/_index';
 @import '../_setup/_index';
 
-.wp-block-button.wp-block-button .wp-block-button__link.is-style-outline,
-.wp-block-button.wp-block-button.is-style-outline > .wp-block-button__link {
-	--theme--css--button--color--background: transparent;
-	--theme--css--button--color--text: currentColor;
-	--theme--css--button--color--border: currentColor;
-	--theme--css--button--border: 2px solid;
-
-	// From default button padding.
-	// @see  custom/_button.scss
-	padding: 1.125em 1.5em;
-
-	&:not(.has-text-color),
-	.editor-styles-wrapper.editor-styles-wrapper &[class] {
-		color: inherit;
-	}
+.wp-block-button__link.is-style-outline,
+.is-style-outline > .wp-block-button__link {
+	@extend %button_outline;
 }
+
+@import '../_extend/_index';

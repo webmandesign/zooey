@@ -1,0 +1,26 @@
+// Take $option[`css_var`]['name'] from theme options.
+// @see  Customize\Options::set()
+$theme_options: (
+
+	// Gradients.
+	'--theme--mod--gradient_stop_hard' : 50%,
+	'--theme--mod--gradient_stop_soft' : 10%,
+
+	// Layout.
+	'--theme--mod--layout_width_content' : 640px,
+	'--theme--mod--layout_width_wide'    : 1440px,
+
+	// Typography.
+	// @link  https://www.modularscale.com/?1&em&1.2
+	'--theme--mod--typography_font_size'                : 20, // px
+	'--theme--mod--typography_modular_scale'            : 1.2,
+	'--theme--mod--typography_desktop_multiply'         : 1.75,
+	'--theme--mod--typography_font_family_global'       : ( 'Ubuntu Sans', sans-serif ),
+	'--theme--mod--typography_font_family_supplemental' : ( 'Unica One', sans-serif ),
+	'--theme--mod--typography_font_family_alternative'  : ( 'Ubuntu Sans', sans-serif ),
+);
+
+// For `customize-controls.scss` file:
+$customizer_non_theme_panel_controls: (
+	'link_homepage_logo',
+);
