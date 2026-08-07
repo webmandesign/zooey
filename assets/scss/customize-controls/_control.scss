@@ -54,4 +54,8 @@
 		min-height: 12em;
 		resize: vertical;
 	}
+
+	::placeholder {
+		color: #ccc;
+	}
 }

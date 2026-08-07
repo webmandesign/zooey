@@ -1,7 +1,10 @@
+@use 'sass:string';
+
 //
 // Replace string.
 //
-// @since  1.0.0
+// @since    1.0.0
+// @version  2.0.0
 //
 // @param  string $search
 // @param  string $replace
@@ -9,10 +12,10 @@
 //
 @function _str_replace( $search, $replace, $subject ) {
 
-	$index: str-index( $subject, $search );
+	$index: string.index( $subject, $search );
 
 	@if $index {
-		@return str-slice( $subject, 1, $index - 1 ) + $replace + _str_replace( $search, $replace, str-slice( $subject, $index + str-length( $search ) ) );
+		@return string.slice( $subject, 1, $index - 1 ) + $replace + _str_replace( $search, $replace, string.slice( $subject, $index + string.length( $search ) ) );
 	}
 
 	@return $subject;

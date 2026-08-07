@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
@@ -22,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="welcome__column">
 	<figure class="welcome__image">
 		<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=typography_modular_scale' ) ); ?>">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/features/typography.jpg' ) . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
+			<img src="<?php echo esc_url( 'https://pic.webmandesign.eu/FEATURES/zooey/' . 'typography.webp' . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
 		</a>
 	</figure>
 

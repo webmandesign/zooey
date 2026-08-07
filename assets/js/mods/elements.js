@@ -22,6 +22,6 @@ wp.domReady( () => {
 		 * @see   Customize\Styles::get_selector()
 		 * @see   assets/scss/_setup/_selectors.scss
 		 */
-		wp.blocks.__EXPERIMENTAL_ELEMENTS.button = ileanaMods.selector.button;
+		wp.blocks.__EXPERIMENTAL_ELEMENTS.button = zooeyMods.selector.button;
 	}
 } );

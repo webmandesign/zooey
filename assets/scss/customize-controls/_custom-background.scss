@@ -1,0 +1,12 @@
+/* FILE: customize-controls/_custom-background.scss */
+
+#customize-control-background_image {
+
+	&[style="display:none;"],
+	&[style="display: none;"] {
+
+		~ .custom-background-image-control {
+			display: none;
+		}
+	}
+}

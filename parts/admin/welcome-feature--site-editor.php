@@ -8,7 +8,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
@@ -34,7 +34,7 @@ if ( ! Site_Editor::is_enabled() ) {
 <div class="welcome__column">
 	<figure class="welcome__image">
 		<a href="<?php echo esc_url( $url_site_editor ); ?>">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/features/site-editor.jpg' ) . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
+			<img src="<?php echo esc_url( 'https://pic.webmandesign.eu/FEATURES/zooey/' . 'site-editor.webp' . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
 		</a>
 	</figure>
 

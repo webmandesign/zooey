@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -67,7 +67,7 @@ class RGBA implements Component_Interface {
 	 * Sets alpha values (%) for CSS rgba() colors.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.0
+	 * @version  2.0.0
 	 *
 	 * @param  array $alphas
 	 *
@@ -75,54 +75,19 @@ class RGBA implements Component_Interface {
 	 */
 	public static function alphas( array $alphas ): array {
 
+		// Processing
+
+			foreach ( Colors::get_slugs_accent() as $slug ) {
+				$alphas[ 'color_' . $slug ] = array(
+					// Semitransparent colors are used in backdrop blur gradients.
+					'color_' . $slug . '_semitransparent' => self::get_alpha_args_semitransparent( $slug ),
+				);
+			}
+
+
 		// Output
 
-			return array(
-
-				/**
-				 * Base color border setup is required for
-				 * @see  CSS_Variables::get_array_from_global_styles()
-				 *
-				 * For additional `color_base` setup
-				 * @see  Styles::get_css_variables()
-				 *
-				 * @see  customize-preview.js
-				 * 'background_color' => array( self::get_alfa_args_border( 'base' ) ),
-				 */
-				'color_base' => array(
-					self::get_alfa_args_border( 'base' ),
-				),
-
-				'color_base_alt' => array(
-					self::get_alfa_args_border( 'base-alt' ),
-				),
-
-				'color_contrast' => array(
-					self::get_alfa_args_border( 'contrast' ),
-				),
-
-				'color_contrast_alt' => array(
-					self::get_alfa_args_border( 'contrast-alt' ),
-				),
-
-				'color_primary' => array(
-					self::get_alfa_args_border( 'primary' ),
-					self::get_alfa_args_semitransparent( 'primary' ),
-				),
-
-					'color_primary_mixed' => array(
-						self::get_alfa_args_border( 'primary-mixed' ),
-					),
-
-				'color_secondary' => array(
-					self::get_alfa_args_border( 'secondary' ),
-					self::get_alfa_args_semitransparent( 'secondary' ),
-				),
-
-					'color_secondary_mixed' => array(
-						self::get_alfa_args_border( 'secondary-mixed' ),
-					),
-			);
+			return $alphas;
 
 	} // /alphas
 
@@ -179,7 +144,7 @@ class RGBA implements Component_Interface {
 	 * Adding RGBA CSS variables.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.0
+	 * @version  2.0.0
 	 *
 	 * @param  array  $css_vars
 	 * @param  array  $option
@@ -197,28 +162,19 @@ class RGBA implements Component_Interface {
 
 		// Processing
 
+			// Prepare option ID.
 			if (
 				! isset( $option['id'] )
 				&& isset( $option['slug'] )
 			) {
-
 				$option['id'] = 'color_' . str_replace( '-', '_', $option['slug'] );
 			}
 
+			// Set the CSS variables.
 			if ( isset( $alphas[ $option['id'] ] ) ) {
-
 				foreach ( $alphas[ $option['id'] ] as $args ) {
 					$css_vars[ $args['css_var_name'] ] = esc_attr( Colors::hex_to_rgba( (string) $value, $args['alpha'] ) );
 				}
-			}
-
-			// Default WordPress color palette has been modified,
-			// so we need to provide border CSS variable for the colors.
-			if ( 'default' === $scope ) {
-
-				$args = self::get_alfa_args_border( $option['slug'] );
-
-				$css_vars[ $args['css_var_name'] ] = esc_attr( Colors::hex_to_rgba( (string) $value, $args['alpha'] ) );
 			}
 
 
@@ -229,35 +185,17 @@ class RGBA implements Component_Interface {
 	} // /css_variable
 
 	/**
-	 * Get border CSS variable setup args.
-	 *
-	 * @since  1.1.0
-	 *
-	 * @param  string $slug  Color slug used in border CSS variable name.
-	 *
-	 * @return  array
-	 */
-	public static function get_alfa_args_border( string $slug ): array {
-
-		// Output
-
-			return array(
-				'css_var_name' => '--wp--preset--color--' . $slug . '--border',
-				'alpha'        => 'var(--wp--custom--opacity--border)',
-			);
-
-	} // /get_alfa_args_border
-
-	/**
 	 * Get semitransparent CSS variable setup args.
 	 *
-	 * @since  1.1.0
+	 * Semitransparent colors are used in backdrop blur gradients.
 	 *
-	 * @param  string $slug  Color slug used in semitransparent CSS variable name.
+	 * @since  1.0.0
+	 *
+	 * @param  string $slug  Color slug used in returned CSS variable name.
 	 *
 	 * @return  array
 	 */
-	public static function get_alfa_args_semitransparent( string $slug ): array {
+	public static function get_alpha_args_semitransparent( string $slug ): array {
 
 		// Output
 
@@ -266,6 +204,6 @@ class RGBA implements Component_Interface {
 				'alpha'        => 'var(--wp--custom--opacity--semitransparent)',
 			);
 
-	} // /get_alfa_args_semitransparent
+	} // /get_alpha_args_semitransparent
 
 }

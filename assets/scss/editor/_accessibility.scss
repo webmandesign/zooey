@@ -4,7 +4,6 @@
 .wp-block.is-style-screen-reader-text,
 .wp-block > .is-style-screen-reader-text {
 	position: relative !important;
-	clip: auto !important;
 	clip-path: none !important;
 	width: auto !important;
 	height: auto !important;
@@ -63,13 +62,17 @@
 }
 
 // Inline formats in rich text editor.
-// @see  assets/js/rich-text-format.js
+// @see  Editor\Assets::scripts()
+// @see  assets/js/block-editor.js
+// @see  assets/js/editor/formats.js
 .rich-text {
 
 	span.screen-reader-text[class] {
 		clip: auto;
 		clip-path: none;
 		position: static !important;
+		width: unset;
+		height: unset;
 		line-height: inherit;
 		outline: 2px dotted;
 
@@ -78,7 +81,19 @@
 		}
 	}
 
+		&:not( .is-selected ) span.screen-reader-text {
+			display: inline-block;
+			max-width: 4ch !important;
+			line-height: 1;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+	span.screen-reader-text,
 	span.is-aria-hidden {
-		outline: 2px dashed;
+		padding-inline: .25em;
+		background-color: color-mix( in srgb, currentColor 15%, transparent );
+		border-radius: 2px;
 	}
 }

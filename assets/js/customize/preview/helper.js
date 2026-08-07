@@ -9,14 +9,14 @@ export default null;
 
 ( () => {
 
-	window.ileana = window.ileana || {};
+	window.zooey = window.zooey || {};
 
 	/**
 	 * Theme customizer preview helper functions.
 	 *
 	 * @since  1.0.0
 	 */
-	window.ileana.Customize = {
+	window.zooey.Customize = {
 
 		/**
 		 * Convert hex color into RGB array.
@@ -42,7 +42,7 @@ export default null;
 		 * @version  2.0.0
 		 */
 		hexToRgb : ( $hex = '' ) => {
-			return ileana.Customize.hexToRgbArray( $hex ).join();
+			return zooey.Customize.hexToRgbArray( $hex ).join();
 		},
 	}
 } )();

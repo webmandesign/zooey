@@ -7,33 +7,21 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
 
-use WebManDesign\Zooey\Setup\Site_Editor;
-
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$url_site_editor = false;
-
-if ( Site_Editor::is_enabled() ) {
-	$url_site_editor = add_query_arg(
-		array(
-			'path' => '%2Fpatterns',
-		),
-		admin_url( 'site-editor.php' )
-	);
-}
 
 ?>
 
 <div class="welcome__column">
 	<figure class="welcome__image">
 		<a href="https://webmandesign.github.io/docs/zooey/#block-patterns">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/features/patterns.jpg' ) . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
+			<img src="<?php echo esc_url( 'https://pic.webmandesign.eu/FEATURES/zooey/' . 'patterns.webp' . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
 		</a>
 	</figure>
 
@@ -52,9 +40,11 @@ if ( Site_Editor::is_enabled() ) {
 		<?php esc_html_e( 'No need to import demo content data anymore.', 'zooey' ); ?>
 	</p>
 
-	<?php if ( $url_site_editor ) : ?>
-	<p><a href="<?php echo esc_url( $url_site_editor ); ?>" class="button button-hero"><?php esc_html_e( 'Manage Patterns', 'zooey' ); ?></a></p>
-	<?php endif; ?>
+	<p>
+		<a href="<?php echo esc_url( admin_url( 'site-editor.php?path=/patterns' ) ); ?>" class="button button-hero"><?php esc_html_e( 'Block Patterns', 'zooey' ); ?></a>
+		&ndash;
+		<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=patterns_disable_categories' ) ); ?>" class="button"><?php esc_html_e( 'Toggle Patterns', 'zooey' ); ?></a>
+	</p>
 
 	<p><a href="https://webmandesign.github.io/docs/zooey/#block-patterns"><small><em><?php esc_html_e( 'Info in documentation &rarr;', 'zooey' ); ?></em></small></a></p>
 </div>

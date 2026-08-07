@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
@@ -21,11 +22,21 @@ if ( ! class_exists( 'WebManDesign\Zooey\Welcome\Component' ) ) {
 
 ?>
 
-<div class="welcome__section welcome__header">
+<div class="welcome__section welcome__header" id="header">
 
 	<h1>
 		<?php echo wp_get_theme( 'zooey' )->display( 'Name' ); /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
-		<small><?php echo ZOOEY_THEME_VERSION; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?></small>
+		<small><?php
+
+			echo ZOOEY_THEME_VERSION; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
+
+			if ( version_compare( ZOOEY_THEME_VERSION, '1.0.0', '>' ) ) :
+				?>
+				<a href="#changelog" class="welcome__link--changelog"><?php esc_html_e( '(version changelog)', 'zooey' ); ?></a>
+				<?php
+			endif;
+
+		?></small>
 	</h1>
 
 	<p class="welcome__intro">
@@ -34,12 +45,12 @@ if ( ! class_exists( 'WebManDesign\Zooey\Welcome\Component' ) ) {
 		printf(
 			/* translators: 1: theme name, 2: theme developer link. */
 			esc_html__( 'Congratulations and thank you for choosing %1$s theme by %2$s!', 'zooey' ),
-			'<strong>' . wp_get_theme( 'zooey' )->display( 'Name' ) . '</strong>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'<strong>' . wp_get_theme( 'zooey' )->display( 'Name' ) . '</strong>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above
 			'<a href="' . esc_url( wp_get_theme( 'zooey' )->get( 'AuthorURI' ) ) . '"><strong>WebMan Design</strong></a>'
 		);
 
 		?>
-		<?php esc_html_e( 'Information on this page introduces the theme and provides useful tips.', 'zooey' ); ?>
+		<?php esc_html_e( 'Find theme introduction and useful tips below.', 'zooey' ); ?>
 	</p>
 
 	<nav class="welcome__nav">
@@ -57,7 +68,7 @@ if ( ! class_exists( 'WebManDesign\Zooey\Welcome\Component' ) ) {
 		</ul>
 	</nav>
 
-	<p>
+	<p class="welcome__buttons">
 		<a href="https://webmandesign.github.io/docs/zooey/" class="button button-hero button-primary"><?php esc_html_e( 'Documentation &rarr;', 'zooey' ); ?></a>
 		<a href="https://support.webmandesign.eu/forums/forum/zooey/" class="button button-hero button-primary"><?php esc_html_e( 'Support Forum &rarr;', 'zooey' ); ?></a>
 	</p>

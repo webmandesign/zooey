@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Customize\Control;
@@ -38,7 +39,8 @@ class HTML extends WP_Customize_Control {
 	/**
 	 * Renders the control wrapper and calls $this->render_content() for the internals.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -54,7 +56,7 @@ class HTML extends WP_Customize_Control {
 			}
 
 			if ( isset( $this->content ) ) {
-				echo wp_kses( $this->content, 'option_description' );
+				echo wp_kses( $this->content, '#description' );
 			} else {
 				esc_html_e( 'Please set the `content` parameter for the HTML control.', 'zooey' );
 			}
@@ -62,7 +64,7 @@ class HTML extends WP_Customize_Control {
 			if ( ! empty( $this->description ) ) {
 				echo
 					'<span class="description customize-control-description">'
-					. wp_kses( $this->description, 'option_description' )
+					. wp_kses( $this->description, '#description' )
 					. '</span>';
 			}
 

@@ -1,14 +1,16 @@
 /* FILE: global/base/_quote.scss */
 
 blockquote {
+	quotes: initial; // Required especially for editor.
 	max-width: 100%; // Yes, this is required especially for editor when quote is within a stack.
 	margin-inline: 0;
 	font-family: var(--wp--custom--quote--font-family);
 	font-size: var(--wp--custom--quote--font-size);
 	font-weight: 400;
 	line-height: var(--wp--custom--quote--line-height);
+	color: var( --wp--custom--quote--color--text, inherit );
 
-	.has-background:not(.has-text-color) & {
+	:where( .has-background, .has-text-color, .wp-block-cover ) & {
 		color: inherit;
 	}
 
@@ -24,17 +26,25 @@ blockquote {
 		max-width: none;
 		margin-block-start: $ratio_maj + em;
 
-		&:first-of-type::before {
-			content: '“';
-			display: inline-block;
-			margin-inline-end: .1em;
-			font-family: var(--wp--custom--quote--decoration--font-family);
-			font-size: $ratio * 2em;
-			font-weight: 700;
-			font-style: normal;
-			line-height: .05;
-			vertical-align: bottom;
-			pointer-events: none;
+		&:first-of-type {
+
+			&::before {
+				content: var(--wp--custom--quote--decoration--content);
+				display: inline-block;
+				margin-inline-end: .15em;
+				font-family: var(--wp--custom--quote--decoration--font-family);
+				font-size: var(--wp--custom--quote--decoration--font-size);
+				font-weight: 700;
+				font-style: normal;
+				line-height: .1;
+				opacity: var(--wp--custom--quote--decoration--opacity);
+				vertical-align: middle;
+				pointer-events: none;
+			}
+
+			&::after {
+				content: no-close-quote; // Resetting quotes.
+			}
 		}
 	}
 }

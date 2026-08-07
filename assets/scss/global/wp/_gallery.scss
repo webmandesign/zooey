@@ -1,4 +1,5 @@
 /* FILE: global/wp/_gallery.scss */
+@use 'sass:math';
 
 // Backwards compatibility: Gallery shortcode.
 .gallery {
@@ -15,6 +16,7 @@
 		flex-grow: 1;
 		justify-content: center;
 		max-width: 100%;
+		margin: 0;
 	}
 
 	&-caption {
@@ -36,7 +38,18 @@
 
 	@for $i from 2 through 9 {
 		&-columns-#{$i} .gallery-item {
-			width: calc( #{ percentage( math.div( 1, $i ) ) } - var(--wp--style--unstable-gallery-gap, 1rem ) * #{ math.div( ( $i - 1 ), $i ) } );
+			width: calc( #{ math.percentage( math.div( 1, $i ) ) } - var(--wp--style--unstable-gallery-gap, 1rem ) * #{ math.div( ( $i - 1 ), $i ) } );
+		}
+	}
+
+	@if true == $is_editor {
+
+		.wpview:not(:first-child) & {
+			margin-block-start: var(--wp--style--block-gap);
+		}
+
+		br[style] {
+			display: none;
 		}
 	}
 }

@@ -7,9 +7,9 @@ form {
 }
 
 fieldset {
-	padding: 2em 1em;
+	padding: $ratio + em;
 	margin-inline: 0;
-	border-width: 1px;
+	border-width: var(--wp--custom--border-width--fieldset);
 }
 
 legend {
@@ -40,7 +40,7 @@ textarea {
 	letter-spacing: inherit;
 	background: transparent;
 	color: inherit;
-	border-width: 2px;
+	border-width: var(--wp--custom--border-width--global);
 	border-style: solid;
 	vertical-align: baseline;
 
@@ -53,13 +53,17 @@ textarea {
 	}
 }
 
-	input,
+	input:not( [type="button"], [type="reset"], [type="submit"] ),
 	select,
 	textarea {
 
-		// For button focus see `assets/scss/custom/_button.scss`.
+		// For button focus @see `custom/_button.scss`.
 		&:focus {
-			border-color: currentColor;
+
+			// This selector is correct. We need to lower specificity for form buttons.
+			:where( & ) {
+				border-color: currentColor;
+			}
 		}
 	}
 
@@ -94,11 +98,15 @@ label {
 
 [type="checkbox"],
 [type="radio"] {
-	position: relative;
-	width: 1em;
-	height: 1em;
-	inset-block-end: -.2em;
-	vertical-align: baseline;
+
+	input:where( & ) {
+		position: relative;
+		width: 1em;
+		height: 1em;
+		inset-block-end: -.2em;
+		font-size: 1em;
+		vertical-align: baseline;
+	}
 
 	+ label {
 		letter-spacing: initial;
@@ -106,12 +114,12 @@ label {
 }
 
 option {
-	background: #fff !important;
-	color: #444 !important;
+	background: var( --wp--custom--color--option--bg, #fff ) !important;
+	color: var( --wp--custom--color--option--txt, #444 ) !important;
 
 	@media (prefers-color-scheme: dark) {
-		background: #111 !important;
-		color: #ddd !important;
+		background: var( --wp--custom--color--option-dark--bg, #111 ) !important;
+		color: var( --wp--custom--color--option-dark--txt, #ddd ) !important;
 	}
 }
 

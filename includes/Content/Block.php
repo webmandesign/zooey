@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -24,7 +24,7 @@ class Block implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.5
+	 * @version  2.0.4
 	 *
 	 * @return  void
 	 */
@@ -34,15 +34,9 @@ class Block implements Component_Interface {
 
 			// Actions
 
-				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue_editor_mods' );
-
-				add_action( 'init', __CLASS__ . '::styles', ZOOEY_ENQUEUE_PRIORITY );
+				add_action( 'init', __CLASS__ . '::styles' );
 
 			// Filters
-
-				add_filter( 'block_type_metadata_settings', __CLASS__ . '::block_settings', 10, 2 );
-
-				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__conditional', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 				add_filter( 'render_block', __CLASS__ . '::render__empty', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block', __CLASS__ . '::render__gap', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
@@ -51,53 +45,6 @@ class Block implements Component_Interface {
 				add_filter( 'render_block_core/social-links', __CLASS__ . '::render__social_links', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 	} // /init
-
-	/**
-	 * Enqueues block editor assets for block modifications.
-	 *
-	 * @since    1.0.0
-	 * @version  1.2.5
-	 *
-	 * @return  void
-	 */
-	public static function enqueue_editor_mods() {
-
-		// Variables
-
-			$header_image = get_header_image();
-
-			if ( empty( $header_image ) ) {
-				$header_image = get_theme_support( 'custom-header', 'default-image' );
-			}
-
-
-		// Processing
-
-			Assets\Factory::script_enqueue( array(
-				'handle' => 'zooey-block-mods',
-				'src'    => get_theme_file_uri( 'assets/js/block-mods.min.js' ),
-				'deps'   => array( 'wp-blocks', 'wp-hooks', 'wp-dom-ready', 'lodash' ),
-			) );
-
-			Assets\Factory::script_enqueue( array(
-				'handle'   => 'zooey-block-variations',
-				'src'      => get_theme_file_uri( 'assets/js/block-variations.min.js' ),
-				'deps'     => array( 'wp-blocks', 'wp-i18n', 'wp-dom-ready' ),
-				'localize' => array(
-					'zooeyVariations' => array(
-						'getTemplateDirectoryURI' => trailingslashit( get_template_directory_uri() ),
-						'getHeaderImage'          => esc_url_raw( $header_image ),
-					),
-				),
-			) );
-
-			Assets\Factory::script_enqueue( array(
-				'handle' => 'zooey-rich-text-format',
-				'src'    => get_theme_file_uri( 'assets/js/rich-text-format.min.js' ),
-				'deps'   => array( 'react', 'wp-block-editor', 'wp-i18n', 'wp-rich-text' ),
-			) );
-
-	} // /enqueue_editor_mods
 
 	/**
 	 * Registers individual block styles.
@@ -135,182 +82,6 @@ class Block implements Component_Interface {
 			}
 
 	} // /styles
-
-	/**
-	 * Block (block type) settings modification.
-	 *
-	 * No need to enable specific options,
-	 * simply enabling whole groups of options.
-	 *
-	 * @since    1.0.0
-	 * @version  1.0.7
-	 *
-	 * @param  array $settings  Array of determined settings for registering a block type.
-	 * @param  array $metadata  Metadata provided for registering a block type.
-	 *
-	 * @return  array
-	 */
-	public static function block_settings( array $settings, array $metadata ): array {
-
-		// Processing
-
-			switch ( $metadata['name'] ) {
-
-				/**
-				 * Padding + margin.
-				 */
-				case 'core/post-content':
-					$settings['supports']['spacing']['padding'] =
-					$settings['supports']['spacing']['margin']  = true;
-					break;
-
-				/**
-				 * Margin.
-				 */
-				case 'core/comments-pagination':
-				case 'core/query-pagination':
-				case 'core/search':
-					$settings['supports']['spacing']['margin'] = true;
-					break;
-
-				/**
-				 * Border.
-				 *
-				 * //* = Some blocks actually support border setup,
-				 * but the support may be partial only. For such cases
-				 * we need to enable additional (whole) support here,
-				 * but there's no need to do so via JavaScript.
-				 * A Column block is one of such blocks.
-				 * @link  https://fullsiteediting.com/block-support/__experimentalborder/
-				 */
-				case 'core/column':
-				case 'core/cover':
-				case 'core/post-author':
-				case 'core/post-comments-form':
-				case 'core/site-tagline':
-					$settings['supports']['__experimentalBorder']['color']  =
-					$settings['supports']['__experimentalBorder']['style']  =
-					$settings['supports']['__experimentalBorder']['width']  =
-					$settings['supports']['__experimentalBorder']['radius'] = true;
-					break;
-
-				/**
-				 * Block gap.
-				 */
-
-					case 'core/details':
-					case 'core/post-author-biography':
-						$settings['supports']['layout']['allowEditing'] = false;
-						break;
-
-				/**
-				 * Specific setups.
-				 */
-
-					case 'core/comment-content':
-						$settings['supports']['__experimentalBorder'] =
-						$settings['supports']['spacing']['margin']    = true;
-						break;
-
-					case 'core/comments':
-						// https://make.wordpress.org/core/2023/07/14/layout-updates-in-the-editor-for-wordpress-6-3/
-						$settings['supports']['__experimentalLayout']['allowSizingOnChildren'] =
-						$settings['supports']['layout']['allowSizingOnChildren']               = true;
-						break;
-
-					case 'core/image':
-						$settings['supports']['color']['background'] =
-						$settings['supports']['color']['text']       =
-						$settings['supports']['color']['gradients']  = true;
-
-						// Adding duotone support for SVG in Image block.
-						if ( isset( $settings['selectors']['filter']['duotone'] ) ) {
-							$settings['selectors']['filter']['duotone'] .= ', .wp-block-image svg';
-						}
-						break;
-
-					case 'core/post-excerpt':
-						$settings['supports']['layout']['allowEditing']         = false;
-						$settings['supports']['__experimentalBorder']['color']  =
-						$settings['supports']['__experimentalBorder']['style']  =
-						$settings['supports']['__experimentalBorder']['width']  =
-						$settings['supports']['__experimentalBorder']['radius'] = true;
-						break;
-
-					case 'core/post-featured-image':
-						$settings['supports']['color']['background'] =
-						$settings['supports']['color']['gradients']  = true;
-						break;
-
-					case 'core/post-navigation-link':
-						$settings['supports']['__experimentalBorder'] =
-						$settings['supports']['spacing']['padding']   =
-						$settings['supports']['spacing']['margin']    = true;
-						break;
-
-					case 'core/site-logo':
-						$settings['supports']['__experimentalBorder'] =
-						$settings['supports']['color']['background']  =
-						$settings['supports']['color']['gradients']   = true;
-						break;
-
-					case 'core/template-part':
-						$settings['supports']['dimensions']['minHeight'] =
-						$settings['supports']['position']['sticky']      =
-						$settings['supports']['spacing']['margin']       = true;
-						break;
-			}
-
-
-		// Output
-
-			return $settings;
-
-	} // /block_settings
-
-	/**
-	 * Block output modification: Bypass block rendering depending on conditional callback return.
-	 *
-	 * For conditional display, add this to a block:
-	 * @example
-	 *   <!-- wp:pattern {"slug":"slug-here","condition":{"true":"callback","false":"callback"}} /-->
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param  string|null $pre_render  The rendered content. Default null.
-	 * @param  array       $block       The block being rendered.
-	 *
-	 * @return  string|null
-	 */
-	public static function pre_render__conditional( $pre_render, array $block ) {
-
-		// Processing
-
-			if ( isset( $block['attrs']['condition'] ) ) {
-
-				if (
-					isset( $block['attrs']['condition']['true'] )
-					&& is_callable( $block['attrs']['condition']['true'] )
-					&& ! (bool) call_user_func( $block['attrs']['condition']['true'] )
-				) {
-					$pre_render = '';
-				}
-
-				if (
-					isset( $block['attrs']['condition']['false'] )
-					&& is_callable( $block['attrs']['condition']['false'] )
-					&& (bool) call_user_func( $block['attrs']['condition']['false'] )
-				) {
-					$pre_render = '';
-				}
-			}
-
-
-		// Output
-
-			return $pre_render;
-
-	} // /pre_render__conditional
 
 	/**
 	 * Block output modification: Set empty block content class.
@@ -374,7 +145,8 @@ class Block implements Component_Interface {
 	/**
 	 * Block output modification: Block gap.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -387,7 +159,7 @@ class Block implements Component_Interface {
 
 			$blocks = array(
 				'core/categories',
-				'core/post-excerpt',
+				'core/navigation',
 				'core/tag-cloud',
 			);
 
@@ -404,9 +176,10 @@ class Block implements Component_Interface {
 
 					// Get spacing CSS variable from preset value if provided.
 					if ( str_contains( $value, 'var:preset|spacing|' ) ) {
-						$index_to_splice = strrpos( $value, '|' ) + 1;
-						$slug            = _wp_to_kebab_case( substr( $value, $index_to_splice ) );
-						$value           = 'var(--wp--preset--spacing--' . $slug . ')';
+						$value =
+							'var(--wp--preset--spacing--'
+							. _wp_to_kebab_case( str_replace( 'var:preset|spacing|', '', $value ) )
+							. ')';
 					}
 
 					return $value;
@@ -415,7 +188,7 @@ class Block implements Component_Interface {
 
 				$html->next_tag();
 				$html->add_class( 'has-block-gap' );
-				$html->set_attribute( 'style', '--wp--style--block-gap:' . implode( ' ', $gap ) . ';' . (string) $html->get_attribute( 'style' ) );
+				$html->set_attribute( 'style', '--theme--css--block-gap:' . implode( ' ', $gap ) . ';' . (string) $html->get_attribute( 'style' ) );
 
 				$block_content = $html->get_updated_html();
 			}
@@ -471,7 +244,8 @@ class Block implements Component_Interface {
 	 * Adds helpful layout justification CSS class.
 	 * Allows using anchor links (starting with `#`).
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.5
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -492,9 +266,7 @@ class Block implements Component_Interface {
 				$block_content = $html->get_updated_html();
 			}
 
-			if ( strpos( $block_content, 'https://#' ) ) {
-				$block_content = str_replace( 'https://#', '#', $block_content );
-			}
+			$block_content = str_replace( 'https://#', '#', $block_content );
 
 
 		// Output

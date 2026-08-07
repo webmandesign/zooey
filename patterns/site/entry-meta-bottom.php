@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,7 +34,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"},"condition":{"false":"post_password_required"}} -->
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"wrap"},"fontSize":"xs"} -->

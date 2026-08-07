@@ -3,7 +3,7 @@
 table {
 	width: 100%;
 	color: inherit; // Required for Chrome browser, for example.
-	border-width: 1px;
+	border-width: var(--wp--custom--border-width--table);
 	border-style: solid;
 	border-collapse: collapse;
 }
@@ -18,7 +18,7 @@ caption {
 th,
 td {
 	padding: $ratio_maj + em;
-	border-width: 1px;
+	border-width: var(--wp--custom--border-width--table);
 	border-style: solid;
 	vertical-align: top;
 }

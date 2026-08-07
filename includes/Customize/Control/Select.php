@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Customize\Control;
@@ -29,7 +30,8 @@ class Select extends WP_Customize_Control {
 	/**
 	 * Renders the control wrapper and calls $this->render_content() for the internals.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -47,7 +49,7 @@ class Select extends WP_Customize_Control {
 
 					<?php if ( $this->description ) : ?>
 					<span class="description customize-control-description"><?php
-						echo wp_kses( $this->description, 'option_description' );
+						echo wp_kses( $this->description, '#description' );
 					?></span>
 					<?php endif; ?>
 
@@ -57,18 +59,18 @@ class Select extends WP_Customize_Control {
 					>
 						<?php
 
-						foreach ( $this->choices as $value => $name ) {
+						foreach ( $this->choices as $value => $label ) {
 							if ( 0 === strpos( $value, 'optgroup' ) ) {
-								echo '<optgroup label="' . esc_attr( $name ) . '">';
+								echo '<optgroup label="' . esc_attr( $label ) . '">';
 							} elseif ( 0 === strpos( $value, '/optgroup' ) ) {
 								echo '</optgroup>';
 							} else {
 								echo
 									'<option
 										value="' . esc_attr( $value ) . '" '
-									. selected( $this->value(), $value, false )
+									. selected( $this->value(), $value, false ) // Return, do not echo.
 									. '>'
-									. esc_html( $name )
+									. esc_html( $label )
 									. '</option>';
 							}
 						}

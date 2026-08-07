@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.2
+ * @version  1.0.1
  */
 
 namespace WebManDesign\Zooey\Customize\Control;
@@ -31,7 +31,7 @@ class Text extends WP_Customize_Control {
 	 * Renders the control wrapper and calls $this->render_content() for the internals.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.2
+	 * @version  1.0.1
 	 *
 	 * @return  void
 	 */

@@ -2,41 +2,23 @@
 // Colors styles helper.
 //
 // @since    1.0.0
-// @version  1.0.7
+// @version  2.0.4
 //
 // @param  string $slug
 //
 @mixin color_classes( $slug: '' ) {
 
 	.has-#{ $slug }-background-color {
+		color: var(--wp--preset--color--#{ $slug }--bg-text);
 
-		&:not(.has-text-color) {
-			color: var(--wp--preset--color--#{ $slug }--bg-text);
-			border-color: var(--wp--preset--color--#{ $slug }--bg-border);
-			--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--bg-border);
-		}
-
-		&:not(.has-link-color) a {
-			color: inherit;
-		}
-
-		&#{ $selectors_button_colors } {
+		&:where( #{ $selectors_button_colors } ) {
 			--theme--css--button--color--background: var(--wp--preset--color--#{ $slug });
 			--theme--css--button--color--text: var(--wp--preset--color--#{ $slug }--bg-text);
-			@if $enable_button_color_overrides {
-				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--bg-border);
-			}
 		}
-	}
 
-	.has-#{ $slug }-color {
-		border-color: var(--wp--preset--color--#{ $slug }--border);
-		--theme--css--current-border-color: var(--wp--preset--color--#{ $slug }--border);
-
-		@if $enable_button_color_overrides {
-			&#{ $selectors_button_colors } {
-				--theme--css--button--color--border: var(--wp--preset--color--#{ $slug }--border);
-			}
+		// We need to override WordPress default color, unfortunately.
+		&.wp-block-navigation__responsive-container[class][class][class] {
+			color: var(--wp--preset--color--#{ $slug }--bg-text);
 		}
 	}
 }

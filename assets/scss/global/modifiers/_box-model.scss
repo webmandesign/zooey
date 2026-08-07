@@ -71,10 +71,19 @@
 	}
 
 	// Useful for site footer if fixed mobile navigation toggle used.
-	.has-mobile-padding-bottom {
+	// The `has-mobile-padding-bottom` should be applied on the actual
+	// footer Template Part block (the footer container, wrapper).
+	:where( body:not( .a11y-disable-fixed-mobile-toggle, .a11y-disable-mobile-padding-bottom ) ) .has-mobile-padding-bottom {
 
-		@include media( ( 600, 'max-width' ) ) { // WP breakpoint.
-			padding-bottom: 8em $important_modifiers;
+		> .wp-block-cover,
+		> .wp-block-group {
+
+			&:last-child {
+
+				@include media( ( 600, 'max-width' ) ) { // WP breakpoint.
+					padding-bottom: 8em $important_modifiers;
+				}
+			}
 		}
 	}
 
@@ -150,6 +159,21 @@
 
 	.has-hidden-overflow {
 		overflow: hidden $important_modifiers;
+	}
+
+	.has-clip-overflow {
+		overflow: clip $important_modifiers;
+	}
+
+	.has-table {
+		overflow-x: auto $important_modifiers;
+
+		table,
+		.wp-block-table table {
+			width: auto;
+			min-width: 100%;
+			white-space: nowrap;
+		}
 	}
 
 	$important_modifiers: null; // Required reset.

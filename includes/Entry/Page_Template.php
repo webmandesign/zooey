@@ -9,7 +9,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Entry;
@@ -47,18 +48,29 @@ class Page_Template implements Component_Interface {
 	);
 
 	/**
-	 * Soft cache for whether sidebar was edited.
+	 * Name of cached data transient for sidebar status.
 	 *
-	 * @since   1.0.0
-	 * @access  private
-	 * @var     null|bool
+	 * @since   2.0.0
+	 * @access  public
+	 * @var     string
 	 */
-	private static $has_sidebar = null;
+	public static $transient_cache_key = 'zooey_cache_has_sidebar';
+
+	/**
+	 * Soft cache for sidebar status.
+	 *
+	 * @since    1.0.0
+	 * @version  2.0.0
+	 * @access   public
+	 * @var      mixed
+	 */
+	public static $has_sidebar = null;
 
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -69,6 +81,11 @@ class Page_Template implements Component_Interface {
 			// Actions
 
 				add_action( 'wp', __CLASS__ . '::setup_layout_with_sidebar' );
+
+				add_action( 'save_post_'   . 'wp_template',      __CLASS__ . '::transient_cache_flush_has_sidebar' );
+				add_action( 'delete_post_' . 'wp_template',      __CLASS__ . '::transient_cache_flush_has_sidebar' );
+				add_action( 'save_post_'   . 'wp_template_part', __CLASS__ . '::transient_cache_flush_has_sidebar' );
+				add_action( 'delete_post_' . 'wp_template_part', __CLASS__ . '::transient_cache_flush_has_sidebar' );
 
 			// Filters
 
@@ -100,7 +117,8 @@ class Page_Template implements Component_Interface {
 	 * as depending on whether Gutenberg plugin is active,
 	 * the WP_Theme_JSON_Data can also be WP_Theme_JSON_Data_Gutenberg.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @param  WP_Theme_JSON_Data $theme_json
 	 *
@@ -116,31 +134,39 @@ class Page_Template implements Component_Interface {
 		// Processing
 
 			if ( ! Site_Editor::is_enabled() ) {
-				unset( $data['customTemplates'] );
+				$data['customTemplates'] = array();
 
 			} elseif ( ! empty( $data['customTemplates'] ) ) {
 
-				$data['customTemplates'] = array_map( function( $custom_template ) {
+				$data['customTemplates'] = array_map(
+					function( $custom_template ) {
 
-					if (
-						! empty( $custom_template['postTypes'] )
-						&& 'public-post-types' === $custom_template['postTypes'][0]
-					) {
+						if (
+							! empty( $custom_template['postTypes'] )
+							&& 'public-post-types' === $custom_template['postTypes'][0]
+						) {
 
-						// If using "magic word", assign to every public post type.
-						$custom_template['postTypes'] = get_post_types( array(
-							'public' => true,
-						) );
+							// If using "magic word", assign to every public post type.
+							$custom_template['postTypes'] = get_post_types( array(
+								'public' => true,
+							) );
 
-						// Except maybe `attachment` post type.
-						unset( $custom_template['postTypes']['attachment'] );
+							// Except maybe `attachment` post type.
+							unset( $custom_template['postTypes']['attachment'] );
 
-						$custom_template['postTypes'] = array_values( $custom_template['postTypes'] );
-					}
+							$custom_template['postTypes'] = array_values( $custom_template['postTypes'] );
+						}
 
-					return $custom_template;
-				}, $data['customTemplates'] );
+						return $custom_template;
+					},
+					$data['customTemplates']
+				);
 			}
+
+			$data = array(
+				'version'         => $data['version'],
+				'customTemplates' => $data['customTemplates'],
+			);
 
 
 		// Output
@@ -188,7 +214,20 @@ class Page_Template implements Component_Interface {
 			// 	);
 			// }
 
-			$settings['defaultBlockTemplate'] = '<!-- wp:post-content {"style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}},"layout":{"type":"constrained"}} /-->';
+			$settings['defaultBlockTemplate'] =
+				'<!-- wp:post-content {
+					"style": {
+						"spacing": {
+							"padding": {
+								"top": "var:preset|spacing|content",
+								"bottom": "var:preset|spacing|content"
+							}
+						}
+					},
+					"layout": {
+						"type": "constrained"
+					}
+				} /-->';
 
 
 		// Output
@@ -303,6 +342,10 @@ class Page_Template implements Component_Interface {
 					}
 				}
 
+				/**
+				 * For block mode public post types:
+				 * @see  self::block_custom_templates()
+				 */
 				return $post_templates;
 			}
 
@@ -379,7 +422,8 @@ class Page_Template implements Component_Interface {
 	/**
 	 * Content wrapper classes.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  array $classes
 	 *
@@ -389,7 +433,7 @@ class Page_Template implements Component_Interface {
 
 		// Processing
 
-			if ( self::is_content_only() ) {
+			if ( stripos( implode( ' ', Body_Class::get_body_class() ), 'no-primary-title' ) ) {
 
 				unset(
 					$classes['has-content-margin-top'],
@@ -471,7 +515,8 @@ class Page_Template implements Component_Interface {
 		/**
 		 * Enable "With sidebar" custom template only when sidebar was modified.
 		 *
-		 * @since  1.0.0
+		 * @since    1.0.0
+		 * @version  2.0.0
 		 *
 		 * @param  array $post_templates
 		 *
@@ -483,19 +528,14 @@ class Page_Template implements Component_Interface {
 
 				$slug_template = 'custom-with-sidebar';
 
-				/**
-				 * Filters whether sidebar template (part) was modified.
-				 *
-				 * @since  1.0.0
-				 *
-				 * @param  null|bool $has_sidebar
-				 */
-				$has_sidebar = apply_filters( 'zooey/entry/page_template/has_sidebar', self::$has_sidebar );
+				if ( null === self::$has_sidebar ) {
+					self::$has_sidebar = get_transient( self::$transient_cache_key );
+				}
 
 
 			// Processing
 
-				if ( null === $has_sidebar ) {
+				if ( in_array( self::$has_sidebar, array( false, 0, '0' ), true ) ) {
 
 					$post_types = array( 'wp_template_part', 'wp_template' );
 					$slugs      = array(
@@ -520,11 +560,19 @@ class Page_Template implements Component_Interface {
 						'fields' => 'ids',
 					) );
 
-					$has_sidebar = self::$has_sidebar = $query->have_posts();
+					self::$has_sidebar = $query->have_posts();
+
+					// If transient is not altered with a filter hook, we can cache the data.
+					if ( ! has_filter( 'pre_transient_' . self::$transient_cache_key ) ) {
+						set_transient(
+							self::$transient_cache_key,
+							(int) self::$has_sidebar
+						);
+					}
 				}
 
 				// Need a new conditional to process variable set above.
-				if ( ! $has_sidebar ) {
+				if ( ! self::$has_sidebar ) {
 
 					unset(
 						$post_templates[ 'templates/' . $slug_template . '.php' ],
@@ -538,7 +586,9 @@ class Page_Template implements Component_Interface {
 					add_action( 'enqueue_block_editor_assets', function() {
 						wp_add_inline_style(
 							'zooey-editor-ui',
-							'.edit-post-post-template__form option[value="custom-with-sidebar"]{display: none}'
+							'.edit-post-post-template__form option[value="custom-with-sidebar"],'
+							. '.block-editor-block-patterns-list__list-item:has(#custom-with-sidebar)'
+							. '{display: none}'
 						);
 					}, 99 );
 				}
@@ -549,5 +599,20 @@ class Page_Template implements Component_Interface {
 				return $post_templates;
 
 		} // /toggle_template_with_sidebar
+
+		/**
+		 * Flush the transient of cached `$has_sidebar` status.
+		 *
+		 * @since  2.0.0
+		 *
+		 * @return  void
+		 */
+		public static function transient_cache_flush_has_sidebar() {
+
+			// Processing
+
+				delete_transient( self::$transient_cache_key );
+
+		} // /transient_cache_flush_has_sidebar
 
 }

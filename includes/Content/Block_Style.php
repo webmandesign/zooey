@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.1
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -86,7 +86,7 @@ class Block_Style implements Component_Interface {
 	 * non-block pagination provided by various plugins (such as WooCommerce).
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.1
+	 * @version  2.0.1
 	 *
 	 * @return  array
 	 */
@@ -96,291 +96,379 @@ class Block_Style implements Component_Interface {
 
 			$styles = array(
 
-				'backdrop-blur' => array(
-					'label'  => _x( 'Backdrop blur', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/column',
-						'core/columns',
-						'core/group',
-					),
-				),
+				// Content related:
 
-				'buttons-inline' => array(
-					'label'  => _x( 'Inline buttons', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/categories',
-						'core/tag-cloud',
+					'backdrop-blur' => array(
+						'label'  => _x( 'Backdrop blur', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/column',
+							'core/columns',
+							'core/group',
+						),
 					),
-				),
 
-				'button-outline' => array(
-					'label'  => _x( 'Outline button', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/search',
+					'buttons-inline' => array(
+						'label'  => _x( 'Inline buttons', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/categories',
+							'core/tag-cloud',
+						),
 					),
-				),
 
-				'checkmark' => array(
-					'label'  => _x( 'Checkmark', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/list',
+					'button-outline' => array(
+						'label'  => _x( 'Outline button', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/search',
+						),
 					),
-				),
 
-				'dashed' => array(
-					'label'  => _x( 'Dashed', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/separator',
+					'details' => array(
+						'label'  => _x( 'Toggle (Details)', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/accordion',
+							'core/accordion-item',
+						),
 					),
-				),
 
-				'disable-link' => array(
-					'label'  => _x( 'Disable link', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/navigation-link',
-						'core/navigation-submenu',
+					'dashed' => array(
+						'label'  => _x( 'Dashed', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/separator',
+						),
 					),
-				),
+					'dotted' => array(
+						'label'  => _x( 'Dotted', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/separator',
+						),
+					),
 
-				'dotted' => array(
-					'label'  => _x( 'Dotted', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/separator',
+					'hover-content' => array(
+						'label'  => _x( 'Content on hover', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/cover',
+						),
 					),
-				),
+					'hover-media' => array(
+						'label'  => _x( 'Media on hover', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/cover',
+						),
+					),
 
-				'featured-posts' => array(
-					'label'  => _x( 'Featured posts', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/template-part',
+					'image-blur' => array(
+						'label'  => _x( 'Blurred image', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/cover',
+						),
 					),
-				),
 
-				'fixed-mobile-toggle' => array(
-					'label'  => _x( 'Fixed mobile toggle button', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/navigation',
+					'inline' => array(
+						'label'  => _x( 'Inline', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/archives',
+							'core/categories',
+						),
 					),
-				),
 
-				'hover-content' => array(
-					'label'  => _x( 'Content on hover', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/cover',
+					'list-ballot' => array(
+						'label'  => _x( 'Ballot: empty', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+							'core/list-item',
+						),
 					),
-				),
+					'list-ballot-check' => array(
+						'label'  => _x( 'Ballot: ✓', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+							'core/list-item',
+						),
+					),
+					'list-ballot-x' => array(
+						'label'  => _x( 'Ballot: ⨉', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+							'core/list-item',
+						),
+					),
+					'list-checkmark' => array(
+						'label'  => _x( '✓', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+							'core/list-item',
+						),
+					),
+					'list-x' => array(
+						'label'  => _x( '⨉', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+							'core/list-item',
+						),
+					),
 
-				'image' => array(
-					'label'  => _x( 'Is image', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/navigation-link',
+					'mobile-hide' => array(
+						'label'  => _x( 'Hide on small screens', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/button',
+							'core/buttons',
+							'core/column',
+							'core/columns',
+							'core/cover',
+							'core/group',
+							'core/image',
+							'core/navigation',
+							'core/navigation-submenu',
+							'core/post-featured-image',
+							'core/search',
+							'core/separator',
+							'core/site-tagline',
+							'core/site-title',
+							'core/spacer',
+						),
 					),
-				),
+					'mobile-only' => array(
+						'label'  => _x( 'Only on small screens', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/button',
+							'core/buttons',
+							'core/column',
+							'core/columns',
+							'core/cover',
+							'core/group',
+							'core/image',
+							'core/navigation',
+							'core/navigation-submenu',
+							'core/post-featured-image',
+							'core/search',
+							'core/separator',
+							'core/site-tagline',
+							'core/site-title',
+							'core/spacer',
+						),
+					),
 
-				'image-blur' => array(
-					'label'  => _x( 'Blurred image', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/cover',
+					'mobile-reverse' => array(
+						'label'  => _x( 'Reverse on small screens', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/columns',
+						),
 					),
-				),
 
-				'inline' => array(
-					'label'  => _x( 'Inline', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/archives',
-						'core/categories',
+					'mobile-sticky-disable' => array(
+						'label'  => _x( 'Disable sticky position on small screens', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/group',
+						),
 					),
-				),
 
-				'megamenu' => array(
-					'label'  => _x( 'Megamenu', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/navigation-submenu',
+					'no-bullets' => array(
+						'label'  => _x( 'No bullets', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/list',
+						),
 					),
-				),
 
-				'mobile-hide' => array(
-					'label'  => _x( 'Hide on small screens', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/button',
-						'core/buttons',
-						'core/column',
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/navigation',
-						'core/navigation-submenu',
-						'core/post-featured-image',
-						'core/search',
-						'core/separator',
-						'core/site-tagline',
-						'core/site-title',
-						'core/spacer',
+					'no-text-wrap' => array(
+						'label'  => _x( 'No line break', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/button',
+							'core/group',
+							'core/heading',
+							'core/list',
+							'core/list-item',
+							'core/paragraph',
+						),
 					),
-				),
-				'mobile-only' => array(
-					'label'  => _x( 'Only on small screens', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/button',
-						'core/buttons',
-						'core/column',
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/navigation',
-						'core/navigation-submenu',
-						'core/post-featured-image',
-						'core/search',
-						'core/separator',
-						'core/site-tagline',
-						'core/site-title',
-						'core/spacer',
-					),
-				),
 
-				'mobile-reverse' => array(
-					'label'  => _x( 'Reverse on small screens', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/columns',
+					'padding-left' => array(
+						'label'  => _x( 'Padding left', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/image',
+						),
 					),
-				),
+					'padding-right' => array(
+						'label'  => _x( 'Padding right', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/image',
+						),
+					),
 
-				'no-bullets' => array(
-					'label'  => _x( 'No bullets', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/list',
+					'pull-down-l' => array(
+						'label'  => _x( 'Pull down', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/columns',
+							'core/cover',
+							'core/group',
+							'core/image',
+							'core/post-featured-image',
+						),
 					),
-				),
+					'pull-up-l' => array(
+						'label'  => _x( 'Pull up', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/columns',
+							'core/cover',
+							'core/group',
+							'core/image',
+							'core/post-featured-image',
+						),
+					),
 
-				'no-text-wrap' => array(
-					'label'  => _x( 'No line break', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/button',
-						'core/heading',
-						'core/list',
-						'core/list-item',
-						'core/paragraph',
+					'screen-reader-text' => array(
+						'label'  => _x( 'Accessibly hidden', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/group',
+							'core/heading',
+							'core/post-title',
+							'core/site-tagline',
+							'core/site-title',
+						),
 					),
-				),
 
-				'padding-left' => array(
-					'label'  => _x( 'Padding left', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
+					'truncate-2' => array(
+						'label'  => sprintf(
+							/* translators: %d: number of text lines. */
+							_nx( 'Truncate to %d line', 'Truncate to %d lines', 2, 'Block style label.', 'zooey' ),
+							number_format_i18n( 2 )
+						),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
 					),
-				),
-				'padding-right' => array(
-					'label'  => _x( 'Padding right', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
+					'truncate-3' => array(
+						'label'  => sprintf(
+							/* translators: %d: number of text lines. */
+							_nx( 'Truncate to %d line', 'Truncate to %d lines', 3, 'Block style label.', 'zooey' ),
+							number_format_i18n( 3 )
+						),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
 					),
-				),
+					'truncate-4' => array(
+						'label'  => sprintf(
+							/* translators: %d: number of text lines. */
+							_nx( 'Truncate to %d line', 'Truncate to %d lines', 4, 'Block style label.', 'zooey' ),
+							number_format_i18n( 4 )
+						),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
+					),
 
-				'page-header' => array(
-					'label'  => _x( 'Page intro', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/template-part',
+					'use-header-image' => array(
+						'label'  => _x( 'Use header image', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/image',
+						),
 					),
-				),
+					'use-header-image-flip-v' => array(
+						'label'  => _x( 'Use header image (flipped)', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/image',
+						),
+					),
 
-				'page-summary' => array(
-					'label'  => _x( 'Page intro summary', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/post-excerpt',
+					'zoom-in' => array(
+						'label'  => _x( 'Zoom in', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/cover',
+						),
 					),
-				),
+					'zoom-out' => array(
+						'label'  => _x( 'Zoom out', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/cover',
+						),
+					),
 
-				'pull-down-l' => array(
-					'label'  => _x( 'Pull down', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/post-featured-image',
-					),
-				),
-				'pull-up-l' => array(
-					'label'  => _x( 'Pull up', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/columns',
-						'core/cover',
-						'core/group',
-						'core/image',
-						'core/post-featured-image',
-					),
-				),
+				// Site related:
 
-				'read-more-outline' => array(
-					'label'  => _x( 'Read more outline', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/post-excerpt',
+					'disable-link' => array(
+						'label'  => _x( 'Disable link', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/navigation-link',
+							'core/navigation-submenu',
+						),
 					),
-				),
-				'read-more-button' => array(
-					'label'  => _x( 'Read more button', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/post-excerpt',
-					),
-				),
 
-				'screen-reader-text' => array(
-					'label'  => _x( 'Accessibly hidden', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/group',
-						'core/heading',
-						'core/post-title',
-						'core/site-tagline',
-						'core/site-title',
+					'featured-posts' => array(
+						'label'  => _x( 'Featured posts', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/query',
+							'core/template-part',
+						),
 					),
-				),
 
-				'site-header' => array(
-					'label'  => _x( 'Site header', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/template-part',
+					'fixed-mobile-toggle' => array(
+						'label'  => _x( 'Fixed mobile toggle button', 'Block style label. "Fixed" as in CSS element positioning.', 'zooey' ),
+						'blocks' => array(
+							'core/navigation',
+						),
 					),
-				),
 
-				'site-footer' => array(
-					'label'  => _x( 'Site footer', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/template-part',
+					'image' => array(
+						'label'  => _x( 'Is image', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/navigation-link',
+						),
 					),
-				),
 
-				'truncate-2' => array(
-					'label'  => sprintf(
-						/* translators: %d: number of text lines. */
-						_nx( 'Truncate to %d line', 'Truncate to %d lines', 2, 'Block style label.', 'zooey' ),
-						number_format_i18n( 2 )
+					'megamenu' => array(
+						'label'  => _x( 'Megamenu', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/navigation-submenu',
+						),
 					),
-					'blocks' => array(
-						'core/post-excerpt',
-					),
-				),
 
-				'use-header-image' => array(
-					'label'  => _x( 'Use header image', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
+					'page-header' => array(
+						'label'  => _x( 'Page intro', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/template-part',
+						),
 					),
-				),
-				'use-header-image-flip-v' => array(
-					'label'  => _x( 'Use header image (flipped)', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/image',
-					),
-				),
 
-				'zoom-in' => array(
-					'label'  => _x( 'Zoom in', 'Block style label.', 'zooey' ),
-					'blocks' => array(
-						'core/cover',
+					'page-summary' => array(
+						'label'  => _x( 'Page intro summary', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
 					),
-				),
+
+					'read-more-outline' => array(
+						'label'  => _x( 'Read more outline', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
+					),
+					'read-more-button' => array(
+						'label'  => _x( 'Read more button', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/post-excerpt',
+						),
+					),
+
+					'related-posts' => array(
+						'label'  => _x( 'Related posts', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/query',
+						),
+					),
+
+					'site-header' => array(
+						'label'  => _x( 'Site header', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/template-part',
+						),
+					),
+
+					'site-footer' => array(
+						'label'  => _x( 'Site footer', 'Block style label.', 'zooey' ),
+						'blocks' => array(
+							'core/template-part',
+						),
+					),
 			);
 
 
@@ -408,7 +496,8 @@ class Block_Style implements Component_Interface {
 	/**
 	 * Making responsive block style breakpoint editable.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.8
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -420,17 +509,48 @@ class Block_Style implements Component_Interface {
 			$handle     = 'zooey-responsive-block-styles';
 			$css        = '';
 
+			if ( is_admin() ) {
+				$css_editor =
+					// Make space only for responsive icon.
+					// (For icon styles see `assets/scss/blocks/_blocks.scss`.)
+					'.editor-styles-wrapper {{$selector}}:not(.is-selected,.has-child-selected) {'
+						. 'height: 24px !important;'
+						. 'overflow: hidden !important;'
+					. '}'
+					// Cover whole space with the icon (stretch the icon).
+					. '.editor-styles-wrapper {{$selector}}:not(.is-selected,.has-child-selected)::before {'
+						. 'width: auto !important;'
+						. 'inset: 0 !important;'
+					. '}'
+					// Hide also content children (for cases such as in site header template part).
+					. '.editor-styles-wrapper {{$selector}}:not(.is-selected,.has-child-selected) > * {'
+						. 'display: none !important;'
+					. '}';
+			} else {
+				$css_editor = '';
+			}
+
 
 		// Processing
 
-			$css .=
-				'@media (min-width: ' . absint( $breakpoint + 1 ) . 'px) {' // 1024px breakpoint.
-				. '.is-style-mobile-only { display: none !important; }'
+			$selector = '.is-style-mobile-only';
+			$css     .=
+				'@media (min-width: ' . absint( $breakpoint + 1 ) . 'px) {'
+				. ':where(body:not(.editor-styles-wrapper,.wp-admin)) ' . $selector . ' { display: none !important; }'
+				. str_replace( '{{$selector}}', $selector, $css_editor )
 				. '}';
 
-			$css .=
-				'@media (max-width: ' . absint( $breakpoint ) . 'px) {'
-				. '.is-style-mobile-hide { display: none !important; }'
+			$selector = '.is-style-mobile-hide';
+			$css     .=
+				'@media (max-width: ' . absint( $breakpoint ) . 'px) {' // 1024px breakpoint.
+				. ':where(body:not(.editor-styles-wrapper,.wp-admin)) ' . $selector . ' { display: none !important; }'
+				. str_replace( '{{$selector}}', $selector, $css_editor )
+				. '}';
+
+			$selector = '.is-style-mobile-sticky-disable.wp-block-group';
+			$css     .=
+				'@media (max-width: ' . absint( $breakpoint ) . 'px) {' // 1024px breakpoint.
+				. $selector . ' { position: revert; top: auto; }'
 				. '}';
 
 			wp_register_style( $handle, '' );

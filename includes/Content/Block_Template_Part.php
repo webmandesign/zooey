@@ -124,6 +124,8 @@ class Block_Template_Part implements Component_Interface {
 	 * This is only needed in block theme mode. Classic/hybrid theme mode
 	 * does not output empty template parts (see `self::the_content()`).
 	 *
+	 * Also, allowing `id` attribute on the template wrapper.
+	 *
 	 * @since  1.0.0
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
@@ -317,7 +319,7 @@ class Block_Template_Part implements Component_Interface {
 				$slug,
 				$wrapper,
 				$context
-			); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above
 
 	} // /the_content
 

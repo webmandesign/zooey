@@ -1,4 +1,5 @@
 /* FILE: editor/_blocks.scss */
+@use 'sass:math';
 
 // UI
 .components-button {
@@ -8,14 +9,27 @@
 // Pattern preview vh fix.
 @each $vh in $pattern_vh {
 
-	body.block-editor-iframe__body {
+	.block-editor-block-preview__content-iframe {
 
-		[style*=" height: #{ $vh }vh"] {
+		[style*=" height: #{ $vh }vh"],
+		[style*=" height: #{ $vh }vmin"] {
 			height: calc( #{ math.div( $vh, 100 ) } * 100vw * 9 / 16 ) !important;
 		}
 
-		[style*="min-height: #{ $vh }vh"] {
+		[style*="min-height: #{ $vh }vh"],
+		[style*="min-height: #{ $vh }vmin"] {
 			min-height: calc( #{ math.div( $vh, 100 ) } * 100vw * 9 / 16 ) !important;
 		}
+	}
+}
+
+// Pattern preview modifications.
+.block-editor-block-preview__content-iframe {
+
+	// gallery/gallery-11 @todo
+	.wp-block-column:has( > .is-position-sticky ) + .wp-block-column > .is-position-sticky:nth-child( 2 ) {
+		height: 15em;
+		margin-top: -15em;
+		overflow: hidden;
 	}
 }

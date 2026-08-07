@@ -36,7 +36,7 @@ wp.domReady( () => {
 		wcProductTemplate = [
 			'woocommerce/product-template',
 			{},
-			[ [ 'core/pattern', { slug: 'ileana/shop/product-item-hidden' } ] ]
+			[ [ 'core/pattern', { slug: 'zooey/shop/product-item-hidden' } ] ]
 		];
 
 	if ( undefined !== wcVariations ) {

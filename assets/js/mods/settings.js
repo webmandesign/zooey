@@ -21,7 +21,7 @@ export default null;
 
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
-	'ileana/block-mods',
+	'zooey/block-mods',
 	( settings, name ) => {
 
 		// Processing

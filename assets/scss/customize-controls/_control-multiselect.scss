@@ -1,0 +1,13 @@
+/* FILE: customize-controls/_control-checkbox.scss */
+
+.customize-control-multiselect {
+
+	select {
+		max-width: 100%;
+
+		+ em {
+			display: block;
+			margin-top: .5em;
+		}
+	}
+}

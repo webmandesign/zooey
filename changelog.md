@@ -2,14 +2,14 @@
 
 ## 2.0.5, 20260807
 
-As the code was ported from Ileana 2.0.5, we skip Zooey version number 2.0.0 - 2.0.4 to match versioning with those themes.
+As the code was ported from Zooey 2.0.5, we skip Zooey version number 2.0.0 - 2.0.4 to match versioning with those themes.
 
 This major theme update may cause 2 issues on an existing website:
 	1. Icon images duotone not working correctly.
 	   SOLUTION: Change "Primary"/"Secondary" duotone to "Primary, secondary"/"Secondary, primary".
 	2. Broken image URL (when theme demo images used).
 	   SOLUTION: Update the content to use your custom images. Or switch the block editor to code view and change 
-	   `ileana/assets/images/starter/` to `ileana/assets/images/demo/`.
+	   `zooey/assets/images/starter/` to `zooey/assets/images/demo/`.
 	3. Optionally update WooCommerce Cart and Checkout page content for new WooCommerce block content versions.
 	   SOLUTION: Use patterns in "Page" category: simply delete the old page content and add new one.
 

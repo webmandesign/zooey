@@ -1,11 +1,12 @@
 /* FILE: global/classes/_typography.scss */
+@use 'sass:map';
 
 .has-big-font-size,
 .has-giant-font-size,
 .has-mega-font-size {
 	line-height: 1.15;
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 		line-height: 1;
 	}
 }

@@ -7,12 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0; // Browser reset.
 	overflow-wrap: break-word;
 	word-wrap: break-word;
-	text-wrap: pretty;
-
-	.has-text-color &,
-	.has-background:not(.has-text-color, [class*="-gradient-background"]) & {
-		color: inherit;
-	}
+	text-wrap: var(--wp--custom--text-wrap--heading) _important( 'text_wrap' );
 }
 
 @include wrap() {
@@ -29,6 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 
 		h2, h3, h4, h5, h6 {
 			margin-block-start: 0;
+		}
+	}
+}
+
+@if true == $is_editor {
+
+	// For classic editor, we still need unwrapped styles.
+	h2, h3, h4, h5, h6 {
+
+		&:not(:first-child) {
+			margin-block-start: var(--wp--custom--spacing--heading);
 		}
 	}
 }

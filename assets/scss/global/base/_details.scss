@@ -1,11 +1,15 @@
 /* FILE: global/base/_details.scss */
 
-details {
+%details {
 	padding: var(--wp--custom--details--padding--top) var(--wp--custom--details--padding--right) var(--wp--custom--details--padding--bottom) var(--wp--custom--details--padding--left);
 	background-color: var(--wp--custom--details--color--background);
 	color: var(--wp--custom--details--color--text);
 	border: var(--wp--custom--details--border--width) var(--wp--custom--details--border--style) var(--wp--custom--details--border--color);
 	border-radius: var(--wp--custom--details--border--radius);
+}
+
+details {
+	@extend %details;
 
 	&:not(.wp-block-details) {
 
@@ -29,20 +33,18 @@ details {
 		border-radius: inherit;
 
 		&::after {
-			content: '⋮';
+			content: '';
 			position: absolute;
 			width: 1em;
 			height: 1em;
 			top: 50%;
 			inset-inline-end: .25em;
-			font-size: 1.25em;
-			font-weight: 700;
-			font-style: normal;
-			line-height: 1;
-			text-align: center;
-			border-radius: var(--wp--custom--details--border--radius);
-			opacity: .5;
-			speak: none;
+			background: radial-gradient( currentColor 50%, transparent 50% );
+			background-size: .33em .33em;
+			background-repeat: repeat-y;
+			background-position: 50% 50%;
+			border-radius: 0;
+			opacity: var( --wp--custom--details--summary--decoration--opacity, .5 );
 			transform: translateY( -50% );
 			transition: transform .2s cubic-bezier( .175, .885, .32, 1.275 );
 
@@ -51,7 +53,33 @@ details {
 			}
 		}
 
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+
+			outline-width:  var( --wp--custom--details--summary--focus-visible--outline--width,  2px          );
+			outline-style:  var( --wp--custom--details--summary--focus-visible--outline--style,  dashed       );
+			outline-offset: var( --wp--custom--details--summary--focus-visible--outline--offset, .5em         );
+			outline-color:  var( --wp--custom--details--summary--focus-visible--outline--color,  currentColor );
+
+			border-top:    var( --wp--custom--details--summary--focus-visible--border--top,    none         );
+			border-right:  var( --wp--custom--details--summary--focus-visible--border--right,  none         );
+			border-bottom: var( --wp--custom--details--summary--focus-visible--border--bottom, none         );
+			border-left:   var( --wp--custom--details--summary--focus-visible--border--left,   none         );
+			border-color:  var( --wp--custom--details--summary--focus-visible--border--color,  currentColor );
+		}
+
 		> * {
 			display: inline;
 		}
 	}
+
+.is-style-details {
+
+	&:where( .wp-block-accordion-item ),
+	:where( .wp-block-accordion-item ) {
+		@extend %details;
+	}
+}

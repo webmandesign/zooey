@@ -6,15 +6,15 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.4
  */
 
 namespace WebManDesign\Zooey\Customize;
 
 use WebManDesign\Zooey\Component_Interface;
-use WebManDesign\Zooey\Tool\Google_Fonts;
-use WebManDesign\Zooey\Setup\Editor;
+use WebManDesign\Zooey\Editor\Component as Editor;
 use WebManDesign\Zooey\Setup\Site_Editor;
+use WebManDesign\Zooey\Tool\Google_Fonts;
 use WP_Customize_Manager;
 use WP_Theme_JSON_Resolver;
 
@@ -26,49 +26,12 @@ class Options implements Component_Interface {
 	/**
 	 * Theme mods values for easier setup.
 	 *
-	 * @see  assets/scss/_setup/_customize-options.scss
-	 *
 	 * @since    1.0.0
-	 * @version  1.0.2
+	 * @version  2.0.0
 	 * @access   public
 	 * @var      array
 	 */
-	public static $theme_mods = array(
-
-		// Colors.
-
-			'color_base'         => '#f7fff7', // = background_color
-			'color_base_alt'     => '#e7efe7',
-			'color_contrast'     => '#474f47',
-			'color_contrast_alt' => '#171f17',
-			'color_primary'      => '#5f1a37',
-			'color_secondary'    => '#ff6b6b',
-
-			'color_primary_mixed'   => '#e4e2df',
-			'color_secondary_mixed' => '#fac6c2',
-
-			'color_black' => '#000000',
-			'color_white' => '#ffffff',
-
-		// Gradients. (Just numeric values.)
-
-			'gradient_stop_hard' => 50,
-			'gradient_stop_soft' => 10,
-
-		// Layout. (Just numeric values.)
-
-			'layout_width_content' => 640,
-			'layout_width_wide'    => 1440,
-
-		// Typography.
-
-			'typography_font_size'                => 20,
-			'typography_modular_scale'            => 1.2,
-			'typography_desktop_multiply'         => 1.75,
-			'typography_font_family_global'       => "'Ubuntu Sans', sans-serif",
-			'typography_font_family_supplemental' => "'Unica One', sans-serif",
-			'typography_font_family_alternative'  => "'Ubuntu Sans', sans-serif",
-	);
+	public static $theme_mods = array();
 
 	/**
 	 * User font families.
@@ -76,25 +39,28 @@ class Options implements Component_Interface {
 	 * IMPORTANT:
 	 * This has to be set in `self::init()`, not in `self::get/set()` to prevent infinite loop.
 	 *
-	 * @since   1.0.0
-	 * @access  public
-	 * @var     array
+	 * @since    1.0.0
+	 * @version  2.0.0
+	 * @access   private
+	 * @var      array
 	 */
-	public static $user_font_families = array();
+	private static $user_font_families = array();
 
 	/**
 	 * Theme and core JSON data soft cache.
 	 *
-	 * @since   1.0.7
-	 * @access  public
-	 * @var     array
+	 * @since    1.0.3
+	 * @version  2.0.1
+	 * @access   private
+	 * @var      array
 	 */
-	public static $json_data = array(
+	private static $json_data = array(
 
 		'core' => array(
 			'palette' => array(),
 		),
 
+		// Stores both theme & user settings.
 		'theme' => array(
 			'palette' => array(),
 		),
@@ -104,11 +70,16 @@ class Options implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.1
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
 	public static function init() {
+
+		// Variables
+
+			self::$theme_mods = self::get_defaults();
+
 
 		// Processing
 
@@ -123,6 +94,78 @@ class Options implements Component_Interface {
 				add_filter( 'zooey/customize/options/get', __CLASS__ . '::set', 5 );
 
 	} // /init
+
+	/**
+	 * Theme option (default) values array from SCSS files.
+	 *
+	 * @see  assets/scss/_setup/_theme-options.scss
+	 *
+	 * @since    2.0.0
+	 * @version  2.0.1
+	 *
+	 * @return  array
+	 */
+	public static function get_defaults(): array {
+
+		// Output
+
+			/**
+			 * Filters theme option (default) values array from SCSS files.
+			 *
+			 * @see  assets/scss/_setup/_theme-options.scss
+			 *
+			 * @since    2.0.0
+			 * @version  2.0.1
+			 *
+			 * @param  array $defaults
+			 */
+			return (array) apply_filters( 'zooey/customize/options/get_defaults', array(
+
+				// Colors.
+
+					/**
+					 * Color contrast check:
+					 *
+					 * @link  https://toolness.github.io/accessible-color-matrix/?n=base&n=cont&n=contrA&n=1st&n=2nd&v=f7fff7&v=474f47&v=171f17&v=5f1a37&v=ff6b6b
+					 * @link  https://www.siegemedia.com/contrast-ratio#%23f7fff7-on-%235f1a37
+					 */
+					'color_base'         => '#f7fff7', // = background_color
+					'color_base_alt'     => '#e7efe7', // = %shaded_background
+					'color_contrast'     => '#474f47',
+					'color_contrast_alt' => '#171f17',
+					'color_primary'      => '#5f1a37',
+					'color_secondary'    => '#ff6b6b',
+
+					/**
+					 * @link  https://codepen.io/webmandesign/pen/KwPpxZr?editors=0100
+					 */
+					'color_primary_mixed'   => '#e4e2df', // 12.50% = 1:7
+					'color_secondary_mixed' => '#fac6c2', // 38.20% = 1:1.618
+
+					'color_black' => '#000000',
+					'color_white' => '#ffffff',
+
+				// Gradients. (Just numeric values.)
+
+					'gradient_stop_hard' => 50,
+					'gradient_stop_soft' => 10,
+
+				// Layout. (Just numeric values.)
+
+					'layout_width_content' => 640,
+					'layout_width_wide'    => 1440,
+
+				// Typography.
+
+					'typography_font_size'                => 20,
+					'typography_modular_scale'            => 1.2,
+					'typography_desktop_multiply'         => 1.75,
+					'typography_font_family_global'       => "'Ubuntu Sans', sans-serif",
+					'typography_font_family_supplemental' => "'Unica One', sans-serif",
+					'typography_font_family_alternative'  => "'Ubuntu Sans', sans-serif",
+			) );
+
+	} // /get_defaults
 
 	/**
 	 * Get theme options setup array.
@@ -149,7 +192,8 @@ class Options implements Component_Interface {
 	/**
 	 * Modify native WordPress options and setup partial refresh pointers.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -164,26 +208,44 @@ class Options implements Component_Interface {
 			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 			// Custom background options.
-			$cb_options = array(
-				'color',
-				'image',
-				'preset',
-				'position',
-				'position_x',
-				'position_y',
-				'size',
-				'repeat',
-				'attachment',
-			);
-			foreach ( $cb_options as $prop ) {
-				if ( ! in_array( $prop, [ 'position_x', 'position_y' ] ) ) {
-					$wp_customize->get_control( 'background_' . $prop )->section  = 'colors_general';
-					$wp_customize->get_control( 'background_' . $prop )->priority = 5;
+
+				$cb_options = array(
+					'color',
+					'image',
+						'preset',
+						'position',
+						'position_x',
+						'position_y',
+						'size',
+						'repeat',
+						'attachment',
+				);
+
+				foreach ( $cb_options as $prop ) {
+
+					// Move to theme options section.
+					if ( ! in_array( $prop, [ 'position_x', 'position_y' ] ) ) {
+						$wp_customize->get_control( 'background_' . $prop )->section  = 'colors_general';
+						$wp_customize->get_control( 'background_' . $prop )->priority = 5;
+					}
+
+					// @see  assets/js/customize/mod/background-color.js
+					$bg_setting = $wp_customize->get_setting( 'background_' . $prop );
+					if ( isset( $bg_setting->transport ) ) {
+						$bg_setting->transport = 'postMessage';
+					}
 				}
-			}
-			$wp_customize->get_control( 'background_color' )->label           = esc_html__( 'Base color', 'zooey' );
-			$wp_customize->get_control( 'background_color' )->description     = esc_html__( 'By default applied as website background.', 'zooey' );
-			$wp_customize->get_control( 'background_color' )->active_callback = __NAMESPACE__ . '\Options_Conditional::is_site_editor_disabled';
+
+				// `background_color` control mods.
+				$option = 'background_color';
+					$wp_customize->get_control( $option )->label = esc_html__( 'Base color', 'zooey' );
+					$wp_customize->get_control( $option )->priority = 7;
+					$wp_customize->get_control( $option )->description = esc_html__( 'By default applied as website background.', 'zooey' );
+					$wp_customize->get_control( $option )->active_callback = __NAMESPACE__ . '\Options_Conditional::is_site_editor_disabled';
+
+				// Add `active_callback` for all `background_image` control.
+				// (Yes, that's enough -> see `assets/scss/customize-controls.scss`.)
+				$wp_customize->get_control( 'background_image' )->active_callback = __NAMESPACE__ . '\Options_Conditional::background_image';
 
 			// Option pointers only:
 
@@ -204,7 +266,7 @@ class Options implements Component_Interface {
 
 				// Blog layout.
 				$wp_customize->selective_refresh->add_partial( 'layout_blog', array(
-					'selector' => '.blog .wp-site-blocks > main > :not(.is-style-featured-posts) .wp-block-query',
+					'selector' => '.blog .wp-site-blocks > main > .wp-block-template-part > :not(.is-style-featured-posts) .wp-block-query, .blog .wp-site-blocks > main > :not(.is-style-featured-posts) .wp-block-query',
 				) );
 
 				// Custom header.
@@ -218,7 +280,7 @@ class Options implements Component_Interface {
 	 * Sets theme options array.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.5
+	 * @version  2.0.4
 	 *
 	 * @param  array $options
 	 *
@@ -498,40 +560,10 @@ class Options implements Component_Interface {
 							'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_disabled',
 						),
 
-						100 . 'colors' . 610 => array(
-							'type'        => 'select',
-							'id'          => 'color_button',
-							'label'       => esc_html__( 'Button color', 'zooey' ),
-							'description' => esc_html__( 'Choose which predefined color applies on buttons.', 'zooey' ),
-							'default'     => 'primary',
-							'choices'     => $choices_palette,
-							'preview_js'  => array(
-								'css' => array(
-									$css_selector_root => array(
-										array(
-											'property' => '--theme--css--button--color--background',
-											'prefix'   => 'var(--wp--preset--color--',
-											'suffix'   => ')',
-										),
-										array(
-											'property' => '--theme--css--button--color--text',
-											'prefix'   => 'var(--wp--preset--color--',
-											'suffix'   => '--bg-text)',
-										),
-										// array(
-										// 	'property' => '--theme--css--button--color--border',
-										// 	'prefix'   => 'var(--wp--preset--color--',
-										// 	'suffix'   => '--bg-border)',
-										// ),
-									),
-								),
-							),
-						),
-
 						/**
 						 * Notice.
 						 */
-						100 . 'colors' . 699 => array(
+						100 . 'colors' . 499 => array(
 							'type'    => 'html',
 							'content' =>
 								'<p class="notice notice-warning">'
@@ -546,6 +578,45 @@ class Options implements Component_Interface {
 								) ) )
 								. '</p>',
 						),
+
+						/**
+						 * Button colors.
+						 */
+						100 . 'colors' . 600 => array(
+							'type'    => 'html',
+							'content' =>
+								'<h3>'
+								. esc_html__( 'Button colors', 'zooey' )
+								. '</h3>'
+								. '<p class="description">'
+								. esc_html__( 'Choose which predefined colors applies on buttons.', 'zooey' )
+								. '</p>',
+						),
+
+							100 . 'colors' . 610 => array(
+								'type'        => 'select',
+								'id'          => 'color_button',
+								'label'       => esc_html__( 'Button color', 'zooey' ),
+								'description' => esc_html__( 'Choose which predefined color applies on buttons.', 'zooey' ),
+								'default'     => 'primary',
+								'choices'     => $choices_palette,
+								'preview_js'  => array(
+									'css' => array(
+										$css_selector_root => array(
+											array(
+												'property' => '--theme--css--button--color--background',
+												'prefix'   => 'var(--wp--preset--color--',
+												'suffix'   => ')',
+											),
+											array(
+												'property' => '--theme--css--button--color--text',
+												'prefix'   => 'var(--wp--preset--color--',
+												'suffix'   => '--bg-text)',
+											),
+										),
+									),
+								),
+							),
 
 						/**
 						 * Gradient options.
@@ -614,6 +685,15 @@ class Options implements Component_Interface {
 								),
 							),
 
+							100 . 'colors' . 750 => array(
+								'type'        => 'checkbox',
+								'id'          => 'enable_theme_gradients',
+								'label'       => esc_html__( 'Enable auto-generated gradients', 'zooey' ),
+								'description' => esc_html__( 'The theme generates multiple useful gradients for you.', 'zooey' ),
+								'default'     => true,
+								'preview_js'  => false, // This is to prevent customizer preview reload.
+							),
+
 					/**
 					 * Editor palette.
 					 */
@@ -622,15 +702,15 @@ class Options implements Component_Interface {
 						'content' => '<h3>' . esc_html__( 'Editor palette', 'zooey' ) . '</h3>',
 					),
 
-						100 . 'colors' . 801 => array(
+						100 . 'colors' . 810 => array(
 							'type'        => 'checkbox',
 							'id'          => 'enable_wp_palette',
 							'label'       => esc_html__( 'WordPress default color palette', 'zooey' ),
 							'description' => esc_html__( 'Should this be enabled in block editor?', 'zooey' ),
-							'default'     => true,
+							'default'     => false,
 							'preview_js'  => false, // This is to prevent customizer preview reload.
 						),
-						100 . 'colors' . 802 => array(
+						100 . 'colors' . 811 => array(
 							'type'        => 'checkbox',
 							'id'          => 'enable_wp_gradients',
 							'label'       => esc_html__( 'WordPress default gradients', 'zooey' ),
@@ -638,7 +718,7 @@ class Options implements Component_Interface {
 							'default'     => false,
 							'preview_js'  => false, // This is to prevent customizer preview reload.
 						),
-						100 . 'colors' . 803 => array(
+						100 . 'colors' . 812 => array(
 							'type'        => 'checkbox',
 							'id'          => 'enable_wp_duotone',
 							'label'       => esc_html__( 'WordPress default duotone presets', 'zooey' ),
@@ -647,7 +727,7 @@ class Options implements Component_Interface {
 							'preview_js'  => false, // This is to prevent customizer preview reload.
 						),
 
-						100 . 'colors' . 810 => array(
+						100 . 'colors' . 820 => array(
 							'type'        => 'color',
 							'id'          => 'color_black',
 							'label'       => esc_html__( 'Black color', 'zooey' ),
@@ -665,7 +745,7 @@ class Options implements Component_Interface {
 							),
 							'active_callback' => __NAMESPACE__ . '\Options_Conditional::is_site_editor_disabled',
 						),
-						100 . 'colors' . 820 => array(
+						100 . 'colors' . 830 => array(
 							'type'        => 'color',
 							'id'          => 'color_white',
 							'label'       => esc_html__( 'White color', 'zooey' ),
@@ -905,7 +985,13 @@ class Options implements Component_Interface {
 							'description'       =>
 								esc_html__( 'This ratio is used for calculating heading sizes.', 'zooey' )
 								. ' '
-								. '<a href="https://www.modularscale.com/?1&em&' . self::$theme_mods['typography_modular_scale'] . '" title="' . esc_attr__( 'Open link in new window', 'zooey' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open Modular Scale calculator in a new window ↗', 'zooey' ) . '</a>'
+								. '<a
+									href="https://www.modularscale.com/?1&em&' . self::$theme_mods['typography_modular_scale'] . '"
+									target="_blank"
+									rel="noopener noreferrer"
+								>'
+								. esc_html__( 'Open Modular Scale calculator in a new window ↗', 'zooey' )
+								. '</a>'
 								. '<br>'
 								. esc_html__( 'Default value:', 'zooey' ) . ' ' . self::$theme_mods['typography_modular_scale'],
 							'default'           => self::$theme_mods['typography_modular_scale'],
@@ -1124,6 +1210,7 @@ class Options implements Component_Interface {
 							'type'        => 'radio',
 							'id'          => 'layout_blog',
 							'label'       => esc_html__( 'Blog posts layout', 'zooey' ),
+							'description' => esc_html__( 'New layout will not be applied if you edited related template parts.', 'zooey' ),
 							'default'     => 'with-sidebar',
 							'choices'     => array(
 								''             => esc_html_x( 'Columns without sidebar', 'Posts list layout.', 'zooey' ),
@@ -1131,6 +1218,28 @@ class Options implements Component_Interface {
 							),
 							'preview_url' => get_post_type_archive_link( 'post' ),
 							// No `preview_js` as we need to load correct image sizes too.
+						),
+						400 . 'posts' . 115 => array(
+							'type'        => 'checkbox',
+							'id'          => 'layout_blog_archives',
+							'label'       => esc_html__( 'Apply blog posts layout on archive pages', 'zooey' ),
+							'description' =>
+								esc_html__( 'The blog posts list layout will be applied on all archive pages.', 'zooey' )
+								. '<br>'
+								. '<a
+									href="https://wpglossary.net/word/archive/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="'
+									. esc_attr__( 'What is an archive page?', 'zooey' )
+									. ' '
+									. esc_attr__( '(Opens link in a new window.)', 'zooey' )
+									. '"
+								>'
+								. esc_html__( 'What is an archive page?', 'zooey' )
+								. '</a>',
+							'default'     => true,
+							'preview_url' => get_post_type_archive_link( 'post' ),
 						),
 
 						400 . 'posts' . 210 => array(
@@ -1196,27 +1305,29 @@ class Options implements Component_Interface {
 						),
 
 				/**
-				 * Others.
+				 * Accessibility.
 				 */
-				900 . 'others' => array(
-					'id'             => 'others',
+				800 . 'a11y' => array(
+					'id'             => 'a11y',
 					'type'           => 'section',
-					'create_section' => esc_html_x( 'Others', 'Customizer section title.', 'zooey' ),
+					'create_section' => esc_html_x( 'Accessibility', 'Customizer section title.', 'zooey' ),
 					'in_panel'       => esc_html_x( 'Theme Options', 'Customizer panel title.', 'zooey' ),
 				),
 
-					900 . 'others' . 100 => array(
+					800 . 'a11y' . 100 => array(
 						'type'        => 'checkbox',
-						'id'          => 'core_block_patterns',
-						'label'       => esc_html__( 'Enable core block patterns', 'zooey' ),
-						'description' => esc_html__( 'Allows WordPress core block patterns in block editor.', 'zooey' ),
-						'default'     => false,
-						'preview_js'  => false, // This is to prevent customizer preview reload.
+						'id'          => 'a11y_fixed_mobile_navigation',
+						'label'       => esc_html__( 'Fixed mobile navigation', 'zooey' ),
+						'description' =>
+							esc_html__( 'Displays mobile navigation toggle button always at fixed position (at the bottom of the screen) even when scrolling.', 'zooey' )
+							. ' '
+							. esc_html__( '(Enables "Fixed mobile toggle button" block style for Navigation block.)', 'zooey' ),
+						'default'     => true,
 					),
 
-					900 . 'others' . 110 => array(
+					800 . 'a11y' . 110 => array(
 						'type'        => 'checkbox',
-						'id'          => 'navigation_a11y_fix',
+						'id'          => 'a11y_fix_navigation',
 						'label'       => esc_html__( 'Expand mobile navigation submenus', 'zooey' ),
 						'description' =>
 							sprintf(
@@ -1234,19 +1345,48 @@ class Options implements Component_Interface {
 									>#63033</a>'
 							)
 							. ' '
-							. esc_html__( 'Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user.', 'zooey' ),
-						'default'     => true,
+							. esc_html__( 'Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user.', 'zooey' )
+							. ' '
+							. esc_html__( 'If you are building a fully accessible website, you should enable this option.', 'zooey' ),
+						'default'     => false,
 					),
 
+				/**
+				 * Others.
+				 */
+				900 . 'others' => array(
+					'id'             => 'others',
+					'type'           => 'section',
+					'create_section' => esc_html_x( 'Others', 'Customizer section title.', 'zooey' ),
+					'in_panel'       => esc_html_x( 'Theme Options', 'Customizer panel title.', 'zooey' ),
+				),
+
 					900 . 'others' . 900 => array(
+						'section'           => 'title_tagline',
+						'priority'          => 9,
+						'type'              => 'number',
+						'id'                => 'logo_width',
+						'label'             => esc_html__( 'Logo max width', 'zooey' ),
+						'description'       =>
+							esc_html__( 'Applies on logo image in default site header and footer.', 'zooey' )
+							. ' '
+							. esc_html__( 'Customization of header and footer template part may override this option.', 'zooey' ),
+						'default'           => 0,
+						'input_attrs'       => array(
+							'min'  => 0,
+							'max'  => 500,
+							'step' => 1,
+						),
+						'sanitize_callback' => 'absint',
+						'preview_js'        => false, // This is to prevent customizer preview reload.
+					),
+					900 . 'others' . 910 => array(
 						'section'     => 'title_tagline',
+						'priority'    => 9,
 						'type'        => 'checkbox',
 						'id'          => 'link_homepage_logo',
 						'label'       => esc_html__( 'Link homepage logo', 'zooey' ),
-						'description' =>
-							esc_html__( 'When disabled, logo image will no longer link to the homepage when visitor is on the homepage.', 'zooey' )
-							. ' '
-							. esc_html__( 'It also removes the logo image alt text attribute on the homepage.', 'zooey' ),
+						'description' => esc_html__( 'Apply homepage link on logo image when visiting the homepage.', 'zooey' ),
 						'default'     => false,
 						'preview_js'  => false, // This is to prevent customizer preview reload.
 					),
@@ -1278,7 +1418,8 @@ class Options implements Component_Interface {
 	/**
 	 * Get JSON data.
 	 *
-	 * @since  1.0.7
+	 * @since    1.0.7
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -1286,19 +1427,25 @@ class Options implements Component_Interface {
 
 		// Processing
 
-			// Core JSON data.
-			$json_data = WP_Theme_JSON_Resolver::get_core_data()->get_raw_data();
-			self::$json_data['core']['palette'] = array_combine(
-				array_column( $json_data['settings']['color']['palette']['default'], 'slug' ),
-				array_column( $json_data['settings']['color']['palette']['default'], 'name' )
-			);
+			// User + Theme JSON data.
+			$json_data = Editor::get_global_style( 'settings.color.palette' );
+			if ( ! empty( $json_data ) ) {
+				self::$json_data['theme']['palette'] = array_combine(
+					array_column( $json_data, 'slug' ),
+					array_column( $json_data, 'name' )
+				);
+			}
 
-			// Theme JSON data.
-			$json_data = WP_Theme_JSON_Resolver::get_theme_data()->get_data();
-			self::$json_data['theme']['palette'] = array_combine(
-				array_column( $json_data['settings']['color']['palette'], 'slug' ),
-				array_column( $json_data['settings']['color']['palette'], 'name' )
-			);
+			// Core JSON data.
+			if ( Editor::get_global_style( 'settings.color.defaultPalette' ) ) {
+				$json_data = WP_Theme_JSON_Resolver::get_core_data()->get_raw_data();
+				if ( ! empty( $json_data['settings']['color']['palette']['default'] ) ) {
+					self::$json_data['core']['palette'] = array_combine(
+						array_column( $json_data['settings']['color']['palette']['default'], 'slug' ),
+						array_column( $json_data['settings']['color']['palette']['default'], 'name' )
+					);
+				}
+			}
 
 	} // /get_json_data
 
@@ -1306,11 +1453,10 @@ class Options implements Component_Interface {
 	 * Get custom font families set by user.
 	 *
 	 * IMPORTANT:
-	 * To prevent infinite loop (in `Editor::duotones()` via `Mod::get()`)
-	 * we can not use `Editor::get_user_font_families()` in `self::get/set()`.
-	 * The best is to hook this onto `customize_register` just before
-	 * the theme options controls are being rendered. That's where this
-	 * is actually only needed.
+	 * To prevent infinite loop (in `Editor\*` classes via `Mod::get()`) we can not
+	 * use `Editor\Component::get_user_font_families()` in `self::get/set()`.
+	 * The best is to hook this onto `customize_register` just before the theme options
+	 * controls are being rendered. That's where this is actually only needed.
 	 *
 	 * @since  1.2.1
 	 *

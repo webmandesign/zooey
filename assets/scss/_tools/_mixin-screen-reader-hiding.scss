@@ -1,14 +1,14 @@
 //
 // Screen reader hiding.
 //
-// @since  1.0.0
+// @since    1.0.0
+// @version  2.0.4
 //
 // @param  string $action
 //
 @mixin screen_reader( $action: 'hide' ) {
 
 	@if 'show' == $action {
-		clip: auto;
 		clip-path: none;
 		// Position can not be predicted here.
 		width: auto;
@@ -16,7 +16,6 @@
 		line-height: normal;
 
 	} @else {
-		clip: rect( 1px, 1px, 1px, 1px );
 		clip-path: inset( 50% );
 		position: absolute !important;
 		width: 1px;
@@ -24,6 +23,7 @@
 		line-height: 1px;
 		overflow: hidden;
 		word-wrap: normal !important;
+		word-break: normal !important;
 
 	}
 }

@@ -1,10 +1,21 @@
 /* FILE: global/base/_base.scss */
+@use 'sass:map';
+
+:root {
+	interpolate-size: allow-keywords;
+}
 
 html {
 	box-sizing: border-box;
 	font-size: var(--theme--css--font-size-base);
+	accent-color: var(--wp--custom--accent-color);
+	scrollbar-gutter: stable;
 	overflow-y: scroll;
+}
+
+:has( :target ) {
 	scroll-behavior: smooth;
+	scroll-padding-block-start: calc( #{ $ratio + rem } + var( --theme--css--sticky-position-offset, 0px ) );
 }
 
 * {
@@ -18,12 +29,18 @@ html {
 }
 
 body {
+	// To allow footer position at the bottom of viewport:
+	min-height: calc( 100svh - var( --wp-admin--admin-bar--height, 0 ) );
 
-	@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+	@include media( ( map.get( $breakpoint, 'm' ), 'max-width' ) ) {
 		line-height: 1.4;
 	}
 
-	@include media( ( map_get( $breakpoint, 'l' ), 'max-width' ) ) {
+	@include media( ( map.get( $breakpoint, 'l' ), 'max-width' ) ) {
 		line-height: 1.5;
 	}
+}
+
+p {
+	text-wrap: var(--wp--custom--text-wrap--paragraph) _important( 'text_wrap' );
 }

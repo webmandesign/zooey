@@ -2,19 +2,19 @@
 /**
  * Editor assets component.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
  * @version  2.0.4
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
-use WebManDesign\Ileana\Assets\Factory;
-use WebManDesign\Ileana\Customize\CSS_Variables;
-use WebManDesign\Ileana\Customize\Styles;
+use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Assets\Factory;
+use WebManDesign\Zooey\Customize\CSS_Variables;
+use WebManDesign\Zooey\Customize\Styles;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -118,7 +118,7 @@ class Assets implements Component_Interface {
 		// Processing
 
 			Factory::style_enqueue( array(
-				'handle' => 'ileana-editor-ui',
+				'handle' => 'zooey-editor-ui',
 				'src'    => get_theme_file_uri( 'assets/css/editor-ui.css' ),
 			) );
 
@@ -132,10 +132,10 @@ class Assets implements Component_Interface {
 				 *
 				 * @param  array $css
 				 */
-				$css = (array) apply_filters( 'ileana/assets/editor/block/ui', array() );
+				$css = (array) apply_filters( 'zooey/assets/editor/block/ui', array() );
 
 				if ( array_filter( $css ) ) {
-					wp_add_inline_style( 'ileana-editor-ui', trim( implode( '', $css ) ) );
+					wp_add_inline_style( 'zooey-editor-ui', trim( implode( '', $css ) ) );
 				}
 
 	} // /ui_stylesheet_block
@@ -152,7 +152,7 @@ class Assets implements Component_Interface {
 		// Processing
 
 			Factory::script_enqueue( array(
-				'handle' => 'ileana-block-editor',
+				'handle' => 'zooey-block-editor',
 				'src'    => get_theme_file_uri( 'assets/js/block-editor.min.js' ),
 				'deps'   => array( 'react', 'wp-block-editor', 'wp-i18n', 'wp-rich-text' ),
 			) );
@@ -200,7 +200,7 @@ class Assets implements Component_Interface {
 				 * So, we just need to enqueue it without registration.
 				 */
 				'register' => false,
-				'handle'   => 'ileana-blocks-editor',
+				'handle'   => 'zooey-blocks-editor',
 				'src'      => get_theme_file_uri( 'assets/css/blocks-editor.css' ),
 			) );
 
@@ -238,7 +238,7 @@ class Assets implements Component_Interface {
 		// Processing
 
 			wp_add_inline_style(
-				'ileana-blocks-editor', // This works for both page editor and site editor.
+				'zooey-blocks-editor', // This works for both page editor and site editor.
 				$custom_background
 				. str_replace(
 					array_unique( array( ':root', CSS_Variables::get_root() ) ), // Reference: CSS selector root.
@@ -332,7 +332,7 @@ class Assets implements Component_Interface {
 		// Variables
 
 			$stylesheets = (array) $stylesheets;
-			$version     = ILEANA_THEME_VERSION . '.' . (string) get_theme_mod( '__customize_timestamp', '0' );
+			$version     = ZOOEY_THEME_VERSION . '.' . (string) get_theme_mod( '__customize_timestamp', '0' );
 
 
 		// Processing
@@ -348,13 +348,13 @@ class Assets implements Component_Interface {
 				 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/#comment-5332 (section "# Local Development + SSL")
 				 *
 				 * For disabling editor stylesheet versioning and passing stylesheet as a relative URL
-				 * set `define( 'ILEANA_EDITOR_STYLE_VERSIONING', false );` in a child theme/plugin.
+				 * set `define( 'ZOOEY_EDITOR_STYLE_VERSIONING', false );` in a child theme/plugin.
 				 *
 				 * We also do the automatic check (see "TEST" below) for versioning, but still allowing
-				 * using this optional `ILEANA_EDITOR_STYLE_VERSIONING` constant to force non-versioned
+				 * using this optional `ZOOEY_EDITOR_STYLE_VERSIONING` constant to force non-versioned
 				 * stylesheets (and bypassing the text) for more optimized dev environment.
 				 */
-				if ( ILEANA_EDITOR_STYLE_VERSIONING ) {
+				if ( ZOOEY_EDITOR_STYLE_VERSIONING ) {
 
 					$file_versioned = esc_url_raw(
 						add_query_arg(

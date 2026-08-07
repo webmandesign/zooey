@@ -1,8 +1,8 @@
 <?php
 /**
- * Arrow.
+ * Arrow class.
  *
- * Replaces text arrow with SVG icon
+ * Replaces text arrow with SVG icon.
  *
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas

@@ -6,17 +6,17 @@
  * colors set as CSS variables in `theme.json`, so we need
  * to transform them to actual CSS color values here.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    2.0.0
  * @version  2.0.1
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
-use WebManDesign\Ileana\Customize\Mod;
+use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Mod;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;

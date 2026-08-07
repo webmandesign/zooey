@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Header;
@@ -55,7 +55,7 @@ class Body_Class implements Component_Interface {
 	 * HTML body classes.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @version  2.0.0
 	 *
 	 * @param  array $classes
 	 *
@@ -109,16 +109,8 @@ class Body_Class implements Component_Interface {
 				$classes[] = 'search-generic';
 			}
 
-			/**
-			 * Temporary a11y fix to prevent broken focus trap on mobile menu submenus.
-			 *
-			 * @todo  Remove this once WordPress fixes Navigation block JS.
-			 * @link  https://github.com/WordPress/gutenberg/issues/63033
-			 * @see   assets/scss/blocks/_navigation-mobile.scss
-			**/
-			if ( Mod::get( 'navigation_a11y_fix' ) ) {
-				$classes[] = 'navigation-a11y-fix';
-			}
+			// Dark/light theme color.
+			$classes[] = 'is-' . Content\Demo::get_value( 'color_base', 'is_light', 'light', 'dark' ) . '-base-color';
 
 			// Sort classes alphabetically.
 			asort( $classes );

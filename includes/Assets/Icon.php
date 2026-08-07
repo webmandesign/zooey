@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -116,5 +117,22 @@ class Icon {
 			echo self::get_svg( $slug );
 
 	} // /the_svg
+
+	/**
+	 * Applying `wp_kses()` on SVG code.
+	 *
+	 * @since  2.0.1
+	 *
+	 * @param  string $svg  SVG code.
+	 *
+	 * @return  string
+	 */
+	public static function kses( string $svg ): string {
+
+		// Output
+
+			return wp_kses( $svg, '#svg' );
+
+	} // /kses
 
 }

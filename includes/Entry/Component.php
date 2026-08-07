@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Entry;
@@ -25,7 +25,7 @@ class Component implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -39,11 +39,6 @@ class Component implements Component_Interface {
 			Summary::init();
 			Taxonomy::init();
 
-			// Post type support.
-			add_post_type_support( 'page', 'excerpt' );
-			add_post_type_support( 'attachment:audio', 'thumbnail' );
-			add_post_type_support( 'attachment:video', 'thumbnail' );
-
 			// Actions
 
 				add_action( 'tha_entry_top', __CLASS__ . '::header' );
@@ -56,7 +51,7 @@ class Component implements Component_Interface {
 
 				add_filter( 'the_title', __CLASS__ . '::the_title' );
 
-				// Priority has to be `20` for WebManDesign\Zooey\Entry\Navigation::parted().
+				// Priority has to be `20` for Entry\Navigation::parted().
 				add_filter( 'the_content', __CLASS__ . '::content_wrapper', 20 );
 
 				// Allow HTML and blocks for post author bio.
@@ -67,6 +62,7 @@ class Component implements Component_Interface {
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__comments', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__entry_header', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__is_hidden_on', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
+				add_filter( 'pre_render_block', __CLASS__ . '::pre_render__password_protected', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
 				add_filter( 'render_block_core/post-content', __CLASS__ . '::render__post_content', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 
@@ -363,6 +359,40 @@ class Component implements Component_Interface {
 			return $pre_render;
 
 	} // /pre_render__is_hidden_on
+
+	/**
+	 * Block output modification: Hide the block when post password is required.
+	 *
+	 * @since  2.0.1
+	 *
+	 * @param  string|null $pre_render  The rendered content. Default null.
+	 * @param  array       $block       The block being rendered.
+	 *
+	 * @return  string|null
+	 */
+	public static function pre_render__password_protected( $pre_render, array $block ) {
+
+		// Processing
+
+			if (
+				'core/template-part' === $block['blockName']
+				&& (
+					0 === stripos( $block['attrs']['slug'], 'entry-meta' )
+					|| 0 === stripos( $block['attrs']['slug'], 'entry-navigation' )
+				)
+			) {
+
+				if ( post_password_required() ) {
+					$pre_render = '';
+				}
+			}
+
+
+		// Output
+
+			return $pre_render;
+
+	} // /pre_render__password_protected
 
 	/**
 	 * Block output modification: Setting ID for post content container.

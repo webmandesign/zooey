@@ -4,7 +4,11 @@
 // @link  https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/
 @media (prefers-reduced-motion: reduce), (update: slow) {
 
-	html {
+	:root {
+		interpolate-size: initial;
+	}
+
+	:has(:target) {
 		scroll-behavior: auto;
 	}
 

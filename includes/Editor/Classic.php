@@ -2,15 +2,15 @@
 /**
  * Classic editor setup.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @version  2.0.0
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
+use WebManDesign\Zooey\Component_Interface;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -53,23 +53,23 @@ class Classic implements Component_Interface {
 			$mce_init['style_formats']       = wp_json_encode( array(
 
 				array(
-					'title' => esc_html_x( 'Theme', 'Editor format styles section title.', 'ileana' ),
+					'title' => esc_html_x( 'Theme', 'Editor format styles section title.', 'zooey' ),
 					'items' => array(
 
 						array(
-							'title'    => esc_html__( '(L) Large font size', 'ileana' ),
+							'title'    => esc_html__( '(L) Large font size', 'zooey' ),
 							'selector' => 'p,h2,h3,h4',
 							'classes'  => 'has-l-font-size',
 						),
 
 						array(
-							'title'    => esc_html__( '(XL) Extra large font size', 'ileana' ),
+							'title'    => esc_html__( '(XL) Extra large font size', 'zooey' ),
 							'selector' => 'p,h2,h3,h4',
 							'classes'  => 'has-xl-font-size',
 						),
 
 						array(
-							'title'    => esc_html__( 'UPPERCASE', 'ileana' ),
+							'title'    => esc_html__( 'UPPERCASE', 'zooey' ),
 							'selector' => 'p,h2,h3,h4',
 							'styles'   => array(
 								'text-transform' => 'uppercase',
@@ -77,7 +77,7 @@ class Classic implements Component_Interface {
 						),
 
 						array(
-							'title'   => esc_html__( 'Paragraph with [D]ropcap', 'ileana' ),
+							'title'   => esc_html__( 'Paragraph with [D]ropcap', 'zooey' ),
 							'block'   => 'p',
 							'classes' => 'has-drop-cap',
 						),

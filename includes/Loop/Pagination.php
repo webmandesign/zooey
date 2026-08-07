@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.7
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Loop;
@@ -97,7 +97,7 @@ class Pagination implements Component_Interface {
 	 * @link  https://developer.wordpress.org/reference/functions/paginate_links/
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.7
+	 * @version  2.0.5
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -120,7 +120,26 @@ class Pagination implements Component_Interface {
 					if ( 'core/query-pagination-numbers' === $block['blockName'] ) {
 						$total   = $GLOBALS['wp_query']->max_num_pages ?? 1;
 						$current = absint( max( get_query_var( 'paged' ), 1 ) );
+
 					} elseif ( 'core/comments-pagination-numbers' === $block['blockName'] ) {
+
+						global $wp_query;
+
+						$post_id  = get_the_ID();
+						$comments = $wp_query->comments;
+
+						// If comments aren't set yet, query them manually.
+						if ( empty( $comments ) && $post_id ) {
+
+							$comments = get_comments( array(
+								'post_id' => $post_id,
+								'status'  => 'approve',
+							) );
+
+							$wp_query->comments      = $comments;
+							$wp_query->comment_count = count( $comments );
+						}
+
 						$total   = get_comment_pages_count();
 						$current = absint( max( get_query_var( 'cpage' ), 1 ) );
 					}
@@ -218,6 +237,7 @@ class Pagination implements Component_Interface {
 				$html->set_attribute( 'data-total', $total );
 
 				// Make current page focusable for screen readers.
+				// This is allowed even in WPORG (https://themes.trac.wordpress.org/ticket/173979#comment:24).
 				$html->next_tag( array( 'tag_name' => 'span', 'class_name' => 'current' ) );
 				$html->set_attribute( 'tabindex', 0 );
 
@@ -247,6 +267,7 @@ class Pagination implements Component_Interface {
 			$html = new WP_HTML_Tag_Processor( $content );
 
 			$html->next_tag();
+
 			if ( stripos( $content, 'is-arrow' ) ) {
 				$html->add_class( 'has-arrow' );
 			}

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.3
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -97,7 +97,8 @@ class Starter implements Component_Interface {
 	/**
 	 * Attachments.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -108,11 +109,11 @@ class Starter implements Component_Interface {
 			self::$content['attachments'] = array(
 
 				'image-featured' => array(
-					'file' => 'assets/images/starter/3to2-2.webp',
+					'file' => 'assets/images/demo/3to2-2.webp',
 				),
 
 				'logo' => array(
-					'file' => 'assets/images/starter/logo.png',
+					'file' => 'assets/images/demo/logo.png',
 				),
 			);
 
@@ -121,7 +122,8 @@ class Starter implements Component_Interface {
 	/**
 	 * WordPress options.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -130,11 +132,12 @@ class Starter implements Component_Interface {
 		// Output
 
 			self::$content['options'] = array(
-				'show_on_front'  => 'page',
-				'page_on_front'  => '{{home}}',
-				'page_for_posts' => '{{blog}}',
-				'posts_per_page' => 6,
-				'custom_logo'    => '{{logo}}',
+				'show_on_front'   => 'page',
+				'page_on_front'   => '{{home}}',
+				'page_for_posts'  => '{{blog}}',
+				'posts_per_page'  => 6,
+				'blogdescription' => esc_html__( 'Welcome to our website!', 'zooey' ),
+				'custom_logo'     => '{{logo}}',
 			);
 
 	} // /options
@@ -143,7 +146,7 @@ class Starter implements Component_Interface {
 	 * Pages.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.3
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -190,8 +193,9 @@ class Starter implements Component_Interface {
 
 				'blog' => array(
 					'post_type'    => 'page',
-					'post_title'   => esc_html_x( 'Blog', 'Page title', 'zooey' ),
-					'post_excerpt' => Block_Pattern::get_text( 'm', '.' ) . ' ' . Block_Pattern::get_text( 'l', '.' ),
+					'post_title'   => esc_html_x( 'Blog', 'Theme starter content: Blog page title', 'zooey' ),
+					'post_name'    => esc_html_x( 'blog', 'Page slug', 'zooey' ),
+					'post_excerpt' => Block_Pattern::get_text( 'm' ) . ' ' . Block_Pattern::get_text( 'l' ),
 				),
 
 				'contact' => array(
@@ -202,6 +206,42 @@ class Starter implements Component_Interface {
 					'template'       => $template_no_intro,
 					'thumbnail'      => '{{image-featured}}',
 					'comment_status' => 'closed',
+				),
+
+				'nav' => array(
+					'post_type'    => 'wp_navigation',
+					'post_title'   => esc_html_x( 'Site Navigation', 'Page title', 'zooey' ),
+					'post_content' => str_replace(
+						'./',
+						home_url( '/' ),
+						''
+						. '<!-- wp:navigation-link {'
+						. '"label":"' . esc_html_x( 'Home', 'Page title', 'zooey' ) . '",'
+						. '"url":"./",'
+						. '"kind":"custom"} /-->'
+
+						. '<!-- wp:navigation-link {'
+						. '"label":"' . esc_html_x( 'About us', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_html_x( 'about-us', 'Page slug', 'zooey' ) . '/",'
+						. '"kind":"custom"} /-->'
+
+						. '<!-- wp:navigation-link {'
+						. '"label":"' . esc_html_x( 'Services', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_html_x( 'services', 'Page slug', 'zooey' ) . '/",'
+						. '"kind":"custom"} /-->'
+
+						. '<!-- wp:navigation-link {'
+						. '"label":"' . esc_html_x( 'Blog', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_html_x( 'blog', 'Page slug', 'zooey' ) . '/",'
+						. '"kind":"custom"} /-->'
+
+						. '<!-- wp:navigation-link {'
+						. '"label":"' . esc_html_x( 'Contact', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_html_x( 'contact', 'Page slug', 'zooey' ) . '/",'
+						. '"kind":"custom"} /-->'
+
+						. '',
+					),
 				),
 			);
 

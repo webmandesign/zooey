@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.3
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -22,7 +22,8 @@ class Component implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -34,9 +35,12 @@ class Component implements Component_Interface {
 			Container::init();
 			// Blocks.
 			Block::init();
+			Block_Mods::init();
 			Block_Pattern::init();
 			Block_Style::init();
 			Block_Template_Part::init();
+			// Demo content (for patterns).
+			Demo::init();
 			// Starter content.
 			Starter::init();
 
@@ -145,7 +149,8 @@ class Component implements Component_Interface {
 	 *
 	 * Adds info about pagination to H1 headings.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -171,7 +176,7 @@ class Component implements Component_Interface {
 				&& 1 == $block['attrs']['level']
 			) {
 
-				if ( $paged_suffix = Component::get_paged_info() ) {
+				if ( $paged_suffix = self::get_paged_info() ) {
 					$block_content = str_replace(
 						'</h1>',
 						$paged_suffix . '</h1>',

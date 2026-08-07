@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Entry;
@@ -21,13 +22,17 @@ class Summary implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
 	public static function init() {
 
 		// Processing
+
+			// Post type support.
+			add_post_type_support( 'page', 'excerpt' );
 
 			// Filters
 

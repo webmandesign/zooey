@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Plugin;
@@ -21,7 +22,8 @@ class Component implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -45,6 +47,10 @@ class Component implements Component_Interface {
 
 				if ( class_exists( 'Block_Visibility' ) ) {
 					Block_Visibility\Component::init();
+				}
+
+				if ( class_exists( 'PLVT_View_Transition_Animation' ) ) {
+					View_Transitions\Component::init();
 				}
 
 			// Integration with theme builders (Beaver Themer & Elementor Pro Theme Builder).

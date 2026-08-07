@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 // Exit if accessed directly.
@@ -21,12 +22,13 @@ $features = array(
 	'site-editor',
 	'patterns',
 	'styles',
-	'typography',
-	'background',
-	'custom-header',
+	'template-parts',
 	'blog',
-	'privacy',
+	'background',
+	'typography',
+	'custom-header', // @todo mobile-header?
 	'featured-posts',
+	'privacy',
 	'hybrid',
 );
 

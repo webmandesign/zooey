@@ -19,9 +19,9 @@ export default null;
 		value
 			.bind( ( to ) => {
 
-				$( '#ileana-inline-css' )
+				$( '#zooey-inline-css' )
 					.append(
-						ileanaCustomizePreview.cssVarRoot + '{'
+						zooeyCustomizePreview.cssVarRoot + '{'
 						+ '--wp--preset--color--base:' + to + ';'
 						+ '}'
 					);

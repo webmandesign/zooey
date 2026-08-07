@@ -2,15 +2,15 @@
 /**
  * Theme JSON cache class.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  2.0.0
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
+use WebManDesign\Zooey\Component_Interface;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -24,7 +24,7 @@ class Cache {
 	 * @access  public
 	 * @var     string
 	 */
-	public static $transient_cache_key = 'ileana_cache_theme_json';
+	public static $transient_cache_key = 'zooey_cache_theme_json';
 
 	/**
 	 * Theme JSON new data soft cache.
@@ -51,7 +51,7 @@ class Cache {
 				add_action( 'customize_save_after',            __CLASS__ . '::flush' );
 				add_action( 'save_post_' . 'wp_global_styles', __CLASS__ . '::flush' );
 				add_action( 'switch_theme',                    __CLASS__ . '::flush' );
-				add_action( 'ileana/upgrade', __CLASS__ . '::flush' );
+				add_action( 'zooey/upgrade', __CLASS__ . '::flush' );
 
 	} // /init
 

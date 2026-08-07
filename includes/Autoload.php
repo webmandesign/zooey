@@ -10,7 +10,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  2.0.1
  */
 
 // Exit if accessed directly.
@@ -46,7 +46,7 @@ else :
 		 * TIP: Get the list by searching for "namespace " in `zooey/includes/*.php` files.
 		 *
 		 * @since    1.0.0
-		 * @version  1.0.7
+		 * @version  2.0.1
 		 * @access   private
 		 * @var      array
 		 */
@@ -58,18 +58,19 @@ else :
 			'/Accessibility/Component.php',
 
 			'/Assets/Component.php',
-			'/Assets/Editor.php',
 			'/Assets/Factory.php',
 			'/Assets/Icon.php',
 			'/Assets/Scripts.php',
 			'/Assets/Styles.php',
 
 			'/Content/Block.php',
+			'/Content/Block_Mods.php',
 			'/Content/Block_Pattern.php',
 			'/Content/Block_Style.php',
 			'/Content/Block_Template_Part.php',
 			'/Content/Component.php',
 			'/Content/Container.php',
+			'/Content/Demo.php',
 			'/Content/Starter.php',
 
 			'/Customize/Colors.php',
@@ -90,6 +91,14 @@ else :
 				'/Customize/Control/Select.php',
 				'/Customize/Control/Text.php',
 
+			'/Editor/Assets.php',
+			'/Editor/Cache.php',
+			'/Editor/Classic.php',
+			'/Editor/Component.php',
+			'/Editor/Duotone.php',
+			'/Editor/Gradients.php',
+			'/Editor/Palette.php',
+
 			'/Entry/Component.php',
 			'/Entry/Navigation.php',
 			'/Entry/Page_Template.php',
@@ -107,6 +116,7 @@ else :
 			'/Loop/Component.php',
 			'/Loop/Featured_Posts.php',
 			'/Loop/Pagination.php',
+			'/Loop/Related_Posts.php',
 
 			'/Menu/Component.php',
 
@@ -120,14 +130,16 @@ else :
 
 				'/Plugin/Block_Visibility/Component.php',
 
+				'/Plugin/View_Transitions/Component.php',
+
 			'/Setup/Component.php',
-			'/Setup/Editor.php',
 			'/Setup/Media.php',
 			'/Setup/Site_Editor.php',
 			'/Setup/Upgrade.php',
 
 			'/Tool/Arrow.php',
 			'/Tool/Component.php',
+			'/Tool/Get.php',
 			'/Tool/Google_Fonts.php',
 			'/Tool/KSES.php',
 			'/Tool/Page_Builder.php',

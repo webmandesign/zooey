@@ -29,7 +29,7 @@ $theme_name = wp_get_theme( 'zooey' )->display( 'Name' );
 		printf(
 			/* translators: %s: Theme name. */
 			esc_html__( 'Thank you for installing %s theme!', 'zooey' ),
-			'<strong>' . $theme_name . '</strong>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'<strong>' . $theme_name . '</strong>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above
 		);
 
 		?>

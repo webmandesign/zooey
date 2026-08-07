@@ -9,11 +9,16 @@ ul {
 	list-style: disc;
 }
 
-li {
+:where( li ) {
 
 	ul,
 	ol {
 		padding-inline-start: 1em;
 		margin-block-start: 0;
 	}
+}
+
+:where( ol > li )::marker {
+	font-size: var(--wp--preset--font-size--s);
+	font-weight: bolder;
 }

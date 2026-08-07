@@ -2,20 +2,20 @@
 /**
  * Theme JSON and block editor setup component.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
  * @version  2.0.1
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
-use WebManDesign\Ileana\Customize\Colors;
-use WebManDesign\Ileana\Customize\Mod;
-use WebManDesign\Ileana\Setup\Site_Editor;
-use WebManDesign\Ileana\Tool\Get;
+use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Colors;
+use WebManDesign\Zooey\Customize\Mod;
+use WebManDesign\Zooey\Setup\Site_Editor;
+use WebManDesign\Zooey\Tool\Get;
 use WP_Theme_JSON_Resolver;
 
 // Exit if accessed directly.

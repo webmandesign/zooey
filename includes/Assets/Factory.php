@@ -86,7 +86,7 @@ class Factory {
 				'register'  => true,
 			) );
 
-	} // /process_asset
+	} // /set_asset_args
 
 	/**
 	 * Enqueue style.

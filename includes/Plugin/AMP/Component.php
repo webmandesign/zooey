@@ -100,7 +100,7 @@ class Component implements Component_Interface {
 
 			if ( is_customize_preview() ) {
 				/**
-				 * @see  WebManDesign\Zooey\Customize\Preview::assets()
+				 * @see  Customize\Preview::assets()
 				 */
 				$xpaths[] = '//style[ @id = "zooey-customize-preview-inline-css" ]';
 			}

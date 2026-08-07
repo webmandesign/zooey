@@ -8,7 +8,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.7
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Tool;
@@ -16,7 +16,7 @@ namespace WebManDesign\Zooey\Tool;
 use WebManDesign\Zooey\Component_Interface;
 use WebManDesign\Zooey\Assets;
 use WebManDesign\Zooey\Customize\Mod;
-use WebManDesign\Zooey\Setup\Editor;
+use WebManDesign\Zooey\Editor\Component as Editor;
 use WPTT_WebFont_Loader;
 
 // Exit if accessed directly.
@@ -38,9 +38,10 @@ class Google_Fonts implements Component_Interface {
 	 *
 	 * List obtained from https://www.w3schools.com/cssref/css_websafe_fonts.asp
 	 *
-	 * @since   1.0.0
-	 * @access  private
-	 * @var     string
+	 * @since    1.0.0
+	 * @version  2.0.1
+	 * @access   private
+	 * @var      array
 	 */
 	private static $web_safe_fonts = array(
 		'Andalé Mono',
@@ -73,6 +74,7 @@ class Google_Fonts implements Component_Interface {
 		'Palatino',
 		'sans-serif',
 		'serif',
+		'system',
 		'Tahoma',
 		'Times New Roman',
 		'Times',
@@ -181,7 +183,8 @@ class Google_Fonts implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -216,7 +219,9 @@ class Google_Fonts implements Component_Interface {
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue', 5 );
 
-				add_action( 'init', __CLASS__ . '::add_editor_style', 5 );
+				// Priority has to be 11+ so we can use `Editor\Component::get_global_style()`
+				// in `Editor\Component::get_user_font_families()` (which we use in `self::set_url()`).
+				add_action( 'init', __CLASS__ . '::add_editor_style', 20 );
 
 	} // /init
 
@@ -312,7 +317,8 @@ class Google_Fonts implements Component_Interface {
 	/**
 	 * Sets stylesheet URL.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  string
 	 */
@@ -327,7 +333,26 @@ class Google_Fonts implements Component_Interface {
 
 		// Variables
 
-			$url = '';
+			$url         = '';
+			$values      = array();
+			$values_user = Editor::get_user_font_families( true );
+			$theme_slugs = array(
+				// The order here is important.
+				'alternative',
+				'supplemental',
+				'global',
+			);
+
+			// Get only those customizer values that are not overridden by Site Editor user values.
+			foreach ( $theme_slugs as $slug ) {
+
+				if (
+					! isset( $values_user[ $slug ] )
+					|| stripos( $values_user[ $slug ], 'typography_font_family_' . $slug )
+				) {
+					$values[ $slug ] = (string) Mod::get( 'typography_font_family_' . $slug );
+				}
+			}
 
 			// Removing system and user defined fonts.
 			$families = array_filter( array_unique( array_map(
@@ -346,11 +371,7 @@ class Google_Fonts implements Component_Interface {
 
 					return $value;
 				},
-				array(
-					(string) Mod::get( 'typography_font_family_alternative' ),
-					(string) Mod::get( 'typography_font_family_supplemental' ),
-					(string) Mod::get( 'typography_font_family_global' ),
-				)
+				$values
 			) ) );
 
 
@@ -372,6 +393,7 @@ class Google_Fonts implements Component_Interface {
 				// Skip empty font family, or web safe one.
 				if (
 					empty( $family )
+					// Using `strpos()` instead of `in_array()` as we need case-insensitive comparison!
 					|| false !== strpos( implode( ',', self::get_web_safe_fonts() ), $family )
 				) {
 					unset( $families[ $context ] );

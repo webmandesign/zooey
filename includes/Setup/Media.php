@@ -12,6 +12,7 @@
 namespace WebManDesign\Zooey\Setup;
 
 use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Mod;
 use WebManDesign\Zooey\Customize\Options;
 use WP_HTML_Tag_Processor;
 
@@ -43,7 +44,8 @@ class Media implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -66,6 +68,8 @@ class Media implements Component_Interface {
 
 				add_filter( 'get_custom_logo_image_attributes', __CLASS__ . '::custom_logo_image_attributes', 10, 2 );
 
+				add_filter( 'render_block_data', __CLASS__ . '::render__logo_data', ZOOEY_RENDER_BLOCK_PRIORITY );
+
 				add_filter( 'render_block_core/cover', __CLASS__ . '::render__cover_blur', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/cover', __CLASS__ . '::render__cover_image_size', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
 				add_filter( 'render_block_core/image', __CLASS__ . '::render__image_header', ZOOEY_RENDER_BLOCK_PRIORITY, 2 );
@@ -78,7 +82,7 @@ class Media implements Component_Interface {
 	 * After setup theme.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -94,6 +98,10 @@ class Media implements Component_Interface {
 				'attachment:audio',
 				'attachment:video',
 			) );
+
+			// Post type support.
+			add_post_type_support( 'attachment:audio', 'thumbnail' );
+			add_post_type_support( 'attachment:video', 'thumbnail' );
 
 			// Custom header.
 
@@ -418,10 +426,42 @@ class Media implements Component_Interface {
 	} // /custom_logo_image_attributes
 
 	/**
+	 * Block output modification: Logo width.
+	 *
+	 * @since  2.0.0
+	 *
+	 * @param  array $block  The block being rendered.
+	 *
+	 * @return  array
+	 */
+	public static function render__logo_data( array $block ): array {
+
+		// Processing
+
+			if (
+				'core/site-logo' === $block['blockName']
+				&& empty( $block['attrs']['width'] )
+			) {
+
+				$logo_width = absint( Mod::get( 'logo_width' ) );
+
+				if ( $logo_width ) {
+					$block['attrs']['width'] = $logo_width;
+				}
+			}
+
+
+		// Output
+
+			return $block;
+
+	} // /render__logo_data
+
+	/**
 	 * Block output modification: Cover block `image-blur` style helper.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.7
+	 * @version  2.0.0
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -439,9 +479,14 @@ class Media implements Component_Interface {
 
 				$type = $block['attrs']['backgroundType'] ?? 'image';
 
+				if ( ! empty( $block['attrs']['hasParallax'] ) ) {
+					$type = 'parallax';
+				}
+
 				$regex = array(
-					'image' => '/<img\b[^>]+wp-block-cover__image-background[\s|"][^>]*>/U',
-					'video' => '/<video\b[^>]+wp-block-cover__video-background[\s|"][^>]*><\/video>/U',
+					'image'    => '/<img\b[^>]+wp-block-cover__image-background[\s|"][^>]*>/U',
+					'video'    => '/<video\b[^>]+wp-block-cover__video-background[\s|"][^>]*><\/video>/U',
+					'parallax' => '/<div\b[^>]+has-parallax[\s|"][^>]*><\/div>/U',
 				);
 
 				if ( ! isset( $regex[ $type ] ) ) {
@@ -450,7 +495,7 @@ class Media implements Component_Interface {
 
 				$block_content = preg_replace(
 					$regex[ $type ],
-					'<span class="is-blur-wrapper">$0</span>',
+					'<div class="is-blur-wrapper">$0</div>',
 					$block_content,
 					1
 				);

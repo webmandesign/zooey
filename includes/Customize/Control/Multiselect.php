@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Customize\Control;
@@ -66,7 +67,8 @@ class Multiselect extends WP_Customize_Control {
 	/**
 	 * Renders the checkbox control.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -87,25 +89,65 @@ class Multiselect extends WP_Customize_Control {
 
 			<?php if ( $this->description ) : ?>
 			<span class="description customize-control-description"><?php
-				echo wp_kses( $this->description, 'option_description' );
+				echo wp_kses( $this->description, '#description' );
 			?></span>
 			<?php endif; ?>
 
-			<ul>
-			<?php foreach ( $this->choices as $value => $label ) : ?>
-				<li>
-					<label>
-						<input
+			<?php
+
+			$ul      = '<ul' . ( ( ! empty( $this->input_attrs['class'] ) ) ? ( ' class="' . esc_attr( $this->input_attrs['class'] ) . '"' ) : ( '' ) ) . '>';
+			$ul_open = false;
+
+			foreach ( $this->choices as $value => $label ) {
+
+				if ( 0 === strpos( $value, 'optgroup' ) ) {
+
+					if ( true === $ul_open ) {
+						echo '</ul>';
+					}
+
+					echo
+						'<details>'
+						. '<summary>' . esc_attr( $label ) . '</summary>'
+						. $ul;
+
+					$ul_open = true;
+
+				} elseif ( 0 === strpos( $value, '/optgroup' ) ) {
+
+					echo
+						'</ul>'
+						. '</details>';
+
+					$ul_open = false;
+
+				} else {
+
+					if ( false === $ul_open ) {
+						echo $ul; // phpcs:ignore -- escaped above
+						$ul_open = true;
+					}
+
+					echo
+						'<li><label>'
+						. '<input
 							type="checkbox"
-							value="<?php echo esc_attr( $value ); ?>"
-							name="<?php echo esc_attr( $this->id ); ?>[]"
-							<?php checked( in_array( $value, $value_array ) ); ?>
-						/>
-						<?php echo esc_html( $label ); ?>
-					</label>
-				</li>
-			<?php endforeach; ?>
-			</ul>
+							value="' . esc_attr( $value ) . '"
+							name="' . esc_attr( $this->id ) . '[]"'
+						. checked( in_array( $value, $value_array ), true, false ) // Return, do not echo.
+						. '>'
+						. wp_kses( $label, '#description' )
+						. '</label></li>';
+
+				}
+			}
+
+			if ( true === $ul_open ) {
+				echo '</ul>';
+				$ul_open = false;
+			}
+
+			?>
 
 			<input
 				type="hidden"
@@ -120,7 +162,8 @@ class Multiselect extends WP_Customize_Control {
 	/**
 	 * Renders the select control.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -137,21 +180,36 @@ class Multiselect extends WP_Customize_Control {
 
 				<?php if ( $this->description ) : ?>
 				<span class="description customize-control-description"><?php
-					echo wp_kses( $this->description, 'option_description' );
+					echo wp_kses( $this->description, '#description' );
 				?></span>
 				<?php endif; ?>
 
 				<select
 					name="<?php echo esc_attr( $this->id ); ?>"
+					<?php $this->input_attrs(); ?>
 					multiple="multiple"
 					<?php $this->link(); ?>
 				>
-					<?php foreach ( $this->choices as $value => $label ) : ?>
-						<option
-							value="<?php echo esc_attr( $value ); ?>"
-							<?php selected( in_array( $value, $this->get_value_array() ) ); ?>
-						><?php echo esc_html( $label ); ?></option>
-					<?php endforeach; ?>
+					<?php
+
+					foreach ( $this->choices as $value => $label ) {
+						if ( 0 === strpos( $value, 'optgroup' ) ) {
+							echo '<optgroup label="' . esc_attr( $label ) . '">';
+						} elseif ( 0 === strpos( $value, '/optgroup' ) ) {
+							echo '</optgroup>';
+						} else {
+							echo
+								'<option
+									value="' . esc_attr( $value ) . '"
+									title="' . esc_attr( $label ) . '" '
+								. selected( in_array( $value, $this->get_value_array() ), true, false ) // Return, do not echo.
+								. '>'
+								. esc_html( $label )
+								. '</option>';
+						}
+					}
+
+					?>
 				</select>
 
 				<em><?php esc_html_e( 'Press CTRL key for multiple selection.', 'zooey' ); ?></em>

@@ -6,19 +6,19 @@
  * colors set as CSS variables in `theme.json`, so we need
  * to transform them to actual CSS color values here.
  *
- * @package    Ileana
+ * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    2.0.0
  * @version  2.0.1
  */
 
-namespace WebManDesign\Ileana\Editor;
+namespace WebManDesign\Zooey\Editor;
 
-use WebManDesign\Ileana\Component_Interface;
-use WebManDesign\Ileana\Customize\Colors;
-use WebManDesign\Ileana\Customize\Mod;
-use WebManDesign\Ileana\Customize\RGBA;
+use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Colors;
+use WebManDesign\Zooey\Customize\Mod;
+use WebManDesign\Zooey\Customize\RGBA;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -276,7 +276,7 @@ class Gradients implements Component_Interface {
 			 *
 			 * @param  array $color_replace
 			 */
-			$color_replace = (array) apply_filters( 'ileana/editor/gradients/replace', $color_replace );
+			$color_replace = (array) apply_filters( 'zooey/editor/gradients/replace', $color_replace );
 
 			foreach ( $data['settings']['color'][ self::$key ]['theme'] as $key => $args ) {
 				$data['settings']['color'][ self::$key ]['theme'][ $key ]['gradient'] = str_replace(
@@ -330,37 +330,37 @@ class Gradients implements Component_Interface {
 			 *
 			 * @param  array $gradient_types
 			 */
-			return (array) apply_filters( 'ileana/editor/gradients/get_types', array(
+			return (array) apply_filters( 'zooey/editor/gradients/get_types', array(
 
 				'backdrop-blur-COLORSLUG' => array(
-					'name'     => esc_html_x( '%s: For backdrop blur', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: For backdrop blur', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( var(--wp--preset--color--COLORSLUG-semitransparent), var(--wp--preset--color--COLORSLUG-semitransparent) )',
 				),
 
 				'COLORSLUG-cut-transparent-h' => array(
-					'name'     => esc_html_x( '%s: Color cut to transparent, horizontally', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Color cut to transparent, horizontally', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to right, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )',
 				),
 				'transparent-cut-COLORSLUG-h' => array(
-					'name'     => esc_html_x( '%s: Transparent cut to color, horizontally', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Transparent cut to color, horizontally', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to left, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )',
 				),
 
 				'COLORSLUG-cut-transparent-v' => array(
-					'name'     => esc_html_x( '%s: Color cut to transparent, vertically', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Color cut to transparent, vertically', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to bottom, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )',
 				),
 				'transparent-cut-COLORSLUG-v' => array(
-					'name'     => esc_html_x( '%s: Transparent cut to color, vertically', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Transparent cut to color, vertically', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to top, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--hard), transparent var(--theme--css--gradient-stop--hard) )',
 				),
 
 				'COLORSLUG-to-transparent-v' => array(
-					'name'     => esc_html_x( '%s: Color to transparent, vertically', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Color to transparent, vertically', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to bottom, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--soft), transparent 100% )',
 				),
 				'transparent-to-COLORSLUG-v' => array(
-					'name'     => esc_html_x( '%s: Transparent to color, vertically', '%s: Placeholder for color name.', 'ileana' ),
+					'name'     => esc_html_x( '%s: Transparent to color, vertically', '%s: Placeholder for color name.', 'zooey' ),
 					'gradient' => 'linear-gradient( to top, var(--wp--preset--color--COLORSLUG) var(--theme--css--gradient-stop--soft), transparent 100% )',
 				),
 			) );
@@ -393,7 +393,7 @@ class Gradients implements Component_Interface {
 			 *
 			 * @param  array $gradient_args
 			 */
-			return (array) apply_filters( 'ileana/editor/gradients/get_args', array(
+			return (array) apply_filters( 'zooey/editor/gradients/get_args', array(
 
 				'ACCENT' => array(
 					'backdrop-blur-COLORSLUG',

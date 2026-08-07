@@ -6,13 +6,14 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Setup;
 
 use WebManDesign\Zooey\Component_Interface;
-use WebManDesign\Zooey\Customize;
+use WebManDesign\Zooey\Customize\Options;
+use WebManDesign\Zooey\Customize\Mod;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -22,7 +23,8 @@ class Component implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -32,8 +34,6 @@ class Component implements Component_Interface {
 
 			// Theme upgrade action.
 			Upgrade::init();
-			// Editor setup.
-			Editor::init();
 			// Media setup.
 			Media::init();
 			// Site Editor setup.
@@ -50,7 +50,7 @@ class Component implements Component_Interface {
 	 * Theme setup.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.7
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -65,7 +65,7 @@ class Component implements Component_Interface {
 				 */
 				'background' => array(
 					// This becomes `color_base`, CSS variable `--wp--preset--color--base`:
-					'default-color' => sanitize_hex_color_no_hash( Customize\Options::$theme_mods['color_base'] ),
+					'default-color' => sanitize_hex_color_no_hash( Options::$theme_mods['color_base'] ),
 				),
 
 				/**
@@ -86,7 +86,7 @@ class Component implements Component_Interface {
 				 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#custom-logo
 				 */
 				'logo' => array(
-					'unlink-homepage-logo' => ! Customize\Mod::get( 'link_homepage_logo' ),
+					'unlink-homepage-logo' => ! Mod::get( 'link_homepage_logo' ),
 				),
 			);
 
@@ -124,7 +124,8 @@ class Component implements Component_Interface {
 	 * $content_width variable defines the maximum allowed width for images,
 	 * videos, and oEmbeds displayed within a theme.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @global  int $content_width
 	 *
@@ -138,7 +139,7 @@ class Component implements Component_Interface {
 			 * We cannot use WebManDesign\Zooey\Customize\Mod::get() here as we are setting
 			 * these before the actual theme options are declared.
 			 */
-			$content_width = absint( get_theme_mod( 'layout_width_wide', Customize\Options::$theme_mods['layout_width_wide'] ) );
+			$content_width = absint( get_theme_mod( 'layout_width_wide', Options::$theme_mods['layout_width_wide'] ) );
 
 			// Allow filtering.
 			$GLOBALS['content_width'] = absint(

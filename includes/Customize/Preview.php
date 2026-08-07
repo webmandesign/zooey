@@ -324,7 +324,7 @@ class Preview implements Component_Interface {
 					'( function( $ ) {' . PHP_EOL.PHP_EOL
 					. '"use strict";' . PHP_EOL.PHP_EOL
 					. 'var zooeyPreviewStyleTag = $( "#zooey-customize-preview-inline-css" );' . PHP_EOL.PHP_EOL
-					. trim( $output ) . PHP_EOL.PHP_EOL // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					. trim( $output ) . PHP_EOL.PHP_EOL // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above
 					. '} )( jQuery );'
 				);
 			}

@@ -4,6 +4,7 @@ hr {
 	clear: both;
 	min-width: 3rem;
 	margin-block: var(--wp--style--block-gap);
+	color: inherit; // Required for browser styles reset.
 	border-bottom-width: 0;
 
 	&:first-child {

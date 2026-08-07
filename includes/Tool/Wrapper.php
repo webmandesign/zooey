@@ -5,12 +5,13 @@
  * Introducing a `wrapper.php` template for not repeating
  * `get_header()` and `get_footer()` template tags over and over.
  *
- * @link  http://scribu.net/wordpress/theme-wrappers.html
+ * @link  https://scribu.net/wordpress/theme-wrappers.html
  *
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Tool;
@@ -70,13 +71,14 @@ class Wrapper implements Component_Interface {
 	/**
 	 * Use wrapper template before loading other templates.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
-	 * @param  string $template  The path of the template to include.
+	 * @param  null|string $template  The path of the template to include.
 	 *
 	 * @return  string
 	 */
-	public static function template_include( string $template ): string {
+	public static function template_include( $template ): string {
 
 		// Requirements check
 

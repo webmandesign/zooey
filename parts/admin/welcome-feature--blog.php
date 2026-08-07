@@ -8,7 +8,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
@@ -23,12 +23,14 @@ defined( 'ABSPATH' ) || exit;
 <div class="welcome__column">
 	<figure class="welcome__image">
 		<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=layout_blog' ) ); ?>">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/features/blog.jpg' ) . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
+			<img src="<?php echo esc_url( 'https://pic.webmandesign.eu/FEATURES/zooey/' . 'blog.webp' . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
 		</a>
 	</figure>
 
 	<h3><?php esc_html_e( 'Blog Layouts', 'zooey' ); ?></h3>
-	<p><?php esc_html_e( 'Display blog posts in a list with a sidebar, or in columns layout.', 'zooey' ); ?> <?php esc_html_e( 'Or set completely custom layout for your blog template.', 'zooey' ); ?></p>
+	<p>
+		<?php esc_html_e( 'Display blog posts in a list with a sidebar, or in columns layout.', 'zooey' ); ?> <?php esc_html_e( 'Or set completely custom layout for your blog template.', 'zooey' ); ?>
+	</p>
 
 	<p><a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=layout_blog' ) ); ?>" class="button button-hero"><?php esc_html_e( 'Set Blog Layout', 'zooey' ); ?></a></p>
 

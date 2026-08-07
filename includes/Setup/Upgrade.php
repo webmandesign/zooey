@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.2
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -48,7 +48,7 @@ class Upgrade implements Component_Interface {
 	 * Do action on theme version change.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.2
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -56,15 +56,37 @@ class Upgrade implements Component_Interface {
 
 		// Variables
 
-			$current_theme_version = get_site_transient( self::$transient_cache_version );
-			$new_theme_version     = wp_get_theme( 'zooey' )->get( 'Version' );
+			$stylesheet      = get_stylesheet();
+			$current_version = get_site_transient( self::$transient_cache_version );
+			$new_version     = array(
+				'zooey' => wp_get_theme( 'zooey' )->get( 'Version' ),
+				'child'     => array(
+					$stylesheet => wp_get_theme()->get( 'Version' ),
+				),
+			);
 
 
 		// Processing
 
 			if (
-				empty( $current_theme_version )
-				|| $new_theme_version != $current_theme_version
+				empty( $current_version )
+				|| is_string( $current_version ) // Upgrade old values.
+			) {
+				$current_version = array(
+					'zooey' => '',
+					'child'     => array(
+						$stylesheet => '',
+					),
+				);
+			}
+
+			if ( empty( $current_version['child'][ $stylesheet ] ) ) {
+				$current_version['child'][ $stylesheet ] = '';
+			}
+
+			if (
+				$new_version['zooey'] != $current_version['zooey']
+				|| $new_version['child'][ $stylesheet ] != $current_version['child'][ $stylesheet ]
 			) {
 
 				/**
@@ -72,12 +94,16 @@ class Upgrade implements Component_Interface {
 				 *
 				 * @since  1.0.0
 				 *
-				 * @param  string $new_theme_version
-				 * @param  string $current_theme_version
+				 * @param  string $new_version
+				 * @param  string $current_version
 				 */
-				do_action( 'zooey/upgrade', $new_theme_version, $current_theme_version );
+				do_action( 'zooey/upgrade', $new_version, $current_version );
 
-				set_site_transient( self::$transient_cache_version, $new_theme_version );
+				// Keep it this way as there can be multiple child themes on WP network.
+				$current_version['zooey'] = $new_version['zooey'];
+				$current_version['child'][ $stylesheet ] = $new_version['child'][ $stylesheet ];
+
+				set_site_transient( self::$transient_cache_version, $current_version );
 			}
 
 	} // /action

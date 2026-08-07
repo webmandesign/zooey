@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey;
@@ -101,7 +102,7 @@ if ( class_exists( 'RegenerateThumbnails' ) ) {
 						<?php
 
 						if ( isset( $args['description'] ) ) {
-							echo wp_kses( $args['description'], 'option_description' );
+							echo wp_kses( $args['description'], '#description' );
 						} else {
 							echo '&mdash;';
 						}

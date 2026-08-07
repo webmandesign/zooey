@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -29,7 +30,8 @@ class Mod {
 	 *
 	 * @link  https://developer.wordpress.org/reference/functions/get_theme_mod/
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  string $name
 	 * @param  array  $option_setup
@@ -61,7 +63,8 @@ class Mod {
 
 		// Variables
 
-			$output = false;
+			$output     = false;
+			$is_default = null;
 
 			if ( false === self::$mods ) {
 				// Soft cache theme mods in class property.
@@ -77,7 +80,8 @@ class Mod {
 				 * Theme option has been modified,
 				 * so we don't need the default value.
 				 */
-				$output = self::$mods[ $name ];
+				$output     = self::$mods[ $name ];
+				$is_default = false;
 			} else {
 
 				/**
@@ -91,12 +95,15 @@ class Mod {
 					 * get the default value checking all theme options.
 					 */
 					foreach ( Options::get() as $option ) {
+
 						if (
 							isset( $option['id'], $option['default'] )
 							&& $name === $option['id']
 						) {
-							$output = $option['default'];
+
+							$output       = $option['default'];
 							$option_setup = $option;
+							$is_default   = true;
 							break;
 						}
 					}
@@ -110,7 +117,9 @@ class Mod {
 						isset( $option_setup['id'], $option_setup['default'] )
 						&& $name === $option_setup['id']
 					) {
-						$output = $option_setup['default'];
+
+						$output     = $option_setup['default'];
+						$is_default = true;
 					}
 				}
 
@@ -138,7 +147,17 @@ class Mod {
 
 		// Output
 
-			return apply_filters( "theme_mod_{$name}", $output, $option_setup );
+			/**
+			 * Filters theme mod value.
+			 *
+			 * @since    1.0.0
+			 * @version  2.0.0
+			 *
+			 * @param  mixed      $output        Theme mod value.
+			 * @param  array      $option_setup  Optional single theme option setup array.
+			 * @param  null|bool  $is_default    Whether the value is default or customized. Default: null.
+			 */
+			return apply_filters( "theme_mod_{$name}", $output, $option_setup, $is_default );
 
 	} // /get
 

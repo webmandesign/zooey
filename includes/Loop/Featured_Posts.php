@@ -160,7 +160,7 @@ class Featured_Posts implements Component_Interface {
 				'label'             => esc_html__( 'Featured posts tag slug', 'zooey' ),
 				'description'       =>
 					esc_html__( '3 latest posts assigned to this tag will be displayed as featured posts on blog page.', 'zooey' )
-					. ' (<a href="' . esc_url_raw( admin_url( 'edit-tags.php?taxonomy=post_tag' ) ) . '" target="_blank"  rel="noopener noreferrer">'
+					. ' (<a href="' . esc_url_raw( admin_url( 'edit-tags.php?taxonomy=post_tag' ) ) . '" target="_blank" rel="noopener noreferrer">'
 					. esc_html__( 'Open tags manager in a new window now &rarr;', 'zooey' )
 					. '</a>)'
 					. '<br>'

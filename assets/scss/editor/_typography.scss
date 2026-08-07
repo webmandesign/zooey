@@ -1,0 +1,8 @@
+/* FILE: editor/_typography.scss */
+
+h1, h2, h3, h4, h5, h6 {
+
+	&.is-selected {
+		text-transform: none;
+	}
+}

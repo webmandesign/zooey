@@ -1,4 +1,6 @@
 /* FILE: global/wp/_colors.scss */
+@use 'sass:map';
+@use 'sass:string';
 
 // Has background.
 
@@ -16,7 +18,7 @@
 				margin-right: calc( -1 * var(--theme--css--has-background--padding-right) );
 			}
 
-			@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+			@include media( ( map.get( $breakpoint, 'm' ), 'max-width' ) ) {
 				--theme--css--has-background--padding-left:  var(--wp--style--root--padding-left);
 				--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
 			}
@@ -35,7 +37,7 @@
 				--theme--css--has-background--padding-right: var(--wp--style--root--padding-right);
 
 				// Reset back:
-				.has-background {
+				.has-background:not( .has-global-padding.alignfull ) {
 					--theme--css--has-background--padding-left:  var(--wp--custom--spacing--has-background--left);
 					--theme--css--has-background--padding-right: var(--wp--custom--spacing--has-background--right);
 				}
@@ -48,59 +50,58 @@
 			// horizontal scroll (for example when nesting 2 fully
 			// aligned blocks with background in the root container
 			// of the page/post content).
-			&[style*="padding-left:0"] > .alignfull {
-				margin-left: 0;
+			&[style*="padding-left: 0"],
+			&[style*="padding-left:0"],
+			&[style*="padding: 0"],
+			&[style*="padding:0"] {
+
+				> .alignfull {
+					margin-left: 0;
+				}
 			}
-			&[style*="padding-right:0"] > .alignfull {
-				margin-right: 0;
+			&[style*="padding-right: 0"],
+			&[style*="padding-right:0"],
+			&[style*="padding: 0"],
+			&[style*="padding:0"] {
+				> .alignfull {
+					margin-right: 0;
+				}
 			}
 		}
 	}
 
-// Text and border color.
+// Text color.
 
-	// Default WordPress palette.
-	@each $slug, $color in $wp_palette_colors {
+	//
+	// The CSS specificity here is 0-0-1 (the lowest possible),
+	// or 0-0-2 in block editor, respectively.
+	//
+	// .has-background:
+	//	Inherit link & heading color from `.has-background` container/wrapper.
+	//
+	//	This may be a bit tricky, as `.has-background` class is applied
+	//	on a block even when just a background image or gradient is set
+	//	(no specific background color is set). In that case there is no
+	//	text color calculated and default block text color is used, and
+	//	we override the default link & heading color in such cases.
+	//	But WordPress provides setting option for link color on blocks,
+	//	so it is OK to have this global link & heading color style.
+	//
+	//	@see  assets/scss/php/colors.scss
+	//	@see  assets/scss/_tools/_mixin-color-classes.scss
+	//
+	// .has-text-color:
+	// 	Inherit link & heading color from `.has-text-color` container/wrapper.
+	// 	Having low priority here makes sure we don't override button text color.
+	//
+	@include wrap( '', '', 'html' ) {
+		:where( .has-background, .has-text-color ) {
 
-		#{$root} {
-
-			@if _is_dark_color( $color ) {
-				--wp--preset--color--#{ $slug }--bg-text: var(--wp--preset--color--white);
-				--wp--preset--color--#{ $slug }--bg-border: var(--wp--preset--color--white--border);
-			} @else {
-				--wp--preset--color--#{ $slug }--bg-text: var(--wp--preset--color--black);
-				--wp--preset--color--#{ $slug }--bg-border: var(--wp--preset--color--black--border);
+			:is(
+				a,
+				h1, h2, h3, h4, h5, h6
+			) {
+				color: inherit;
 			}
-
-			// Have to convert to RGB first as SASS `rgba()` does not process variables.
-			$rgb: red( $color ), green( $color ), blue( $color );
-			--wp--preset--color--#{ $slug }--border: rgba( #{ $rgb }, var(--wp--custom--opacity--border) );
-		}
-
-		@include color_classes( $slug );
-	}
-
-	// Theme colors.
-	@each $option, $color in $theme_options {
-
-		@if (
-			1 == str-index( $option, '--theme--mod--color_' )
-			and not str-index( $option, 'gradient_' )
-			and 1 == str-index( $color + '', '#' )
-		) {
-
-			$wp_slug: _str_replace( '--theme--mod--color_', '', $option );
-			$wp_slug: _str_replace( '_', '-', $wp_slug );
-
-			@include color_classes( $wp_slug );
-		}
-	}
-
-	// Has text color.
-	:where(.has-text-color) {
-
-		a,
-		h1, h2, h3, h4, h5, h6 {
-			color: inherit;
 		}
 	}

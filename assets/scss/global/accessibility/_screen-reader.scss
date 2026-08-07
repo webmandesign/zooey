@@ -8,7 +8,7 @@ body[class] .screen-reader-text,
 	margin: -1px;
 	border: 0;
 
-	&:focus {
+	&:focus-visible {
 		@extend %screen_reader--show;
 		display: block;
 		margin: 1em;
@@ -18,7 +18,6 @@ body[class] .screen-reader-text,
 		text-decoration: none;
 		background: var( --wp--preset--color--primary, #36b );
 		color: var( --wp--preset--color--primary--bg-text, #fff );
-		outline-color: var( --wp--preset--color--primary, #36b );
 		box-shadow: var(--wp--preset--shadow--s);
 		z-index: 100000; // Above WP toolbar.
 	}
@@ -39,5 +38,13 @@ body {
 				}
 			}
 		}
+	}
+}
+
+.screen-reader-text,
+.is-style-screen-reader-text {
+
+	:root :where( .wp-block-spacer + & + * ) {
+		margin-block-start: 0;
 	}
 }

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -20,7 +21,8 @@ class Component implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -31,8 +33,6 @@ class Component implements Component_Interface {
 			// Theme assets.
 			Styles::init();
 			Scripts::init();
-			// Post editor assets.
-			Editor::init();
 
 			// Filters
 

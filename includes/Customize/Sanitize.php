@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -46,14 +47,15 @@ class Sanitize {
 	 * This callback sanitizes `$value` against provided array of `$choices`.
 	 * The `$choices` has to be associated array!
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
-	 * @param  string $value
-	 * @param  mixed  $option
+	 * @param  string                          $value
+	 * @param  WP_Customize_Setting|array|null $option
 	 *
 	 * @return  string
 	 */
-	public static function select( string $value, $option = null ): string {
+	public static function select( string $value, WP_Customize_Setting|array|null $option = null ): string {
 
 		// Variables
 
@@ -74,14 +76,15 @@ class Sanitize {
 	 * The `$choices` has to be associated array!
 	 * Returns an array of values.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
-	 * @param  string|array $value
-	 * @param  mixed        $option
+	 * @param  string|array                    $value
+	 * @param  WP_Customize_Setting|array|null $option
 	 *
 	 * @return  array
 	 */
-	public static function array_value( $value, $option = null ): array {
+	public static function array_value( string|array $value, WP_Customize_Setting|array|null $option = null ): array {
 
 		// Variables
 
@@ -127,14 +130,15 @@ class Sanitize {
 	 * Allows only alphanumeric characters, spaces, commas, underscores,
 	 * dashes, single/double quote inside the `$value`.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
-	 * @param  string $value
-	 * @param  mixed  $option
+	 * @param  string                          $value
+	 * @param  WP_Customize_Setting|array|null $option
 	 *
 	 * @return  string
 	 */
-	public static function fonts( string $value, $option = null ): string {
+	public static function fonts( string $value, WP_Customize_Setting|array|null $option = null ): string {
 
 		// Variables
 
@@ -291,7 +295,8 @@ class Sanitize {
 	/**
 	 * CSS: Sanitize fonts.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  string $fonts
 	 *
@@ -301,16 +306,7 @@ class Sanitize {
 
 		// Variables
 
-			$css_comment        = '';
-			$font_family_system = array(
-				'ui-sans-serif',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'"Segoe UI"',
-				'Roboto',
-				'"Helvetica Neue"',
-				'sans-serif',
-			);
+			$css_comment = '';
 
 
 		// Processing
@@ -322,7 +318,7 @@ class Sanitize {
 				$family = trim( $family, "\"' \t\n\r\0\x0B" );
 
 				if ( 'system' === $family ) {
-					$family = implode( ', ', $font_family_system );
+					$family = 'var(--wp--custom--font-family--system-ui)';
 				} elseif ( strpos( $family, ' ' ) ) {
 					$family = '"' . $family . '"';
 				}
@@ -350,7 +346,8 @@ class Sanitize {
 	/**
 	 * CSS: Sanitize image URL.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @param  array|int|string $image  Could be a URL, numeric image ID or an array with `id` image ID key.
 	 *
@@ -453,7 +450,7 @@ class Sanitize {
 		 *
 		 * @since  1.0.0
 		 *
-		 * @param  array|WP_Customize_Setting $option
+		 * @param  WP_Customize_Setting|array|null $option
 		 *
 		 * @return  mixed
 		 */

@@ -4,12 +4,17 @@
 @import 'base';
 @import 'notice';
 
-.control-section-theme-options {
+.control-section-theme-options,
+[id*="section-wcti_"],
+[id*="section-woocommerce_"] {
 	@import 'control';
 	@import 'control-checkbox';
+	@import 'control-multicheckbox';
+	@import 'control-multiselect';
 	@import 'control-hidden';
 	@import 'control-html';
 	@import 'control-range';
 }
 
 @import 'others';
+@import 'custom-background';

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -55,7 +56,8 @@ class Options_Partial_Refresh implements Component_Interface {
 	/**
 	 * Setup partial refresh.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -66,16 +68,51 @@ class Options_Partial_Refresh implements Component_Interface {
 		// Processing
 
 			// Site title.
-			$wp_customize->selective_refresh->add_partial( 'blogname', array(
-				'selector'        => '.site-title, .wp-block-site-title',
-				'render_callback' => __CLASS__ . '::render__blogname',
-			) );
+			$wp_customize->selective_refresh->add_partial(
+				'blogname',
+				array(
+					'selector'        => '.site-title, .wp-block-site-title',
+					'render_callback' => __CLASS__ . '::render__blogname',
+				)
+			);
 
 			// Site description.
-			$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-				'selector'        => '.site-description, .wp-block-site-tagline',
-				'render_callback' => __CLASS__ . '::render__blogdescription',
-			) );
+			$wp_customize->selective_refresh->add_partial(
+				'blogdescription',
+				array(
+					'selector'        => '.site-description, .wp-block-site-tagline',
+					'render_callback' => __CLASS__ . '::render__blogdescription',
+				)
+			);
+
+			// Logo max width preview.
+			// @see   Setup\Media::render__logo_data()
+			// @see   WP_Customize_Manager::register_controls()
+			// @link  https://developer.wordpress.org/reference/classes/wp_customize_manager/register_controls/
+			$wp_customize->selective_refresh->add_partial(
+				'logo_width',
+				array(
+					'selector'            => '.custom-logo-link',
+					'container_inclusive' => true,
+					'render_callback'     => function() {
+
+						// Variables
+
+							$logo_width = absint( Mod::get( 'logo_width' ) );
+							$style      = ( $logo_width ) ? ( 'style="max-width:' . $logo_width . 'px" ' ) : ( '' );
+
+
+						// Output
+
+							return str_replace(
+								[ '<img ', '<svg ' ],
+								[ '<img ' . $style, '<svg ' . $style ],
+								get_custom_logo()
+							);
+
+					},
+				)
+			);
 
 	} // /setup
 

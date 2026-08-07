@@ -6,14 +6,12 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Setup;
 
 use WebManDesign\Zooey\Component_Interface;
-use WebManDesign\Zooey\Assets\Factory;
-use WP_Query;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -51,7 +49,7 @@ class Site_Editor implements Component_Interface {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
@@ -74,7 +72,7 @@ class Site_Editor implements Component_Interface {
 
 				add_filter( 'theme_file_path', __CLASS__ . '::bypass_is_block_theme', 10, 2 );
 
-				add_filter( 'pre_get_posts', __CLASS__ . '::user_global_styles' );
+				add_filter( 'the_posts', __CLASS__ . '::user_global_styles' );
 
 	} // /init
 
@@ -103,7 +101,8 @@ class Site_Editor implements Component_Interface {
 	/**
 	 * After setup theme.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -134,8 +133,11 @@ class Site_Editor implements Component_Interface {
 				/**
 				 * Unfortunately, we can not load separate core block assets.
 				 * If we do, front-end styles for site header, footer, etc. would be broken.
+				 *
+				 * @see  https://make.wordpress.org/core/2025/03/24/new-filter-should_load_block_assets_on_demand-in-6-8/
 				 */
 				add_filter( 'should_load_separate_core_block_assets', '__return_false' );
+				add_filter( 'should_load_block_assets_on_demand', '__return_false' );
 
 				/**
 				 * WordPress caches theme data, including the block theme status.
@@ -196,42 +198,80 @@ class Site_Editor implements Component_Interface {
 	 * This approach works also in Site Editor, not only on
 	 * front-end, unlike `wp_theme_json_data_user` filter.
 	 *
-	 * @since  1.0.0
+	 * However! Pre WP 7.0 we hooked this onto `pre_get_posts` action, which
+	 * was fast and efficient. As of WP7+ it is allowed to set up custom
+	 * font families also for classic themes! So we need to filter the actual
+	 * global styles post content here, unfortunately. It is slower (as the
+	 * database query is required), but it is the only viable option we have.
 	 *
-	 * @param  WP_Query $query
+	 * @since    1.0.0
+	 * @version  2.0.1
 	 *
-	 * @return  void
+	 * @param  array $posts
+	 *
+	 * @return  array
 	 */
-	public static function user_global_styles( WP_Query $query ) {
+	public static function user_global_styles( array $posts ): array {
+
+		// Requirements check
+
+			if (
+				1 !== count( $posts )
+				|| empty( $posts[0]->post_type )
+				|| 'wp_global_styles' !== $posts[0]->post_type
+				|| self::is_enabled() // This functionality affects classic theme mode only.
+			) {
+				return $posts;
+			}
+
+
+		// Variables
+
+			// Get array of user global styles values from JSON post content.
+			$data = json_decode( $posts[0]->post_content, true );
+
 
 		// Processing
 
-			if (
-				! self::is_enabled()
-				&& 'wp_global_styles' === $query->get( 'post_type' )
-			) {
+			// If font families are set, make sure these are the only setting we allow!
+			// No other user global settings are allowed in classic themes yet.
+			// Otherwise simply remove any user global styles (as user may switch from
+			// block theme mode to classic theme mode and we need to invalidate any
+			// user global styles in that case).
+			if ( ! empty( $data['settings']['typography']['fontFamilies'] ) ) {
 
-				$query->query_vars = array();
+				$posts[0]->post_content = json_encode(
+					array(
+						'version'  => $data['version'],
+						'settings' => array(
+							'typography' => array(
+								'fontFamilies' => $data['settings']['typography']['fontFamilies'],
+							),
+						),
+						'isGlobalStylesUserThemeJSON' => true,
+					)
+				);
+
+			} else {
+				unset( $posts[0] );
 			}
+
+
+		// Output
+
+			return $posts;
 
 	} // /user_global_styles
 
 	/**
 	 * Adds additional admin menu links.
 	 *
-	 * @since    1.0.0
-	 * @version  1.1.4
+	 * @since    1.1.0
+	 * @version  2.0.1
 	 *
 	 * @return  void
 	 */
 	public static function admin_menu() {
-
-		// Requirements check
-
-			if ( ! self::is_enabled() ) {
-				return;
-			}
-
 
 		// Variables
 
@@ -239,27 +279,35 @@ class Site_Editor implements Component_Interface {
 
 			$items = array(
 
-				'navigation' => array(
-					'label' => __( 'Navigation', 'zooey' ),
-					'url'   => admin_url( 'site-editor.php?path=/navigation' ),
-				),
-
-				'template_parts' => array(
+				'20.template_parts' => array(
 					'label' => __( 'Template Parts', 'zooey' ),
 					'url'   => admin_url( 'site-editor.php?postType=wp_template_part' ),
 				),
+			);
 
-				'templates' => array(
+			if ( self::is_enabled() ) {
+
+				$items['10.navigation'] = array(
+					'label' => __( 'Navigation', 'zooey' ),
+					'url'   => admin_url( 'site-editor.php?path=/navigation' ),
+				);
+
+				$items['30.templates'] = array(
 					'label' => __( 'Templates', 'zooey' ),
 					'url'   => admin_url( 'site-editor.php?postType=wp_template' ),
-				),
-			);
+				);
+			}
 
 
 		// Processing
 
+			ksort( $items );
+
 			$i = 1;
 			foreach ( $items as $id => $args ) {
+
+				// Removing priority number (the `##.`).
+				$id = substr( $id, 3 );
 
 				add_theme_page(
 					$args['label'],

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Assets;
@@ -97,7 +98,14 @@ class Scripts implements Component_Interface {
 	/**
 	 * Remove "no-js" class from elements.
 	 *
-	 * @since  1.0.0
+	 * Minified script is copied from `assets/js/no-js.min.js`
+	 * and enqueued inline in the footer to prevent external file load.
+	 *
+	 * For unminified script:
+	 * @see  assets/js/no-js.js
+	 *
+	 * @since    1.0.0
+	 * @version  2.0.0
 	 *
 	 * @return  void
 	 */
@@ -107,13 +115,7 @@ class Scripts implements Component_Interface {
 
 			wp_add_inline_script(
 				'zooey-scripts-footer',
-				Factory::strip( "
-					( function() {
-						'use strict';
-
-						document.querySelectorAll( '.no-js' ).forEach( function( e ) { e.classList.remove( 'no-js' ) } );
-					} )();
-				" )
+				'!function(){"use strict";document.querySelectorAll(".no-js").forEach((function(e){return e.classList.remove("no-js")}))}();'
 			);
 
 	} // /enqueue_inline_no_js_class
