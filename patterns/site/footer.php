@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -79,7 +79,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '110' ); ?></p>
+					<p><?php Demo::The_text( '110' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>

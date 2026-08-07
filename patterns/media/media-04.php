@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +24,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to2-3' );
+$image = Demo::Get_image_url( '3to2-3' );
 
 ?>
 
@@ -43,14 +44,14 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 				<div class="wp-block-column has-primary-background-color has-background">
 
 					<!-- wp:heading -->
-					<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/l' ); ?></h2>
+					<h2 class="wp-block-heading"><?php Demo::The_text( 'title/l' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:group {"layout":{"type":"constrained","contentSize":"400px","justifyContent":"left"}} -->
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( '135' ); ?></p>
+						<p><?php Demo::The_text( '135' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>

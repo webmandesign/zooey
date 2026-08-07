@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -41,7 +42,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '150' ); ?></p>
+			<p><?php Demo::The_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -52,36 +53,36 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '180' ); ?></p>
+				<p><?php Demo::The_text( '180' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '180' ); ?></p>
+				<p><?php Demo::The_text( '180' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '180' ); ?></p>
+				<p><?php Demo::The_text( '180' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '180' ); ?></p>
+				<p><?php Demo::The_text( '180' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->

@@ -5,8 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since    1.0.1
- * @version  1.1.1
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -29,7 +29,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to2-2' );
+$image = Demo::Get_image_url( '3to2-2' );
 
 ?>
 
@@ -48,13 +48,13 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 			<div class="wp-block-group">
 
 				<!-- wp:paragraph {"fontSize":"l"} -->
-				<p class="has-l-font-size"><?php Block_Pattern::the_text( '120' ); ?></p>
+				<p class="has-l-font-size"><?php Demo::The_text( '120' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"backgroundColor":"primary"} -->
-					<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
@@ -71,9 +71,9 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 			<!-- wp:quote -->
 			<blockquote class="wp-block-quote">
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '200' ); ?></p>
+				<p><?php Demo::The_text( '200' ); ?></p>
 				<!-- /wp:paragraph -->
-				<cite><?php Block_Pattern::the_text( 'people/name' ); ?>, <?php Block_Pattern::the_text( 'people/job' ); ?></cite>
+				<cite><?php Demo::The_text( 'people/name' ); ?>, <?php Demo::The_text( 'people/job' ); ?></cite>
 			</blockquote>
 			<!-- /wp:quote -->
 

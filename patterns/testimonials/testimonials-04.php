@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,8 +24,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to4-1' );
-$image_2 = Block_Pattern::get_image_url( '3to4-2' );
+$image_1 = Demo::Get_image_url( '3to4-1' );
+$image_2 = Demo::Get_image_url( '3to4-2' );
 
 ?>
 
@@ -46,9 +47,9 @@ $image_2 = Block_Pattern::get_image_url( '3to4-2' );
 					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
 					<blockquote class="wp-block-quote has-black-color has-text-color has-xl-font-size">
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( '190' ); ?></p>
+						<p><?php Demo::The_text( '190' ); ?></p>
 						<!-- /wp:paragraph -->
-						<cite><?php Block_Pattern::the_text( 'people/name' ); ?></cite>
+						<cite><?php Demo::The_text( 'people/name' ); ?></cite>
 					</blockquote>
 					<!-- /wp:quote -->
 
@@ -71,9 +72,9 @@ $image_2 = Block_Pattern::get_image_url( '3to4-2' );
 					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
 					<blockquote class="wp-block-quote has-black-color has-text-color has-xl-font-size">
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( '190' ); ?></p>
+						<p><?php Demo::The_text( '190' ); ?></p>
 						<!-- /wp:paragraph -->
-						<cite><?php Block_Pattern::the_text( 'people/name' ); ?></cite>
+						<cite><?php Demo::The_text( 'people/name' ); ?></cite>
 					</blockquote>
 					<!-- /wp:quote -->
 

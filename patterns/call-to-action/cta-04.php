@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +24,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '21to9' );
+$image = Demo::Get_image_url( '21to9' );
 
 ?>
 
@@ -37,7 +38,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-group">
 
 			<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"h-1"} -->
-			<h2 class="wp-block-heading has-h-1-font-size" style="font-style:normal;font-weight:400"><?php Block_Pattern::the_text( '35' ); ?></h2>
+			<h2 class="wp-block-heading has-h-1-font-size" style="font-style:normal;font-weight:400"><?php Demo::The_text( '35' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -47,7 +48,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-buttons">
 
 			<!-- wp:button {"backgroundColor":"base","fontSize":"m"} -->
-			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-base-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-base-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 			<!-- /wp:button -->
 
 		</div>

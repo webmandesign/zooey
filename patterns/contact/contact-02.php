@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,10 +24,10 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( 'map' );
+$image = Demo::Get_image_url( 'map' );
 
 ?>
 
 <!-- wp:image {"sizeSlug":"large","linkDestination":"custom","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-fullwidth"} -->
-<figure class="wp-block-image alignwide size-large is-fullwidth" style="margin-top:0"><a href="https://www.openstreetmap.org/"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></a></figure>
+<figure class="wp-block-image alignwide size-large is-fullwidth" style="margin-top:0"><a href="https://www.openstreetmap.org/"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></a></figure>
 <!-- /wp:image -->

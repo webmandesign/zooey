@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -24,8 +25,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_p = Block_Pattern::get_image_url( 'p-i' );
-$image   = Block_Pattern::get_image_url( '3to2-1' );
+$image_p = Demo::Get_image_url( 'p-i' );
+$image   = Demo::Get_image_url( '3to2-1' );
 
 ?>
 
@@ -42,18 +43,18 @@ $image   = Block_Pattern::get_image_url( '3to2-1' );
 			<div class="wp-block-group">
 
 				<!-- wp:heading {"textAlign":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m","fontFamily":"global"} -->
-				<h2 class="wp-block-heading has-text-align-center has-global-font-family has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading has-text-align-center has-global-font-family has-m-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.2"}},"fontSize":"h-3","fontFamily":"supplemental"} -->
-				<p class="has-text-align-center has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Block_Pattern::the_text( 2, '.' ); ?></p>
+				<p class="has-text-align-center has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Demo::The_text( 2, '.' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
 					<!-- wp:button {"backgroundColor":"white"} -->
-					<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 
 				</div>

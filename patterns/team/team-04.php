@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -26,7 +27,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '1to1-3' );
+$image = Demo::Get_image_url( '1to1-3' );
 
 ?>
 
@@ -40,7 +41,7 @@ $image = Block_Pattern::get_image_url( '1to1-3' );
 		<div class="wp-block-column">
 
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"full","style":{"border":{"radius":{"topLeft":"20rem","topRight":"20rem"}}},"gradient":"secondary-cut-transparent-h"} -->
-			<figure class="wp-block-image size-full has-custom-border has-secondary-cut-transparent-h-gradient-background has-background"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-top-left-radius:20rem;border-top-right-radius:20rem;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-full has-custom-border has-secondary-cut-transparent-h-gradient-background has-background"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-top-left-radius:20rem;border-top-right-radius:20rem;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -52,26 +53,26 @@ $image = Block_Pattern::get_image_url( '1to1-3' );
 			<!-- wp:post-title {"level":1} /-->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xs"}},"typography":{"textTransform":"uppercase"}}} -->
-			<p style="margin-top:var(--wp--preset--spacing--xs);text-transform:uppercase"><strong><?php Block_Pattern::the_text( 'people/job' ); ?></strong></p>
+			<p style="margin-top:var(--wp--preset--spacing--xs);text-transform:uppercase"><strong><?php Demo::The_text( 'people/job' ); ?></strong></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '200' ); ?></p>
+			<p><?php Demo::The_text( '200' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"top":"var:preset|spacing|xl"}}}} -->
 			<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--xl)">
 
 				<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-				<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( 'contact/address_inline' ); ?></p>
+				<p><?php Demo::The_text( 'contact/address_inline' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph -->
-				<p><a href="mailto:<?php Block_Pattern::the_text( 'contact/email' ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+				<p><a href="mailto:<?php Demo::The_text( 'contact/email' ); ?>"><?php Demo::The_text( 'contact/email' ); ?></a></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:social-links {"iconColor":"primary","size":"has-large-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"className":"is-style-logos-only"} -->

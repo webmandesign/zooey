@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -28,9 +29,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '1to1-2' );
-$image_2 = Block_Pattern::get_image_url( '1to1-3' );
-$image_3 = Block_Pattern::get_image_url( '3to2-2' );
+$image_1 = Demo::Get_image_url( '1to1-2' );
+$image_2 = Demo::Get_image_url( '1to1-3' );
+$image_3 = Demo::Get_image_url( '3to2-2' );
 
 ?>
 
@@ -46,7 +47,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_1 ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-top-left-radius:0.38rem;border-top-right-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-right:0;padding-bottom:0;padding-left:0;min-height:50vh">
 				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_1 ); ?>" data-object-fit="cover" />
+				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_1 ); ?>" data-object-fit="cover" />
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:group {"gradient":"transparent-to-primary-v","style":{"spacing":{"padding":{"left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}}} -->
@@ -67,18 +68,18 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<div class="wp-block-group has-primary-background-color has-background" style="border-bottom-left-radius:0.38rem;border-bottom-right-radius:0.38rem;padding-top:0;padding-right:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 				<!-- wp:heading -->
-				<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '65' ); ?></p>
+				<p><?php Demo::The_text( '65' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
 					<!-- wp:button {"className":"is-style-outline","fontSize":"xs"} -->
-					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 
 				</div>
@@ -96,7 +97,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_2 ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-top-left-radius:0.38rem;border-top-right-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-right:0;padding-bottom:0;padding-left:0;min-height:50vh">
 				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_2 ); ?>" data-object-fit="cover" />
+				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_2 ); ?>" data-object-fit="cover" />
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:group {"gradient":"transparent-to-primary-v","style":{"spacing":{"padding":{"left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}}} -->
@@ -117,18 +118,18 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<div class="wp-block-group has-primary-background-color has-background" style="border-bottom-left-radius:0.38rem;border-bottom-right-radius:0.38rem;padding-top:0;padding-right:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 				<!-- wp:heading -->
-				<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '65' ); ?></p>
+				<p><?php Demo::The_text( '65' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
 					<!-- wp:button {"className":"is-style-outline","fontSize":"xs"} -->
-					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 
 				</div>
@@ -146,7 +147,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_3 ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-top-left-radius:0.38rem;border-top-right-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-right:0;padding-bottom:0;padding-left:0;min-height:50vh">
 				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_3 ); ?>" data-object-fit="cover" />
+				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_3 ); ?>" data-object-fit="cover" />
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:group {"gradient":"transparent-to-primary-v","style":{"spacing":{"padding":{"left":"var:preset|spacing|l","right":"var:preset|spacing|l"}}}} -->
@@ -167,18 +168,18 @@ $image_3 = Block_Pattern::get_image_url( '3to2-2' );
 			<div class="wp-block-group has-primary-background-color has-background" style="border-bottom-left-radius:0.38rem;border-bottom-right-radius:0.38rem;padding-top:0;padding-right:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 				<!-- wp:heading -->
-				<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '65' ); ?></p>
+				<p><?php Demo::The_text( '65' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
 					<!-- wp:button {"className":"is-style-outline","fontSize":"xs"} -->
-					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 
 				</div>

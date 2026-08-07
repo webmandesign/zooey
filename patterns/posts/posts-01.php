@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -36,11 +37,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-group">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '110' ); ?></p>
+			<p><?php Demo::The_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

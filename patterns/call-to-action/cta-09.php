@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -25,8 +26,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to4-1' );
-$image_2 = Block_Pattern::get_image_url( '3to4-2' );
+$image_1 = Demo::Get_image_url( '3to4-1' );
+$image_2 = Demo::Get_image_url( '3to4-2' );
 
 ?>
 
@@ -37,25 +38,25 @@ $image_2 = Block_Pattern::get_image_url( '3to4-2' );
 	<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
 
 		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 		<!-- /wp:image -->
 
 	</figure>
 	<!-- /wp:gallery -->
 
 	<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2"},"fontSize":"h-3","fontFamily":"supplemental"} -->
-	<p class="has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Block_Pattern::the_text( '80' ); ?></p>
+	<p class="has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Demo::The_text( '80' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons">
 
 		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 		<!-- /wp:button -->
 
 	</div>

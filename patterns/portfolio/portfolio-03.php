@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -26,8 +27,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '1to1-3' );
-$image_2 = Block_Pattern::get_image_url( '3to4-1' );
+$image_1 = Demo::Get_image_url( '1to1-3' );
+$image_2 = Demo::Get_image_url( '3to4-1' );
 
 ?>
 
@@ -44,11 +45,11 @@ $image_2 = Block_Pattern::get_image_url( '3to4-1' );
 			<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
 
 				<!-- wp:image {"sizeSlug":"medium"} -->
-				<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+				<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"medium"} -->
-				<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+				<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 				<!-- /wp:image -->
 
 			</figure>
@@ -66,7 +67,7 @@ $image_2 = Block_Pattern::get_image_url( '3to4-1' );
 				<!-- wp:post-title /-->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '220' ); ?></p>
+				<p><?php Demo::The_text( '220' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"var:preset|spacing|xs"}}},"layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->
@@ -76,11 +77,11 @@ $image_2 = Block_Pattern::get_image_url( '3to4-1' );
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"s","fontFamily":"supplemental"} -->
-						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/xs' ); ?></p>
+						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Demo::The_text( 'title/xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 's' ); ?></p>
+						<p><?php Demo::The_text( 's' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -94,11 +95,11 @@ $image_2 = Block_Pattern::get_image_url( '3to4-1' );
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"s","fontFamily":"supplemental"} -->
-						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/xs' ); ?></p>
+						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Demo::The_text( 'title/xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 's' ); ?></p>
+						<p><?php Demo::The_text( 's' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -112,11 +113,11 @@ $image_2 = Block_Pattern::get_image_url( '3to4-1' );
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"s","fontFamily":"supplemental"} -->
-						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/xs' ); ?></p>
+						<p class="has-s-font-size has-supplemental-font-family" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Demo::The_text( 'title/xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( 's' ); ?></p>
+						<p><?php Demo::The_text( 's' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>

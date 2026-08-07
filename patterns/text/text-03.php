@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -24,7 +25,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group alignwide">
 
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"700"}},"fontSize":"xxxl"} -->
-	<p class="has-text-align-center has-xxxl-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Block_Pattern::the_text( '140' ); ?></p>
+	<p class="has-text-align-center has-xxxl-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Demo::The_text( '140' ); ?></p>
 	<!-- /wp:paragraph -->
 
 </div>

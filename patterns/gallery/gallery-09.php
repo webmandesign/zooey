@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,10 +24,10 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to4-3' );
-$image_2 = Block_Pattern::get_image_url( '3to4-1' );
-$image_3 = Block_Pattern::get_image_url( '3to2-3' );
-$image_4 = Block_Pattern::get_image_url( '3to2-1' );
+$image_1 = Demo::Get_image_url( '3to4-3' );
+$image_2 = Demo::Get_image_url( '3to4-1' );
+$image_3 = Demo::Get_image_url( '3to2-3' );
+$image_4 = Demo::Get_image_url( '3to2-1' );
 
 ?>
 
@@ -40,7 +41,7 @@ $image_4 = Block_Pattern::get_image_url( '3to2-1' );
 		<div class="wp-block-column" style="flex-basis:50%">
 
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"0px"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -56,7 +57,7 @@ $image_4 = Block_Pattern::get_image_url( '3to2-1' );
 				<div class="wp-block-column">
 
 					<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}}} -->
-					<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+					<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 					<!-- /wp:image -->
 
 				</div>
@@ -66,7 +67,7 @@ $image_4 = Block_Pattern::get_image_url( '3to2-1' );
 				<div class="wp-block-column">
 
 					<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}}} -->
-					<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+					<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 					<!-- /wp:image -->
 
 				</div>
@@ -78,7 +79,7 @@ $image_4 = Block_Pattern::get_image_url( '3to2-1' );
 			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_4 ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"%","isDark":false} -->
 			<div class="wp-block-cover is-light" style="min-height:50%">
 				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_4 ); ?>" data-object-fit="cover" />
+				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image_4 ); ?>" data-object-fit="cover" />
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:spacer {"height":"var:preset|spacing|s"} -->

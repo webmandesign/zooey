@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -26,7 +26,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '1to1-1' );
+$image = Demo::Get_image_url( '1to1-1' );
 
 ?>
 
@@ -36,18 +36,18 @@ $image = Block_Pattern::get_image_url( '1to1-1' );
 	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"style":{"spacing":{"padding":{"bottom":"0","left":"0","right":"0","top":"16em"}},"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}}} -->
 	<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="border-top-left-radius:0.38rem;border-top-right-radius:0.38rem;padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:200px">
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
+		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 		<div class="wp-block-cover__inner-container">
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0.25em","left":"0.25em"}}},"gradient":"backdrop-blur-dark","className":"is-style-backdrop-blur"} -->
 			<div class="wp-block-group is-style-backdrop-blur has-backdrop-blur-dark-gradient-background has-background">
 
 				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><a href="#0"><?php Block_Pattern::the_text( 'title/s' ); ?></a></h3>
+				<h3 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><a href="#0"><?php Demo::The_text( 'title/s' ); ?></a></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"s"} -->
-				<p class="has-s-font-size"><?php Block_Pattern::the_text( '100' ); ?></p>
+				<p class="has-s-font-size"><?php Demo::The_text( '100' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -69,7 +69,7 @@ $image = Block_Pattern::get_image_url( '1to1-1' );
 		<!-- /wp:separator -->
 
 		<!-- wp:paragraph {"style":{"typography":{"textDecoration":"none"}},"className":"is-style-no-text-wrap","fontSize":"s"} -->
-		<p class="is-style-no-text-wrap has-s-font-size" style="text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'change' ); ?></a></p>
+		<p class="is-style-no-text-wrap has-s-font-size" style="text-decoration:none"><a href="#0"><?php Demo::The_text( 'change' ); ?></a></p>
 		<!-- /wp:paragraph -->
 
 	</div>

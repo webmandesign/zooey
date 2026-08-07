@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,9 +24,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to4-1' );
-$image_2 = Block_Pattern::get_image_url( '3to2-2' );
-$image_s = Block_Pattern::get_image_url( 's' );
+$image_1 = Demo::Get_image_url( '3to4-1' );
+$image_2 = Demo::Get_image_url( '3to2-2' );
+$image_s = Demo::Get_image_url( 's' );
 
 ?>
 
@@ -39,7 +40,7 @@ $image_s = Block_Pattern::get_image_url( 's' );
 		<div class="wp-block-column is-vertically-aligned-top">
 
 			<!-- wp:image {"sizeSlug":"medium"} -->
-			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -49,27 +50,27 @@ $image_s = Block_Pattern::get_image_url( 's' );
 		<div class="wp-block-column">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '110' ); ?></p>
+			<p class="has-l-font-size"><?php Demo::The_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:image {"sizeSlug":"medium"} -->
-			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<figure class="wp-block-image size-medium"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
-			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_s ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_s ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>

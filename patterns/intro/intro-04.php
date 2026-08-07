@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -36,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"var:preset|spacing|s"}}}} /-->
 
 	<!-- wp:paragraph {"dropCap":true,"fontSize":"l"} -->
-	<p class="has-drop-cap has-l-font-size"><?php Block_Pattern::the_text( '210' ); ?></p>
+	<p class="has-drop-cap has-l-font-size"><?php Demo::The_text( '210' ); ?></p>
 	<!-- /wp:paragraph -->
 
 </div>

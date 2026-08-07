@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,7 +32,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group">
 
 	<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"s"} -->
-	<p class="has-s-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Block_Pattern::the_text( 'title/m' ); ?></p>
+	<p class="has-s-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><?php Demo::The_text( 'title/m' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"primary-mixed","layout":{"type":"flex","flexWrap":"nowrap"}} -->

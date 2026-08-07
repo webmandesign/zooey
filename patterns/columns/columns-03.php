@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -27,7 +28,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-column">
 
 		<!-- wp:heading -->
-		<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+		<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 		<!-- /wp:heading -->
 
 	</div>
@@ -37,7 +38,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-column">
 
 		<!-- wp:paragraph {"fontSize":"l"} -->
-		<p class="has-l-font-size"><?php Block_Pattern::the_text( '190' ); ?></p>
+		<p class="has-l-font-size"><?php Demo::The_text( '190' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

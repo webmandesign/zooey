@@ -195,7 +195,7 @@ class Starter implements Component_Interface {
 					'post_type'    => 'page',
 					'post_title'   => esc_html_x( 'Blog', 'Theme starter content: Blog page title', 'zooey' ),
 					'post_name'    => esc_html_x( 'blog', 'Page slug', 'zooey' ),
-					'post_excerpt' => Block_Pattern::get_text( 'm' ) . ' ' . Block_Pattern::get_text( 'l' ),
+					'post_excerpt' => Demo::Get_text( 'm' ) . ' ' . Demo::Get_text( 'l' ),
 				),
 
 				'contact' => array(

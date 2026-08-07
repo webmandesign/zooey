@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -26,11 +27,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( 'l-1' );
-$image_2 = Block_Pattern::get_image_url( 'l-2' );
-$image_3 = Block_Pattern::get_image_url( 'l-3' );
-$image_4 = Block_Pattern::get_image_url( '1to1-1' );
-$image_5 = Block_Pattern::get_image_url( '1to1-2' );
+$image_1 = Demo::Get_image_url( 'l-1' );
+$image_2 = Demo::Get_image_url( 'l-2' );
+$image_3 = Demo::Get_image_url( 'l-3' );
+$image_4 = Demo::Get_image_url( '1to1-1' );
+$image_5 = Demo::Get_image_url( '1to1-2' );
 
 ?>
 
@@ -41,27 +42,27 @@ $image_5 = Block_Pattern::get_image_url( '1to1-2' );
 	<figure class="wp-block-gallery alignwide has-nested-images columns-6">
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
 
 	</figure>
@@ -92,9 +93,9 @@ $image_5 = Block_Pattern::get_image_url( '1to1-2' );
 					<!-- wp:quote -->
 					<blockquote class="wp-block-quote">
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( '140' ); ?></p>
+						<p><?php Demo::The_text( '140' ); ?></p>
 						<!-- /wp:paragraph -->
-						<cite><?php Block_Pattern::the_text( 'people/name' ); ?></cite>
+						<cite><?php Demo::The_text( 'people/name' ); ?></cite>
 					</blockquote>
 					<!-- /wp:quote -->
 
@@ -129,9 +130,9 @@ $image_5 = Block_Pattern::get_image_url( '1to1-2' );
 					<!-- wp:quote -->
 					<blockquote class="wp-block-quote">
 						<!-- wp:paragraph -->
-						<p><?php Block_Pattern::the_text( '140' ); ?></p>
+						<p><?php Demo::The_text( '140' ); ?></p>
 						<!-- /wp:paragraph -->
-						<cite><?php Block_Pattern::the_text( 'people/name' ); ?></cite>
+						<cite><?php Demo::The_text( 'people/name' ); ?></cite>
 					</blockquote>
 					<!-- /wp:quote -->
 

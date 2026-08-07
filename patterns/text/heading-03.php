@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -21,5 +22,5 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 ?>
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/m' ); ?></h3>
+<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/m' ); ?></h3>
 <!-- /wp:heading -->

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,14 +24,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to2-3' );
+$image = Demo::Get_image_url( '3to2-3' );
 
 ?>
 
 <!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull is-light" style="margin-top:0;padding-top:0;padding-bottom:0;min-height:200px">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-	<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover"/>
+	<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover"/>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
@@ -47,18 +48,18 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 				<div class="wp-block-group is-style-backdrop-blur has-white-color has-backdrop-blur-primary-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--content);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--content);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:heading {"fontSize":"h-3"} -->
-					<h2 class="wp-block-heading has-h-3-font-size"><?php Block_Pattern::the_text( 'title/l' ); ?></h2>
+					<h2 class="wp-block-heading has-h-3-font-size"><?php Demo::The_text( 'title/l' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"fontSize":"l"} -->
-					<p class="has-l-font-size"><?php Block_Pattern::the_text( '140' ); ?></p>
+					<p class="has-l-font-size"><?php Demo::The_text( '140' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:buttons -->
 					<div class="wp-block-buttons">
 
 						<!-- wp:button {"backgroundColor":"white"} -->
-						<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+						<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 						<!-- /wp:button -->
 
 					</div>

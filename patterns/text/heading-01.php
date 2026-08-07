@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -24,7 +25,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group">
 
 	<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"l"} -->
-	<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+	<h2 class="wp-block-heading has-l-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:separator {"style":{"layout":{"selfStretch":"fill","flexSize":"null"}}} -->

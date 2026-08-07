@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -35,11 +35,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l);flex-basis:33.33%">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/xs' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/xs' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"s"} -->
-			<p class="has-s-font-size"><?php Block_Pattern::the_text( '120' ); ?></p>
+			<p class="has-s-font-size"><?php Demo::The_text( '120' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -53,11 +53,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '75' ); ?></p>
+			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
@@ -75,11 +75,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '75' ); ?></p>
+			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
@@ -103,11 +103,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '75' ); ?></p>
+			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
@@ -125,11 +125,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '75' ); ?></p>
+			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
@@ -147,11 +147,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '75' ); ?></p>
+			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->

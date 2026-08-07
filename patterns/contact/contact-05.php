@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -32,7 +33,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/mon' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/mon' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -46,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/tue' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/tue' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -60,7 +61,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/wed' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/wed' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -74,7 +75,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/thu' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/thu' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -88,7 +89,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/fri' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/fri' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -102,7 +103,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/sat' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/sat' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
@@ -116,7 +117,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'date/sun' ); ?></p>
+		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/sun' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:separator {"className":"is-style-dotted"} -->
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />

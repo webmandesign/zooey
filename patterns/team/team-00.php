@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -27,7 +28,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to4-3' );
+$image = Demo::Get_image_url( '3to4-3' );
 
 ?>
 
@@ -35,18 +36,18 @@ $image = Block_Pattern::get_image_url( '3to4-3' );
 <div class="wp-block-group">
 
 	<!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":{"bottomLeft":"20rem","bottomRight":"20rem"}}}} -->
-	<figure class="wp-block-image size-thumbnail has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-bottom-left-radius:20rem;border-bottom-right-radius:20rem;aspect-ratio:3/4;object-fit:cover"/></figure>
+	<figure class="wp-block-image size-thumbnail has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-bottom-left-radius:20rem;border-bottom-right-radius:20rem;aspect-ratio:3/4;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 	<div class="wp-block-group">
 
 		<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"l"} -->
-		<h3 class="wp-block-heading has-text-align-center has-l-font-size"><?php Block_Pattern::the_text( 'people/name' ); ?></h3>
+		<h3 class="wp-block-heading has-text-align-center has-l-font-size"><?php Demo::The_text( 'people/name' ); ?></h3>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-text-align-center has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'people/job' ); ?></p>
+		<p class="has-text-align-center has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'people/job' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

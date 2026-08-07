@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -37,7 +38,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-group">
 
 			<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"h-3"} -->
-			<h2 class="wp-block-heading has-h-3-font-size" style="font-style:normal;font-weight:400"><?php Block_Pattern::the_text( '55' ); ?></h2>
+			<h2 class="wp-block-heading has-h-3-font-size" style="font-style:normal;font-weight:400"><?php Demo::The_text( '55' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -46,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"fontSize":"m"} -->
-			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -61,11 +62,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '110' ); ?></p>
+			<p class="has-l-font-size"><?php Demo::The_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '220' ); ?></p>
+			<p><?php Demo::The_text( '220' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -76,27 +77,27 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '200' ); ?></p>
+				<p><?php Demo::The_text( '200' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '200' ); ?></p>
+				<p><?php Demo::The_text( '200' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
 			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '200' ); ?></p>
+				<p><?php Demo::The_text( '200' ); ?></p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->

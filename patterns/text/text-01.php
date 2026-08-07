@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -21,5 +22,5 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 ?>
 
 <!-- wp:paragraph {"align":"wide","style":{"typography":{"fontStyle":"normal","fontWeight":"900"}},"textColor":"contrast-alt","fontSize":"giant","fontFamily":"supplemental"} -->
-<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-giant-font-size" style="font-style:normal;font-weight:900"><?php Block_Pattern::the_text( '60' ); ?></p>
+<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-giant-font-size" style="font-style:normal;font-weight:900"><?php Demo::The_text( '60' ); ?></p>
 <!-- /wp:paragraph -->

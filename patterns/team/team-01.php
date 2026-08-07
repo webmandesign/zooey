@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -36,14 +37,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:group {"layout":{"type":"constrained","contentSize":"320px","justifyContent":"left"}} -->
 			<div class="wp-block-group">
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '70' ); ?></p>
+				<p><?php Demo::The_text( '70' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>

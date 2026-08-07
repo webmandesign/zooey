@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -47,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"fontSize":"l"} -->
-						<p class="has-l-font-size"><?php Block_Pattern::the_text( '135' ); ?></p>
+						<p class="has-l-font-size"><?php Demo::The_text( '135' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>

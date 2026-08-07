@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,8 +24,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to4-1' );
-$image_2 = Block_Pattern::get_image_url( '3to2-3' );
+$image_1 = Demo::Get_image_url( '3to4-1' );
+$image_2 = Demo::Get_image_url( '3to2-3' );
 
 ?>
 
@@ -35,7 +36,7 @@ $image_2 = Block_Pattern::get_image_url( '3to2-3' );
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}},"typography":{"lineHeight":"1.2"}},"textColor":"contrast-alt","fontSize":"h-3","fontFamily":"supplemental"} -->
-		<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Block_Pattern::the_text( '85' ); ?></p>
+		<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Demo::The_text( '85' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>
@@ -48,7 +49,7 @@ $image_2 = Block_Pattern::get_image_url( '3to2-3' );
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:61.8%">
 
 			<!-- wp:image {"aspectRatio":"2/3","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none"} -->
-			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="aspect-ratio:2/3;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="aspect-ratio:2/3;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -58,15 +59,15 @@ $image_2 = Block_Pattern::get_image_url( '3to2-3' );
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","linkDestination":"none","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}}} -->
-			<figure class="wp-block-image size-medium" style="margin-bottom:var(--wp--preset--spacing--content)"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-medium" style="margin-bottom:var(--wp--preset--spacing--content)"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '150' ); ?></p>
+			<p class="has-l-font-size"><?php Demo::The_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '170' ); ?></p>
+			<p><?php Demo::The_text( '170' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

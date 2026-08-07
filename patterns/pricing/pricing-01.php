@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -44,19 +45,19 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-group">
 
 					<!-- wp:heading {"level":3} -->
-					<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:list {"className":"is-style-checkmark"} -->
 					<ul class="is-style-checkmark">
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 's' ); ?></li>
+						<li><?php Demo::The_text( 's' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 					</ul>
 					<!-- /wp:list -->
@@ -71,11 +72,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"fontSize":"big"} -->
-						<p class="has-big-font-size"><?php Block_Pattern::the_text( 'price' ); ?></p>
+						<p class="has-big-font-size"><?php Demo::The_text( 'price' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-						<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'xs' ); ?></p>
+						<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -84,7 +85,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- wp:buttons {"layout":{"type":"flex"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button {"className":"is-style-outline"} -->
-						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 						<!-- /wp:button -->
 					</div>
 					<!-- /wp:buttons -->
@@ -108,22 +109,22 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-group">
 
 					<!-- wp:heading {"level":3} -->
-					<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:list {"className":"is-style-checkmark"} -->
 					<ul class="is-style-checkmark">
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 's' ); ?></li>
+						<li><?php Demo::The_text( 's' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 's' ); ?></li>
+						<li><?php Demo::The_text( 's' ); ?></li>
 						<!-- /wp:list-item -->
 					</ul>
 					<!-- /wp:list -->
@@ -138,11 +139,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"fontSize":"big"} -->
-						<p class="has-big-font-size"><?php Block_Pattern::the_text( 'price' ); ?></p>
+						<p class="has-big-font-size"><?php Demo::The_text( 'price' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-						<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'xs' ); ?></p>
+						<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -151,7 +152,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- wp:buttons {"layout":{"type":"flex"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button {"backgroundColor":"white"} -->
-						<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+						<div class="wp-block-button"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 						<!-- /wp:button -->
 					</div>
 					<!-- /wp:buttons -->
@@ -175,25 +176,25 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-group">
 
 					<!-- wp:heading {"level":3} -->
-					<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:list {"className":"is-style-checkmark"} -->
 					<ul class="is-style-checkmark">
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 's' ); ?></li>
+						<li><?php Demo::The_text( 's' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 's' ); ?></li>
+						<li><?php Demo::The_text( 's' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+						<li><?php Demo::The_text( 'm' ); ?></li>
 						<!-- /wp:list-item -->
 					</ul>
 					<!-- /wp:list -->
@@ -208,11 +209,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<div class="wp-block-group">
 
 						<!-- wp:paragraph {"fontSize":"big"} -->
-						<p class="has-big-font-size"><?php Block_Pattern::the_text( 'price' ); ?></p>
+						<p class="has-big-font-size"><?php Demo::The_text( 'price' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-						<p class="has-s-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'xs' ); ?></p>
+						<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'xs' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -221,7 +222,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<!-- wp:buttons {"layout":{"type":"flex"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button {"className":"is-style-outline"} -->
-						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 						<!-- /wp:button -->
 					</div>
 					<!-- /wp:buttons -->

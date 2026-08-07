@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -36,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -46,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-bottom">
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '120' ); ?></p>
+			<p class="has-l-font-size"><?php Demo::The_text( '120' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -87,14 +88,14 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"s"} -->
-				<p class="has-text-align-center has-s-font-size"><?php Block_Pattern::the_text( '60' ); ?></p>
+				<p class="has-text-align-center has-s-font-size"><?php Demo::The_text( '60' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|s"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--s)">
 
 					<!-- wp:button {"className":"is-style-outline","fontSize":"xs"} -->
-					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+					<div class="wp-block-button has-custom-font-size is-style-outline has-xs-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 					<!-- /wp:button -->
 
 				</div>

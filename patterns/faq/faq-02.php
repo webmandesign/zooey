@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -35,7 +36,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:50%">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/m' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/m' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -45,7 +46,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:50%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '150' ); ?></p>
+			<p><?php Demo::The_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -64,11 +65,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
 				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
+				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '130' ); ?></p>
+				<p><?php Demo::The_text( '130' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -78,11 +79,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
 				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
+				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '130' ); ?></p>
+				<p><?php Demo::The_text( '130' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -98,11 +99,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
 				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
+				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '130' ); ?></p>
+				<p><?php Demo::The_text( '130' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -112,11 +113,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
 				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></h3>
+				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '130' ); ?></p>
+				<p><?php Demo::The_text( '130' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>

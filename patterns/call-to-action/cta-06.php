@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -27,18 +28,18 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group alignfull" style="margin-top:0">
 
 	<!-- wp:heading {"textAlign":"center"} -->
-	<h2 class="wp-block-heading has-text-align-center"><?php Block_Pattern::the_text( 'title/l' ); ?>?</h2>
+	<h2 class="wp-block-heading has-text-align-center"><?php Demo::The_text( 'title/l' ); ?>?</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center"><?php Block_Pattern::the_text( '60' ); ?></p>
+	<p class="has-text-align-center"><?php Demo::The_text( '60' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--m)">
 
 		<!-- wp:button {"fontSize":"m"} -->
-		<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+		<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 		<!-- /wp:button -->
 
 	</div>

@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,11 +34,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-group">
 
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php Block_Pattern::the_text( '115' ); ?></p>
+			<p class="has-l-font-size"><?php Demo::The_text( '115' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -47,7 +48,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-buttons">
 
 			<!-- wp:button {"backgroundColor":"base","fontSize":"m"} -->
-			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-base-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+			<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-base-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 			<!-- /wp:button -->
 
 		</div>

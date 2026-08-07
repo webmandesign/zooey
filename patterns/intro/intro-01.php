@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -29,7 +29,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to2-3' );
+$image = Demo::Get_image_url( '3to2-3' );
 
 ?>
 
@@ -49,13 +49,13 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 				<!-- wp:list {"className":"is-style-checkmark"} -->
 				<ul class="is-style-checkmark">
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( '15' ); ?></li>
+					<li><?php Demo::The_text( '15' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( '30' ); ?></li>
+					<li><?php Demo::The_text( '30' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( '25' ); ?></li>
+					<li><?php Demo::The_text( '25' ); ?></li>
 					<!-- /wp:list-item -->
 				</ul>
 				<!-- /wp:list -->
@@ -67,11 +67,11 @@ $image = Block_Pattern::get_image_url( '3to2-3' );
 			<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--l)">
 
 				<!-- wp:button {"backgroundColor":"white","fontSize":"m"} -->
-				<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+				<div class="wp-block-button has-custom-font-size has-m-font-size"><a class="wp-block-button__link has-white-background-color has-background wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 				<!-- /wp:button -->
 
 				<!-- wp:button {"fontSize":"m","className":"is-style-outline"} -->
-				<div class="wp-block-button has-custom-font-size has-m-font-size is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Block_Pattern::the_text( 'button' ); ?></a></div>
+				<div class="wp-block-button has-custom-font-size has-m-font-size is-style-outline"><a class="wp-block-button__link wp-element-button" href="#0"><?php Demo::The_text( 'button' ); ?></a></div>
 				<!-- /wp:button -->
 
 			</div>

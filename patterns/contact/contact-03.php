@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -25,7 +26,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to4-2' );
+$image = Demo::Get_image_url( '3to4-2' );
 
 ?>
 
@@ -46,7 +47,7 @@ $image = Block_Pattern::get_image_url( '3to4-2' );
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"xl"} -->
-				<p class="has-xl-font-size"><a href="mailto:<?php echo esc_attr( Block_Pattern::get_text( 'contact/email' ) ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+				<p class="has-xl-font-size"><a href="mailto:<?php echo esc_attr( Demo::Get_text( 'contact/email' ) ); ?>"><?php Demo::The_text( 'contact/email' ); ?></a></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -74,7 +75,7 @@ $image = Block_Pattern::get_image_url( '3to4-2' );
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"xl"} -->
-				<p class="has-xl-font-size"><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
+				<p class="has-xl-font-size"><?php Demo::The_text( 'contact/address' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -84,7 +85,7 @@ $image = Block_Pattern::get_image_url( '3to4-2' );
 		<!-- /wp:group -->
 
 		<!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"medium","linkDestination":"none","style":{"layout":{"selfStretch":"fixed","flexSize":"400px"}}} -->
-		<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="aspect-ratio:3/4;object-fit:cover"/></figure>
+		<figure class="wp-block-image size-medium has-custom-border"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="aspect-ratio:3/4;object-fit:cover"/></figure>
 		<!-- /wp:image -->
 
 	</div>

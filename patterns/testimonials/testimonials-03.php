@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -41,15 +41,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->
 				<blockquote class="wp-block-quote">
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '160' ); ?></p>
+					<p><?php Demo::The_text( '160' ); ?></p>
 					<!-- /wp:paragraph -->
-					<cite><?php Block_Pattern::the_text( 'people/name' ); ?>, <a href="#0"><?php Block_Pattern::the_text( 'people/job' ); ?></a></cite>
+					<cite><?php Demo::The_text( 'people/name' ); ?>, <a href="#0"><?php Demo::The_text( 'people/job' ); ?></a></cite>
 				</blockquote>
 				<!-- /wp:quote -->
 
@@ -70,15 +70,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->
 				<blockquote class="wp-block-quote">
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '160' ); ?></p>
+					<p><?php Demo::The_text( '160' ); ?></p>
 					<!-- /wp:paragraph -->
-					<cite><?php Block_Pattern::the_text( 'people/name' ); ?>, <a href="#0"><?php Block_Pattern::the_text( 'people/job' ); ?></a></cite>
+					<cite><?php Demo::The_text( 'people/name' ); ?>, <a href="#0"><?php Demo::The_text( 'people/job' ); ?></a></cite>
 				</blockquote>
 				<!-- /wp:quote -->
 
@@ -99,15 +99,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:quote -->
 				<blockquote class="wp-block-quote">
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '160' ); ?></p>
+					<p><?php Demo::The_text( '160' ); ?></p>
 					<!-- /wp:paragraph -->
-					<cite><?php Block_Pattern::the_text( 'people/name' ); ?>, <a href="#0"><?php Block_Pattern::the_text( 'people/job' ); ?></a></cite>
+					<cite><?php Demo::The_text( 'people/name' ); ?>, <a href="#0"><?php Demo::The_text( 'people/job' ); ?></a></cite>
 				</blockquote>
 				<!-- /wp:quote -->
 

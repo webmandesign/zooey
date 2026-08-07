@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -34,7 +35,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:120px">
 
 			<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -44,7 +45,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center">
 
 			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 		</div>
@@ -54,7 +55,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -80,7 +81,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:120px">
 
 			<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -90,7 +91,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center">
 
 			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 		</div>
@@ -100,7 +101,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -126,7 +127,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:120px">
 
 			<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" /></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -136,7 +137,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center">
 
 			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+			<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
 			<!-- /wp:heading -->
 
 		</div>
@@ -146,7 +147,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

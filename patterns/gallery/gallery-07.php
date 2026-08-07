@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,9 +24,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Block_Pattern::get_image_url( '3to2-3' );
-$image_2 = Block_Pattern::get_image_url( '3to2-2' );
-$image_3 = Block_Pattern::get_image_url( '3to2-1' );
+$image_1 = Demo::Get_image_url( '3to2-3' );
+$image_2 = Demo::Get_image_url( '3to2-2' );
+$image_3 = Demo::Get_image_url( '3to2-1' );
 
 ?>
 
@@ -42,29 +43,29 @@ $image_3 = Block_Pattern::get_image_url( '3to2-1' );
 			<div class="wp-block-group">
 
 				<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-				<h2 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+				<h2 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.3"}},"fontSize":"xxxl"} -->
-				<p class="has-xxxl-font-size" style="line-height:1.3"><?php Block_Pattern::the_text( '75' ); ?></p>
+				<p class="has-xxxl-font-size" style="line-height:1.3"><?php Demo::The_text( '75' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:list {"className":"is-style-checkmark"} -->
 				<ul class="is-style-checkmark">
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( 's' ); ?></li>
+					<li><?php Demo::The_text( 's' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+					<li><?php Demo::The_text( 'm' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( 's' ); ?></li>
+					<li><?php Demo::The_text( 's' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( 'm' ); ?></li>
+					<li><?php Demo::The_text( 'm' ); ?></li>
 					<!-- /wp:list-item -->
 					<!-- wp:list-item -->
-					<li><?php Block_Pattern::the_text( 's' ); ?></li>
+					<li><?php Demo::The_text( 's' ); ?></li>
 					<!-- /wp:list-item -->
 				</ul>
 				<!-- /wp:list -->
@@ -84,7 +85,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-1' );
 		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
 		<div class="wp-block-group">
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->
@@ -92,7 +93,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-1' );
 		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
 		<div class="wp-block-group">
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->
@@ -100,7 +101,7 @@ $image_3 = Block_Pattern::get_image_url( '3to2-1' );
 		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
 		<div class="wp-block-group">
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->

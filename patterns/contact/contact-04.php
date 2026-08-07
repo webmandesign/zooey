@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -24,7 +25,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '21to9' );
+$image = Demo::Get_image_url( '21to9' );
 
 ?>
 
@@ -40,7 +41,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 			<!-- wp:quote {"fontSize":"xxl"} -->
 			<blockquote class="wp-block-quote has-xxl-font-size">
 				<!-- wp:paragraph -->
-				<p><?php Block_Pattern::the_text( '140' ); ?></p>
+				<p><?php Demo::The_text( '140' ); ?></p>
 				<!-- /wp:paragraph -->
 			</blockquote>
 			<!-- /wp:quote -->
@@ -56,11 +57,11 @@ $image = Block_Pattern::get_image_url( '21to9' );
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( 'contact/address' ); ?></p>
+			<p><?php Demo::The_text( 'contact/address' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="mailto:<?php echo esc_attr( Block_Pattern::get_text( 'contact/email' ) ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+			<p><a href="mailto:<?php echo esc_attr( Demo::Get_text( 'contact/email' ) ); ?>"><?php Demo::The_text( 'contact/email' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -72,7 +73,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","isDark":false,"align":"wide","style":{"border":{"radius":"0.38rem"}}} -->
 	<div class="wp-block-cover alignwide is-light" style="border-radius:0.38rem;min-height:50vh">
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
+		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 		<div class="wp-block-cover__inner-container">
 
 			<!-- wp:spacer {"height":"320px"} -->

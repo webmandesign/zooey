@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,11 +32,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
 	<!-- wp:heading {"textAlign":"center"} -->
-	<h2 class="wp-block-heading has-text-align-center"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+	<h2 class="wp-block-heading has-text-align-center"><?php Demo::The_text( 'title/s' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center"><?php Block_Pattern::the_text( '140' ); ?></p>
+	<p class="has-text-align-center"><?php Demo::The_text( '140' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"top":"var:preset|spacing|xl"}}}} -->
@@ -43,18 +44,18 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 		<!-- wp:details -->
 		<details class="wp-block-details">
-			<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+			<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 		</details>
 		<!-- /wp:details -->
 
 		<!-- wp:details -->
 		<details class="wp-block-details">
-			<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Block_Pattern::the_text( 'm', '?' ); ?></summary>
+			<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 		</details>
 		<!-- /wp:details -->

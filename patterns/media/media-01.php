@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +24,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '3to2-2' );
+$image = Demo::Get_image_url( '3to2-2' );
 
 ?>
 
@@ -37,7 +38,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="font-style:normal;font-weight:700"><?php Block_Pattern::the_text( '160' ); ?></p>
+			<p class="has-l-font-size" style="font-style:normal;font-weight:700"><?php Demo::The_text( '160' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -47,7 +48,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column">
 
 			<!-- wp:image {"sizeSlug":"large"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>
@@ -63,7 +64,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '150' ); ?></p>
+			<p><?php Demo::The_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -73,7 +74,7 @@ $image = Block_Pattern::get_image_url( '3to2-2' );
 		<div class="wp-block-column" style="flex-basis:33.33%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '150' ); ?></p>
+			<p><?php Demo::The_text( '150' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

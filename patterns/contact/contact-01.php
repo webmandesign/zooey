@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,7 +32,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:paragraph {"align":"wide","style":{"typography":{"lineHeight":"1.3","fontStyle":"normal","fontWeight":"700"}},"fontSize":"h-3","fontFamily":"supplemental","textColor":"contrast-alt"} -->
-		<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.3"><?php Block_Pattern::the_text( '85' ); ?></p>
+		<p class="alignwide has-text-align-wide has-contrast-alt-color has-text-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.3"><?php Demo::The_text( '85' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>
@@ -69,7 +70,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><a href="mailto:<?php echo esc_attr( Block_Pattern::get_text( 'contact/email' ) ); ?>"><?php Block_Pattern::the_text( 'contact/email' ); ?></a></p>
+			<p><a href="mailto:<?php echo esc_attr( Demo::Get_text( 'contact/email' ) ); ?>"><?php Demo::The_text( 'contact/email' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -83,7 +84,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( 'contact/address_inline' ); ?></p>
+			<p><?php Demo::The_text( 'contact/address_inline' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

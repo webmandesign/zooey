@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +24,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image = Block_Pattern::get_image_url( '21to9' );
+$image = Demo::Get_image_url( '21to9' );
 
 ?>
 
@@ -37,7 +38,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"xl"} -->
-			<h2 class="wp-block-heading has-xl-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+			<h2 class="wp-block-heading has-xl-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 			<!-- /wp:heading -->
 
 		</div>
@@ -47,7 +48,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-column" style="flex-basis:61.8%">
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.3"}},"fontSize":"xxxl"} -->
-			<p class="has-xxxl-font-size" style="line-height:1.3"><?php Block_Pattern::the_text( '85' ); ?></p>
+			<p class="has-xxxl-font-size" style="line-height:1.3"><?php Demo::The_text( '85' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -57,7 +58,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 	<!-- /wp:columns -->
 
 	<!-- wp:image {"align":"wide","sizeSlug":"large"} -->
-	<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+	<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:columns {"align":"wide"} -->
@@ -67,7 +68,7 @@ $image = Block_Pattern::get_image_url( '21to9' );
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '110' ); ?></p>
+			<p><?php Demo::The_text( '110' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

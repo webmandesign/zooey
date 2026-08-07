@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,7 +34,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"s"} -->
-			<p class="has-s-font-size" style="font-style:normal;font-weight:700"><?php Block_Pattern::the_text( '70' ); ?></p>
+			<p class="has-s-font-size" style="font-style:normal;font-weight:700"><?php Demo::The_text( '70' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -43,7 +44,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:61.8%">
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.4"}},"fontSize":"xl"} -->
-			<p class="has-xl-font-size" style="line-height:1.4"><?php Block_Pattern::the_text( '190' ); ?></p>
+			<p class="has-xl-font-size" style="line-height:1.4"><?php Demo::The_text( '190' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|l"}}}} -->
@@ -53,7 +54,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column">
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '125' ); ?></p>
+					<p><?php Demo::The_text( '125' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -63,7 +64,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column">
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '125' ); ?></p>
+					<p><?php Demo::The_text( '125' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>

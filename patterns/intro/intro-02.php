@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -30,7 +30,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_p = Block_Pattern::get_image_url( 'p-i' );
+$image_p = Demo::Get_image_url( 'p-i' );
 
 ?>
 
@@ -48,7 +48,7 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 			<div class="wp-block-group">
 
 				<!-- wp:paragraph {"fontSize":"l"} -->
-				<p class="has-l-font-size"><?php Block_Pattern::the_text( '90' ); ?></p>
+				<p class="has-l-font-size"><?php Demo::The_text( '90' ); ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>
@@ -67,15 +67,15 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
-					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '65' ); ?></p>
+					<p><?php Demo::The_text( '65' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -91,15 +91,15 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
-					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '65' ); ?></p>
+					<p><?php Demo::The_text( '65' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -115,15 +115,15 @@ $image_p = Block_Pattern::get_image_url( 'p-i' );
 				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
-					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '65' ); ?></p>
+					<p><?php Demo::The_text( '65' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>

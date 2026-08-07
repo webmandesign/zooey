@@ -10,7 +10,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -37,7 +37,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
  * @link  https://fullsiteediting.com/block-support/arialabel/
  */
 
-$image = Block_Pattern::get_image_url( '1to1-3', 'sidebar-about-me' );
+$image = Demo::Get_image_url( '1to1-3', 'sidebar-about-me' );
 
 ?>
 
@@ -59,11 +59,11 @@ $image = Block_Pattern::get_image_url( '1to1-3', 'sidebar-about-me' );
 		<div class="wp-block-group" style="line-height:2">
 
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700","lineHeight":"1.3"}},"fontSize":"xl","fontFamily":"supplemental"} -->
-			<p class="has-text-align-center has-supplemental-font-family has-xl-font-size" style="font-style:normal;font-weight:700;line-height:1.3;text-decoration:none"><a href="#0"><?php Block_Pattern::the_text( 'people/name' ); ?></a></p>
+			<p class="has-text-align-center has-supplemental-font-family has-xl-font-size" style="font-style:normal;font-weight:700;line-height:1.3;text-decoration:none"><a href="#0"><?php Demo::The_text( 'people/name' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"xs"} -->
-			<p class="has-text-align-center has-xs-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'people/job' ); ?></p>
+			<p class="has-text-align-center has-xs-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'people/job' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

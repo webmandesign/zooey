@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,7 +32,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
 	<!-- wp:heading {"align":"wide"} -->
-	<h2 class="wp-block-heading alignwide"><?php Block_Pattern::the_text( 'title/s' ); ?></h2>
+	<h2 class="wp-block-heading alignwide"><?php Demo::The_text( 'title/s' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
@@ -55,7 +56,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -85,7 +86,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -115,7 +116,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:paragraph -->
-			<p><?php Block_Pattern::the_text( '230' ); ?></p>
+			<p><?php Demo::The_text( '230' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

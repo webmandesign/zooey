@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -28,7 +29,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--xl)">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
-	<h2 class="wp-block-heading is-style-screen-reader-text"><?php Block_Pattern::the_text( 'title/m' ); ?></h2>
+	<h2 class="wp-block-heading is-style-screen-reader-text"><?php Demo::The_text( 'title/m' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}}} -->
@@ -44,7 +45,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column" style="flex-basis:64px">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"}}} -->
-					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 				</div>
@@ -54,11 +55,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column">
 
 					<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '70' ); ?></p>
+					<p><?php Demo::The_text( '70' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -80,7 +81,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column" style="flex-basis:64px">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"}}} -->
-					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 				</div>
@@ -90,11 +91,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column">
 
 					<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '70' ); ?></p>
+					<p><?php Demo::The_text( '70' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -116,7 +117,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column" style="flex-basis:64px">
 
 					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"}}} -->
-					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Block_Pattern::get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Block_Pattern::get_text( 'alt' ) ); ?>"/></figure>
+					<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.64' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
 				</div>
@@ -126,11 +127,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<div class="wp-block-column">
 
 					<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Block_Pattern::the_text( 'title/s' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p><?php Block_Pattern::the_text( '70' ); ?></p>
+					<p><?php Demo::The_text( '70' ); ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
