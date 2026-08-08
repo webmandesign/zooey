@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -31,6 +32,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		esc_html_x( 'site builder', 'keyword', 'zooey' ),
 	),
 	'viewportWidth' => 'alignfull',
+	'blockTypes'    => array( 'core/query' ),
 ) );
 
 // Block pattern content:
@@ -54,10 +56,8 @@ if (
 	<!-- wp:query {"query":{"perPage":"1","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"post_tag":[<?php echo absint( $tag_id ); ?>]},"parents":[]},"align":"wide"} -->
 	<div class="wp-block-query alignwide">
 
-		<!-- wp:post-template {"style":{"spacing":{"blockGap":"0"}}} -->
-
+		<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 			<!-- wp:template-part {"slug":"entry-query-featured"} /-->
-
 		<!-- /wp:post-template -->
 
 	</div>
@@ -66,10 +66,8 @@ if (
 	<!-- wp:query {"query":{"perPage":"2","pages":"1","offset":"1","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"post_tag":[<?php echo absint( $tag_id ); ?>]},"parents":[]},"align":"wide"} -->
 	<div class="wp-block-query alignwide">
 
-		<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|m"}},"layout":{"type":"grid","columnCount":2}} -->
-
+		<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"grid","columnCount":2}} -->
 			<!-- wp:template-part {"slug":"entry-query-featured","style":{"dimensions":{"minHeight":"100%"}}} /-->
-
 		<!-- /wp:post-template -->
 
 	</div>

@@ -26,7 +26,7 @@ $features = array(
 	'blog',
 	'background',
 	'typography',
-	'custom-header', // @todo mobile-header?
+	'custom-header',
 	'featured-posts',
 	'privacy',
 	'hybrid',

@@ -28,6 +28,6 @@ $image = Demo::Get_image_url( 'map' );
 
 ?>
 
-<!-- wp:image {"sizeSlug":"large","linkDestination":"custom","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-fullwidth"} -->
+<!-- wp:image {"metadata":{"name":"<?php esc_attr_e( 'Map', 'zooey' ); ?>"},"sizeSlug":"large","linkDestination":"custom","align":"wide","style":{"spacing":{"margin":{"top":"0"}},"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-fullwidth"} -->
 <figure class="wp-block-image alignwide size-large is-fullwidth" style="margin-top:0"><a href="https://www.openstreetmap.org/"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></a></figure>
 <!-- /wp:image -->

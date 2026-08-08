@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -70,7 +71,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 						<p><?php echo esc_html_x( 'by', 'As in "written by [author name]".', 'zooey' ); ?></p>
 						<!-- /wp:paragraph -->
 
-						<!-- wp:post-author {"showAvatar":false} /-->
+						<!-- wp:post-author-name /-->
 
 						<!-- wp:paragraph -->
 						<p><?php echo esc_html_x( 'in', 'In category.', 'zooey' ); ?></p>

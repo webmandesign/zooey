@@ -38,5 +38,15 @@
 				}
 			]
 		}
+	},
+
+	"styles" : {
+		"elements" : {
+			"heading" : {
+				"typography" : {
+					"textTransform" : "none"
+				}
+			}
+		}
 	}
 }

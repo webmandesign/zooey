@@ -75,6 +75,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 		<div class="wp-block-column">
 
+			<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 			<!-- wp:details -->
 			<details class="wp-block-details">
 				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
@@ -83,24 +84,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
-
-			<!-- wp:details -->
-			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '200' ); ?></p>
-				<!-- /wp:paragraph -->
-			</details>
-			<!-- /wp:details -->
-
-			<!-- wp:details -->
-			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '200' ); ?></p>
-				<!-- /wp:paragraph -->
-			</details>
-			<!-- /wp:details -->
+			<?php endfor; ?>
 
 		</div>
 		<!-- /wp:column -->

@@ -25,106 +25,78 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	'viewportWidth' => 500,
 ) );
 
-?>
+// Block pattern content:
 
-<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
+$days = array(
+
+	'open' => array(
+		'mon',
+		'tue',
+		'wed',
+		'thu',
+		'fri',
+	),
+
+	'close' => array(
+		'sat',
+		'sun',
+	),
+);
+
+ob_start(); ?>
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group">
+		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
+		<p class="has-s-font-size" style="text-transform:uppercase">[DAY]</p>
+		<!-- /wp:paragraph -->
+		<!-- wp:separator {"className":"is-style-dotted"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
+		<!-- /wp:separator -->
+		<!-- wp:paragraph -->
+		<p>[TIME]</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+<?php $item = ob_get_clean(); ?>
+
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Working hours', 'zooey' ); ?>"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/mon' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 17:00</p>
-		<!-- /wp:paragraph -->
+		<?php
+
+		foreach ( $days['open'] as $day ) :
+
+			echo str_replace(
+				array( '[DAY]', '[TIME]' ),
+				array( Demo::get_text( 'date/' . $day ), '9:00 - 17:00' ),
+				$item
+			);
+
+		endforeach;
+
+		?>
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"var:preset|spacing|xs"}}}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/tue' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 17:00</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
+		<?php
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/wed' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 17:00</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
+		foreach ( $days['close'] as $day ) :
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/thu' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 17:00</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
+			echo str_replace(
+				array( '[DAY]', '[TIME]' ),
+				array( Demo::get_text( 'date/' . $day ), esc_html_x( 'Closed', 'As in time, working hours.', 'zooey' ) ),
+				$item
+			);
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/fri' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 17:00</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
+		endforeach;
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/sat' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p>9:00 - 12:00</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
-
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
-		<p class="has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'date/sun' ); ?></p>
-		<!-- /wp:paragraph -->
-		<!-- wp:separator {"className":"is-style-dotted"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-dotted" />
-		<!-- /wp:separator -->
-		<!-- wp:paragraph -->
-		<p><?php echo esc_html_x( 'Closed', 'As in time, working hours.', 'zooey' ); ?></p>
-		<!-- /wp:paragraph -->
+		?>
 	</div>
 	<!-- /wp:group -->
 

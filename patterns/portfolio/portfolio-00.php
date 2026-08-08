@@ -30,7 +30,7 @@ $image = Demo::Get_image_url( '1to1-1' );
 
 ?>
 
-<!-- wp:group {"tagName":"article","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"}},"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Project', 'zooey' ); ?>"},"tagName":"article","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"}},"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <article class="wp-block-group" style="min-height:100%;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"style":{"spacing":{"padding":{"bottom":"0","left":"0","right":"0","top":"16em"}},"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}}} -->

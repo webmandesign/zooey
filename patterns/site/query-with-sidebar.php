@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -29,6 +30,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 	'has_hooks' => true,
 	'viewportWidth' => 'alignfull',
+	'blockTypes'    => array( 'core/query' ),
 ) );
 
 ?>
@@ -42,14 +44,12 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column {"width":"66.66%"} -->
 		<div class="wp-block-column" style="flex-basis:66.66%">
 
-			<!-- wp:query -->
+			<!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]}} -->
 			<div class="wp-block-query">
 
 				<?php do_action( 'tha_content_while_before' ); ?>
-				<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|l"}}} -->
-
+				<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}}} -->
 					<!-- wp:template-part {"slug":"entry-query"} /-->
-
 				<!-- /wp:post-template -->
 				<?php do_action( 'tha_content_while_after' ); ?>
 
@@ -75,7 +75,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"33.33%"} -->
+		<!-- wp:column {metadata":{"name":"<?php esc_attr_e( 'Sidebar container', 'zooey' ); ?>"},"width":"33.33%"} -->
 		<div class="wp-block-column" style="flex-basis:33.33%">
 			<!-- wp:template-part {"slug":"sidebar","style":{"position":{"type":"sticky","top":"0px"}}} /-->
 		</div>

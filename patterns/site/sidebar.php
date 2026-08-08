@@ -41,7 +41,7 @@ $image = Demo::Get_image_url( '1to1-3', 'sidebar-about-me' );
 
 ?>
 
-<!-- wp:group {"tagName":"aside","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained","contentSize":"480px"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Sidebar', 'zooey' ); ?>"},"tagName":"aside","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained","contentSize":"480px"}} -->
 <aside aria-label="<?php esc_attr_e( 'Sidebar, a secondary content', 'zooey' ); ?>" class="wp-block-group">
 
 	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","layout":{"type":"constrained","contentSize":""}} -->

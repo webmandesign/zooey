@@ -23,7 +23,33 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 ) );
 
-?>
+// Block pattern content:
+
+ob_start(); ?>
+
+	<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
+	<div class="wp-block-column" style="flex-basis:33.33%">
+
+		<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
+		<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">[LETTER]</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
+		<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
+		<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
+		<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:column -->
+
+<?php $item = ob_get_clean(); ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"},"margin":{"top":"0"},"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-base-alt-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content)">
@@ -45,49 +71,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column" style="flex-basis:33.33%">
+		<?php
 
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
-			<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">A</p>
-			<!-- /wp:paragraph -->
+		foreach ( array( 'A', 'B' ) as $letter ) :
+			echo str_replace( '[LETTER]', $letter, $item );
+		endforeach;
 
-			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-			<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column" style="flex-basis:33.33%">
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
-			<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">B</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-			<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
+		?>
 
 	</div>
 	<!-- /wp:columns -->
@@ -95,71 +85,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"}}}} -->
 	<div class="wp-block-columns alignwide">
 
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column" style="flex-basis:33.33%">
+		<?php
 
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
-			<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">C</p>
-			<!-- /wp:paragraph -->
+		foreach ( array( 'C', 'D', 'E' ) as $letter ) :
+			echo str_replace( '[LETTER]', $letter, $item );
+		endforeach;
 
-			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-			<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column" style="flex-basis:33.33%">
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
-			<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">D</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-			<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column" style="flex-basis:33.33%">
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"fontSize":"mega"} -->
-			<p class="has-link-color has-mega-font-size" style="font-style:normal;font-weight:700;line-height:1">E</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"m"} -->
-			<h3 class="wp-block-heading has-m-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"style":{"typography":{"lineHeight":1.4}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:1.4"><?php Demo::The_text( '75' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-			<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
+		?>
 
 	</div>
 	<!-- /wp:columns -->

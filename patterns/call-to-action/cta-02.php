@@ -74,5 +74,6 @@ $image = Demo::Get_image_url( '3to2-3' );
 		</div>
 		<!-- /wp:columns -->
 
-</div></div>
+	</div>
+</div>
 <!-- /wp:cover -->

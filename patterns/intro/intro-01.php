@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Add block pattern setup args.
 Block_Pattern::add_pattern_args( __FILE__, array(
-	'title'    => _x( 'Page title with background image with zoom in animation, features list, and buttons', 'Block pattern title.', 'zooey' ),
+	'title'    => _x( 'Page title with background image, features list, and buttons', 'Block pattern title.', 'zooey' ),
 	'keywords' => array(
 		esc_html_x( 'call to action', 'keyword', 'zooey' ),
 		esc_html_x( 'buttons', 'keyword', 'zooey' ),
@@ -26,10 +26,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		esc_html_x( 'h1', 'keyword', 'zooey' ),
 	),
 ) );
-
-// Block pattern content:
-
-$image = Demo::Get_image_url( '3to2-3' );
 
 ?>
 

@@ -59,23 +59,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:columns -->
 			<div class="wp-block-columns">
 
+				<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 				<!-- wp:column -->
 				<div class="wp-block-column">
 					<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
 				</div>
 				<!-- /wp:column -->
-
-				<!-- wp:column -->
-				<div class="wp-block-column">
-					<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
-				</div>
-				<!-- /wp:column -->
-
-				<!-- wp:column -->
-				<div class="wp-block-column">
-					<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
-				</div>
-				<!-- /wp:column -->
+				<?php endfor; ?>
 
 			</div>
 			<!-- /wp:columns -->

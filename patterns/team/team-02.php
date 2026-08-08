@@ -59,23 +59,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|l","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|xl"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--xl)">
 
+		<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 		<!-- wp:column {"width":"25%"} -->
 		<div class="wp-block-column" style="flex-basis:25%">
 			<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
 		</div>
 		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"25%"} -->
-		<div class="wp-block-column" style="flex-basis:25%">
-			<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"width":"25%"} -->
-		<div class="wp-block-column" style="flex-basis:25%">
-			<!-- wp:pattern {"slug":"zooey/team/team-00"} /-->
-		</div>
-		<!-- /wp:column -->
+		<?php endfor; ?>
 
 		<!-- wp:column {"width":"25%","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"border":{"radius":"0.38rem","width":"2px"}}} -->
 		<div class="wp-block-column has-border-color has-primary-border-color" style="border-width:2px;border-radius:0.38rem;padding-top:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--m);flex-basis:25%">

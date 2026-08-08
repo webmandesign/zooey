@@ -969,6 +969,12 @@
 				}
 			},
 
+			"core/search" : {
+				"border" : {
+					"color" : "currentColor"
+				}
+			},
+
 			"core/site-tagline" : {
 				"typography" : {
 					"lineHeight" : "1.2"

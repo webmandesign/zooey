@@ -23,7 +23,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		esc_html_x( 'staff', 'keyword', 'zooey' ),
 		esc_html_x( 'person', 'keyword', 'zooey' ),
 	),
-	'viewportWidth' => 480,
+	'viewportWidth' => 320,
 ) );
 
 // Block pattern content:
@@ -32,7 +32,7 @@ $image = Demo::Get_image_url( '3to4-3' );
 
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Person card', 'zooey' ); ?>"},"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 <div class="wp-block-group">
 
 	<!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":{"bottomLeft":"20rem","bottomRight":"20rem"}}}} -->

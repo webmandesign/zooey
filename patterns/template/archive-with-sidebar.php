@@ -2,6 +2,9 @@
 /**
  * Block pattern setup file.
  *
+ * Starter template pattern.
+ * @link  https://developer.wordpress.org/news/2024/01/31/adding-starter-patterns-to-your-wordpress-themes/#starter-template-patterns
+ *
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *

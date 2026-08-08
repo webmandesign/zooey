@@ -58,9 +58,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|xl"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|m"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--xl)">
 
+		<?php for ( $i = 1; $i <= 2; $i++ ) : ?>
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 		<div class="wp-block-column">
 
+			<?php for ( $j = 1; $j <= 2; $j++ ) : ?>
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
 			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
 
@@ -74,57 +76,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 			</div>
 			<!-- /wp:group -->
-
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
-			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
-
-				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '130' ); ?></p>
-				<!-- /wp:paragraph -->
-
-			</div>
-			<!-- /wp:group -->
+			<?php endfor; ?>
 
 		</div>
 		<!-- /wp:column -->
-
-		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
-		<div class="wp-block-column">
-
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
-			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
-
-				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '130' ); ?></p>
-				<!-- /wp:paragraph -->
-
-			</div>
-			<!-- /wp:group -->
-
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
-			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
-
-				<!-- wp:heading {"level":3,"fontSize":"l"} -->
-				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '130' ); ?></p>
-				<!-- /wp:paragraph -->
-
-			</div>
-			<!-- /wp:group -->
-
-		</div>
-		<!-- /wp:column -->
+		<?php endfor; ?>
 
 	</div>
 	<!-- /wp:columns -->

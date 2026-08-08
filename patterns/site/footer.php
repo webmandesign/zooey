@@ -40,7 +40,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|l"},"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
+		<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Logo', 'zooey' ); ?>"},"style":{"spacing":{"blockGap":{"top":"0","left":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
 		<div class="wp-block-group">
 
 			<!-- wp:site-logo {"width":320} /-->
@@ -118,7 +118,24 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<h2 class="wp-block-heading has-h-4-font-size">Theme Info</h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}},"ariaLabel":"<?php echo esc_attr_x( 'Footer, primary', 'Navigational menu label.', 'zooey' ); ?>"} -->
+					<!-- wp:navigation {
+						"overlayMenu": "never",
+						"layout": {
+							"type": "flex",
+							"orientation": "vertical",
+							"flexWrap": "nowrap"
+						},
+						"style": {
+							"spacing": {
+								"blockGap": "0.75em"
+							},
+							"typography": {
+								"textTransform": "uppercase",
+								"fontSize": "1em"
+							}
+						},
+						"ariaLabel": "<?php echo esc_attr_x( 'Footer, primary', 'Navigational menu label.', 'zooey' ); ?>"
+					} -->
 						<!-- wp:navigation-link {"label":"Get the theme","url":"https://wordpress.org/themes/zooey/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"WebMan Design","url":"https://www.webmandesign.eu/","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"Support Forum","url":"#themesupport","fontSize":"s"} /-->
@@ -135,7 +152,24 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 					<h2 class="wp-block-heading has-h-4-font-size"><?php esc_html_e( 'Services', 'zooey' ); ?></h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75em"},"typography":{"textTransform":"uppercase","fontSize":"1em"}},"ariaLabel":"<?php echo esc_attr_x( 'Footer, secondary', 'Navigational menu label.', 'zooey' ); ?>"} -->
+					<!-- wp:navigation {
+						"overlayMenu": "never",
+						"layout": {
+							"type": "flex",
+							"orientation": "vertical",
+							"flexWrap": "nowrap"
+						},
+						"style": {
+							"spacing": {
+								"blockGap": "0.75em"
+							},
+							"typography": {
+								"textTransform": "uppercase",
+								"fontSize": "1em"
+							}
+						},
+						"ariaLabel": "<?php echo esc_attr_x( 'Footer, secondary', 'Navigational menu label.', 'zooey' ); ?>"
+					} -->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
 						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->

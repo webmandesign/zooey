@@ -27,10 +27,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 ) );
 
-// Block pattern content:
-
-$image = Demo::Get_image_url( '3to2-2' );
-
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0"},"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}},"backgroundColor":"secondary","layout":{"type":"constrained"}} -->
@@ -71,7 +67,7 @@ $image = Demo::Get_image_url( '3to2-2' );
 			<!-- wp:quote -->
 			<blockquote class="wp-block-quote">
 				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '200' ); ?></p>
+				<p><?php Demo::The_text( '170' ); ?></p>
 				<!-- /wp:paragraph -->
 				<cite><?php Demo::The_text( 'people/name' ); ?>, <?php Demo::The_text( 'people/job' ); ?></cite>
 			</blockquote>

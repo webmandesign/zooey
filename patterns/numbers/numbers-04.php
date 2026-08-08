@@ -35,6 +35,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<h2 class="wp-block-heading alignwide"><?php Demo::The_text( 'title/s' ); ?></h2>
 	<!-- /wp:heading -->
 
+	<?php foreach ( array( '1987', '1993', '2026' ) as $num ) : ?>
 	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
 	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
 	<!-- /wp:separator -->
@@ -46,7 +47,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
-			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1">1987</h3>
+			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1"><?php echo esc_html( $num ); ?></h3>
 			<!-- /wp:heading -->
 
 		</div>
@@ -64,66 +65,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 	</div>
 	<!-- /wp:columns -->
-
-	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
-	<!-- /wp:separator -->
-
-	<!-- wp:columns {"align":"wide"} -->
-	<div class="wp-block-columns alignwide">
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
-			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1">1991</h3>
-			<!-- /wp:heading -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '230' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
-
-	<!-- wp:separator {"align":"wide","className":"is-style-dashed"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-dashed" />
-	<!-- /wp:separator -->
-
-	<!-- wp:columns {"align":"wide"} -->
-	<div class="wp-block-columns alignwide">
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1"}},"fontSize":"big"} -->
-			<h3 class="wp-block-heading has-big-font-size" style="font-style:normal;font-weight:900;line-height:1"><?php echo esc_html( date( 'Y' ) ); ?></h3>
-			<!-- /wp:heading -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '230' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
+	<?php endforeach; ?>
 
 </div>
 <!-- /wp:group -->

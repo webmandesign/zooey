@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -30,6 +30,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 	'has_hooks' => true,
 	'viewportWidth' => 'alignfull',
+	'blockTypes'    => array( 'core/query' ),
 ) );
 
 ?>
@@ -66,10 +67,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:query {"query":{"perPage":3,"postType":"post","sticky":"exclude","inherit":false},"style":{"spacing":{"margin":{"top":"var:preset|spacing|m"}}}} -->
 		<div class="wp-block-query" style="margin-top:var(--wp--preset--spacing--m)">
 
-			<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|m"}},"layout":{"type":"grid","columnCount":3}} -->
-
+			<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"grid","columnCount":3}} -->
 				<!-- wp:template-part {"slug":"entry-query","style":{"dimensions":{"minHeight":"100%"}}} /-->
-
 			<!-- /wp:post-template -->
 
 		</div>

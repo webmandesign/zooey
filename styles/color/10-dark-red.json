@@ -14,46 +14,46 @@
 				{
 					"name"  : "Base (Background)",
 					"slug"  : "base",
-					"color" : "#0f0a06"
+					"color" : "#080008"
 				},
 
 				{
 					"name"  : "Contrast (Text)",
 					"slug"  : "contrast",
-					"color" : "#cfcac6"
+					"color" : "#b8b0b8"
 				},
 				{
 					"name"  : "Contrast alternative (Headings)",
 					"slug"  : "contrast-alt",
-					"color" : "#fffaf6"
+					"color" : "#e8e0e8"
 				},
 
 				{
 					"name"  : "Primary",
 					"slug"  : "primary",
-					"color" : "#d78989"
+					"color" : "#ff6b6b"
 				},
 				{
 					"name"  : "Secondary",
 					"slug"  : "secondary",
-					"color" : "#ce6f6f"
+					"color" : "#5f1a37"
 				},
 
 				{
 					"name"  : "Primary mixed",
 					"slug"  : "primary-mixed",
-					"color" : "#281a16"
+					"color" : "#270d14"
 				},
 				{
 					"name"  : "Secondary mixed",
 					"slug"  : "secondary-mixed",
-					"color" : "#58312e"
+					"color" : "#290a1a"
 				},
 
 				{
 					"name"  : "Base alternative (Background)",
 					"slug"  : "base-alt",
-					"color" : "#1f1a16"
+					"color" : "#181018"
 				},
 
 				{

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,8 +33,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	'viewportWidth' => 'alignfull',
 ) );
 
-// Block pattern content:
-
 ?>
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|content","left":"var:preset|spacing|content"}},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","className":"has-global-padding","layout":{"type":"constrained","contentSize":"1600px"}} -->
@@ -60,7 +58,26 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:navigation {"icon":"menu","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.2rem"},"typography":{"fontStyle":"normal","fontWeight":"500"}},"anchor":"site-navigation","ariaLabel":"<?php echo esc_attr_x( 'Primary', 'Navigational menu label.', 'zooey' ); ?>"} /-->
+			<!-- wp:navigation {
+				"icon": "menu",
+				"overlayBackgroundColor": "secondary",
+				"overlayTextColor": "<?php echo esc_attr( Demo::get_value( 'color_secondary', 'is_dark', 'white', 'black' ) ); ?>",
+				"layout": {
+					"type": "flex",
+					"justifyContent": "center"
+				},
+				"style": {
+					"spacing": {
+						"blockGap": "1.2rem"
+					},
+					"typography": {
+						"fontStyle": "normal",
+						"fontWeight": "500"
+					}
+				},
+				"anchor": "site-navigation",
+				"ariaLabel": "<?php echo esc_attr_x( 'Primary', 'Navigational menu label.', 'zooey' ); ?>"
+			} /-->
 
 		</div>
 		<!-- /wp:group -->

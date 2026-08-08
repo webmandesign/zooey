@@ -24,9 +24,11 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Demo::Get_image_url( '3to4-1' );
-$image_2 = Demo::Get_image_url( '3to4-2' );
-$image_3 = Demo::Get_image_url( '3to4-3' );
+$images = array(
+	Demo::get_image_url( '3to4-1' ),
+	Demo::get_image_url( '3to4-2' ),
+	Demo::get_image_url( '3to4-3' ),
+);
 
 ?>
 
@@ -42,17 +44,11 @@ $image_3 = Demo::Get_image_url( '3to4-3' );
 			<!-- wp:gallery {"linkTo":"none"} -->
 			<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
 
+				<?php foreach ( $images as $url ) : ?>
 				<!-- wp:image {"sizeSlug":"thumbnail"} -->
-				<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
+				<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $url ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 				<!-- /wp:image -->
-
-				<!-- wp:image {"sizeSlug":"thumbnail"} -->
-				<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"sizeSlug":"thumbnail"} -->
-				<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-				<!-- /wp:image -->
+				<?php endforeach; ?>
 
 			</figure>
 			<!-- /wp:gallery -->

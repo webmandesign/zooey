@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -28,23 +29,13 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide">
 
+	<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 	<!-- wp:column -->
 	<div class="wp-block-column">
 		<!-- wp:pattern {"slug":"zooey/portfolio/portfolio-00"} /-->
 	</div>
 	<!-- /wp:column -->
-
-	<!-- wp:column -->
-	<div class="wp-block-column">
-		<!-- wp:pattern {"slug":"zooey/portfolio/portfolio-00"} /-->
-	</div>
-	<!-- /wp:column -->
-
-	<!-- wp:column -->
-	<div class="wp-block-column">
-		<!-- wp:pattern {"slug":"zooey/portfolio/portfolio-00"} /-->
-	</div>
-	<!-- /wp:column -->
+	<?php endfor; ?>
 
 </div>
 <!-- /wp:columns -->

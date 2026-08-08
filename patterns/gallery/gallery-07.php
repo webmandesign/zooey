@@ -24,9 +24,10 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Demo::Get_image_url( '3to2-3' );
-$image_2 = Demo::Get_image_url( '3to2-2' );
-$image_3 = Demo::Get_image_url( '3to2-1' );
+$images = array(
+	Demo::get_image_url( '3to2-3' ),
+	Demo::get_image_url( '3to2-2' ),
+);
 
 ?>
 
@@ -82,29 +83,15 @@ $image_3 = Demo::Get_image_url( '3to2-1' );
 	<!-- wp:column {"style":{"spacing":{"blockGap":"0"}}} -->
 	<div class="wp-block-column">
 
+		<?php foreach ( $images as $url ) : ?>
 		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
 		<div class="wp-block-group">
 			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $url ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->
-
-		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
-			<!-- /wp:image -->
-		</div>
-		<!-- /wp:group -->
-
-		<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"medium","style":{"border":{"radius":"0px"}},"className":"is-fullwidth"} -->
-			<figure class="wp-block-image size-medium has-custom-border is-fullwidth"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" style="border-radius:0px;aspect-ratio:1;object-fit:cover" /></figure>
-			<!-- /wp:image -->
-		</div>
-		<!-- /wp:group -->
+		<?php endforeach; ?>
 
 	</div>
 	<!-- /wp:column -->

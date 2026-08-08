@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.1
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -30,7 +31,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained"},"fontSize":"s"} -->
 	<div class="wp-block-group has-s-font-size">
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0.5em","left":"0.5em"}}}} -->
+		<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Comments title', 'zooey' ); ?>"},"style":{"spacing":{"blockGap":{"top":"0.5em","left":"0.5em"}}}} -->
 		<div class="wp-block-group">
 
 			<!-- wp:heading -->
@@ -58,7 +59,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- wp:column {"width":"","style":{"spacing":{"blockGap":"var:preset|spacing|s"}}} -->
 				<div class="wp-block-column">
 
-					<!-- wp:group -->
+					<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Comment meta data', 'zooey' ); ?>"}} -->
 					<div class="wp-block-group">
 
 						<!-- wp:comment-author-name {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /-->

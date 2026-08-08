@@ -26,6 +26,6 @@ $image = Demo::Get_image_url( '21to9' );
 
 ?>
 
-<!-- wp:image {"sizeSlug":"full","align":"wide","style":{"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-style-padding-right"} -->
+<!-- wp:image {"meta":"auto","sizeSlug":"full","align":"wide","style":{"color":{"duotone":"var:preset|duotone|primary"}},"className":"is-style-padding-right"} -->
 <figure class="wp-block-image alignwide size-full is-style-padding-right"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 <!-- /wp:image -->

@@ -28,7 +28,7 @@ $image = Demo::Get_image_url( '21to9' );
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0"},"margin":{"top":"0"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Testimony', 'zooey' ); ?>"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"0"},"margin":{"top":"0"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--content);padding-bottom:0">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->

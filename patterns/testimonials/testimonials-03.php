@@ -24,25 +24,32 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Reviews', 'zooey' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xl"}}}} -->
 	<div class="wp-block-columns alignwide">
 
+		<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"primary","fontSize":"xl"} -->
-				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
-				<!-- /wp:paragraph -->
+				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+				<div class="wp-block-group">
 
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
-				<!-- /wp:heading -->
+					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"},"border":{"radius":"100px"},"spacing":{"padding":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}}},"backgroundColor":"primary","fontSize":"xl"} -->
+					<p class="has-primary-background-color has-background has-xl-font-size" style="border-radius:100px;padding-top:var(--wp--preset--spacing--xs);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--xs);padding-left:var(--wp--preset--spacing--s);line-height:1">★★★⯪☆</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"s"} -->
+					<h3 class="wp-block-heading has-s-font-size" style="text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
+					<!-- /wp:heading -->
+
+				</div>
+				<!-- /wp:group -->
 
 				<!-- wp:quote -->
 				<blockquote class="wp-block-quote">
@@ -58,64 +65,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 		</div>
 		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-			<div class="wp-block-group">
-
-				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"primary","fontSize":"xl"} -->
-				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:quote -->
-				<blockquote class="wp-block-quote">
-					<!-- wp:paragraph -->
-					<p><?php Demo::The_text( '160' ); ?></p>
-					<!-- /wp:paragraph -->
-					<cite><?php Demo::The_text( 'people/name' ); ?>, <a href="#0"><?php Demo::The_text( 'people/job' ); ?></a></cite>
-				</blockquote>
-				<!-- /wp:quote -->
-
-			</div>
-			<!-- /wp:group -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
-			<div class="wp-block-group">
-
-				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"primary","fontSize":"xl"} -->
-				<p class="has-primary-color has-text-color has-xl-font-size" style="line-height:1">★★★★★</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"s"} -->
-				<h3 class="wp-block-heading has-s-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:quote -->
-				<blockquote class="wp-block-quote">
-					<!-- wp:paragraph -->
-					<p><?php Demo::The_text( '160' ); ?></p>
-					<!-- /wp:paragraph -->
-					<cite><?php Demo::The_text( 'people/name' ); ?>, <a href="#0"><?php Demo::The_text( 'people/job' ); ?></a></cite>
-				</blockquote>
-				<!-- /wp:quote -->
-
-			</div>
-			<!-- /wp:group -->
-
-		</div>
-		<!-- /wp:column -->
+		<?php endfor; ?>
 
 	</div>
 	<!-- /wp:columns -->

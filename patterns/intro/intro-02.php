@@ -32,6 +32,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 $image_p = Demo::Get_image_url( 'p-i' );
 
+$image_duotone = Demo::get_value( 'color_primary', 'is_dark', '"color":{"duotone":"var:preset|duotone|white"},', '' );
+
 ?>
 
 <!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":70,"overlayColor":"primary","isUserOverlayColor":true,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","style":{"spacing":{"padding":{"bottom":"0","top":"16em"},"margin":{"bottom":"var:preset|spacing|content"}}},"className":"has-visible-overflow","layout":{"type":"constrained"}} -->
@@ -60,13 +62,14 @@ $image_p = Demo::Get_image_url( 'p-i' );
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"}}},"className":"is-style-pull-down-l"} -->
 		<div class="wp-block-columns alignwide is-style-pull-down-l" style="margin-bottom:var(--wp--preset--spacing--content)">
 
+			<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 			<!-- wp:column {"layout":{"type":"constrained"}} -->
 			<div class="wp-block-column">
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l","left":"var:preset|spacing|l","right":"var:preset|spacing|l"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"background":{"backgroundImage":{"url":"<?php echo esc_url_raw( $image_p ); ?>","source":"file"},"backgroundSize":"auto"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
 
-					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
+					<!-- wp:image {"sizeSlug":"full","style":{<?php echo $image_duotone; // phpcs:ignore -- escaping is irrelevant ?>"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
 					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 
@@ -83,54 +86,7 @@ $image_p = Demo::Get_image_url( 'p-i' );
 
 			</div>
 			<!-- /wp:column -->
-
-			<!-- wp:column {"layout":{"type":"constrained"}} -->
-			<div class="wp-block-column">
-
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l","left":"var:preset|spacing|l","right":"var:preset|spacing|l"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"background":{"backgroundImage":{"url":"<?php echo esc_url_raw( $image_p ); ?>","source":"file"},"backgroundSize":"auto"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
-
-					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
-					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-					<!-- /wp:image -->
-
-					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-					<!-- /wp:heading -->
-
-					<!-- wp:paragraph -->
-					<p><?php Demo::The_text( '65' ); ?></p>
-					<!-- /wp:paragraph -->
-
-				</div>
-				<!-- /wp:group -->
-
-			</div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"layout":{"type":"constrained"}} -->
-			<div class="wp-block-column">
-
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l","left":"var:preset|spacing|l","right":"var:preset|spacing|l"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"background":{"backgroundImage":{"url":"<?php echo esc_url_raw( $image_p ); ?>","source":"file"},"backgroundSize":"auto"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-primary-background-color has-background" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--l);padding-right:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l);padding-left:var(--wp--preset--spacing--l)">
-
-					<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|white"},"spacing":{"margin":{"bottom":"var:preset|spacing|m"}}}} -->
-					<figure class="wp-block-image size-full" style="margin-bottom:var(--wp--preset--spacing--m)"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-					<!-- /wp:image -->
-
-					<!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"},"spacing":{"margin":{"top":"var:preset|spacing|s"}}},"fontSize":"l"} -->
-					<h2 class="wp-block-heading has-l-font-size" style="margin-top:var(--wp--preset--spacing--s);text-transform:uppercase"><?php Demo::The_text( 'title/s' ); ?></h2>
-					<!-- /wp:heading -->
-
-					<!-- wp:paragraph -->
-					<p><?php Demo::The_text( '65' ); ?></p>
-					<!-- /wp:paragraph -->
-
-				</div>
-				<!-- /wp:group -->
-
-			</div>
-			<!-- /wp:column -->
+		<?php endfor; ?>
 
 		</div>
 		<!-- /wp:columns -->

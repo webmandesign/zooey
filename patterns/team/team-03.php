@@ -33,7 +33,7 @@ $image = Demo::Get_image_url( '1to1-3' );
 
 ?>
 
-<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Name badge', 'zooey' ); ?>"},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group">
 
 	<!-- wp:image {"aspectRatio":"1","scale":"cover","width":"80px","sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->

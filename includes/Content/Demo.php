@@ -285,13 +285,13 @@ class Demo implements Component_Interface {
 					. '<p style="width:48%;float:left;"><label for="field1">' . esc_html_x( 'Name', 'Form field label', 'zooey' ) . '</label><br /><input id="field1" style="width:100%;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);" type="text" /></p>'
 					. '<p style="width:48%;float:right;"><label for="field2">' . esc_html_x( 'Email', 'Form field label', 'zooey' ) . '</label><br /><input id="field2" style="width:100%;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);" type="email" /></p>'
 					. '<p style="clear:both;padding-top:1em;margin-top:0;"><label for="field3">' . esc_html_x( 'Message', 'Form field label', 'zooey' ) . '</label><br /><textarea id="field3" style="width:100%;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);" rows="2"></textarea></p>'
-					. '<p><button title="' . esc_html__( 'This is just a demo placeholder form.', 'zooey' ) . '">' . esc_html_x( 'Submit', 'Form field label', 'zooey' ) . '</button></p>'
+					. '<p><button class="is-style-button-outline" title="' . esc_html__( 'This is just a demo placeholder form.', 'zooey' ) . '">' . esc_html_x( 'Submit', 'Form field label', 'zooey' ) . '</button></p>'
 					. '</form>',
 				'form_subscription' =>
 					'<form class="is-layout-flex" style="display:flex;gap:.5em;align-items:stretch;margin:0;" title="' . esc_html__( 'This is just a demo placeholder form.', 'zooey' ) . '">'
 					. '<label for="field1" class="screen-reader-text">' . esc_html_x( 'Email', 'Form field label', 'zooey' ) . '</label>'
 					. '<input id="field1" style="flex:1;width:100%;max-width:14em;background:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);" type="email" placeholder="example@example.com" />'
-					. '<button style="padding:0 1em;">' . esc_html_x( 'Submit', 'Form field label', 'zooey' ) . '</button>'
+					. '<button class="is-style-button-outline" style="padding:0 1em;">' . esc_html_x( 'Submit', 'Form field label', 'zooey' ) . '</button>'
 					. '</form>',
 			) );
 

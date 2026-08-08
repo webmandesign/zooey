@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -50,7 +51,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"33.33%"} -->
+		<!-- wp:column {"metadata":{"name":"<?php esc_attr_e( 'Sidebar container', 'zooey' ); ?>"},"width":"33.33%"} -->
 		<div class="wp-block-column" style="flex-basis:33.33%">
 			<!-- wp:template-part {"slug":"sidebar","style":{"position":{"type":"sticky","top":"0px"}}} /-->
 		</div>

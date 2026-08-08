@@ -44,9 +44,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}}},"backgroundColor":"contrast"} -->
-		<p class="has-text-align-center has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s)"><?php Demo::The_text( 'form' ); ?></p>
-		<!-- /wp:paragraph -->
+		<!-- wp:html --><?php Demo::the_text( 'form_subscription' ); ?><!-- /wp:html -->
 
 	</div>
 	<!-- /wp:group -->

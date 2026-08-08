@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.0
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -29,6 +30,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	),
 	'has_hooks' => true,
 	'viewportWidth' => 'alignfull',
+	'blockTypes'    => array( 'core/query' ),
 ) );
 
 ?>
@@ -37,10 +39,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <div class="wp-block-query" style="margin-bottom:var(--wp--preset--spacing--content)">
 
 	<?php do_action( 'tha_content_while_before' ); ?>
-	<!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|m"}},"layout":{"type":"grid","columnCount":2}} -->
-
+	<!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"grid","columnCount":2}} -->
 		<!-- wp:template-part {"slug":"entry-query"} /-->
-
 	<!-- /wp:post-template -->
 	<?php do_action( 'tha_content_while_after' ); ?>
 
@@ -51,7 +51,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- /wp:query-pagination -->
 
 	<!-- wp:query-no-results {"align":"wide"} -->
-
 		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"center"}} -->
 		<div class="wp-block-group">
 
@@ -63,7 +62,6 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 		</div>
 		<!-- /wp:group -->
-
 	<!-- /wp:query-no-results -->
 
 </div>

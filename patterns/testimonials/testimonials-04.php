@@ -24,8 +24,12 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Demo::Get_image_url( '3to4-1' );
-$image_2 = Demo::Get_image_url( '3to4-2' );
+$color_text = Demo::get_value( 'color_primary', 'is_dark', 'white', 'black' );
+
+$images = array(
+	Demo::get_image_url( '3to4-1' ),
+	Demo::get_image_url( '3to4-2' ),
+);
 
 ?>
 
@@ -35,13 +39,14 @@ $image_2 = Demo::Get_image_url( '3to4-2' );
 	<!-- wp:columns {"align":"wide"} -->
 	<div class="wp-block-columns alignwide">
 
+		<?php foreach ( $images as $url ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_1 ); ?>","dimRatio":90,"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
-			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
+			<!-- wp:cover {"url":"<?php echo esc_url_raw( $url ); ?>","dimRatio":90,"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}},"textColor":"<?php echo esc_attr( $color_text ); ?>"} -->
+			<div class="wp-block-cover has-custom-content-position is-position-bottom-center has-<?php echo esc_attr( $color_text ); ?>-color has-text-color" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
 				<span aria-hidden="true" class="wp-block-cover__background has-secondary-background-color has-background-dim-90 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url_raw( $image_1 ); ?>" data-object-fit="cover"/>
+				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url_raw( $url ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
@@ -59,31 +64,7 @@ $image_2 = Demo::Get_image_url( '3to4-2' );
 
 		</div>
 		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-
-			<!-- wp:cover {"url":"<?php echo esc_url_raw( $image_2 ); ?>","dimRatio":90,"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","contentPosition":"bottom center","style":{"border":{"radius":"0.38rem"},"spacing":{"padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}}}} -->
-			<div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
-				<span aria-hidden="true" class="wp-block-cover__background has-secondary-background-color has-background-dim-90 has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url_raw( $image_2 ); ?>" data-object-fit="cover"/>
-				<div class="wp-block-cover__inner-container">
-
-					<!-- wp:quote {"textColor":"black","fontSize":"xl"} -->
-					<blockquote class="wp-block-quote has-black-color has-text-color has-xl-font-size">
-						<!-- wp:paragraph -->
-						<p><?php Demo::The_text( '190' ); ?></p>
-						<!-- /wp:paragraph -->
-						<cite><?php Demo::The_text( 'people/name' ); ?></cite>
-					</blockquote>
-					<!-- /wp:quote -->
-
-				</div>
-			</div>
-			<!-- /wp:cover -->
-
-		</div>
-		<!-- /wp:column -->
+		<?php endforeach; ?>
 
 	</div>
 	<!-- /wp:columns -->

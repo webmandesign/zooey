@@ -42,7 +42,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '150' ); ?></p>
+			<p><?php Demo::The_text( '95' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -51,6 +51,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
+			<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 			<!-- wp:details -->
 			<details class="wp-block-details">
 				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
@@ -59,33 +60,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
-
-			<!-- wp:details -->
-			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '180' ); ?></p>
-				<!-- /wp:paragraph -->
-			</details>
-			<!-- /wp:details -->
-
-			<!-- wp:details -->
-			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '180' ); ?></p>
-				<!-- /wp:paragraph -->
-			</details>
-			<!-- /wp:details -->
-
-			<!-- wp:details -->
-			<details class="wp-block-details">
-				<summary><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></summary>
-				<!-- wp:paragraph -->
-				<p><?php Demo::The_text( '180' ); ?></p>
-				<!-- /wp:paragraph -->
-			</details>
-			<!-- /wp:details -->
+			<?php endfor; ?>
 
 		</div>
 		<!-- /wp:column -->

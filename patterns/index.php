@@ -98,21 +98,31 @@ $pattern_ids = array(
 	),
 
 	'page' => array(
-		'about-1',
-		'contact-1',
-		'faq-1',
-		'gallery-1',
+
 		'home-1',
 		'home-2',
 		'home-3',
+
 		'portfolio-1',
 		'project-1',
 		'pricing-1',
+
+		'gallery-1',
+
 		'services-1',
 		'service-1',
-		'soon-1',
+
+		'contact-1',
+
+		'about-1',
+
 		'team-1',
+
 		'testimonials-1',
+
+		'faq-1',
+
+		'soon-1',
 	),
 
 	'portfolio' => array(
@@ -169,6 +179,8 @@ $pattern_ids = array(
 		'query-with-sidebar',
 		'sidebar',
 		'taxonomy-category-select',
+
+		'navigation-overlay',
 	),
 
 	'team' => array(

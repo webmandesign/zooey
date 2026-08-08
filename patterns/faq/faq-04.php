@@ -29,6 +29,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 $image   = Demo::Get_image_url( '3to4-3' );
 $image_s = Demo::Get_image_url( 's' );
 
+$image_s_duotone = Demo::get_value( 'color_primary', 'is_dark', ',"style":{"color":{"duotone":"var:preset|duotone|white"}}', '' );
+
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
@@ -57,7 +59,7 @@ $image_s = Demo::Get_image_url( 's' );
 					<p><?php Demo::The_text( '120' ); ?></p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:image {"sizeSlug":"thumbnail","style":{"color":{"duotone":"var:preset|duotone|white"}}} -->
+					<!-- wp:image {"sizeSlug":"thumbnail"<?php echo $image_s_duotone; // phpcs:ignore -- escaping is irrelevant ?>} -->
 					<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_s ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 					<!-- /wp:image -->
 

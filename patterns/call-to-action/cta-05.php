@@ -25,8 +25,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_p = Demo::Get_image_url( 'p-i' );
 $image   = Demo::Get_image_url( '3to2-1' );
+$image_p = Demo::Get_image_url( 'p-i' );
 
 ?>
 

@@ -21,104 +21,15 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
+<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"margin":{"top":"0","bottom":"var:preset|spacing|m"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--m)">
 
+	<?php if ( 1 === $i ) : ?>
 	<!-- wp:separator {"align":"wide"} -->
 	<hr class="wp-block-separator alignwide has-alpha-channel-opacity" />
 	<!-- /wp:separator -->
-
-	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
-	<div class="wp-block-columns alignwide are-vertically-aligned-center">
-
-		<!-- wp:column {"verticalAlignment":"center","width":"120px"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:120px">
-
-			<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
-			<!-- /wp:image -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"verticalAlignment":"center","width":""} -->
-		<div class="wp-block-column is-vertically-aligned-center">
-
-			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
-			<!-- /wp:heading -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '230' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
-
-</div>
-<!-- /wp:group -->
-
-<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"margin":{"top":"0","bottom":"var:preset|spacing|m"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--m)">
-
-	<!-- wp:separator {"align":"wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity" />
-	<!-- /wp:separator -->
-
-	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
-	<div class="wp-block-columns alignwide are-vertically-aligned-center">
-
-		<!-- wp:column {"verticalAlignment":"center","width":"120px"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:120px">
-
-			<!-- wp:image {"sizeSlug":"full","style":{"color":{"duotone":"var:preset|duotone|primary"}}} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
-			<!-- /wp:image -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"verticalAlignment":"center","width":""} -->
-		<div class="wp-block-column is-vertically-aligned-center">
-
-			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading"><?php Demo::The_text( 'title/s' ); ?></h3>
-			<!-- /wp:heading -->
-
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '230' ); ?></p>
-			<!-- /wp:paragraph -->
-
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
-
-</div>
-<!-- /wp:group -->
-
-<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"margin":{"top":"0","bottom":"var:preset|spacing|m"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--m)">
-
-	<!-- wp:separator {"align":"wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity" />
-	<!-- /wp:separator -->
+	<?php endif; ?>
 
 	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
 	<div class="wp-block-columns alignwide are-vertically-aligned-center">
@@ -162,3 +73,4 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 </div>
 <!-- /wp:group -->
+<?php endfor; ?>

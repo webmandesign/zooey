@@ -26,13 +26,18 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Demo::Get_image_url( 'l-1' );
-$image_2 = Demo::Get_image_url( 'l-2' );
-$image_3 = Demo::Get_image_url( 'l-3' );
+$images = array(
+	Demo::get_image_url( 'l-1' ),
+	Demo::get_image_url( 'l-2' ),
+	Demo::get_image_url( 'l-3' ),
+	Demo::get_image_url( 'l-1' ),
+	Demo::get_image_url( 'l-3' ),
+	Demo::get_image_url( 'l-2' ),
+);
 
 ?>
 
-<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Logos', 'zooey' ); ?>"},"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
 	<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
@@ -42,29 +47,11 @@ $image_3 = Demo::Get_image_url( 'l-3' );
 	<!-- wp:gallery {"columns":6,"imageCrop":false,"linkTo":"none","align":"wide"} -->
 	<figure class="wp-block-gallery alignwide has-nested-images columns-6">
 
+		<?php foreach ( $images as $url ) : ?>
 		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $url ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
 		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_3 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>
-		<!-- /wp:image -->
+		<?php endforeach; ?>
 
 	</figure>
 	<!-- /wp:gallery -->

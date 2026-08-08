@@ -26,30 +26,30 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 // Block pattern content:
 
-$image_1 = Demo::Get_image_url( '3to4-1' );
-$image_2 = Demo::Get_image_url( '3to4-2' );
+$images = array(
+	Demo::Get_image_url( '3to4-1' ),
+	Demo::Get_image_url( '3to4-2' ),
+);
 
 ?>
 
-<!-- wp:group -->
+<!-- wp:group {"meta":"auto"} -->
 <div class="wp-block-group">
 
 	<!-- wp:gallery {"linkTo":"none","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
 	<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
 
+		<?php foreach ( $images as $url ) : ?>
 		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_1 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
+		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $url ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
 		<!-- /wp:image -->
-
-		<!-- wp:image {"sizeSlug":"thumbnail"} -->
-		<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $image_2 ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>
-		<!-- /wp:image -->
+		<?php endforeach; ?>
 
 	</figure>
 	<!-- /wp:gallery -->
 
 	<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2"},"fontSize":"h-3","fontFamily":"supplemental"} -->
-	<p class="has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Demo::The_text( '80' ); ?></p>
+	<p class="has-supplemental-font-family has-h-3-font-size" style="line-height:1.2"><?php Demo::The_text( '70' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->

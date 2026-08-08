@@ -34,7 +34,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:61.8%">
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-alt"}}}},"textColor":"contrast-alt","fontSize":"h-3","fontFamily":"supplemental"} -->
-			<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Demo::The_text( '180' ); ?></p>
+			<p class="has-contrast-alt-color has-text-color has-link-color has-supplemental-font-family has-h-3-font-size" style="font-style:normal;font-weight:700;line-height:1.2"><?php Demo::The_text( '100' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -44,11 +44,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column" style="flex-basis:38.2%">
 
 			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '270' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p><?php Demo::The_text( '160' ); ?></p>
+			<p><?php Demo::The_text( '340' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

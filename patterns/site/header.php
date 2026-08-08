@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -61,7 +61,26 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"var:preset|spacing|m"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:navigation {"overlayMenu":"always","icon":"menu","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.2rem"},"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontFamily":"supplemental","anchor":"site-navigation","ariaLabel":"<?php echo esc_attr_x( 'Primary', 'Navigational menu label.', 'zooey' ); ?>"} /-->
+				<!-- wp:navigation {
+					"overlayMenu": "always",
+					"icon": "menu",
+					"layout": {
+						"type": "flex",
+						"justifyContent": "center"
+					},
+					"style": {
+						"spacing": {
+							"blockGap": "1.2rem"
+						},
+						"typography": {
+							"fontStyle": "normal",
+							"fontWeight": "700"
+						}
+					},
+					"fontFamily": "supplemental",
+					"anchor": "site-navigation",
+					"ariaLabel": "<?php echo esc_attr_x( 'Primary', 'Navigational menu label.', 'zooey' ); ?>"
+				} /-->
 
 				<!-- wp:search {"showLabel":false,"buttonUseIcon":true,"style":{"layout":{"selfStretch":"fill","flexSize":null}},"className":"is-style-button-outline"} /-->
 
@@ -71,10 +90,32 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group {"fontFamily":"supplemental"} -->
 			<div class="wp-block-group has-supplemental-font-family">
 
+				<!-- wp:navigation {
+					"overlayMenu": "never",
+					"overlayBackgroundColor": "secondary",
+					"overlayTextColor": "<?php echo esc_attr( Demo::get_value( 'color_secondary', 'is_dark', 'white', 'black' ) ); ?>",
+					"layout": {
+						"type": "flex"
+					},
+					"style": {
+						"typography": {
+							"textTransform": "uppercase",
+							"fontStyle": "normal",
+							"fontWeight": "700"
+						},
+						"spacing": {
+							"blockGap": {
+								"top": "var:preset|spacing|xs",
+								"left": "1.2rem"
+							}
+						}
+					},
+					"anchor": "secondary-navigation",
+					"ariaLabel": "<?php echo esc_attr_x( 'Secondary', 'Navigational menu label.', 'zooey' ); ?>"
 				<?php if ( defined( 'WMD_THEME_DEMO' ) ) : ?>
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","ariaLabel":"<?php echo esc_attr_x( 'Secondary', 'Navigational menu label.', 'zooey' ); ?>"} /-->
+				} /-->
 				<?php else : // Pages below match `Starter::pages()`. ?>
-				<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex"},"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"1.2rem"}}},"anchor":"secondary-navigation","overlayBackgroundColor":"secondary","overlayTextColor":"contrast-alt","ariaLabel":"<?php echo esc_attr_x( 'Secondary', 'Navigational menu label.', 'zooey' ); ?>"} -->
+				} -->
 					<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'Blog', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>"} /-->
 					<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'About us', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_page_by_path( _x( 'about-us', 'Page slug', 'zooey' ) ) ) ); ?>"} /-->
 					<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'Services', 'Page title', 'zooey' ); ?>","url":"<?php echo esc_url( get_permalink( get_page_by_path( _x( 'services', 'Page slug', 'zooey' ) ) ) ); ?>"} /-->
