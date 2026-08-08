@@ -61,8 +61,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|m"},"margin":{"top":"0"}}}} -->
 	<div class="wp-block-group alignwide" id="section-<?php echo absint( $i ); ?>" style="margin-top:0;padding-top:var(--wp--preset--spacing--m)">
 
-		<!-- wp:group {"style":{"border":{"radius":"0.38rem"}},"gradient":"base-alt-to-transparent-v","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-alt-to-transparent-v-gradient-background has-background" style="border-radius:0.38rem">
+		<!-- wp:group {"style":{"border":{"radius":"var:preset|border-radius|s"}},"gradient":"base-alt-to-transparent-v","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-alt-to-transparent-v-gradient-background has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l","top":"0"}}}} -->
 			<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--l)"><?php Demo::The_text( 'title/s' ); ?></h3>

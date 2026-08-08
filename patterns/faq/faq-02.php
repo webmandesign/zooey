@@ -63,8 +63,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 		<div class="wp-block-column">
 
 			<?php for ( $j = 1; $j <= 2; $j++ ) : ?>
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
-			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:0.38rem">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"base-alt","className":"has-custom-border"} -->
+			<div class="wp-block-group has-custom-border has-base-alt-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 
 				<!-- wp:heading {"level":3,"fontSize":"l"} -->
 				<h3 class="wp-block-heading has-l-font-size"><?php echo esc_html_x( 'Q: ', 'Frequently asked questions: question prefix.', 'zooey' ); Demo::The_text( 'm', '?' ); ?></h3>

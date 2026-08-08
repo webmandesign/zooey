@@ -46,8 +46,8 @@ $color_text = Demo::get_value( 'color_primary', 'is_dark', 'white', 'black' );
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url_raw( $url ); ?>","dimRatio":80,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","style":{"spacing":{"blockGap":"var:preset|spacing|s","padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}},"border":{"radius":"0.38rem"}},"textColor":"<?php echo esc_attr( $color_text ); ?>","className":"<?php echo esc_attr( $class ); ?>","layout":{"type":"constrained","contentSize":"240px"}} -->
-			<div class="wp-block-cover <?php echo esc_attr( $class ); ?> has-<?php echo esc_attr( $color_text ); ?>-color has-text-color" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
+			<!-- wp:cover {"url":"<?php echo esc_url_raw( $url ); ?>","dimRatio":80,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":62,"minHeightUnit":"vh","style":{"spacing":{"blockGap":"var:preset|spacing|s","padding":{"top":"var:preset|spacing|content","bottom":"var:preset|spacing|content"}},"border":{"radius":"var:preset|border-radius|s"}},"textColor":"<?php echo esc_attr( $color_text ); ?>","className":"<?php echo esc_attr( $class ); ?>","layout":{"type":"constrained","contentSize":"240px"}} -->
+			<div class="wp-block-cover <?php echo esc_attr( $class ); ?> has-<?php echo esc_attr( $color_text ); ?>-color has-text-color" style="border-radius:var(--wp--preset--border-radius--s);padding-top:var(--wp--preset--spacing--content);padding-bottom:var(--wp--preset--spacing--content);min-height:62vh">
 				<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-80 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $url ); ?>" data-object-fit="cover" />
 				<div class="wp-block-cover__inner-container">

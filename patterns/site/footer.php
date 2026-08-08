@@ -85,8 +85,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}},"typography":{"textTransform":"uppercase"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"xs"} -->
-				<div class="wp-block-group has-primary-background-color has-background has-xs-font-size" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s);text-transform:uppercase">
+				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"},"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s","left":"var:preset|spacing|s","right":"var:preset|spacing|s"}},"typography":{"textTransform":"uppercase"},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"primary","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"xs"} -->
+				<div class="wp-block-group has-primary-background-color has-background has-xs-font-size" style="border-radius:var(--wp--preset--border-radius--s);padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s);text-transform:uppercase">
 
 					<!-- wp:paragraph -->
 					<p><?php esc_html_e( 'Copyright &copy; ', 'zooey' ); ?><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></strong>, <?php echo date_i18n( 'Y' ); the_privacy_policy_link( ' — ' ); ?></p>
@@ -170,10 +170,10 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 						},
 						"ariaLabel": "<?php echo esc_attr_x( 'Footer, secondary', 'Navigational menu label.', 'zooey' ); ?>"
 					} -->
-						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
-						<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Last service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'First service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'Next service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'Another service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
+						<!-- wp:navigation-link {"label":"<?php esc_attr_e( 'Last service', 'zooey' ); ?>","url":"#0","fontSize":"s"} /-->
 					<!-- /wp:navigation -->
 
 				</div>

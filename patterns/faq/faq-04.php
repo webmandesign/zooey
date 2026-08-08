@@ -36,8 +36,8 @@ $image_s_duotone = Demo::get_value( 'color_primary', 'is_dark', ',"style":{"colo
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
 
-	<!-- wp:media-text {"align":"wide","mediaId":<?php echo absint( ZOOEY_DUMMY_ID ); ?>,"mediaType":"image","verticalAlignment":"center","imageFill":true,"style":{"border":{"radius":"0.38rem"}},"backgroundColor":"primary"} -->
-	<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-center is-image-fill has-primary-background-color has-background" style="border-radius:0.38rem">
+	<!-- wp:media-text {"align":"wide","mediaId":<?php echo absint( ZOOEY_DUMMY_ID ); ?>,"mediaType":"image","verticalAlignment":"center","imageFill":true,"style":{"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"primary"} -->
+	<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-center is-image-fill has-primary-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 		<figure class="wp-block-media-text__media" style="background-image:url(<?php echo esc_url_raw( $image ); ?>);background-position:50% 50%"><img src="<?php echo esc_url_raw( $image ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" class="wp-image-<?php echo absint( ZOOEY_DUMMY_ID ); ?> size-full" /></figure>
 		<div class="wp-block-media-text__content">
 

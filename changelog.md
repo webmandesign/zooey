@@ -1,6 +1,6 @@
 # Zooey Changelog
 
-## 2.0.0, 20260807
+## 2.0.0, 20260808
 
 Technically, this is matching Ileana 2.0.5 code, but we lower the version for reintroducing `accessibility-ready` class once the theme passes new accessibility review at WPORG.
 Next version is planned to match Ileana 2.0.5 (and other updated universal themes), so we skip the version numbers in-between.
@@ -19,23 +19,17 @@ This major theme update may cause 2 issues on an existing website:
 - Tag Cloud block font size setup (useful for block styles)
 - CSS `accent-color` style
 - "Inset" box shadow preset to block editor
-- "Decorative" border radius preset to block editor
 - Support for "vmax", "svh", "lvh", and "dvh" units in block editor
 - New block patterns and block styles
-- Mobile header patterns
 - New duotones and gradients (to use in block editor)
 - "Disable sticky position on mobile screens" block style for Group block
 - "Navigation overlay" (WordPress 7.0) template part and pattern
 - Related posts functionality
 - New predefined styles and typography presets (for easier theme styling via Site Editor)
-- Theme option to set various blog layouts
 - Theme option to apply blog layout to archive pages
-- Theme option to set "Decorative" border radius size globally
 - Theme option to toggle theme auto-generated gradients
 - Theme option to toggle block patterns (individually or whole pattern categories)
-- View Transitions plugin, and Carousel Slider Block plugin compatibility
 - Block editor rich text inline formats for accessibility
-- Making special product list design available for any custom post loop
 
 ### Updated
 - WordPress 7.0 compatibility
@@ -67,17 +61,6 @@ This major theme update may cause 2 issues on an existing website:
 - Using border radius presets in patterns (instead of hard-coded values)
 - Improving sticky position and page scroll offset
 - Theme upgrade functionality
-- Improving accessibility (passing updated WordPress accessibility requirements):
-	- adding `accessibility.txt`,
-	- updating button focus outline (and removing `.has-focus-alt` class),
-	- updating `.screen-reader-text` class styles,
-	- styling `:focus-visible` instead of `:focus`,
-	- adding aria label for outbound links,
-	- removing no-wrap styles from Site Title block,
-	- changing "Read more" text in block patterns for "Change this text",
-	- applying `aria-hidden="true"` on decorative arrow in "To the top" link,
-	- adding `aria-label` to all navigational menus.
-- Theme description text in `style.css`
 - Enabling text indent in `theme.json`
 - Removing obsolete code
 - Using more suitable localization escaping functions

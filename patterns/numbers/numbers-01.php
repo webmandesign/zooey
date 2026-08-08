@@ -58,8 +58,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
 		<?php foreach ( array( '10K', '100%', '365', '24/7' ) as $num ) : ?>
-		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s","padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"},"shadow":"var:preset|shadow|m"}} -->
-		<div class="wp-block-column" style="border-radius:0.38rem;padding-top:var(--wp--preset--spacing--m);padding-right:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m);padding-left:var(--wp--preset--spacing--m);box-shadow:var(--wp--preset--shadow--m)">
+		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|s","padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"border":{"radius":"var:preset|border-radius|s"},"shadow":"var:preset|shadow|m"}} -->
+		<div class="wp-block-column" style="border-radius:var(--wp--preset--border-radius--s);padding-top:var(--wp--preset--spacing--m);padding-right:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m);padding-left:var(--wp--preset--spacing--m);box-shadow:var(--wp--preset--shadow--m)">
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"big","fontFamily":"supplemental"} -->
 			<p class="has-primary-color has-text-color has-link-color has-supplemental-font-family has-big-font-size" style="line-height:1"><?php echo esc_html( $num ); ?></p>

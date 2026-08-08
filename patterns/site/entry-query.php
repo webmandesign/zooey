@@ -33,8 +33,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 ?>
 
-<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Post', 'zooey' ); ?>"},"tagName":"article","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":{"top":"0","left":"0"}},"border":{"radius":"0.38rem"}}} -->
-<article class="wp-block-group" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Post', 'zooey' ); ?>"},"tagName":"article","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":{"top":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|s"}}} -->
+<article class="wp-block-group" style="border-radius:var(--wp--preset--border-radius--s);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:post-featured-image {"isLink":true,"scale":"contain","sizeSlug":"medium"} /-->
 

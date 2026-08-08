@@ -39,22 +39,22 @@
 			padding: .66em;
 		}
 
-		// Simplified @extend %button_outline.
-		html .a11y-disable-fixed-mobile-toggle :where(&)[class] {
-			background: transparent;
-			color: currentColor;
-			outline-style: var( --wp--custom--outline--style, auto );
-			outline-color: currentColor;
-		}
-		html .is-style-fixed-mobile-toggle :where(&)[class] {
-
-			@include media( map.get( $breakpoint, 'l' ) ) {
-				background: transparent;
-				color: currentColor;
-				outline-style: var( --wp--custom--outline--style, auto );
-				outline-color: currentColor;
-			}
-		}
+		// This theme does not style mobile toggle button as outline.
+			// Simplified @extend %button_outline.
+			// html .a11y-disable-fixed-mobile-toggle :where(&)[class] {
+			// 	background: transparent;
+			// 	color: currentColor;
+			// 	outline-style: var( --wp--custom--outline--style, auto );
+			// 	outline-color: currentColor;
+			// }
+			// html .is-style-fixed-mobile-toggle :where(&)[class] {
+			// 	@include media( map.get( $breakpoint, 'l' ) ) {
+			// 		background: transparent;
+			// 		color: currentColor;
+			// 		outline-style: var( --wp--custom--outline--style, auto );
+			// 		outline-color: currentColor;
+			// 	}
+			// }
 
 		// Overriding editor styles to roughly match button styles.
 		.editor-styles-wrapper &[class] {

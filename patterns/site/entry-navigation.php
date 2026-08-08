@@ -5,7 +5,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.5
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -28,9 +29,9 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|content"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--content)">
 
-	<!-- wp:post-navigation-link {"type":"previous","showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700"},"layout":{"selfStretch":"fit","flexSize":null},"border":{"radius":"0.38rem"}},"backgroundColor":"primary"} /-->
+	<!-- wp:post-navigation-link {"type":"previous","showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700"},"layout":{"selfStretch":"fit","flexSize":null},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"primary"} /-->
 
-	<!-- wp:post-navigation-link {"showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700"},"border":{"radius":"0.38rem"}},"backgroundColor":"primary"} /-->
+	<!-- wp:post-navigation-link {"showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m","left":"var:preset|spacing|m","right":"var:preset|spacing|m"}},"typography":{"textDecoration":"none","fontStyle":"normal","fontWeight":"700"},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"primary"} /-->
 
 </div>
 <!-- /wp:group -->

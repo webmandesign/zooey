@@ -63,8 +63,8 @@ $images = array(
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--l)">
 
 		<?php foreach ( $images as $url ) : ?>
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","className":"has-hidden-overflow"} -->
-		<div class="wp-block-column has-hidden-overflow has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"0"},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"secondary","className":"has-hidden-overflow"} -->
+		<div class="wp-block-column has-hidden-overflow has-secondary-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
 			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url_raw( $url ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" /></figure>

@@ -44,8 +44,8 @@ $image = Demo::Get_image_url( '1to1-3', 'sidebar-about-me' );
 <!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Sidebar', 'zooey' ); ?>"},"tagName":"aside","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}}},"layout":{"type":"constrained","contentSize":"480px"}} -->
 <aside aria-label="<?php esc_attr_e( 'Sidebar, a secondary content', 'zooey' ); ?>" class="wp-block-group">
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"0.38rem"}},"backgroundColor":"secondary","layout":{"type":"constrained","contentSize":""}} -->
-	<section class="wp-block-group has-secondary-background-color has-background" style="border-radius:0.38rem;padding-top:0">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"padding":{"top":"0"}},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"secondary","layout":{"type":"constrained","contentSize":""}} -->
+	<section class="wp-block-group has-secondary-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s);padding-top:0">
 
 		<!-- wp:heading {"className":"is-style-screen-reader-text"} -->
 		<h2 class="wp-block-heading is-style-screen-reader-text"><?php esc_html_e( 'About me', 'zooey' ); ?></h2>
@@ -73,8 +73,8 @@ $image = Demo::Get_image_url( '1to1-3', 'sidebar-about-me' );
 	<!-- /wp:group -->
 
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
-	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"base-alt"} -->
+	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 
 		<!-- wp:heading {"fontSize":"xl"} -->
 		<h2 class="wp-block-heading has-xl-font-size"><?php echo esc_html_x( 'Tags', 'Widget title.', 'zooey' ); ?></h2>
@@ -92,8 +92,8 @@ $image = Demo::Get_image_url( '1to1-3', 'sidebar-about-me' );
 	<!-- /wp:group -->
 
 
-	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
-	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+	<!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|m","left":"var:preset|spacing|m"}},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"base-alt"} -->
+	<section class="wp-block-group has-base-alt-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 
 		<!-- wp:heading {"fontSize":"xl"} -->
 		<h2 class="wp-block-heading has-xl-font-size"><?php echo esc_html_x( 'Recent Comments', 'Widget title.', 'zooey' ); ?></h2>

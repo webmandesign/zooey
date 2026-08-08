@@ -45,8 +45,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 		<!-- wp:comment-template -->
 
-			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"bottom":"var:preset|spacing|s"}},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt"} -->
-			<div class="wp-block-columns has-base-alt-background-color has-background" style="border-radius:0.38rem;margin-bottom:var(--wp--preset--spacing--s)">
+			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"},"margin":{"bottom":"var:preset|spacing|s"}},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"base-alt"} -->
+			<div class="wp-block-columns has-base-alt-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s);margin-bottom:var(--wp--preset--spacing--s)">
 
 				<!-- wp:column {"width":"40px"} -->
 				<div class="wp-block-column" style="flex-basis:40px">

@@ -216,28 +216,28 @@ class Starter implements Component_Interface {
 						home_url( '/' ),
 						''
 						. '<!-- wp:navigation-link {'
-						. '"label":"' . esc_html_x( 'Home', 'Page title', 'zooey' ) . '",'
+						. '"label":"' . esc_attr_x( 'Home', 'Page title', 'zooey' ) . '",'
 						. '"url":"./",'
 						. '"kind":"custom"} /-->'
 
 						. '<!-- wp:navigation-link {'
-						. '"label":"' . esc_html_x( 'About us', 'Page title', 'zooey' ) . '",'
-						. '"url":"./' . esc_html_x( 'about-us', 'Page slug', 'zooey' ) . '/",'
+						. '"label":"' . esc_attr_x( 'About us', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_attr_x( 'about-us', 'Page slug', 'zooey' ) . '/",'
 						. '"kind":"custom"} /-->'
 
 						. '<!-- wp:navigation-link {'
-						. '"label":"' . esc_html_x( 'Services', 'Page title', 'zooey' ) . '",'
-						. '"url":"./' . esc_html_x( 'services', 'Page slug', 'zooey' ) . '/",'
+						. '"label":"' . esc_attr_x( 'Services', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_attr_x( 'services', 'Page slug', 'zooey' ) . '/",'
 						. '"kind":"custom"} /-->'
 
 						. '<!-- wp:navigation-link {'
-						. '"label":"' . esc_html_x( 'Blog', 'Page title', 'zooey' ) . '",'
-						. '"url":"./' . esc_html_x( 'blog', 'Page slug', 'zooey' ) . '/",'
+						. '"label":"' . esc_attr_x( 'Blog', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_attr_x( 'blog', 'Page slug', 'zooey' ) . '/",'
 						. '"kind":"custom"} /-->'
 
 						. '<!-- wp:navigation-link {'
-						. '"label":"' . esc_html_x( 'Contact', 'Page title', 'zooey' ) . '",'
-						. '"url":"./' . esc_html_x( 'contact', 'Page slug', 'zooey' ) . '/",'
+						. '"label":"' . esc_attr_x( 'Contact', 'Page title', 'zooey' ) . '",'
+						. '"url":"./' . esc_attr_x( 'contact', 'Page slug', 'zooey' ) . '/",'
 						. '"kind":"custom"} /-->'
 
 						. '',

@@ -36,8 +36,8 @@ $image_duotone = Demo::get_value( 'color_base_alt', 'is_dark', ',"style":{"color
 	<!-- wp:column -->
 	<div class="wp-block-column">
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"background":{"backgroundImage":{"url":"<?php echo esc_url_raw( $image_p ); ?>","source":"file"},"backgroundSize":"auto"},"border":{"radius":"0.38rem"}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-base-alt-background-color has-background" style="border-radius:0.38rem">
+		<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"background":{"backgroundImage":{"url":"<?php echo esc_url_raw( $image_p ); ?>","source":"file"},"backgroundSize":"auto"},"border":{"radius":"var:preset|border-radius|s"}},"backgroundColor":"base-alt","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-alt-background-color has-background" style="border-radius:var(--wp--preset--border-radius--s)">
 
 			<!-- wp:image {"align":"center","sizeSlug":"full"<?php echo $image_duotone; // phpcs:ignore -- escaping is irrelevant ?>} -->
 			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_attr( Demo::Get_text( 'icon.80' ) ); ?>" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>"/></figure>

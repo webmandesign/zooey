@@ -1322,7 +1322,7 @@ class Options implements Component_Interface {
 							esc_html__( 'Displays mobile navigation toggle button always at fixed position (at the bottom of the screen) even when scrolling.', 'zooey' )
 							. ' '
 							. esc_html__( '(Enables "Fixed mobile toggle button" block style for Navigation block.)', 'zooey' ),
-						'default'     => true,
+						'default'     => false,
 					),
 
 					800 . 'a11y' . 110 => array(
@@ -1348,7 +1348,7 @@ class Options implements Component_Interface {
 							. esc_html__( 'Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user.', 'zooey' )
 							. ' '
 							. esc_html__( 'If you are building a fully accessible website, you should enable this option.', 'zooey' ),
-						'default'     => false,
+						'default'     => true,
 					),
 
 				/**

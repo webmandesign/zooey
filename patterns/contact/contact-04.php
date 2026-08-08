@@ -70,8 +70,8 @@ $image = Demo::Get_image_url( '21to9' );
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","isDark":false,"align":"wide","style":{"border":{"radius":"0.38rem"}}} -->
-	<div class="wp-block-cover alignwide is-light" style="border-radius:0.38rem;min-height:50vh">
+	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":50,"minHeightUnit":"vh","isDark":false,"align":"wide","style":{"border":{"radius":"var:preset|border-radius|s"}}} -->
+	<div class="wp-block-cover alignwide is-light" style="border-radius:var(--wp--preset--border-radius--s);min-height:50vh">
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 		<div class="wp-block-cover__inner-container">
