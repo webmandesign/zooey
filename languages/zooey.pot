@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 1.2.5\n"
+"Project-Id-Version: Zooey 2.0.5\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-25T14:39:04+00:00\n"
+"POT-Creation-Date: 2026-08-08T15:16:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zooey\n"
@@ -39,405 +39,347 @@ msgstr ""
 msgid "https://www.webmandesign.eu/"
 msgstr ""
 
-#: includes/Accessibility/Component.php:105
+#: includes/Accessibility/Component.php:112
 #: parts/accessibility/menu-skip-links.php:28
 msgid "Skip to main content"
 msgstr ""
 
-#: includes/Accessibility/Component.php:165
+#: includes/Accessibility/Component.php:233
 msgctxt "Aria label for Cover block background image with empty alternative text."
 msgid "Background image"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:512
+#: includes/Content/Block_Pattern.php:293
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "pattern"
+msgstr ""
+
+#: includes/Content/Block_Pattern.php:304
 msgctxt "keyword"
 msgid "site"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:658
+#: includes/Content/Block_Pattern.php:563
 msgctxt "Block pattern category label."
 msgid "Questions & Answers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:659
+#: includes/Content/Block_Pattern.php:564
 msgctxt "Block pattern category label."
 msgid "Intro (Page Title)"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:660
+#: includes/Content/Block_Pattern.php:565
 msgctxt "Block pattern category label."
 msgid "Numbers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:661
+#: includes/Content/Block_Pattern.php:566
 msgctxt "Block pattern category label."
 msgid "Pages"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:662
+#: includes/Content/Block_Pattern.php:567
 msgctxt "Block pattern category label."
 msgid "Pricing"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:663
+#: includes/Content/Block_Pattern.php:568
+msgctxt "Block pattern category label."
+msgid "Shop"
+msgstr ""
+
+#: includes/Content/Block_Pattern.php:569
 msgctxt "Block pattern category label."
 msgid "Templates"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:683
+#: includes/Content/Block_Pattern.php:572
 msgctxt "Block pattern category label."
 msgid "Site builder"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:691
+#: includes/Content/Block_Pattern.php:575
 msgctxt "Block pattern category label."
 msgid "Zooey theme"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:831
-msgctxt "Demo text."
-msgid "Some text"
+#: includes/Content/Block_Pattern.php:890
+msgctxt "Customizer section title."
+msgid "Block Patterns"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:832
-msgctxt "Demo text."
-msgid "Just a short sentence"
+#: includes/Content/Block_Pattern.php:891
+#: includes/Customize/Options.php:294
+#: includes/Customize/Options.php:1314
+#: includes/Customize/Options.php:1361
+#: includes/Loop/Featured_Posts.php:145
+#: includes/Tool/Page_Builder.php:79
+msgctxt "Customizer panel title."
+msgid "Theme Options"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:833
-msgctxt "Demo text."
-msgid "Write your own copy text here"
+#: includes/Content/Block_Pattern.php:897
+msgid "WordPress core block patterns"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:834
-msgctxt "Demo text."
-msgid "This is just a demo text you should overwrite"
+#: includes/Content/Block_Pattern.php:898
+msgid "Allows WordPress core block patterns in block editor."
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:837
-msgctxt "Demo text."
-msgid "Title"
+#: includes/Content/Block_Pattern.php:906
+msgid "Manage theme block patterns"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:838
-msgctxt "Demo text."
-msgid "This is title"
+#: includes/Content/Block_Pattern.php:907
+msgid "Speed your creative process by disabling theme patterns you don't use."
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:839
-msgctxt "Demo text."
-msgid "Write some title text here"
+#: includes/Content/Block_Pattern.php:913
+msgid "Disable patterns by category"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:840
-msgctxt "Demo text."
-msgid "This is title text and it may be a bit long"
+#: includes/Content/Block_Pattern.php:914
+msgid "Select a category which patterns will be disabled."
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:841
-msgctxt "Demo text."
-msgid "The ideal length of the title text in here should be maybe a bit longer"
+#: includes/Content/Block_Pattern.php:926
+msgid "Disable specific patterns"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:845
-msgctxt "Demo text."
-msgid "123 Street Name<br>Cityname 56789<br>COUNTRY"
+#: includes/Content/Block_Pattern.php:964
+msgctxt "Block pattern category"
+msgid "Banners"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:846
-msgctxt "Demo text."
-msgid "123 Street Name, Cityname 56789, COUNTRY"
+#: includes/Content/Block_Pattern.php:965
+msgctxt "Block pattern category"
+msgid "Buttons"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:847
-msgctxt "Demo text."
-msgid "example@example.com"
+#: includes/Content/Block_Pattern.php:966
+msgctxt "Block pattern category"
+msgid "Columns"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:848
-msgctxt "Demo text."
-msgid "+1 (123) 456-7890"
+#: includes/Content/Block_Pattern.php:967
+msgctxt "Block pattern category"
+msgid "Text"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:852
-msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
-msgid "July 1, {Y}"
+#: includes/Content/Block_Pattern.php:968
+#: includes/Content/Block_Pattern.php:981
+msgctxt "Block pattern category"
+msgid "Posts"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:853
-msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
-msgid "Monday, July 1, {Y}, 10:30"
+#: includes/Content/Block_Pattern.php:969
+msgctxt "Block pattern category"
+msgid "Featured"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:854
-msgctxt "Demo text. Week days."
-msgid "Mon - Fri"
+#: includes/Content/Block_Pattern.php:970
+msgctxt "Block pattern category"
+msgid "Call to action"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:855
-msgctxt "Demo text. Weekend days."
-msgid "Sat - Sun"
+#: includes/Content/Block_Pattern.php:971
+msgctxt "Block pattern category"
+msgid "Team"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:856
-msgctxt "Demo text."
-msgid "Monday"
+#: includes/Content/Block_Pattern.php:972
+msgctxt "Block pattern category"
+msgid "Testimonials"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:857
-msgctxt "Demo text."
-msgid "Tuesday"
+#: includes/Content/Block_Pattern.php:973
+msgctxt "Block pattern category"
+msgid "Services"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:858
-msgctxt "Demo text."
-msgid "Wednesday"
+#: includes/Content/Block_Pattern.php:974
+msgctxt "Block pattern category"
+msgid "Contact"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:859
-msgctxt "Demo text."
-msgid "Thursday"
+#: includes/Content/Block_Pattern.php:975
+msgctxt "Block pattern category"
+msgid "About"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:860
-msgctxt "Demo text."
-msgid "Friday"
+#: includes/Content/Block_Pattern.php:976
+msgctxt "Block pattern category"
+msgid "Portfolio"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:861
-msgctxt "Demo text."
-msgid "Saturday"
+#: includes/Content/Block_Pattern.php:977
+msgctxt "Block pattern category"
+msgid "Gallery"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:862
-msgctxt "Demo text."
-msgid "Sunday"
+#: includes/Content/Block_Pattern.php:978
+msgctxt "Block pattern category"
+msgid "Media"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:867
-msgctxt "Demo text. Name of a person."
-msgid "Vincent van Gogh"
+#: includes/Content/Block_Pattern.php:979
+msgctxt "Block pattern category"
+msgid "Videos"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:868
-msgctxt "Demo text. Name of a person."
-msgid "Edward Hopper"
+#: includes/Content/Block_Pattern.php:980
+msgctxt "Block pattern category"
+msgid "Audio"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:869
-msgctxt "Demo text. Name of a person."
-msgid "Pablo Picasso"
+#: includes/Content/Block_Pattern.php:982
+msgctxt "Block pattern category"
+msgid "Footers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:870
-msgctxt "Demo text. Name of a person."
-msgid "Mary Cassatt"
+#: includes/Content/Block_Pattern.php:983
+msgctxt "Block pattern category"
+msgid "Headers"
 msgstr ""
 
-#: includes/Content/Block_Pattern.php:871
-msgctxt "Demo text. Name of a person."
-msgid "Frida Kahlo"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:872
-msgctxt "Demo text. Name of a person."
-msgid "Berthe Morisot"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:874
-msgctxt "Demo text. Occupation, job title."
-msgid "Founder"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:878
-msgctxt "Demo text. Image alt text."
-msgid "Image alternative description text"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:879
-msgctxt "Demo text. Button label."
-msgid "Click here &rarr;"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:880
-msgctxt "Demo text. Button label."
-msgid "Read more &rarr;"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:881
-msgctxt "Demo text. Button label."
-msgid "Change this text"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:882
-msgctxt "Demo text. Price."
-msgid "$19"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:886
-msgctxt "Demo text. Form block plugin URL."
-msgid "https://wordpress.org/plugins/search/form+block/"
-msgstr ""
-
-#: includes/Content/Block_Pattern.php:887
-msgctxt "Demo text."
-msgid "Use a form block here ↗"
-msgstr ""
-
-#: includes/Content/Block_Style.php:100
+#: includes/Content/Block_Style.php:102
 msgctxt "Block style label."
 msgid "Backdrop blur"
 msgstr ""
 
-#: includes/Content/Block_Style.php:109
+#: includes/Content/Block_Style.php:111
 msgctxt "Block style label."
 msgid "Inline buttons"
 msgstr ""
 
-#: includes/Content/Block_Style.php:117
+#: includes/Content/Block_Style.php:119
 msgctxt "Block style label."
 msgid "Outline button"
 msgstr ""
 
-#: includes/Content/Block_Style.php:124
+#: includes/Content/Block_Style.php:126
 msgctxt "Block style label."
-msgid "Checkmark"
+msgid "Toggle (Details)"
 msgstr ""
 
-#: includes/Content/Block_Style.php:131
+#: includes/Content/Block_Style.php:134
 msgctxt "Block style label."
 msgid "Dashed"
 msgstr ""
 
-#: includes/Content/Block_Style.php:138
-msgctxt "Block style label."
-msgid "Disable link"
-msgstr ""
-
-#: includes/Content/Block_Style.php:146
+#: includes/Content/Block_Style.php:140
 msgctxt "Block style label."
 msgid "Dotted"
 msgstr ""
 
-#: includes/Content/Block_Style.php:153
-msgctxt "Block style label."
-msgid "Featured posts"
-msgstr ""
-
-#: includes/Content/Block_Style.php:160
-msgctxt "Block style label."
-msgid "Fixed mobile toggle button"
-msgstr ""
-
-#: includes/Content/Block_Style.php:167
+#: includes/Content/Block_Style.php:147
 msgctxt "Block style label."
 msgid "Content on hover"
 msgstr ""
 
-#: includes/Content/Block_Style.php:174
+#: includes/Content/Block_Style.php:153
 msgctxt "Block style label."
-msgid "Is image"
+msgid "Media on hover"
 msgstr ""
 
-#: includes/Content/Block_Style.php:181
+#: includes/Content/Block_Style.php:160
 msgctxt "Block style label."
 msgid "Blurred image"
 msgstr ""
 
-#: includes/Content/Block_Style.php:188
+#: includes/Content/Block_Style.php:167
 msgctxt "Block style label."
 msgid "Inline"
 msgstr ""
 
+#: includes/Content/Block_Style.php:175
+msgctxt "Block style label."
+msgid "Ballot: empty"
+msgstr ""
+
+#: includes/Content/Block_Style.php:182
+msgctxt "Block style label."
+msgid "Ballot: ✓"
+msgstr ""
+
+#: includes/Content/Block_Style.php:189
+msgctxt "Block style label."
+msgid "Ballot: ⨉"
+msgstr ""
+
 #: includes/Content/Block_Style.php:196
 msgctxt "Block style label."
-msgid "Megamenu"
+msgid "✓"
 msgstr ""
 
 #: includes/Content/Block_Style.php:203
-#: includes/Customize/Options.php:820
+msgctxt "Block style label."
+msgid "⨉"
+msgstr ""
+
+#: includes/Content/Block_Style.php:211
+#: includes/Customize/Options.php:900
 msgctxt "Block style label."
 msgid "Hide on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:223
-#: includes/Customize/Options.php:821
+#: includes/Content/Block_Style.php:231
+#: includes/Customize/Options.php:901
 msgctxt "Block style label."
 msgid "Only on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:244
+#: includes/Content/Block_Style.php:252
 msgctxt "Block style label."
 msgid "Reverse on small screens"
 msgstr ""
 
-#: includes/Content/Block_Style.php:251
+#: includes/Content/Block_Style.php:259
+msgctxt "Block style label."
+msgid "Disable sticky position on small screens"
+msgstr ""
+
+#: includes/Content/Block_Style.php:266
 msgctxt "Block style label."
 msgid "No bullets"
 msgstr ""
 
-#: includes/Content/Block_Style.php:258
+#: includes/Content/Block_Style.php:273
 msgctxt "Block style label."
 msgid "No line break"
 msgstr ""
 
-#: includes/Content/Block_Style.php:269
+#: includes/Content/Block_Style.php:285
 msgctxt "Block style label."
 msgid "Padding left"
 msgstr ""
 
-#: includes/Content/Block_Style.php:275
+#: includes/Content/Block_Style.php:291
 msgctxt "Block style label."
 msgid "Padding right"
 msgstr ""
 
-#: includes/Content/Block_Style.php:282
-msgctxt "Block style label."
-msgid "Page intro"
-msgstr ""
-
-#: includes/Content/Block_Style.php:289
-msgctxt "Block style label."
-msgid "Page intro summary"
-msgstr ""
-
-#: includes/Content/Block_Style.php:296
+#: includes/Content/Block_Style.php:298
 msgctxt "Block style label."
 msgid "Pull down"
 msgstr ""
 
-#: includes/Content/Block_Style.php:306
+#: includes/Content/Block_Style.php:308
 msgctxt "Block style label."
 msgid "Pull up"
 msgstr ""
 
-#: includes/Content/Block_Style.php:317
-msgctxt "Block style label."
-msgid "Read more outline"
-msgstr ""
-
-#: includes/Content/Block_Style.php:323
-msgctxt "Block style label."
-msgid "Read more button"
-msgstr ""
-
-#: includes/Content/Block_Style.php:330
+#: includes/Content/Block_Style.php:319
 msgctxt "Block style label."
 msgid "Accessibly hidden"
 msgstr ""
 
-#: includes/Content/Block_Style.php:341
-msgctxt "Block style label."
-msgid "Site header"
-msgstr ""
-
-#: includes/Content/Block_Style.php:348
-msgctxt "Block style label."
-msgid "Site footer"
-msgstr ""
-
 #. translators: %d: number of text lines.
-#: includes/Content/Block_Style.php:357
+#: includes/Content/Block_Style.php:332
+#: includes/Content/Block_Style.php:342
+#: includes/Content/Block_Style.php:352
 #, php-format
 msgctxt "Block style label."
 msgid "Truncate to %d line"
@@ -445,19 +387,84 @@ msgid_plural "Truncate to %d lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Content/Block_Style.php:366
+#: includes/Content/Block_Style.php:361
 msgctxt "Block style label."
 msgid "Use header image"
 msgstr ""
 
-#: includes/Content/Block_Style.php:372
+#: includes/Content/Block_Style.php:367
 msgctxt "Block style label."
 msgid "Use header image (flipped)"
 msgstr ""
 
-#: includes/Content/Block_Style.php:379
+#: includes/Content/Block_Style.php:374
 msgctxt "Block style label."
 msgid "Zoom in"
+msgstr ""
+
+#: includes/Content/Block_Style.php:380
+msgctxt "Block style label."
+msgid "Zoom out"
+msgstr ""
+
+#: includes/Content/Block_Style.php:389
+msgctxt "Block style label."
+msgid "Disable link"
+msgstr ""
+
+#: includes/Content/Block_Style.php:397
+msgctxt "Block style label."
+msgid "Featured posts"
+msgstr ""
+
+#: includes/Content/Block_Style.php:405
+msgctxt "Block style label. \"Fixed\" as in CSS element positioning."
+msgid "Fixed mobile toggle button"
+msgstr ""
+
+#: includes/Content/Block_Style.php:412
+msgctxt "Block style label."
+msgid "Is image"
+msgstr ""
+
+#: includes/Content/Block_Style.php:419
+msgctxt "Block style label."
+msgid "Megamenu"
+msgstr ""
+
+#: includes/Content/Block_Style.php:426
+msgctxt "Block style label."
+msgid "Page intro"
+msgstr ""
+
+#: includes/Content/Block_Style.php:433
+msgctxt "Block style label."
+msgid "Page intro summary"
+msgstr ""
+
+#: includes/Content/Block_Style.php:440
+msgctxt "Block style label."
+msgid "Read more outline"
+msgstr ""
+
+#: includes/Content/Block_Style.php:446
+msgctxt "Block style label."
+msgid "Read more button"
+msgstr ""
+
+#: includes/Content/Block_Style.php:453
+msgctxt "Block style label."
+msgid "Related posts"
+msgstr ""
+
+#: includes/Content/Block_Style.php:460
+msgctxt "Block style label."
+msgid "Site header"
+msgstr ""
+
+#: includes/Content/Block_Style.php:467
+msgctxt "Block style label."
+msgid "Site footer"
 msgstr ""
 
 #: includes/Content/Block_Template_Part.php:59
@@ -531,613 +538,978 @@ msgid "The Template Content template part defines an area that displays a templa
 msgstr ""
 
 #. translators: Paginated content title suffix. %d: page number.
-#: includes/Content/Component.php:90
+#: includes/Content/Component.php:94
 #, php-format
 msgid "(page %d)"
 msgstr ""
 
-#: includes/Content/Starter.php:163
+#: includes/Content/Demo.php:223
+msgctxt "Demo text."
+msgid "Some text"
+msgstr ""
+
+#: includes/Content/Demo.php:224
+msgctxt "Demo text."
+msgid "Just a short sentence"
+msgstr ""
+
+#: includes/Content/Demo.php:225
+msgctxt "Demo text."
+msgid "Write your own copy text here"
+msgstr ""
+
+#: includes/Content/Demo.php:226
+msgctxt "Demo text."
+msgid "This is just a demo text you should overwrite"
+msgstr ""
+
+#: includes/Content/Demo.php:229
+msgctxt "Demo text."
+msgid "Title"
+msgstr ""
+
+#: includes/Content/Demo.php:230
+msgctxt "Demo text."
+msgid "This is title"
+msgstr ""
+
+#: includes/Content/Demo.php:231
+msgctxt "Demo text."
+msgid "Write some title text here"
+msgstr ""
+
+#: includes/Content/Demo.php:232
+msgctxt "Demo text."
+msgid "This is title text and it may be a bit long"
+msgstr ""
+
+#: includes/Content/Demo.php:233
+msgctxt "Demo text."
+msgid "The ideal length of the title text in here should be maybe a bit longer"
+msgstr ""
+
+#: includes/Content/Demo.php:237
+msgctxt "Demo text."
+msgid "123 Street Name<br>Cityname 56789<br>COUNTRY"
+msgstr ""
+
+#: includes/Content/Demo.php:238
+msgctxt "Demo text."
+msgid "123 Street Name, Cityname 56789, COUNTRY"
+msgstr ""
+
+#: includes/Content/Demo.php:239
+msgctxt "Demo text."
+msgid "info@example.com"
+msgstr ""
+
+#: includes/Content/Demo.php:240
+msgctxt "Demo text."
+msgid "+1 (900) 123-4567"
+msgstr ""
+
+#: includes/Content/Demo.php:244
+msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
+msgid "July 1, {Y}"
+msgstr ""
+
+#: includes/Content/Demo.php:245
+msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
+msgid "Monday, July 1, {Y}, 10:30"
+msgstr ""
+
+#: includes/Content/Demo.php:246
+msgctxt "Demo text. Week days."
+msgid "Mon - Fri"
+msgstr ""
+
+#: includes/Content/Demo.php:247
+msgctxt "Demo text. Weekend days."
+msgid "Sat - Sun"
+msgstr ""
+
+#: includes/Content/Demo.php:248
+msgctxt "Demo text."
+msgid "Monday"
+msgstr ""
+
+#: includes/Content/Demo.php:249
+msgctxt "Demo text."
+msgid "Tuesday"
+msgstr ""
+
+#: includes/Content/Demo.php:250
+msgctxt "Demo text."
+msgid "Wednesday"
+msgstr ""
+
+#: includes/Content/Demo.php:251
+msgctxt "Demo text."
+msgid "Thursday"
+msgstr ""
+
+#: includes/Content/Demo.php:252
+msgctxt "Demo text."
+msgid "Friday"
+msgstr ""
+
+#: includes/Content/Demo.php:253
+msgctxt "Demo text."
+msgid "Saturday"
+msgstr ""
+
+#: includes/Content/Demo.php:254
+msgctxt "Demo text."
+msgid "Sunday"
+msgstr ""
+
+#: includes/Content/Demo.php:259
+msgctxt "Demo text. Name of a person."
+msgid "Vincent van Gogh"
+msgstr ""
+
+#: includes/Content/Demo.php:260
+msgctxt "Demo text. Name of a person."
+msgid "Edward Hopper"
+msgstr ""
+
+#: includes/Content/Demo.php:261
+msgctxt "Demo text. Name of a person."
+msgid "Pablo Picasso"
+msgstr ""
+
+#: includes/Content/Demo.php:262
+msgctxt "Demo text. Name of a person."
+msgid "Mary Cassatt"
+msgstr ""
+
+#: includes/Content/Demo.php:263
+msgctxt "Demo text. Name of a person."
+msgid "Frida Kahlo"
+msgstr ""
+
+#: includes/Content/Demo.php:264
+msgctxt "Demo text. Name of a person."
+msgid "Berthe Morisot"
+msgstr ""
+
+#: includes/Content/Demo.php:266
+msgctxt "Demo text. Occupation, job title."
+msgid "Founder"
+msgstr ""
+
+#: includes/Content/Demo.php:270
+msgctxt "Demo text. Image alt text."
+msgid "Image alternative description text"
+msgstr ""
+
+#: includes/Content/Demo.php:271
+msgctxt "Demo text. Button label."
+msgid "Click here"
+msgstr ""
+
+#: includes/Content/Demo.php:272
+msgctxt "Demo text. Button label."
+msgid "Read more &rarr;"
+msgstr ""
+
+#: includes/Content/Demo.php:273
+msgctxt "Demo text. Button label."
+msgid "Change this text"
+msgstr ""
+
+#: includes/Content/Demo.php:274
+msgctxt "Demo text. Button label."
+msgid "Watch video &rarr;"
+msgstr ""
+
+#: includes/Content/Demo.php:275
+msgctxt "Demo text. Price."
+msgid "$19"
+msgstr ""
+
+#: includes/Content/Demo.php:279
+msgctxt "Demo text. Form block plugin URL."
+msgid "https://wordpress.org/plugins/search/form+block/"
+msgstr ""
+
+#: includes/Content/Demo.php:280
+msgctxt "Demo text."
+msgid "Use a form block here ↗"
+msgstr ""
+
+#: includes/Content/Demo.php:284
+#: includes/Content/Demo.php:288
+#: includes/Content/Demo.php:291
+msgid "This is just a demo placeholder form."
+msgstr ""
+
+#: includes/Content/Demo.php:285
+msgctxt "Form field label"
+msgid "Name"
+msgstr ""
+
+#: includes/Content/Demo.php:286
+#: includes/Content/Demo.php:292
+msgctxt "Form field label"
+msgid "Email"
+msgstr ""
+
+#: includes/Content/Demo.php:287
+msgctxt "Form field label"
+msgid "Message"
+msgstr ""
+
+#: includes/Content/Demo.php:288
+#: includes/Content/Demo.php:294
+msgctxt "Form field label"
+msgid "Submit"
+msgstr ""
+
+#: includes/Content/Starter.php:139
+msgid "Welcome to our website!"
+msgstr ""
+
+#: includes/Content/Starter.php:166
+#: includes/Content/Starter.php:219
+#: patterns/site/navigation-overlay.php:90
 msgctxt "Page title"
 msgid "Home"
 msgstr ""
 
-#: includes/Content/Starter.php:164
+#: includes/Content/Starter.php:167
 msgctxt "Page slug"
 msgid "home"
 msgstr ""
 
-#: includes/Content/Starter.php:173
-#: patterns/site/header.php:79
+#: includes/Content/Starter.php:176
+#: includes/Content/Starter.php:224
+#: patterns/site/header.php:122
+#: patterns/site/navigation-overlay.php:91
 msgctxt "Page title"
 msgid "About us"
 msgstr ""
 
-#: includes/Content/Starter.php:174
-#: patterns/site/header.php:79
+#: includes/Content/Starter.php:177
+#: includes/Content/Starter.php:225
+#: patterns/site/header.php:122
 msgctxt "Page slug"
 msgid "about-us"
 msgstr ""
 
-#: includes/Content/Starter.php:183
-#: patterns/site/header.php:80
+#: includes/Content/Starter.php:186
+#: includes/Content/Starter.php:229
+#: patterns/site/header.php:123
 msgctxt "Page title"
 msgid "Services"
 msgstr ""
 
-#: includes/Content/Starter.php:184
-#: patterns/site/header.php:80
+#: includes/Content/Starter.php:187
+#: includes/Content/Starter.php:230
+#: patterns/site/header.php:123
 msgctxt "Page slug"
 msgid "services"
 msgstr ""
 
-#: includes/Content/Starter.php:193
-#: patterns/site/header.php:78
-msgctxt "Page title"
+#: includes/Content/Starter.php:196
+msgctxt "Theme starter content: Blog page title"
 msgid "Blog"
 msgstr ""
 
-#: includes/Content/Starter.php:199
-#: patterns/site/header.php:81
+#: includes/Content/Starter.php:197
+#: includes/Content/Starter.php:235
+msgctxt "Page slug"
+msgid "blog"
+msgstr ""
+
+#: includes/Content/Starter.php:203
+#: includes/Content/Starter.php:239
+#: patterns/site/header.php:124
+#: patterns/site/navigation-overlay.php:94
 msgctxt "Page title"
 msgid "Contact"
 msgstr ""
 
-#: includes/Content/Starter.php:200
-#: patterns/site/header.php:81
+#: includes/Content/Starter.php:204
+#: includes/Content/Starter.php:240
+#: patterns/site/header.php:124
 msgctxt "Page slug"
 msgid "contact"
 msgstr ""
 
-#: includes/Customize/Control/HTML.php:59
+#: includes/Content/Starter.php:213
+msgctxt "Page title"
+msgid "Site Navigation"
+msgstr ""
+
+#: includes/Content/Starter.php:234
+#: patterns/site/header.php:121
+#: patterns/site/navigation-overlay.php:93
+msgctxt "Page title"
+msgid "Blog"
+msgstr ""
+
+#: includes/Customize/Control/HTML.php:61
 msgid "Please set the `content` parameter for the HTML control."
 msgstr ""
 
-#: includes/Customize/Control/Multiselect.php:157
+#: includes/Customize/Control/Multiselect.php:215
 msgid "Press CTRL key for multiple selection."
 msgstr ""
 
-#: includes/Customize/Options.php:184
+#: includes/Customize/Options.php:241
 msgid "Base color"
 msgstr ""
 
-#: includes/Customize/Options.php:185
+#: includes/Customize/Options.php:243
 msgid "By default applied as website background."
 msgstr ""
 
-#: includes/Customize/Options.php:232
-#: includes/Customize/Options.php:1205
-#: includes/Loop/Featured_Posts.php:145
-#: includes/Tool/Page_Builder.php:79
-msgctxt "Customizer panel title."
-msgid "Theme Options"
-msgstr ""
-
-#: includes/Customize/Options.php:249
+#: includes/Customize/Options.php:311
 msgid "NOTE: The theme loads Google Fonts from your website, not from 3rd party servers. This improves privacy and compliance with GDPR."
 msgstr ""
 
-#: includes/Customize/Options.php:254
+#: includes/Customize/Options.php:316
 msgid "Theme palette"
 msgstr ""
 
-#: includes/Customize/Options.php:259
+#: includes/Customize/Options.php:321
 msgid "WordPress default palette"
 msgstr ""
 
-#: includes/Customize/Options.php:272
+#: includes/Customize/Options.php:334
 msgid "Looking for additional options?"
 msgstr ""
 
-#: includes/Customize/Options.php:274
+#: includes/Customize/Options.php:336
 msgid "Site editor is enabled and allows you to set up colors and layout to your needs."
 msgstr ""
 
-#: includes/Customize/Options.php:278
+#: includes/Customize/Options.php:340
 msgid "https://webmandesign.github.io/docs/zooey/#site-editor"
 msgstr ""
 
-#: includes/Customize/Options.php:279
+#: includes/Customize/Options.php:341
 msgid "Find out more ↗"
 msgstr ""
 
-#: includes/Customize/Options.php:300
+#: includes/Customize/Options.php:362
 msgid "Theme Credits"
 msgstr ""
 
 #. translators: 1: linked theme name, 2: theme author name.
-#: includes/Customize/Options.php:304
+#: includes/Customize/Options.php:366
 #, php-format
 msgid "%1$s is a WordPress theme developed by %2$s."
 msgstr ""
 
-#: includes/Customize/Options.php:317
+#: includes/Customize/Options.php:379
 msgctxt "Customizer section title."
 msgid "Colors & Background"
 msgstr ""
 
-#: includes/Customize/Options.php:327
+#: includes/Customize/Options.php:389
 msgid "Theme color palette"
 msgstr ""
 
-#: includes/Customize/Options.php:333
+#: includes/Customize/Options.php:395
 msgid "Site background"
 msgstr ""
 
-#: includes/Customize/Options.php:348
+#: includes/Customize/Options.php:410
 msgid "Site background color"
 msgstr ""
 
-#: includes/Customize/Options.php:351
+#: includes/Customize/Options.php:413
 msgid "Tweak theme colors in Site Editor → Styles section."
 msgstr ""
 
-#: includes/Customize/Options.php:353
+#: includes/Customize/Options.php:415
 msgid "\"Base\" color is used as the site background color."
 msgstr ""
 
-#: includes/Customize/Options.php:362
+#: includes/Customize/Options.php:424
 msgid "Base alternative color"
 msgstr ""
 
-#: includes/Customize/Options.php:380
+#: includes/Customize/Options.php:442
 msgid "Contrast color"
 msgstr ""
 
-#: includes/Customize/Options.php:382
+#: includes/Customize/Options.php:444
 msgid "By default applied on text."
 msgstr ""
 
-#: includes/Customize/Options.php:384
-#: includes/Customize/Options.php:406
-#: includes/Customize/Options.php:428
+#: includes/Customize/Options.php:446
+#: includes/Customize/Options.php:468
+#: includes/Customize/Options.php:490
 msgid "Set this for an appropriate contrast against \"Base\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:402
+#: includes/Customize/Options.php:464
 msgid "Contrast alternative color"
 msgstr ""
 
-#: includes/Customize/Options.php:404
-#: includes/Customize/Options.php:1026
+#: includes/Customize/Options.php:466
+#: includes/Customize/Options.php:1112
 msgid "By default applied on headings."
 msgstr ""
 
-#: includes/Customize/Options.php:424
+#: includes/Customize/Options.php:486
 msgid "Primary color"
 msgstr ""
 
-#: includes/Customize/Options.php:426
+#: includes/Customize/Options.php:488
 msgid "By default applied as link color."
 msgstr ""
 
-#: includes/Customize/Options.php:446
+#: includes/Customize/Options.php:508
 msgid "Primary mixed color"
 msgstr ""
 
-#: includes/Customize/Options.php:447
+#: includes/Customize/Options.php:509
 msgid "By default it is set as a blend of \"Base\" and \"Primary\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:465
+#: includes/Customize/Options.php:527
 msgid "Secondary color"
 msgstr ""
 
-#: includes/Customize/Options.php:466
+#: includes/Customize/Options.php:528
 msgid "By default applied as button color."
 msgstr ""
 
-#: includes/Customize/Options.php:484
+#: includes/Customize/Options.php:546
 msgid "Secondary mixed color"
 msgstr ""
 
-#: includes/Customize/Options.php:485
+#: includes/Customize/Options.php:547
 msgid "By default it is set as a blend of \"Base\" and \"Secondary\" color."
 msgstr ""
 
-#: includes/Customize/Options.php:504
-msgid "Button color"
-msgstr ""
-
-#: includes/Customize/Options.php:505
-msgid "Choose which predefined color applies on buttons."
-msgstr ""
-
-#: includes/Customize/Options.php:539
+#: includes/Customize/Options.php:571
 msgid "Styling theme sections"
 msgstr ""
 
-#: includes/Customize/Options.php:542
+#: includes/Customize/Options.php:574
 msgid "Colors and layout of theme sections (such as site header or footer) can be customized by editing template parts in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:555
+#: includes/Customize/Options.php:589
+msgid "Button colors"
+msgstr ""
+
+#: includes/Customize/Options.php:592
+msgid "Choose which predefined colors applies on buttons."
+msgstr ""
+
+#: includes/Customize/Options.php:599
+msgid "Button color"
+msgstr ""
+
+#: includes/Customize/Options.php:600
+msgid "Choose which predefined color applies on buttons."
+msgstr ""
+
+#: includes/Customize/Options.php:626
 msgid "Gradients"
 msgstr ""
 
-#: includes/Customize/Options.php:561
+#: includes/Customize/Options.php:632
 msgid "Hard gradient stop"
 msgstr ""
 
-#: includes/Customize/Options.php:563
-#: includes/Customize/Options.php:592
-#: includes/Customize/Options.php:739
-#: includes/Customize/Options.php:773
-#: includes/Customize/Options.php:812
-#: includes/Customize/Options.php:868
-#: includes/Customize/Options.php:910
-#: includes/Customize/Options.php:938
-#: includes/Customize/Options.php:1001
-#: includes/Customize/Options.php:1028
-#: includes/Customize/Options.php:1055
+#: includes/Customize/Options.php:634
+#: includes/Customize/Options.php:663
+#: includes/Customize/Options.php:819
+#: includes/Customize/Options.php:853
+#: includes/Customize/Options.php:892
+#: includes/Customize/Options.php:948
+#: includes/Customize/Options.php:996
+#: includes/Customize/Options.php:1024
+#: includes/Customize/Options.php:1087
+#: includes/Customize/Options.php:1114
+#: includes/Customize/Options.php:1141
 msgid "Default value:"
 msgstr ""
 
-#: includes/Customize/Options.php:565
+#: includes/Customize/Options.php:636
 msgid "Sets the stop position for automatically generated hard cut gradient presets."
 msgstr ""
 
-#: includes/Customize/Options.php:590
+#: includes/Customize/Options.php:661
 msgid "Soft gradient stop"
 msgstr ""
 
-#: includes/Customize/Options.php:594
+#: includes/Customize/Options.php:665
 msgid "Sets the stop position for automatically generated soft gradual gradient presets."
 msgstr ""
 
-#: includes/Customize/Options.php:622
+#: includes/Customize/Options.php:691
+msgid "Enable auto-generated gradients"
+msgstr ""
+
+#: includes/Customize/Options.php:692
+msgid "The theme generates multiple useful gradients for you."
+msgstr ""
+
+#: includes/Customize/Options.php:702
 msgid "Editor palette"
 msgstr ""
 
-#: includes/Customize/Options.php:628
+#: includes/Customize/Options.php:708
 msgid "WordPress default color palette"
 msgstr ""
 
-#: includes/Customize/Options.php:629
-#: includes/Customize/Options.php:637
-#: includes/Customize/Options.php:645
+#: includes/Customize/Options.php:709
+#: includes/Customize/Options.php:717
+#: includes/Customize/Options.php:725
 msgid "Should this be enabled in block editor?"
 msgstr ""
 
-#: includes/Customize/Options.php:636
+#: includes/Customize/Options.php:716
 msgid "WordPress default gradients"
 msgstr ""
 
-#: includes/Customize/Options.php:644
+#: includes/Customize/Options.php:724
 msgid "WordPress default duotone presets"
 msgstr ""
 
-#: includes/Customize/Options.php:653
+#: includes/Customize/Options.php:733
 msgid "Black color"
 msgstr ""
 
-#: includes/Customize/Options.php:671
+#: includes/Customize/Options.php:751
 msgid "White color"
 msgstr ""
 
-#: includes/Customize/Options.php:698
+#: includes/Customize/Options.php:778
 msgctxt "Customizer section title."
 msgid "Layout"
 msgstr ""
 
-#: includes/Customize/Options.php:707
+#: includes/Customize/Options.php:787
 msgctxt "WordPress full site editing functionality."
 msgid "Site editing"
 msgstr ""
 
-#: includes/Customize/Options.php:713
+#: includes/Customize/Options.php:793
 msgid "Enable template editor"
 msgstr ""
 
-#: includes/Customize/Options.php:715
+#: includes/Customize/Options.php:795
 msgid "Enables WordPress full site editing experience."
 msgstr ""
 
-#: includes/Customize/Options.php:717
+#: includes/Customize/Options.php:797
 msgid "When enabled, you can edit all theme template layouts visually without using code."
 msgstr ""
 
-#: includes/Customize/Options.php:719
+#: includes/Customize/Options.php:799
 msgid "When disabled, only site template parts (such as header, footer, page intro,&hellip;) are customizable via Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:721
+#: includes/Customize/Options.php:801
 msgid "You can still modify the theme using PHP code (known practice from \"classic\" WordPress themes)."
 msgstr ""
 
-#: includes/Customize/Options.php:730
+#: includes/Customize/Options.php:810
 msgid "Content"
 msgstr ""
 
-#: includes/Customize/Options.php:737
+#: includes/Customize/Options.php:817
 msgid "Content width"
 msgstr ""
 
-#: includes/Customize/Options.php:741
+#: includes/Customize/Options.php:821
 msgid "This is a default width for your blocks."
 msgstr ""
 
-#: includes/Customize/Options.php:743
+#: includes/Customize/Options.php:823
 msgid "Set this cautiously for the best readability, depending on your typography setup."
 msgstr ""
 
-#: includes/Customize/Options.php:745
+#: includes/Customize/Options.php:825
 msgid "The optimal text line length is considered to be between 50 and 75 characters, including spaces."
 msgstr ""
 
-#: includes/Customize/Options.php:771
+#: includes/Customize/Options.php:851
 msgid "Wide width"
 msgstr ""
 
-#: includes/Customize/Options.php:775
+#: includes/Customize/Options.php:855
 msgid "This width is applied on wide-aligned blocks."
 msgstr ""
 
-#: includes/Customize/Options.php:804
+#: includes/Customize/Options.php:884
 msgid "Responsiveness"
 msgstr ""
 
-#: includes/Customize/Options.php:810
+#: includes/Customize/Options.php:890
 msgid "Small screen breakpoint"
 msgstr ""
 
-#: includes/Customize/Options.php:814
+#: includes/Customize/Options.php:894
 msgid "Sets the screen width (viewport) value for responsive breakpoint."
 msgstr ""
 
 #. translators: %1$s, %2$s: block style names.
-#: includes/Customize/Options.php:818
+#: includes/Customize/Options.php:898
 #, php-format
 msgid "This affects responsive block styles, such as \"%1$s\" or \"%2$s\"."
 msgstr ""
 
-#: includes/Customize/Options.php:842
+#: includes/Customize/Options.php:922
 msgctxt "Customizer section title."
 msgid "Typography"
 msgstr ""
 
-#: includes/Customize/Options.php:850
+#: includes/Customize/Options.php:930
 msgid "These options provide great flexibility such as setting up a custom font family and affect also Global Styles in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:856
+#: includes/Customize/Options.php:936
 msgid "Font size"
 msgstr ""
 
-#: includes/Customize/Options.php:862
+#: includes/Customize/Options.php:942
 msgid "Global font size in px"
 msgstr ""
 
-#: includes/Customize/Options.php:864
+#: includes/Customize/Options.php:944
 msgid "Global text font size used as a base for automatic calculation of additional font sizes."
 msgstr ""
 
-#: includes/Customize/Options.php:866
+#: includes/Customize/Options.php:946
 msgid "This size is applied on large screens only."
 msgstr ""
 
-#: includes/Customize/Options.php:894
+#: includes/Customize/Options.php:974
 msgid "Typography ratio"
 msgstr ""
 
-#: includes/Customize/Options.php:897
+#: includes/Customize/Options.php:977
 msgid "Ratios for automatic harmonious typography font size calculation."
 msgstr ""
 
-#: includes/Customize/Options.php:904
+#: includes/Customize/Options.php:984
 msgid "Modular scale ratio"
 msgstr ""
 
-#: includes/Customize/Options.php:906
+#: includes/Customize/Options.php:986
 msgid "This ratio is used for calculating heading sizes."
 msgstr ""
 
-#: includes/Customize/Options.php:908
-msgid "Open link in new window"
-msgstr ""
-
-#: includes/Customize/Options.php:908
+#: includes/Customize/Options.php:993
 msgid "Open Modular Scale calculator in a new window ↗"
 msgstr ""
 
-#: includes/Customize/Options.php:934
+#: includes/Customize/Options.php:1020
 msgid "Large screen headings scale"
 msgstr ""
 
-#: includes/Customize/Options.php:936
+#: includes/Customize/Options.php:1022
 msgid "Additional ratio for scaling heading sizes on large screens."
 msgstr ""
 
-#: includes/Customize/Options.php:964
+#: includes/Customize/Options.php:1050
 msgid "Font families"
 msgstr ""
 
 #. translators: %s: customizer option values.
-#: includes/Customize/Options.php:969
+#: includes/Customize/Options.php:1055
 #, php-format
 msgid "Values of %s set web safe system font families."
 msgstr ""
 
-#: includes/Customize/Options.php:974
+#: includes/Customize/Options.php:1060
 msgid "You can use any Google Fonts with this theme."
 msgstr ""
 
-#: includes/Customize/Options.php:976
+#: includes/Customize/Options.php:1062
 msgid "Just input the Google Fonts font family name into the fields below, save the options, and you are done!"
 msgstr ""
 
 #. translators: %s: CSS style `font-family` property with link to more information (international).
-#: includes/Customize/Options.php:989
+#: includes/Customize/Options.php:1075
 #, php-format
 msgid "Use a value valid for CSS %s property in the fields below."
 msgstr ""
 
-#: includes/Customize/Options.php:998
+#: includes/Customize/Options.php:1084
 msgid "Main font"
 msgstr ""
 
-#: includes/Customize/Options.php:999
+#: includes/Customize/Options.php:1085
 msgid "By default applied as main, global website font."
 msgstr ""
 
-#: includes/Customize/Options.php:1008
-#: includes/Customize/Options.php:1035
-#: includes/Customize/Options.php:1062
+#: includes/Customize/Options.php:1094
+#: includes/Customize/Options.php:1121
+#: includes/Customize/Options.php:1148
 msgid "Default value"
 msgstr ""
 
-#: includes/Customize/Options.php:1025
+#: includes/Customize/Options.php:1111
 msgid "Heading font"
 msgstr ""
 
-#: includes/Customize/Options.php:1052
+#: includes/Customize/Options.php:1138
 msgid "Alternative font"
 msgstr ""
 
-#: includes/Customize/Options.php:1053
+#: includes/Customize/Options.php:1139
 msgid "By default applied on site title (logo)."
 msgstr ""
 
-#: includes/Customize/Options.php:1080
+#: includes/Customize/Options.php:1166
 msgid "Enable theme Google Fonts loading"
 msgstr ""
 
-#: includes/Customize/Options.php:1081
+#: includes/Customize/Options.php:1167
 msgid "In case you are loading fonts with a plugin or other way, disable this option."
 msgstr ""
 
-#: includes/Customize/Options.php:1096
+#: includes/Customize/Options.php:1182
 msgid "More typography options"
 msgstr ""
 
-#: includes/Customize/Options.php:1099
+#: includes/Customize/Options.php:1185
 msgid "In case you need to modify typography more precisely, you can do so in Site Editor → Styles section."
 msgstr ""
 
-#: includes/Customize/Options.php:1111
+#: includes/Customize/Options.php:1197
 #: includes/Loop/Featured_Posts.php:144
 msgctxt "Customizer section title."
 msgid "Posts"
 msgstr ""
 
-#: includes/Customize/Options.php:1120
+#: includes/Customize/Options.php:1206
 msgid "Blog"
 msgstr ""
 
-#: includes/Customize/Options.php:1126
+#: includes/Customize/Options.php:1212
 msgid "Blog posts layout"
 msgstr ""
 
-#: includes/Customize/Options.php:1129
+#: includes/Customize/Options.php:1213
+msgid "New layout will not be applied if you edited related template parts."
+msgstr ""
+
+#: includes/Customize/Options.php:1216
 msgctxt "Posts list layout."
 msgid "Columns without sidebar"
 msgstr ""
 
-#: includes/Customize/Options.php:1130
+#: includes/Customize/Options.php:1217
 msgctxt "Posts list layout."
 msgid "List with sidebar"
 msgstr ""
 
-#: includes/Customize/Options.php:1139
+#: includes/Customize/Options.php:1225
+msgid "Apply blog posts layout on archive pages"
+msgstr ""
+
+#: includes/Customize/Options.php:1227
+msgid "The blog posts list layout will be applied on all archive pages."
+msgstr ""
+
+#: includes/Customize/Options.php:1234
+#: includes/Customize/Options.php:1239
+msgid "What is an archive page?"
+msgstr ""
+
+#: includes/Customize/Options.php:1236
+#: includes/Customize/Options.php:1343
+msgid "(Opens link in a new window.)"
+msgstr ""
+
+#: includes/Customize/Options.php:1248
 msgid "Enable category selector"
 msgstr ""
 
-#: includes/Customize/Options.php:1140
+#: includes/Customize/Options.php:1249
 msgid "Displays a section with category selector on blog page."
 msgstr ""
 
-#: includes/Customize/Options.php:1152
+#: includes/Customize/Options.php:1261
 msgid "You can further customize blog page layout in Site Editor."
 msgstr ""
 
-#: includes/Customize/Options.php:1168
+#: includes/Customize/Options.php:1277
 msgid "Posts count"
 msgstr ""
 
-#: includes/Customize/Options.php:1170
+#: includes/Customize/Options.php:1279
 msgid "Max number of entries displayed in list of posts."
 msgstr ""
 
-#: includes/Customize/Options.php:1177
+#: includes/Customize/Options.php:1286
 #: patterns/site/intro-search.php:42
 msgid "Search results"
 msgstr ""
 
-#: includes/Customize/Options.php:1189
+#: includes/Customize/Options.php:1298
 msgid "Archive page"
 msgstr ""
 
-#: includes/Customize/Options.php:1204
+#: includes/Customize/Options.php:1313
 msgctxt "Customizer section title."
-msgid "Others"
+msgid "Accessibility"
 msgstr ""
 
-#: includes/Customize/Options.php:1211
-msgid "Enable core block patterns"
+#: includes/Customize/Options.php:1320
+msgid "Fixed mobile navigation"
 msgstr ""
 
-#: includes/Customize/Options.php:1212
-msgid "Allows WordPress core block patterns in block editor."
+#: includes/Customize/Options.php:1322
+msgid "Displays mobile navigation toggle button always at fixed position (at the bottom of the screen) even when scrolling."
 msgstr ""
 
-#: includes/Customize/Options.php:1220
+#: includes/Customize/Options.php:1324
+msgid "(Enables \"Fixed mobile toggle button\" block style for Navigation block.)"
+msgstr ""
+
+#: includes/Customize/Options.php:1331
 msgid "Expand mobile navigation submenus"
 msgstr ""
 
 #. translators: %s: Gutenberg issue link.
-#: includes/Customize/Options.php:1224
+#: includes/Customize/Options.php:1335
 #, php-format
 msgid "Until WordPress fixes Navigation block accessibility issue (%s), enabling this option fixes it for you."
 msgstr ""
 
-#: includes/Customize/Options.php:1230
+#: includes/Customize/Options.php:1341
 msgid "WordPress GitHub issue #63033"
 msgstr ""
 
-#: includes/Customize/Options.php:1232
-msgid "(Opens link in a new window.)"
-msgstr ""
-
-#: includes/Customize/Options.php:1237
+#: includes/Customize/Options.php:1348
 msgid "Unfortunately, it also means all submenus will be expanded in mobile menu without option to collapse them by user."
 msgstr ""
 
-#: includes/Customize/Options.php:1245
+#: includes/Customize/Options.php:1350
+msgid "If you are building a fully accessible website, you should enable this option."
+msgstr ""
+
+#: includes/Customize/Options.php:1360
+msgctxt "Customizer section title."
+msgid "Others"
+msgstr ""
+
+#: includes/Customize/Options.php:1369
+msgid "Logo max width"
+msgstr ""
+
+#: includes/Customize/Options.php:1371
+msgid "Applies on logo image in default site header and footer."
+msgstr ""
+
+#: includes/Customize/Options.php:1373
+msgid "Customization of header and footer template part may override this option."
+msgstr ""
+
+#: includes/Customize/Options.php:1388
 msgid "Link homepage logo"
 msgstr ""
 
-#: includes/Customize/Options.php:1247
-msgid "When disabled, logo image will no longer link to the homepage when visitor is on the homepage."
+#: includes/Customize/Options.php:1389
+msgid "Apply homepage link on logo image when visiting the homepage."
 msgstr ""
 
-#: includes/Customize/Options.php:1249
-msgid "It also removes the logo image alt text attribute on the homepage."
-msgstr ""
-
-#: includes/Customize/Options.php:1263
+#: includes/Customize/Options.php:1403
 msgid "Header image usage"
 msgstr ""
 
-#: includes/Customize/Options.php:1266
+#: includes/Customize/Options.php:1406
 msgid "These header images will be used in Image blocks with \"Use header image\" block style assigned."
 msgstr ""
 
-#: includes/Entry/Component.php:265
+#. translators: Decorative quotation mark. IMPORTANT: Translate cautiously as this affects quote design! It is recommended to keep it untranslated. Takes CSS content value (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content).
+#: includes/Customize/Styles.php:100
+msgid "'“'"
+msgstr ""
+
+#: includes/Editor/Classic.php:56
+msgctxt "Editor format styles section title."
+msgid "Theme"
+msgstr ""
+
+#: includes/Editor/Classic.php:60
+msgid "(L) Large font size"
+msgstr ""
+
+#: includes/Editor/Classic.php:66
+msgid "(XL) Extra large font size"
+msgstr ""
+
+#: includes/Editor/Classic.php:72
+msgid "UPPERCASE"
+msgstr ""
+
+#: includes/Editor/Classic.php:80
+msgid "Paragraph with [D]ropcap"
+msgstr ""
+
+#: includes/Editor/Gradients.php:336
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: For backdrop blur"
+msgstr ""
+
+#: includes/Editor/Gradients.php:341
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color cut to transparent, horizontally"
+msgstr ""
+
+#: includes/Editor/Gradients.php:345
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent cut to color, horizontally"
+msgstr ""
+
+#: includes/Editor/Gradients.php:350
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color cut to transparent, vertically"
+msgstr ""
+
+#: includes/Editor/Gradients.php:354
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent cut to color, vertically"
+msgstr ""
+
+#: includes/Editor/Gradients.php:359
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color to transparent, vertically"
+msgstr ""
+
+#: includes/Editor/Gradients.php:363
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent to color, vertically"
+msgstr ""
+
+#: includes/Entry/Component.php:261
 msgctxt "Added to posts and pages that are missing titles."
 msgid "Untitled"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: includes/Entry/Summary.php:140
+#: includes/Entry/Summary.php:145
 #, php-format
 msgid "Continue reading \"%s\""
 msgstr ""
 
-#: includes/Loop/Component.php:180
+#: includes/Loop/Component.php:200
 msgctxt "Template name"
 msgid "Search Post Type"
 msgstr ""
 
-#: includes/Loop/Component.php:181
+#: includes/Loop/Component.php:201
 msgid "Displays search results for a specific post type search."
 msgstr ""
 
@@ -1179,71 +1551,73 @@ msgstr ""
 msgid "Makes sure the featured posts will be removed from posts list on blog page."
 msgstr ""
 
-#: includes/Loop/Pagination.php:190
+#: includes/Loop/Pagination.php:209
 msgctxt "Pagination page number screen reader label."
 msgid "Page:"
 msgstr ""
 
 #. translators: 1: current page number, 2: total page count.
-#: includes/Loop/Pagination.php:203
-#: includes/Loop/Pagination.php:212
+#: includes/Loop/Pagination.php:222
+#: includes/Loop/Pagination.php:231
 #, php-format
 msgid "Page %1$d of %2$d"
 msgstr ""
 
-#: includes/Setup/Media.php:120
+#: includes/Setup/Media.php:128
 msgctxt "Header image description."
 msgid "Fingers (dynamic color SVG)"
 msgstr ""
 
-#: includes/Setup/Media.php:126
+#: includes/Setup/Media.php:134
 msgctxt "Header image description."
 msgid "Blobs (dynamic color SVG)"
 msgstr ""
 
-#: includes/Setup/Media.php:132
+#: includes/Setup/Media.php:140
 msgctxt "Header image description."
 msgid "Line Fingers (dynamic color SVG)"
 msgstr ""
 
-#: includes/Setup/Media.php:213
+#: includes/Setup/Media.php:221
 msgctxt "WordPress predefined image size name."
 msgid "Thumbnail size"
 msgstr ""
 
-#: includes/Setup/Media.php:214
-#: includes/Setup/Media.php:229
-#: includes/Setup/Media.php:239
+#: includes/Setup/Media.php:222
+#: includes/Setup/Media.php:237
+#: includes/Setup/Media.php:247
 msgid "Used in block patterns in templates and template parts."
 msgstr ""
 
-#: includes/Setup/Media.php:227
+#: includes/Setup/Media.php:235
 msgctxt "WordPress predefined image size name."
 msgid "Medium size"
 msgstr ""
 
-#: includes/Setup/Media.php:231
+#: includes/Setup/Media.php:239
 msgid "By default used as featured image size in posts list."
 msgstr ""
 
-#: includes/Setup/Media.php:238
+#: includes/Setup/Media.php:246
 msgctxt "WordPress predefined image size name."
 msgid "Large size"
 msgstr ""
 
-#: includes/Setup/Site_Editor.php:243
-msgid "Navigation"
-msgstr ""
-
-#: includes/Setup/Site_Editor.php:248
+#: includes/Setup/Site_Editor.php:283
+#: parts/admin/welcome-feature--template-parts.php:27
+#: parts/admin/welcome-feature--template-parts.php:36
 msgid "Template Parts"
 msgstr ""
 
-#: includes/Setup/Site_Editor.php:253
+#: includes/Setup/Site_Editor.php:291
+msgid "Navigation"
+msgstr ""
+
+#: includes/Setup/Site_Editor.php:296
 msgid "Templates"
 msgstr ""
 
-#: includes/Setup/Site_Editor.php:301
+#: includes/Setup/Site_Editor.php:349
 msgid "Use Site Editor &rarr;"
 msgstr ""
 
@@ -1341,52 +1715,52 @@ msgstr ""
 msgid "Skip to footer"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:31
+#: parts/admin/media-image-sizes.php:32
 msgid "Recommended image sizes"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:34
+#: parts/admin/media-image-sizes.php:35
 msgid "For the optimal theme display, please, set image sizes recommended below."
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:35
+#: parts/admin/media-image-sizes.php:36
 msgid "If you already have images uploaded to your website you need to resize them after changing the sizes here."
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:36
+#: parts/admin/media-image-sizes.php:37
 msgid "Resize images using plugin &rarr;"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:43
+#: parts/admin/media-image-sizes.php:44
 msgid "Size name"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:44
+#: parts/admin/media-image-sizes.php:45
 msgid "Size ID"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:45
+#: parts/admin/media-image-sizes.php:46
 msgid "Size parameters"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:46
+#: parts/admin/media-image-sizes.php:47
 msgid "Theme usage"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:59
+#: parts/admin/media-image-sizes.php:60
 msgid "cropped"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:59
+#: parts/admin/media-image-sizes.php:60
 msgid "scaled"
 msgstr ""
 
-#: parts/admin/media-image-sizes.php:63
+#: parts/admin/media-image-sizes.php:64
 msgid "Additional image size added by the theme. Can not be changed on this page."
 msgstr ""
 
 #. translators: 1: image width, 2: image height, 3: cropped or scaled?
-#: parts/admin/media-image-sizes.php:91
+#: parts/admin/media-image-sizes.php:92
 #, php-format
 msgid "%1$d &times; %2$d, %3$s"
 msgstr ""
@@ -1471,13 +1845,13 @@ msgstr ""
 
 #. translators: %s: block pattern category name ("Pages" by default).
 #: parts/admin/welcome-demo.php:36
-#: parts/admin/welcome-feature--patterns.php:47
+#: parts/admin/welcome-feature--patterns.php:35
 #, php-format
 msgid "Simply use patterns from %s category to create whole page content easily!"
 msgstr ""
 
 #: parts/admin/welcome-demo.php:37
-#: parts/admin/welcome-feature--patterns.php:48
+#: parts/admin/welcome-feature--patterns.php:36
 msgid "Pages"
 msgstr ""
 
@@ -1513,31 +1887,32 @@ msgstr ""
 msgid "Preview starter content"
 msgstr ""
 
-#: parts/admin/welcome-feature--background.php:29
+#: parts/admin/welcome-feature--background.php:30
 msgid "Site Background Image"
 msgstr ""
 
-#: parts/admin/welcome-feature--background.php:31
+#: parts/admin/welcome-feature--background.php:32
 msgid "Set up global website background image if you like."
 msgstr ""
 
-#: parts/admin/welcome-feature--background.php:32
+#: parts/admin/welcome-feature--background.php:33
 msgid "Use repeated pattern image to create interesting background."
 msgstr ""
 
-#: parts/admin/welcome-feature--background.php:35
+#: parts/admin/welcome-feature--background.php:36
 msgid "Set Background"
 msgstr ""
 
-#: parts/admin/welcome-feature--background.php:37
-#: parts/admin/welcome-feature--custom-header.php:37
-#: parts/admin/welcome-feature--featured-posts.php:34
-#: parts/admin/welcome-feature--hybrid.php:34
-#: parts/admin/welcome-feature--patterns.php:59
-#: parts/admin/welcome-feature--privacy.php:33
+#: parts/admin/welcome-feature--background.php:38
+#: parts/admin/welcome-feature--custom-header.php:38
+#: parts/admin/welcome-feature--featured-posts.php:38
+#: parts/admin/welcome-feature--hybrid.php:35
+#: parts/admin/welcome-feature--patterns.php:49
+#: parts/admin/welcome-feature--privacy.php:34
 #: parts/admin/welcome-feature--site-editor.php:48
-#: parts/admin/welcome-feature--styles.php:28
-#: parts/admin/welcome-feature--typography.php:37
+#: parts/admin/welcome-feature--styles.php:30
+#: parts/admin/welcome-feature--template-parts.php:39
+#: parts/admin/welcome-feature--typography.php:38
 msgid "Info in documentation &rarr;"
 msgstr ""
 
@@ -1545,92 +1920,97 @@ msgstr ""
 msgid "Blog Layouts"
 msgstr ""
 
-#: parts/admin/welcome-feature--blog.php:31
+#: parts/admin/welcome-feature--blog.php:32
 msgid "Display blog posts in a list with a sidebar, or in columns layout."
 msgstr ""
 
-#: parts/admin/welcome-feature--blog.php:31
+#: parts/admin/welcome-feature--blog.php:32
 msgid "Or set completely custom layout for your blog template."
 msgstr ""
 
-#: parts/admin/welcome-feature--blog.php:33
+#: parts/admin/welcome-feature--blog.php:35
 msgid "Set Blog Layout"
 msgstr ""
 
-#: parts/admin/welcome-feature--blog.php:35
+#: parts/admin/welcome-feature--blog.php:37
 msgid "Edit Templates &rarr;"
 msgstr ""
 
-#: parts/admin/welcome-feature--custom-header.php:29
+#: parts/admin/welcome-feature--custom-header.php:30
 msgid "Decorative Images"
 msgstr ""
 
-#: parts/admin/welcome-feature--custom-header.php:31
+#: parts/admin/welcome-feature--custom-header.php:32
 msgid "Set up header image displayed in dedicated Image blocks."
 msgstr ""
 
-#: parts/admin/welcome-feature--custom-header.php:32
+#: parts/admin/welcome-feature--custom-header.php:33
 msgid "Useful for (randomized) decorative image setup, for example."
 msgstr ""
 
-#: parts/admin/welcome-feature--custom-header.php:35
+#: parts/admin/welcome-feature--custom-header.php:36
 msgid "Set Header Image"
 msgstr ""
 
-#: parts/admin/welcome-feature--featured-posts.php:29
+#: parts/admin/welcome-feature--featured-posts.php:30
 msgid "Featured Posts"
 msgstr ""
 
-#: parts/admin/welcome-feature--featured-posts.php:30
+#: parts/admin/welcome-feature--featured-posts.php:32
 msgid "Display important news immediately on top of your blog page in dominant \"Featured posts\" section."
 msgstr ""
 
-#: parts/admin/welcome-feature--featured-posts.php:32
+#: parts/admin/welcome-feature--featured-posts.php:33
+msgid "Providing categories filter below."
+msgstr ""
+
+#: parts/admin/welcome-feature--featured-posts.php:36
 msgid "Set Featured Posts Tag"
 msgstr ""
 
-#: parts/admin/welcome-feature--hybrid.php:29
+#: parts/admin/welcome-feature--hybrid.php:30
 msgid "Hybrid Theme"
 msgstr ""
 
-#: parts/admin/welcome-feature--hybrid.php:30
+#: parts/admin/welcome-feature--hybrid.php:31
 msgid "Choose preferred edit mode: edit <dfn title=\"Full site editing experience\">all templates</dfn> or <dfn title=\"Classic theme experience\">their parts only</dfn> using Site Editor."
 msgstr ""
 
-#: parts/admin/welcome-feature--hybrid.php:32
+#: parts/admin/welcome-feature--hybrid.php:33
 msgid "Choose Site Editing Experience"
 msgstr ""
 
-#: parts/admin/welcome-feature--patterns.php:40
+#: parts/admin/welcome-feature--patterns.php:28
+#: parts/admin/welcome-feature--patterns.php:44
 msgid "Block Patterns"
 msgstr ""
 
-#: parts/admin/welcome-feature--patterns.php:41
+#: parts/admin/welcome-feature--patterns.php:29
 msgid "Create your content fast with integrated pre-designed patterns library."
 msgstr ""
 
-#: parts/admin/welcome-feature--patterns.php:52
+#: parts/admin/welcome-feature--patterns.php:40
 msgid "No need to import demo content data anymore."
 msgstr ""
 
-#: parts/admin/welcome-feature--patterns.php:56
-msgid "Manage Patterns"
+#: parts/admin/welcome-feature--patterns.php:46
+msgid "Toggle Patterns"
 msgstr ""
 
-#: parts/admin/welcome-feature--privacy.php:25
+#: parts/admin/welcome-feature--privacy.php:26
 msgid "Privacy Compliant Fonts"
 msgstr ""
 
-#: parts/admin/welcome-feature--privacy.php:27
+#: parts/admin/welcome-feature--privacy.php:28
 msgid "Feel free to use any Google Font with this theme."
 msgstr ""
 
-#: parts/admin/welcome-feature--privacy.php:28
+#: parts/admin/welcome-feature--privacy.php:29
 msgid "Fonts will be loaded from your website, not from Google servers, enhancing privacy of your visitors (GDPR compliant)."
 msgstr ""
 
-#: parts/admin/welcome-feature--privacy.php:31
-#: parts/admin/welcome-feature--typography.php:35
+#: parts/admin/welcome-feature--privacy.php:32
+#: parts/admin/welcome-feature--typography.php:36
 msgid "Set Typography"
 msgstr ""
 
@@ -1646,38 +2026,59 @@ msgstr ""
 msgid "Open Site Editor"
 msgstr ""
 
-#: parts/admin/welcome-feature--styles.php:25
-msgid "Block Styles"
+#: parts/admin/welcome-feature--styles.php:26
+msgid "Block Styles & Variations"
 msgstr ""
 
-#: parts/admin/welcome-feature--styles.php:26
+#: parts/admin/welcome-feature--styles.php:27
 msgid "Change the style of blocks without coding."
 msgstr ""
 
-#. translators: %s: link to "Abs – Additional block styles" plugin.
-#: parts/admin/welcome-feature--styles.php:35
-#, php-format
-msgid "Use %s plugin for additional creative block styles."
+#: parts/admin/welcome-feature--styles.php:28
+msgid "Display blocks on mobile devices only, blur out background images, reveal content on hover, overlap gallery images, overlap sections,&hellip;"
 msgstr ""
 
-#: parts/admin/welcome-feature--styles.php:36
-msgid "Abs – Additional block styles"
+#: parts/admin/welcome-feature--template-parts.php:29
+msgid "Don't edit whole templates, edit granular parts."
 msgstr ""
 
-#: parts/admin/welcome-feature--typography.php:29
+#: parts/admin/welcome-feature--template-parts.php:30
+msgid "Your modifications apply everywhere at once."
+msgstr ""
+
+#: parts/admin/welcome-feature--template-parts.php:32
+msgid "Easily swap header and footer for a different predefined designs in no time."
+msgstr ""
+
+#: parts/admin/welcome-feature--typography.php:30
 msgid "Harmonious Typography"
 msgstr ""
 
-#: parts/admin/welcome-feature--typography.php:31
+#: parts/admin/welcome-feature--typography.php:32
 msgid "This theme applies harmonious typography to assure the best readability."
 msgstr ""
 
-#: parts/admin/welcome-feature--typography.php:32
+#: parts/admin/welcome-feature--typography.php:33
 msgid "Set up base font size, custom fonts, and tweak the typography ratio to your liking."
 msgstr ""
 
-#: parts/admin/welcome-features.php:37
+#: parts/admin/welcome-features.php:39
 msgid "Theme Features"
+msgstr ""
+
+#: parts/admin/welcome-footer.php:66
+msgid "Theme changelog"
+msgstr ""
+
+#: parts/admin/welcome-footer.php:70
+msgid "Previous theme versions"
+msgstr ""
+
+#: parts/admin/welcome-footer.php:77
+#: patterns/site/footer-centered.php:69
+#: patterns/site/footer-minimal.php:50
+#: patterns/site/footer.php:96
+msgid "To the top"
 msgstr ""
 
 #: parts/admin/welcome-guide--customize.php:37
@@ -1744,25 +2145,29 @@ msgstr ""
 msgid "Quickstart Guide"
 msgstr ""
 
+#: parts/admin/welcome-header.php:35
+msgid "(version changelog)"
+msgstr ""
+
 #. translators: 1: theme name, 2: theme developer link.
-#: parts/admin/welcome-header.php:36
+#: parts/admin/welcome-header.php:47
 #, php-format
 msgid "Congratulations and thank you for choosing %1$s theme by %2$s!"
 msgstr ""
 
-#: parts/admin/welcome-header.php:42
-msgid "Information on this page introduces the theme and provides useful tips."
+#: parts/admin/welcome-header.php:53
+msgid "Find theme introduction and useful tips below."
 msgstr ""
 
-#: parts/admin/welcome-header.php:61
+#: parts/admin/welcome-header.php:72
 msgid "Documentation &rarr;"
 msgstr ""
 
-#: parts/admin/welcome-header.php:62
+#: parts/admin/welcome-header.php:73
 msgid "Support Forum &rarr;"
 msgstr ""
 
-#: parts/admin/welcome-header.php:66
+#: parts/admin/welcome-header.php:77
 msgctxt "Notice, hint."
 msgid "Tip:"
 msgstr ""
@@ -1783,295 +2188,287 @@ msgstr ""
 msgid "Visit WebMan Design website now &rarr;"
 msgstr ""
 
-#: patterns/call-to-action/cta-01.php:18
+#: patterns/call-to-action/cta-01.php:19
 msgctxt "Block pattern title."
 msgid "Inline call to action with form (newsletter subscription)"
 msgstr ""
 
-#: patterns/call-to-action/cta-01.php:20
-#: patterns/call-to-action/cta-02.php:20
-#: patterns/call-to-action/cta-03.php:20
-#: patterns/call-to-action/cta-04.php:20
-#: patterns/call-to-action/cta-05.php:20
-#: patterns/call-to-action/cta-06.php:20
-#: patterns/call-to-action/cta-07.php:20
-#: patterns/call-to-action/cta-08.php:20
-#: patterns/call-to-action/cta-09.php:20
-#: patterns/call-to-action/cta-10.php:20
+#: patterns/call-to-action/cta-01.php:21
+#: patterns/call-to-action/cta-02.php:21
+#: patterns/call-to-action/cta-03.php:21
+#: patterns/call-to-action/cta-04.php:21
+#: patterns/call-to-action/cta-05.php:21
+#: patterns/call-to-action/cta-06.php:21
+#: patterns/call-to-action/cta-07.php:21
+#: patterns/call-to-action/cta-08.php:21
+#: patterns/call-to-action/cta-09.php:21
+#: patterns/call-to-action/cta-10.php:21
 #: patterns/intro/intro-01.php:22
 #: patterns/intro/intro-02.php:22
 #: patterns/intro/intro-05.php:26
 #: patterns/intro/intro-06.php:26
-#: patterns/numbers/numbers-03.php:23
-#: patterns/posts/posts-01.php:23
-#: patterns/pricing/pricing-01.php:21
+#: patterns/numbers/numbers-03.php:24
+#: patterns/posts/posts-01.php:24
+#: patterns/pricing/pricing-01.php:22
 #: patterns/services/services-02.php:22
-#: patterns/services/services-04.php:20
+#: patterns/services/services-04.php:21
 msgctxt "keyword"
 msgid "buttons"
 msgstr ""
 
-#: patterns/call-to-action/cta-01.php:36
+#: patterns/call-to-action/cta-01.php:37
 msgid "Newsletter"
 msgstr ""
 
-#: patterns/call-to-action/cta-02.php:18
+#: patterns/call-to-action/cta-02.php:19
 msgctxt "Block pattern title."
 msgid "Call to action in a column with blurred background overlaying an image"
 msgstr ""
 
-#: patterns/call-to-action/cta-03.php:18
+#: patterns/call-to-action/cta-03.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with description and list of question and answer toggles"
-msgstr ""
-
-#: patterns/call-to-action/cta-03.php:21
-#: patterns/faq/faq-01.php:20
-#: patterns/faq/faq-03.php:20
-msgctxt "keyword"
-msgid "accordion"
 msgstr ""
 
 #: patterns/call-to-action/cta-03.php:22
 #: patterns/faq/faq-01.php:21
 #: patterns/faq/faq-03.php:21
-#: patterns/portfolio/portfolio-01.php:20
-#: patterns/portfolio/portfolio-03.php:20
+msgctxt "keyword"
+msgid "accordion"
+msgstr ""
+
+#: patterns/call-to-action/cta-03.php:23
+#: patterns/faq/faq-01.php:22
+#: patterns/faq/faq-03.php:22
+#: patterns/portfolio/portfolio-01.php:21
+#: patterns/portfolio/portfolio-03.php:21
 msgctxt "keyword"
 msgid "details"
 msgstr ""
 
-#: patterns/call-to-action/cta-03.php:23
+#: patterns/call-to-action/cta-03.php:24
 msgctxt "keyword"
 msgid "questions & answers"
 msgstr ""
 
-#: patterns/call-to-action/cta-03.php:24
+#: patterns/call-to-action/cta-03.php:25
 msgctxt "keyword"
 msgid "faq"
 msgstr ""
 
-#: patterns/call-to-action/cta-03.php:79
-#: patterns/call-to-action/cta-03.php:88
-#: patterns/call-to-action/cta-03.php:97
-#: patterns/faq/faq-01.php:46
-#: patterns/faq/faq-01.php:55
-#: patterns/faq/faq-02.php:67
-#: patterns/faq/faq-02.php:81
-#: patterns/faq/faq-02.php:101
-#: patterns/faq/faq-02.php:115
-#: patterns/faq/faq-03.php:55
-#: patterns/faq/faq-03.php:64
-#: patterns/faq/faq-03.php:73
-#: patterns/faq/faq-03.php:82
-#: patterns/faq/faq-04.php:48
+#: patterns/call-to-action/cta-03.php:81
+#: patterns/faq/faq-01.php:47
+#: patterns/faq/faq-01.php:56
+#: patterns/faq/faq-02.php:70
+#: patterns/faq/faq-03.php:57
+#: patterns/faq/faq-04.php:51
 msgctxt "Frequently asked questions: question prefix."
 msgid "Q: "
 msgstr ""
 
-#: patterns/call-to-action/cta-04.php:18
+#: patterns/call-to-action/cta-04.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with wide offset image below"
 msgstr ""
 
-#: patterns/call-to-action/cta-05.php:18
+#: patterns/call-to-action/cta-05.php:19
 msgctxt "Block pattern title."
 msgid "Simple center aligned call to action with big text on a parallax image"
 msgstr ""
 
-#: patterns/call-to-action/cta-05.php:21
-#: patterns/call-to-action/cta-10.php:22
+#: patterns/call-to-action/cta-05.php:22
+#: patterns/call-to-action/cta-10.php:23
 msgctxt "keyword"
 msgid "cover"
 msgstr ""
 
-#: patterns/call-to-action/cta-06.php:18
+#: patterns/call-to-action/cta-06.php:19
 msgctxt "Block pattern title."
 msgid "Simple center aligned call to action with big title"
 msgstr ""
 
-#: patterns/call-to-action/cta-07.php:18
+#: patterns/call-to-action/cta-07.php:19
 msgctxt "Block pattern title."
 msgid "Classic boxed call to action"
 msgstr ""
 
-#: patterns/call-to-action/cta-08.php:18
+#: patterns/call-to-action/cta-08.php:19
 msgctxt "Block pattern title."
 msgid "Simple call to action with big text description"
 msgstr ""
 
-#: patterns/call-to-action/cta-09.php:18
+#: patterns/call-to-action/cta-09.php:19
 msgctxt "Block pattern title."
 msgid "2 images with large text and button below"
 msgstr ""
 
-#: patterns/call-to-action/cta-09.php:21
-#: patterns/call-to-action/cta-10.php:21
-#: patterns/contact/contact-02.php:20
-#: patterns/gallery/gallery-01.php:20
-#: patterns/gallery/gallery-02.php:20
-#: patterns/gallery/gallery-03.php:20
-#: patterns/gallery/gallery-04.php:20
-#: patterns/gallery/gallery-05.php:20
-#: patterns/gallery/gallery-06.php:20
-#: patterns/gallery/gallery-07.php:20
-#: patterns/gallery/gallery-08.php:20
-#: patterns/testimonials/testimonials-02.php:21
+#: patterns/call-to-action/cta-09.php:22
+#: patterns/call-to-action/cta-10.php:22
+#: patterns/contact/contact-02.php:21
+#: patterns/gallery/gallery-01.php:21
+#: patterns/gallery/gallery-02.php:21
+#: patterns/gallery/gallery-03.php:21
+#: patterns/gallery/gallery-04.php:21
+#: patterns/gallery/gallery-05.php:21
+#: patterns/gallery/gallery-06.php:21
+#: patterns/gallery/gallery-07.php:21
+#: patterns/gallery/gallery-08.php:21
+#: patterns/testimonials/testimonials-02.php:22
 msgctxt "keyword"
 msgid "gallery"
 msgstr ""
 
-#: patterns/call-to-action/cta-10.php:18
+#: patterns/call-to-action/cta-10.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of images with hover content"
 msgstr ""
 
-#: patterns/columns/columns-01.php:18
+#: patterns/columns/columns-01.php:19
 msgctxt "Block pattern title."
 msgid "Text in creative columns layout"
 msgstr ""
 
-#: patterns/columns/columns-01.php:20
-#: patterns/columns/columns-02.php:20
-#: patterns/contact/contact-01.php:20
-#: patterns/gallery/gallery-04.php:21
-#: patterns/media/media-01.php:20
-#: patterns/media/media-02.php:20
-#: patterns/media/media-03.php:20
-#: patterns/media/media-07.php:20
-#: patterns/numbers/numbers-04.php:20
+#: patterns/columns/columns-01.php:21
+#: patterns/columns/columns-02.php:21
+#: patterns/contact/contact-01.php:21
+#: patterns/gallery/gallery-04.php:22
+#: patterns/media/media-01.php:21
+#: patterns/media/media-02.php:21
+#: patterns/media/media-03.php:21
+#: patterns/media/media-07.php:21
+#: patterns/numbers/numbers-04.php:21
 #: patterns/numbers/numbers-05.php:21
-#: patterns/portfolio/portfolio-02.php:21
-#: patterns/services/services-05.php:20
+#: patterns/portfolio/portfolio-02.php:22
+#: patterns/services/services-05.php:21
 #: patterns/services/services-06.php:21
-#: assets/js/block-variations.js:693
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "columns"
 msgstr ""
 
-#: patterns/columns/columns-02.php:18
+#: patterns/columns/columns-02.php:19
 msgctxt "Block pattern title."
 msgid "Two paragraphs with large text on the side"
 msgstr ""
 
-#: patterns/columns/columns-03.php:18
+#: patterns/columns/columns-03.php:19
 msgctxt "Block pattern title."
 msgid "Description with a title on the side"
 msgstr ""
 
-#: patterns/columns/columns-04.php:18
+#: patterns/columns/columns-04.php:19
 msgctxt "Block pattern title."
 msgid "Offset 2 columns of text"
 msgstr ""
 
-#: patterns/contact/contact-01.php:18
+#: patterns/contact/contact-01.php:19
 msgctxt "Block pattern title."
 msgid "Simple contact info with large intro text"
 msgstr ""
 
-#: patterns/contact/contact-01.php:21
-#: patterns/contact/contact-03.php:20
-#: patterns/contact/contact-04.php:20
+#: patterns/contact/contact-01.php:22
+#: patterns/contact/contact-03.php:21
+#: patterns/contact/contact-04.php:21
 msgctxt "keyword"
 msgid "email"
 msgstr ""
 
-#: patterns/contact/contact-01.php:51
+#: patterns/contact/contact-01.php:52
 msgid "Social networks"
 msgstr ""
 
-#: patterns/contact/contact-01.php:68
+#: patterns/contact/contact-01.php:69
 msgid "Get in touch"
 msgstr ""
 
-#: patterns/contact/contact-01.php:82
-#: patterns/contact/contact-03.php:73
+#: patterns/contact/contact-01.php:83
+#: patterns/contact/contact-03.php:74
 msgid "Visit us"
 msgstr ""
 
-#: patterns/contact/contact-02.php:18
+#: patterns/contact/contact-02.php:19
 msgctxt "Block pattern title."
 msgid "Map image with link to online map"
 msgstr ""
 
-#: patterns/contact/contact-03.php:18
+#: patterns/contact/contact-02.php:31
+msgid "Map"
+msgstr ""
+
+#: patterns/contact/contact-03.php:19
 msgctxt "Block pattern title."
 msgid "Contact info with image on the side"
 msgstr ""
 
-#: patterns/contact/contact-03.php:21
+#: patterns/contact/contact-03.php:22
 msgctxt "keyword"
 msgid "phone"
 msgstr ""
 
-#: patterns/contact/contact-03.php:22
-#: patterns/contact/contact-04.php:21
+#: patterns/contact/contact-03.php:23
+#: patterns/contact/contact-04.php:22
 msgctxt "keyword"
 msgid "address"
 msgstr ""
 
-#: patterns/contact/contact-03.php:45
+#: patterns/contact/contact-03.php:46
 msgid "Email us"
 msgstr ""
 
-#: patterns/contact/contact-03.php:59
+#: patterns/contact/contact-03.php:60
 msgid "Call us"
 msgstr ""
 
-#: patterns/contact/contact-04.php:18
+#: patterns/contact/contact-04.php:19
 msgctxt "Block pattern title."
 msgid "Quote with contact info on the side and an image below"
 msgstr ""
 
-#: patterns/contact/contact-04.php:55
+#: patterns/contact/contact-04.php:56
 msgid "Contact"
 msgstr ""
 
-#: patterns/contact/contact-05.php:18
+#: patterns/contact/contact-05.php:19
 msgctxt "Block pattern title."
 msgid "Working hours"
 msgstr ""
 
-#: patterns/contact/contact-05.php:20
+#: patterns/contact/contact-05.php:21
 msgctxt "keyword"
 msgid "business hours"
 msgstr ""
 
-#: patterns/contact/contact-05.php:21
+#: patterns/contact/contact-05.php:22
 msgctxt "keyword"
 msgid "opening hours"
 msgstr ""
 
-#: patterns/contact/contact-05.php:22
+#: patterns/contact/contact-05.php:23
 msgctxt "keyword"
 msgid "time"
 msgstr ""
 
-#: patterns/contact/contact-05.php:125
+#: patterns/contact/contact-05.php:64
+msgid "Working hours"
+msgstr ""
+
+#: patterns/contact/contact-05.php:93
 msgctxt "As in time, working hours."
 msgid "Closed"
 msgstr ""
 
-#: patterns/faq/faq-01.php:18
+#: patterns/faq/faq-01.php:19
 msgctxt "Block pattern title."
 msgid "List of toggles"
-msgstr ""
-
-#: patterns/faq/faq-01.php:22
-#: patterns/faq/faq-02.php:20
-#: patterns/faq/faq-03.php:22
-#: patterns/faq/faq-04.php:20
-#: patterns/page/faq-1.php:25
-msgctxt "keyword"
-msgid "FAQ"
 msgstr ""
 
 #: patterns/faq/faq-01.php:23
 #: patterns/faq/faq-02.php:21
 #: patterns/faq/faq-03.php:23
 #: patterns/faq/faq-04.php:21
+#: patterns/page/faq-1.php:25
 msgctxt "keyword"
-msgid "question"
+msgid "FAQ"
 msgstr ""
 
 #: patterns/faq/faq-01.php:24
@@ -2079,108 +2476,125 @@ msgstr ""
 #: patterns/faq/faq-03.php:24
 #: patterns/faq/faq-04.php:22
 msgctxt "keyword"
+msgid "question"
+msgstr ""
+
+#: patterns/faq/faq-01.php:25
+#: patterns/faq/faq-02.php:23
+#: patterns/faq/faq-03.php:25
+#: patterns/faq/faq-04.php:23
+msgctxt "keyword"
 msgid "answer"
 msgstr ""
 
-#: patterns/faq/faq-02.php:18
+#: patterns/faq/faq-02.php:19
 msgctxt "Block pattern title."
 msgid "4 pairs of question and answer in boxes in 2 columns with description"
 msgstr ""
 
-#: patterns/faq/faq-03.php:18
+#: patterns/faq/faq-03.php:19
 msgctxt "Block pattern title."
 msgid "List of toggles with heading on the side"
 msgstr ""
 
-#: patterns/faq/faq-03.php:40
+#: patterns/faq/faq-03.php:41
 msgid "Questions & Answers"
 msgstr ""
 
-#: patterns/faq/faq-04.php:18
+#: patterns/faq/faq-04.php:19
 msgctxt "Block pattern title."
 msgid "Question with answer and an image on the side"
 msgstr ""
 
-#: patterns/gallery/gallery-01.php:18
+#: patterns/gallery/gallery-01.php:19
 msgctxt "Block pattern title."
 msgid "Partner logos"
 msgstr ""
 
-#: patterns/gallery/gallery-01.php:21
-#: patterns/gallery/gallery-02.php:21
-#: patterns/gallery/gallery-03.php:21
-#: patterns/media/media-08.php:20
-#: patterns/testimonials/testimonials-02.php:22
-#: assets/js/block-variations.js:403
-#: assets/js/block-variations.js:553
-#: assets/js/block-variations.js:582
-#: assets/js/block-variations.js:669
+#: patterns/gallery/gallery-01.php:22
+#: patterns/gallery/gallery-02.php:22
+#: patterns/gallery/gallery-03.php:22
+#: patterns/media/media-08.php:21
+#: patterns/testimonials/testimonials-02.php:23
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "image"
 msgstr ""
 
-#: patterns/gallery/gallery-01.php:22
-#: patterns/testimonials/testimonials-02.php:23
+#: patterns/gallery/gallery-01.php:23
+#: patterns/testimonials/testimonials-02.php:24
 msgctxt "keyword"
 msgid "clients"
 msgstr ""
 
-#: patterns/gallery/gallery-02.php:18
+#: patterns/gallery/gallery-01.php:40
+msgid "Logos"
+msgstr ""
+
+#: patterns/gallery/gallery-02.php:19
 msgctxt "Block pattern title."
 msgid "Wide gallery of 2 images"
 msgstr ""
 
-#: patterns/gallery/gallery-03.php:18
+#: patterns/gallery/gallery-03.php:19
 msgctxt "Block pattern title."
 msgid "Smaller image with caption accompanied with larger image on the side"
 msgstr ""
 
-#: patterns/gallery/gallery-04.php:18
+#: patterns/gallery/gallery-04.php:19
 msgctxt "Block pattern title."
 msgid "Offset gallery with description"
 msgstr ""
 
-#: patterns/gallery/gallery-05.php:18
+#: patterns/gallery/gallery-05.php:19
 msgctxt "Block pattern title."
 msgid "3 columns with images and text"
 msgstr ""
 
-#: patterns/gallery/gallery-06.php:18
+#: patterns/gallery/gallery-06.php:19
 msgctxt "Block pattern title."
 msgid "3 images with description on the side"
 msgstr ""
 
-#: patterns/gallery/gallery-07.php:18
+#: patterns/gallery/gallery-07.php:19
 msgctxt "Block pattern title."
 msgid "Sticky gallery"
 msgstr ""
 
-#: patterns/gallery/gallery-08.php:18
+#: patterns/gallery/gallery-08.php:19
 msgctxt "Block pattern title."
 msgid "Fullwidth image with offset images with description below"
 msgstr ""
 
-#: patterns/gallery/gallery-09.php:18
+#: patterns/gallery/gallery-09.php:19
 msgctxt "Block pattern title."
 msgid "Tiled fullwidth gallery"
 msgstr ""
 
-#: patterns/gallery/gallery-09.php:20
-#: patterns/portfolio/portfolio-03.php:21
+#: patterns/gallery/gallery-09.php:21
+#: patterns/portfolio/portfolio-03.php:22
 msgctxt "keyword"
 msgid "images"
 msgstr ""
 
+#: patterns/index.php
+msgctxt "Pattern title"
+msgid "Hidden patterns index"
+msgstr ""
+
 #: patterns/intro/intro-01.php:19
 msgctxt "Block pattern title."
-msgid "Page title with background image with zoom in animation, features list, and buttons"
+msgid "Page title with background image, features list, and buttons"
 msgstr ""
 
 #: patterns/intro/intro-01.php:21
 #: patterns/intro/intro-02.php:21
-#: patterns/numbers/numbers-03.php:25
-#: patterns/posts/posts-01.php:22
-#: patterns/pricing/pricing-01.php:20
+#: patterns/numbers/numbers-03.php:26
+#: patterns/posts/posts-01.php:23
+#: patterns/pricing/pricing-01.php:21
 #: patterns/services/services-02.php:21
 msgctxt "keyword"
 msgid "call to action"
@@ -2189,12 +2603,12 @@ msgstr ""
 #: patterns/intro/intro-01.php:23
 #: patterns/intro/intro-02.php:24
 #: patterns/intro/intro-03.php:21
-#: patterns/intro/intro-04.php:20
+#: patterns/intro/intro-04.php:21
 #: patterns/intro/intro-05.php:21
 #: patterns/intro/intro-06.php:21
 #: patterns/site/intro-archive.php:24
 #: patterns/site/intro-blog.php:28
-#: patterns/site/intro-post.php:24
+#: patterns/site/intro-post.php:25
 #: patterns/site/intro-search.php:24
 #: patterns/site/intro.php:24
 msgctxt "keyword"
@@ -2204,17 +2618,17 @@ msgstr ""
 #: patterns/intro/intro-01.php:24
 #: patterns/intro/intro-02.php:25
 #: patterns/intro/intro-03.php:22
-#: patterns/intro/intro-04.php:21
+#: patterns/intro/intro-04.php:22
 #: patterns/intro/intro-05.php:22
 #: patterns/intro/intro-06.php:22
 #: patterns/site/intro-archive.php:25
 #: patterns/site/intro-blog.php:29
-#: patterns/site/intro-post.php:25
+#: patterns/site/intro-post.php:26
 #: patterns/site/intro-search.php:25
 #: patterns/site/intro.php:25
-#: assets/js/block-variations.js:445
-#: assets/js/block-variations.js:500
-#: assets/js/block-variations.js:523
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "title"
 msgstr ""
@@ -2222,12 +2636,12 @@ msgstr ""
 #: patterns/intro/intro-01.php:25
 #: patterns/intro/intro-02.php:26
 #: patterns/intro/intro-03.php:23
-#: patterns/intro/intro-04.php:22
+#: patterns/intro/intro-04.php:23
 #: patterns/intro/intro-05.php:23
 #: patterns/intro/intro-06.php:23
 #: patterns/site/intro-archive.php:26
 #: patterns/site/intro-blog.php:30
-#: patterns/site/intro-post.php:26
+#: patterns/site/intro-post.php:27
 #: patterns/site/intro-search.php:26
 #: patterns/site/intro.php:26
 msgctxt "keyword"
@@ -2237,11 +2651,11 @@ msgstr ""
 #: patterns/intro/intro-01.php:26
 #: patterns/intro/intro-02.php:27
 #: patterns/intro/intro-03.php:24
-#: patterns/intro/intro-04.php:23
+#: patterns/intro/intro-04.php:24
 #: patterns/intro/intro-05.php:24
 #: patterns/intro/intro-06.php:24
 #: patterns/site/intro-blog.php:31
-#: patterns/site/intro-post.php:27
+#: patterns/site/intro-post.php:28
 #: patterns/site/intro-search.php:27
 #: patterns/site/intro.php:27
 msgctxt "keyword"
@@ -2254,7 +2668,7 @@ msgid "Page title with description and 3 features overlapping parallax featured 
 msgstr ""
 
 #: patterns/intro/intro-02.php:23
-#: patterns/services/services-05.php:21
+#: patterns/services/services-05.php:22
 msgctxt "keyword"
 msgid "icons"
 msgstr ""
@@ -2264,7 +2678,7 @@ msgctxt "Block pattern title."
 msgid "Page title with description cut into a featured image cover"
 msgstr ""
 
-#: patterns/intro/intro-04.php:18
+#: patterns/intro/intro-04.php:19
 msgctxt "Block pattern title."
 msgid "Wide featured image followed with post date, title and intro text"
 msgstr ""
@@ -2277,9 +2691,9 @@ msgstr ""
 #: patterns/intro/intro-05.php:25
 #: patterns/intro/intro-06.php:25
 #: patterns/testimonials/testimonials-01.php:21
-#: patterns/testimonials/testimonials-02.php:20
+#: patterns/testimonials/testimonials-02.php:21
 #: patterns/testimonials/testimonials-03.php:21
-#: patterns/testimonials/testimonials-04.php:20
+#: patterns/testimonials/testimonials-04.php:21
 msgctxt "keyword"
 msgid "testimonials"
 msgstr ""
@@ -2299,117 +2713,117 @@ msgctxt "Block pattern title."
 msgid "Custom header image"
 msgstr ""
 
-#: patterns/media/media-01.php:18
+#: patterns/media/media-01.php:19
 msgctxt "Block pattern title."
 msgid "Text and an image in columns with a lot of white space around"
 msgstr ""
 
-#: patterns/media/media-02.php:18
+#: patterns/media/media-02.php:19
 msgctxt "Block pattern title."
 msgid "Description with heading on the side and wide image below"
 msgstr ""
 
-#: patterns/media/media-03.php:18
+#: patterns/media/media-03.php:19
 msgctxt "Block pattern title."
 msgid "Images with description text in 2 columns"
 msgstr ""
 
-#: patterns/media/media-04.php:18
+#: patterns/media/media-04.php:19
 msgctxt "Block pattern title."
 msgid "Title with description overlaying parallax image"
 msgstr ""
 
-#: patterns/media/media-04.php:20
+#: patterns/media/media-04.php:21
 msgctxt "keyword"
 msgid "gradient"
 msgstr ""
 
-#: patterns/media/media-05.php:18
+#: patterns/media/media-05.php:19
 msgctxt "Block pattern title."
 msgid "Image with right padding"
 msgstr ""
 
-#: patterns/media/media-06.php:18
+#: patterns/media/media-06.php:19
 msgctxt "Block pattern title."
 msgid "Fullwidth parallax image"
 msgstr ""
 
-#: patterns/media/media-07.php:18
+#: patterns/media/media-07.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of image with description"
 msgstr ""
 
-#: patterns/media/media-08.php:18
+#: patterns/media/media-08.php:19
 msgctxt "Block pattern title."
 msgid "Cover with large centered text"
 msgstr ""
 
-#: patterns/numbers/numbers-01.php:18
+#: patterns/numbers/numbers-01.php:19
 msgctxt "Block pattern title."
 msgid "Numbers in 4 columns with description"
 msgstr ""
 
-#: patterns/numbers/numbers-01.php:20
-#: patterns/numbers/numbers-02.php:20
-#: patterns/numbers/numbers-03.php:20
-#: patterns/numbers/numbers-04.php:23
+#: patterns/numbers/numbers-01.php:21
+#: patterns/numbers/numbers-02.php:21
+#: patterns/numbers/numbers-03.php:21
+#: patterns/numbers/numbers-04.php:24
 #: patterns/numbers/numbers-05.php:22
 msgctxt "keyword"
 msgid "numbers"
 msgstr ""
 
-#: patterns/numbers/numbers-01.php:21
-#: patterns/numbers/numbers-02.php:24
+#: patterns/numbers/numbers-01.php:22
+#: patterns/numbers/numbers-02.php:25
 msgctxt "keyword"
 msgid "stats"
 msgstr ""
 
-#: patterns/numbers/numbers-02.php:18
+#: patterns/numbers/numbers-02.php:19
 msgctxt "Block pattern title."
 msgid "Progress bar"
 msgstr ""
 
-#: patterns/numbers/numbers-02.php:21
-#: patterns/numbers/numbers-03.php:24
+#: patterns/numbers/numbers-02.php:22
+#: patterns/numbers/numbers-03.php:25
 msgctxt "keyword"
 msgid "services"
 msgstr ""
 
-#: patterns/numbers/numbers-02.php:22
-#: patterns/numbers/numbers-03.php:22
+#: patterns/numbers/numbers-02.php:23
+#: patterns/numbers/numbers-03.php:23
 msgctxt "keyword"
 msgid "features"
 msgstr ""
 
-#: patterns/numbers/numbers-02.php:23
+#: patterns/numbers/numbers-02.php:24
 msgctxt "keyword"
 msgid "percentage"
 msgstr ""
 
-#: patterns/numbers/numbers-03.php:18
+#: patterns/numbers/numbers-03.php:19
 msgctxt "Block pattern title."
 msgid "3 numbered features"
 msgstr ""
 
-#: patterns/numbers/numbers-03.php:21
-#: patterns/numbers/numbers-04.php:24
+#: patterns/numbers/numbers-03.php:22
+#: patterns/numbers/numbers-04.php:25
 #: patterns/numbers/numbers-05.php:23
 #: patterns/services/services-06.php:22
 msgctxt "keyword"
 msgid "steps"
 msgstr ""
 
-#: patterns/numbers/numbers-04.php:18
+#: patterns/numbers/numbers-04.php:19
 msgctxt "Block pattern title."
 msgid "History section with years"
 msgstr ""
 
-#: patterns/numbers/numbers-04.php:21
+#: patterns/numbers/numbers-04.php:22
 msgctxt "keyword"
 msgid "year"
 msgstr ""
 
-#: patterns/numbers/numbers-04.php:22
+#: patterns/numbers/numbers-04.php:23
 msgctxt "keyword"
 msgid "timeline"
 msgstr ""
@@ -2452,12 +2866,12 @@ msgstr ""
 #: patterns/page/project-1.php:24
 #: patterns/page/service-1.php:24
 #: patterns/page/services-1.php:24
-#: patterns/page/soon-1.php:24
+#: patterns/page/soon-1.php:25
 #: patterns/page/team-1.php:24
 #: patterns/page/testimonials-1.php:24
-#: patterns/portfolio/portfolio-03.php:22
+#: patterns/portfolio/portfolio-03.php:23
 #: patterns/site/content-404.php:20
-#: patterns/site/content-with-sidebar.php:20
+#: patterns/site/content-with-sidebar.php:21
 msgctxt "keyword"
 msgid "page content"
 msgstr ""
@@ -2551,13 +2965,13 @@ msgid "Services page %s"
 msgstr ""
 
 #. translators: %s: additional notes.
-#: patterns/page/soon-1.php:20
+#: patterns/page/soon-1.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Coming soon page%s"
 msgstr ""
 
-#: patterns/page/soon-1.php:21
+#: patterns/page/soon-1.php:22
 msgctxt "Page content additional notes."
 msgid " (use \"Content only\" template)"
 msgstr ""
@@ -2570,11 +2984,11 @@ msgid "Team page %s"
 msgstr ""
 
 #: patterns/page/team-1.php:25
-#: patterns/team/team-00.php:22
-#: patterns/team/team-01.php:22
-#: patterns/team/team-02.php:22
-#: patterns/team/team-03.php:23
-#: patterns/team/team-04.php:22
+#: patterns/team/team-00.php:23
+#: patterns/team/team-01.php:23
+#: patterns/team/team-02.php:23
+#: patterns/team/team-03.php:24
+#: patterns/team/team-04.php:23
 msgctxt "keyword"
 msgid "staff"
 msgstr ""
@@ -2607,45 +3021,54 @@ msgid "Projects list item"
 msgstr ""
 
 #: patterns/portfolio/portfolio-00.php:21
-#: patterns/portfolio/portfolio-01.php:21
-#: patterns/portfolio/portfolio-02.php:20
-#: patterns/portfolio/portfolio-03.php:23
-#: assets/js/block-variations.js:205
+#: patterns/portfolio/portfolio-01.php:22
+#: patterns/portfolio/portfolio-02.php:21
+#: patterns/portfolio/portfolio-03.php:24
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "portfolio"
 msgstr ""
 
 #: patterns/portfolio/portfolio-00.php:22
-#: patterns/portfolio/portfolio-02.php:22
-#: patterns/site/query-featured.php:30
-#: patterns/site/query-search.php:27
-#: patterns/site/query-with-sidebar.php:27
-#: patterns/site/query.php:27
+#: patterns/portfolio/portfolio-02.php:23
+#: patterns/site/query-featured.php:31
+#: patterns/site/query-search.php:28
+#: patterns/site/query-with-sidebar.php:28
+#: patterns/site/query.php:28
 msgctxt "keyword"
 msgid "posts"
+msgstr ""
+
+#: patterns/portfolio/portfolio-00.php:33
+msgid "Project"
 msgstr ""
 
 #: patterns/portfolio/portfolio-00.php:64
 msgid "Category"
 msgstr ""
 
-#: patterns/portfolio/portfolio-01.php:18
+#: patterns/portfolio/portfolio-01.php:19
 msgctxt "Block pattern title."
 msgid "Wide project details"
 msgstr ""
 
-#: patterns/portfolio/portfolio-01.php:31
+#: patterns/portfolio/portfolio-01.php:28
+#: patterns/portfolio/portfolio-01.php:32
 msgid "Details"
 msgstr ""
 
-#: patterns/portfolio/portfolio-02.php:18
+#: patterns/portfolio/portfolio-02.php:19
 msgctxt "Block pattern title."
 msgid "List of projects"
 msgstr ""
 
-#: patterns/portfolio/portfolio-03.php:18
+#: patterns/portfolio/portfolio-03.php:19
 msgctxt "Block pattern title."
 msgid "Project image gallery with sticky description on the side"
+msgstr ""
+
+#: patterns/portfolio/portfolio-03.php:37
+msgid "Project content"
 msgstr ""
 
 #: patterns/posts/posts-00.php:19
@@ -2654,50 +3077,50 @@ msgid "Posts list item"
 msgstr ""
 
 #: patterns/posts/posts-00.php:21
-#: patterns/posts/posts-01.php:20
+#: patterns/posts/posts-01.php:21
 #: patterns/site/intro-blog.php:27
-#: assets/js/block-variations.js:690
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "news"
 msgstr ""
 
-#: patterns/posts/posts-01.php:18
+#: patterns/posts/posts-01.php:19
 msgctxt "Block pattern title."
 msgid "Posts list in 3 columns with description, list of categories and a button"
 msgstr ""
 
-#: patterns/posts/posts-01.php:21
+#: patterns/posts/posts-01.php:22
 msgctxt "keyword"
 msgid "filter"
 msgstr ""
 
-#: patterns/posts/posts-01.php:52
-#: patterns/posts/posts-02.php:36
+#: patterns/posts/posts-01.php:53
+#: patterns/posts/posts-02.php:37
 msgctxt "\"Blog\" page URL relative to home page."
 msgid "/blog/"
 msgstr ""
 
-#: patterns/posts/posts-01.php:52
-#: patterns/posts/posts-02.php:36
+#: patterns/posts/posts-01.php:53
+#: patterns/posts/posts-02.php:37
 msgctxt "Posts"
 msgid "See all →"
 msgstr ""
 
-#: patterns/posts/posts-02.php:18
+#: patterns/posts/posts-02.php:19
 msgctxt "Block pattern title."
 msgid "Simple, text-only list of recent posts"
 msgstr ""
 
-#: patterns/posts/posts-02.php:30
+#: patterns/posts/posts-02.php:31
 msgid "Recent posts"
 msgstr ""
 
-#: patterns/posts/posts-02.php:70
+#: patterns/posts/posts-02.php:71
 msgctxt "As in \"written by [author name]\"."
 msgid "by"
 msgstr ""
 
-#: patterns/posts/posts-02.php:76
+#: patterns/posts/posts-02.php:77
 msgctxt "In category."
 msgid "in"
 msgstr ""
@@ -2708,21 +3131,21 @@ msgctxt "Block pattern title."
 msgid "Next/previous post navigation"
 msgstr ""
 
-#: patterns/pricing/pricing-01.php:18
+#: patterns/pricing/pricing-01.php:19
 msgctxt "Block pattern title."
 msgid "Pricing plans in 3 columns"
 msgstr ""
 
-#: patterns/pricing/pricing-01.php:31
+#: patterns/pricing/pricing-01.php:32
 msgid "Pricing plans"
 msgstr ""
 
-#: patterns/pricing/pricing-02.php:18
+#: patterns/pricing/pricing-02.php:19
 msgctxt "Block pattern title."
 msgid "Restaurant food menu"
 msgstr ""
 
-#: patterns/pricing/pricing-02.php:20
+#: patterns/pricing/pricing-02.php:21
 msgctxt "keyword"
 msgid "meals"
 msgstr ""
@@ -2737,17 +3160,17 @@ msgctxt "Block pattern title."
 msgid "Columns of features with large letters instead of icons"
 msgstr ""
 
-#: patterns/services/services-03.php:18
+#: patterns/services/services-03.php:19
 msgctxt "Block pattern title."
 msgid "Process table with icons"
 msgstr ""
 
-#: patterns/services/services-04.php:18
+#: patterns/services/services-04.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with 3 columns of images with short description below"
 msgstr ""
 
-#: patterns/services/services-05.php:18
+#: patterns/services/services-05.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of icon with description on the side"
 msgstr ""
@@ -2757,25 +3180,25 @@ msgctxt "Block pattern title."
 msgid "3 descending columns of icons with description"
 msgstr ""
 
-#: patterns/site/comments.php:18
+#: patterns/site/comments.php:19
 msgctxt "Block pattern title."
 msgid "Comments"
 msgstr ""
 
-#: patterns/site/comments.php:20
+#: patterns/site/comments.php:21
 #: patterns/site/entry-query-featured.php:26
-#: patterns/site/entry-query.php:26
+#: patterns/site/entry-query.php:27
 msgctxt "keyword"
 msgid "post"
 msgstr ""
 
-#: patterns/site/comments.php:21
+#: patterns/site/comments.php:22
 #: patterns/site/content-404.php:21
-#: patterns/site/content-with-sidebar.php:21
-#: patterns/site/entry-meta-bottom.php:29
+#: patterns/site/content-with-sidebar.php:22
+#: patterns/site/entry-meta-bottom.php:30
 #: patterns/site/entry-navigation.php:21
 #: patterns/site/entry-query-featured.php:28
-#: patterns/site/entry-query.php:28
+#: patterns/site/entry-query.php:29
 #: patterns/site/footer-centered.php:29
 #: patterns/site/footer-minimal.php:29
 #: patterns/site/footer.php:29
@@ -2783,22 +3206,31 @@ msgstr ""
 #: patterns/site/header.php:31
 #: patterns/site/intro-archive.php:27
 #: patterns/site/intro-blog.php:32
-#: patterns/site/intro-post.php:28
+#: patterns/site/intro-post.php:29
 #: patterns/site/intro-search.php:28
 #: patterns/site/intro.php:28
-#: patterns/site/query-featured.php:31
-#: patterns/site/query-search.php:28
-#: patterns/site/query-with-sidebar.php:28
-#: patterns/site/query.php:28
+#: patterns/site/navigation-overlay.php:26
+#: patterns/site/query-featured.php:32
+#: patterns/site/query-search.php:29
+#: patterns/site/query-with-sidebar.php:29
+#: patterns/site/query.php:29
 #: patterns/site/sidebar.php:26
 #: patterns/site/taxonomy-category-select.php:26
 msgctxt "keyword"
 msgid "site builder"
 msgstr ""
 
-#: patterns/site/comments.php:37
+#: patterns/site/comments.php:34
+msgid "Comments title"
+msgstr ""
+
+#: patterns/site/comments.php:38
 msgctxt "Title of comments section"
 msgid "Comments"
+msgstr ""
+
+#: patterns/site/comments.php:62
+msgid "Comment meta data"
 msgstr ""
 
 #: patterns/site/content-404.php:18
@@ -2814,57 +3246,67 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Try a search."
 msgstr ""
 
-#: patterns/site/content-with-sidebar.php:18
+#: patterns/site/content-with-sidebar.php:19
 msgctxt "Block pattern title."
 msgid "Page/post content with sidebar"
 msgstr ""
 
+#: patterns/site/content-with-sidebar.php:54
+#: patterns/site/query-with-sidebar.php:78
+msgid "Sidebar container"
+msgstr ""
+
 #. translators: %s: context.
-#: patterns/site/entry-meta-bottom.php:20
+#: patterns/site/entry-meta-bottom.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Post meta: %s"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:21
+#: patterns/site/entry-meta-bottom.php:22
 msgctxt "Post meta context."
 msgid "After post content"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:24
+#: patterns/site/entry-meta-bottom.php:25
 #: patterns/site/taxonomy-category-select.php:21
 msgctxt "keyword"
 msgid "taxonomy"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:25
+#: patterns/site/entry-meta-bottom.php:26
 #: patterns/site/taxonomy-category-select.php:22
 msgctxt "keyword"
 msgid "category"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:26
+#: patterns/site/entry-meta-bottom.php:27
 msgctxt "keyword"
 msgid "tags"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:27
-#: patterns/team/team-03.php:22
+#: patterns/site/entry-meta-bottom.php:28
+#: patterns/team/team-03.php:23
 msgctxt "keyword"
 msgid "author"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:28
+#: patterns/site/entry-meta-bottom.php:29
 msgctxt "keyword"
 msgid "bio"
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:42
+#: patterns/site/entry-meta-bottom.php:43
 msgid "Tags: "
 msgstr ""
 
-#: patterns/site/entry-meta-bottom.php:48
+#: patterns/site/entry-meta-bottom.php:49
 msgid "Category: "
+msgstr ""
+
+#: patterns/site/entry-meta-bottom.php:57
+#: patterns/site/entry-meta-bottom.php:61
+msgid "Related posts"
 msgstr ""
 
 #: patterns/site/entry-navigation.php:20
@@ -2874,7 +3316,7 @@ msgstr ""
 
 #. translators: %s: context.
 #: patterns/site/entry-query-featured.php:20
-#: patterns/site/entry-query.php:20
+#: patterns/site/entry-query.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Query entry: %s"
@@ -2886,29 +3328,38 @@ msgid "Featured"
 msgstr ""
 
 #: patterns/site/entry-query-featured.php:24
-#: patterns/site/entry-query.php:24
+#: patterns/site/entry-query.php:25
 msgctxt "keyword"
 msgid "item"
 msgstr ""
 
 #: patterns/site/entry-query-featured.php:25
-#: patterns/site/entry-query.php:25
+#: patterns/site/entry-query.php:26
 msgctxt "keyword"
 msgid "entry"
 msgstr ""
 
 #: patterns/site/entry-query-featured.php:27
-#: patterns/site/entry-query.php:27
+#: patterns/site/entry-query.php:28
 msgctxt "keyword"
 msgid "page"
 msgstr ""
 
-#: patterns/site/entry-query.php:21
+#: patterns/site/entry-query.php:22
 msgctxt "Query entry context."
 msgid "Default"
 msgstr ""
 
-#: patterns/site/entry-query.php:62
+#: patterns/site/entry-query.php:36
+msgid "Post"
+msgstr ""
+
+#: patterns/site/entry-query.php:44
+#: patterns/site/intro-post.php:46
+msgid "Post meta data"
+msgstr ""
+
+#: patterns/site/entry-query.php:63
 msgid "&rarr; Continue Reading"
 msgstr ""
 
@@ -2955,21 +3406,15 @@ msgctxt "keyword"
 msgid "copyright"
 msgstr ""
 
-#: patterns/site/footer-centered.php:43
+#: patterns/site/footer-centered.php:60
 msgctxt "Navigational menu label."
 msgid "Footer"
 msgstr ""
 
-#: patterns/site/footer-centered.php:51
+#: patterns/site/footer-centered.php:69
 #: patterns/site/footer-minimal.php:46
 #: patterns/site/footer.php:92
 msgid "Copyright &copy; "
-msgstr ""
-
-#: patterns/site/footer-centered.php:51
-#: patterns/site/footer-minimal.php:50
-#: patterns/site/footer.php:96
-msgid "To the top"
 msgstr ""
 
 #: patterns/site/footer-minimal.php:22
@@ -2982,37 +3427,41 @@ msgctxt "Site footer context."
 msgid "Default"
 msgstr ""
 
+#: patterns/site/footer.php:43
+msgid "Logo"
+msgstr ""
+
 #: patterns/site/footer.php:78
 msgid "About Us"
 msgstr ""
 
-#: patterns/site/footer.php:121
+#: patterns/site/footer.php:137
 msgctxt "Navigational menu label."
 msgid "Footer, primary"
 msgstr ""
 
-#: patterns/site/footer.php:135
+#: patterns/site/footer.php:152
 msgid "Services"
 msgstr ""
 
-#: patterns/site/footer.php:138
+#: patterns/site/footer.php:171
 msgctxt "Navigational menu label."
 msgid "Footer, secondary"
 msgstr ""
 
-#: patterns/site/footer.php:139
+#: patterns/site/footer.php:173
 msgid "First service"
 msgstr ""
 
-#: patterns/site/footer.php:140
+#: patterns/site/footer.php:174
 msgid "Next service"
 msgstr ""
 
-#: patterns/site/footer.php:141
+#: patterns/site/footer.php:175
 msgid "Another service"
 msgstr ""
 
-#: patterns/site/footer.php:142
+#: patterns/site/footer.php:176
 msgid "Last service"
 msgstr ""
 
@@ -3037,6 +3486,7 @@ msgstr ""
 
 #: patterns/site/header-alt.php:26
 #: patterns/site/header.php:26
+#: patterns/site/navigation-overlay.php:23
 msgctxt "keyword"
 msgid "navigation"
 msgstr ""
@@ -3055,12 +3505,14 @@ msgstr ""
 
 #: patterns/site/header-alt.php:30
 #: patterns/site/header.php:30
+#: patterns/site/navigation-overlay.php:25
 msgctxt "keyword"
 msgid "cart"
 msgstr ""
 
-#: patterns/site/header-alt.php:63
-#: patterns/site/header.php:64
+#: patterns/site/header-alt.php:79
+#: patterns/site/header.php:84
+#: patterns/site/navigation-overlay.php:88
 msgctxt "Navigational menu label."
 msgid "Primary"
 msgstr ""
@@ -3071,12 +3523,12 @@ msgid "Default"
 msgstr ""
 
 #: patterns/site/header.php:29
+#: patterns/site/navigation-overlay.php:24
 msgctxt "keyword"
 msgid "user account"
 msgstr ""
 
-#: patterns/site/header.php:75
-#: patterns/site/header.php:77
+#: patterns/site/header.php:116
 msgctxt "Navigational menu label."
 msgid "Secondary"
 msgstr ""
@@ -3084,7 +3536,7 @@ msgstr ""
 #. translators: %s: context.
 #: patterns/site/intro-archive.php:20
 #: patterns/site/intro-blog.php:21
-#: patterns/site/intro-post.php:20
+#: patterns/site/intro-post.php:21
 #: patterns/site/intro-search.php:20
 #: patterns/site/intro.php:20
 #, php-format
@@ -3119,7 +3571,7 @@ msgstr ""
 msgid "%s blog"
 msgstr ""
 
-#: patterns/site/intro-post.php:21
+#: patterns/site/intro-post.php:22
 msgctxt "Intro context."
 msgid "Post"
 msgstr ""
@@ -3139,27 +3591,46 @@ msgctxt "Intro context."
 msgid "Page"
 msgstr ""
 
+#: patterns/site/navigation-overlay.php:21
+msgctxt "Block pattern title."
+msgid "Navigation overlay"
+msgstr ""
+
+#: patterns/site/navigation-overlay.php:27
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "responsive"
+msgstr ""
+
+#: patterns/site/navigation-overlay.php:28
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "mobile"
+msgstr ""
+
+#: patterns/site/navigation-overlay.php:29
+msgctxt "keyword"
+msgid "small screen"
+msgstr ""
+
+#: patterns/site/navigation-overlay.php:92
+msgctxt "Page title"
+msgid "Our services"
+msgstr ""
+
 #. translators: %s: context.
-#: patterns/site/query-featured.php:23
-#: patterns/site/query-search.php:20
-#: patterns/site/query-with-sidebar.php:20
-#: patterns/site/query.php:20
+#: patterns/site/query-featured.php:24
+#: patterns/site/query-search.php:21
+#: patterns/site/query-with-sidebar.php:21
+#: patterns/site/query.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Query loop: %s"
 msgstr ""
 
-#: patterns/site/query-featured.php:24
+#: patterns/site/query-featured.php:25
 msgctxt "Query loop context."
 msgid "Featured posts"
-msgstr ""
-
-#: patterns/site/query-featured.php:27
-#: patterns/site/query-search.php:24
-#: patterns/site/query-with-sidebar.php:24
-#: patterns/site/query.php:24
-msgctxt "keyword"
-msgid "loop"
 msgstr ""
 
 #: patterns/site/query-featured.php:28
@@ -3167,7 +3638,7 @@ msgstr ""
 #: patterns/site/query-with-sidebar.php:25
 #: patterns/site/query.php:25
 msgctxt "keyword"
-msgid "list"
+msgid "loop"
 msgstr ""
 
 #: patterns/site/query-featured.php:29
@@ -3175,33 +3646,41 @@ msgstr ""
 #: patterns/site/query-with-sidebar.php:26
 #: patterns/site/query.php:26
 msgctxt "keyword"
+msgid "list"
+msgstr ""
+
+#: patterns/site/query-featured.php:30
+#: patterns/site/query-search.php:27
+#: patterns/site/query-with-sidebar.php:27
+#: patterns/site/query.php:27
+msgctxt "keyword"
 msgid "items"
 msgstr ""
 
-#: patterns/site/query-search.php:21
+#: patterns/site/query-search.php:22
 msgctxt "Query loop context."
 msgid "Search results"
 msgstr ""
 
-#: patterns/site/query-search.php:62
+#: patterns/site/query-search.php:64
 msgid "It looks like nothing was found."
 msgstr ""
 
-#: patterns/site/query-search.php:62
+#: patterns/site/query-search.php:64
 msgid "Check out our latest news:"
 msgstr ""
 
-#: patterns/site/query-with-sidebar.php:21
+#: patterns/site/query-with-sidebar.php:22
 msgctxt "Query loop context."
 msgid "With sidebar"
 msgstr ""
 
 #: patterns/site/query-with-sidebar.php:65
-#: patterns/site/query.php:59
+#: patterns/site/query.php:58
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: patterns/site/query.php:21
+#: patterns/site/query.php:22
 msgctxt "Query loop context."
 msgid "Default"
 msgstr ""
@@ -3214,6 +3693,10 @@ msgstr ""
 #: patterns/site/sidebar.php:25
 msgctxt "keyword"
 msgid "widget"
+msgstr ""
+
+#: patterns/site/sidebar.php:44
+msgid "Sidebar"
 msgstr ""
 
 #: patterns/site/sidebar.php:45
@@ -3253,19 +3736,9 @@ msgstr ""
 msgid "Browse by topic:"
 msgstr ""
 
-#: patterns/team/team-00.php:18
+#: patterns/team/team-00.php:19
 msgctxt "Block pattern title."
 msgid "Single person info card"
-msgstr ""
-
-#: patterns/team/team-00.php:20
-#: patterns/team/team-01.php:20
-#: patterns/team/team-02.php:20
-#: patterns/team/team-03.php:20
-#: patterns/team/team-04.php:20
-#: assets/js/block-variations.js:207
-msgctxt "keyword"
-msgid "card"
 msgstr ""
 
 #: patterns/team/team-00.php:21
@@ -3273,84 +3746,102 @@ msgstr ""
 #: patterns/team/team-02.php:21
 #: patterns/team/team-03.php:21
 #: patterns/team/team-04.php:21
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "card"
+msgstr ""
+
+#: patterns/team/team-00.php:22
+#: patterns/team/team-01.php:22
+#: patterns/team/team-02.php:22
+#: patterns/team/team-03.php:22
+#: patterns/team/team-04.php:22
 msgctxt "keyword"
 msgid "team"
 msgstr ""
 
-#: patterns/team/team-00.php:23
-#: patterns/team/team-01.php:23
-#: patterns/team/team-02.php:23
-#: patterns/team/team-03.php:24
-#: patterns/team/team-04.php:23
+#: patterns/team/team-00.php:24
+#: patterns/team/team-01.php:24
+#: patterns/team/team-02.php:24
+#: patterns/team/team-03.php:25
+#: patterns/team/team-04.php:24
 msgctxt "keyword"
 msgid "person"
 msgstr ""
 
-#: patterns/team/team-01.php:18
+#: patterns/team/team-00.php:35
+msgid "Person card"
+msgstr ""
+
+#: patterns/team/team-01.php:19
 msgctxt "Block pattern title."
 msgid "3 team members info with heading and description on the side"
 msgstr ""
 
-#: patterns/team/team-02.php:18
+#: patterns/team/team-02.php:19
 msgctxt "Block pattern title."
 msgid "3 team members and careers call to action"
 msgstr ""
 
-#: patterns/team/team-02.php:86
+#: patterns/team/team-02.php:77
 msgid "Careers"
 msgstr ""
 
-#: patterns/team/team-03.php:18
+#: patterns/team/team-03.php:19
 msgctxt "Block pattern title."
 msgid "Person name badge with photo and job position"
 msgstr ""
 
-#: patterns/team/team-04.php:18
+#: patterns/team/team-03.php:36
+msgid "Name badge"
+msgstr ""
+
+#: patterns/team/team-04.php:19
 msgctxt "Block pattern title."
 msgid "\"About me\" page content"
 msgstr ""
 
-#: patterns/template/404.php:18
+#: patterns/template/404.php:21
 msgctxt "Block pattern title."
 msgid "Error 404 template"
 msgstr ""
 
-#: patterns/template/archive-with-sidebar.php:18
+#: patterns/template/archive-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Archive with sidebar template"
 msgstr ""
 
-#: patterns/template/archive.php:18
+#: patterns/template/archive.php:21
 msgctxt "Block pattern title."
 msgid "Archive template"
 msgstr ""
 
-#: patterns/template/custom-with-sidebar.php:18
+#: patterns/template/custom-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Singular with sidebar template"
 msgstr ""
 
-#: patterns/template/home-with-sidebar.php:18
+#: patterns/template/home-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Blog home with sidebar template"
 msgstr ""
 
-#: patterns/template/home.php:18
+#: patterns/template/home.php:21
 msgctxt "Block pattern title."
 msgid "Blog home template"
 msgstr ""
 
-#: patterns/template/page.php:18
+#: patterns/template/page.php:21
 msgctxt "Block pattern title."
 msgid "Page template"
 msgstr ""
 
-#: patterns/template/search.php:18
+#: patterns/template/search.php:21
 msgctxt "Block pattern title."
 msgid "Search template"
 msgstr ""
 
-#: patterns/template/single.php:18
+#: patterns/template/single.php:21
 msgctxt "Block pattern title."
 msgid "Single template"
 msgstr ""
@@ -3360,9 +3851,17 @@ msgctxt "Block pattern title."
 msgid "Quote with an image with padding on the side"
 msgstr ""
 
-#: patterns/testimonials/testimonials-02.php:18
+#: patterns/testimonials/testimonials-01.php:31
+msgid "Testimony"
+msgstr ""
+
+#: patterns/testimonials/testimonials-02.php:19
 msgctxt "Block pattern title."
 msgid "List of logos with 2 quotes below"
+msgstr ""
+
+#: patterns/testimonials/testimonials-02.php:46
+msgid "Logos & testimonials"
 msgstr ""
 
 #: patterns/testimonials/testimonials-03.php:19
@@ -3370,47 +3869,51 @@ msgctxt "Block pattern title."
 msgid "Quotes with star rating, title and source info"
 msgstr ""
 
-#: patterns/testimonials/testimonials-04.php:18
+#: patterns/testimonials/testimonials-03.php:27
+msgid "Reviews"
+msgstr ""
+
+#: patterns/testimonials/testimonials-04.php:19
 msgctxt "Block pattern title."
 msgid "2 columns of quotes on a background image"
 msgstr ""
 
-#: patterns/text/heading-01.php:18
+#: patterns/text/heading-01.php:19
 msgctxt "Block pattern title."
 msgid "Heading with horizontal line on the side"
 msgstr ""
 
-#: patterns/text/heading-02.php:18
+#: patterns/text/heading-02.php:19
 msgctxt "Block pattern title."
 msgid "Uppercase H2 heading"
 msgstr ""
 
-#: patterns/text/heading-03.php:18
+#: patterns/text/heading-03.php:19
 msgctxt "Block pattern title."
 msgid "Uppercase H3 heading"
 msgstr ""
 
-#: patterns/text/text-01.php:18
+#: patterns/text/text-01.php:19
 msgctxt "Block pattern title."
 msgid "Giant text"
 msgstr ""
 
-#: patterns/text/text-02.php:18
+#: patterns/text/text-02.php:19
 msgctxt "Block pattern title."
 msgid "Intro paragraph with drop cap and classic paragraph"
 msgstr ""
 
-#: patterns/text/text-03.php:18
+#: patterns/text/text-03.php:19
 msgctxt "Block pattern title."
 msgid "Centered bold text"
 msgstr ""
 
-#: patterns/text/text-04.php:18
+#: patterns/text/text-04.php:19
 msgctxt "Block pattern title."
 msgid "Big text on the side with highlighted word"
 msgstr ""
 
-#: patterns/text/text-04.php:20
+#: patterns/text/text-04.php:21
 msgctxt "as highlight; keyword"
 msgid "mark"
 msgstr ""
@@ -3431,299 +3934,378 @@ msgstr ""
 msgid "With sidebar"
 msgstr ""
 
-#: assets/js/block-variations.js:21
-msgid "Site header"
-msgstr ""
-
-#: assets/js/block-variations.js:36
-msgid "Intro (page header)"
-msgstr ""
-
-#: assets/js/block-variations.js:44
-msgctxt "keyword"
-msgid "page title"
-msgstr ""
-
-#: assets/js/block-variations.js:61
-msgid "Site footer"
-msgstr ""
-
-#: assets/js/block-variations.js:87
-msgid "Wide 4 columns"
-msgstr ""
-
-#: assets/js/block-variations.js:105
-msgid "Wide 5 columns"
-msgstr ""
-
-#: assets/js/block-variations.js:132
-msgid "Wide 6 columns"
-msgstr ""
-
-#: assets/js/block-variations.js:160
-msgid "Golden ratio"
-msgstr ""
-
-#: assets/js/block-variations.js:180
-msgid "Cover"
-msgstr ""
-
-#: assets/js/block-variations.js:182
-#: assets/js/block-variations.js:203
-#: assets/js/block-variations.js:233
-#: assets/js/block-variations.js:269
-#: assets/js/block-variations.js:339
-#: assets/js/block-variations.js:360
-#: assets/js/block-variations.js:381
-#: assets/js/block-variations.js:402
-msgctxt "keyword"
-msgid "background"
-msgstr ""
-
-#: assets/js/block-variations.js:183
-#: assets/js/block-variations.js:204
-#: assets/js/block-variations.js:234
-#: assets/js/block-variations.js:270
-msgctxt "keyword"
-msgid "section"
-msgstr ""
-
-#: assets/js/block-variations.js:201
-msgid "Cover with content on hover"
-msgstr ""
-
-#: assets/js/block-variations.js:206
-msgctxt "keyword"
-msgid "project"
-msgstr ""
-
-#: assets/js/block-variations.js:231
-msgid "Cover with blurred image"
-msgstr ""
-
-#: assets/js/block-variations.js:267
-msgid "Cover with backdrop blur column"
-msgstr ""
-
-#: assets/js/block-variations.js:337
-msgid "Dark group with backdrop blur"
-msgstr ""
-
-#: assets/js/block-variations.js:358
-msgid "Light group with backdrop blur"
-msgstr ""
-
-#: assets/js/block-variations.js:379
-msgid "Primary color group with backdrop blur"
-msgstr ""
-
-#: assets/js/block-variations.js:400
-msgid "Group with repeating semi-transparent background pattern"
-msgstr ""
-
-#: assets/js/block-variations.js:404
-msgctxt "keyword"
-msgid "pattern"
-msgstr ""
-
-#: assets/js/block-variations.js:443
-msgid "Heading with horizontal line"
-msgstr ""
-
-#: assets/js/block-variations.js:446
-#: assets/js/block-variations.js:501
-#: assets/js/block-variations.js:524
-msgctxt "keyword"
-msgid "uppercase"
-msgstr ""
-
-#: assets/js/block-variations.js:447
-#: assets/js/block-variations.js:502
-#: assets/js/block-variations.js:525
-msgctxt "keyword"
-msgid "letter spacing"
-msgstr ""
-
-#: assets/js/block-variations.js:448
-msgctxt "keyword"
-msgid "separator"
-msgstr ""
-
-#: assets/js/block-variations.js:449
-msgctxt "keyword"
-msgid "border"
-msgstr ""
-
-#: assets/js/block-variations.js:498
-msgid "Uppercase H2 heading"
-msgstr ""
-
-#: assets/js/block-variations.js:521
-msgid "Uppercase H3 heading"
-msgstr ""
-
-#: assets/js/block-variations.js:549
-msgid "Use header image"
-msgstr ""
-
-#: assets/js/block-variations.js:551
-#: assets/js/block-variations.js:580
-msgctxt "keyword"
-msgid "decoration"
-msgstr ""
-
-#: assets/js/block-variations.js:552
-#: assets/js/block-variations.js:581
-msgctxt "keyword"
-msgid "custom header"
-msgstr ""
-
-#: assets/js/block-variations.js:554
-#: assets/js/block-variations.js:583
-msgctxt "keyword"
-msgid "intro"
-msgstr ""
-
-#: assets/js/block-variations.js:578
-msgid "Use header image (flipped)"
-msgstr ""
-
-#: assets/js/block-variations.js:604
-msgid "Media & Text with heading and paragraph"
-msgstr ""
-
-#: assets/js/block-variations.js:620
-msgid "Media & Text with icon and description"
-msgstr ""
-
-#: assets/js/block-variations.js:622
-msgctxt "keyword"
-msgid "feature"
-msgstr ""
-
-#: assets/js/block-variations.js:623
-msgctxt "keyword"
-msgid "service"
-msgstr ""
-
-#: assets/js/block-variations.js:664
-msgid "Text & Media"
-msgstr ""
-
-#: assets/js/block-variations.js:666
-msgctxt "keyword"
-msgid "media & text"
-msgstr ""
-
-#: assets/js/block-variations.js:667
-msgctxt "keyword"
-msgid "media"
-msgstr ""
-
-#: assets/js/block-variations.js:668
-msgctxt "keyword"
-msgid "text"
-msgstr ""
-
-#: assets/js/block-variations.js:670
-msgctxt "keyword"
-msgid "video"
-msgstr ""
-
-#: assets/js/block-variations.js:687
-msgid "3 Recent Posts"
-msgstr ""
-
-#: assets/js/block-variations.js:689
-msgctxt "keyword"
-msgid "latest posts"
-msgstr ""
-
-#: assets/js/block-variations.js:691
-msgctxt "keyword"
-msgid "inline"
-msgstr ""
-
-#: assets/js/block-variations.js:692
-msgctxt "keyword"
-msgid "row"
-msgstr ""
-
-#: assets/js/block-variations.js:737
-msgid "Spacer"
-msgstr ""
-
-#: assets/js/block-variations.js:739
-msgctxt "keyword"
-msgid "gap"
-msgstr ""
-
-#: assets/js/block-variations.js:759
-msgid "Grid"
-msgstr ""
-
-#: assets/js/block-variations.js:760
-msgid "Arrange blocks in a grid."
-msgstr ""
-
-#: assets/js/rich-text-format.js:21
-#: assets/js/rich-text-format.js:29
-msgctxt "Text format label."
-msgid "Accessibly hidden"
-msgstr ""
-
-#: assets/js/rich-text-format.js:42
-#: assets/js/rich-text-format.js:53
+#: assets/js/block-editor.min.js
 msgctxt "Text format label."
 msgid "Hidden for assistive technology"
 msgstr ""
 
-#: theme.json
-msgctxt "Color name"
-msgid "Base"
+#: assets/js/block-editor.min.js
+msgctxt "Text format label."
+msgid "Accessibly hidden"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Wide 4 columns"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Wide 5 columns"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Wide 6 columns"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Golden ratio"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Cover"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "background"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "section"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Cover with content on hover"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "project"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Cover with blurred image"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Cover with backdrop blur column"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Dark group with backdrop blur"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Light group with backdrop blur"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Primary color group with backdrop blur"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Group with repeating semi-transparent background pattern"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Responsive table container"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "table"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "wrapper"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "container"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "group"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Heading with horizontal line"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "uppercase"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "letter spacing"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "separator"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "border"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Uppercase H2 heading"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Uppercase H3 heading"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Icon"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "svg"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "symbol"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Rounded icon with primary background"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Use header image"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "decoration"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "custom header"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "intro"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Use header image (flipped)"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Media & Text with heading and paragraph"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Media & Text with icon and description"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "feature"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "service"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Text & Media"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "media & text"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "media"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "text"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "video"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Blog Posts"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "latest posts"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "inline"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "row"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Site header"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Intro (page header)"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "page title"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Site footer"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgid "Spacer"
+msgstr ""
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "gap"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
-msgid "Base alternative"
+msgid "Base (Background)"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
-msgid "Contrast"
+msgid "Contrast (Text)"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
-msgid "Contrast alternative"
+msgid "Contrast alternative (Headings)"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr ""
 
 #: theme.json
-msgctxt "Color name"
-msgid "Primary mixed"
-msgstr ""
-
-#: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Primary mixed"
+msgstr ""
+
+#: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Secondary mixed"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Base alternative (Background)"
+msgstr ""
+
+#: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Black"
 msgstr ""
 
 #: theme.json
+#: styles/color/01-green.json
+#: styles/color/02-blue.json
+#: styles/color/10-dark-red.json
+#: styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "White"
 msgstr ""
@@ -3740,246 +4322,6 @@ msgstr ""
 
 #: theme.json
 msgctxt "Gradient name"
-msgid "Primary cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary mixed, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary mixed, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary mixed, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary mixed, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base alternative, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base alternative, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative cut to transparent, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast alternative, horizontally"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative cut to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast alternative, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to base, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to base alternative, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to contrast, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to contrast alternative, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to primary, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to primary mixed, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to secondary, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to secondary mixed, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
 msgid "For backdrop blur, dark"
 msgstr ""
 
@@ -3989,43 +4331,13 @@ msgid "For backdrop blur, light"
 msgstr ""
 
 #: theme.json
-msgctxt "Gradient name"
-msgid "For backdrop blur, primary"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Black to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to black, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "White to transparent, vertically"
-msgstr ""
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to white, vertically"
+msgctxt "Duotone name"
+msgid "Base"
 msgstr ""
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Black"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "White"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Gray"
+msgid "Contrast"
 msgstr ""
 
 #: theme.json
@@ -4050,37 +4362,17 @@ msgstr ""
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Red"
+msgid "Black"
 msgstr ""
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Brown"
+msgid "White"
 msgstr ""
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Yellow"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Green"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Blue"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Purple"
-msgstr ""
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Punchy"
+msgid "Gray"
 msgstr ""
 
 #: theme.json
@@ -4096,6 +4388,31 @@ msgstr ""
 #: theme.json
 msgctxt "Shadow name"
 msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Inset"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "X Large"
 msgstr ""
 
 #: theme.json
@@ -4159,23 +4476,88 @@ msgid "Super Ultrawide - 32:9"
 msgstr ""
 
 #: theme.json
+#: styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json
+#: styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json
+#: styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Main"
 msgstr ""
 
 #: theme.json
+#: styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json
+#: styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json
+#: styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Heading"
 msgstr ""
 
 #: theme.json
+#: styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json
+#: styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json
+#: styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Alternative"
 msgstr ""
 
 #: theme.json
+#: styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json
+#: styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json
+#: styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Monospace"
+msgstr ""
+
+#: theme.json
+#: styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json
+#: styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json
+#: styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
+msgctxt "Font family name"
+msgid "Handwritten"
 msgstr ""
 
 #: theme.json
@@ -4305,6 +4687,11 @@ msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
+msgid "Navigation overlay"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
 msgid "Intro (Page header)"
 msgstr ""
 
@@ -4401,4 +4788,89 @@ msgstr ""
 #: theme.json
 msgctxt "Custom template name"
 msgid "With sidebar"
+msgstr ""
+
+#: styles/color/01-green.json
+msgctxt "Style variation name"
+msgid "Green"
+msgstr ""
+
+#: styles/color/02-blue.json
+msgctxt "Style variation name"
+msgid "Blue"
+msgstr ""
+
+#: styles/color/10-dark-red.json
+msgctxt "Style variation name"
+msgid "Dark, red"
+msgstr ""
+
+#: styles/color/11-dark-green.json
+msgctxt "Style variation name"
+msgid "Dark, green"
+msgstr ""
+
+#: styles/color/12-dark-blue.json
+msgctxt "Style variation name"
+msgid "Dark, blue"
+msgstr ""
+
+#: styles/typography/01-bitter-heebo.json
+msgctxt "Style variation name"
+msgid "Bitter + Heebo"
+msgstr ""
+
+#: styles/typography/02-inter.json
+msgctxt "Style variation name"
+msgid "Inter"
+msgstr ""
+
+#: styles/typography/03-poppins.json
+msgctxt "Style variation name"
+msgid "Poppins"
+msgstr ""
+
+#: styles/typography/04-fira-sans.json
+msgctxt "Style variation name"
+msgid "Fira Sans"
+msgstr ""
+
+#: styles/typography/05-titillium-web.json
+msgctxt "Style variation name"
+msgid "Titillium Web"
+msgstr ""
+
+#: styles/typography/06-barlow.json
+msgctxt "Style variation name"
+msgid "Barlow"
+msgstr ""
+
+#: styles/typography/07-space-grotesk-onest.json
+msgctxt "Style variation name"
+msgid "Space Grotesk + Onest"
+msgstr ""
+
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+msgctxt "Style variation name"
+msgid "System UI (ModernFontStacks.com)"
+msgstr ""
+
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+msgctxt "Style variation name"
+msgid "Slab Serif (ModernFontStacks.com)"
+msgstr ""
+
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+msgctxt "Style variation name"
+msgid "Industrial + Transitional (ModernFontStacks.com)"
+msgstr ""
+
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+msgctxt "Style variation name"
+msgid "Industrial + Geometric Humanist (ModernFontStacks.com)"
+msgstr ""
+
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
+msgctxt "Style variation name"
+msgid "Monospace Slab Serif (ModernFontStacks.com)"
 msgstr ""

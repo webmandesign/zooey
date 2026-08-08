@@ -63,6 +63,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 
 				<!-- wp:navigation {
 					"overlayMenu": "always",
+					"overlayBackgroundColor": "secondary",
+					"overlayTextColor": "<?php echo esc_attr( Demo::get_value( 'color_secondary', 'is_dark', 'white', 'black' ) ); ?>",
 					"icon": "menu",
 					"layout": {
 						"type": "flex",

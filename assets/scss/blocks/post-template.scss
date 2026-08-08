@@ -24,13 +24,13 @@
 .wp-block-post {
 
 	&.sticky {
-		@extend %featured_item; // @todo Check this.
+		@extend %featured_item;
 		$size: .75rem;
 
 		.wp-block-post-title {
 			position: relative;
 
-			&::before { // @todo Check this.
+			&::before {
 				content: '';
 				display: inline-block;
 				width: $size;

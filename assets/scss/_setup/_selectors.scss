@@ -54,11 +54,10 @@ $selectors_button: (
 	// `form` selector is required to prevent styling MEJS buttons, for example.
 	'form :where(button,[type="button"],[type="reset"],[type="submit"]):not([class*="wp-block-"])',
 
-	// Buttons from Block Styles: // @todo
+	// Buttons from Block Styles:
 	'.is-style-buttons-inline a',
-	'.is-style-read-more-button .wp-block-post-excerpt__more-link',
 
-	// @extend %button_outline: // @todo
+	// @extend %button_outline:
 	'.is-style-read-more-outline .wp-block-post-excerpt__more-link',
 	'.wp-block-tag-cloud.is-style-outline .tag-cloud-link',
 );

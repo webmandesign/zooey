@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zooey\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2026-05-25T14:39:04+00:00\n"
-"PO-Revision-Date: 2026-05-25 16:51+0200\n"
+"POT-Creation-Date: 2026-08-08T15:16:17+00:00\n"
+"PO-Revision-Date: 2026-08-08 17:25+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
@@ -58,404 +58,341 @@ msgstr "WebMan Design, Oliver Juhás"
 msgid "https://www.webmandesign.eu/"
 msgstr "https://www.webmandesign.eu/"
 
-#: includes/Accessibility/Component.php:105
+#: includes/Accessibility/Component.php:112
 #: parts/accessibility/menu-skip-links.php:28
 msgid "Skip to main content"
 msgstr "Preskočiť na hlavný obsah"
 
-#: includes/Accessibility/Component.php:165
+#: includes/Accessibility/Component.php:233
 msgctxt ""
 "Aria label for Cover block background image with empty alternative text."
 msgid "Background image"
 msgstr "Obrázok pozadia"
 
-#: includes/Content/Block_Pattern.php:512
+#: includes/Content/Block_Pattern.php:293 assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "pattern"
+msgstr "vzor"
+
+#: includes/Content/Block_Pattern.php:304
 msgctxt "keyword"
 msgid "site"
 msgstr "webstránka"
 
-#: includes/Content/Block_Pattern.php:658
+#: includes/Content/Block_Pattern.php:563
 msgctxt "Block pattern category label."
 msgid "Questions & Answers"
 msgstr "Otázky a odpovede"
 
-#: includes/Content/Block_Pattern.php:659
+#: includes/Content/Block_Pattern.php:564
 msgctxt "Block pattern category label."
 msgid "Intro (Page Title)"
 msgstr "Intro (titulok stránky)"
 
-#: includes/Content/Block_Pattern.php:660
+#: includes/Content/Block_Pattern.php:565
 msgctxt "Block pattern category label."
 msgid "Numbers"
 msgstr "Čísla"
 
-#: includes/Content/Block_Pattern.php:661
+#: includes/Content/Block_Pattern.php:566
 msgctxt "Block pattern category label."
 msgid "Pages"
 msgstr "Stránky"
 
-#: includes/Content/Block_Pattern.php:662
+#: includes/Content/Block_Pattern.php:567
 msgctxt "Block pattern category label."
 msgid "Pricing"
 msgstr "Ceny"
 
-#: includes/Content/Block_Pattern.php:663
+#: includes/Content/Block_Pattern.php:568
+msgctxt "Block pattern category label."
+msgid "Shop"
+msgstr "Obchod"
+
+#: includes/Content/Block_Pattern.php:569
 msgctxt "Block pattern category label."
 msgid "Templates"
 msgstr "Šablóny"
 
-#: includes/Content/Block_Pattern.php:683
+#: includes/Content/Block_Pattern.php:572
 msgctxt "Block pattern category label."
 msgid "Site builder"
 msgstr "Budovanie webstránky"
 
-#: includes/Content/Block_Pattern.php:691
+#: includes/Content/Block_Pattern.php:575
 msgctxt "Block pattern category label."
 msgid "Zooey theme"
 msgstr "Téma Zooey"
 
-#: includes/Content/Block_Pattern.php:831
-msgctxt "Demo text."
-msgid "Some text"
-msgstr "Nejaký text"
+#: includes/Content/Block_Pattern.php:890
+msgctxt "Customizer section title."
+msgid "Block Patterns"
+msgstr "Vzory blokov"
 
-#: includes/Content/Block_Pattern.php:832
-msgctxt "Demo text."
-msgid "Just a short sentence"
-msgstr "Len krátka vetička"
+#: includes/Content/Block_Pattern.php:891 includes/Customize/Options.php:294
+#: includes/Customize/Options.php:1314 includes/Customize/Options.php:1361
+#: includes/Loop/Featured_Posts.php:145 includes/Tool/Page_Builder.php:79
+msgctxt "Customizer panel title."
+msgid "Theme Options"
+msgstr "Nastavenia témy"
 
-#: includes/Content/Block_Pattern.php:833
-msgctxt "Demo text."
-msgid "Write your own copy text here"
-msgstr "Sem si napíšte vlastný text"
+#: includes/Content/Block_Pattern.php:897
+msgid "WordPress core block patterns"
+msgstr "Vzory blokov jadra WordPress"
 
-#: includes/Content/Block_Pattern.php:834
-msgctxt "Demo text."
-msgid "This is just a demo text you should overwrite"
-msgstr "Toto je len demo text, ktorý by ste mali prepísať"
+#: includes/Content/Block_Pattern.php:898
+msgid "Allows WordPress core block patterns in block editor."
+msgstr "Povolí vzory blokov jadra WordPress v editore blokov."
 
-#: includes/Content/Block_Pattern.php:837
-msgctxt "Demo text."
-msgid "Title"
-msgstr "Nadpis"
+#: includes/Content/Block_Pattern.php:906
+msgid "Manage theme block patterns"
+msgstr "Správa vzorov blokov témy"
 
-#: includes/Content/Block_Pattern.php:838
-msgctxt "Demo text."
-msgid "This is title"
-msgstr "Som nadpis"
+#: includes/Content/Block_Pattern.php:907
+msgid "Speed your creative process by disabling theme patterns you don't use."
+msgstr "Urýchlite svoj tvorivý proces vypnutím vzorov témý, ktoré nepoužívate."
 
-#: includes/Content/Block_Pattern.php:839
-msgctxt "Demo text."
-msgid "Write some title text here"
-msgstr "Napíšte sem text nadpisu"
+#: includes/Content/Block_Pattern.php:913
+msgid "Disable patterns by category"
+msgstr "Zakázať vzory podľa kategórie"
 
-#: includes/Content/Block_Pattern.php:840
-msgctxt "Demo text."
-msgid "This is title text and it may be a bit long"
-msgstr "Toto je text nadpisu a môže byť trochu dlhý"
+#: includes/Content/Block_Pattern.php:914
+msgid "Select a category which patterns will be disabled."
+msgstr "Vyberte kategóriu, ktorej vzory budú zakázané."
 
-#: includes/Content/Block_Pattern.php:841
-msgctxt "Demo text."
-msgid "The ideal length of the title text in here should be maybe a bit longer"
-msgstr "Ideálna dĺžka textu nadpisu by tu mala byť možno o niečo dlhšia"
+#: includes/Content/Block_Pattern.php:926
+msgid "Disable specific patterns"
+msgstr "Zakázať konkrétne vzory"
 
-#: includes/Content/Block_Pattern.php:845
-msgctxt "Demo text."
-msgid "123 Street Name<br>Cityname 56789<br>COUNTRY"
-msgstr "Názov Ulice 123<br>Názovmesta, 56789<br>KRAJINA"
+#: includes/Content/Block_Pattern.php:964
+msgctxt "Block pattern category"
+msgid "Banners"
+msgstr "Bannery"
 
-#: includes/Content/Block_Pattern.php:846
-msgctxt "Demo text."
-msgid "123 Street Name, Cityname 56789, COUNTRY"
-msgstr "Názov Ulice 123, Názovmesta 56789, KRAJINA"
+#: includes/Content/Block_Pattern.php:965
+msgctxt "Block pattern category"
+msgid "Buttons"
+msgstr "Tlačidlá"
 
-#: includes/Content/Block_Pattern.php:847
-msgctxt "Demo text."
-msgid "example@example.com"
-msgstr "priklad@priklad.sk"
+#: includes/Content/Block_Pattern.php:966
+msgctxt "Block pattern category"
+msgid "Columns"
+msgstr "Stĺpce"
 
-#: includes/Content/Block_Pattern.php:848
-msgctxt "Demo text."
-msgid "+1 (123) 456-7890"
-msgstr "+421 (900) 123 456"
+#: includes/Content/Block_Pattern.php:967
+msgctxt "Block pattern category"
+msgid "Text"
+msgstr "Text"
 
-#: includes/Content/Block_Pattern.php:852
-msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
-msgid "July 1, {Y}"
-msgstr "1. júl {Y}"
+#: includes/Content/Block_Pattern.php:968
+#: includes/Content/Block_Pattern.php:981
+msgctxt "Block pattern category"
+msgid "Posts"
+msgstr "Príspevky"
 
-#: includes/Content/Block_Pattern.php:853
-msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
-msgid "Monday, July 1, {Y}, 10:30"
-msgstr "Pondelok, 1. júl {Y}, 10:30"
+#: includes/Content/Block_Pattern.php:969
+msgctxt "Block pattern category"
+msgid "Featured"
+msgstr "Odporúčané"
 
-#: includes/Content/Block_Pattern.php:854
-msgctxt "Demo text. Week days."
-msgid "Mon - Fri"
-msgstr "Po - Pi"
+#: includes/Content/Block_Pattern.php:970
+msgctxt "Block pattern category"
+msgid "Call to action"
+msgstr "Výzva k akcii"
 
-#: includes/Content/Block_Pattern.php:855
-msgctxt "Demo text. Weekend days."
-msgid "Sat - Sun"
-msgstr "So - Ne"
+#: includes/Content/Block_Pattern.php:971
+msgctxt "Block pattern category"
+msgid "Team"
+msgstr "Tím"
 
-#: includes/Content/Block_Pattern.php:856
-msgctxt "Demo text."
-msgid "Monday"
-msgstr "Pondelok"
+#: includes/Content/Block_Pattern.php:972
+msgctxt "Block pattern category"
+msgid "Testimonials"
+msgstr "Referencie"
 
-#: includes/Content/Block_Pattern.php:857
-msgctxt "Demo text."
-msgid "Tuesday"
-msgstr "Utorok"
+#: includes/Content/Block_Pattern.php:973
+msgctxt "Block pattern category"
+msgid "Services"
+msgstr "Služby"
 
-#: includes/Content/Block_Pattern.php:858
-msgctxt "Demo text."
-msgid "Wednesday"
-msgstr "Streda"
+#: includes/Content/Block_Pattern.php:974
+msgctxt "Block pattern category"
+msgid "Contact"
+msgstr "Kontakt"
 
-#: includes/Content/Block_Pattern.php:859
-msgctxt "Demo text."
-msgid "Thursday"
-msgstr "Štvrtok"
+#: includes/Content/Block_Pattern.php:975
+msgctxt "Block pattern category"
+msgid "About"
+msgstr "Info"
 
-#: includes/Content/Block_Pattern.php:860
-msgctxt "Demo text."
-msgid "Friday"
-msgstr "Piatok"
+#: includes/Content/Block_Pattern.php:976
+msgctxt "Block pattern category"
+msgid "Portfolio"
+msgstr "Portfólio"
 
-#: includes/Content/Block_Pattern.php:861
-msgctxt "Demo text."
-msgid "Saturday"
-msgstr "Sobota"
+#: includes/Content/Block_Pattern.php:977
+msgctxt "Block pattern category"
+msgid "Gallery"
+msgstr "Galéria"
 
-#: includes/Content/Block_Pattern.php:862
-msgctxt "Demo text."
-msgid "Sunday"
-msgstr "Nedeľa"
+#: includes/Content/Block_Pattern.php:978
+msgctxt "Block pattern category"
+msgid "Media"
+msgstr "Médiá"
 
-#: includes/Content/Block_Pattern.php:867
-msgctxt "Demo text. Name of a person."
-msgid "Vincent van Gogh"
-msgstr "Martin Kukučín‎"
+#: includes/Content/Block_Pattern.php:979
+msgctxt "Block pattern category"
+msgid "Videos"
+msgstr "Videá"
 
-#: includes/Content/Block_Pattern.php:868
-msgctxt "Demo text. Name of a person."
-msgid "Edward Hopper"
-msgstr "Pavol Dobšinský"
+#: includes/Content/Block_Pattern.php:980
+msgctxt "Block pattern category"
+msgid "Audio"
+msgstr "Audio"
 
-#: includes/Content/Block_Pattern.php:869
-msgctxt "Demo text. Name of a person."
-msgid "Pablo Picasso"
-msgstr "Samo Chalupka"
+#: includes/Content/Block_Pattern.php:982
+msgctxt "Block pattern category"
+msgid "Footers"
+msgstr "Pätičky"
 
-#: includes/Content/Block_Pattern.php:870
-msgctxt "Demo text. Name of a person."
-msgid "Mary Cassatt"
-msgstr "Terézia Vansová"
+#: includes/Content/Block_Pattern.php:983
+msgctxt "Block pattern category"
+msgid "Headers"
+msgstr "Hlavičky"
 
-#: includes/Content/Block_Pattern.php:871
-msgctxt "Demo text. Name of a person."
-msgid "Frida Kahlo"
-msgstr "Božena Slančíková"
-
-#: includes/Content/Block_Pattern.php:872
-msgctxt "Demo text. Name of a person."
-msgid "Berthe Morisot"
-msgstr "Margita Figuli"
-
-#: includes/Content/Block_Pattern.php:874
-msgctxt "Demo text. Occupation, job title."
-msgid "Founder"
-msgstr "Zakladateľ"
-
-#: includes/Content/Block_Pattern.php:878
-msgctxt "Demo text. Image alt text."
-msgid "Image alternative description text"
-msgstr "Text alternatívneho popisu obrázka"
-
-#: includes/Content/Block_Pattern.php:879
-msgctxt "Demo text. Button label."
-msgid "Click here &rarr;"
-msgstr "Kliknite sem &rarr;"
-
-#: includes/Content/Block_Pattern.php:880
-msgctxt "Demo text. Button label."
-msgid "Read more &rarr;"
-msgstr "Čítať ďalej &rarr;"
-
-#: includes/Content/Block_Pattern.php:881
-msgctxt "Demo text. Button label."
-msgid "Change this text"
-msgstr "Zmeňte tento text"
-
-#: includes/Content/Block_Pattern.php:882
-msgctxt "Demo text. Price."
-msgid "$19"
-msgstr "19 €"
-
-#: includes/Content/Block_Pattern.php:886
-msgctxt "Demo text. Form block plugin URL."
-msgid "https://wordpress.org/plugins/search/form+block/"
-msgstr "https://wordpress.org/plugins/search/form+block/"
-
-#: includes/Content/Block_Pattern.php:887
-msgctxt "Demo text."
-msgid "Use a form block here ↗"
-msgstr "Tu použite blok formulára ↗"
-
-#: includes/Content/Block_Style.php:100
+#: includes/Content/Block_Style.php:102
 msgctxt "Block style label."
 msgid "Backdrop blur"
 msgstr "Rozmazanie pozadia"
 
-#: includes/Content/Block_Style.php:109
+#: includes/Content/Block_Style.php:111
 msgctxt "Block style label."
 msgid "Inline buttons"
 msgstr "Tlačidlá v jednom riadku"
 
-#: includes/Content/Block_Style.php:117
+#: includes/Content/Block_Style.php:119
 msgctxt "Block style label."
 msgid "Outline button"
 msgstr "Obrysové tlačidlo"
 
-#: includes/Content/Block_Style.php:124
+#: includes/Content/Block_Style.php:126
 msgctxt "Block style label."
-msgid "Checkmark"
-msgstr "Fajka"
+msgid "Toggle (Details)"
+msgstr "Spínač (Podrobnosti)"
 
-#: includes/Content/Block_Style.php:131
+#: includes/Content/Block_Style.php:134
 msgctxt "Block style label."
 msgid "Dashed"
 msgstr "Prerušovaný"
 
-#: includes/Content/Block_Style.php:138
-msgctxt "Block style label."
-msgid "Disable link"
-msgstr "Vypnúť odkaz"
-
-#: includes/Content/Block_Style.php:146
+#: includes/Content/Block_Style.php:140
 msgctxt "Block style label."
 msgid "Dotted"
 msgstr "Bodkovaný"
 
-#: includes/Content/Block_Style.php:153
-msgctxt "Block style label."
-msgid "Featured posts"
-msgstr "Odporúčané príspevky"
-
-#: includes/Content/Block_Style.php:160
-msgctxt "Block style label."
-msgid "Fixed mobile toggle button"
-msgstr "Zafixované tlačidlo mobilného spínača"
-
-#: includes/Content/Block_Style.php:167
+#: includes/Content/Block_Style.php:147
 msgctxt "Block style label."
 msgid "Content on hover"
 msgstr "Odhalenie obsahu"
 
-#: includes/Content/Block_Style.php:174
+#: includes/Content/Block_Style.php:153
 msgctxt "Block style label."
-msgid "Is image"
-msgstr "Je obrázkom"
+msgid "Media on hover"
+msgstr "Médiá pri prechode kurzorom"
 
-#: includes/Content/Block_Style.php:181
+#: includes/Content/Block_Style.php:160
 msgctxt "Block style label."
 msgid "Blurred image"
 msgstr "Rozmazaný obrázok"
 
-#: includes/Content/Block_Style.php:188
+#: includes/Content/Block_Style.php:167
 msgctxt "Block style label."
 msgid "Inline"
 msgstr "V rade"
 
+#: includes/Content/Block_Style.php:175
+msgctxt "Block style label."
+msgid "Ballot: empty"
+msgstr "Hlasovanie: prázdne"
+
+#: includes/Content/Block_Style.php:182
+msgctxt "Block style label."
+msgid "Ballot: ✓"
+msgstr "Hlasovanie: ✓"
+
+#: includes/Content/Block_Style.php:189
+msgctxt "Block style label."
+msgid "Ballot: ⨉"
+msgstr "Hlasovanie: ⨉"
+
 #: includes/Content/Block_Style.php:196
 msgctxt "Block style label."
-msgid "Megamenu"
-msgstr "Megamenu"
+msgid "✓"
+msgstr "✓"
 
-#: includes/Content/Block_Style.php:203 includes/Customize/Options.php:820
+#: includes/Content/Block_Style.php:203
+msgctxt "Block style label."
+msgid "⨉"
+msgstr "⨉"
+
+#: includes/Content/Block_Style.php:211 includes/Customize/Options.php:900
 msgctxt "Block style label."
 msgid "Hide on small screens"
 msgstr "Skryť na malých obrazovkách"
 
-#: includes/Content/Block_Style.php:223 includes/Customize/Options.php:821
+#: includes/Content/Block_Style.php:231 includes/Customize/Options.php:901
 msgctxt "Block style label."
 msgid "Only on small screens"
 msgstr "Iba na malých obrazovkách"
 
-#: includes/Content/Block_Style.php:244
+#: includes/Content/Block_Style.php:252
 msgctxt "Block style label."
 msgid "Reverse on small screens"
 msgstr "Zoradiť opačne na malých obrazovkách"
 
-#: includes/Content/Block_Style.php:251
+#: includes/Content/Block_Style.php:259
+msgctxt "Block style label."
+msgid "Disable sticky position on small screens"
+msgstr "Vypnúť prichytávanie na malých obrazovkách"
+
+#: includes/Content/Block_Style.php:266
 msgctxt "Block style label."
 msgid "No bullets"
 msgstr "Žiadne odrážky"
 
-#: includes/Content/Block_Style.php:258
+#: includes/Content/Block_Style.php:273
 msgctxt "Block style label."
 msgid "No line break"
 msgstr "Bez prerušenia riadka"
 
-#: includes/Content/Block_Style.php:269
+#: includes/Content/Block_Style.php:285
 msgctxt "Block style label."
 msgid "Padding left"
 msgstr "Odsadenie vľavo"
 
-#: includes/Content/Block_Style.php:275
+#: includes/Content/Block_Style.php:291
 msgctxt "Block style label."
 msgid "Padding right"
 msgstr "Odsadenie vpravo"
 
-#: includes/Content/Block_Style.php:282
-msgctxt "Block style label."
-msgid "Page intro"
-msgstr "Intro stránky"
-
-#: includes/Content/Block_Style.php:289
-msgctxt "Block style label."
-msgid "Page intro summary"
-msgstr "Súhrn v intru stránky"
-
-#: includes/Content/Block_Style.php:296
+#: includes/Content/Block_Style.php:298
 msgctxt "Block style label."
 msgid "Pull down"
 msgstr "Potiahnutie nadol"
 
-#: includes/Content/Block_Style.php:306
+#: includes/Content/Block_Style.php:308
 msgctxt "Block style label."
 msgid "Pull up"
 msgstr "Vytiahnutie nahor"
 
-#: includes/Content/Block_Style.php:317
-msgctxt "Block style label."
-msgid "Read more outline"
-msgstr "Orámované čítať viac"
-
-#: includes/Content/Block_Style.php:323
-msgctxt "Block style label."
-msgid "Read more button"
-msgstr "Tlačidlové čítať viac"
-
-#: includes/Content/Block_Style.php:330
+#: includes/Content/Block_Style.php:319
 msgctxt "Block style label."
 msgid "Accessibly hidden"
 msgstr "Prístupne skrytý"
 
-#: includes/Content/Block_Style.php:341
-msgctxt "Block style label."
-msgid "Site header"
-msgstr "Hlavička webstránky"
-
-#: includes/Content/Block_Style.php:348
-msgctxt "Block style label."
-msgid "Site footer"
-msgstr "Pätka webstránky"
-
 #. translators: %d: number of text lines.
-#: includes/Content/Block_Style.php:357
+#: includes/Content/Block_Style.php:332 includes/Content/Block_Style.php:342
+#: includes/Content/Block_Style.php:352
 #, php-format
 msgctxt "Block style label."
 msgid "Truncate to %d line"
@@ -464,20 +401,85 @@ msgstr[0] "Skrátiť na %d riadok"
 msgstr[1] "Skrátiť na %d riadky"
 msgstr[2] "Skrátiť na %d riadkov"
 
-#: includes/Content/Block_Style.php:366
+#: includes/Content/Block_Style.php:361
 msgctxt "Block style label."
 msgid "Use header image"
 msgstr "Použiť obrázok hlavičky"
 
-#: includes/Content/Block_Style.php:372
+#: includes/Content/Block_Style.php:367
 msgctxt "Block style label."
 msgid "Use header image (flipped)"
 msgstr "Použiť obrázok hlavičky (prevrátený)"
 
-#: includes/Content/Block_Style.php:379
+#: includes/Content/Block_Style.php:374
 msgctxt "Block style label."
 msgid "Zoom in"
 msgstr "Priblížiť"
+
+#: includes/Content/Block_Style.php:380
+msgctxt "Block style label."
+msgid "Zoom out"
+msgstr "Oddialiť"
+
+#: includes/Content/Block_Style.php:389
+msgctxt "Block style label."
+msgid "Disable link"
+msgstr "Vypnúť odkaz"
+
+#: includes/Content/Block_Style.php:397
+msgctxt "Block style label."
+msgid "Featured posts"
+msgstr "Odporúčané príspevky"
+
+#: includes/Content/Block_Style.php:405
+msgctxt "Block style label. \"Fixed\" as in CSS element positioning."
+msgid "Fixed mobile toggle button"
+msgstr "Fixované tlačidlo mobilného prepínača"
+
+#: includes/Content/Block_Style.php:412
+msgctxt "Block style label."
+msgid "Is image"
+msgstr "Je obrázkom"
+
+#: includes/Content/Block_Style.php:419
+msgctxt "Block style label."
+msgid "Megamenu"
+msgstr "Megamenu"
+
+#: includes/Content/Block_Style.php:426
+msgctxt "Block style label."
+msgid "Page intro"
+msgstr "Intro stránky"
+
+#: includes/Content/Block_Style.php:433
+msgctxt "Block style label."
+msgid "Page intro summary"
+msgstr "Súhrn v intru stránky"
+
+#: includes/Content/Block_Style.php:440
+msgctxt "Block style label."
+msgid "Read more outline"
+msgstr "Orámované čítať viac"
+
+#: includes/Content/Block_Style.php:446
+msgctxt "Block style label."
+msgid "Read more button"
+msgstr "Tlačidlové čítať viac"
+
+#: includes/Content/Block_Style.php:453
+msgctxt "Block style label."
+msgid "Related posts"
+msgstr "Súvisiace príspevky"
+
+#: includes/Content/Block_Style.php:460
+msgctxt "Block style label."
+msgid "Site header"
+msgstr "Hlavička webstránky"
+
+#: includes/Content/Block_Style.php:467
+msgctxt "Block style label."
+msgid "Site footer"
+msgstr "Pätka webstránky"
 
 #: includes/Content/Block_Template_Part.php:59
 msgctxt "Template part area label"
@@ -569,79 +571,320 @@ msgid ""
 msgstr "Obsah šablóny definuje oblasť zobrazujúcu obsah šablóny."
 
 #. translators: Paginated content title suffix. %d: page number.
-#: includes/Content/Component.php:90
+#: includes/Content/Component.php:94
 #, php-format
 msgid "(page %d)"
 msgstr "(strana %d)"
 
-#: includes/Content/Starter.php:163
+#: includes/Content/Demo.php:223
+msgctxt "Demo text."
+msgid "Some text"
+msgstr "Nejaký text"
+
+#: includes/Content/Demo.php:224
+msgctxt "Demo text."
+msgid "Just a short sentence"
+msgstr "Len krátka vetička"
+
+#: includes/Content/Demo.php:225
+msgctxt "Demo text."
+msgid "Write your own copy text here"
+msgstr "Sem si napíšte vlastný text"
+
+#: includes/Content/Demo.php:226
+msgctxt "Demo text."
+msgid "This is just a demo text you should overwrite"
+msgstr "Toto je len demo text, ktorý by ste mali prepísať"
+
+#: includes/Content/Demo.php:229
+msgctxt "Demo text."
+msgid "Title"
+msgstr "Nadpis"
+
+#: includes/Content/Demo.php:230
+msgctxt "Demo text."
+msgid "This is title"
+msgstr "Som nadpis"
+
+#: includes/Content/Demo.php:231
+msgctxt "Demo text."
+msgid "Write some title text here"
+msgstr "Napíšte sem text nadpisu"
+
+#: includes/Content/Demo.php:232
+msgctxt "Demo text."
+msgid "This is title text and it may be a bit long"
+msgstr "Toto je text nadpisu a môže byť trochu dlhý"
+
+#: includes/Content/Demo.php:233
+msgctxt "Demo text."
+msgid "The ideal length of the title text in here should be maybe a bit longer"
+msgstr "Ideálna dĺžka textu nadpisu by tu mala byť možno o niečo dlhšia"
+
+#: includes/Content/Demo.php:237
+msgctxt "Demo text."
+msgid "123 Street Name<br>Cityname 56789<br>COUNTRY"
+msgstr "Názov Ulice 123<br>Názovmesta, 56789<br>KRAJINA"
+
+#: includes/Content/Demo.php:238
+msgctxt "Demo text."
+msgid "123 Street Name, Cityname 56789, COUNTRY"
+msgstr "Názov Ulice 123, Názovmesta 56789, KRAJINA"
+
+#: includes/Content/Demo.php:239
+msgctxt "Demo text."
+msgid "info@example.com"
+msgstr "info@priklad.sk"
+
+#: includes/Content/Demo.php:240
+msgctxt "Demo text."
+msgid "+1 (900) 123-4567"
+msgstr "+421 900 123456"
+
+#: includes/Content/Demo.php:244
+msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
+msgid "July 1, {Y}"
+msgstr "1. júl {Y}"
+
+#: includes/Content/Demo.php:245
+msgctxt "Demo text. Keep \"{Y}\" as it gets replaced with current year."
+msgid "Monday, July 1, {Y}, 10:30"
+msgstr "Pondelok, 1. júl {Y}, 10:30"
+
+#: includes/Content/Demo.php:246
+msgctxt "Demo text. Week days."
+msgid "Mon - Fri"
+msgstr "Po - Pi"
+
+#: includes/Content/Demo.php:247
+msgctxt "Demo text. Weekend days."
+msgid "Sat - Sun"
+msgstr "So - Ne"
+
+#: includes/Content/Demo.php:248
+msgctxt "Demo text."
+msgid "Monday"
+msgstr "Pondelok"
+
+#: includes/Content/Demo.php:249
+msgctxt "Demo text."
+msgid "Tuesday"
+msgstr "Utorok"
+
+#: includes/Content/Demo.php:250
+msgctxt "Demo text."
+msgid "Wednesday"
+msgstr "Streda"
+
+#: includes/Content/Demo.php:251
+msgctxt "Demo text."
+msgid "Thursday"
+msgstr "Štvrtok"
+
+#: includes/Content/Demo.php:252
+msgctxt "Demo text."
+msgid "Friday"
+msgstr "Piatok"
+
+#: includes/Content/Demo.php:253
+msgctxt "Demo text."
+msgid "Saturday"
+msgstr "Sobota"
+
+#: includes/Content/Demo.php:254
+msgctxt "Demo text."
+msgid "Sunday"
+msgstr "Nedeľa"
+
+#: includes/Content/Demo.php:259
+msgctxt "Demo text. Name of a person."
+msgid "Vincent van Gogh"
+msgstr "Martin Kukučín‎"
+
+#: includes/Content/Demo.php:260
+msgctxt "Demo text. Name of a person."
+msgid "Edward Hopper"
+msgstr "Pavol Dobšinský"
+
+#: includes/Content/Demo.php:261
+msgctxt "Demo text. Name of a person."
+msgid "Pablo Picasso"
+msgstr "Samo Chalupka"
+
+#: includes/Content/Demo.php:262
+msgctxt "Demo text. Name of a person."
+msgid "Mary Cassatt"
+msgstr "Terézia Vansová"
+
+#: includes/Content/Demo.php:263
+msgctxt "Demo text. Name of a person."
+msgid "Frida Kahlo"
+msgstr "Božena Slančíková"
+
+#: includes/Content/Demo.php:264
+msgctxt "Demo text. Name of a person."
+msgid "Berthe Morisot"
+msgstr "Margita Figuli"
+
+#: includes/Content/Demo.php:266
+msgctxt "Demo text. Occupation, job title."
+msgid "Founder"
+msgstr "Zakladateľ"
+
+#: includes/Content/Demo.php:270
+msgctxt "Demo text. Image alt text."
+msgid "Image alternative description text"
+msgstr "Text alternatívneho popisu obrázka"
+
+#: includes/Content/Demo.php:271
+msgctxt "Demo text. Button label."
+msgid "Click here"
+msgstr "Kliknite sem"
+
+#: includes/Content/Demo.php:272
+msgctxt "Demo text. Button label."
+msgid "Read more &rarr;"
+msgstr "Čítať ďalej &rarr;"
+
+#: includes/Content/Demo.php:273
+msgctxt "Demo text. Button label."
+msgid "Change this text"
+msgstr "Zmeňte tento text"
+
+#: includes/Content/Demo.php:274
+msgctxt "Demo text. Button label."
+msgid "Watch video &rarr;"
+msgstr "Prezrieť video &rarr;"
+
+#: includes/Content/Demo.php:275
+msgctxt "Demo text. Price."
+msgid "$19"
+msgstr "19 €"
+
+#: includes/Content/Demo.php:279
+msgctxt "Demo text. Form block plugin URL."
+msgid "https://wordpress.org/plugins/search/form+block/"
+msgstr "https://wordpress.org/plugins/search/form+block/"
+
+#: includes/Content/Demo.php:280
+msgctxt "Demo text."
+msgid "Use a form block here ↗"
+msgstr "Tu použite blok formulára ↗"
+
+#: includes/Content/Demo.php:284 includes/Content/Demo.php:288
+#: includes/Content/Demo.php:291
+msgid "This is just a demo placeholder form."
+msgstr "Toto je len ukážkový zástupný formulár."
+
+#: includes/Content/Demo.php:285
+msgctxt "Form field label"
+msgid "Name"
+msgstr "Meno"
+
+#: includes/Content/Demo.php:286 includes/Content/Demo.php:292
+msgctxt "Form field label"
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/Content/Demo.php:287
+msgctxt "Form field label"
+msgid "Message"
+msgstr "Správa"
+
+#: includes/Content/Demo.php:288 includes/Content/Demo.php:294
+msgctxt "Form field label"
+msgid "Submit"
+msgstr "Odoslať"
+
+#: includes/Content/Starter.php:139
+msgid "Welcome to our website!"
+msgstr "Vitajte na našej webstránke!"
+
+#: includes/Content/Starter.php:166 includes/Content/Starter.php:219
+#: patterns/site/navigation-overlay.php:90
 msgctxt "Page title"
 msgid "Home"
 msgstr "Úvod"
 
-#: includes/Content/Starter.php:164
+#: includes/Content/Starter.php:167
 msgctxt "Page slug"
 msgid "home"
 msgstr "uvod"
 
-#: includes/Content/Starter.php:173 patterns/site/header.php:79
+#: includes/Content/Starter.php:176 includes/Content/Starter.php:224
+#: patterns/site/header.php:122 patterns/site/navigation-overlay.php:91
 msgctxt "Page title"
 msgid "About us"
 msgstr "O nás"
 
-#: includes/Content/Starter.php:174 patterns/site/header.php:79
+#: includes/Content/Starter.php:177 includes/Content/Starter.php:225
+#: patterns/site/header.php:122
 msgctxt "Page slug"
 msgid "about-us"
 msgstr "o-nas"
 
-#: includes/Content/Starter.php:183 patterns/site/header.php:80
+#: includes/Content/Starter.php:186 includes/Content/Starter.php:229
+#: patterns/site/header.php:123
 msgctxt "Page title"
 msgid "Services"
 msgstr "Služby"
 
-#: includes/Content/Starter.php:184 patterns/site/header.php:80
+#: includes/Content/Starter.php:187 includes/Content/Starter.php:230
+#: patterns/site/header.php:123
 msgctxt "Page slug"
 msgid "services"
 msgstr "sluzby"
 
-#: includes/Content/Starter.php:193 patterns/site/header.php:78
-msgctxt "Page title"
+#: includes/Content/Starter.php:196
+msgctxt "Theme starter content: Blog page title"
 msgid "Blog"
 msgstr "Blog"
 
-#: includes/Content/Starter.php:199 patterns/site/header.php:81
+#: includes/Content/Starter.php:197 includes/Content/Starter.php:235
+msgctxt "Page slug"
+msgid "blog"
+msgstr "blog"
+
+#: includes/Content/Starter.php:203 includes/Content/Starter.php:239
+#: patterns/site/header.php:124 patterns/site/navigation-overlay.php:94
 msgctxt "Page title"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: includes/Content/Starter.php:200 patterns/site/header.php:81
+#: includes/Content/Starter.php:204 includes/Content/Starter.php:240
+#: patterns/site/header.php:124
 msgctxt "Page slug"
 msgid "contact"
 msgstr "kontakt"
 
-#: includes/Customize/Control/HTML.php:59
+#: includes/Content/Starter.php:213
+msgctxt "Page title"
+msgid "Site Navigation"
+msgstr "Navigácia webstránky"
+
+#: includes/Content/Starter.php:234 patterns/site/header.php:121
+#: patterns/site/navigation-overlay.php:93
+msgctxt "Page title"
+msgid "Blog"
+msgstr "Blog"
+
+#: includes/Customize/Control/HTML.php:61
 msgid "Please set the `content` parameter for the HTML control."
 msgstr "Nastavte parameter `content` pre pole HTML."
 
-#: includes/Customize/Control/Multiselect.php:157
+#: includes/Customize/Control/Multiselect.php:215
 msgid "Press CTRL key for multiple selection."
 msgstr "Pridržte klávesu CTRL pre viacnásobnú voľbu."
 
-#: includes/Customize/Options.php:184
+#: includes/Customize/Options.php:241
 msgid "Base color"
 msgstr "Základná farba"
 
-#: includes/Customize/Options.php:185
+#: includes/Customize/Options.php:243
 msgid "By default applied as website background."
 msgstr "Predvolene sa používa ako pozadie webstránky."
 
-#: includes/Customize/Options.php:232 includes/Customize/Options.php:1205
-#: includes/Loop/Featured_Posts.php:145 includes/Tool/Page_Builder.php:79
-msgctxt "Customizer panel title."
-msgid "Theme Options"
-msgstr "Nastavenia témy"
-
-#: includes/Customize/Options.php:249
+#: includes/Customize/Options.php:311
 msgid ""
 "NOTE: The theme loads Google Fonts from your website, not from 3rd party "
 "servers. This improves privacy and compliance with GDPR."
@@ -649,19 +892,19 @@ msgstr ""
 "POZNÁMKA: Téma načítava Google Fonts z vašej webstránky, nie zo serverov "
 "tretích strán. Zlepšuje tým súkromie a súlad s GDPR."
 
-#: includes/Customize/Options.php:254
+#: includes/Customize/Options.php:316
 msgid "Theme palette"
 msgstr "Paleta témy"
 
-#: includes/Customize/Options.php:259
+#: includes/Customize/Options.php:321
 msgid "WordPress default palette"
 msgstr "Predvolená paleta WordPress"
 
-#: includes/Customize/Options.php:272
+#: includes/Customize/Options.php:334
 msgid "Looking for additional options?"
 msgstr "Hľadáte ďalšie možnosti?"
 
-#: includes/Customize/Options.php:274
+#: includes/Customize/Options.php:336
 msgid ""
 "Site editor is enabled and allows you to set up colors and layout to your "
 "needs."
@@ -669,119 +912,111 @@ msgstr ""
 "Editor webstránky je povolený a umožňuje nastaviť farby a rozloženie podľa "
 "vašich potrieb."
 
-#: includes/Customize/Options.php:278
+#: includes/Customize/Options.php:340
 msgid "https://webmandesign.github.io/docs/zooey/#site-editor"
 msgstr "https://webmandesign.github.io/docs/zooey/#site-editor"
 
-#: includes/Customize/Options.php:279
+#: includes/Customize/Options.php:341
 msgid "Find out more ↗"
 msgstr "Zistiť viac ↗"
 
-#: includes/Customize/Options.php:300
+#: includes/Customize/Options.php:362
 msgid "Theme Credits"
 msgstr "O téme"
 
 #. translators: 1: linked theme name, 2: theme author name.
-#: includes/Customize/Options.php:304
+#: includes/Customize/Options.php:366
 #, php-format
 msgid "%1$s is a WordPress theme developed by %2$s."
 msgstr "%1$s je WordPress téma vytvorená spoločnosťou %2$s."
 
-#: includes/Customize/Options.php:317
+#: includes/Customize/Options.php:379
 msgctxt "Customizer section title."
 msgid "Colors & Background"
 msgstr "Farby a pozadie"
 
-#: includes/Customize/Options.php:327
+#: includes/Customize/Options.php:389
 msgid "Theme color palette"
 msgstr "Paleta farieb témy"
 
-#: includes/Customize/Options.php:333
+#: includes/Customize/Options.php:395
 msgid "Site background"
 msgstr "Pozadie stránky"
 
-#: includes/Customize/Options.php:348
+#: includes/Customize/Options.php:410
 msgid "Site background color"
 msgstr "Farba pozadia webstránky"
 
-#: includes/Customize/Options.php:351
+#: includes/Customize/Options.php:413
 msgid "Tweak theme colors in Site Editor → Styles section."
 msgstr "Upravte farby témy v sekcii Editor webstránky → Štýly."
 
-#: includes/Customize/Options.php:353
+#: includes/Customize/Options.php:415
 msgid "\"Base\" color is used as the site background color."
 msgstr "\"Základná\" farba sa používa ako farba pozadia webstránky."
 
-#: includes/Customize/Options.php:362
+#: includes/Customize/Options.php:424
 msgid "Base alternative color"
 msgstr "Základná alternatívna farba"
 
-#: includes/Customize/Options.php:380
+#: includes/Customize/Options.php:442
 msgid "Contrast color"
 msgstr "Kontrastná farba"
 
-#: includes/Customize/Options.php:382
+#: includes/Customize/Options.php:444
 msgid "By default applied on text."
 msgstr "Predvolene sa používa na text."
 
-#: includes/Customize/Options.php:384 includes/Customize/Options.php:406
-#: includes/Customize/Options.php:428
+#: includes/Customize/Options.php:446 includes/Customize/Options.php:468
+#: includes/Customize/Options.php:490
 msgid "Set this for an appropriate contrast against \"Base\" color."
 msgstr "Nastavte pre optimálny kontrast oproti Základnej farbe."
 
-#: includes/Customize/Options.php:402
+#: includes/Customize/Options.php:464
 msgid "Contrast alternative color"
 msgstr "Kontrastná alternatívna farba"
 
-#: includes/Customize/Options.php:404 includes/Customize/Options.php:1026
+#: includes/Customize/Options.php:466 includes/Customize/Options.php:1112
 msgid "By default applied on headings."
 msgstr "Predvolene sa používa na nadpisy."
 
-#: includes/Customize/Options.php:424
+#: includes/Customize/Options.php:486
 msgid "Primary color"
 msgstr "Primárna farba"
 
-#: includes/Customize/Options.php:426
+#: includes/Customize/Options.php:488
 msgid "By default applied as link color."
 msgstr "Predvolene sa používa na odkazy."
 
-#: includes/Customize/Options.php:446
+#: includes/Customize/Options.php:508
 msgid "Primary mixed color"
 msgstr "Primárna zmiešaná farba"
 
-#: includes/Customize/Options.php:447
+#: includes/Customize/Options.php:509
 msgid "By default it is set as a blend of \"Base\" and \"Primary\" color."
 msgstr "Predvolene je nastavená ako zmes Základnej a Primárnej farby."
 
-#: includes/Customize/Options.php:465
+#: includes/Customize/Options.php:527
 msgid "Secondary color"
 msgstr "Sekundárna farba"
 
-#: includes/Customize/Options.php:466
+#: includes/Customize/Options.php:528
 msgid "By default applied as button color."
 msgstr "Predvolene sa používa na tlačidlách."
 
-#: includes/Customize/Options.php:484
+#: includes/Customize/Options.php:546
 msgid "Secondary mixed color"
 msgstr "Sekundárna zmiešaná farba"
 
-#: includes/Customize/Options.php:485
+#: includes/Customize/Options.php:547
 msgid "By default it is set as a blend of \"Base\" and \"Secondary\" color."
 msgstr "Predvolene je nastavená ako zmes Základnej a Sekundárnej farby."
 
-#: includes/Customize/Options.php:504
-msgid "Button color"
-msgstr "Farba tlačidla"
-
-#: includes/Customize/Options.php:505
-msgid "Choose which predefined color applies on buttons."
-msgstr "Vyberte, ktorá z preddefinovaných farieb sa použije na tlačidlá."
-
-#: includes/Customize/Options.php:539
+#: includes/Customize/Options.php:571
 msgid "Styling theme sections"
 msgstr "Dizajn sekcií témy"
 
-#: includes/Customize/Options.php:542
+#: includes/Customize/Options.php:574
 msgid ""
 "Colors and layout of theme sections (such as site header or footer) can be "
 "customized by editing template parts in Site Editor."
@@ -789,35 +1024,51 @@ msgstr ""
 "Farby a rozloženie sekcií témy (ako napríklad hlavička a pätka) je možné "
 "prispôsobiť úpravou častí šablón v Editore webstránky."
 
-#: includes/Customize/Options.php:555
+#: includes/Customize/Options.php:589
+msgid "Button colors"
+msgstr "Farby tlačidla"
+
+#: includes/Customize/Options.php:592
+msgid "Choose which predefined colors applies on buttons."
+msgstr "Vyberte, ktoré preddefinované farby sa použijú na tlačidlá."
+
+#: includes/Customize/Options.php:599
+msgid "Button color"
+msgstr "Farba tlačidla"
+
+#: includes/Customize/Options.php:600
+msgid "Choose which predefined color applies on buttons."
+msgstr "Vyberte, ktorá z preddefinovaných farieb sa použije na tlačidlá."
+
+#: includes/Customize/Options.php:626
 msgid "Gradients"
 msgstr "Gradienty"
 
-#: includes/Customize/Options.php:561
+#: includes/Customize/Options.php:632
 msgid "Hard gradient stop"
 msgstr "Tvrdé zastavenie gradientu"
 
-#: includes/Customize/Options.php:563 includes/Customize/Options.php:592
-#: includes/Customize/Options.php:739 includes/Customize/Options.php:773
-#: includes/Customize/Options.php:812 includes/Customize/Options.php:868
-#: includes/Customize/Options.php:910 includes/Customize/Options.php:938
-#: includes/Customize/Options.php:1001 includes/Customize/Options.php:1028
-#: includes/Customize/Options.php:1055
+#: includes/Customize/Options.php:634 includes/Customize/Options.php:663
+#: includes/Customize/Options.php:819 includes/Customize/Options.php:853
+#: includes/Customize/Options.php:892 includes/Customize/Options.php:948
+#: includes/Customize/Options.php:996 includes/Customize/Options.php:1024
+#: includes/Customize/Options.php:1087 includes/Customize/Options.php:1114
+#: includes/Customize/Options.php:1141
 msgid "Default value:"
 msgstr "Predvolená hodnota:"
 
-#: includes/Customize/Options.php:565
+#: includes/Customize/Options.php:636
 msgid ""
 "Sets the stop position for automatically generated hard cut gradient presets."
 msgstr ""
 "Nastaví polohu zastavenia pre automaticky generované predvoľby prechodu "
 "tvrdého rezu."
 
-#: includes/Customize/Options.php:590
+#: includes/Customize/Options.php:661
 msgid "Soft gradient stop"
 msgstr "Zastavenie mäkkého gradientu"
 
-#: includes/Customize/Options.php:594
+#: includes/Customize/Options.php:665
 msgid ""
 "Sets the stop position for automatically generated soft gradual gradient "
 "presets."
@@ -825,54 +1076,62 @@ msgstr ""
 "Nastavuje polohu zastavenia pre automaticky generované predvoľby mäkkého "
 "postupného gradientu."
 
-#: includes/Customize/Options.php:622
+#: includes/Customize/Options.php:691
+msgid "Enable auto-generated gradients"
+msgstr "Povoliť automaticky generované gradienty"
+
+#: includes/Customize/Options.php:692
+msgid "The theme generates multiple useful gradients for you."
+msgstr "Téma pre vás generuje viacero užitočných gradientov."
+
+#: includes/Customize/Options.php:702
 msgid "Editor palette"
 msgstr "Paleta editora"
 
-#: includes/Customize/Options.php:628
+#: includes/Customize/Options.php:708
 msgid "WordPress default color palette"
 msgstr "Predvolená paleta farieb WordPress"
 
-#: includes/Customize/Options.php:629 includes/Customize/Options.php:637
-#: includes/Customize/Options.php:645
+#: includes/Customize/Options.php:709 includes/Customize/Options.php:717
+#: includes/Customize/Options.php:725
 msgid "Should this be enabled in block editor?"
 msgstr "Malo by to byť povolené v editore blokov?"
 
-#: includes/Customize/Options.php:636
+#: includes/Customize/Options.php:716
 msgid "WordPress default gradients"
 msgstr "Predvolené prechody WordPress"
 
-#: includes/Customize/Options.php:644
+#: includes/Customize/Options.php:724
 msgid "WordPress default duotone presets"
 msgstr "Predvolené duotóny WordPress"
 
-#: includes/Customize/Options.php:653
+#: includes/Customize/Options.php:733
 msgid "Black color"
 msgstr "Čierna farba"
 
-#: includes/Customize/Options.php:671
+#: includes/Customize/Options.php:751
 msgid "White color"
 msgstr "Biela farba"
 
-#: includes/Customize/Options.php:698
+#: includes/Customize/Options.php:778
 msgctxt "Customizer section title."
 msgid "Layout"
 msgstr "Rozloženie"
 
-#: includes/Customize/Options.php:707
+#: includes/Customize/Options.php:787
 msgctxt "WordPress full site editing functionality."
 msgid "Site editing"
 msgstr "Editácia webstránky"
 
-#: includes/Customize/Options.php:713
+#: includes/Customize/Options.php:793
 msgid "Enable template editor"
 msgstr "Povoliť editor šablón"
 
-#: includes/Customize/Options.php:715
+#: includes/Customize/Options.php:795
 msgid "Enables WordPress full site editing experience."
 msgstr "Umožňuje plnohodnotné úpravy WordPress webstránok."
 
-#: includes/Customize/Options.php:717
+#: includes/Customize/Options.php:797
 msgid ""
 "When enabled, you can edit all theme template layouts visually without using "
 "code."
@@ -880,7 +1139,7 @@ msgstr ""
 "Ak je povolený, môžete vizuálne upravovať všetky rozloženia šablón témy bez "
 "použitia kódu."
 
-#: includes/Customize/Options.php:719
+#: includes/Customize/Options.php:799
 msgid ""
 "When disabled, only site template parts (such as header, footer, page "
 "intro,&hellip;) are customizable via Site Editor."
@@ -888,7 +1147,7 @@ msgstr ""
 "Ak je vypnutý, v editore webstránky je možné prispôsobiť iba časti šablón "
 "(napríklad hlavičku, pätku, intro stránky,&hellip;)."
 
-#: includes/Customize/Options.php:721
+#: includes/Customize/Options.php:801
 msgid ""
 "You can still modify the theme using PHP code (known practice from "
 "\"classic\" WordPress themes)."
@@ -896,19 +1155,19 @@ msgstr ""
 "Tému môžete stále modifikovať pomocou PHP kódu (známa prax z \"klasických\" "
 "WordPress tém)."
 
-#: includes/Customize/Options.php:730
+#: includes/Customize/Options.php:810
 msgid "Content"
 msgstr "Obsah"
 
-#: includes/Customize/Options.php:737
+#: includes/Customize/Options.php:817
 msgid "Content width"
 msgstr "Šírka obsahu"
 
-#: includes/Customize/Options.php:741
+#: includes/Customize/Options.php:821
 msgid "This is a default width for your blocks."
 msgstr "Toto je predvolená šírka vašich blokov."
 
-#: includes/Customize/Options.php:743
+#: includes/Customize/Options.php:823
 msgid ""
 "Set this cautiously for the best readability, depending on your typography "
 "setup."
@@ -916,46 +1175,46 @@ msgstr ""
 "Nastavte túto možnosť tak, aby ste dosiahli najlepšiu čitateľnosť v "
 "závislosti od nastavenia typografie."
 
-#: includes/Customize/Options.php:745
+#: includes/Customize/Options.php:825
 msgid ""
 "The optimal text line length is considered to be between 50 and 75 "
 "characters, including spaces."
 msgstr ""
 "Za optimálnu dĺžku riadka textu sa považuje 50 až 75 znakov vrátane medzier."
 
-#: includes/Customize/Options.php:771
+#: includes/Customize/Options.php:851
 msgid "Wide width"
 msgstr "Široká šírka"
 
-#: includes/Customize/Options.php:775
+#: includes/Customize/Options.php:855
 msgid "This width is applied on wide-aligned blocks."
 msgstr "Táto šírka sa aplikuje na široko zarovnané bloky."
 
-#: includes/Customize/Options.php:804
+#: includes/Customize/Options.php:884
 msgid "Responsiveness"
 msgstr "Responzívnosť"
 
-#: includes/Customize/Options.php:810
+#: includes/Customize/Options.php:890
 msgid "Small screen breakpoint"
 msgstr "Bod zlomu malých obrazoviek"
 
-#: includes/Customize/Options.php:814
+#: includes/Customize/Options.php:894
 msgid "Sets the screen width (viewport) value for responsive breakpoint."
 msgstr "Nastaví hodnotu šírky obrazovky (výrezu) pre responzívny bod zlomu."
 
 #. translators: %1$s, %2$s: block style names.
-#: includes/Customize/Options.php:818
+#: includes/Customize/Options.php:898
 #, php-format
 msgid "This affects responsive block styles, such as \"%1$s\" or \"%2$s\"."
 msgstr ""
 "Ovplyvňuje responzívne štýly blokov, ako napríklad \"%1$s\" alebo \"%2$s\"."
 
-#: includes/Customize/Options.php:842
+#: includes/Customize/Options.php:922
 msgctxt "Customizer section title."
 msgid "Typography"
 msgstr "Písmo"
 
-#: includes/Customize/Options.php:850
+#: includes/Customize/Options.php:930
 msgid ""
 "These options provide great flexibility such as setting up a custom font "
 "family and affect also Global Styles in Site Editor."
@@ -963,15 +1222,15 @@ msgstr ""
 "Tieto možnosti poskytujú veľkú flexibilitu, ako napríklad nastavenie "
 "vlastnej rodiny písiem a ovplyvňujú aj globálne štýly v Editore webstránky."
 
-#: includes/Customize/Options.php:856
+#: includes/Customize/Options.php:936
 msgid "Font size"
 msgstr "Veľkosť písma"
 
-#: includes/Customize/Options.php:862
+#: includes/Customize/Options.php:942
 msgid "Global font size in px"
 msgstr "Globálna veľkosť písma v px"
 
-#: includes/Customize/Options.php:864
+#: includes/Customize/Options.php:944
 msgid ""
 "Global text font size used as a base for automatic calculation of additional "
 "font sizes."
@@ -979,59 +1238,55 @@ msgstr ""
 "Globálna veľkosť písma použitá ako základ pre automatický výpočet ďalších "
 "veľkostí písma."
 
-#: includes/Customize/Options.php:866
+#: includes/Customize/Options.php:946
 msgid "This size is applied on large screens only."
 msgstr "Táto veľkosť sa aplikuje iba na veľkých obrazovkách."
 
-#: includes/Customize/Options.php:894
+#: includes/Customize/Options.php:974
 msgid "Typography ratio"
 msgstr "Typografický pomer"
 
-#: includes/Customize/Options.php:897
+#: includes/Customize/Options.php:977
 msgid "Ratios for automatic harmonious typography font size calculation."
 msgstr "Koeficienty pre automatický výpočet harmonickej veľkosti písma."
 
-#: includes/Customize/Options.php:904
+#: includes/Customize/Options.php:984
 msgid "Modular scale ratio"
 msgstr "Koeficient modulárnej stupnice"
 
-#: includes/Customize/Options.php:906
+#: includes/Customize/Options.php:986
 msgid "This ratio is used for calculating heading sizes."
 msgstr "Tento pomer sa využije na výpočet veľkostí nadpisov."
 
-#: includes/Customize/Options.php:908
-msgid "Open link in new window"
-msgstr "Otvoriť odkaz v novom okne"
-
-#: includes/Customize/Options.php:908
+#: includes/Customize/Options.php:993
 msgid "Open Modular Scale calculator in a new window ↗"
 msgstr "Otvoriť kalkulačku modulárnej stupnice v novom okne ↗"
 
-#: includes/Customize/Options.php:934
+#: includes/Customize/Options.php:1020
 msgid "Large screen headings scale"
 msgstr "Mierka nadpisov na veľkej obrazovke"
 
-#: includes/Customize/Options.php:936
+#: includes/Customize/Options.php:1022
 msgid "Additional ratio for scaling heading sizes on large screens."
 msgstr ""
 "Dodatočný pomer pre násobenie veľkosti nadpisov na veľkých obrazovkách."
 
-#: includes/Customize/Options.php:964
+#: includes/Customize/Options.php:1050
 msgid "Font families"
 msgstr "Písmo"
 
 #. translators: %s: customizer option values.
-#: includes/Customize/Options.php:969
+#: includes/Customize/Options.php:1055
 #, php-format
 msgid "Values of %s set web safe system font families."
 msgstr ""
 "Hodnoty %s nastavia typy písma bezpečne použiteľné na webových stránkach."
 
-#: includes/Customize/Options.php:974
+#: includes/Customize/Options.php:1060
 msgid "You can use any Google Fonts with this theme."
 msgstr "S touto témou môžete použiť akýkoľvek z Google Fonts."
 
-#: includes/Customize/Options.php:976
+#: includes/Customize/Options.php:1062
 msgid ""
 "Just input the Google Fonts font family name into the fields below, save the "
 "options, and you are done!"
@@ -1040,41 +1295,41 @@ msgstr ""
 "nastavenia a máte hotovo!"
 
 #. translators: %s: CSS style `font-family` property with link to more information (international).
-#: includes/Customize/Options.php:989
+#: includes/Customize/Options.php:1075
 #, php-format
 msgid "Use a value valid for CSS %s property in the fields below."
 msgstr "V nižšie uvedených poliach použite hodnotu platnú pre CSS štýl %s."
 
-#: includes/Customize/Options.php:998
+#: includes/Customize/Options.php:1084
 msgid "Main font"
 msgstr "Hlavné písmo"
 
-#: includes/Customize/Options.php:999
+#: includes/Customize/Options.php:1085
 msgid "By default applied as main, global website font."
 msgstr "Pôvodne sa aplikuje ako hlavné, globálne písmo webstránky."
 
-#: includes/Customize/Options.php:1008 includes/Customize/Options.php:1035
-#: includes/Customize/Options.php:1062
+#: includes/Customize/Options.php:1094 includes/Customize/Options.php:1121
+#: includes/Customize/Options.php:1148
 msgid "Default value"
 msgstr "Predvolená hodnota"
 
-#: includes/Customize/Options.php:1025
+#: includes/Customize/Options.php:1111
 msgid "Heading font"
 msgstr "Písmo nadpisov"
 
-#: includes/Customize/Options.php:1052
+#: includes/Customize/Options.php:1138
 msgid "Alternative font"
 msgstr "Alternatívne písmo"
 
-#: includes/Customize/Options.php:1053
+#: includes/Customize/Options.php:1139
 msgid "By default applied on site title (logo)."
 msgstr "Pôvodne sa aplikuje na nadpis webstránky (logo)."
 
-#: includes/Customize/Options.php:1080
+#: includes/Customize/Options.php:1166
 msgid "Enable theme Google Fonts loading"
 msgstr "Povoliť načítavanie Google Fonts témou"
 
-#: includes/Customize/Options.php:1081
+#: includes/Customize/Options.php:1167
 msgid ""
 "In case you are loading fonts with a plugin or other way, disable this "
 "option."
@@ -1082,11 +1337,11 @@ msgstr ""
 "V prípade, že načítavate typ písma pomocou pluginu alebo iným spôsobom, túto "
 "možnosť vypnite."
 
-#: includes/Customize/Options.php:1096
+#: includes/Customize/Options.php:1182
 msgid "More typography options"
 msgstr "Ďalšie možnosti typografie"
 
-#: includes/Customize/Options.php:1099
+#: includes/Customize/Options.php:1185
 msgid ""
 "In case you need to modify typography more precisely, you can do so in Site "
 "Editor → Styles section."
@@ -1094,76 +1349,107 @@ msgstr ""
 "V prípade, že vyžadujete presnejšie úpravy typografie, môžete tak urobiť v "
 "sekcii Editor webstránky → Štýly."
 
-#: includes/Customize/Options.php:1111 includes/Loop/Featured_Posts.php:144
+#: includes/Customize/Options.php:1197 includes/Loop/Featured_Posts.php:144
 msgctxt "Customizer section title."
 msgid "Posts"
 msgstr "Príspevky"
 
-#: includes/Customize/Options.php:1120
+#: includes/Customize/Options.php:1206
 msgid "Blog"
 msgstr "Blog"
 
-#: includes/Customize/Options.php:1126
+#: includes/Customize/Options.php:1212
 msgid "Blog posts layout"
 msgstr "Rozloženie blogových príspevkov"
 
-#: includes/Customize/Options.php:1129
+#: includes/Customize/Options.php:1213
+msgid "New layout will not be applied if you edited related template parts."
+msgstr "Nové rozloženie sa neaplikuje, ak ste upravili súvisiace časti šablón."
+
+#: includes/Customize/Options.php:1216
 msgctxt "Posts list layout."
 msgid "Columns without sidebar"
 msgstr "Stĺpce bez bočného panela"
 
-#: includes/Customize/Options.php:1130
+#: includes/Customize/Options.php:1217
 msgctxt "Posts list layout."
 msgid "List with sidebar"
 msgstr "Zoznam s bočným panelom"
 
-#: includes/Customize/Options.php:1139
+#: includes/Customize/Options.php:1225
+msgid "Apply blog posts layout on archive pages"
+msgstr "Aplikovať rozloženie príspevkov na stránky archívov"
+
+#: includes/Customize/Options.php:1227
+msgid "The blog posts list layout will be applied on all archive pages."
+msgstr ""
+"Rozloženie zoznamu príspevkov bude aplikované na všetky stránky archívov."
+
+#: includes/Customize/Options.php:1234 includes/Customize/Options.php:1239
+msgid "What is an archive page?"
+msgstr "Čo je stránka archívu?"
+
+#: includes/Customize/Options.php:1236 includes/Customize/Options.php:1343
+msgid "(Opens link in a new window.)"
+msgstr "(Otvorí odkaz v novom okne.)"
+
+#: includes/Customize/Options.php:1248
 msgid "Enable category selector"
 msgstr "Povoliť výber kategórie"
 
-#: includes/Customize/Options.php:1140
+#: includes/Customize/Options.php:1249
 msgid "Displays a section with category selector on blog page."
 msgstr "Zobrazí sekciu s výberom kategórií na stránke blogu."
 
-#: includes/Customize/Options.php:1152
+#: includes/Customize/Options.php:1261
 msgid "You can further customize blog page layout in Site Editor."
 msgstr "Rozloženie blogu môžete ďalej prispôsobiť v editore webstránky."
 
-#: includes/Customize/Options.php:1168
+#: includes/Customize/Options.php:1277
 msgid "Posts count"
 msgstr "Počet príspevkov"
 
-#: includes/Customize/Options.php:1170
+#: includes/Customize/Options.php:1279
 msgid "Max number of entries displayed in list of posts."
 msgstr "Maximálny počet záznamov zobrazených v zozname príspevkov."
 
-#: includes/Customize/Options.php:1177 patterns/site/intro-search.php:42
+#: includes/Customize/Options.php:1286 patterns/site/intro-search.php:42
 msgid "Search results"
 msgstr "Výsledky vyhľadávania"
 
-#: includes/Customize/Options.php:1189
+#: includes/Customize/Options.php:1298
 msgid "Archive page"
 msgstr "Stránka archívu"
 
-#: includes/Customize/Options.php:1204
+#: includes/Customize/Options.php:1313
 msgctxt "Customizer section title."
-msgid "Others"
-msgstr "Ostatné"
+msgid "Accessibility"
+msgstr "Prístupnosť"
 
-#: includes/Customize/Options.php:1211
-msgid "Enable core block patterns"
-msgstr "Povoliť vzory blokov jadra"
+#: includes/Customize/Options.php:1320
+msgid "Fixed mobile navigation"
+msgstr "Fixovaná mobilná navigácia"
 
-#: includes/Customize/Options.php:1212
-msgid "Allows WordPress core block patterns in block editor."
-msgstr "Povolí vzory blokov jadra WordPress v editore blokov."
+#: includes/Customize/Options.php:1322
+msgid ""
+"Displays mobile navigation toggle button always at fixed position (at the "
+"bottom of the screen) even when scrolling."
+msgstr ""
+"Zobrazí prepínacie tlačidlo mobilnej navigácie vždy vo fixnej polohe (v "
+"spodnej časti obrazovky) aj pri rolovaní."
 
-#: includes/Customize/Options.php:1220
+#: includes/Customize/Options.php:1324
+msgid ""
+"(Enables \"Fixed mobile toggle button\" block style for Navigation block.)"
+msgstr ""
+"(Povolí štýl \"Fixované tlačidlo mobilného prepínača\" pre blok Navigácia.)"
+
+#: includes/Customize/Options.php:1331
 msgid "Expand mobile navigation submenus"
 msgstr "Rozbaliť vnorené menu mobilnej navigácie"
 
 #. translators: %s: Gutenberg issue link.
-#: includes/Customize/Options.php:1224
+#: includes/Customize/Options.php:1335
 #, php-format
 msgid ""
 "Until WordPress fixes Navigation block accessibility issue (%s), enabling "
@@ -1172,15 +1458,11 @@ msgstr ""
 "Kým WordPress nevyrieši problém s prístupnosťou bloku Navigácia (%s), "
 "povolenie tejto možnosti ho zmierni."
 
-#: includes/Customize/Options.php:1230
+#: includes/Customize/Options.php:1341
 msgid "WordPress GitHub issue #63033"
 msgstr "WordPress GitHub problém číslo 63033"
 
-#: includes/Customize/Options.php:1232
-msgid "(Opens link in a new window.)"
-msgstr "(Otvorí odkaz v novom okne.)"
-
-#: includes/Customize/Options.php:1237
+#: includes/Customize/Options.php:1348
 msgid ""
 "Unfortunately, it also means all submenus will be expanded in mobile menu "
 "without option to collapse them by user."
@@ -1188,28 +1470,48 @@ msgstr ""
 "Bohužiaľ to tiež znamená, že všetky vnorené menu sa rozbalia v mobilnej "
 "navigácii bez možnosti ich zbalenia používateľom."
 
-#: includes/Customize/Options.php:1245
+#: includes/Customize/Options.php:1350
+msgid ""
+"If you are building a fully accessible website, you should enable this "
+"option."
+msgstr ""
+"Ak vytvárate plne prístupnú webovú stránku, mali by ste túto možnosť povoliť."
+
+#: includes/Customize/Options.php:1360
+msgctxt "Customizer section title."
+msgid "Others"
+msgstr "Ostatné"
+
+#: includes/Customize/Options.php:1369
+msgid "Logo max width"
+msgstr "Maximálna šírka loga"
+
+#: includes/Customize/Options.php:1371
+msgid "Applies on logo image in default site header and footer."
+msgstr "Aplikuje sa na obrázok loga v pôvodnej hlavičke a pätke webstránky."
+
+#: includes/Customize/Options.php:1373
+msgid ""
+"Customization of header and footer template part may override this option."
+msgstr ""
+"Prispôsobenie časti šablóny hlavičky a pätky môže prevážiť nad týmto "
+"nastavením."
+
+#: includes/Customize/Options.php:1388
 msgid "Link homepage logo"
 msgstr "Link na logu domovskej stránky"
 
-#: includes/Customize/Options.php:1247
-msgid ""
-"When disabled, logo image will no longer link to the homepage when visitor "
-"is on the homepage."
+#: includes/Customize/Options.php:1389
+msgid "Apply homepage link on logo image when visiting the homepage."
 msgstr ""
-"Ak je táto možnosť zakázaná, obrázok loga už nebude odkazovať na domovskú "
-"stránku, keď je návštevník na domovskej stránke."
+"Aplikovať odkaz na úvodnú stránku na obrázok loga pri návšteve úvodnej "
+"stránky."
 
-#: includes/Customize/Options.php:1249
-msgid "It also removes the logo image alt text attribute on the homepage."
-msgstr ""
-"Odstráni tiež atribút alternatívneho textu obrázka loga na domovskej stránke."
-
-#: includes/Customize/Options.php:1263
+#: includes/Customize/Options.php:1403
 msgid "Header image usage"
 msgstr "Použitie obrázka hlavičky"
 
-#: includes/Customize/Options.php:1266
+#: includes/Customize/Options.php:1406
 msgid ""
 "These header images will be used in Image blocks with \"Use header image\" "
 "block style assigned."
@@ -1217,23 +1519,91 @@ msgstr ""
 "Tieto obrázky hlavičky sa použijú v bloku Obázok s priradeným štýlom bloku "
 "\"Použiť obrázok hlavičky\"."
 
-#: includes/Entry/Component.php:265
+#. translators: Decorative quotation mark. IMPORTANT: Translate cautiously as this affects quote design! It is recommended to keep it untranslated. Takes CSS content value (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content).
+#: includes/Customize/Styles.php:100
+msgid "'“'"
+msgstr "'“'"
+
+#: includes/Editor/Classic.php:56
+msgctxt "Editor format styles section title."
+msgid "Theme"
+msgstr "Téma"
+
+#: includes/Editor/Classic.php:60
+msgid "(L) Large font size"
+msgstr "(L) Veľké písmo"
+
+#: includes/Editor/Classic.php:66
+msgid "(XL) Extra large font size"
+msgstr "(XL) Extra veľké písmo"
+
+#: includes/Editor/Classic.php:72
+msgid "UPPERCASE"
+msgstr "VEĽKÉ PÍSMO"
+
+#: includes/Editor/Classic.php:80
+msgid "Paragraph with [D]ropcap"
+msgstr "Odsek s výrazným prvým písmenom"
+
+#: includes/Editor/Gradients.php:336
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: For backdrop blur"
+msgstr "%s: Pre rozmazanie pozadia"
+
+#: includes/Editor/Gradients.php:341
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color cut to transparent, horizontally"
+msgstr "%s: Farba zoseknutá do priehľadnej, horizontálne"
+
+#: includes/Editor/Gradients.php:345
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent cut to color, horizontally"
+msgstr "%s: Z priehľadnej zoseknuté do farby, horizontálne"
+
+#: includes/Editor/Gradients.php:350
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color cut to transparent, vertically"
+msgstr "%s: Farba zoseknutá do priehľadnej, vertikálne"
+
+#: includes/Editor/Gradients.php:354
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent cut to color, vertically"
+msgstr "%s: Z priehľadnej zoseknuté do farby, vertikálne"
+
+#: includes/Editor/Gradients.php:359
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Color to transparent, vertically"
+msgstr "%s: Farba do priehľadnej, vertikálne"
+
+#: includes/Editor/Gradients.php:363
+#, php-format
+msgctxt "%s: Placeholder for color name."
+msgid "%s: Transparent to color, vertically"
+msgstr "%s: Z priehľadnej do farby, vertikálne"
+
+#: includes/Entry/Component.php:261
 msgctxt "Added to posts and pages that are missing titles."
 msgid "Untitled"
 msgstr "Bez názvu"
 
 #. translators: %s: Name of current post
-#: includes/Entry/Summary.php:140
+#: includes/Entry/Summary.php:145
 #, php-format
 msgid "Continue reading \"%s\""
 msgstr "Pokračovať v čítaní \"%s\""
 
-#: includes/Loop/Component.php:180
+#: includes/Loop/Component.php:200
 msgctxt "Template name"
 msgid "Search Post Type"
 msgstr "Vyhľadávanie typu obsahu"
 
-#: includes/Loop/Component.php:181
+#: includes/Loop/Component.php:201
 msgid "Displays search results for a specific post type search."
 msgstr ""
 "Zobrazí výsledky vyhľadávania pre vyhľadávanie konkrétneho typu príspevku."
@@ -1289,70 +1659,72 @@ msgstr ""
 "Zabezpečuje, aby sa odporúčané príspevky odstránili zo zoznamu príspevkov na "
 "stránke blogu."
 
-#: includes/Loop/Pagination.php:190
+#: includes/Loop/Pagination.php:209
 msgctxt "Pagination page number screen reader label."
 msgid "Page:"
 msgstr "Strana:"
 
 #. translators: 1: current page number, 2: total page count.
-#: includes/Loop/Pagination.php:203 includes/Loop/Pagination.php:212
+#: includes/Loop/Pagination.php:222 includes/Loop/Pagination.php:231
 #, php-format
 msgid "Page %1$d of %2$d"
 msgstr "Stránka %1$d z %2$d"
 
-#: includes/Setup/Media.php:120
+#: includes/Setup/Media.php:128
 msgctxt "Header image description."
 msgid "Fingers (dynamic color SVG)"
 msgstr "Prsty (dynamické farebné SVG)"
 
-#: includes/Setup/Media.php:126
+#: includes/Setup/Media.php:134
 msgctxt "Header image description."
 msgid "Blobs (dynamic color SVG)"
 msgstr "Tvary (dynamická farba SVG)"
 
-#: includes/Setup/Media.php:132
+#: includes/Setup/Media.php:140
 msgctxt "Header image description."
 msgid "Line Fingers (dynamic color SVG)"
 msgstr "Čiarové prsty (dynamická farba SVG)"
 
-#: includes/Setup/Media.php:213
+#: includes/Setup/Media.php:221
 msgctxt "WordPress predefined image size name."
 msgid "Thumbnail size"
 msgstr "Veľkosť miniatúry"
 
-#: includes/Setup/Media.php:214 includes/Setup/Media.php:229
-#: includes/Setup/Media.php:239
+#: includes/Setup/Media.php:222 includes/Setup/Media.php:237
+#: includes/Setup/Media.php:247
 msgid "Used in block patterns in templates and template parts."
 msgstr "Používa sa vo vzoroch blokov v šablónach a častiach šablón."
 
-#: includes/Setup/Media.php:227
+#: includes/Setup/Media.php:235
 msgctxt "WordPress predefined image size name."
 msgid "Medium size"
 msgstr "Stredný rozmer"
 
-#: includes/Setup/Media.php:231
+#: includes/Setup/Media.php:239
 msgid "By default used as featured image size in posts list."
 msgstr ""
 "Pôvodne použité ako veľkosť prezentačného obrázka v zozname príspevkov."
 
-#: includes/Setup/Media.php:238
+#: includes/Setup/Media.php:246
 msgctxt "WordPress predefined image size name."
 msgid "Large size"
 msgstr "Veľký rozmer"
 
-#: includes/Setup/Site_Editor.php:243
-msgid "Navigation"
-msgstr "Navigácia"
-
-#: includes/Setup/Site_Editor.php:248
+#: includes/Setup/Site_Editor.php:283
+#: parts/admin/welcome-feature--template-parts.php:27
+#: parts/admin/welcome-feature--template-parts.php:36
 msgid "Template Parts"
 msgstr "Časti šablóny"
 
-#: includes/Setup/Site_Editor.php:253
+#: includes/Setup/Site_Editor.php:291
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: includes/Setup/Site_Editor.php:296
 msgid "Templates"
 msgstr "Šablóny"
 
-#: includes/Setup/Site_Editor.php:301
+#: includes/Setup/Site_Editor.php:349
 msgid "Use Site Editor &rarr;"
 msgstr "Použiť editor webstránky &rarr;"
 
@@ -1456,16 +1828,16 @@ msgstr "Preskočiť na hlavnú navigáciu"
 msgid "Skip to footer"
 msgstr "Preskočiť na pätičku"
 
-#: parts/admin/media-image-sizes.php:31
+#: parts/admin/media-image-sizes.php:32
 msgid "Recommended image sizes"
 msgstr "Odporúčané rozmery obrázkov"
 
-#: parts/admin/media-image-sizes.php:34
+#: parts/admin/media-image-sizes.php:35
 msgid ""
 "For the optimal theme display, please, set image sizes recommended below."
 msgstr "Pre optimálne zobrazenie témy nastavte odporúčané veľkosti obrázkov."
 
-#: parts/admin/media-image-sizes.php:35
+#: parts/admin/media-image-sizes.php:36
 msgid ""
 "If you already have images uploaded to your website you need to resize them "
 "after changing the sizes here."
@@ -1473,35 +1845,35 @@ msgstr ""
 "Ak už máte obrázky nahrané na vašej webovej stránke, musíte ich po zmene "
 "veľkostí regenerovať."
 
-#: parts/admin/media-image-sizes.php:36
+#: parts/admin/media-image-sizes.php:37
 msgid "Resize images using plugin &rarr;"
 msgstr "Regenerovať obrázky pomocou pluginu &rarr;"
 
-#: parts/admin/media-image-sizes.php:43
+#: parts/admin/media-image-sizes.php:44
 msgid "Size name"
 msgstr "Názov rozmeru"
 
-#: parts/admin/media-image-sizes.php:44
+#: parts/admin/media-image-sizes.php:45
 msgid "Size ID"
 msgstr "ID veľkosti"
 
-#: parts/admin/media-image-sizes.php:45
+#: parts/admin/media-image-sizes.php:46
 msgid "Size parameters"
 msgstr "Parametre rozmeru"
 
-#: parts/admin/media-image-sizes.php:46
+#: parts/admin/media-image-sizes.php:47
 msgid "Theme usage"
 msgstr "Použitie v téme"
 
-#: parts/admin/media-image-sizes.php:59
+#: parts/admin/media-image-sizes.php:60
 msgid "cropped"
 msgstr "orezaný"
 
-#: parts/admin/media-image-sizes.php:59
+#: parts/admin/media-image-sizes.php:60
 msgid "scaled"
 msgstr "zmenšený"
 
-#: parts/admin/media-image-sizes.php:63
+#: parts/admin/media-image-sizes.php:64
 msgid ""
 "Additional image size added by the theme. Can not be changed on this page."
 msgstr ""
@@ -1509,7 +1881,7 @@ msgstr ""
 "na tejto stránke."
 
 #. translators: 1: image width, 2: image height, 3: cropped or scaled?
-#: parts/admin/media-image-sizes.php:91
+#: parts/admin/media-image-sizes.php:92
 #, php-format
 msgid "%1$d &times; %2$d, %3$s"
 msgstr "%1$d &times; %2$d, %3$s"
@@ -1615,7 +1987,7 @@ msgid "There is no need to import demo content data anymore."
 msgstr "Už nie je potrebné importovať dáta demo obsahu."
 
 #. translators: %s: block pattern category name ("Pages" by default).
-#: parts/admin/welcome-demo.php:36 parts/admin/welcome-feature--patterns.php:47
+#: parts/admin/welcome-demo.php:36 parts/admin/welcome-feature--patterns.php:35
 #, php-format
 msgid ""
 "Simply use patterns from %s category to create whole page content easily!"
@@ -1623,7 +1995,7 @@ msgstr ""
 "Jednoducho použite vzory z kategórie %s pre jednoduché vytvorenie obsahu "
 "celej stránky!"
 
-#: parts/admin/welcome-demo.php:37 parts/admin/welcome-feature--patterns.php:48
+#: parts/admin/welcome-demo.php:37 parts/admin/welcome-feature--patterns.php:36
 msgid "Pages"
 msgstr "Stránky"
 
@@ -1671,31 +2043,32 @@ msgstr ""
 msgid "Preview starter content"
 msgstr "Prezrieť štartovací obsah"
 
-#: parts/admin/welcome-feature--background.php:29
+#: parts/admin/welcome-feature--background.php:30
 msgid "Site Background Image"
 msgstr "Obrázok pozadia webstránky"
 
-#: parts/admin/welcome-feature--background.php:31
+#: parts/admin/welcome-feature--background.php:32
 msgid "Set up global website background image if you like."
 msgstr "Ak chcete, nastavte globálny obrázok pozadia webstránky."
 
-#: parts/admin/welcome-feature--background.php:32
+#: parts/admin/welcome-feature--background.php:33
 msgid "Use repeated pattern image to create interesting background."
 msgstr "Použite obrázok opakovaného vzoru pre vytvorenie zaujímavého pozadia."
 
-#: parts/admin/welcome-feature--background.php:35
+#: parts/admin/welcome-feature--background.php:36
 msgid "Set Background"
 msgstr "Nastaviť pozadie"
 
-#: parts/admin/welcome-feature--background.php:37
-#: parts/admin/welcome-feature--custom-header.php:37
-#: parts/admin/welcome-feature--featured-posts.php:34
-#: parts/admin/welcome-feature--hybrid.php:34
-#: parts/admin/welcome-feature--patterns.php:59
-#: parts/admin/welcome-feature--privacy.php:33
+#: parts/admin/welcome-feature--background.php:38
+#: parts/admin/welcome-feature--custom-header.php:38
+#: parts/admin/welcome-feature--featured-posts.php:38
+#: parts/admin/welcome-feature--hybrid.php:35
+#: parts/admin/welcome-feature--patterns.php:49
+#: parts/admin/welcome-feature--privacy.php:34
 #: parts/admin/welcome-feature--site-editor.php:48
-#: parts/admin/welcome-feature--styles.php:28
-#: parts/admin/welcome-feature--typography.php:37
+#: parts/admin/welcome-feature--styles.php:30
+#: parts/admin/welcome-feature--template-parts.php:39
+#: parts/admin/welcome-feature--typography.php:38
 msgid "Info in documentation &rarr;"
 msgstr "Informácie v dokumentácii &rarr;"
 
@@ -1703,45 +2076,45 @@ msgstr "Informácie v dokumentácii &rarr;"
 msgid "Blog Layouts"
 msgstr "Rozloženie blogu"
 
-#: parts/admin/welcome-feature--blog.php:31
+#: parts/admin/welcome-feature--blog.php:32
 msgid "Display blog posts in a list with a sidebar, or in columns layout."
 msgstr ""
 "Zobrazte príspevky blogu v zozname s bočným panelom alebo v rozložené do "
 "stĺpcov."
 
-#: parts/admin/welcome-feature--blog.php:31
+#: parts/admin/welcome-feature--blog.php:32
 msgid "Or set completely custom layout for your blog template."
 msgstr "Alebo prispôsobte šablónu blogu vašim požiadavkám."
 
-#: parts/admin/welcome-feature--blog.php:33
+#: parts/admin/welcome-feature--blog.php:35
 msgid "Set Blog Layout"
 msgstr "Nastaviť rozloženie blogu"
 
-#: parts/admin/welcome-feature--blog.php:35
+#: parts/admin/welcome-feature--blog.php:37
 msgid "Edit Templates &rarr;"
 msgstr "Upraviť šablóny &rarr;"
 
-#: parts/admin/welcome-feature--custom-header.php:29
+#: parts/admin/welcome-feature--custom-header.php:30
 msgid "Decorative Images"
 msgstr "Dekoratívne obrázky"
 
-#: parts/admin/welcome-feature--custom-header.php:31
+#: parts/admin/welcome-feature--custom-header.php:32
 msgid "Set up header image displayed in dedicated Image blocks."
 msgstr "Nastavte obrázok hlavičky zobrazený vo vyhradených blokoch obrázkov."
 
-#: parts/admin/welcome-feature--custom-header.php:32
+#: parts/admin/welcome-feature--custom-header.php:33
 msgid "Useful for (randomized) decorative image setup, for example."
 msgstr "Užitočné napríklad pre (náhodné) nastavenie dekoratívnych obrázkov."
 
-#: parts/admin/welcome-feature--custom-header.php:35
+#: parts/admin/welcome-feature--custom-header.php:36
 msgid "Set Header Image"
 msgstr "Nastaviť obrázok hlavičky"
 
-#: parts/admin/welcome-feature--featured-posts.php:29
+#: parts/admin/welcome-feature--featured-posts.php:30
 msgid "Featured Posts"
 msgstr "Odporúčané príspevky"
 
-#: parts/admin/welcome-feature--featured-posts.php:30
+#: parts/admin/welcome-feature--featured-posts.php:32
 msgid ""
 "Display important news immediately on top of your blog page in dominant "
 "\"Featured posts\" section."
@@ -1749,15 +2122,19 @@ msgstr ""
 "Zobrazte dôležité novinky priamo v hornej časti stránky blogu v dominantnej "
 "sekcii \"Odporúčané príspevky\"."
 
-#: parts/admin/welcome-feature--featured-posts.php:32
+#: parts/admin/welcome-feature--featured-posts.php:33
+msgid "Providing categories filter below."
+msgstr "Nižšie je zobrazený filter kategórií."
+
+#: parts/admin/welcome-feature--featured-posts.php:36
 msgid "Set Featured Posts Tag"
 msgstr "Nastaviť značku odporúčaných príspevkov"
 
-#: parts/admin/welcome-feature--hybrid.php:29
+#: parts/admin/welcome-feature--hybrid.php:30
 msgid "Hybrid Theme"
 msgstr "Hybridná téma"
 
-#: parts/admin/welcome-feature--hybrid.php:30
+#: parts/admin/welcome-feature--hybrid.php:31
 msgid ""
 "Choose preferred edit mode: edit <dfn title=\"Full site editing "
 "experience\">all templates</dfn> or <dfn title=\"Classic theme "
@@ -1767,37 +2144,38 @@ msgstr ""
 "title=\"Režim úplnej editácie webstránky (FSE)\">všetky šablóny</dfn> alebo "
 "<dfn title=\"Režim klasickej témy\">iba ich časti</dfn>."
 
-#: parts/admin/welcome-feature--hybrid.php:32
+#: parts/admin/welcome-feature--hybrid.php:33
 msgid "Choose Site Editing Experience"
 msgstr "Vybrať režim editácie webstránky"
 
-#: parts/admin/welcome-feature--patterns.php:40
+#: parts/admin/welcome-feature--patterns.php:28
+#: parts/admin/welcome-feature--patterns.php:44
 msgid "Block Patterns"
 msgstr "Vzory blokov"
 
-#: parts/admin/welcome-feature--patterns.php:41
+#: parts/admin/welcome-feature--patterns.php:29
 msgid "Create your content fast with integrated pre-designed patterns library."
 msgstr ""
 "Vytvorte obsah rýchlejšie pomocou integrovanej knižnice predpripravených "
 "vzorov blokov."
 
-#: parts/admin/welcome-feature--patterns.php:52
+#: parts/admin/welcome-feature--patterns.php:40
 msgid "No need to import demo content data anymore."
 msgstr "Už nie je potrebné importovať dáta demo obsahu."
 
-#: parts/admin/welcome-feature--patterns.php:56
-msgid "Manage Patterns"
-msgstr "Správca vzorov"
+#: parts/admin/welcome-feature--patterns.php:46
+msgid "Toggle Patterns"
+msgstr "Spínať vzory"
 
-#: parts/admin/welcome-feature--privacy.php:25
+#: parts/admin/welcome-feature--privacy.php:26
 msgid "Privacy Compliant Fonts"
 msgstr "Písma v súlade s ochranou osobných údajov"
 
-#: parts/admin/welcome-feature--privacy.php:27
+#: parts/admin/welcome-feature--privacy.php:28
 msgid "Feel free to use any Google Font with this theme."
 msgstr "Neváhajte použiť akékoľvek písmo Google Fonts."
 
-#: parts/admin/welcome-feature--privacy.php:28
+#: parts/admin/welcome-feature--privacy.php:29
 msgid ""
 "Fonts will be loaded from your website, not from Google servers, enhancing "
 "privacy of your visitors (GDPR compliant)."
@@ -1805,8 +2183,8 @@ msgstr ""
 "Písma sa načítajú z vašej webstránky, nie zo serverov Google, čím sa zvýši "
 "súkromie vašich návštevníkov (v súlade s GDPR)."
 
-#: parts/admin/welcome-feature--privacy.php:31
-#: parts/admin/welcome-feature--typography.php:35
+#: parts/admin/welcome-feature--privacy.php:32
+#: parts/admin/welcome-feature--typography.php:36
 msgid "Set Typography"
 msgstr "Nastaviť typografiu"
 
@@ -1826,36 +2204,49 @@ msgstr ""
 msgid "Open Site Editor"
 msgstr "Otvoriť editor webstránky"
 
-#: parts/admin/welcome-feature--styles.php:25
-msgid "Block Styles"
-msgstr "Štýly blokov"
-
 #: parts/admin/welcome-feature--styles.php:26
+msgid "Block Styles & Variations"
+msgstr "Štýly a variácie blokov"
+
+#: parts/admin/welcome-feature--styles.php:27
 msgid "Change the style of blocks without coding."
 msgstr "Zmeňte štýl blokov bez kódovania."
 
-#. translators: %s: link to "Abs – Additional block styles" plugin.
-#: parts/admin/welcome-feature--styles.php:35
-#, php-format
-msgid "Use %s plugin for additional creative block styles."
-msgstr "Použite plugin %s pre dodatočné kreatívne štýly blokov."
+#: parts/admin/welcome-feature--styles.php:28
+msgid ""
+"Display blocks on mobile devices only, blur out background images, reveal "
+"content on hover, overlap gallery images, overlap sections,&hellip;"
+msgstr ""
+"Zobrazte bloky iba na mobilných zariadeniach, rozmažte obrázky na pozadí, "
+"odhaľte obsah pri umiestnení kurzora myši, prekrývajte obrázky galérie, "
+"prekrývajte sekcie,&hellip;"
 
-#: parts/admin/welcome-feature--styles.php:36
-msgid "Abs – Additional block styles"
-msgstr "Abs - Ďalšie štýly blokov"
+#: parts/admin/welcome-feature--template-parts.php:29
+msgid "Don't edit whole templates, edit granular parts."
+msgstr "Neupravujte celé šablóny, upravujte granulárne časti."
 
-#: parts/admin/welcome-feature--typography.php:29
+#: parts/admin/welcome-feature--template-parts.php:30
+msgid "Your modifications apply everywhere at once."
+msgstr "Vaše úpravy sa použijú všade a naraz."
+
+#: parts/admin/welcome-feature--template-parts.php:32
+msgid ""
+"Easily swap header and footer for a different predefined designs in no time."
+msgstr ""
+"Jednoducho a rýchlo vymeňte hlavičku a pätičku za iné preddefinované návrhy."
+
+#: parts/admin/welcome-feature--typography.php:30
 msgid "Harmonious Typography"
 msgstr "Harmonická typografia"
 
-#: parts/admin/welcome-feature--typography.php:31
+#: parts/admin/welcome-feature--typography.php:32
 msgid ""
 "This theme applies harmonious typography to assure the best readability."
 msgstr ""
 "Táto téma aplikuje harmonickú typografiu, aby sa zabezpečila čo najlepšia "
 "čitateľnosť."
 
-#: parts/admin/welcome-feature--typography.php:32
+#: parts/admin/welcome-feature--typography.php:33
 msgid ""
 "Set up base font size, custom fonts, and tweak the typography ratio to your "
 "liking."
@@ -1863,9 +2254,22 @@ msgstr ""
 "Nastavte základnú veľkosť písma, vlastné typy písma a upravte typografický "
 "pomer podľa svojich potrieb."
 
-#: parts/admin/welcome-features.php:37
+#: parts/admin/welcome-features.php:39
 msgid "Theme Features"
 msgstr "Vybrané vlastnosti témy"
+
+#: parts/admin/welcome-footer.php:66
+msgid "Theme changelog"
+msgstr "Zoznam zmien témy"
+
+#: parts/admin/welcome-footer.php:70
+msgid "Previous theme versions"
+msgstr "Predchádzajúce verzie témy"
+
+#: parts/admin/welcome-footer.php:77 patterns/site/footer-centered.php:69
+#: patterns/site/footer-minimal.php:50 patterns/site/footer.php:96
+msgid "To the top"
+msgstr "Späť nahor"
 
 #: parts/admin/welcome-guide--customize.php:37
 msgid "Customize Anything"
@@ -1936,26 +2340,29 @@ msgstr "Spoznajte WordPress &rarr;"
 msgid "Quickstart Guide"
 msgstr "Sprievodca nastavením"
 
+#: parts/admin/welcome-header.php:35
+msgid "(version changelog)"
+msgstr "(zoznam zmien verzie)"
+
 #. translators: 1: theme name, 2: theme developer link.
-#: parts/admin/welcome-header.php:36
+#: parts/admin/welcome-header.php:47
 #, php-format
 msgid "Congratulations and thank you for choosing %1$s theme by %2$s!"
 msgstr "Gratulujeme a ďakujeme za používanie témy %1$s od %2$s!"
 
-#: parts/admin/welcome-header.php:42
-msgid "Information on this page introduces the theme and provides useful tips."
-msgstr ""
-"Informácie na tejto stránke predstavujú tému a poskytujú užitočné tipy."
+#: parts/admin/welcome-header.php:53
+msgid "Find theme introduction and useful tips below."
+msgstr "Nižšie nájdete úvod do témy a užitočné tipy."
 
-#: parts/admin/welcome-header.php:61
+#: parts/admin/welcome-header.php:72
 msgid "Documentation &rarr;"
 msgstr "Dokumentácia &rarr;"
 
-#: parts/admin/welcome-header.php:62
+#: parts/admin/welcome-header.php:73
 msgid "Support Forum &rarr;"
 msgstr "Fórum technickej podpory &rarr;"
 
-#: parts/admin/welcome-header.php:66
+#: parts/admin/welcome-header.php:77
 msgctxt "Notice, hint."
 msgid "Tip:"
 msgstr "Tip:"
@@ -1986,401 +2393,408 @@ msgstr ""
 msgid "Visit WebMan Design website now &rarr;"
 msgstr "Navštíviť webstránku WebMan Design &rarr;"
 
-#: patterns/call-to-action/cta-01.php:18
+#: patterns/call-to-action/cta-01.php:19
 msgctxt "Block pattern title."
 msgid "Inline call to action with form (newsletter subscription)"
 msgstr "Výzva na akciu s formulárom (prihlásenie na odber) v jednom riadku"
 
-#: patterns/call-to-action/cta-01.php:20 patterns/call-to-action/cta-02.php:20
-#: patterns/call-to-action/cta-03.php:20 patterns/call-to-action/cta-04.php:20
-#: patterns/call-to-action/cta-05.php:20 patterns/call-to-action/cta-06.php:20
-#: patterns/call-to-action/cta-07.php:20 patterns/call-to-action/cta-08.php:20
-#: patterns/call-to-action/cta-09.php:20 patterns/call-to-action/cta-10.php:20
+#: patterns/call-to-action/cta-01.php:21 patterns/call-to-action/cta-02.php:21
+#: patterns/call-to-action/cta-03.php:21 patterns/call-to-action/cta-04.php:21
+#: patterns/call-to-action/cta-05.php:21 patterns/call-to-action/cta-06.php:21
+#: patterns/call-to-action/cta-07.php:21 patterns/call-to-action/cta-08.php:21
+#: patterns/call-to-action/cta-09.php:21 patterns/call-to-action/cta-10.php:21
 #: patterns/intro/intro-01.php:22 patterns/intro/intro-02.php:22
 #: patterns/intro/intro-05.php:26 patterns/intro/intro-06.php:26
-#: patterns/numbers/numbers-03.php:23 patterns/posts/posts-01.php:23
-#: patterns/pricing/pricing-01.php:21 patterns/services/services-02.php:22
-#: patterns/services/services-04.php:20
+#: patterns/numbers/numbers-03.php:24 patterns/posts/posts-01.php:24
+#: patterns/pricing/pricing-01.php:22 patterns/services/services-02.php:22
+#: patterns/services/services-04.php:21
 msgctxt "keyword"
 msgid "buttons"
 msgstr "tlačidlá"
 
-#: patterns/call-to-action/cta-01.php:36
+#: patterns/call-to-action/cta-01.php:37
 msgid "Newsletter"
 msgstr "Novinky"
 
-#: patterns/call-to-action/cta-02.php:18
+#: patterns/call-to-action/cta-02.php:19
 msgctxt "Block pattern title."
 msgid "Call to action in a column with blurred background overlaying an image"
 msgstr "Výzva na akciu v stĺpci s rozmazaným pozadím, prekrývajúci obrázok"
 
-#: patterns/call-to-action/cta-03.php:18
+#: patterns/call-to-action/cta-03.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with description and list of question and answer toggles"
 msgstr "Výzva na akciu s popisom a zoznamom rozbaľovacích otázok a odpovedí"
 
-#: patterns/call-to-action/cta-03.php:21 patterns/faq/faq-01.php:20
-#: patterns/faq/faq-03.php:20
+#: patterns/call-to-action/cta-03.php:22 patterns/faq/faq-01.php:21
+#: patterns/faq/faq-03.php:21
 msgctxt "keyword"
 msgid "accordion"
 msgstr "akordeón"
 
-#: patterns/call-to-action/cta-03.php:22 patterns/faq/faq-01.php:21
-#: patterns/faq/faq-03.php:21 patterns/portfolio/portfolio-01.php:20
-#: patterns/portfolio/portfolio-03.php:20
+#: patterns/call-to-action/cta-03.php:23 patterns/faq/faq-01.php:22
+#: patterns/faq/faq-03.php:22 patterns/portfolio/portfolio-01.php:21
+#: patterns/portfolio/portfolio-03.php:21
 msgctxt "keyword"
 msgid "details"
 msgstr "podrobnosti"
 
-#: patterns/call-to-action/cta-03.php:23
+#: patterns/call-to-action/cta-03.php:24
 msgctxt "keyword"
 msgid "questions & answers"
 msgstr "otázky a odpovede"
 
-#: patterns/call-to-action/cta-03.php:24
+#: patterns/call-to-action/cta-03.php:25
 msgctxt "keyword"
 msgid "faq"
 msgstr "často kladené otázky"
 
-#: patterns/call-to-action/cta-03.php:79 patterns/call-to-action/cta-03.php:88
-#: patterns/call-to-action/cta-03.php:97 patterns/faq/faq-01.php:46
-#: patterns/faq/faq-01.php:55 patterns/faq/faq-02.php:67
-#: patterns/faq/faq-02.php:81 patterns/faq/faq-02.php:101
-#: patterns/faq/faq-02.php:115 patterns/faq/faq-03.php:55
-#: patterns/faq/faq-03.php:64 patterns/faq/faq-03.php:73
-#: patterns/faq/faq-03.php:82 patterns/faq/faq-04.php:48
+#: patterns/call-to-action/cta-03.php:81 patterns/faq/faq-01.php:47
+#: patterns/faq/faq-01.php:56 patterns/faq/faq-02.php:70
+#: patterns/faq/faq-03.php:57 patterns/faq/faq-04.php:51
 msgctxt "Frequently asked questions: question prefix."
 msgid "Q: "
 msgstr "O: "
 
-#: patterns/call-to-action/cta-04.php:18
+#: patterns/call-to-action/cta-04.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with wide offset image below"
 msgstr "Výzva na akciu so širokým posunutým obrázkom"
 
-#: patterns/call-to-action/cta-05.php:18
+#: patterns/call-to-action/cta-05.php:19
 msgctxt "Block pattern title."
 msgid "Simple center aligned call to action with big text on a parallax image"
 msgstr ""
 "Jednoduchá výzva na akciu zarovnaná na stred s veľkým textom na obrázku "
 "paralaxy"
 
-#: patterns/call-to-action/cta-05.php:21 patterns/call-to-action/cta-10.php:22
+#: patterns/call-to-action/cta-05.php:22 patterns/call-to-action/cta-10.php:23
 msgctxt "keyword"
 msgid "cover"
 msgstr "titulka"
 
-#: patterns/call-to-action/cta-06.php:18
+#: patterns/call-to-action/cta-06.php:19
 msgctxt "Block pattern title."
 msgid "Simple center aligned call to action with big title"
 msgstr "Jednoduchá výzva na akciu zarovnaná na stred s veľkým názvom"
 
-#: patterns/call-to-action/cta-07.php:18
+#: patterns/call-to-action/cta-07.php:19
 msgctxt "Block pattern title."
 msgid "Classic boxed call to action"
 msgstr "Klasická zaškatuľkovaná výzva na akciu"
 
-#: patterns/call-to-action/cta-08.php:18
+#: patterns/call-to-action/cta-08.php:19
 msgctxt "Block pattern title."
 msgid "Simple call to action with big text description"
 msgstr "Jednoduchá výzva na akciu s veľkým textovým popisom"
 
-#: patterns/call-to-action/cta-09.php:18
+#: patterns/call-to-action/cta-09.php:19
 msgctxt "Block pattern title."
 msgid "2 images with large text and button below"
 msgstr "2 obrázky s veľkým textom a tlačidlom nižšie"
 
-#: patterns/call-to-action/cta-09.php:21 patterns/call-to-action/cta-10.php:21
-#: patterns/contact/contact-02.php:20 patterns/gallery/gallery-01.php:20
-#: patterns/gallery/gallery-02.php:20 patterns/gallery/gallery-03.php:20
-#: patterns/gallery/gallery-04.php:20 patterns/gallery/gallery-05.php:20
-#: patterns/gallery/gallery-06.php:20 patterns/gallery/gallery-07.php:20
-#: patterns/gallery/gallery-08.php:20
-#: patterns/testimonials/testimonials-02.php:21
+#: patterns/call-to-action/cta-09.php:22 patterns/call-to-action/cta-10.php:22
+#: patterns/contact/contact-02.php:21 patterns/gallery/gallery-01.php:21
+#: patterns/gallery/gallery-02.php:21 patterns/gallery/gallery-03.php:21
+#: patterns/gallery/gallery-04.php:21 patterns/gallery/gallery-05.php:21
+#: patterns/gallery/gallery-06.php:21 patterns/gallery/gallery-07.php:21
+#: patterns/gallery/gallery-08.php:21
+#: patterns/testimonials/testimonials-02.php:22
 msgctxt "keyword"
 msgid "gallery"
 msgstr "galéria"
 
-#: patterns/call-to-action/cta-10.php:18
+#: patterns/call-to-action/cta-10.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of images with hover content"
 msgstr "3 stĺpce obrázkov s efektom odhalenia obsahu"
 
-#: patterns/columns/columns-01.php:18
+#: patterns/columns/columns-01.php:19
 msgctxt "Block pattern title."
 msgid "Text in creative columns layout"
 msgstr "Text v kreatívnom rozložení stĺpcov"
 
-#: patterns/columns/columns-01.php:20 patterns/columns/columns-02.php:20
-#: patterns/contact/contact-01.php:20 patterns/gallery/gallery-04.php:21
-#: patterns/media/media-01.php:20 patterns/media/media-02.php:20
-#: patterns/media/media-03.php:20 patterns/media/media-07.php:20
-#: patterns/numbers/numbers-04.php:20 patterns/numbers/numbers-05.php:21
-#: patterns/portfolio/portfolio-02.php:21 patterns/services/services-05.php:20
-#: patterns/services/services-06.php:21 assets/js/block-variations.js:693
+#: patterns/columns/columns-01.php:21 patterns/columns/columns-02.php:21
+#: patterns/contact/contact-01.php:21 patterns/gallery/gallery-04.php:22
+#: patterns/media/media-01.php:21 patterns/media/media-02.php:21
+#: patterns/media/media-03.php:21 patterns/media/media-07.php:21
+#: patterns/numbers/numbers-04.php:21 patterns/numbers/numbers-05.php:21
+#: patterns/portfolio/portfolio-02.php:22 patterns/services/services-05.php:21
+#: patterns/services/services-06.php:21 assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "columns"
 msgstr "stĺpce"
 
-#: patterns/columns/columns-02.php:18
+#: patterns/columns/columns-02.php:19
 msgctxt "Block pattern title."
 msgid "Two paragraphs with large text on the side"
 msgstr "Dva odseky s veľkým textom na boku"
 
-#: patterns/columns/columns-03.php:18
+#: patterns/columns/columns-03.php:19
 msgctxt "Block pattern title."
 msgid "Description with a title on the side"
 msgstr "Popis s názvom na boku"
 
-#: patterns/columns/columns-04.php:18
+#: patterns/columns/columns-04.php:19
 msgctxt "Block pattern title."
 msgid "Offset 2 columns of text"
 msgstr "Odsadené 2 stĺpce textu"
 
-#: patterns/contact/contact-01.php:18
+#: patterns/contact/contact-01.php:19
 msgctxt "Block pattern title."
 msgid "Simple contact info with large intro text"
 msgstr "Jednoduché kontaktné informácie s veľkým úvodným textom"
 
-#: patterns/contact/contact-01.php:21 patterns/contact/contact-03.php:20
-#: patterns/contact/contact-04.php:20
+#: patterns/contact/contact-01.php:22 patterns/contact/contact-03.php:21
+#: patterns/contact/contact-04.php:21
 msgctxt "keyword"
 msgid "email"
 msgstr "email"
 
-#: patterns/contact/contact-01.php:51
+#: patterns/contact/contact-01.php:52
 msgid "Social networks"
 msgstr "Sociálne siete"
 
-#: patterns/contact/contact-01.php:68
+#: patterns/contact/contact-01.php:69
 msgid "Get in touch"
 msgstr "Kontaktujte nás"
 
-#: patterns/contact/contact-01.php:82 patterns/contact/contact-03.php:73
+#: patterns/contact/contact-01.php:83 patterns/contact/contact-03.php:74
 msgid "Visit us"
 msgstr "Navštívte nás"
 
-#: patterns/contact/contact-02.php:18
+#: patterns/contact/contact-02.php:19
 msgctxt "Block pattern title."
 msgid "Map image with link to online map"
 msgstr "Obrázok mapy s odkazom na online mapu"
 
-#: patterns/contact/contact-03.php:18
+#: patterns/contact/contact-02.php:31
+msgid "Map"
+msgstr "Mapa"
+
+#: patterns/contact/contact-03.php:19
 msgctxt "Block pattern title."
 msgid "Contact info with image on the side"
 msgstr "Kontaktné informácie s obrázkom na bočnej strane"
 
-#: patterns/contact/contact-03.php:21
+#: patterns/contact/contact-03.php:22
 msgctxt "keyword"
 msgid "phone"
 msgstr "telefón"
 
-#: patterns/contact/contact-03.php:22 patterns/contact/contact-04.php:21
+#: patterns/contact/contact-03.php:23 patterns/contact/contact-04.php:22
 msgctxt "keyword"
 msgid "address"
 msgstr "adresa"
 
-#: patterns/contact/contact-03.php:45
+#: patterns/contact/contact-03.php:46
 msgid "Email us"
 msgstr "Pošlite nám e-mail"
 
-#: patterns/contact/contact-03.php:59
+#: patterns/contact/contact-03.php:60
 msgid "Call us"
 msgstr "Zavolajte nám"
 
-#: patterns/contact/contact-04.php:18
+#: patterns/contact/contact-04.php:19
 msgctxt "Block pattern title."
 msgid "Quote with contact info on the side and an image below"
 msgstr "Citácia s kontaktnými informáciami na boku a obrázkom nižšie"
 
-#: patterns/contact/contact-04.php:55
+#: patterns/contact/contact-04.php:56
 msgid "Contact"
 msgstr "Kontakt"
 
-#: patterns/contact/contact-05.php:18
+#: patterns/contact/contact-05.php:19
 msgctxt "Block pattern title."
 msgid "Working hours"
 msgstr "Pracovný čas"
 
-#: patterns/contact/contact-05.php:20
+#: patterns/contact/contact-05.php:21
 msgctxt "keyword"
 msgid "business hours"
 msgstr "prevádzkové hodiny"
 
-#: patterns/contact/contact-05.php:21
+#: patterns/contact/contact-05.php:22
 msgctxt "keyword"
 msgid "opening hours"
 msgstr "otváracie hodiny"
 
-#: patterns/contact/contact-05.php:22
+#: patterns/contact/contact-05.php:23
 msgctxt "keyword"
 msgid "time"
 msgstr "čas"
 
-#: patterns/contact/contact-05.php:125
+#: patterns/contact/contact-05.php:64
+msgid "Working hours"
+msgstr "Pracovná doba"
+
+#: patterns/contact/contact-05.php:93
 msgctxt "As in time, working hours."
 msgid "Closed"
 msgstr "Zatvorené"
 
-#: patterns/faq/faq-01.php:18
+#: patterns/faq/faq-01.php:19
 msgctxt "Block pattern title."
 msgid "List of toggles"
 msgstr "Zoznam rozbaľovacích blokov"
 
-#: patterns/faq/faq-01.php:22 patterns/faq/faq-02.php:20
-#: patterns/faq/faq-03.php:22 patterns/faq/faq-04.php:20
+#: patterns/faq/faq-01.php:23 patterns/faq/faq-02.php:21
+#: patterns/faq/faq-03.php:23 patterns/faq/faq-04.php:21
 #: patterns/page/faq-1.php:25
 msgctxt "keyword"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: patterns/faq/faq-01.php:23 patterns/faq/faq-02.php:21
-#: patterns/faq/faq-03.php:23 patterns/faq/faq-04.php:21
+#: patterns/faq/faq-01.php:24 patterns/faq/faq-02.php:22
+#: patterns/faq/faq-03.php:24 patterns/faq/faq-04.php:22
 msgctxt "keyword"
 msgid "question"
 msgstr "otázka"
 
-#: patterns/faq/faq-01.php:24 patterns/faq/faq-02.php:22
-#: patterns/faq/faq-03.php:24 patterns/faq/faq-04.php:22
+#: patterns/faq/faq-01.php:25 patterns/faq/faq-02.php:23
+#: patterns/faq/faq-03.php:25 patterns/faq/faq-04.php:23
 msgctxt "keyword"
 msgid "answer"
 msgstr "odpoveď"
 
-#: patterns/faq/faq-02.php:18
+#: patterns/faq/faq-02.php:19
 msgctxt "Block pattern title."
 msgid "4 pairs of question and answer in boxes in 2 columns with description"
 msgstr "4 dvojice otázok a odpovedí v rámčekoch v 2 stĺpcoch s popisom"
 
-#: patterns/faq/faq-03.php:18
+#: patterns/faq/faq-03.php:19
 msgctxt "Block pattern title."
 msgid "List of toggles with heading on the side"
 msgstr "Zoznam rozbaľovacích blokov s nadpisom na boku"
 
-#: patterns/faq/faq-03.php:40
+#: patterns/faq/faq-03.php:41
 msgid "Questions & Answers"
 msgstr "Otázky a odpovede"
 
-#: patterns/faq/faq-04.php:18
+#: patterns/faq/faq-04.php:19
 msgctxt "Block pattern title."
 msgid "Question with answer and an image on the side"
 msgstr "Otázka s odpoveďou a obrázkom na boku"
 
-#: patterns/gallery/gallery-01.php:18
+#: patterns/gallery/gallery-01.php:19
 msgctxt "Block pattern title."
 msgid "Partner logos"
 msgstr "Logá partnerov"
 
-#: patterns/gallery/gallery-01.php:21 patterns/gallery/gallery-02.php:21
-#: patterns/gallery/gallery-03.php:21 patterns/media/media-08.php:20
-#: patterns/testimonials/testimonials-02.php:22
-#: assets/js/block-variations.js:403 assets/js/block-variations.js:553
-#: assets/js/block-variations.js:582 assets/js/block-variations.js:669
+#: patterns/gallery/gallery-01.php:22 patterns/gallery/gallery-02.php:22
+#: patterns/gallery/gallery-03.php:22 patterns/media/media-08.php:21
+#: patterns/testimonials/testimonials-02.php:23
+#: assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "image"
 msgstr "obrázok"
 
-#: patterns/gallery/gallery-01.php:22
-#: patterns/testimonials/testimonials-02.php:23
+#: patterns/gallery/gallery-01.php:23
+#: patterns/testimonials/testimonials-02.php:24
 msgctxt "keyword"
 msgid "clients"
 msgstr "klienti"
 
-#: patterns/gallery/gallery-02.php:18
+#: patterns/gallery/gallery-01.php:40
+msgid "Logos"
+msgstr "Logá"
+
+#: patterns/gallery/gallery-02.php:19
 msgctxt "Block pattern title."
 msgid "Wide gallery of 2 images"
 msgstr "Široká galéria 2 obrázkov"
 
-#: patterns/gallery/gallery-03.php:18
+#: patterns/gallery/gallery-03.php:19
 msgctxt "Block pattern title."
 msgid "Smaller image with caption accompanied with larger image on the side"
 msgstr "Menší obrázok s popisom doplnený väčším obrázkom na boku"
 
-#: patterns/gallery/gallery-04.php:18
+#: patterns/gallery/gallery-04.php:19
 msgctxt "Block pattern title."
 msgid "Offset gallery with description"
 msgstr "Posunutá galéria s popisom"
 
-#: patterns/gallery/gallery-05.php:18
+#: patterns/gallery/gallery-05.php:19
 msgctxt "Block pattern title."
 msgid "3 columns with images and text"
 msgstr "3 stĺpce s obrázkami a textom"
 
-#: patterns/gallery/gallery-06.php:18
+#: patterns/gallery/gallery-06.php:19
 msgctxt "Block pattern title."
 msgid "3 images with description on the side"
 msgstr "3 obrázky s popisom na boku"
 
-#: patterns/gallery/gallery-07.php:18
+#: patterns/gallery/gallery-07.php:19
 msgctxt "Block pattern title."
 msgid "Sticky gallery"
 msgstr "Prichytávaná galéria"
 
-#: patterns/gallery/gallery-08.php:18
+#: patterns/gallery/gallery-08.php:19
 msgctxt "Block pattern title."
 msgid "Fullwidth image with offset images with description below"
 msgstr "Obrázok v plnej šírke s odsadenými obrázkami s popisom nižšie"
 
-#: patterns/gallery/gallery-09.php:18
+#: patterns/gallery/gallery-09.php:19
 msgctxt "Block pattern title."
 msgid "Tiled fullwidth gallery"
 msgstr "Dlaždicová galéria na plnú šírku"
 
-#: patterns/gallery/gallery-09.php:20 patterns/portfolio/portfolio-03.php:21
+#: patterns/gallery/gallery-09.php:21 patterns/portfolio/portfolio-03.php:22
 msgctxt "keyword"
 msgid "images"
 msgstr "obrázky"
 
+#: patterns/index.php
+msgctxt "Pattern title"
+msgid "Hidden patterns index"
+msgstr "Index skrytých vzorov"
+
 #: patterns/intro/intro-01.php:19
 msgctxt "Block pattern title."
-msgid ""
-"Page title with background image with zoom in animation, features list, and "
-"buttons"
-msgstr ""
-"Nadpis strany s obrázkom na pozadí s animáciou priblíženia, zoznamom "
-"vlastností a tlačidlami"
+msgid "Page title with background image, features list, and buttons"
+msgstr "Názov stránky s obrázkom pozadia, zoznamom vlastností a tlačidlami"
 
 #: patterns/intro/intro-01.php:21 patterns/intro/intro-02.php:21
-#: patterns/numbers/numbers-03.php:25 patterns/posts/posts-01.php:22
-#: patterns/pricing/pricing-01.php:20 patterns/services/services-02.php:21
+#: patterns/numbers/numbers-03.php:26 patterns/posts/posts-01.php:23
+#: patterns/pricing/pricing-01.php:21 patterns/services/services-02.php:21
 msgctxt "keyword"
 msgid "call to action"
 msgstr "výzva k akcii"
 
 #: patterns/intro/intro-01.php:23 patterns/intro/intro-02.php:24
-#: patterns/intro/intro-03.php:21 patterns/intro/intro-04.php:20
+#: patterns/intro/intro-03.php:21 patterns/intro/intro-04.php:21
 #: patterns/intro/intro-05.php:21 patterns/intro/intro-06.php:21
 #: patterns/site/intro-archive.php:24 patterns/site/intro-blog.php:28
-#: patterns/site/intro-post.php:24 patterns/site/intro-search.php:24
+#: patterns/site/intro-post.php:25 patterns/site/intro-search.php:24
 #: patterns/site/intro.php:24
 msgctxt "keyword"
 msgid "page header"
 msgstr "nadpis stránky"
 
 #: patterns/intro/intro-01.php:24 patterns/intro/intro-02.php:25
-#: patterns/intro/intro-03.php:22 patterns/intro/intro-04.php:21
+#: patterns/intro/intro-03.php:22 patterns/intro/intro-04.php:22
 #: patterns/intro/intro-05.php:22 patterns/intro/intro-06.php:22
 #: patterns/site/intro-archive.php:25 patterns/site/intro-blog.php:29
-#: patterns/site/intro-post.php:25 patterns/site/intro-search.php:25
-#: patterns/site/intro.php:25 assets/js/block-variations.js:445
-#: assets/js/block-variations.js:500 assets/js/block-variations.js:523
+#: patterns/site/intro-post.php:26 patterns/site/intro-search.php:25
+#: patterns/site/intro.php:25 assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "title"
 msgstr "titulok"
 
 #: patterns/intro/intro-01.php:25 patterns/intro/intro-02.php:26
-#: patterns/intro/intro-03.php:23 patterns/intro/intro-04.php:22
+#: patterns/intro/intro-03.php:23 patterns/intro/intro-04.php:23
 #: patterns/intro/intro-05.php:23 patterns/intro/intro-06.php:23
 #: patterns/site/intro-archive.php:26 patterns/site/intro-blog.php:30
-#: patterns/site/intro-post.php:26 patterns/site/intro-search.php:26
+#: patterns/site/intro-post.php:27 patterns/site/intro-search.php:26
 #: patterns/site/intro.php:26
 msgctxt "keyword"
 msgid "heading"
 msgstr "nadpis"
 
 #: patterns/intro/intro-01.php:26 patterns/intro/intro-02.php:27
-#: patterns/intro/intro-03.php:24 patterns/intro/intro-04.php:23
+#: patterns/intro/intro-03.php:24 patterns/intro/intro-04.php:24
 #: patterns/intro/intro-05.php:24 patterns/intro/intro-06.php:24
-#: patterns/site/intro-blog.php:31 patterns/site/intro-post.php:27
+#: patterns/site/intro-blog.php:31 patterns/site/intro-post.php:28
 #: patterns/site/intro-search.php:27 patterns/site/intro.php:27
 msgctxt "keyword"
 msgid "h1"
@@ -2395,7 +2809,7 @@ msgstr ""
 "Nadpis strany s popisom a 3 vlastnosťami prekrývajúcimi pozadie paralaxy s "
 "prezentačným obrázkom"
 
-#: patterns/intro/intro-02.php:23 patterns/services/services-05.php:21
+#: patterns/intro/intro-02.php:23 patterns/services/services-05.php:22
 msgctxt "keyword"
 msgid "icons"
 msgstr "ikonky"
@@ -2405,7 +2819,7 @@ msgctxt "Block pattern title."
 msgid "Page title with description cut into a featured image cover"
 msgstr "Nadpis strany s popisom vrezaným do prezentačného obrázka"
 
-#: patterns/intro/intro-04.php:18
+#: patterns/intro/intro-04.php:19
 msgctxt "Block pattern title."
 msgid "Wide featured image followed with post date, title and intro text"
 msgstr ""
@@ -2420,9 +2834,9 @@ msgstr "Nadpis strany, popis, tlačidlo a citát prekrývajúce obrázok na poza
 
 #: patterns/intro/intro-05.php:25 patterns/intro/intro-06.php:25
 #: patterns/testimonials/testimonials-01.php:21
-#: patterns/testimonials/testimonials-02.php:20
+#: patterns/testimonials/testimonials-02.php:21
 #: patterns/testimonials/testimonials-03.php:21
-#: patterns/testimonials/testimonials-04.php:20
+#: patterns/testimonials/testimonials-04.php:21
 msgctxt "keyword"
 msgid "testimonials"
 msgstr "referencie"
@@ -2442,110 +2856,110 @@ msgctxt "Block pattern title."
 msgid "Custom header image"
 msgstr "Vlastný obrázok hlavičky"
 
-#: patterns/media/media-01.php:18
+#: patterns/media/media-01.php:19
 msgctxt "Block pattern title."
 msgid "Text and an image in columns with a lot of white space around"
 msgstr "Text a obrázok v stĺpcoch s veľkým množstvom okolného prázdneho miesta"
 
-#: patterns/media/media-02.php:18
+#: patterns/media/media-02.php:19
 msgctxt "Block pattern title."
 msgid "Description with heading on the side and wide image below"
 msgstr "Popis s nadpisom na boku a širokým obrázkom dole"
 
-#: patterns/media/media-03.php:18
+#: patterns/media/media-03.php:19
 msgctxt "Block pattern title."
 msgid "Images with description text in 2 columns"
 msgstr "Obrázky s popisom v 2 stĺpcoch"
 
-#: patterns/media/media-04.php:18
+#: patterns/media/media-04.php:19
 msgctxt "Block pattern title."
 msgid "Title with description overlaying parallax image"
 msgstr "Nadpis s popisom prekrývajúce obrázok paralaxy"
 
-#: patterns/media/media-04.php:20
+#: patterns/media/media-04.php:21
 msgctxt "keyword"
 msgid "gradient"
 msgstr "prechod"
 
-#: patterns/media/media-05.php:18
+#: patterns/media/media-05.php:19
 msgctxt "Block pattern title."
 msgid "Image with right padding"
 msgstr "Obrázok s odsadením vpravo"
 
-#: patterns/media/media-06.php:18
+#: patterns/media/media-06.php:19
 msgctxt "Block pattern title."
 msgid "Fullwidth parallax image"
 msgstr "Obrázok paralaxy v plnej šírke"
 
-#: patterns/media/media-07.php:18
+#: patterns/media/media-07.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of image with description"
 msgstr "3 stĺpce obrázka s popisom"
 
-#: patterns/media/media-08.php:18
+#: patterns/media/media-08.php:19
 msgctxt "Block pattern title."
 msgid "Cover with large centered text"
 msgstr "Titulka s veľkým centrovaným textom"
 
-#: patterns/numbers/numbers-01.php:18
+#: patterns/numbers/numbers-01.php:19
 msgctxt "Block pattern title."
 msgid "Numbers in 4 columns with description"
 msgstr "Čísla v 4 stĺpcoch s popisom"
 
-#: patterns/numbers/numbers-01.php:20 patterns/numbers/numbers-02.php:20
-#: patterns/numbers/numbers-03.php:20 patterns/numbers/numbers-04.php:23
+#: patterns/numbers/numbers-01.php:21 patterns/numbers/numbers-02.php:21
+#: patterns/numbers/numbers-03.php:21 patterns/numbers/numbers-04.php:24
 #: patterns/numbers/numbers-05.php:22
 msgctxt "keyword"
 msgid "numbers"
 msgstr "čísla"
 
-#: patterns/numbers/numbers-01.php:21 patterns/numbers/numbers-02.php:24
+#: patterns/numbers/numbers-01.php:22 patterns/numbers/numbers-02.php:25
 msgctxt "keyword"
 msgid "stats"
 msgstr "štatistiky"
 
-#: patterns/numbers/numbers-02.php:18
+#: patterns/numbers/numbers-02.php:19
 msgctxt "Block pattern title."
 msgid "Progress bar"
 msgstr "Diagram postupu"
 
-#: patterns/numbers/numbers-02.php:21 patterns/numbers/numbers-03.php:24
+#: patterns/numbers/numbers-02.php:22 patterns/numbers/numbers-03.php:25
 msgctxt "keyword"
 msgid "services"
 msgstr "služby"
 
-#: patterns/numbers/numbers-02.php:22 patterns/numbers/numbers-03.php:22
+#: patterns/numbers/numbers-02.php:23 patterns/numbers/numbers-03.php:23
 msgctxt "keyword"
 msgid "features"
 msgstr "vlastnosti"
 
-#: patterns/numbers/numbers-02.php:23
+#: patterns/numbers/numbers-02.php:24
 msgctxt "keyword"
 msgid "percentage"
 msgstr "percentá"
 
-#: patterns/numbers/numbers-03.php:18
+#: patterns/numbers/numbers-03.php:19
 msgctxt "Block pattern title."
 msgid "3 numbered features"
 msgstr "3 očíslované vlastnosti"
 
-#: patterns/numbers/numbers-03.php:21 patterns/numbers/numbers-04.php:24
+#: patterns/numbers/numbers-03.php:22 patterns/numbers/numbers-04.php:25
 #: patterns/numbers/numbers-05.php:23 patterns/services/services-06.php:22
 msgctxt "keyword"
 msgid "steps"
 msgstr "kroky"
 
-#: patterns/numbers/numbers-04.php:18
+#: patterns/numbers/numbers-04.php:19
 msgctxt "Block pattern title."
 msgid "History section with years"
 msgstr "Sekcia histórie s rokmi"
 
-#: patterns/numbers/numbers-04.php:21
+#: patterns/numbers/numbers-04.php:22
 msgctxt "keyword"
 msgid "year"
 msgstr "rok"
 
-#: patterns/numbers/numbers-04.php:22
+#: patterns/numbers/numbers-04.php:23
 msgctxt "keyword"
 msgid "timeline"
 msgstr "časová os"
@@ -2577,9 +2991,9 @@ msgstr "(použite šablónu \"Bez intra\")"
 #: patterns/page/home-3.php:25 patterns/page/portfolio-1.php:24
 #: patterns/page/pricing-1.php:24 patterns/page/project-1.php:24
 #: patterns/page/service-1.php:24 patterns/page/services-1.php:24
-#: patterns/page/soon-1.php:24 patterns/page/team-1.php:24
-#: patterns/page/testimonials-1.php:24 patterns/portfolio/portfolio-03.php:22
-#: patterns/site/content-404.php:20 patterns/site/content-with-sidebar.php:20
+#: patterns/page/soon-1.php:25 patterns/page/team-1.php:24
+#: patterns/page/testimonials-1.php:24 patterns/portfolio/portfolio-03.php:23
+#: patterns/site/content-404.php:20 patterns/site/content-with-sidebar.php:21
 msgctxt "keyword"
 msgid "page content"
 msgstr "obsah stránky"
@@ -2670,13 +3084,13 @@ msgid "Services page %s"
 msgstr "Stránka služieb %s"
 
 #. translators: %s: additional notes.
-#: patterns/page/soon-1.php:20
+#: patterns/page/soon-1.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Coming soon page%s"
 msgstr "Už čoskoro%s"
 
-#: patterns/page/soon-1.php:21
+#: patterns/page/soon-1.php:22
 msgctxt "Page content additional notes."
 msgid " (use \"Content only\" template)"
 msgstr " (použite šablónu \"Iba obsah\")"
@@ -2688,9 +3102,9 @@ msgctxt "Block pattern title."
 msgid "Team page %s"
 msgstr "Stránka tímu %s"
 
-#: patterns/page/team-1.php:25 patterns/team/team-00.php:22
-#: patterns/team/team-01.php:22 patterns/team/team-02.php:22
-#: patterns/team/team-03.php:23 patterns/team/team-04.php:22
+#: patterns/page/team-1.php:25 patterns/team/team-00.php:23
+#: patterns/team/team-01.php:23 patterns/team/team-02.php:23
+#: patterns/team/team-03.php:24 patterns/team/team-04.php:23
 msgctxt "keyword"
 msgid "staff"
 msgstr "zamestnanci"
@@ -2723,92 +3137,101 @@ msgid "Projects list item"
 msgstr "Položka zoznamu projektov"
 
 #: patterns/portfolio/portfolio-00.php:21
-#: patterns/portfolio/portfolio-01.php:21
-#: patterns/portfolio/portfolio-02.php:20
-#: patterns/portfolio/portfolio-03.php:23 assets/js/block-variations.js:205
+#: patterns/portfolio/portfolio-01.php:22
+#: patterns/portfolio/portfolio-02.php:21
+#: patterns/portfolio/portfolio-03.php:24 assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "portfolio"
 msgstr "portfólio"
 
 #: patterns/portfolio/portfolio-00.php:22
-#: patterns/portfolio/portfolio-02.php:22 patterns/site/query-featured.php:30
-#: patterns/site/query-search.php:27 patterns/site/query-with-sidebar.php:27
-#: patterns/site/query.php:27
+#: patterns/portfolio/portfolio-02.php:23 patterns/site/query-featured.php:31
+#: patterns/site/query-search.php:28 patterns/site/query-with-sidebar.php:28
+#: patterns/site/query.php:28
 msgctxt "keyword"
 msgid "posts"
 msgstr "príspevky, články"
+
+#: patterns/portfolio/portfolio-00.php:33
+msgid "Project"
+msgstr "Projekt"
 
 #: patterns/portfolio/portfolio-00.php:64
 msgid "Category"
 msgstr "Kategória"
 
-#: patterns/portfolio/portfolio-01.php:18
+#: patterns/portfolio/portfolio-01.php:19
 msgctxt "Block pattern title."
 msgid "Wide project details"
 msgstr "Široké údaje o projekte"
 
-#: patterns/portfolio/portfolio-01.php:31
+#: patterns/portfolio/portfolio-01.php:28
+#: patterns/portfolio/portfolio-01.php:32
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: patterns/portfolio/portfolio-02.php:18
+#: patterns/portfolio/portfolio-02.php:19
 msgctxt "Block pattern title."
 msgid "List of projects"
 msgstr "Zoznam projektov"
 
-#: patterns/portfolio/portfolio-03.php:18
+#: patterns/portfolio/portfolio-03.php:19
 msgctxt "Block pattern title."
 msgid "Project image gallery with sticky description on the side"
 msgstr "Galéria obrázkov projektu s prichyteným popisom na boku"
+
+#: patterns/portfolio/portfolio-03.php:37
+msgid "Project content"
+msgstr "Obsah projektu"
 
 #: patterns/posts/posts-00.php:19
 msgctxt "Block pattern title."
 msgid "Posts list item"
 msgstr "Položka zoznamu príspevkov"
 
-#: patterns/posts/posts-00.php:21 patterns/posts/posts-01.php:20
-#: patterns/site/intro-blog.php:27 assets/js/block-variations.js:690
+#: patterns/posts/posts-00.php:21 patterns/posts/posts-01.php:21
+#: patterns/site/intro-blog.php:27 assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "news"
 msgstr "novinky"
 
-#: patterns/posts/posts-01.php:18
+#: patterns/posts/posts-01.php:19
 msgctxt "Block pattern title."
 msgid ""
 "Posts list in 3 columns with description, list of categories and a button"
 msgstr ""
 "Zoznam príspevkov v 3 stĺpcoch s popisom, zoznamom kategórií a tlačidlom"
 
-#: patterns/posts/posts-01.php:21
+#: patterns/posts/posts-01.php:22
 msgctxt "keyword"
 msgid "filter"
 msgstr "filter"
 
-#: patterns/posts/posts-01.php:52 patterns/posts/posts-02.php:36
+#: patterns/posts/posts-01.php:53 patterns/posts/posts-02.php:37
 msgctxt "\"Blog\" page URL relative to home page."
 msgid "/blog/"
 msgstr "/blog/"
 
-#: patterns/posts/posts-01.php:52 patterns/posts/posts-02.php:36
+#: patterns/posts/posts-01.php:53 patterns/posts/posts-02.php:37
 msgctxt "Posts"
 msgid "See all →"
 msgstr "Všetky →"
 
-#: patterns/posts/posts-02.php:18
+#: patterns/posts/posts-02.php:19
 msgctxt "Block pattern title."
 msgid "Simple, text-only list of recent posts"
 msgstr "Jednoduchý textový zoznam najnovších príspevkov"
 
-#: patterns/posts/posts-02.php:30
+#: patterns/posts/posts-02.php:31
 msgid "Recent posts"
 msgstr "Najnovšie príspevky"
 
-#: patterns/posts/posts-02.php:70
+#: patterns/posts/posts-02.php:71
 msgctxt "As in \"written by [author name]\"."
 msgid "by"
 msgstr "od"
 
-#: patterns/posts/posts-02.php:76
+#: patterns/posts/posts-02.php:77
 msgctxt "In category."
 msgid "in"
 msgstr "v"
@@ -2818,21 +3241,21 @@ msgctxt "Block pattern title."
 msgid "Next/previous post navigation"
 msgstr "Navigácia na nasledujúci/predchádzajúci príspevok"
 
-#: patterns/pricing/pricing-01.php:18
+#: patterns/pricing/pricing-01.php:19
 msgctxt "Block pattern title."
 msgid "Pricing plans in 3 columns"
 msgstr "Cenové plány v 3 stĺpcoch"
 
-#: patterns/pricing/pricing-01.php:31
+#: patterns/pricing/pricing-01.php:32
 msgid "Pricing plans"
 msgstr "Cenník"
 
-#: patterns/pricing/pricing-02.php:18
+#: patterns/pricing/pricing-02.php:19
 msgctxt "Block pattern title."
 msgid "Restaurant food menu"
 msgstr "Jedálny lístok reštaurácie"
 
-#: patterns/pricing/pricing-02.php:20
+#: patterns/pricing/pricing-02.php:21
 msgctxt "keyword"
 msgid "meals"
 msgstr "jedlá"
@@ -2847,17 +3270,17 @@ msgctxt "Block pattern title."
 msgid "Columns of features with large letters instead of icons"
 msgstr "Stĺpce vlastností s veľkými písmenami namiesto ikoniek"
 
-#: patterns/services/services-03.php:18
+#: patterns/services/services-03.php:19
 msgctxt "Block pattern title."
 msgid "Process table with icons"
 msgstr "Tabuľka procesov s ikonkami"
 
-#: patterns/services/services-04.php:18
+#: patterns/services/services-04.php:19
 msgctxt "Block pattern title."
 msgid "Call to action with 3 columns of images with short description below"
 msgstr "Výzva na akciu s 3 stĺpcami obrázkov s krátkym popisom"
 
-#: patterns/services/services-05.php:18
+#: patterns/services/services-05.php:19
 msgctxt "Block pattern title."
 msgid "3 columns of icon with description on the side"
 msgstr "3 stĺpce ikoniek s popisom na boku"
@@ -2867,37 +3290,46 @@ msgctxt "Block pattern title."
 msgid "3 descending columns of icons with description"
 msgstr "3 zostupujúce stĺpce ikoniek s popisom"
 
-#: patterns/site/comments.php:18
+#: patterns/site/comments.php:19
 msgctxt "Block pattern title."
 msgid "Comments"
 msgstr "Komentáre"
 
-#: patterns/site/comments.php:20 patterns/site/entry-query-featured.php:26
-#: patterns/site/entry-query.php:26
+#: patterns/site/comments.php:21 patterns/site/entry-query-featured.php:26
+#: patterns/site/entry-query.php:27
 msgctxt "keyword"
 msgid "post"
 msgstr "príspevok"
 
-#: patterns/site/comments.php:21 patterns/site/content-404.php:21
-#: patterns/site/content-with-sidebar.php:21
-#: patterns/site/entry-meta-bottom.php:29 patterns/site/entry-navigation.php:21
-#: patterns/site/entry-query-featured.php:28 patterns/site/entry-query.php:28
+#: patterns/site/comments.php:22 patterns/site/content-404.php:21
+#: patterns/site/content-with-sidebar.php:22
+#: patterns/site/entry-meta-bottom.php:30 patterns/site/entry-navigation.php:21
+#: patterns/site/entry-query-featured.php:28 patterns/site/entry-query.php:29
 #: patterns/site/footer-centered.php:29 patterns/site/footer-minimal.php:29
 #: patterns/site/footer.php:29 patterns/site/header-alt.php:31
 #: patterns/site/header.php:31 patterns/site/intro-archive.php:27
-#: patterns/site/intro-blog.php:32 patterns/site/intro-post.php:28
+#: patterns/site/intro-blog.php:32 patterns/site/intro-post.php:29
 #: patterns/site/intro-search.php:28 patterns/site/intro.php:28
-#: patterns/site/query-featured.php:31 patterns/site/query-search.php:28
-#: patterns/site/query-with-sidebar.php:28 patterns/site/query.php:28
-#: patterns/site/sidebar.php:26 patterns/site/taxonomy-category-select.php:26
+#: patterns/site/navigation-overlay.php:26 patterns/site/query-featured.php:32
+#: patterns/site/query-search.php:29 patterns/site/query-with-sidebar.php:29
+#: patterns/site/query.php:29 patterns/site/sidebar.php:26
+#: patterns/site/taxonomy-category-select.php:26
 msgctxt "keyword"
 msgid "site builder"
 msgstr "budovanie webstránky"
 
-#: patterns/site/comments.php:37
+#: patterns/site/comments.php:34
+msgid "Comments title"
+msgstr "Nadpis komentárov"
+
+#: patterns/site/comments.php:38
 msgctxt "Title of comments section"
 msgid "Comments"
 msgstr "Komentáre"
+
+#: patterns/site/comments.php:62
+msgid "Comment meta data"
+msgstr "Metadáta komentárov"
 
 #: patterns/site/content-404.php:18
 msgctxt "Block pattern title."
@@ -2912,57 +3344,67 @@ msgstr "Hľadaná stránka nebola nájdená."
 msgid "It looks like nothing was found at this location. Try a search."
 msgstr "Zdá sa, že na tomto mieste sa nič nenašlo. Skúste vyhľadávanie."
 
-#: patterns/site/content-with-sidebar.php:18
+#: patterns/site/content-with-sidebar.php:19
 msgctxt "Block pattern title."
 msgid "Page/post content with sidebar"
 msgstr "Obsah stránky/príspevku s bočným panelom"
 
+#: patterns/site/content-with-sidebar.php:54
+#: patterns/site/query-with-sidebar.php:78
+msgid "Sidebar container"
+msgstr "Kontajner bočného panela"
+
 #. translators: %s: context.
-#: patterns/site/entry-meta-bottom.php:20
+#: patterns/site/entry-meta-bottom.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Post meta: %s"
 msgstr "Metadáta príspevku: %s"
 
-#: patterns/site/entry-meta-bottom.php:21
+#: patterns/site/entry-meta-bottom.php:22
 msgctxt "Post meta context."
 msgid "After post content"
 msgstr "Za obsahom príspevku"
 
-#: patterns/site/entry-meta-bottom.php:24
+#: patterns/site/entry-meta-bottom.php:25
 #: patterns/site/taxonomy-category-select.php:21
 msgctxt "keyword"
 msgid "taxonomy"
 msgstr "taxonómia"
 
-#: patterns/site/entry-meta-bottom.php:25
+#: patterns/site/entry-meta-bottom.php:26
 #: patterns/site/taxonomy-category-select.php:22
 msgctxt "keyword"
 msgid "category"
 msgstr "kategória"
 
-#: patterns/site/entry-meta-bottom.php:26
+#: patterns/site/entry-meta-bottom.php:27
 msgctxt "keyword"
 msgid "tags"
 msgstr "značky"
 
-#: patterns/site/entry-meta-bottom.php:27 patterns/team/team-03.php:22
+#: patterns/site/entry-meta-bottom.php:28 patterns/team/team-03.php:23
 msgctxt "keyword"
 msgid "author"
 msgstr "autor"
 
-#: patterns/site/entry-meta-bottom.php:28
+#: patterns/site/entry-meta-bottom.php:29
 msgctxt "keyword"
 msgid "bio"
 msgstr "biografia"
 
-#: patterns/site/entry-meta-bottom.php:42
+#: patterns/site/entry-meta-bottom.php:43
 msgid "Tags: "
 msgstr "Značky: "
 
-#: patterns/site/entry-meta-bottom.php:48
+#: patterns/site/entry-meta-bottom.php:49
 msgid "Category: "
 msgstr "Kategória: "
+
+#: patterns/site/entry-meta-bottom.php:57
+#: patterns/site/entry-meta-bottom.php:61
+msgid "Related posts"
+msgstr "Súvisiace príspevky"
 
 #: patterns/site/entry-navigation.php:20
 msgctxt "keyword"
@@ -2970,7 +3412,7 @@ msgid "link"
 msgstr "odkaz"
 
 #. translators: %s: context.
-#: patterns/site/entry-query-featured.php:20 patterns/site/entry-query.php:20
+#: patterns/site/entry-query-featured.php:20 patterns/site/entry-query.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Query entry: %s"
@@ -2981,27 +3423,35 @@ msgctxt "Query entry context."
 msgid "Featured"
 msgstr "Odporúčané"
 
-#: patterns/site/entry-query-featured.php:24 patterns/site/entry-query.php:24
+#: patterns/site/entry-query-featured.php:24 patterns/site/entry-query.php:25
 msgctxt "keyword"
 msgid "item"
 msgstr "položka"
 
-#: patterns/site/entry-query-featured.php:25 patterns/site/entry-query.php:25
+#: patterns/site/entry-query-featured.php:25 patterns/site/entry-query.php:26
 msgctxt "keyword"
 msgid "entry"
 msgstr "príspevok"
 
-#: patterns/site/entry-query-featured.php:27 patterns/site/entry-query.php:27
+#: patterns/site/entry-query-featured.php:27 patterns/site/entry-query.php:28
 msgctxt "keyword"
 msgid "page"
 msgstr "stránka"
 
-#: patterns/site/entry-query.php:21
+#: patterns/site/entry-query.php:22
 msgctxt "Query entry context."
 msgid "Default"
 msgstr "Pôvodná"
 
-#: patterns/site/entry-query.php:62
+#: patterns/site/entry-query.php:36
+msgid "Post"
+msgstr "Príspevok"
+
+#: patterns/site/entry-query.php:44 patterns/site/intro-post.php:46
+msgid "Post meta data"
+msgstr "Metaúdaje príspevku"
+
+#: patterns/site/entry-query.php:63
 msgid "&rarr; Continue Reading"
 msgstr "&rarr; Pokračovať v čítaní"
 
@@ -3042,20 +3492,15 @@ msgctxt "keyword"
 msgid "copyright"
 msgstr "autorské práva"
 
-#: patterns/site/footer-centered.php:43
+#: patterns/site/footer-centered.php:60
 msgctxt "Navigational menu label."
 msgid "Footer"
 msgstr "Pätička"
 
-#: patterns/site/footer-centered.php:51 patterns/site/footer-minimal.php:46
+#: patterns/site/footer-centered.php:69 patterns/site/footer-minimal.php:46
 #: patterns/site/footer.php:92
 msgid "Copyright &copy; "
 msgstr "Copyright &copy; "
-
-#: patterns/site/footer-centered.php:51 patterns/site/footer-minimal.php:50
-#: patterns/site/footer.php:96
-msgid "To the top"
-msgstr "Späť nahor"
 
 #: patterns/site/footer-minimal.php:22
 msgctxt "Site footer context."
@@ -3067,37 +3512,41 @@ msgctxt "Site footer context."
 msgid "Default"
 msgstr "Pôvodná"
 
+#: patterns/site/footer.php:43
+msgid "Logo"
+msgstr "Logo"
+
 #: patterns/site/footer.php:78
 msgid "About Us"
 msgstr "O nás"
 
-#: patterns/site/footer.php:121
+#: patterns/site/footer.php:137
 msgctxt "Navigational menu label."
 msgid "Footer, primary"
 msgstr "Pätička, primárna"
 
-#: patterns/site/footer.php:135
+#: patterns/site/footer.php:152
 msgid "Services"
 msgstr "Služby"
 
-#: patterns/site/footer.php:138
+#: patterns/site/footer.php:171
 msgctxt "Navigational menu label."
 msgid "Footer, secondary"
 msgstr "Pätička, sekundárna"
 
-#: patterns/site/footer.php:139
+#: patterns/site/footer.php:173
 msgid "First service"
 msgstr "Prvá služba"
 
-#: patterns/site/footer.php:140
+#: patterns/site/footer.php:174
 msgid "Next service"
 msgstr "Ďalšia služba"
 
-#: patterns/site/footer.php:141
+#: patterns/site/footer.php:175
 msgid "Another service"
 msgstr "Iná služba"
 
-#: patterns/site/footer.php:142
+#: patterns/site/footer.php:176
 msgid "Last service"
 msgstr "Posledná služba"
 
@@ -3119,6 +3568,7 @@ msgid "logo"
 msgstr "logo"
 
 #: patterns/site/header-alt.php:26 patterns/site/header.php:26
+#: patterns/site/navigation-overlay.php:23
 msgctxt "keyword"
 msgid "navigation"
 msgstr "navigácia"
@@ -3134,11 +3584,13 @@ msgid "tagline"
 msgstr "slogan"
 
 #: patterns/site/header-alt.php:30 patterns/site/header.php:30
+#: patterns/site/navigation-overlay.php:25
 msgctxt "keyword"
 msgid "cart"
 msgstr "košík"
 
-#: patterns/site/header-alt.php:63 patterns/site/header.php:64
+#: patterns/site/header-alt.php:79 patterns/site/header.php:84
+#: patterns/site/navigation-overlay.php:88
 msgctxt "Navigational menu label."
 msgid "Primary"
 msgstr "Primárna"
@@ -3148,19 +3600,19 @@ msgctxt "Site header context."
 msgid "Default"
 msgstr "Pôvodná"
 
-#: patterns/site/header.php:29
+#: patterns/site/header.php:29 patterns/site/navigation-overlay.php:24
 msgctxt "keyword"
 msgid "user account"
 msgstr "používateľský účet"
 
-#: patterns/site/header.php:75 patterns/site/header.php:77
+#: patterns/site/header.php:116
 msgctxt "Navigational menu label."
 msgid "Secondary"
 msgstr "Sekundárna"
 
 #. translators: %s: context.
 #: patterns/site/intro-archive.php:20 patterns/site/intro-blog.php:21
-#: patterns/site/intro-post.php:20 patterns/site/intro-search.php:20
+#: patterns/site/intro-post.php:21 patterns/site/intro-search.php:20
 #: patterns/site/intro.php:20
 #, php-format
 msgctxt "Block pattern title."
@@ -3194,7 +3646,7 @@ msgstr "denník"
 msgid "%s blog"
 msgstr "%s blog"
 
-#: patterns/site/intro-post.php:21
+#: patterns/site/intro-post.php:22
 msgctxt "Intro context."
 msgid "Post"
 msgstr "Príspevok"
@@ -3214,61 +3666,86 @@ msgctxt "Intro context."
 msgid "Page"
 msgstr "Stránka"
 
+#: patterns/site/navigation-overlay.php:21
+msgctxt "Block pattern title."
+msgid "Navigation overlay"
+msgstr "Navigačné prekrytie"
+
+#: patterns/site/navigation-overlay.php:27 assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "responsive"
+msgstr "responzívne"
+
+#: patterns/site/navigation-overlay.php:28 assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "mobile"
+msgstr "mobilné"
+
+#: patterns/site/navigation-overlay.php:29
+msgctxt "keyword"
+msgid "small screen"
+msgstr "malá obrazovka"
+
+#: patterns/site/navigation-overlay.php:92
+msgctxt "Page title"
+msgid "Our services"
+msgstr "Naše služby"
+
 #. translators: %s: context.
-#: patterns/site/query-featured.php:23 patterns/site/query-search.php:20
-#: patterns/site/query-with-sidebar.php:20 patterns/site/query.php:20
+#: patterns/site/query-featured.php:24 patterns/site/query-search.php:21
+#: patterns/site/query-with-sidebar.php:21 patterns/site/query.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Query loop: %s"
 msgstr "Slučka dotazu: %s"
 
-#: patterns/site/query-featured.php:24
+#: patterns/site/query-featured.php:25
 msgctxt "Query loop context."
 msgid "Featured posts"
 msgstr "Odporúčané príspevky"
 
-#: patterns/site/query-featured.php:27 patterns/site/query-search.php:24
-#: patterns/site/query-with-sidebar.php:24 patterns/site/query.php:24
+#: patterns/site/query-featured.php:28 patterns/site/query-search.php:25
+#: patterns/site/query-with-sidebar.php:25 patterns/site/query.php:25
 msgctxt "keyword"
 msgid "loop"
 msgstr "slučka"
 
-#: patterns/site/query-featured.php:28 patterns/site/query-search.php:25
-#: patterns/site/query-with-sidebar.php:25 patterns/site/query.php:25
+#: patterns/site/query-featured.php:29 patterns/site/query-search.php:26
+#: patterns/site/query-with-sidebar.php:26 patterns/site/query.php:26
 msgctxt "keyword"
 msgid "list"
 msgstr "zoznam"
 
-#: patterns/site/query-featured.php:29 patterns/site/query-search.php:26
-#: patterns/site/query-with-sidebar.php:26 patterns/site/query.php:26
+#: patterns/site/query-featured.php:30 patterns/site/query-search.php:27
+#: patterns/site/query-with-sidebar.php:27 patterns/site/query.php:27
 msgctxt "keyword"
 msgid "items"
 msgstr "položky"
 
-#: patterns/site/query-search.php:21
+#: patterns/site/query-search.php:22
 msgctxt "Query loop context."
 msgid "Search results"
 msgstr "Výsledky vyhľadávania"
 
-#: patterns/site/query-search.php:62
+#: patterns/site/query-search.php:64
 msgid "It looks like nothing was found."
 msgstr "Vyzerá to tak, že sa nič nenašlo."
 
-#: patterns/site/query-search.php:62
+#: patterns/site/query-search.php:64
 msgid "Check out our latest news:"
 msgstr "Prezrite si naše novinky:"
 
-#: patterns/site/query-with-sidebar.php:21
+#: patterns/site/query-with-sidebar.php:22
 msgctxt "Query loop context."
 msgid "With sidebar"
 msgstr "S bočným panelom"
 
-#: patterns/site/query-with-sidebar.php:65 patterns/site/query.php:59
+#: patterns/site/query-with-sidebar.php:65 patterns/site/query.php:58
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Vyzerá to tak, že sa nenašli žiadne záznamy. Možno skúste vyhľadávanie?"
 
-#: patterns/site/query.php:21
+#: patterns/site/query.php:22
 msgctxt "Query loop context."
 msgid "Default"
 msgstr "Pôvodná"
@@ -3282,6 +3759,10 @@ msgstr "Bočný panel"
 msgctxt "keyword"
 msgid "widget"
 msgstr "widget"
+
+#: patterns/site/sidebar.php:44
+msgid "Sidebar"
+msgstr "Bočný panel"
 
 #: patterns/site/sidebar.php:45
 msgid "Sidebar, a secondary content"
@@ -3320,97 +3801,105 @@ msgstr "rozbaľovací zoznam"
 msgid "Browse by topic:"
 msgstr "Prezrieť podľa témy:"
 
-#: patterns/team/team-00.php:18
+#: patterns/team/team-00.php:19
 msgctxt "Block pattern title."
 msgid "Single person info card"
 msgstr "Informačná karta o osobe"
 
-#: patterns/team/team-00.php:20 patterns/team/team-01.php:20
-#: patterns/team/team-02.php:20 patterns/team/team-03.php:20
-#: patterns/team/team-04.php:20 assets/js/block-variations.js:207
+#: patterns/team/team-00.php:21 patterns/team/team-01.php:21
+#: patterns/team/team-02.php:21 patterns/team/team-03.php:21
+#: patterns/team/team-04.php:21 assets/js/block-variations.min.js
 msgctxt "keyword"
 msgid "card"
 msgstr "karta"
 
-#: patterns/team/team-00.php:21 patterns/team/team-01.php:21
-#: patterns/team/team-02.php:21 patterns/team/team-03.php:21
-#: patterns/team/team-04.php:21
+#: patterns/team/team-00.php:22 patterns/team/team-01.php:22
+#: patterns/team/team-02.php:22 patterns/team/team-03.php:22
+#: patterns/team/team-04.php:22
 msgctxt "keyword"
 msgid "team"
 msgstr "tím"
 
-#: patterns/team/team-00.php:23 patterns/team/team-01.php:23
-#: patterns/team/team-02.php:23 patterns/team/team-03.php:24
-#: patterns/team/team-04.php:23
+#: patterns/team/team-00.php:24 patterns/team/team-01.php:24
+#: patterns/team/team-02.php:24 patterns/team/team-03.php:25
+#: patterns/team/team-04.php:24
 msgctxt "keyword"
 msgid "person"
 msgstr "osoba"
 
-#: patterns/team/team-01.php:18
+#: patterns/team/team-00.php:35
+msgid "Person card"
+msgstr "Karta osoby"
+
+#: patterns/team/team-01.php:19
 msgctxt "Block pattern title."
 msgid "3 team members info with heading and description on the side"
 msgstr "Informácie o 3 členoch tímu s nadpisom a popisom na boku"
 
-#: patterns/team/team-02.php:18
+#: patterns/team/team-02.php:19
 msgctxt "Block pattern title."
 msgid "3 team members and careers call to action"
 msgstr "3 členovia tímu a kariérna výzva na akciu"
 
-#: patterns/team/team-02.php:86
+#: patterns/team/team-02.php:77
 msgid "Careers"
 msgstr "Kariéra"
 
-#: patterns/team/team-03.php:18
+#: patterns/team/team-03.php:19
 msgctxt "Block pattern title."
 msgid "Person name badge with photo and job position"
 msgstr "Odznak s menom osoby s fotografiou a pracovnou pozíciou"
 
-#: patterns/team/team-04.php:18
+#: patterns/team/team-03.php:36
+msgid "Name badge"
+msgstr "Menovka"
+
+#: patterns/team/team-04.php:19
 msgctxt "Block pattern title."
 msgid "\"About me\" page content"
 msgstr "Obsah stránky \"O mne\""
 
-#: patterns/template/404.php:18
+#: patterns/template/404.php:21
 msgctxt "Block pattern title."
 msgid "Error 404 template"
 msgstr "Šablóna chyby 404"
 
-#: patterns/template/archive-with-sidebar.php:18
+#: patterns/template/archive-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Archive with sidebar template"
 msgstr "Šablóna archívu s bočným panelom"
 
-#: patterns/template/archive.php:18
+#: patterns/template/archive.php:21
 msgctxt "Block pattern title."
 msgid "Archive template"
 msgstr "Šablóna archívu"
 
-#: patterns/template/custom-with-sidebar.php:18
+#: patterns/template/custom-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Singular with sidebar template"
 msgstr "Šablóna obsahu s bočným panelom"
 
-#: patterns/template/home-with-sidebar.php:18
+#: patterns/template/home-with-sidebar.php:21
 msgctxt "Block pattern title."
 msgid "Blog home with sidebar template"
 msgstr "Šablóna blogu s bočným panelom"
 
-#: patterns/template/home.php:18
+#: patterns/template/home.php:21
 msgctxt "Block pattern title."
 msgid "Blog home template"
 msgstr "Šablóna blogu"
 
-#: patterns/template/page.php:18
+#: patterns/template/page.php:21
 msgctxt "Block pattern title."
 msgid "Page template"
 msgstr "Šablóna stránky"
 
-#: patterns/template/search.php:18
+#: patterns/template/search.php:21
 msgctxt "Block pattern title."
 msgid "Search template"
 msgstr "Šablóna vyhľadávania"
 
-#: patterns/template/single.php:18
+#: patterns/template/single.php:21
 msgctxt "Block pattern title."
 msgid "Single template"
 msgstr "Šablóna príspevku"
@@ -3420,57 +3909,69 @@ msgctxt "Block pattern title."
 msgid "Quote with an image with padding on the side"
 msgstr "Citát s obrázkom s bočným odsadením"
 
-#: patterns/testimonials/testimonials-02.php:18
+#: patterns/testimonials/testimonials-01.php:31
+msgid "Testimony"
+msgstr "Referencia"
+
+#: patterns/testimonials/testimonials-02.php:19
 msgctxt "Block pattern title."
 msgid "List of logos with 2 quotes below"
 msgstr "Zoznam log s 2 citáciami"
+
+#: patterns/testimonials/testimonials-02.php:46
+msgid "Logos & testimonials"
+msgstr "Logá a referencie"
 
 #: patterns/testimonials/testimonials-03.php:19
 msgctxt "Block pattern title."
 msgid "Quotes with star rating, title and source info"
 msgstr "Citáty s hviezdičkovým hodnotením, názvom a informáciami o zdroji"
 
-#: patterns/testimonials/testimonials-04.php:18
+#: patterns/testimonials/testimonials-03.php:27
+msgid "Reviews"
+msgstr "Recenzie"
+
+#: patterns/testimonials/testimonials-04.php:19
 msgctxt "Block pattern title."
 msgid "2 columns of quotes on a background image"
 msgstr "2 stĺpce citátov na pozadí s obrázkom"
 
-#: patterns/text/heading-01.php:18
+#: patterns/text/heading-01.php:19
 msgctxt "Block pattern title."
 msgid "Heading with horizontal line on the side"
 msgstr "Nadpis s vodorovnou čiarou na boku"
 
-#: patterns/text/heading-02.php:18
+#: patterns/text/heading-02.php:19
 msgctxt "Block pattern title."
 msgid "Uppercase H2 heading"
 msgstr "Nadpis H2 veľkými písmenami"
 
-#: patterns/text/heading-03.php:18
+#: patterns/text/heading-03.php:19
 msgctxt "Block pattern title."
 msgid "Uppercase H3 heading"
 msgstr "Nadpis H3 veľkými písmenami"
 
-#: patterns/text/text-01.php:18
+#: patterns/text/text-01.php:19
 msgctxt "Block pattern title."
 msgid "Giant text"
 msgstr "Obrovský text"
 
-#: patterns/text/text-02.php:18
+#: patterns/text/text-02.php:19
 msgctxt "Block pattern title."
 msgid "Intro paragraph with drop cap and classic paragraph"
 msgstr "Úvodný odsek s iniciálou a klasickým odsekom"
 
-#: patterns/text/text-03.php:18
+#: patterns/text/text-03.php:19
 msgctxt "Block pattern title."
 msgid "Centered bold text"
 msgstr "Vycentrovaný tučný text"
 
-#: patterns/text/text-04.php:18
+#: patterns/text/text-04.php:19
 msgctxt "Block pattern title."
 msgid "Big text on the side with highlighted word"
 msgstr "Veľký text na boku so zvýrazneným slovom"
 
-#: patterns/text/text-04.php:20
+#: patterns/text/text-04.php:21
 msgctxt "as highlight; keyword"
 msgid "mark"
 msgstr "zvýraznenie"
@@ -3491,286 +3992,329 @@ msgstr "Editor stránok"
 msgid "With sidebar"
 msgstr "S bočným panelom"
 
-#: assets/js/block-variations.js:21
-msgid "Site header"
-msgstr "Hlavička webstránky"
-
-#: assets/js/block-variations.js:36
-msgid "Intro (page header)"
-msgstr "Intro (nadpis stránky)"
-
-#: assets/js/block-variations.js:44
-msgctxt "keyword"
-msgid "page title"
-msgstr "nadpis stránky"
-
-#: assets/js/block-variations.js:61
-msgid "Site footer"
-msgstr "Pätka webstránky"
-
-#: assets/js/block-variations.js:87
-msgid "Wide 4 columns"
-msgstr "4 stĺpce (široké)"
-
-#: assets/js/block-variations.js:105
-msgid "Wide 5 columns"
-msgstr "Širokých 5 stĺpcov"
-
-#: assets/js/block-variations.js:132
-msgid "Wide 6 columns"
-msgstr "6 stĺpcov (široké)"
-
-#: assets/js/block-variations.js:160
-msgid "Golden ratio"
-msgstr "Zlatý rez"
-
-#: assets/js/block-variations.js:180
-msgid "Cover"
-msgstr "Titulka"
-
-#: assets/js/block-variations.js:182 assets/js/block-variations.js:203
-#: assets/js/block-variations.js:233 assets/js/block-variations.js:269
-#: assets/js/block-variations.js:339 assets/js/block-variations.js:360
-#: assets/js/block-variations.js:381 assets/js/block-variations.js:402
-msgctxt "keyword"
-msgid "background"
-msgstr "pozadie"
-
-#: assets/js/block-variations.js:183 assets/js/block-variations.js:204
-#: assets/js/block-variations.js:234 assets/js/block-variations.js:270
-msgctxt "keyword"
-msgid "section"
-msgstr "sekcia"
-
-#: assets/js/block-variations.js:201
-msgid "Cover with content on hover"
-msgstr "Titulka s obsahom odhaleným po prechode kurzorom"
-
-#: assets/js/block-variations.js:206
-msgctxt "keyword"
-msgid "project"
-msgstr "projekt"
-
-#: assets/js/block-variations.js:231
-msgid "Cover with blurred image"
-msgstr "Banner s rozmazaným obrázkom"
-
-#: assets/js/block-variations.js:267
-msgid "Cover with backdrop blur column"
-msgstr "Banner so stĺpcom s rozmazaným pozadím"
-
-#: assets/js/block-variations.js:337
-msgid "Dark group with backdrop blur"
-msgstr "Tmavá skupina s rozmazaným pozadím"
-
-#: assets/js/block-variations.js:358
-msgid "Light group with backdrop blur"
-msgstr "Svetlá skupina s rozmazaným pozadím"
-
-#: assets/js/block-variations.js:379
-msgid "Primary color group with backdrop blur"
-msgstr "Skupina s primárnou farbou a rozostrením pozadia"
-
-#: assets/js/block-variations.js:400
-msgid "Group with repeating semi-transparent background pattern"
-msgstr "Skupina s opakujúcim sa polopriehľadným vzorom pozadia"
-
-#: assets/js/block-variations.js:404
-msgctxt "keyword"
-msgid "pattern"
-msgstr "vzor"
-
-#: assets/js/block-variations.js:443
-msgid "Heading with horizontal line"
-msgstr "Nadpis s vodorovnou čiarou"
-
-#: assets/js/block-variations.js:446 assets/js/block-variations.js:501
-#: assets/js/block-variations.js:524
-msgctxt "keyword"
-msgid "uppercase"
-msgstr "veľké písmo"
-
-#: assets/js/block-variations.js:447 assets/js/block-variations.js:502
-#: assets/js/block-variations.js:525
-msgctxt "keyword"
-msgid "letter spacing"
-msgstr "medzery medzi písmenami"
-
-#: assets/js/block-variations.js:448
-msgctxt "keyword"
-msgid "separator"
-msgstr "oddeľovač"
-
-#: assets/js/block-variations.js:449
-msgctxt "keyword"
-msgid "border"
-msgstr "okraj"
-
-#: assets/js/block-variations.js:498
-msgid "Uppercase H2 heading"
-msgstr "Nadpis H2 veľkými písmenami"
-
-#: assets/js/block-variations.js:521
-msgid "Uppercase H3 heading"
-msgstr "Nadpis H3 veľkými písmenami"
-
-#: assets/js/block-variations.js:549
-msgid "Use header image"
-msgstr "Použiť obrázok hlavičky"
-
-#: assets/js/block-variations.js:551 assets/js/block-variations.js:580
-msgctxt "keyword"
-msgid "decoration"
-msgstr "dekorácia"
-
-#: assets/js/block-variations.js:552 assets/js/block-variations.js:581
-msgctxt "keyword"
-msgid "custom header"
-msgstr "vlastná hlavička"
-
-#: assets/js/block-variations.js:554 assets/js/block-variations.js:583
-msgctxt "keyword"
-msgid "intro"
-msgstr "intro"
-
-#: assets/js/block-variations.js:578
-msgid "Use header image (flipped)"
-msgstr "Použiť obrázok hlavičky (prevrátený)"
-
-#: assets/js/block-variations.js:604
-msgid "Media & Text with heading and paragraph"
-msgstr "Médiá a text s nadpisom a odstavcom"
-
-#: assets/js/block-variations.js:620
-msgid "Media & Text with icon and description"
-msgstr "Médiá a text s ikonkou a popisom"
-
-#: assets/js/block-variations.js:622
-msgctxt "keyword"
-msgid "feature"
-msgstr "rys"
-
-#: assets/js/block-variations.js:623
-msgctxt "keyword"
-msgid "service"
-msgstr "služba"
-
-#: assets/js/block-variations.js:664
-msgid "Text & Media"
-msgstr "Text a médiá"
-
-#: assets/js/block-variations.js:666
-msgctxt "keyword"
-msgid "media & text"
-msgstr "médiá a text"
-
-#: assets/js/block-variations.js:667
-msgctxt "keyword"
-msgid "media"
-msgstr "médiá"
-
-#: assets/js/block-variations.js:668
-msgctxt "keyword"
-msgid "text"
-msgstr "text"
-
-#: assets/js/block-variations.js:670
-msgctxt "keyword"
-msgid "video"
-msgstr "video"
-
-#: assets/js/block-variations.js:687
-msgid "3 Recent Posts"
-msgstr "3 najnovšie príspevky"
-
-#: assets/js/block-variations.js:689
-msgctxt "keyword"
-msgid "latest posts"
-msgstr "najnovšie príspevky"
-
-#: assets/js/block-variations.js:691
-msgctxt "keyword"
-msgid "inline"
-msgstr "v jednom riadku"
-
-#: assets/js/block-variations.js:692
-msgctxt "keyword"
-msgid "row"
-msgstr "riadok"
-
-#: assets/js/block-variations.js:737
-msgid "Spacer"
-msgstr "Medzera"
-
-#: assets/js/block-variations.js:739
-msgctxt "keyword"
-msgid "gap"
-msgstr "medzera"
-
-#: assets/js/block-variations.js:759
-msgid "Grid"
-msgstr "Mriežka"
-
-#: assets/js/block-variations.js:760
-msgid "Arrange blocks in a grid."
-msgstr "Usporiadajte bloky do mriežky."
-
-#: assets/js/rich-text-format.js:21 assets/js/rich-text-format.js:29
-msgctxt "Text format label."
-msgid "Accessibly hidden"
-msgstr "Prístupne skrytý"
-
-#: assets/js/rich-text-format.js:42 assets/js/rich-text-format.js:53
+#: assets/js/block-editor.min.js
 msgctxt "Text format label."
 msgid "Hidden for assistive technology"
 msgstr "Skryté pre asistenčné technológie"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Base"
-msgstr "Základná"
+#: assets/js/block-editor.min.js
+msgctxt "Text format label."
+msgid "Accessibly hidden"
+msgstr "Prístupne skrytý"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Base alternative"
-msgstr "Základná alternatívna"
+#: assets/js/block-variations.min.js
+msgid "Wide 4 columns"
+msgstr "4 stĺpce (široké)"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Contrast"
-msgstr "Kontrastná"
+#: assets/js/block-variations.min.js
+msgid "Wide 5 columns"
+msgstr "Širokých 5 stĺpcov"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Contrast alternative"
-msgstr "Kontrastná alternatívna"
+#: assets/js/block-variations.min.js
+msgid "Wide 6 columns"
+msgstr "6 stĺpcov (široké)"
 
-#: theme.json
+#: assets/js/block-variations.min.js
+msgid "Golden ratio"
+msgstr "Zlatý rez"
+
+#: assets/js/block-variations.min.js
+msgid "Cover"
+msgstr "Titulka"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "background"
+msgstr "pozadie"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "section"
+msgstr "sekcia"
+
+#: assets/js/block-variations.min.js
+msgid "Cover with content on hover"
+msgstr "Titulka s obsahom odhaleným po prechode kurzorom"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "project"
+msgstr "projekt"
+
+#: assets/js/block-variations.min.js
+msgid "Cover with blurred image"
+msgstr "Banner s rozmazaným obrázkom"
+
+#: assets/js/block-variations.min.js
+msgid "Cover with backdrop blur column"
+msgstr "Banner so stĺpcom s rozmazaným pozadím"
+
+#: assets/js/block-variations.min.js
+msgid "Dark group with backdrop blur"
+msgstr "Tmavá skupina s rozmazaným pozadím"
+
+#: assets/js/block-variations.min.js
+msgid "Light group with backdrop blur"
+msgstr "Svetlá skupina s rozmazaným pozadím"
+
+#: assets/js/block-variations.min.js
+msgid "Primary color group with backdrop blur"
+msgstr "Skupina s primárnou farbou a rozostrením pozadia"
+
+#: assets/js/block-variations.min.js
+msgid "Group with repeating semi-transparent background pattern"
+msgstr "Skupina s opakujúcim sa polopriehľadným vzorom pozadia"
+
+#: assets/js/block-variations.min.js
+msgid "Responsive table container"
+msgstr "Responzívny kontajner tabuľky"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "table"
+msgstr "tabuľka"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "wrapper"
+msgstr "obaľovač"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "container"
+msgstr "kontajner"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "group"
+msgstr "skupina"
+
+#: assets/js/block-variations.min.js
+msgid "Heading with horizontal line"
+msgstr "Nadpis s vodorovnou čiarou"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "uppercase"
+msgstr "veľké písmo"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "letter spacing"
+msgstr "medzery medzi písmenami"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "separator"
+msgstr "oddeľovač"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "border"
+msgstr "okraj"
+
+#: assets/js/block-variations.min.js
+msgid "Uppercase H2 heading"
+msgstr "Nadpis H2 veľkými písmenami"
+
+#: assets/js/block-variations.min.js
+msgid "Uppercase H3 heading"
+msgstr "Nadpis H3 veľkými písmenami"
+
+#: assets/js/block-variations.min.js
+msgid "Icon"
+msgstr "Ikonka"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "svg"
+msgstr "svg"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "symbol"
+msgstr "symbol"
+
+#: assets/js/block-variations.min.js
+msgid "Rounded icon with primary background"
+msgstr "Zaoblená ikonka s primárnym pozadím"
+
+#: assets/js/block-variations.min.js
+msgid "Use header image"
+msgstr "Použiť obrázok hlavičky"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "decoration"
+msgstr "dekorácia"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "custom header"
+msgstr "vlastná hlavička"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "intro"
+msgstr "intro"
+
+#: assets/js/block-variations.min.js
+msgid "Use header image (flipped)"
+msgstr "Použiť obrázok hlavičky (prevrátený)"
+
+#: assets/js/block-variations.min.js
+msgid "Media & Text with heading and paragraph"
+msgstr "Médiá a text s nadpisom a odstavcom"
+
+#: assets/js/block-variations.min.js
+msgid "Media & Text with icon and description"
+msgstr "Médiá a text s ikonkou a popisom"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "feature"
+msgstr "rys"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "service"
+msgstr "služba"
+
+#: assets/js/block-variations.min.js
+msgid "Text & Media"
+msgstr "Text a médiá"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "media & text"
+msgstr "médiá a text"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "media"
+msgstr "médiá"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "text"
+msgstr "text"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "video"
+msgstr "video"
+
+#: assets/js/block-variations.min.js
+msgid "Blog Posts"
+msgstr "Príspevky"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "latest posts"
+msgstr "najnovšie príspevky"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "inline"
+msgstr "v jednom riadku"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "row"
+msgstr "riadok"
+
+#: assets/js/block-variations.min.js
+msgid "Site header"
+msgstr "Hlavička webstránky"
+
+#: assets/js/block-variations.min.js
+msgid "Intro (page header)"
+msgstr "Intro (nadpis stránky)"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "page title"
+msgstr "nadpis stránky"
+
+#: assets/js/block-variations.min.js
+msgid "Site footer"
+msgstr "Pätka webstránky"
+
+#: assets/js/block-variations.min.js
+msgid "Spacer"
+msgstr "Medzera"
+
+#: assets/js/block-variations.min.js
+msgctxt "keyword"
+msgid "gap"
+msgstr "medzera"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Base (Background)"
+msgstr "Základná (pozadie)"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Contrast (Text)"
+msgstr "Kontrastná (text)"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Contrast alternative (Headings)"
+msgstr "Kontrastná alternatívna (nadpisy)"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr "Primárna"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Primary mixed"
-msgstr "Primárna zmiešaná"
-
-#: theme.json
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr "Sekundárna"
 
-#: theme.json
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Primary mixed"
+msgstr "Primárna zmiešaná"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Secondary mixed"
 msgstr "Sekundárna zmiešaná"
 
-#: theme.json
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
+msgctxt "Color name"
+msgid "Base alternative (Background)"
+msgstr "Základná alternatívna (pozadie)"
+
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "Black"
 msgstr "Čierna"
 
-#: theme.json
+#: theme.json styles/color/01-green.json styles/color/02-blue.json
+#: styles/color/10-dark-red.json styles/color/11-dark-green.json
+#: styles/color/12-dark-blue.json
 msgctxt "Color name"
 msgid "White"
 msgstr "Biela"
@@ -3787,246 +4331,6 @@ msgstr "Sekundárna do primárnej"
 
 #: theme.json
 msgctxt "Gradient name"
-msgid "Primary cut to transparent, horizontally"
-msgstr "Primárna zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary, horizontally"
-msgstr "Priehľadná zoseknutá do primárnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed cut to transparent, horizontally"
-msgstr "Primárna zmiešaná zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary mixed, horizontally"
-msgstr "Priehľadná zoseknutá do primárnej zmiešanej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary cut to transparent, vertically"
-msgstr "Primárna zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary, vertically"
-msgstr "Priehľadná zoseknutá do primárnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed cut to transparent, vertically"
-msgstr "Primárna zmiešaná zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to primary mixed, vertically"
-msgstr "Priehľadná zoseknutá do primárnej zmiešanej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary cut to transparent, horizontally"
-msgstr "Sekundárna zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary, horizontally"
-msgstr "Priehľadná zoseknutá do sekundárnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed cut to transparent, horizontally"
-msgstr "Sekundárna zmiešaná zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary mixed, horizontally"
-msgstr "Priehľadná zoseknutá do sekundárnej zmiešanej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary cut to transparent, vertically"
-msgstr "Sekundárna zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary, vertically"
-msgstr "Priehľadná zoseknutá do sekundárnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed cut to transparent, vertically"
-msgstr "Sekundárna zmiešaná zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to secondary mixed, vertically"
-msgstr "Priehľadná zoseknutá do sekundárnej zmiešanej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base cut to transparent, horizontally"
-msgstr "Základná zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base, horizontally"
-msgstr "Priehľadná zoseknutá do základnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base cut to transparent, vertically"
-msgstr "Základná zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base, vertically"
-msgstr "Priehľadná zoseknutá do základnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative cut to transparent, horizontally"
-msgstr "Základná alternatívna zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base alternative, horizontally"
-msgstr "Priehľadná zoseknutá do základnej alternatívnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative cut to transparent, vertically"
-msgstr "Základná alternatívna zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to base alternative, vertically"
-msgstr "Priehľadná zoseknutá do základnej alternatívnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast cut to transparent, horizontally"
-msgstr "Kontrastná zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast, horizontally"
-msgstr "Priehľadná zoseknutá do kontrastnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast cut to transparent, vertically"
-msgstr "Kontrastná zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast, vertically"
-msgstr "Priehľadná zoseknutá do kontrastnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative cut to transparent, horizontally"
-msgstr "Kontrastná alternatívna zoseknutá do priehľadnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast alternative, horizontally"
-msgstr "Priehľadná zoseknutá do kontrastnej alternatívnej, horizontálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative cut to transparent, vertically"
-msgstr "Kontrastná alternatívna zoseknutá do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent cut to contrast alternative, vertically"
-msgstr "Priehľadná zoseknutá do kontrastnej alternatívnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base to transparent, vertically"
-msgstr "Základná do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to base, vertically"
-msgstr "Priehľadná do základnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Base alternative to transparent, vertically"
-msgstr "Základná alternatívna do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to base alternative, vertically"
-msgstr "Priehľadná do základnej alternatívnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast to transparent, vertically"
-msgstr "Kontrastná do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to contrast, vertically"
-msgstr "Priehľadná do kontrastnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Contrast alternative to transparent, vertically"
-msgstr "Kontrastná alternatívna do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to contrast alternative, vertically"
-msgstr "Priehľadná do kontrastnej alternatívnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary to transparent, vertically"
-msgstr "Primárna do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to primary, vertically"
-msgstr "Priehľadná do primárnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Primary mixed to transparent, vertically"
-msgstr "Primárna zmiešaná do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to primary mixed, vertically"
-msgstr "Priehľadná do primárnej zmiešanej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary to transparent, vertically"
-msgstr "Sekundárna do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to secondary, vertically"
-msgstr "Priehľadná do sekundárnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Secondary mixed to transparent, vertically"
-msgstr "Sekundárna zmiešaná do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to secondary mixed, vertically"
-msgstr "Priehľadná do sekundárnej zmiešanej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
 msgid "For backdrop blur, dark"
 msgstr "Pre rozmazanie pozadia, tmavé"
 
@@ -4036,44 +4340,14 @@ msgid "For backdrop blur, light"
 msgstr "Pre rozmazanie pozadia, svetlé"
 
 #: theme.json
-msgctxt "Gradient name"
-msgid "For backdrop blur, primary"
-msgstr "Pre rozmazanie pozadia, primárne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Black to transparent, vertically"
-msgstr "Čierna do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to black, vertically"
-msgstr "Priehľadná do čiernej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "White to transparent, vertically"
-msgstr "Biela do priehľadnej, vertikálne"
-
-#: theme.json
-msgctxt "Gradient name"
-msgid "Transparent to white, vertically"
-msgstr "Priehľadná do bielej, vertikálne"
+msgctxt "Duotone name"
+msgid "Base"
+msgstr "Základná"
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Black"
-msgstr "Čierna"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "White"
-msgstr "Biela"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Gray"
-msgstr "Sivý"
+msgid "Contrast"
+msgstr "Kontrastný"
 
 #: theme.json
 msgctxt "Duotone name"
@@ -4097,38 +4371,18 @@ msgstr "Sekundárna, primárna"
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Red"
-msgstr "Červená"
+msgid "Black"
+msgstr "Čierna"
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Brown"
-msgstr "Hnedý"
+msgid "White"
+msgstr "Biela"
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Yellow"
-msgstr "Žltý"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Green"
-msgstr "Zelená"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Blue"
-msgstr "Modrá"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Purple"
-msgstr "Fialový"
-
-#: theme.json
-msgctxt "Duotone name"
-msgid "Punchy"
-msgstr "Pútavý"
+msgid "Gray"
+msgstr "Sivý"
 
 #: theme.json
 msgctxt "Shadow name"
@@ -4144,6 +4398,31 @@ msgstr "Stredný"
 msgctxt "Shadow name"
 msgid "Large"
 msgstr "Veľký"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Inset"
+msgstr "Vsadený"
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Small"
+msgstr "Malé"
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Medium"
+msgstr "Stredné"
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Large"
+msgstr "Veľké"
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "X Large"
+msgstr "Extra veľké"
 
 #: theme.json
 msgctxt "Space size name"
@@ -4205,25 +4484,75 @@ msgctxt "Aspect ratio name"
 msgid "Super Ultrawide - 32:9"
 msgstr "Super ultraširokouhlý – 32:9"
 
-#: theme.json
+#: theme.json styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Main"
 msgstr "Hlavné"
 
-#: theme.json
+#: theme.json styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Heading"
 msgstr "Nadpis"
 
-#: theme.json
+#: theme.json styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Alternative"
 msgstr "Alternatívne"
 
-#: theme.json
+#: theme.json styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
 msgctxt "Font family name"
 msgid "Monospace"
 msgstr "Neproporcionálne"
+
+#: theme.json styles/typography/01-bitter-heebo.json
+#: styles/typography/02-inter.json styles/typography/03-poppins.json
+#: styles/typography/04-fira-sans.json styles/typography/05-titillium-web.json
+#: styles/typography/06-barlow.json
+#: styles/typography/07-space-grotesk-onest.json
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
+msgctxt "Font family name"
+msgid "Handwritten"
+msgstr "Písané rukou"
 
 #: theme.json
 msgctxt "Font family name"
@@ -4352,6 +4681,11 @@ msgstr "Hlavička"
 
 #: theme.json
 msgctxt "Template part name"
+msgid "Navigation overlay"
+msgstr "Navigačné prekrytie"
+
+#: theme.json
+msgctxt "Template part name"
 msgid "Intro (Page header)"
 msgstr "Intro (nadpis stránky)"
 
@@ -4449,3 +4783,90 @@ msgstr "Bez intra"
 msgctxt "Custom template name"
 msgid "With sidebar"
 msgstr "S bočným panelom"
+
+#: styles/color/01-green.json
+msgctxt "Style variation name"
+msgid "Green"
+msgstr "Zelená"
+
+#: styles/color/02-blue.json
+msgctxt "Style variation name"
+msgid "Blue"
+msgstr "Modrá"
+
+#: styles/color/10-dark-red.json
+msgctxt "Style variation name"
+msgid "Dark, red"
+msgstr "Tmavá, červená"
+
+#: styles/color/11-dark-green.json
+msgctxt "Style variation name"
+msgid "Dark, green"
+msgstr "Tmavá, zelená"
+
+#: styles/color/12-dark-blue.json
+msgctxt "Style variation name"
+msgid "Dark, blue"
+msgstr "Tmavá, modrá"
+
+#: styles/typography/01-bitter-heebo.json
+msgctxt "Style variation name"
+msgid "Bitter + Heebo"
+msgstr "Bitter + Heebo"
+
+#: styles/typography/02-inter.json
+#| msgctxt "Site footer context."
+#| msgid "Centered"
+msgctxt "Style variation name"
+msgid "Inter"
+msgstr "Inter"
+
+#: styles/typography/03-poppins.json
+msgctxt "Style variation name"
+msgid "Poppins"
+msgstr "Poppins"
+
+#: styles/typography/04-fira-sans.json
+msgctxt "Style variation name"
+msgid "Fira Sans"
+msgstr "Fira Sans"
+
+#: styles/typography/05-titillium-web.json
+msgctxt "Style variation name"
+msgid "Titillium Web"
+msgstr "Titillium Web"
+
+#: styles/typography/06-barlow.json
+msgctxt "Style variation name"
+msgid "Barlow"
+msgstr "Barlow"
+
+#: styles/typography/07-space-grotesk-onest.json
+msgctxt "Style variation name"
+msgid "Space Grotesk + Onest"
+msgstr "Space Grotesk + Onest"
+
+#: styles/typography/55-modernfontstacks-01-system-ui.json
+msgctxt "Style variation name"
+msgid "System UI (ModernFontStacks.com)"
+msgstr "System UI (ModernFontStacks.com)"
+
+#: styles/typography/55-modernfontstacks-02-slab-serif.json
+msgctxt "Style variation name"
+msgid "Slab Serif (ModernFontStacks.com)"
+msgstr "Slab Serif (ModernFontStacks.com)"
+
+#: styles/typography/55-modernfontstacks-03-industrial-transitional.json
+msgctxt "Style variation name"
+msgid "Industrial + Transitional (ModernFontStacks.com)"
+msgstr "Industrial + Transitional (ModernFontStacks.com)"
+
+#: styles/typography/55-modernfontstacks-04-industrial-geometric-humanist.json
+msgctxt "Style variation name"
+msgid "Industrial + Geometric Humanist (ModernFontStacks.com)"
+msgstr "Industrial + Geometric Humanist (ModernFontStacks.com)"
+
+#: styles/typography/55-modernfontstacks-05-monospace-slab-serif.json
+msgctxt "Style variation name"
+msgid "Monospace Slab Serif (ModernFontStacks.com)"
+msgstr "Monospace Slab Serif (ModernFontStacks.com)"

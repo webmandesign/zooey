@@ -233,7 +233,6 @@ class Styles implements Component_Interface {
 	} // /get_css_variables_button
 
 	/**
-	 * @todo  Check the list.
 	 * Gets theme CSS selectors.
 	 *
 	 * @since  2.0.1
@@ -279,13 +278,8 @@ class Styles implements Component_Interface {
 					// `form` selector is required to prevent styling MEJS buttons, for example.
 					'form :where(button,[type="button"],[type="reset"],[type="submit"]):not([class*="wp-block-"])',
 
-					// WooCommerce:
-					'.cart_totals .checkout-button',
-					'.wc-block-product-categories__button',
-
 					// Buttons from block styles:
 					'.is-style-buttons-inline a',
-					'.is-style-read-more-button .wp-block-post-excerpt__more-link',
 
 					// SCSS: @extend %button_outline:
 					'.is-style-read-more-outline .wp-block-post-excerpt__more-link',

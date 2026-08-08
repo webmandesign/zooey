@@ -1,8 +1,9 @@
 # Zooey Changelog
 
-## 2.0.5, 20260807
+## 2.0.0, 20260807
 
-As the code was ported from Zooey 2.0.5, we skip Zooey version number 2.0.0 - 2.0.4 to match versioning with those themes.
+Technically, this is matching Ileana 2.0.5 code, but we lower the version for reintroducing `accessibility-ready` class once the theme passes new accessibility review at WPORG.
+Next version is planned to match Ileana 2.0.5 (and other updated universal themes), so we skip the version numbers in-between.
 
 This major theme update may cause 2 issues on an existing website:
 	1. Icon images duotone not working correctly.
@@ -10,8 +11,6 @@ This major theme update may cause 2 issues on an existing website:
 	2. Broken image URL (when theme demo images used).
 	   SOLUTION: Update the content to use your custom images. Or switch the block editor to code view and change 
 	   `zooey/assets/images/starter/` to `zooey/assets/images/demo/`.
-	3. Optionally update WooCommerce Cart and Checkout page content for new WooCommerce block content versions.
-	   SOLUTION: Use patterns in "Page" category: simply delete the old page content and add new one.
 
 ### Added
 - Icon block support
@@ -34,7 +33,6 @@ This major theme update may cause 2 issues on an existing website:
 - Theme option to set "Decorative" border radius size globally
 - Theme option to toggle theme auto-generated gradients
 - Theme option to toggle block patterns (individually or whole pattern categories)
-- Theme option to set single product layout variation (WooCommerce)
 - View Transitions plugin, and Carousel Slider Block plugin compatibility
 - Block editor rich text inline formats for accessibility
 - Making special product list design available for any custom post loop
@@ -69,11 +67,6 @@ This major theme update may cause 2 issues on an existing website:
 - Using border radius presets in patterns (instead of hard-coded values)
 - Improving sticky position and page scroll offset
 - Theme upgrade functionality
-- WooCommerce: Updating products list design
-- WooCommerce: Using WooCommerce blocks to display shop layouts
-- WooCommerce: Using Product Collection block where appropriate
-- WooCommerce: Optimizing and adding new Product Collection block variations
-- WooCommerce: Improving and fixing styles
 - Improving accessibility (passing updated WordPress accessibility requirements):
 	- adding `accessibility.txt`,
 	- updating button focus outline (and removing `.has-focus-alt` class),
@@ -86,7 +79,6 @@ This major theme update may cause 2 issues on an existing website:
 	- adding `aria-label` to all navigational menus.
 - Theme description text in `style.css`
 - Enabling text indent in `theme.json`
-- Improving WooCommerce options
 - Removing obsolete code
 - Using more suitable localization escaping functions
 - Localization
@@ -104,12 +96,227 @@ This major theme update may cause 2 issues on an existing website:
 - Button styling priority (button block → global styles → theme options)
 - Decorative quotation mark setup (and localization/translation)
 - Mobile navigation overlay automatic text color
-- WooCommerce: Forcing Mini Cart block badge colors with CSS (as there is an issue with these colors in WooCommerce)
 - Removing link from Cover block featured image when on singular page/post
 - Flushing demo values cache on Customizer update
 
 ### File updates
-
+	changelog.md
+	functions.php
+	style.css
+	theme.json
+	assets/js/*.js
+	assets/scss/blocks-editor.scss
+	assets/scss/blocks.scss
+	assets/scss/customize-controls.scss
+	assets/scss/editor-ui.scss
+	assets/scss/editor.scss
+	assets/scss/global.scss
+	assets/scss/welcome.scss
+	assets/scss/_tools/*.scss
+	assets/scss/blocks/_list.scss
+	assets/scss/blocks/_navigation-megamenu.scss
+	assets/scss/blocks/_navigation-mobile.scss
+	assets/scss/blocks/_navigation-submenu-toggle.scss
+	assets/scss/blocks/_navigation-submenu.scss
+	assets/scss/blocks/accordion.scss
+	assets/scss/blocks/button.scss
+	assets/scss/blocks/calendar.scss
+	assets/scss/blocks/categories.scss
+	assets/scss/blocks/code.scss
+	assets/scss/blocks/columns.scss
+	assets/scss/blocks/comments.scss
+	assets/scss/blocks/cover.scss
+	assets/scss/blocks/file.scss
+	assets/scss/blocks/gallery.scss
+	assets/scss/blocks/group.scss
+	assets/scss/blocks/icon.scss
+	assets/scss/blocks/latest-comments.scss
+	assets/scss/blocks/latest-posts.scss
+	assets/scss/blocks/loginout.scss
+	assets/scss/blocks/navigation-link.scss
+	assets/scss/blocks/navigation-submenu.scss
+	assets/scss/blocks/navigation.scss
+	assets/scss/blocks/page-list.scss
+	assets/scss/blocks/paragraph.scss
+	assets/scss/blocks/post-content.scss
+	assets/scss/blocks/post-excerpt.scss
+	assets/scss/blocks/post-featured-image.scss
+	assets/scss/blocks/query.scss
+	assets/scss/blocks/rss.scss
+	assets/scss/blocks/search.scss
+	assets/scss/blocks/separator.scss
+	assets/scss/blocks/site-logo.scss
+	assets/scss/blocks/table.scss
+	assets/scss/blocks/tag-cloud.scss
+	assets/scss/blocks/template-part.scss
+	assets/scss/blocks/term-description.scss
+	assets/scss/php/colors.scss
+	includes/Autoload.php
+	includes/Theme.php
+	includes/Accessibility/Component.php
+	includes/Assets/Component.php
+	includes/Assets/Icon.php
+	includes/Assets/Scripts.php
+	includes/Content/Block.php
+	includes/Content/Block_Mods.php
+	includes/Content/Block_Pattern.php
+	includes/Content/Block_Style.php
+	includes/Content/Component.php
+	includes/Content/Demo.php
+	includes/Content/Starter.php
+	includes/Customize/Colors.php
+	includes/Customize/CSS_Variables.php
+	includes/Customize/Mod.php
+	includes/Customize/Options.php
+	includes/Customize/Options_Conditional.php
+	includes/Customize/Options_Partial_Refresh.php
+	includes/Customize/RGBA.php
+	includes/Customize/Sanitize.php
+	includes/Customize/Styles.php
+	includes/Customize/Control/HTML.php
+	includes/Customize/Control/Multiselect.php
+	includes/Customize/Control/Select.php
+	includes/Editor/Assets.php
+	includes/Editor/Cache.php
+	includes/Editor/Classic.php
+	includes/Editor/Component.php
+	includes/Editor/Duotone.php
+	includes/Editor/Gradients.php
+	includes/Editor/Palette.php
+	includes/Entry/Component.php
+	includes/Entry/Page_Template.php
+	includes/Entry/Summary.php
+	includes/Header/Body_Class.php
+	includes/Loop/Component.php
+	includes/Loop/Pagination.php
+	includes/Loop/Related_Posts.php
+	includes/Menu/Component.php
+	includes/Plugin/Component.php
+	includes/Plugin/View_Transitions/Component.php
+	includes/Setup/Component.php
+	includes/Setup/Media.php
+	includes/Setup/Site_Editor.php
+	includes/Setup/Upgrade.php
+	includes/Tool/Get.php
+	includes/Tool/Google_Fonts.php
+	includes/Tool/KSES.php
+	includes/Tool/Wrapper.php
+	languages/*.*
+	parts/admin/media-image-sizes.php
+	parts/admin/welcome-feature--background.php
+	parts/admin/welcome-feature--blog.php
+	parts/admin/welcome-feature--custom-header.php
+	parts/admin/welcome-feature--featured-posts.php
+	parts/admin/welcome-feature--hybrid.php
+	parts/admin/welcome-feature--patterns.php
+	parts/admin/welcome-feature--privacy.php
+	parts/admin/welcome-feature--site-editor.php
+	parts/admin/welcome-feature--styles.php
+	parts/admin/welcome-feature--template-parts.php
+	parts/admin/welcome-feature--typography.php
+	parts/admin/welcome-features.php
+	parts/admin/welcome-footer.php
+	parts/admin/welcome-header.php
+	parts/header/head.php
+	patterns/index.php
+	patterns/call-to-action/cta-01.php
+	patterns/call-to-action/cta-02.php
+	patterns/call-to-action/cta-03.php
+	patterns/call-to-action/cta-04.php
+	patterns/call-to-action/cta-05.php
+	patterns/call-to-action/cta-06.php
+	patterns/call-to-action/cta-07.php
+	patterns/call-to-action/cta-08.php
+	patterns/call-to-action/cta-09.php
+	patterns/call-to-action/cta-10.php
+	patterns/columns/columns-01.php
+	patterns/columns/columns-02.php
+	patterns/columns/columns-03.php
+	patterns/columns/columns-04.php
+	patterns/contact/contact-01.php
+	patterns/contact/contact-02.php
+	patterns/contact/contact-03.php
+	patterns/contact/contact-04.php
+	patterns/contact/contact-05.php
+	patterns/faq/faq-01.php
+	patterns/faq/faq-02.php
+	patterns/faq/faq-03.php
+	patterns/faq/faq-04.php
+	patterns/gallery/gallery-01.php
+	patterns/gallery/gallery-02.php
+	patterns/gallery/gallery-03.php
+	patterns/gallery/gallery-04.php
+	patterns/gallery/gallery-05.php
+	patterns/gallery/gallery-06.php
+	patterns/gallery/gallery-07.php
+	patterns/gallery/gallery-08.php
+	patterns/gallery/gallery-09.php
+	patterns/intro/intro-01.php
+	patterns/intro/intro-02.php
+	patterns/intro/intro-03.php
+	patterns/intro/intro-04.php
+	patterns/intro/intro-05.php
+	patterns/intro/intro-06.php
+	patterns/media/media-01.php
+	patterns/media/media-02.php
+	patterns/media/media-03.php
+	patterns/media/media-04.php
+	patterns/media/media-05.php
+	patterns/media/media-06.php
+	patterns/media/media-07.php
+	patterns/media/media-08.php
+	patterns/numbers/numbers-01.php
+	patterns/numbers/numbers-02.php
+	patterns/numbers/numbers-03.php
+	patterns/numbers/numbers-04.php
+	patterns/numbers/numbers-05.php
+	patterns/page/soon-1.php
+	patterns/portfolio/portfolio-00.php
+	patterns/portfolio/portfolio-01.php
+	patterns/portfolio/portfolio-02.php
+	patterns/portfolio/portfolio-03.php
+	patterns/posts/posts-01.php
+	patterns/posts/posts-02.php
+	patterns/pricing/pricing-01.php
+	patterns/pricing/pricing-02.php
+	patterns/services/services-01.php
+	patterns/services/services-02.php
+	patterns/services/services-03.php
+	patterns/services/services-04.php
+	patterns/services/services-05.php
+	patterns/services/services-06.php
+	patterns/site/comments.php
+	patterns/site/content-with-sidebar.php
+	patterns/site/entry-meta-bottom.php
+	patterns/site/entry-query.php
+	patterns/site/footer-centered.php
+	patterns/site/footer.php
+	patterns/site/header-alt.php
+	patterns/site/header.php
+	patterns/site/intro-post.php
+	patterns/site/navigation-overlay.php
+	patterns/site/query-featured.php
+	patterns/site/query-search.php
+	patterns/site/query-with-sidebar.php
+	patterns/site/query.php
+	patterns/site/sidebar.php
+	patterns/team/team-00.php
+	patterns/team/team-01.php
+	patterns/team/team-02.php
+	patterns/team/team-03.php
+	patterns/team/team-04.php
+	patterns/testimonials/testimonials-01.php
+	patterns/testimonials/testimonials-02.php
+	patterns/testimonials/testimonials-03.php
+	patterns/testimonials/testimonials-04.php
+	patterns/text/heading-01.php
+	patterns/text/heading-02.php
+	patterns/text/heading-03.php
+	patterns/text/text-01.php
+	patterns/text/text-02.php
+	patterns/text/text-03.php
+	patterns/text/text-04.php
+	styles/*.json
 
 
 ## 1.2.5, 20260525

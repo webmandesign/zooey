@@ -85,9 +85,6 @@ class Block_Mods implements Component_Interface {
 		// Variables
 
 			$images = array(
-				'1to1-1',
-				'1to1-2',
-				'1to1-3',
 				'3to2-1',
 				'p-i',
 			);

@@ -460,7 +460,6 @@
 		"custom" : {
 			"accent-color" : "var(--wp--preset--color--primary)",
 			"border-color" : {
-				"//":"@todo  Test this.",
 				"global" : "color-mix( in srgb, currentColor calc( 100% * var(--wp--custom--opacity--border) ), transparent )",
 
 				"button" : "transparent",
@@ -483,7 +482,6 @@
 				"sub-menu"   : "var(--wp--custom--border-radius--global)"
 			},
 			"border-width" : {
-				"//":"@todo  Test this.",
 				"global" : "2px",
 
 				"dropcap"        : "1px",
@@ -564,7 +562,6 @@
 				"transitional"         : "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif"
 			},
 			"font-size" : {
-				"//":"@todo  Test this.",
 				"navigation" : {
 					"mobile" : {
 						"top-level" : "var(--wp--preset--font-size--h-3)"
@@ -572,17 +569,12 @@
 				}
 			},
 			"hr" : {
-				"//":"@todo  Test this.",
 				"border-width" : "var(--wp--custom--border-width--hr)",
 				"dashed" : {
 					"color" : "var(--wp--custom--border-color--hr)"
 				},
 				"dotted" : {
 					"color" : "var(--wp--custom--border-color--hr)"
-				},
-				"shape" : {
-					"width"  : "48px",
-					"height" : "48px"
 				}
 			},
 			"letter-spacing" : {
@@ -603,16 +595,16 @@
 				"padding-bg"    : ".1em .25em"
 			},
 			"navigation" : {
-				"//":"@todo  Test this.",
 				"mobile" : {
-					"menu-gap" : "1rem"
+					"menu-gap" : ".618rem"
 				},
 				"submenu" : {
 					"padding" : {
-						"item" : ".5rem"
+						"item" : ".382rem"
 					},
 					"separator" : {
-						"style" : "none"
+						"width" : "var(--wp--custom--border-width--item-separator)",
+						"style" : "dotted"
 					}
 				}
 			},
@@ -628,7 +620,6 @@
 				"l" : "calc( -1 * var(--wp--preset--spacing--content) )"
 			},
 			"quote" : {
-				"//":"@todo  Test this.",
 				"cite-before" : "'— ' / ''",
 				"color" : {
 					"text" : "var(--wp--preset--color--contrast-alt)"
@@ -807,7 +798,6 @@
 			},
 
 			"button" : {
-				"//":"@todo  Adapt this to the theme original styling!",
 				"//":"v2.0.1: Well, after thorough thinking and some experiments with different approaches (such as setting up button styles via Button block settings), it's better to keep the WordPress way: global button styles are separated from Button block styles. It's future proof and avoids confusion - actually, it leaves responsibility for confusion on WordPress, and we are not adding another layer of confusion here. But we also set global button selectors on Button block, so it is possible to style buttons globally there if needed (@see Content/Block_Mods::settings()->core/button) as Button block contains more user interface options for styling. (@see Content/Block_Mods::button_css_selectors())",
 
 				"color" : {
@@ -820,18 +810,17 @@
 					"fontFamily"     : "var(--wp--preset--font-family--global)",
 					"fontSize"       : "var(--wp--preset--font-size--s)",
 					"fontWeight"     : "700",
-					"fontStyle"      : "italic",
 					"letterSpacing"  : "var(--wp--custom--letter-spacing--button)",
 					"lineHeight"     : "1.25",
-					"textTransform"  : "lowercase",
+					"textTransform"  : "uppercase",
 					"textAlign"      : "center",
 					"textDecoration" : "none"
 				},
 				"spacing" : {
 					"padding"  : {
-						"top"    : "1.25em",
+						"top"    : "1.125em",
 						"right"  : "1.5em",
-						"bottom" : "1.25em",
+						"bottom" : "1.125em",
 						"left"   : "1.5em"
 					}
 				},
@@ -865,7 +854,6 @@
 			}
 		},
 		"blocks" : {
-			"//":"@todo  Test Accordion block!",
 			"core/accordion-item" : {
 				"spacing" : {
 					"blockGap" : "var(--wp--preset--spacing--s)"

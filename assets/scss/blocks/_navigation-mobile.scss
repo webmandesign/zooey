@@ -36,7 +36,7 @@
 
 		html :where(&)[class] {
 			--theme--css--button--color--border: currentColor;
-			padding: 1em;
+			padding: .66em;
 		}
 
 		// Simplified @extend %button_outline.
@@ -54,6 +54,18 @@
 				outline-style: var( --wp--custom--outline--style, auto );
 				outline-color: currentColor;
 			}
+		}
+
+		// Overriding editor styles to roughly match button styles.
+		.editor-styles-wrapper &[class] {
+			aspect-ratio: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: $ratio * $ratio * 1em;
+			padding: 0;
+			text-align: center;
+			color: var(--theme--css--button--color--text);
 		}
 	}
 

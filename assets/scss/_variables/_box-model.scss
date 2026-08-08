@@ -12,11 +12,13 @@
 	--theme--css--content-padding-negative: calc( -1 * var(--wp--custom--option-toggle--content-space, 1) * var(--wp--preset--spacing--content) );
 
 	--theme--css--submenu-toggle--gap: #{ $ratio_min + em };
-	--theme--css--submenu-toggle--opacity: .33;
+	--theme--css--submenu-toggle--opacity: var( --wp--custom--opacity--border, .5 );
 	--theme--css--submenu-toggle-size: 10px;
 	@media (hover: none) { // Touch enabled devices.
 		--theme--css--submenu-toggle-size: 24px;
 	}
+	--theme--css--submenu-toggle--icon--line--width: 10px;
+	--theme--css--submenu-toggle--icon--line--height: 2px;
 
 	--theme--block--post-template--gap: 2em;
 
