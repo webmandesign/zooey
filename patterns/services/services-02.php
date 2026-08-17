@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.5
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -43,7 +43,7 @@ ob_start(); ?>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}},"typography":{"textDecoration":"none"}},"fontSize":"big"} -->
-		<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0">→</a></p>
+		<p class="has-big-font-size" style="margin-top:0;text-decoration:none"><a href="#0"><span class="screen-reader-text"><?php Demo::The_text( 'change' ); ?> </span><span aria-hidden="true" class="is-aria-hidden">→</span></a></p>
 		<!-- /wp:paragraph -->
 
 	</div>

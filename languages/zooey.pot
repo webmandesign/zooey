@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zooey 2.0.5\n"
+"Project-Id-Version: Zooey 2.0.1\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-08T15:16:17+00:00\n"
+"POT-Creation-Date: 2026-08-17T06:03:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zooey\n"
@@ -705,63 +705,29 @@ msgstr ""
 
 #: includes/Content/Demo.php:271
 msgctxt "Demo text. Button label."
-msgid "Click here"
+msgid "Button text"
 msgstr ""
 
 #: includes/Content/Demo.php:272
 msgctxt "Demo text. Button label."
-msgid "Read more &rarr;"
-msgstr ""
-
-#: includes/Content/Demo.php:273
-msgctxt "Demo text. Button label."
 msgid "Change this text"
 msgstr ""
 
-#: includes/Content/Demo.php:274
-msgctxt "Demo text. Button label."
-msgid "Watch video &rarr;"
-msgstr ""
-
-#: includes/Content/Demo.php:275
+#: includes/Content/Demo.php:273
 msgctxt "Demo text. Price."
 msgid "$19"
 msgstr ""
 
-#: includes/Content/Demo.php:279
-msgctxt "Demo text. Form block plugin URL."
-msgid "https://wordpress.org/plugins/search/form+block/"
-msgstr ""
-
-#: includes/Content/Demo.php:280
-msgctxt "Demo text."
-msgid "Use a form block here ↗"
-msgstr ""
-
-#: includes/Content/Demo.php:284
-#: includes/Content/Demo.php:288
-#: includes/Content/Demo.php:291
+#: includes/Content/Demo.php:277
 msgid "This is just a demo placeholder form."
 msgstr ""
 
-#: includes/Content/Demo.php:285
-msgctxt "Form field label"
-msgid "Name"
-msgstr ""
-
-#: includes/Content/Demo.php:286
-#: includes/Content/Demo.php:292
+#: includes/Content/Demo.php:278
 msgctxt "Form field label"
 msgid "Email"
 msgstr ""
 
-#: includes/Content/Demo.php:287
-msgctxt "Form field label"
-msgid "Message"
-msgstr ""
-
-#: includes/Content/Demo.php:288
-#: includes/Content/Demo.php:294
+#: includes/Content/Demo.php:280
 msgctxt "Form field label"
 msgid "Submit"
 msgstr ""
@@ -2703,12 +2669,12 @@ msgctxt "Block pattern title."
 msgid "Page title, description, button, and a quote"
 msgstr ""
 
-#: patterns/media/custom-header-bottom.php:18
+#: patterns/media/custom-header-bottom.php:19
 msgctxt "Block pattern title."
 msgid "Custom header image (flipped vertically)"
 msgstr ""
 
-#: patterns/media/custom-header-top.php:18
+#: patterns/media/custom-header-top.php:19
 msgctxt "Block pattern title."
 msgid "Custom header image"
 msgstr ""
@@ -3126,7 +3092,7 @@ msgid "in"
 msgstr ""
 
 #: patterns/posts/posts-03.php:18
-#: patterns/site/entry-navigation.php:18
+#: patterns/site/entry-navigation.php:19
 msgctxt "Block pattern title."
 msgid "Next/previous post navigation"
 msgstr ""
@@ -3186,7 +3152,7 @@ msgid "Comments"
 msgstr ""
 
 #: patterns/site/comments.php:21
-#: patterns/site/entry-query-featured.php:26
+#: patterns/site/entry-query-featured.php:27
 #: patterns/site/entry-query.php:27
 msgctxt "keyword"
 msgid "post"
@@ -3196,8 +3162,8 @@ msgstr ""
 #: patterns/site/content-404.php:21
 #: patterns/site/content-with-sidebar.php:22
 #: patterns/site/entry-meta-bottom.php:30
-#: patterns/site/entry-navigation.php:21
-#: patterns/site/entry-query-featured.php:28
+#: patterns/site/entry-navigation.php:22
+#: patterns/site/entry-query-featured.php:29
 #: patterns/site/entry-query.php:29
 #: patterns/site/footer-centered.php:29
 #: patterns/site/footer-minimal.php:29
@@ -3309,37 +3275,37 @@ msgstr ""
 msgid "Related posts"
 msgstr ""
 
-#: patterns/site/entry-navigation.php:20
+#: patterns/site/entry-navigation.php:21
 msgctxt "keyword"
 msgid "link"
 msgstr ""
 
 #. translators: %s: context.
-#: patterns/site/entry-query-featured.php:20
+#: patterns/site/entry-query-featured.php:21
 #: patterns/site/entry-query.php:21
 #, php-format
 msgctxt "Block pattern title."
 msgid "Query entry: %s"
 msgstr ""
 
-#: patterns/site/entry-query-featured.php:21
+#: patterns/site/entry-query-featured.php:22
 msgctxt "Query entry context."
 msgid "Featured"
 msgstr ""
 
-#: patterns/site/entry-query-featured.php:24
+#: patterns/site/entry-query-featured.php:25
 #: patterns/site/entry-query.php:25
 msgctxt "keyword"
 msgid "item"
 msgstr ""
 
-#: patterns/site/entry-query-featured.php:25
+#: patterns/site/entry-query-featured.php:26
 #: patterns/site/entry-query.php:26
 msgctxt "keyword"
 msgid "entry"
 msgstr ""
 
-#: patterns/site/entry-query-featured.php:27
+#: patterns/site/entry-query-featured.php:28
 #: patterns/site/entry-query.php:28
 msgctxt "keyword"
 msgid "page"

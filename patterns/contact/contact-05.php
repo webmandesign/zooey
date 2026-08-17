@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.5
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -64,7 +64,7 @@ ob_start(); ?>
 <!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Working hours', 'zooey' ); ?>"}} -->
 <div class="wp-block-group">
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xs","left":"var:preset|spacing|xs"}}}} -->
 	<div class="wp-block-group">
 		<?php
 

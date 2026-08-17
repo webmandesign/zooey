@@ -95,5 +95,8 @@ $images = array(
 		<!-- /wp:column -->
 		<?php endforeach; ?>
 
+	</div>
+	<!-- /wp:columns -->
+
 </div>
 <!-- /wp:group -->

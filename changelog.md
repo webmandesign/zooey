@@ -1,5 +1,27 @@
 # Zooey Changelog
 
+## 2.0.1, 20260817
+
+### Updated
+- Editor styles for accessibly hidden text
+- Improving business hours pattern spacing
+- Localization
+
+### Fixed
+- Accessibility issues
+	- Updated demo texts
+	- Fixing `service-02` pattern arrow link accessibility
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/editor.scss
+	includes/Content/Demo.php
+	languages/*.*
+	patterns/contact/contact-05.php
+	patterns/services/services-02.php
+
+
 ## 2.0.0, 20260808
 
 Technically, this is matching Ileana 2.0.5 code, but we lower the version for reintroducing `accessibility-ready` class once the theme passes new accessibility review at WPORG.
