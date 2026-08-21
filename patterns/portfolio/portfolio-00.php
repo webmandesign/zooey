@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.5
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -33,8 +33,8 @@ $image = Demo::Get_image_url( '1to1-1' );
 <!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Project', 'zooey' ); ?>"},"tagName":"article","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"}},"dimensions":{"minHeight":"100%"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <article class="wp-block-group" style="min-height:100%;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
-	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"style":{"spacing":{"padding":{"bottom":"0","left":"0","right":"0","top":"16em"}},"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":{"topLeft":"0.38rem","topRight":"0.38rem"}}}} -->
-	<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="border-top-left-radius:0.38rem;border-top-right-radius:0.38rem;padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:200px">
+	<!-- wp:cover {"url":"<?php echo esc_url_raw( $image ); ?>","dimRatio":0,"minHeight":200,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"style":{"spacing":{"padding":{"bottom":"0","left":"0","right":"0","top":"16em"}},"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":{"topLeft":"var:preset|border-radius|s","topRight":"var:preset|border-radius|s"}}}} -->
+	<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="border-top-left-radius:var(--wp--preset--border-radius--s);border-top-right-radius:var(--wp--preset--border-radius--s);padding-top:16em;padding-right:0;padding-bottom:0;padding-left:0;min-height:200px">
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 		<img class="wp-block-cover__image-background" alt="<?php echo esc_attr( Demo::Get_text( 'alt' ) ); ?>" src="<?php echo esc_url_raw( $image ); ?>" data-object-fit="cover" />
 		<div class="wp-block-cover__inner-container">
@@ -57,8 +57,8 @@ $image = Demo::Get_image_url( '1to1-1' );
 	</div>
 	<!-- /wp:cover -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|s","right":"var:preset|spacing|m","bottom":"var:preset|spacing|s","left":"var:preset|spacing|m"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"border":{"radius":{"bottomLeft":"0.38rem","bottomRight":"0.38rem"}}},"backgroundColor":"secondary","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group has-secondary-background-color has-background" style="border-bottom-left-radius:0.38rem;border-bottom-right-radius:0.38rem;padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--m)">
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|s","right":"var:preset|spacing|m","bottom":"var:preset|spacing|s","left":"var:preset|spacing|m"},"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}},"border":{"radius":{"bottomLeft":"var:preset|border-radius|s","bottomRight":"var:preset|border-radius|s"}}},"backgroundColor":"secondary","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group has-secondary-background-color has-background" style="border-bottom-left-radius:var(--wp--preset--border-radius--s);border-bottom-right-radius:var(--wp--preset--border-radius--s);padding-top:var(--wp--preset--spacing--s);padding-right:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--m)">
 
 		<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}},"fontSize":"xs"} -->
 		<p class="has-xs-font-size" style="font-style:normal;font-weight:700;line-height:1;text-transform:uppercase"><?php esc_html_e( 'Category', 'zooey' ); ?></p>

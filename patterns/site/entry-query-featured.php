@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.5
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -44,8 +44,8 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"var:preset|spacing|m"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"540px"}} -->
 			<div class="wp-block-group" style="padding-top:0;padding-right:var(--wp--preset--spacing--m);padding-bottom:0;padding-left:0">
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"bottom":"0","left":"0"}},"border":{"radius":{"topRight":"0.38rem"}}},"backgroundColor":"base"} -->
-				<div class="wp-block-group has-base-background-color has-background" style="border-top-right-radius:0.38rem;padding-bottom:0;padding-left:0">
+				<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"bottom":"0","left":"0"}},"border":{"radius":{"topRight":"var:preset|border-radius|s"}}},"backgroundColor":"base"} -->
+				<div class="wp-block-group has-base-background-color has-background" style="border-top-right-radius:var(--wp--preset--border-radius--s);padding-bottom:0;padding-left:0">
 
 					<!-- wp:post-title {"isLink":true,"style":{"typography":{"textDecoration":"none"}},"fontSize":"xxxl"} /-->
 

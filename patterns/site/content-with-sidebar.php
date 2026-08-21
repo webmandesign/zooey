@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.0
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -39,7 +39,7 @@ Block_Pattern::add_pattern_args( __FILE__, array(
 			<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:template-part {"slug":"entry-meta-bottom","className":"is-hidden-on-page"} /-->
+				<!-- wp:template-part {"slug":"entry-meta-bottom","className":"is-hidden-on-page","align":"wide"} /-->
 
 				<!-- wp:template-part {"slug":"entry-navigation","className":"is-hidden-on-page"} /-->
 

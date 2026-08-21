@@ -13,3 +13,10 @@
 		}
 	}
 }
+
+.post-template-custom-with-sidebar {
+
+	:where( .entry-content + .wp-block-group .wp-block-template-part.alignwide > .is-layout-constrained > * ) {
+		margin-inline-start: 0 !important;
+	}
+}

@@ -1,5 +1,29 @@
 # Zooey Changelog
 
+## 2.0.6, 20260822
+
+### Updated
+- Re-added `accessibility-ready` tag
+- Optimizing images (converting `png` to `webp`)
+- Widening post meta template part in content with sidebar template
+- All radius uses preset values in patterns
+
+### Fixed
+- Welcome page image
+
+### File updates
+	changelog.md
+	style.css
+	assets/scss/global.scss
+	includes/Content/Starter.php
+	includes/Setup/Media.php
+	parts/admin/welcome-demo.php
+	patterns/numbers/numbers-03.php
+	patterns/portfolio/portfolio-00.php
+	patterns/site/content-with-sidebar.php
+	patterns/site/entry-query-featured.php
+
+
 ## 2.0.1, 20260817
 
 ### Updated

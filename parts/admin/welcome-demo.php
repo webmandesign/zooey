@@ -8,7 +8,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.7
+ * @version  2.0.6
  */
 
 // Exit if accessed directly.
@@ -42,7 +42,7 @@ if ( ! class_exists( 'WebManDesign\Zooey\Welcome\Component' ) ) {
 
 	<figure class="welcome__image">
 		<a href="https://webmandesign.github.io/docs/zooey/#demo-content">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/features/patterns.jpg' ) . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
+			<img src="<?php echo esc_url( 'https://pic.webmandesign.eu/FEATURES/zooey/' . 'patterns.webp' . '?v' . ZOOEY_THEME_VERSION ); ?>" alt="">
 		</a>
 	</figure>
 

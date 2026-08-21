@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.0
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -98,7 +98,7 @@ class Starter implements Component_Interface {
 	 * Attachments.
 	 *
 	 * @since    1.0.0
-	 * @version  2.0.0
+	 * @version  2.0.6
 	 *
 	 * @return  void
 	 */
@@ -113,7 +113,7 @@ class Starter implements Component_Interface {
 				),
 
 				'logo' => array(
-					'file' => 'assets/images/demo/logo.png',
+					'file' => 'assets/images/demo/logo.webp',
 				),
 			);
 

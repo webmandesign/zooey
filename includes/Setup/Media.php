@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.1.4
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Setup;
@@ -82,7 +82,7 @@ class Media implements Component_Interface {
 	 * After setup theme.
 	 *
 	 * @since    1.0.0
-	 * @version  2.0.0
+	 * @version  2.0.6
 	 *
 	 * @return  void
 	 */
@@ -115,7 +115,7 @@ class Media implements Component_Interface {
 				 * @param  array $custom_header
 				 */
 				add_theme_support( 'custom-header', apply_filters( 'zooey/add_theme_support/custom_header', array(
-					'default-image' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+					'default-image' => get_theme_file_uri( 'assets/images/header/svg-fingers.webp' ),
 					'header-text'   => false,
 				) ) );
 
@@ -123,20 +123,20 @@ class Media implements Component_Interface {
 				register_default_headers( array(
 
 					'svg-fingers' => array(
-						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
-						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.png' ),
+						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers.webp' ),
+						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers.webp' ),
 						'description'   => esc_html_x( 'Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
 					),
 
 					'svg-blobs' => array(
-						'url'           => get_theme_file_uri( 'assets/images/header/svg-blobs.png' ),
-						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-blobs.png' ),
+						'url'           => get_theme_file_uri( 'assets/images/header/svg-blobs.webp' ),
+						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-blobs.webp' ),
 						'description'   => esc_html_x( 'Blobs (dynamic color SVG)', 'Header image description.', 'zooey' ),
 					),
 
 					'svg-fingers-lines' => array(
-						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.png' ),
-						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.png' ),
+						'url'           => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.webp' ),
+						'thumbnail_url' => get_theme_file_uri( 'assets/images/header/svg-fingers-lines.webp' ),
 						'description'   => esc_html_x( 'Line Fingers (dynamic color SVG)', 'Header image description.', 'zooey' ),
 					),
 				) );
