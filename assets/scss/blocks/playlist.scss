@@ -1,0 +1,32 @@
+// core/playlist
+//
+// @since  2.0.6
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-playlist {
+
+	.waveform-text,
+	.wp-block-playlist-track__content {
+		line-height: 1 + $ratio_min;
+	}
+
+	.waveform-title,
+	.wp-block-playlist-track__title {
+		font-family: var(--wp--preset--font-family--supplemental);
+	}
+
+	.waveform-artist,
+	.wp-block-playlist-track__artist,
+	.wp-block-playlist-track__content {
+		font-size: var(--wp--preset--font-size--s);
+	}
+
+	.waveform-time,
+	.wp-block-playlist-track__length {
+		font-family: var(--wp--preset--font-family--monospace);
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 400;
+	}
+}

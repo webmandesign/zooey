@@ -43,21 +43,17 @@ html:not(.editor-styles-wrapper) {
 		font-size: var(--wp--preset--font-size--xl);
 	}
 
-	.has-drop-cap:not(:focus)::first-letter {
-		// From WP:
-		float: left;
-		font-style: normal;
-		text-transform: uppercase;
-		// From theme:
-		padding: .3em .2em;
-		margin: .05em 0 0;
-		margin-inline-end: .15em;
-		font-size: 2em;
-		font-weight: 400;
-		line-height: .8;
-		border: var(--wp--custom--border-width--dropcap) solid;
+	.has-drop-cap:not( :focus )::first-letter {
 
-		.rtl & {
-			float: right;
-		}
+		// From WP:
+			float: inline-start;
+			// font-size: 8.4em; // Gets overridden;
+			font-style: normal;
+			// font-weight: 100; // Gets overridden;
+			// line-height: .68; // Gets overridden;
+			// margin: .05em .1em 0 0; // Gets overridden;
+			text-transform: uppercase;
+
+		// From theme:
+			@extend %dropcap;
 	}

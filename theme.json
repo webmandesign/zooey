@@ -1,12 +1,12 @@
 {
 	"$schema" : "https://schemas.wp.org/trunk/theme.json",
-	"version" : 2,
+	"version" : 3,
 
 	"docBlock" : {
 		"//":"When you see this, it is a custom comment.",
 
 		"@since"   : "1.0.0",
-		"@version" : "2.0.4"
+		"@version" : "2.0.6"
 	},
 
 	"settings" : {
@@ -15,6 +15,10 @@
 		"layout" : {
 			"contentSize" : "var(--theme--mod--layout_width_content)",
 			"wideSize"    : "var(--theme--mod--layout_width_wide)"
+		},
+		"viewport" : {
+			"mobile" : "480px",
+			"tablet" : "880px"
 		},
 		"color" : {
 			"link" : true,
@@ -289,6 +293,11 @@
 			"defaultSpacingSizes" : false
 		},
 		"dimensions" : {
+			"height"       : true,
+			"minHeight"    : true,
+			"width"        : true,
+			"minWidth"     : true,
+			"aspectRatio"  : true,
 			"aspectRatios" : [
 				{
 					"name"  : "Golden - 1.618:1",
@@ -484,7 +493,7 @@
 			"border-width" : {
 				"global" : "2px",
 
-				"dropcap"        : "1px",
+				"dropcap"        : "var(--wp--custom--border-width--global)",
 				"fieldset"       : "1px",
 				"hr"             : "var(--wp--custom--border-width--global)",
 				"item-separator" : "1px",
@@ -1000,6 +1009,19 @@
 							"textDecoration" : "none"
 						}
 					}
+				}
+			},
+
+			"core/tab-list" : {
+				"spacing" : {
+					"blockGap" : "0"
+				},
+				"typography" : {
+					"fontFamily" : "var(--wp--preset--font-family--supplemental)"
+				},
+				"border" : {
+					"width"  : "0",
+					"radius" : "0"
 				}
 			}
 		}

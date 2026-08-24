@@ -1,0 +1,52 @@
+// core/tabs
+//
+// @since  2.0.6
+
+@import '../_tools/_index';
+@import '../_setup/_index';
+
+.wp-block-tab {
+
+	&s {
+
+	}
+
+	&-list {
+
+		button {
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset-inline: 0;
+				inset-block-end: 0;
+				border-bottom: 0 solid;
+				opacity: .2;
+				pointer-events: none;
+				transition: border .2s linear;
+			}
+
+			&:hover::before {
+				border-bottom-width: .2rem;
+			}
+		}
+
+		[aria-selected="true"] {
+			font-weight: 700;
+
+			&::before {
+				border-bottom-width: .2rem;
+				opacity: 1;
+			}
+
+			&:not( .has-background )::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: color-mix( in srgb, currentColor 7%, transparent );
+				border-radius: inherit;
+				pointer-events: none;
+			}
+		}
+	}
+}

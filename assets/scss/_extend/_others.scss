@@ -79,3 +79,16 @@
 		z-index: -1;
 	}
 }
+
+%dropcap {
+	// IMPORTANT: Keep in mind that `lh` in padding is local, not the wrapper one!
+	padding: calc( .25lh - var(--wp--custom--border-width--dropcap) ) .5ch;
+	margin: 0; // Required to reset WordPress dropcap style.
+	margin-inline-end: .25ch;
+	border: var(--wp--custom--border-width--dropcap) solid;
+
+	// WordPress dropcap overrides:
+		font-size: 1.33lh;
+		font-weight: 700;
+		line-height: 1;
+}

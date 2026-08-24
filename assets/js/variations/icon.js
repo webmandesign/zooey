@@ -2,7 +2,8 @@ export default null;
 /**
  * Icons.
  *
- * @since  2.0.1
+ * @since    2.0.1
+ * @version  2.0.6
  */
 
 const { __, _x } = wp.i18n;
@@ -17,7 +18,7 @@ wp.blocks.registerBlockVariation( 'core/icon', {
 		_x( 'symbol', 'keyword', 'zooey' ),
 	],
 	attributes: {
-		icon: 'core/star-filled',
+		icon: 'core/info',
 		style: {
 			dimensions: {
 				width: '2em'
@@ -40,7 +41,7 @@ wp.blocks.registerBlockVariation( 'core/icon', {
 		'transform',
 	],
 	attributes: {
-		icon: 'core/star-filled',
+		icon: 'core/info',
 		style: {
 			dimensions: {
 				width: '4em'

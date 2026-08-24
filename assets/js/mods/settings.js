@@ -16,7 +16,7 @@ export default null;
  *         (potentially already set) `true` value.
  *
  * @since    2.0.0
- * @version  2.0.1
+ * @version  2.0.6
  */
 
 wp.hooks.addFilter(
@@ -503,6 +503,19 @@ wp.hooks.addFilter(
 								width: true,
 							},
 						},
+					} );
+					break;
+
+
+				case 'core/tab-list':
+
+					settings.supports.typography = lodash.merge( settings.supports.typography, {
+						lineHeight: true,
+						__experimentalTextDecoration: true,
+						__experimentalFontStyle: true,
+						__experimentalFontWeight: true,
+						__experimentalLetterSpacing: true,
+						__experimentalTextTransform: true,
 					} );
 					break;
 

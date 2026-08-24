@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    2.0.0
- * @version  2.0.1
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Content;
@@ -23,7 +23,8 @@ class Block_Mods implements Component_Interface {
 	/**
 	 * Initialization.
 	 *
-	 * @since  2.0.0
+	 * @since    2.0.0
+	 * @version  2.0.6
 	 *
 	 * @return  void
 	 */
@@ -305,7 +306,8 @@ class Block_Mods implements Component_Interface {
 	/**
 	 * Modifications for block editor settings.
 	 *
-	 * @since  2.0.0
+	 * @since    2.0.0
+	 * @version  2.0.6
 	 *
 	 * @param  array $settings
 	 *
@@ -315,7 +317,8 @@ class Block_Mods implements Component_Interface {
 
 		// Processing
 
-			$settings['imageDefaultSize'] = 'full';
+			$settings['imageDefaultSize']                   = 'full';
+			$settings['disableContentOnlyForTemplateParts'] = true;
 
 
 		// Output

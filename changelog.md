@@ -1,8 +1,9 @@
 # Zooey Changelog
 
-## 2.0.6, 20260822
+## 2.0.6, 20260824
 
 ### Updated
+- WordPress 7.1 compatibility
 - Re-added `accessibility-ready` tag
 - Optimizing images (converting `png` to `webp`)
 - Widening post meta template part in content with sidebar template
