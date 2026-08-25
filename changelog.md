@@ -13,7 +13,7 @@
 ### Fixed
 - WordPress 7.1 mobile/overlaid navigation issue
 - Welcome page image
-- Using 'wp' instead of 'wordpress' in file name (to prevent Theme Check plugin WordPress naming issue)
+- Rename file name to 'wp' to prevent Theme Check plugin WordPress naming issue
 
 ### File updates
 	changelog.md
