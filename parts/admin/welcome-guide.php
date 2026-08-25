@@ -7,7 +7,8 @@
  * @package    Zooey
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  2.0.6
  */
 
 // Exit if accessed directly.
@@ -20,7 +21,7 @@ if ( ! class_exists( 'WebManDesign\Zooey\Welcome\Component' ) ) {
 $guides = array(
 	'setup',
 	'customize',
-	'wordpress',
+	'wp',
 );
 
 ?>
