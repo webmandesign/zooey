@@ -6,12 +6,13 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.1
+ * @version  2.0.6
  */
 
 namespace WebManDesign\Zooey\Menu;
 
 use WebManDesign\Zooey\Component_Interface;
+use WebManDesign\Zooey\Customize\Mod;
 use WP_HTML_Tag_Processor;
 
 // Exit if accessed directly.
@@ -61,7 +62,7 @@ class Component implements Component_Interface {
 	 * Adding HTML ID attributes.
 	 *
 	 * @since    1.0.0
-	 * @version  2.0.1
+	 * @version  2.0.6
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -149,6 +150,39 @@ class Component implements Component_Interface {
 						if ( in_array( $block['attrs']['anchor'], array( 'site-navigation', 'site-navigation-mobile' ) ) ) {
 							$html->next_tag( array( 'class_name' => 'wp-block-navigation__responsive-container-open' ) );
 							$html->set_attribute( 'id', $block['attrs']['anchor'] . '-toggle' );
+						}
+					}
+
+					/**
+					 * Mitigate for overlay/mobile menu collapsed submenus in WP7.1+.
+					 * @link  https://github.com/WordPress/gutenberg/commit/0a999d7554efd7bec0522f08a46a1d5353b32a14
+					 */
+					if ( ! Mod::get( 'a11y_fix_navigation' ) ) {
+
+						$attr      = 'data-wp-bind--aria-expanded';
+						$state_old = 'state.isSubmenuOpen';
+						$state_new = 'state.isMenuOpen';
+
+						if ( stripos( $block_content, $state_old ) ) {
+
+							while (
+								$html->next_tag( array(
+									'tag_name'   => 'li',
+									'class_name' => 'has-child',
+								) )
+							) {
+
+								if (
+									$html->next_tag( array(
+										'tag_name'   => 'button',
+										'class_name' => 'wp-block-navigation-submenu__toggle',
+									) )
+									&& $state_old === $html->get_attribute( $attr )
+								) {
+
+									$html->set_attribute( $attr, $state_new );
+								}
+							}
 						}
 					}
 

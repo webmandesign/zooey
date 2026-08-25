@@ -1,22 +1,34 @@
 # Zooey Changelog
 
-## 2.0.6, 20260824
+## 2.0.6, 20260825
 
 ### Updated
 - WordPress 7.1 compatibility
 - Re-added `accessibility-ready` tag
+- Improving dropcap styles
 - Optimizing images (converting `png` to `webp`)
 - Widening post meta template part in content with sidebar template
 - All radius uses preset values in patterns
 
 ### Fixed
+- WordPress 7.1 mobile/overlaid navigation issue
 - Welcome page image
 
 ### File updates
 	changelog.md
 	style.css
+	theme.json
+	assets/js/mods/settings.js
+	assets/js/variations/icon.js
+	assets/js/variations/unregister.js
+	assets/scss/editor.scss
 	assets/scss/global.scss
+	assets/scss/blocks/paragraph.scss
+	assets/scss/blocks/playlist.scss
+	assets/scss/blocks/tabs.scss
+	includes/Content/Block_Mods.php
 	includes/Content/Starter.php
+	includes/Menu/Component.php
 	includes/Setup/Media.php
 	parts/admin/welcome-demo.php
 	patterns/numbers/numbers-03.php
