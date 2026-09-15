@@ -7,13 +7,15 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  2.0.0
+// @version  2.0.7
 //
 
 $is_editor: true;
 
 @import '_tools/_index';
 @import '_setup/_index';
+
+@import '_variables/_index';
 
 @import 'blocks/_index';
 

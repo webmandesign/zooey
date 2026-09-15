@@ -6,7 +6,7 @@
 		"//":"When you see this, it is a custom comment.",
 
 		"@since"   : "1.0.0",
-		"@version" : "2.0.6"
+		"@version" : "2.0.7"
 	},
 
 	"settings" : {
@@ -963,6 +963,12 @@
 					"style" : "solid",
 					"width" : ".382rem 0 0 0",
 					"color" : "currentColor"
+				}
+			},
+
+			"core/quote" : {
+				"spacing" : {
+					"blockGap" : "var(--wp--preset--spacing--s)"
 				}
 			},
 

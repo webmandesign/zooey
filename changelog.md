@@ -1,5 +1,32 @@
 # Zooey Changelog
 
+## 2.0.8, 20260915
+
+### Fixed
+- Preventing custom color PHP error
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	includes/Customize/Colors.php
+
+
+## 2.0.7, 20260915
+
+### Updated
+- Setting default block gap for Quote block
+
+### Fixed
+- Editor is missing theme CSS variables
+
+### File updates
+	changelog.md
+	style.css
+	theme.json
+	assets/scss/blocks-editor.scss
+
+
 ## 2.0.6, 20260825
 
 ### Updated

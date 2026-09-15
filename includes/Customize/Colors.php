@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  2.0.5
+ * @version  2.0.8
  */
 
 namespace WebManDesign\Zooey\Customize;
@@ -365,7 +365,7 @@ class Colors implements Component_Interface {
 	 * @link  https://github.com/mexitek/phpColors
 	 *
 	 * @since    1.0.0
-	 * @version  2.0.1
+	 * @version  2.0.8
 	 *
 	 * @param  string $color           Hex color code.
 	 * @param  int    $threshold       Darkness threshold for comparison. [ 0 - 255 ]
@@ -377,7 +377,7 @@ class Colors implements Component_Interface {
 
 		// Variables
 
-			$color    = sanitize_hex_color_no_hash( $color );
+			$color    = (string) sanitize_hex_color_no_hash( $color );
 			$darkness = 255;
 
 
